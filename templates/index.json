@@ -1,5 +1,42 @@
 {
   "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide1": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "",
+            "slide_heading": "",
+            "slide_text": "",
+            "slide_button_label": "",
+            "slide_button_link": ""
+          }
+        },
+        "slide2": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "",
+            "slide_heading": "",
+            "slide_text": "",
+            "slide_button_label": "",
+            "slide_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide1",
+        "slide2"
+      ],
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 5000,
+        "fade": false,
+        "slide_height": "large",
+        "show_arrows": true,
+        "show_dots": true
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -200,6 +237,7 @@
     }
   },
   "order": [
+    "slideshow",
     "image_banner",
     "rich_text",
     "featured_collection",
