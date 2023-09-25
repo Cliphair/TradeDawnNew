@@ -2517,6 +2517,13 @@ product-info .loading-overlay:not(.hidden) ~ *,
   }
 }
 
+/* Homepage transparent header when not sticky */
+ .home .top-of-page .header-wrapper {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+ }
+
 /* Header icons */
 .header__icons {
   display: flex;
