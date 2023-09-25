@@ -2519,9 +2519,10 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 /* Homepage transparent header when not sticky */
  .home .top-of-page .header-wrapper {
-  position: absolute;
+  position: sticky;
   background: transparent;
   width: 100%;
+  margin-bottom: -130px;
  }
 
 /* Header icons */
