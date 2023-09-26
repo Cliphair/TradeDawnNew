@@ -6,24 +6,24 @@
       "type": "footer",
       "blocks": {
         "footer-0": {
-          "type": "link_list",
+          "type": "text",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Cliphair",
+            "subtext": "<p>customerservice@cliphair.com<\/p>"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "Customer Services",
             "menu": "footer"
           }
         },
         "footer-2": {
-          "type": "text",
+          "type": "link_list",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "Useful Links",
+            "menu": "footer"
           }
         }
       },

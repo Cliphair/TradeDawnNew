@@ -33,54 +33,40 @@
         "autoplay_speed": 5000,
         "fade": false,
         "slide_height": "large",
-        "show_arrows": true,
+        "show_arrows": false,
         "show_dots": true
       }
     },
-    "image_banner": {
-      "type": "image-banner",
+    "horizontal_list": {
+      "type": "horizontal-list",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "div1": {
+          "type": "div",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "text": "Free Virtual Hair Colour Matching"
           }
         },
-        "text": {
-          "type": "text",
+        "div2": {
+          "type": "div",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "text": "Pay Your Way with Clearpay & Klarna"
           }
         },
-        "button": {
-          "type": "buttons",
+        "div3": {
+          "type": "div",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "Free UK Express delivery over £75"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "div1",
+        "div2",
+        "div3"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "background_color": "#f0f0f0",
+        "text_color": "#000000"
       }
     },
     "rich_text": {
@@ -238,7 +224,7 @@
   },
   "order": [
     "slideshow",
-    "image_banner",
+    "horizontal_list",
     "rich_text",
     "featured_collection",
     "collage",

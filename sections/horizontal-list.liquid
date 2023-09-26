@@ -1,0 +1,62 @@
+{{ 'horizontal-list.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .horizontal-list {
+    padding: 20px 0;
+    background-color: {{ section.settings.background_color }};
+  }
+  .horizontal-list-container .list-item {
+    color: {{ section.settings.text_color }};
+  }
+{%- endstyle -%}
+
+<div class="horizontal-list">
+  <div class="page-width horizontal-list-container">
+    {% for block in section.blocks %}
+      <div class="list-item">
+        {{ block.settings.text }}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Horizontal list",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "div",
+      "name": "Div",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Default text"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

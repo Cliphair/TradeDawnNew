@@ -1,0 +1,8 @@
+.horizontal-list-container {
+    display: flex;
+}
+.horizontal-list-container .list-item {
+    flex-grow: 1;
+    text-align: center;
+    text-transform: uppercase;
+}
