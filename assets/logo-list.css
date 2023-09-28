@@ -1,0 +1,20 @@
+.logoList--container {
+    padding: 20px 0;
+    margin: auto;
+}
+
+.logoList--container ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.logoList--item {
+    display: inline-block;
+    max-width: 220px;
+}
+
+.logoList--item img {
+    width: 100%;
+}

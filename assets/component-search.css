@@ -12,6 +12,16 @@
   top: var(--inputs-border-width);
 }
 
+#Search-Inline-1 {
+  background: transparent
+}
+#Search-Inline-1 {
+  border-radius: 2rem;
+}
+#Search-Inline-1:focus {
+  background: #fff;
+  border-radius: 2rem;
+}
 .reset__button:not(:focus-visible)::after {
   border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);
   display: block;

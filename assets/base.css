@@ -2677,6 +2677,11 @@ details[open] .modal-overlay::after {
 .header .search-modal__content {
   display: none;
 }
+.header .search .field,
+ .header .search .field:before, 
+.header .search .field:after {
+  border-radius: 2rem;
+}
 @media screen and (min-width: 990px) {
   .header .search-modal__content {
     display: flex;
