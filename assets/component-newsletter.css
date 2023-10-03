@@ -11,12 +11,14 @@
   .newsletter-form {
     align-items: flex-start;
     margin: 0 auto;
-    max-width: 36rem;
+    max-width: 60rem;
   }
 }
 
 .newsletter-form__field-wrapper {
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .newsletter-form__field-wrapper .field__input {
@@ -43,12 +45,18 @@
 }
 
 .newsletter-form__button {
-  width: 4.4rem;
+  width: 100%;
+  max-width: 15rem;
   margin: 0;
   right: var(--inputs-border-width);
   top: 0;
   height: 100%;
   z-index: 2;
+  position: relative;
+  padding: 1.6rem 1.7rem;
+  color:#fff;
+  margin-left: 1rem;
+  text-transform: uppercase;
 }
 
 .newsletter-form__button:focus-visible {
@@ -63,7 +71,7 @@
 
 .newsletter-form__button:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
-  background-color: inherit;
+  background-color: #f9a8d4;
 }
 
 .newsletter-form__button .icon {
