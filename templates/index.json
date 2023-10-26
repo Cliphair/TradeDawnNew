@@ -85,6 +85,29 @@
         "text_color": "#000000"
       }
     },
+    "fa403c60-2db5-49a7-86e9-d40d37498baa": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "HOW TO CHOOSE THE RIGHT HAIR EXTENSIONS FOR YOU",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "753975ec-3602-477e-b65e-6d089a9053cb": {
       "type": "collection-carrousel",
       "blocks": {
@@ -299,6 +322,7 @@
   "order": [
     "slideshow",
     "horizontal_list",
+    "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "rich_text",
     "featured_collection",
