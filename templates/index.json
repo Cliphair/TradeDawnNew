@@ -120,7 +120,7 @@
       "settings": {
         "heading_size": "h1",
         "text_allignment": "center",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "hide_card_arrow": true,
         "columns_desktop": 5,
         "swipe_on_desktop": true,
