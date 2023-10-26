@@ -72,8 +72,8 @@
 	margin-bottom: 0;
 }
 
-.section-collection-carrousel .card__content {
-	text-align: center;
+.section-collection-carrousel .card__information {
+	padding:0 1rem 1.3rem;
 }
 
 .section-collection-carrousel .button-wrapper {
