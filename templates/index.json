@@ -93,16 +93,29 @@
           "settings": {
             "block-title": "CHOOSE BY HAIR COLOUR…",
             "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit, euismod dolore magna erat.<\/p>",
-            "collection-list": "",
+            "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
             "link": "shopify:\/\/pages\/colour-matching-service",
             "button_style_secondary": false,
             "circle_images": true
           }
+        },
+        "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf": {
+          "type": "collections",
+          "settings": {
+            "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
+            "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat.<br\/><\/p>",
+            "collection-list": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "circle_images": false
+          }
         }
       },
       "block_order": [
-        "a7031854-9bd7-41fe-b425-7e6f75e38807"
+        "a7031854-9bd7-41fe-b425-7e6f75e38807",
+        "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf"
       ],
       "settings": {
         "heading_size": "h1",
@@ -111,7 +124,7 @@
         "hide_card_arrow": true,
         "columns_desktop": 5,
         "swipe_on_desktop": true,
-        "color_scheme": "",
+        "color_scheme": "accent-2",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
