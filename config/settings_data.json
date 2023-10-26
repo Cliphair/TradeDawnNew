@@ -1,6 +1,7 @@
 {
   "current": {
     "logo_width": 90,
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "type_header_font": "oswald_n5",
     "heading_scale": 100,
     "type_body_font": "futura_n3",
@@ -153,13 +154,13 @@
       },
       "inverse": {
         "settings": {
-          "background": "#fff",
+          "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#bda6c2",
+          "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#fff",
+          "button_label": "#4a4a4a",
           "secondary_button_label": "#ffffff",
-          "shadow": "#fff"
+          "shadow": "#ffffff"
         }
       },
       "accent-1": {
