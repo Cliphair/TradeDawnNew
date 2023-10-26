@@ -176,7 +176,7 @@
       "accent-2": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "linear-gradient(160deg, hsla(0, 0%, 100%, 1) 25%, hsla(222, 42%, 95%, 1) 50%, hsla(0, 0%, 100%, 1) 75%)",
+          "background_gradient": "",
           "text": "#4a4a4a",
           "button": "#ba69a1",
           "button_label": "#ffffff",
