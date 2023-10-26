@@ -105,7 +105,7 @@
           "settings": {
             "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
             "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat.<br\/><\/p>",
-            "collection-list": "",
+            "collection-list": "choose-by-hair-extensions-type",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
