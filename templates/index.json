@@ -94,10 +94,10 @@
             "block-title": "CHOOSE BY HAIR COLOUR…",
             "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit, euismod dolore magna erat.<\/p>",
             "collection-list": "",
-            "button_label": "",
-            "link": "",
+            "button_label": "FREE COLOUR MATCH",
+            "link": "shopify:\/\/pages\/colour-matching-service",
             "button_style_secondary": false,
-            "circle_images": false
+            "circle_images": true
           }
         }
       },
