@@ -156,7 +156,7 @@
         "settings": {
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#ffffff",
+          "text": "#bda6c2",
           "button": "#ffffff",
           "button_label": "#4a4a4a",
           "secondary_button_label": "#ffffff",
