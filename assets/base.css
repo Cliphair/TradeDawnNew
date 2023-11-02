@@ -472,6 +472,20 @@ table:not([class]) th {
   text-align: right;
 }
 
+@media screen and (max-width: 750px) {
+  .mobile-left {
+    text-align: left;
+  }
+
+  .mobile-center {
+    text-align: center;
+  }
+
+  .mobile-right {
+    text-align: right;
+  }
+}
+
 .uppercase {
   text-transform: uppercase;
 }
