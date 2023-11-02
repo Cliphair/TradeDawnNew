@@ -10,7 +10,7 @@
             "heading_size": "h1",
             "subheading": "WITH OUR HAIR EXPERTS",
             "button_label": "LEARN MORE",
-            "link": "/pages/colour-matching-service",
+            "link": "\/pages\/colour-matching-service",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -150,6 +150,47 @@
         "color_scheme": "accent-2",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "60c353fa-c484-4da2-b7b1-75781aa41474": {
+      "type": "quality-promise",
+      "blocks": {
+        "2f773af5-523f-4df7-a94c-b8678aedb67f": {
+          "type": "promise",
+          "settings": {
+            "block-title": "ADD VOLUME",
+            "block-introduction": "<p>Lorem ipsum dolor sit amet.<\/p>",
+            "block-image": "shopify:\/\/shop_images\/placeholder_image.webp",
+            "circle-images": true
+          }
+        },
+        "05518ad7-790e-4c49-a31a-55d095aa2786": {
+          "type": "promise",
+          "settings": {
+            "block-title": "ADD LENGTH",
+            "block-introduction": "<p>Lorem ipsum dolor sit amet.<\/p>",
+            "block-image": "shopify:\/\/shop_images\/placeholder_image.webp",
+            "circle-images": true
+          }
+        }
+      },
+      "block_order": [
+        "2f773af5-523f-4df7-a94c-b8678aedb67f",
+        "05518ad7-790e-4c49-a31a-55d095aa2786"
+      ],
+      "settings": {
+        "title": "THE CLIPHAIR QUALITY PROMISE",
+        "introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat.<br\/> <br\/>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat. Dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat. <\/p>",
+        "heading_size": "h1",
+        "text_allignment": "left",
+        "image_ratio": "adapt",
+        "color_scheme": "background-1",
+        "slider_visual": "dots",
+        "button_label": "FIND OUT MORE",
+        "link": "",
+        "button_style_secondary": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -355,6 +396,7 @@
     "horizontal_list",
     "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
+    "60c353fa-c484-4da2-b7b1-75781aa41474",
     "featured_collection",
     "collage",
     "video",
