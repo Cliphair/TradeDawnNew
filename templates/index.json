@@ -154,6 +154,49 @@
         "padding_bottom": 36
       }
     },
+    "f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/marie_claire.webp",
+            "link": ""
+          }
+        },
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Readers_Digest.webp",
+            "link": ""
+          }
+        },
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grazia.webp",
+            "link": ""
+          }
+        },
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/the_sun2.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-1",
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-2",
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-3",
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-4"
+      ],
+      "settings": {
+        "background_color": "#f4f4f4",
+        "images_per_row": 4
+      }
+    },
     "60c353fa-c484-4da2-b7b1-75781aa41474": {
       "type": "quality-promise",
       "blocks": {
@@ -396,6 +439,7 @@
     "horizontal_list",
     "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
+    "f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2",
     "60c353fa-c484-4da2-b7b1-75781aa41474",
     "featured_collection",
     "collage",
