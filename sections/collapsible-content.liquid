@@ -86,7 +86,11 @@
                     <h3 class="accordion__title inline-richtext h4">
                       {{ block.settings.heading | default: block.settings.page.title }}
                     </h3>
-                    {% render 'icon-caret' %}
+                    {% if section.settings.arrow_style == 'full-arrow' %}
+                      {% render 'icon-arrow' %}
+                    {% elsif section.settings.arrow_style == 'half-arrow' %}
+                      {% render 'icon-caret' %}
+                    {% endif %}
                   </summary>
                   <div
                     class="accordion__content rte"
@@ -106,6 +110,27 @@
     </div>
   </div>
 </div>
+
+{% if section.settings.faq_schema %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for block in section.blocks %}
+        {
+          "@type": "Question",
+          "name": "{{ block.settings.heading | strip_html | strip | strip_newlines }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ block.settings.row_content | strip_html | strip | strip_newlines  }}"
+          }
+        }{% if forloop.last != true %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  </script>
+{% endif %}
 
 {% schema %}
 {
@@ -188,6 +213,26 @@
       "default": "none"
     },
     {
+      "type": "select",
+      "id": "arrow_style",
+      "options": [
+        {
+          "value": "full-arrow",
+          "label": "Full"
+        },
+        {
+          "value": "half-arrow",
+          "label": "Half"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "half-arrow",
+      "label": "Arrow style"
+    },
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
@@ -205,6 +250,12 @@
       "id": "open_first_collapsible_row",
       "default": false,
       "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "faq_schema",
+      "default": false,
+      "label": "Add FAQ schema"
     },
     {
       "type": "header",

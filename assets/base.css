@@ -669,11 +669,12 @@ summary {
   position: relative;
 }
 
-summary .icon-caret {
+summary .icon-caret,
+summary .icon-arrow {
   position: absolute;
-  height: 0.6rem;
+  height: 1rem;
   right: 1.5rem;
-  top: calc(50% - 0.2rem);
+  top: calc(50% - 0.5rem);
 }
 
 summary::-webkit-details-marker {
