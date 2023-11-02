@@ -10,6 +10,20 @@
     justify-content: center;
 }
 
+.logoList--container.images-3 ul {
+    grid-template-columns: repeat(3, 1fr);
+}
+.logoList--container.images-4 ul {
+    grid-template-columns: repeat(4, 1fr);
+}
+.logoList--container.images-5 ul {
+    grid-template-columns: repeat(5, 1fr);
+}
+.logoList--container.images-6 ul {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+
 .logoList--item {
     display: inline-block;
     max-width: 220px;

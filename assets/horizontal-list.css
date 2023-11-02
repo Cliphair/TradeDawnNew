@@ -1,3 +1,12 @@
+@media screen and (max-width: 750px) {
+    .horizontal-list-container {
+        overflow-x: scroll;
+    }
+    .horizontal-list-container .list-item {
+        min-width: 100%;
+    }
+}
+
 .horizontal-list-container {
     display: flex;
 }
