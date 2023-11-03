@@ -21,6 +21,10 @@
 }
 
 @media screen and (min-width: 990px) {
+    .section-quality-promise .slider--desktop {
+        scroll-padding-left: unset;
+    }
+  
     .section-quality-promise .slider--desktop .slider__slide:first-child {
         margin-left: 0;
         scroll-margin-left: unset;
