@@ -10,6 +10,14 @@
   padding-bottom: 5rem;
   display: block;
 }
+.footer_copyright_wrapper {
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+.footer_copyright_wrapper > a:hover {
+  color: #ffffff;
+}
+
 
 @media screen and (max-width: 749px) {
   .footer .grid {
@@ -293,6 +301,7 @@
 .footer__copyright {
   text-align: center;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 750px) {
