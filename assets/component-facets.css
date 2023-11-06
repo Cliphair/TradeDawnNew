@@ -200,7 +200,12 @@
   color: rgba(var(--color-foreground), 0.75);
   font-size: 1.4rem;
   padding: 0 1.75rem 0 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+  border: 1px solid;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 
 .facets__disclosure fieldset {
@@ -237,7 +242,7 @@
 }
 
 .facets__summary .icon-caret {
-  right: 0;
+  right: 0.4rem;
 }
 
 .facets__display {
@@ -772,6 +777,7 @@ details.menu-opening .mobile-facets__close svg {
 .facets__summary > div {
   display: flex;
   align-items: center;
+  margin-right: 1.7rem;
 }
 
 .js .mobile-facets__submenu {
