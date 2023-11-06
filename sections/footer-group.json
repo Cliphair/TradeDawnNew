@@ -12,6 +12,13 @@
             "subtext": "<p>customerservice@cliphair.com<\/p>"
           }
         },
+        "d08a5cf4-367a-4ccd-8b21-13be0c3a942b": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": ""
+          }
+        },
         "footer-1": {
           "type": "link_list",
           "settings": {
@@ -29,6 +36,7 @@
       },
       "block_order": [
         "footer-0",
+        "d08a5cf4-367a-4ccd-8b21-13be0c3a942b",
         "footer-1",
         "footer-2"
       ],
@@ -36,6 +44,7 @@
         "color_scheme": "background-grey",
         "newsletter_enable": true,
         "newsletter_heading": "Get a discount on your first order + hair tips in your inbox!",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
