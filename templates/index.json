@@ -530,24 +530,28 @@
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
             "link": ""
           }
         }
@@ -569,24 +573,28 @@
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-1": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-2": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-3": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-4": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
             "link": ""
           }
         }
