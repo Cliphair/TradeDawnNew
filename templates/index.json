@@ -6,6 +6,7 @@
         "slide1": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/averie-woodard-4nulm-JUYFo-unsplash.png",
             "heading": "FIND YOUR PERFECT MATCH",
             "heading_size": "h1",
             "subheading": "WITH OUR HAIR EXPERTS",
@@ -23,17 +24,18 @@
         "slide2": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/averie-woodard-4nulm-JUYFo-unsplash.png",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
-            "box_align": "middle-center",
+            "box_align": "middle-right",
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "",
+            "color_scheme": "accent-4",
             "text_alignment_mobile": "center"
           }
         }
@@ -528,24 +530,28 @@
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
             "link": ""
           }
         }
@@ -567,24 +573,28 @@
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-1": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-2": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-3": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
             "link": ""
           }
         },
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-4": {
           "type": "logo_image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
             "link": ""
           }
         }
@@ -596,7 +606,7 @@
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-4"
       ],
       "settings": {
-        "background_color": "#f4f4f4",
+        "background_color": "#ffffff",
         "images_per_row": 4
       }
     }
