@@ -4,33 +4,41 @@
 }
 
 .logoList--container ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    justify-content: center;
+    display: flex;
+    overflow-x: scroll;
 }
-
-.logoList--container.images-3 ul {
-    grid-template-columns: repeat(3, 1fr);
-}
-.logoList--container.images-4 ul {
-    grid-template-columns: repeat(4, 1fr);
-}
-.logoList--container.images-5 ul {
-    grid-template-columns: repeat(5, 1fr);
-}
-.logoList--container.images-6 ul {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-
 .logoList--item {
-    display: inline-block;
-    max-width: 220px;
+    display: block;
+    min-width: 50%;
     text-align: center;
 }
-.logoList--item_text {
-    text-align: center;
+
+@media screen and (min-width: 750px) {
+
+    .logoList--container ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-content: center;
+        overflow-x: scroll;
+    }
+
+    .logoList--container.images-3 ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .logoList--container.images-4 ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .logoList--container.images-5 ul {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .logoList--container.images-6 ul {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .logoList--item {
+        display: inline-block;
+        max-width: 220px;
+    }
 }
 
 .logoList--item img {
