@@ -2855,6 +2855,10 @@ details[open]>.header__submenu {
   color: rgba(var(--color-foreground), 0.75);
   font-size: 1.2rem;
 }
+.header__menu-item a {
+  color: rgba(var(--color-foreground), 0.75);
+  text-decoration: none;
+}
 
 .header__menu-item:hover {
   color: rgb(var(--color-foreground));
