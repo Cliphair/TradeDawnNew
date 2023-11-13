@@ -7,6 +7,9 @@
   #{{ section.id }} {
     background-color: {{ section.settings.background_color }};
   }
+  #{{ section.id }} .logoList--item_text {
+    color: {{ section.settings.text_color }};
+  }
 {%- endstyle -%}
 
 <div class="logo-list" id="{{ section.id }}">
@@ -50,6 +53,12 @@
       "id": "background_color",
       "label": "Background color",
       "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
     },
     {
       "type": "number",
