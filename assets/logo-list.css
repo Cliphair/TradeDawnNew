@@ -27,6 +27,10 @@
 .logoList--item {
     display: inline-block;
     max-width: 220px;
+    text-align: center;
+}
+.logoList--item_text {
+    text-align: center;
 }
 
 .logoList--item img {

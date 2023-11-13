@@ -24,6 +24,9 @@
               width="auto"
               height="70"
             >
+            {% if block.settings.text_label != null %}
+              <span class="logoList--item_text">{{ block.settings.text_label }}</span>
+            {%- endif -%}
           {%- else -%}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -62,6 +65,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text_label",
+          "label": "Text"
         },
         {
           "type": "url",
