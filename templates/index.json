@@ -6,6 +6,7 @@
         "slide1": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/averie-woodard-4nulm-JUYFo-unsplash.png",
             "heading": "FIND YOUR PERFECT MATCH",
             "heading_size": "h1",
             "subheading": "WITH OUR HAIR EXPERTS",
@@ -23,17 +24,18 @@
         "slide2": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/averie-woodard-4nulm-JUYFo-unsplash.png",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
-            "box_align": "middle-center",
+            "box_align": "middle-right",
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "",
+            "color_scheme": "accent-4",
             "text_alignment_mobile": "center"
           }
         }
