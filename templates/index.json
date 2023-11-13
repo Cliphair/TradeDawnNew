@@ -163,6 +163,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/marie_claire.webp",
+            "text_label": "",
             "link": ""
           }
         },
@@ -170,6 +171,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Readers_Digest.webp",
+            "text_label": "",
             "link": ""
           }
         },
@@ -177,6 +179,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/grazia.webp",
+            "text_label": "",
             "link": ""
           }
         },
@@ -184,6 +187,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/the_sun2.png",
+            "text_label": "",
             "link": ""
           }
         }
@@ -531,6 +535,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
+            "text_label": "FSC Certified",
             "link": ""
           }
         },
@@ -538,6 +543,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
+            "text_label": "Biodegradable",
             "link": ""
           }
         },
@@ -545,6 +551,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
+            "text_label": "Vegan",
             "link": ""
           }
         },
@@ -552,6 +559,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
+            "text_label": "Sustainable",
             "link": ""
           }
         }
@@ -574,6 +582,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
+            "text_label": "Soy Ink",
             "link": ""
           }
         },
@@ -581,6 +590,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
+            "text_label": "Organic",
             "link": ""
           }
         },
@@ -588,6 +598,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
+            "text_label": "100% Recyclable",
             "link": ""
           }
         },
@@ -595,6 +606,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
+            "text_label": "Vegan Certified",
             "link": ""
           }
         }
