@@ -2,12 +2,14 @@
 
 {%- style -%}
   .logo-list {
-    padding: 20px 0;
+    padding: 15px 0;
+  }
+  #{{ section.id }} {
     background-color: {{ section.settings.background_color }};
   }
 {%- endstyle -%}
 
-<div class="logo-list">
+<div class="logo-list" id="{{ section.id }}">
   <div class="logoList--container images-{{ section.settings.images_per_row }} page-width">
     <ul>
       {%- for block in section.blocks -%}
