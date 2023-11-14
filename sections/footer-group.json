@@ -9,7 +9,7 @@
           "type": "text",
           "settings": {
             "heading": "Cliphair",
-            "subtext": "<p>customerservice@cliphair.com<\/p>"
+            "subtext": "<p>0345 211 311<\/p><p>customerservice@cliphair.com<\/p><p>9:30AM - 4:30PM - (Mon - Fri)<\/p><p><\/p><p>Unit 1 Watermill House, Restmor Way,<\/p><p>Wallington SM6 7AH<\/p><p>United Kingdom<\/p><p><\/p>"
           }
         },
         "d08a5cf4-367a-4ccd-8b21-13be0c3a942b": {
@@ -23,14 +23,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Customer Services",
-            "menu": "footer"
+            "menu": "footernavigation1"
           }
         },
         "footer-2": {
           "type": "link_list",
           "settings": {
             "heading": "Useful Links",
-            "menu": "footer"
+            "menu": "useful-links"
           }
         }
       },
