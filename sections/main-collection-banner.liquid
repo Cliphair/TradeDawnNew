@@ -4,7 +4,7 @@
 {%- style -%}
   @media screen and (max-width: 749px) {
     .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+      padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
     }
   }
 {%- endstyle -%}
@@ -18,7 +18,15 @@
       </h1>
 
       {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
+        <div class="collection-hero__description rte">
+          <span class="short-description">
+            {{ collection.description | strip_html | truncate: 300 }}
+          </span>
+          <span class="full-description" style="display: none;">
+            {{ collection.description }}
+          </span>
+          <a href="javascript:void(0);" class="toggle-description">Read More</a>
+        </div>
       {%- endif -%}
     </div>
 
@@ -44,6 +52,26 @@
     {%- endif -%}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggleDescription = document.querySelector('.toggle-description');
+    var shortDescription = document.querySelector('.short-description');
+    var fullDescription = document.querySelector('.full-description');
+
+    toggleDescription.addEventListener('click', function () {
+      if (fullDescription.style.display === 'none') {
+        fullDescription.style.display = 'block';
+        shortDescription.style.display = 'none';
+        toggleDescription.textContent = 'Read Less';
+      } else {
+        fullDescription.style.display = 'none';
+        shortDescription.style.display = 'block';
+        toggleDescription.textContent = 'Read More';
+      }
+    });
+  });
+</script>
 
 {% schema %}
 {
