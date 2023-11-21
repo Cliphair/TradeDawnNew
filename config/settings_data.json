@@ -218,6 +218,18 @@
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
+      },
+      "background-faded-pink": {
+        "settings": {
+          "background": "rgba(186, 105, 161, 0.3)",
+          "background_gradient": "",
+          "heading_text": "#2d2f76",
+          "text": "#4a4a4a",
+          "button": "#ba69a1",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
       }
     }
   },

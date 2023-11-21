@@ -1,0 +1,6 @@
+<div
+  class="heart-icon {% if favorites contains product.id %}favorited{% endif %}"
+  data-product-id="{{ product.id }}"
+>
+  {% render 'icon-heart' %}
+</div>

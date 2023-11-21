@@ -446,7 +446,7 @@
         "heading_alignment": "center",
         "layout": "none",
         "arrow_style": "full-arrow",
-        "color_scheme": "",
+        "color_scheme": "background-faded-pink",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
         "faq_schema": true,
