@@ -230,6 +230,18 @@
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
+      },
+      "background-faded-blue": {
+        "settings": {
+          "background": "rgba(186, 105, 161, 0.2)",
+          "background_gradient": "linear-gradient(-45deg, #fff, #2d2f7620, #fff)",
+          "heading_text": "#2d2f76",
+          "text": "#4a4a4a",
+          "button": "#ba69a1",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
       }
     }
   },
