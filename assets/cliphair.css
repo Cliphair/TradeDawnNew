@@ -19,4 +19,11 @@
 }
 .color-background-faded-pink p {
     color: #4a4a4a;
-} 
+}
+
+.color-background-white h2 {
+    color: #2d2f76;
+}
+.color-background-white p {
+    color: #4a4a4a;
+}
