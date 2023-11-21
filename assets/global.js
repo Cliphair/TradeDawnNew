@@ -1040,6 +1040,7 @@ class SlideshowComponent extends SliderComponent {
   }
 
   linkToSlide(event) {
+    console.log("linkToSlide event");
     event.preventDefault();
     const slideScrollPosition =
       this.slider.scrollLeft +

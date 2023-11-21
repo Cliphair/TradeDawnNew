@@ -394,3 +394,31 @@ slider-component.slider-component-full-width {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
 }
+.slideshow__controls {
+  position: absolute;
+  bottom: 5rem;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 0;
+}
+.slider-counter {
+  min-width: 50%;
+}
+.slideshow__control-wrapper {
+  width: 100%;
+}
+.slideshow__controls .slideshow_controls_heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+.slider-counter__link--active .slideshow_controls_heading {
+  opacity: 1;
+}
+.slideshow__controls .link {
+  color: #fff;
+  flex: 1;
+}
