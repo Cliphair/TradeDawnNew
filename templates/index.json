@@ -104,7 +104,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "inverse",
+        "color_scheme": "background-faded-blue",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -149,7 +149,7 @@
         "hide_card_arrow": true,
         "columns_desktop": 5,
         "swipe_on_desktop": true,
-        "color_scheme": "accent-2",
+        "color_scheme": "background-faded-blue",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -188,7 +188,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "background-faded-blue",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -274,7 +274,7 @@
         "heading_size": "h1",
         "text_allignment": "left",
         "image_ratio": "adapt",
-        "color_scheme": "background-1",
+        "color_scheme": "background-faded-pink",
         "slider_visual": "dots",
         "button_label": "FIND OUT MORE",
         "link": "",
@@ -480,7 +480,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "background-faded-pink",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
