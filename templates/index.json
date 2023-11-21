@@ -101,6 +101,9 @@
       "block_order": [
         "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1"
       ],
+      "custom_css": [
+        "h2 {color: #bda6c2;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
