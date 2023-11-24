@@ -1,10 +1,32 @@
 .blog-spot-section .title-wrapper {
 	border-bottom: 2px solid;
-	margin-bottom: 6rem;
+	margin-bottom: 5rem;
 }
 
 .blog-spot-section .blog__title {
-	padding-bottom: 3rem;
+	padding-bottom: 5rem;
+}
+
+.tag-wrapper {
+	list-style: none;
+	margin-bottom: 5rem;
+	display: none;
+}
+
+.tag {
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.tag>a {
+	color: inherit;
+	text-decoration: none;
+	text-underline-offset: .2rem;
+	letter-spacing: 1px;
+}
+
+.tag:hover>a {
+	text-decoration: underline;
 }
 
 .blog-posts-wrapper {
@@ -76,6 +98,13 @@
 }
 
 @media screen and (min-width:990px) {
+	.tag-wrapper {
+		display: flex;
+		gap: 6rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
 	.blog-posts-wrapper {
 		gap: 6rem;
 	}

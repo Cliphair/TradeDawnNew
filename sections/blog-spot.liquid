@@ -30,9 +30,9 @@
   if section.settings.image_ratio == 'square'
     assign image_ratio = 1
   elsif section.settings.image_ratio == 'portrait'
-    assign image_ratio = 2 | divided_by: 3
+    assign image_ratio = 0.6667
   else
-    assign image_ratio = 16 | divided_by: 9
+    assign image_ratio = 1.7778
   endif
 %}
 
@@ -51,6 +51,21 @@
         </h2>
       </div>
     {%- endunless -%}
+
+    {% if section.blocks.size > 0 and section.settings.blog != blank %}
+      <ul class="tag-wrapper">
+        {% for block in section.blocks %}
+          <li class="tag h2">
+            <a
+              href="{{ section.settings.blog.url }}/tagged/{{ block.settings.tag | handleize }}"
+              title="{{ section.settings.blog.title }} - {{ block.settings.tag | capitalize }}"
+            >
+              {{- block.settings.tag | upcase -}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
 
     <div class="blog-posts-wrapper blogs-per-row-mobile-{{ section.settings.columns_mobile }} blogs-per-row-desktop-{{ section.settings.columns_desktop }}">
       {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
@@ -251,6 +266,20 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tag",
+      "name": "Tag",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "tag",
+          "label": "Tag"
+        }
+      ]
     }
   ],
   "presets": [
