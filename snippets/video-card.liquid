@@ -1,0 +1,116 @@
+{% comment %}
+   Renders a video card
+
+   Accepts:
+   	- video: {Object} Video Liquid object
+   	- video_url: {String} Video url
+   	- video_url_id: {String} Video url id
+   	- video_url_type: {String} Video url type
+   	- description: {String} Video description
+   	- cover_image: {Object} Image Liquid object
+   	- image_ratio: {Float} Image aspect ratio
+  Usage:
+   	{% render 'video-card' %}
+{% endcomment %}
+
+{%- liquid
+  assign video_id = video.id | default: video_url_id
+  assign video_alt = video.alt | default: description
+  assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+
+  if cover_image
+    assign poster = cover_image
+  else
+    assign poster = video.preview_image
+  endif
+
+  if video != null
+    assign ratio_diff = video.aspect_ratio | minus: image_ratio | abs
+    if ratio_diff < 0.01 and ratio_diff > 0
+      assign fix_ratio = true
+    endif
+  endif
+-%}
+
+{%- capture sizes -%}
+	(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px)
+	calc(100vw - 10rem), 100vw
+{%- endcapture -%}
+
+<noscript>
+  <div
+    class="video-section__media"
+    {% if poster != null %}
+      style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+    {% endif %}
+  >
+    {%- if video == null and video_url != null -%}
+      <a
+        href="{{ video_url }}"
+        class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+      >
+        {%- if poster != null -%}
+          {{
+            poster
+            | image_url: width: 3840
+            | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+          }}
+        {%- else -%}
+          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+        {%- endif -%}
+      </a>
+    {%- else -%}
+      {{ video | video_tag: image_size: '1100x', loop: false, controls: true, muted: false }}
+    {%- endif -%}
+  </div>
+</noscript>
+<deferred-media-popup
+  class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  data-media-id="{{ video_id }}"
+  {% if poster != null %}
+    style="--ratio-percent: {{ 1 | divided_by: image_ratio | times: 100 }}%;"
+  {% endif %}
+>
+  <button
+    id="Deferred-Poster-Modal-{{ video_id }}"
+    class="video-section__poster media deferred-media__poster media--landscape"
+    type="button"
+    aria-label="{{ alt }}"
+  >
+    {%- if poster != null -%}
+      {{
+        poster
+        | image_url: width: 3840
+        | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+      }}
+    {%- else -%}
+      {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+    {%- endif -%}
+    <span class="deferred-media__poster-button motion-reduce">
+      {%- render 'icon-play' -%}
+    </span>
+  </button>
+  <template>
+    {%- if video == null and video_url != null -%}
+      {%- if video_url_type == 'youtube' -%}
+        <iframe
+          src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1"
+          class="js-youtube"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="{{ description | escape }}"
+        ></iframe>
+      {%- else -%}
+        <iframe
+          src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1"
+          class="js-vimeo"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="{{ description | escape }}"
+        ></iframe>
+      {%- endif -%}
+    {%- else -%}
+      {{ video | video_tag: image_size: '1100x', autoplay: true, loop: false, controls: true, muted: false }}
+    {%- endif -%}
+  </template>
+</deferred-media-popup>

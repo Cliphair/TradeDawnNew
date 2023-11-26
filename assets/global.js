@@ -610,6 +610,38 @@ class DeferredMedia extends HTMLElement {
 
 customElements.define('deferred-media', DeferredMedia);
 
+class DeferredMediaPopUp extends DeferredMedia {
+  constructor() {
+    super();
+  }
+
+  loadContent(focus = true) {
+    window.pauseAllMedia();
+    if (!this.getAttribute('loaded')) {
+      const content = document.createElement('div');
+      content.classList.add("background-overlay", "deferred-media-popup-container")
+      content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
+      content.addEventListener("click", this.closeContent)
+
+      document.querySelector("body").insertAdjacentElement('beforeend', content)
+
+      const deferredElement = content.querySelector('video, model-viewer, iframe');
+      if (focus) deferredElement.focus();
+      if (deferredElement.nodeName == 'VIDEO' && deferredElement.getAttribute('autoplay')) {
+        // force autoplay for safari
+        deferredElement.play();
+      }
+    }
+  }
+
+  closeContent() {
+    console.log("closing")
+    document.querySelector(".deferred-media-popup-container").remove();
+  }
+}
+
+customElements.define('deferred-media-popup', DeferredMediaPopUp);
+
 class SliderComponent extends HTMLElement {
   constructor() {
     super();
