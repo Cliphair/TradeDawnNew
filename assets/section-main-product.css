@@ -348,7 +348,7 @@ a.product__text {
   margin-bottom: 1.5rem;
 }
 .product__title h1  {
-  color: var(--colour-cliphair-pink);
+  color: var(--colour-cliphair-purple-dark);
 }
 
 .product__title > * {
