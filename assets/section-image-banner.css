@@ -7,6 +7,10 @@
 .banner__box {
   text-align: center;
 }
+.banner_subheading {
+  color: #4a4a4a;
+  font-size: calc(var(--font-heading-scale) * 2rem)
+}
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
