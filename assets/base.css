@@ -2387,7 +2387,8 @@ product-info .loading-overlay:not(.hidden)~*,
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
+  /* background-color: rgb(var(--color-background)); */
+  background: transparent;
 }
 
 .header-wrapper--border-bottom {
@@ -3001,6 +3002,16 @@ details-disclosure>details {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
+}
+.gradient-blue {
+  background: var(--bg-cliphair-faded-blue);
+  background-attachment: fixed;
+}
+.header-wrapper {
+  background: #fff;
+}
+.top-of-page .header-wrapper {
+  background: transparent;
 }
 
 @media screen and (forced-colors: active) {
