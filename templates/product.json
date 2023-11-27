@@ -31,11 +31,23 @@
           "settings": {
           }
         },
+        "28847c9a-e76e-447c-b7fc-d83a95df27d1": {
+          "type": "features_text",
+          "settings": {
+            "features_text": "{{ product.metafields.custom.product_features | metafield_tag }}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
           }
         },
         "description": {
@@ -46,8 +58,8 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
+            "heading": "Description",
+            "icon": "none",
             "content": "",
             "page": ""
           }
@@ -78,29 +90,22 @@
             "content": "",
             "page": ""
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "caption",
         "price",
         "variant_picker",
         "quantity_selector",
-        "features",
+        "28847c9a-e76e-447c-b7fc-d83a95df27d1",
         "buy_buttons",
+        "share",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -256,7 +261,7 @@
         "template--15283894124605__c0623de8-61c2-40dd-924f-824e5a1e407f-logo_image-4"
       ],
       "settings": {
-        "background_color": "#f4f4f4",
+        "background_color": "#fff",
         "text_color": "#121212",
         "images_per_row": 4
       }
