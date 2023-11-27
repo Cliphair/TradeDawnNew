@@ -1,7 +1,6 @@
 .product {
   margin: 0;
 }
-
 .product.grid {
   gap: 0;
 }
@@ -54,8 +53,8 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
-    width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 60%;
+    width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
@@ -176,6 +175,11 @@ variant-selects {
 .product-form__input--dropdown {
   margin-bottom: 1.6rem;
 }
+.product-form__input--dropdown .select__select,
+.product-form__input--dropdown .select
+  {
+  width: 100%;
+}
 
 .product-form__input .form__label {
   padding-left: 0;
@@ -274,7 +278,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .select {
-  max-width: 25rem;
+  /* max-width: 25rem; */
 }
 
 .product-form__submit {
@@ -342,6 +346,9 @@ a.product__text {
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
+}
+.product__title h1  {
+  color: var(--colour-cliphair-pink);
 }
 
 .product__title > * {
@@ -1397,13 +1404,14 @@ a.product__text {
   --ratio-percent: calc(1 / var(--aspect-ratio) * 100%);
   position: relative;
   width: 100%;
-  max-width: calc(100% - calc(var(--media-border-width) * 2));
+  max-width: 100%;
+  /* max-width: calc(100% - calc(var(--media-border-width) * 2)); */
 }
 
 .product-media-container.constrain-height {
   /* arbitrary offset value based on average theme spacing and header height */
   --viewport-offset: 400px;
-  --constrained-min-height: 300px;
+  --constrained-min-height: 400px;
   --constrained-height: max(var(--constrained-min-height), calc(100vh - var(--viewport-offset)));
   margin-right: auto;
   margin-left: auto;
@@ -1411,7 +1419,8 @@ a.product__text {
 
 .product-media-container.constrain-height.media-fit-contain {
   --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
-  width: min(var(--contained-width), 100%);
+  /* width: min(var(--contained-width), 100%); */
+  width: 100%;
 }
 
 .product-media-container .media {
