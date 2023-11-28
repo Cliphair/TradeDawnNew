@@ -40,7 +40,7 @@
         "9d444244-2372-4c83-b99b-7a3765dc6273": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ collection.metafields.custom.collection_subtitle_two.value }}<\/p>"
+            "text": "<p><strong>{{ collection.metafields.custom.collection_subtitle_two.value }}<\/strong><\/p>"
           }
         },
         "43835d6c-0406-4cc1-8f39-0f9c219220d1": {
