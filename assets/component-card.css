@@ -77,6 +77,8 @@
   /* Fix for Safari border bug on hover */
   z-index: 0;
   border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
+  /* border: 1px solid var(--colour-cliphair-grey-light); */
+  border: 1px solid #ccc;
 }
 
 .card--card .card__inner .card__media {

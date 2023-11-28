@@ -219,10 +219,21 @@
           "shadow": "#121212"
         }
       },
+      "background-collection-titles": {
+        "settings": {
+          "background": "#ededed",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#ba69a1",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
       "background-faded-pink": {
         "settings": {
           "background": "#ba69a1",
-          "background_gradient": "linear-gradient(-45deg, #fff, #BA69A133, #fff)",
+          "background_gradient": "linear-gradient(-45deg, #fff, #fbcfe830, #fff)",
           "text": "#4a4a4a",
           "button": "#ba69a1",
           "button_label": "#ffffff",
@@ -233,7 +244,7 @@
       "background-faded-blue": {
         "settings": {
           "background": "#ba69a1",
-          "background_gradient": "linear-gradient(-45deg, #fff, #2d2f7620, #fff)",
+          "background_gradient": "linear-gradient(-45deg, #fff, #a5f3fc30, #fff)",
           "text": "#4a4a4a",
           "button": "#ba69a1",
           "button_label": "#ffffff",
