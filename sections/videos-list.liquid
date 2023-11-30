@@ -18,28 +18,79 @@
   }
 
   @media screen and (min-width:{{ settings.page_width }}px) {
-    .section-videos-list .slider-buttons.slider--1-col-desktop {
+    /* square image ratio */
+    .section-videos-list .slider-buttons-square.slider--1-col-desktop {
       top: calc(({{ settings.page_width }}px - 10rem) / 2 - 22px)
     }
 
-    .section-videos-list .slider-buttons.slider--2-col-desktop {
+    .section-videos-list .slider-buttons-square.slider--2-col-desktop {
       top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing)) / 2) / 2 - 22px)
     }
 
-    .section-videos-list .slider-buttons.slider--3-col-desktop {
+    .section-videos-list .slider-buttons-square.slider--3-col-desktop {
       top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 3) / 2 - 22px)
     }
 
-    .section-videos-list .slider-buttons.slider--4-col-desktop {
+    .section-videos-list .slider-buttons-square.slider--4-col-desktop {
       top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 3) / 4) / 2 - 22px)
     }
 
-    .section-videos-list .slider-buttons.slider--5-col-desktop {
+    .section-videos-list .slider-buttons-square.slider--5-col-desktop {
       top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 4) / 5) / 2 - 22px)
     }
 
-    .section-videos-list .slider-buttons.slider--6-col-desktop {
+    .section-videos-list .slider-buttons-square.slider--6-col-desktop {
       top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 6) / 2 - 22px)
+    }
+
+    /* portrait image ratio */
+    .section-videos-list .slider-buttons-portrait.slider--1-col-desktop {
+      top: calc(({{ settings.page_width }}px - 10rem) * 0.667 / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-portrait.slider--2-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing)) / 0.667 / 2) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-portrait.slider--3-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 0.667 / 3) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-portrait.slider--4-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 3) / 0.667 / 4) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-portrait.slider--5-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 4) / 0.667 / 5) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-portrait.slider--6-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 0.667 / 6) / 2 - 22px)
+    }
+
+    /* landscape image ratio */
+    .section-videos-list .slider-buttons-landscape.slider--1-col-desktop {
+      top: calc(({{ settings.page_width }}px - 10rem) * 1.668 / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-landscape.slider--2-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing)) / 1.668 / 2) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-landscape.slider--3-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 1.668 / 3) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-landscape.slider--4-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 3) / 1.668 / 4) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-landscape.slider--5-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 4) / 1.668 / 5) / 2 - 22px)
+    }
+
+    .section-videos-list .slider-buttons-landscape.slider--6-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 1.668 / 6) / 2 - 22px)
     }
   }
 {% endstyle %}
@@ -78,15 +129,9 @@
       </div>
     {%- endunless -%}
 
-    {% unless section.settings.introduction == blank %}
-      <div class="intro-wrapper">
-        {{ section.settings.introduction }}
-      </div>
-    {% endunless %}
-
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="slider-buttons left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+        <div class="slider-buttons slider-buttons-{{ section.settings.image_ratio }} left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
           <button
             type="button"
             class="slider-button slider-button--prev"
@@ -134,7 +179,7 @@
       </ul>
 
       {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+        <div class="slider-buttons slider-buttons-{{ section.settings.image_ratio }} right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
           <div class="slider-counter caption visually-hidden">
             <span class="slider-counter--current">1</span>
             <span aria-hidden="true"> / </span>
@@ -152,6 +197,12 @@
         </div>
       {%- endif -%}
     </slider-component>
+
+    {% unless section.settings.introduction == blank %}
+      <div class="intro-wrapper">
+        {{ section.settings.introduction }}
+      </div>
+    {% endunless %}
 
     {%- if section.settings.button_label != blank -%}
       <div class="button-wrapper">

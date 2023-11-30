@@ -163,29 +163,29 @@
 /* slider buttons */
 /* square image ratio */
 .section-videos-list .slider-buttons-square.slider--1-col-tablet-down {
-	top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 2) / 2 - 22px)
+	top: calc(((100vw - 3rem) / 2) - 22px)
 }
 
 .section-videos-list .slider-buttons-square.slider--2-col-tablet-down {
-	top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing) * 2) / 2.3) / 2 - 22px)
+	top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 2) / 2 - 22px)
 }
 
 /* portrait image ratio */
 .section-videos-list .slider-buttons-portrait.slider--1-col-tablet-down {
-	top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 2) / 2 - 22px)
+	top: calc((((100vw - 3rem) / 0.667) / 2) - 22px);
 }
 
 .section-videos-list .slider-buttons-portrait.slider--2-col-tablet-down {
-	top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing) * 2) / 2.3) / 2 - 22px)
+	top: calc(((((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 0.667) / 2) / 2) - 22px);
 }
 
-/* ladscape image ratio */
+/* landscape image ratio */
 .section-videos-list .slider-buttons-landscape.slider--1-col-tablet-down {
-	top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 2) / 2 - 22px)
+	top: calc((((100vw - 3rem) / 1.778) / 2) - 22px);
 }
 
 .section-videos-list .slider-buttons-landscape.slider--2-col-tablet-down {
-	top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing) * 2) / 2.3) / 2 - 22px)
+	top: calc(((((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 1.778) / 2) / 2) - 22px);
 }
 
 .section-videos-list .slider-buttons {
@@ -215,11 +215,29 @@
 
 	/* square image ratio */
 	.section-videos-list .slider-buttons-square.slider--1-col-tablet-down {
-		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing))) / 2 - 22px)
+		top: calc(((100vw - 10rem) / 2) - 22px)
 	}
 
 	.section-videos-list .slider-buttons-square.slider--2-col-tablet-down {
-		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 2.1) / 2 - 22px)
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing)) / 2) / 2 - 22px)
+	}
+
+	/* portrait image ratio */
+	.section-videos-list .slider-buttons-portrait.slider--1-col-tablet-down {
+		top: calc((((100vw - 10rem) / 0.667) / 2) - 22px);
+	}
+
+	.section-videos-list .slider-buttons-portrait.slider--2-col-tablet-down {
+		top: calc(((((100vw - 10rem - var(--grid-desktop-horizontal-spacing)) / 0.667) / 2) / 2) - 22px);
+	}
+
+	/* landscape image ratio */
+	.section-videos-list .slider-buttons-landscape.slider--1-col-tablet-down {
+		top: calc((((100vw - 10rem) / 1.778) / 2) - 22px);
+	}
+
+	.section-videos-list .slider-buttons-landscape.slider--2-col-tablet-down {
+		top: calc(((((100vw - 10rem - var(--grid-desktop-horizontal-spacing)) / 1.778) / 2) / 2) - 22px);
 	}
 
 	.section-videos-list .slider-buttons.right-slider {
@@ -268,6 +286,56 @@
 
 	.section-videos-list .slider-buttons-square.slider--6-col-desktop {
 		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 6) / 2 - 22px)
+	}
+
+	/* portrait image ratio */
+	.section-videos-list .slider-buttons-portrait.slider--1-col-desktop {
+		top: calc((100vw - 10rem) * 0.667 / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-portrait.slider--2-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing)) / 0.667 / 2) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-portrait.slider--3-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 0.667 / 3) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-portrait.slider--4-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 3) / 0.667 / 4) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-portrait.slider--5-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 4) / 0.667 / 5) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-portrait.slider--6-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 0.667 / 6) / 2 - 22px)
+	}
+
+	/* landscape image ratio */
+	.section-videos-list .slider-buttons-landscape.slider--1-col-desktop {
+		top: calc((100vw - 10rem) * 0.667 / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-landscape.slider--2-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing)) / 1.668 / 2) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-landscape.slider--3-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 1.668 / 3) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-landscape.slider--4-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 3) / 1.668 / 4) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-landscape.slider--5-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 4) / 1.668 / 5) / 2 - 22px)
+	}
+
+	.section-videos-list .slider-buttons-landscape.slider--6-col-desktop {
+		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 1.668 / 6) / 2 - 22px)
 	}
 }
 
