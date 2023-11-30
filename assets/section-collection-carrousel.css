@@ -72,8 +72,12 @@
 	margin-bottom: 0;
 }
 
+.section-collection-carrousel .card .card__inner .card__media {
+	border: none;
+}
+
 .section-collection-carrousel .card__information {
-	padding:0 1rem 1.3rem;
+	padding: 0 1rem 1.3rem;
 }
 
 .section-collection-carrousel .button-wrapper {

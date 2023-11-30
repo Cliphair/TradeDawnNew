@@ -95,6 +95,10 @@
     margin-bottom: 3rem;
 }
 
+.quality-promise__item .card--card .card__inner .card__media {
+    border: none;
+}
+
 .quality-promise__item .card__content {
     padding: 0 1rem;
 }
