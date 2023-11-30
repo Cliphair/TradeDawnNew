@@ -1902,7 +1902,8 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  /* width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2); */
+  width: 100%;
   display: flex;
   border-radius: var(--inputs-radius);
   min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
@@ -2386,7 +2387,8 @@ product-info .loading-overlay:not(.hidden)~*,
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
+  /* background-color: rgb(var(--color-background)); */
+  background: transparent;
 }
 
 .header-wrapper--border-bottom {
@@ -3000,6 +3002,16 @@ details-disclosure>details {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
+}
+.gradient-blue {
+  background: var(--bg-cliphair-faded-blue);
+  background-attachment: fixed;
+}
+.header-wrapper {
+  background: #fff;
+}
+.top-of-page .header-wrapper {
+  background: transparent;
 }
 
 @media screen and (forced-colors: active) {

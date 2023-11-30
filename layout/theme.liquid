@@ -82,6 +82,15 @@
       }
 
       :root {
+        --colour-cliphair-pink: #BA69A1;
+        --colour-cliphair-purple-light: #BDA6C2;
+        --colour-cliphair-grey-light: #EDEDED;
+        --colour-cliphair-grey-dark: #4A4A4A;
+        --colour-cliphair-blue: #2D2F76;
+        --colour-cliphair-purple-dark: #752E89;
+        --bg-cliphair-faded-blue: linear-gradient(-45deg, #fff, #a5f3fc30, #fff);
+        --bg-cliphair-faded-pink: linear-gradient(-45deg, #fff, #fbcfe830, #fff);
+
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
@@ -270,7 +279,7 @@
     <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/Sddq5b54LKByO9MIWYhSzw" async></script>
   </head>
 
-  <body class="{% if request.page_type == 'index' %}home{% endif %} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}{% if request.page_type == 'product' %} product gradient-blue{% endif %}{% if request.page_type == 'collection' %} collection gradient-blue{% endif %} {% if request.page_type == 'index' %}home{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>

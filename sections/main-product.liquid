@@ -96,6 +96,12 @@
                   </h2>
                 </a>
               </div>
+              {%- when 'features_text' -%}
+                {%- if block.settings.features_text != blank -%}
+                  <div class="product__features_text">
+                    {{ block.settings.features_text }}
+                  </div>
+                {%- endif -%}    
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -217,7 +223,7 @@
                 {% # theme-check-disable %}
                 {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
                 {% # theme-check-enable %}
-                <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
+                {% comment %} <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
                   {{ 'products.product.quantity.label' | t }}
                   <span class="quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
                     <span class="loading-overlay hidden">
@@ -235,7 +241,7 @@
                     </span>
                     <span>({{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}})</span>
                   </span>
-                </label>
+                </label> {% endcomment %}
                 <div class="price-per-item__container">
                   <quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
                     <button class="quantity__button no-js-hidden" name="minus" type="button">
@@ -720,6 +726,17 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "features_text",
+      "name": "Product Features",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "features_text",
+          "label": "Text"
         }
       ]
     },

@@ -1,33 +1,37 @@
 .color-background-grey h2 {
-    color: #2d2f76;
+    color: var(--colour-cliphair-blue);
     font-size: 2.5rem;
     font-weight: 400;
 }
 .color-background-grey h3 {
-    color: #ba69a1;
+    color: var(--colour-cliphair-pink);
 }
 
 .product-card-wrapper .card__heading {
     text-transform: uppercase;
-    color: #4a4a4a;
+    color: var(--colour-cliphair-grey-dark);
 }
 .color-background-faded-pink h2 {
-    color: #2d2f76;
+    color: var(--colour-cliphair-blue);
 }
 .color-background-faded-pink a, .color-background-faded-pink .accordion__title {
-    color: #752e89;
+    color: var(--colour-cliphair-purple-dark);
 }
 .color-background-faded-pink p {
-    color: #4a4a4a;
+    color: var(--colour-cliphair-grey-dark);
 }
 
 .color-background-white h2 {
-    color: #2d2f76;
+    color: var(--colour-cliphair-blue);
 }
 .color-background-white p {
-    color: #4a4a4a;
+    color: var(--colour-cliphair-grey-dark);
 }
 
 .color-background-faded-blue h2 {
-    color: #2d2f76;
+    color: var(--colour-cliphair-blue);
+}
+.color-background-collection-titles h2 {
+    color: var(--colour-cliphair-blue);
+    text-transform: uppercase;
 }
