@@ -635,7 +635,6 @@ class DeferredMediaPopUp extends DeferredMedia {
   }
 
   closeContent() {
-    console.log("closing")
     document.querySelector(".deferred-media-popup-container").remove();
   }
 }
@@ -666,15 +665,12 @@ class SliderComponent extends HTMLElement {
 
   initPages() {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
-    console.log(this.sliderItemsToShow)
     if (this.sliderItemsToShow.length < 2) return;
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor(
       (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
     );
-    console.log(this.slidesPerPage)
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-    console.log(this.totalPages)
     this.update();
   }
 
@@ -1072,7 +1068,6 @@ class SlideshowComponent extends SliderComponent {
   }
 
   linkToSlide(event) {
-    console.log("linkToSlide event");
     event.preventDefault();
     const slideScrollPosition =
       this.slider.scrollLeft +
