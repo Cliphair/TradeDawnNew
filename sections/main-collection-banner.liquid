@@ -8,6 +8,14 @@
     }
   }
 {%- endstyle -%}
+
+{% liquid
+  assign description = collection.description
+  if description contains '<!-- split -->'
+    assign description = description | split: '<!-- split -->' | first
+  endif
+%}
+
 {% comment %} removed from collection-hero color-{{ section.settings.color_scheme }} gradient {% endcomment %}
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %}">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -18,14 +26,17 @@
       </h1>
 
       {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">
-          <span class="short-description">
-            {{ collection.description | strip_html | truncate: 300 }}
-          </span>
-          <span class="full-description" style="display: none;">
-            {{ collection.description }}
-          </span>
-          <a href="javascript:void(0);" class="toggle-description">Read More</a>
+        <div class="collection-hero__description rte {{ section.settings.text_alignment }}">
+          {{ description }}
+          {% comment %}
+            <span class="short-description">
+              {{ collection.description | strip_html | truncate: 300 }}
+            </span>
+            <span class="full-description" style="display: none;">
+              {{ collection.description }}
+            </span>
+            <a href="javascript:void(0);" class="toggle-description">Read More</a>
+          {% endcomment %}
         </div>
       {%- endif -%}
     </div>
@@ -53,25 +64,27 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var toggleDescription = document.querySelector('.toggle-description');
-    var shortDescription = document.querySelector('.short-description');
-    var fullDescription = document.querySelector('.full-description');
+{% comment %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggleDescription = document.querySelector('.toggle-description');
+      var shortDescription = document.querySelector('.short-description');
+      var fullDescription = document.querySelector('.full-description');
 
-    toggleDescription.addEventListener('click', function () {
-      if (fullDescription.style.display === 'none') {
-        fullDescription.style.display = 'block';
-        shortDescription.style.display = 'none';
-        toggleDescription.textContent = 'Read Less';
-      } else {
-        fullDescription.style.display = 'none';
-        shortDescription.style.display = 'block';
-        toggleDescription.textContent = 'Read More';
-      }
+      toggleDescription.addEventListener('click', function () {
+        if (fullDescription.style.display === 'none') {
+          fullDescription.style.display = 'block';
+          shortDescription.style.display = 'none';
+          toggleDescription.textContent = 'Read Less';
+        } else {
+          fullDescription.style.display = 'none';
+          shortDescription.style.display = 'block';
+          toggleDescription.textContent = 'Read More';
+        }
+      });
     });
-  });
-</script>
+  </script>
+{% endcomment %}
 
 {% schema %}
 {
@@ -87,6 +100,12 @@
       "id": "show_collection_description",
       "default": true,
       "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Description alignment",
+      "default": "left"
     },
     {
       "type": "checkbox",
