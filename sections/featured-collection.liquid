@@ -86,7 +86,8 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            {% render 'card-product',
+            {%
+              render 'card-product',
               card_product: product,
               media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
@@ -94,7 +95,12 @@
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating,
               show_quick_add: section.settings.enable_quick_add,
-              section_id: section.id
+              section_id: section.id,
+              colour_as_title: section.settings.colour_as_title,
+              show_type: section.settings.show_type,
+              badge_style: section.settings.badge_style,
+              display_low_inventory: section.settings.display_low_inventory,
+              low_inventory: section.settings.low_inventory | times: 1
             %}
           </li>
         {%- else -%}
@@ -369,6 +375,19 @@
     },
     {
       "type": "checkbox",
+      "id": "colour_as_title",
+      "default": false,
+      "label": "Use colour as title",
+      "info": "Uses metafield Colour Name, if empty title will be used instead."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_type",
+      "default": false,
+      "label": "Show type"
+    },
+    {
+      "type": "checkbox",
       "id": "show_vendor",
       "default": false,
       "label": "t:sections.featured-collection.settings.show_vendor.label"
@@ -385,6 +404,42 @@
       "id": "enable_quick_add",
       "default": false,
       "label": "t:sections.featured-collection.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "header",
+      "content": "Badge settings"
+    },
+    {
+      "type": "select",
+      "id": "badge_style",
+      "options": [
+        {
+          "value": "float",
+          "label": "Float"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed"
+        }
+      ],
+      "default": "float",
+      "label": "Badge style"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_low_inventory",
+      "default": false,
+      "label": "Display low inventory badge"
+    },
+    {
+      "type": "range",
+      "id": "low_inventory",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "un",
+      "label": "Low inventory quantity",
+      "default": 5
     },
     {
       "type": "header",
