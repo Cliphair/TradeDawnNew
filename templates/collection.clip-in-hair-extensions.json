@@ -33,6 +33,32 @@
         "padding_bottom": 36
       }
     },
+    "aa4004e9-575f-4047-a9c6-db4f05f7b67e": {
+      "type": "main-collection-more-info",
+      "settings": {
+        "show_collection_description": true,
+        "text_alignment": "center",
+        "color_scheme": "background-grey",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "35da6e57-018b-4d1d-b449-73bc8ffbd13f": {
+      "type": "collection-faq",
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "31af79c0-9e7e-484e-a7a5-98d79d83f95d": {
       "type": "rich-text",
       "blocks": {
@@ -220,6 +246,8 @@
   "order": [
     "banner",
     "product-grid",
+    "aa4004e9-575f-4047-a9c6-db4f05f7b67e",
+    "35da6e57-018b-4d1d-b449-73bc8ffbd13f",
     "31af79c0-9e7e-484e-a7a5-98d79d83f95d",
     "39d20f8e-c5ee-4208-a519-6e172591f7e9",
     "48017b3d-2927-419a-8b96-746a8881f3ba",
