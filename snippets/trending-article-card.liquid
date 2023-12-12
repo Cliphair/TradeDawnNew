@@ -1,0 +1,67 @@
+{% unless loading %}
+  {% assign loading = 'lazy' %}
+{% endunless %}
+
+<a
+  href="{{ article.url }}"
+  title="{{ article.title }}"
+  class="trending-article {% if forloop.last %}last{% endif %}"
+  data-index="trending_{{ forloop.index }}"
+>
+  {% if image %}
+    <img
+      src="{{ image | image_url }}"
+      width="{{ image.width }}"
+      height="{{ image.height }}"
+      alt="{{ image.alt }}"
+      loading="{{ loading }}"
+      class=" trending-article-image"
+    >
+  {% else %}
+    {% if article.metafields.global.main_image %}
+      <img
+        src="{{ article.metafields.global.main_image }}"
+        width="848"
+        height="477"
+        loading="{{ loading }}"
+        alt="{{ article.title }}"
+        class=" trending-article-image"
+      >
+    {% else %}
+      <img
+        src="{{ article.image | image_url }}"
+        loading="{{ loading }}"
+        width="{{ article.image.width }}"
+        height="{{ article.image.height }}"
+        alt="{{ article.image.alt }}"
+        class=" trending-article-image"
+      >
+    {% endif %}
+  {% endif %}
+
+  <div class="trending-text-container">
+    <div class="trending-article-info">
+      <p class="trending-published">{{ article.published_at | date: '%b %e, %Y' | upcase }}</p>
+      <!-- <p class='trending-tag'>{% if tag != empty %}{{ tag }}{% else %}Hair Blog{% endif %}</p> -->
+      <p class="trending-reading-time">
+        {% if article.metafields.custom['reading-time'] %}
+          <span>{{ article.metafields.custom['reading-time'] }}</span> MIN READ
+        {% elsif article.content contains '<!-- reading time -->' %}
+          {% assign array = article.content | split: '<!-- reading time -->' %}
+          {% assign reading_time = array[0] %}
+          <span>{{ reading_time }}</span> MIN READ
+        {% endif %}
+      </p>
+    </div>
+    <h3 class="trending-title">{{ article.title }}</h3>
+    <div class="trending-article-info">
+      <p class="trending-author">
+        by <span>{{ article.author | upcase }}</span>
+      </p>
+      <!-- <p class='trending-published'>{{ article.published_at | date: "%b %e, %Y" | upcase}}</p> -->
+      <p class="trending-tag">
+        {% if tag != empty %}{{ tag }}{% else %}Hair Blog{% endif %}
+      </p>
+    </div>
+  </div>
+</a>

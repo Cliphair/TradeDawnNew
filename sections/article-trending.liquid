@@ -1,0 +1,466 @@
+{{ 'section-article-trending.css' | asset_url | stylesheet_tag: preload: boolean }}
+<style>
+  #section-{{ section.id }}{
+    padding-top:{{ section.settings.mobile-top-padding }}px;
+    padding-bottom:{{ section.settings.mobile-bottom-padding }}px;
+    padding-right:{{ section.settings.mobile-right-padding }}px;
+    padding-left:{{ section.settings.mobile-left-padding }}px;
+    {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
+  }
+
+  #section-{{ section.id }} .trending-section-header{
+    font-size:{{ section.settings.header-mobile-font-size }}px;
+    color:{{ section.settings.header_colour }};
+  }
+
+  #section-{{ section.id }} .trending-articles-inner-container > .trending-article:hover{
+    color:{{section.settings.text_colour}};
+  }
+
+  #section-{{ section.id }} .trending-text-container > *{
+    font-size:{{ section.settings.text-mobile-font-size }}px;
+    color:{{ section.settings.text_colour }};
+  }
+
+  #section-{{ section.id }} .trending-text-container > .trending-article-info > .trending-tag{
+    {%if section.settings.text-mobile-font-size < 14 %}
+      font-size:11px;
+    {% else %}
+      font-size:calc({{ section.settings.text-mobile-font-size }}px - 4px);
+    {% endif %}
+  }
+
+  #section-{{ section.id }} .trending-text-container > .trending-article-info > * {
+    {% if section.settings.text-mobile-font-size < 16 %}
+      font-size:10px;
+    {% else %}
+      font-size:calc({{ section.settings.text-mobile-font-size }}px - 6px);
+    {% endif %}
+  }
+
+  #section-{{ section.id }} .arrow-container{
+    top:{{ section.settings.mobile-arrow }}%;
+  }
+
+  #section-{{ section.id }} .arrow-container > span{
+    color:{{ section.settings.colour-arrow }};
+    font-size:{{ section.settings.arrow-mobile-size }}px;
+  }
+
+  #section-{{ section.id }} .trending-dot-container > .trending-dot{
+    background-color:{{ section.settings.text_colour }};
+  }
+
+  @media only screen and (min-width:768px){
+    #section-{{ section.id }} .arrow-container{
+      top:{{ section.settings.tablet-arrow }}%;
+    }
+  }
+
+  @media only screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top:{{ section.settings.desktop-top-padding }}px;
+      padding-bottom:{{ section.settings.desktop-bottom-padding }}px;
+      padding-right:{{ section.settings.desktop-right-padding }}px;
+      padding-left:{{ section.settings.desktop-left-padding }}px;
+    }
+
+    #section-{{ section.id }} .trending-section-header{
+      font-size:{{ section.settings.header-desktop-font-size }}px;
+    }
+
+    #section-{{ section.id }} .trending-text-container > *{
+      font-size:{{ section.settings.text-desktop-font-size }}px;
+    }
+
+    {% if section.settings.text-desktop-font-size >= 15 %}
+    #section-{{ section.id }} .trending-text-container > .trending-article-info > .trending-tag{
+      font-size:calc({{ section.settings.text-desktop-font-size }}px - 4px);
+    }
+    {% endif %}
+
+    {% if section.settings.text-desktop-font-size >= 16 %}
+    #section-{{ section.id }} .trending-text-container > .trending-article-info > * {
+      font-size:calc({{ section.settings.text-desktop-font-size }}px - 6px);
+    }
+    {% endif %}
+
+    #section-{{ section.id }} .arrow-container{
+      top:{{ section.settings.desktop-arrow }}%;
+    }
+
+    #section-{{ section.id }} .arrow-container > span{
+      font-size:{{ section.settings.arrow-desktop-size }}px;
+    }
+  }
+</style>
+
+<div id="section-{{ section.id }}" class="trending-articles-container">
+  {% if section.settings.header != empty %}
+    <h2 class="trending-section-header">{{ section.settings.header }}</h2>
+  {% endif %}
+
+  <div class="trending-articles-inner-container container-{{ section.id }}">
+    {% for block in section.blocks %}
+      {% liquid
+        assign loading = 'lazy'
+        if section.settings['is-largest-contet']
+          if forloop.index == 1
+            assign loading = 'eager'
+          endif
+        endif
+      %}
+      {% if block.settings.article != blank %}
+        {% include 'trending-article-card',
+          article: block.settings.article,
+          image: block.settings.image,
+          loading: loading
+        %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if section.settings.enable_arrows %}
+    <div class="arrow-container">
+      <span
+        class="scroll-arrow left"
+        onclick="scrollArrow(this)"
+        data-target="container-{{ section.id }}"
+        data-direction="left"
+        data-speed="50"
+        data-distance="350"
+        data-step="50"
+        ><i class="fa-solid fa-angle-left"></i
+      ></span>
+      <span
+        class="scroll-arrow right"
+        onclick="scrollArrow(this)"
+        data-target="container-{{ section.id }}"
+        data-direction="right"
+        data-speed="50"
+        data-distance="350"
+        data-step="50"
+        ><i class="fa-solid fa-angle-right"></i
+      ></span>
+    </div>
+
+    <script>
+      //Arrow functions
+      function scrollArrow(button) {
+        let target = button.getAttribute('data-target');
+        let direction = button.getAttribute('data-direction');
+        let speed = parseInt(button.getAttribute('data-speed'));
+        let distance = document.getElementsByClassName('trending-article')[0].clientWidth;
+        let step = distance / 10;
+        let container = document.getElementsByClassName(target)[0];
+
+        sideScroll(container, direction, speed, distance, step);
+      }
+
+      function sideScroll(element, direction, speed, distance, step) {
+        scrollAmount = 0;
+        var slideTimer = setInterval(function () {
+          if (direction == 'left') {
+            element.scrollLeft -= step;
+          } else {
+            element.scrollLeft += step;
+          }
+          scrollAmount += step;
+          if (scrollAmount >= distance) {
+            window.clearInterval(slideTimer);
+          }
+        }, speed);
+      }
+    </script>
+  {% endif %}
+
+  <div class="trending-dot-container">
+    {% for block in section.blocks %}
+      {% if block.settings.article != blank %}
+        <span
+          class="trending-dot dot-icon {% if forloop.first %}active{% endif %}"
+          data-target="trending_{{ forloop.index }}"
+        ></span>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  $(document).ready(addButtonClick('trending-dot'));
+</script>
+
+{% schema %}
+{
+  "name": "Block Trending Articles",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Section Header"
+    },
+    {
+      "type": "header",
+      "content": "Universal Settings"
+    },
+    {
+      "type": "color",
+      "id": "header_colour",
+      "label": "Header Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_colour",
+      "label": "Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_colour",
+      "label": "Background Colour",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "max-width",
+      "label": "Max Width",
+      "info": "Please enter max-width value in pixels, ex: 1250, 1440."
+    },
+    {
+      "type": "checkbox",
+      "id": "is-largest-contet",
+      "label": "Is Largest Content",
+      "default": false,
+      "info": "If enabled, first image from this section will not be lazyload, so it doesn't impact Speed Performance. Enable if this section is on the top of the page, and the images are the bisggest element on the page when it first load."
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "range",
+      "id": "header-mobile-font-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Header Mobile Font Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text-mobile-font-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Text Mobile Font Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "arrow-mobile-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrow Mobile Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile-top-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-bottom-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Bottom Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-right-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Right Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-left-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Left Padding",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Desktop Settings"
+    },
+    {
+      "type": "range",
+      "id": "header-desktop-font-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Header Desktop Font Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text-desktop-font-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Text Desktop Font Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "arrow-desktop-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrow Desktop Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "desktop-top-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-bottom-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Bottom Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-right-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Right Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-left-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Left Padding",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Arrow settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows",
+      "label": "Enable Arrow",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "colour-arrow",
+      "label": "Arrow Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "mobile-arrow",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Arrow Position Mobile",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "tablet-arrow",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Arrow Position Tablet",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "desktop-arrow",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Arrow Position Desktop",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "Article",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Article Tag"
+        },
+        {
+          "type": "header",
+          "content": "Custom Image",
+          "info": "Just use this section if you want to use a custom image."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom Image"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Block Trending Articles" }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

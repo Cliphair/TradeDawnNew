@@ -15,7 +15,7 @@
   endif
 %}
 
-{{ 'section-article-categories.css' | asset_url | stylesheet_tag }}
+{{ 'section-article-categories.css' | asset_url | stylesheet_tag: preload: boolean }}
 <style>
   #{{section.id}}{
     padding-top:{{section.settings.mobile-top-padding}}px;
