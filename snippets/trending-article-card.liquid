@@ -40,19 +40,6 @@
   {% endif %}
 
   <div class="trending-text-container">
-    <div class="trending-article-info">
-      <p class="trending-published">{{ article.published_at | date: '%b %e, %Y' | upcase }}</p>
-      <!-- <p class='trending-tag'>{% if tag != empty %}{{ tag }}{% else %}Hair Blog{% endif %}</p> -->
-      <p class="trending-reading-time">
-        {% if article.metafields.custom['reading-time'] %}
-          <span>{{ article.metafields.custom['reading-time'] }}</span> MIN READ
-        {% elsif article.content contains '<!-- reading time -->' %}
-          {% assign array = article.content | split: '<!-- reading time -->' %}
-          {% assign reading_time = array[0] %}
-          <span>{{ reading_time }}</span> MIN READ
-        {% endif %}
-      </p>
-    </div>
     <h3 class="trending-title">{{ article.title }}</h3>
     <div class="trending-article-info">
       <p class="trending-author">
