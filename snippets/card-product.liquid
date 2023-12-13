@@ -146,7 +146,7 @@
               >
                 {{- 'products.product.sold_out' | t -}}
               </span>
-            {% elsif display_low_inventory and inventory <= low_inventory %}
+            {% elsif display_low_inventory and inventory <= low_inventory and card_product.type != 'Gift Card' %}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
