@@ -111,7 +111,6 @@
 
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
-            <p>{{ remove_filter }}</p>
             {%- for filter in results.filters -%}
               {% assign test_label = filter.label | downcase %}
               {% unless remove_filter contains test_label %}
@@ -646,6 +645,8 @@
             <div class="mobile-facets__main has-submenu gradient">
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
+                  {% assign test_label = filter.label | downcase %}
+                  {% unless remove_filter cointais test_label %}
                   {% case filter.type %}
                     {% when 'boolean', 'list' %}
                       <details
@@ -864,6 +865,7 @@
                         </div>
                       </details>
                   {% endcase %}
+                  {% endunless %}
                 {%- endfor -%}
               {%- endif -%}
 
