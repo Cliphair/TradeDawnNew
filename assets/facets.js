@@ -102,11 +102,11 @@ class FacetFiltersForm extends HTMLElement {
 
   static renderFilters(html, event) {
     const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
-    console.log(parsedHTML)
 
     const facetDetailsElements = parsedHTML.querySelectorAll(
-      '#FacetFiltersForm .js-filter, #FacetFiltersFormDropdown .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
+      '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
     );
+    
     const matchesIndex = (element) => {
       const jsFilter = event ? event.target.closest('.js-filter') : undefined;
       return jsFilter ? element.dataset.index === jsFilter.dataset.index : false;
@@ -117,6 +117,14 @@ class FacetFiltersForm extends HTMLElement {
     facetsToRender.forEach((element) => {
       document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
     });
+
+    const facetDetailsElementsDropdown = document.querySelector("#FacetFiltersFormDropdown .js-filter");
+    if (facetDetailsElementsDropdown){
+      const testRender = Array.from(facetDetailsElementsDropdown).filter((element) => !matchesIndex(element));
+      testRender.forEach((element) => {
+        document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
+      });
+    }
 
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
