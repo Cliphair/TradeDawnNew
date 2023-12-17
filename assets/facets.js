@@ -102,6 +102,7 @@ class FacetFiltersForm extends HTMLElement {
 
   static renderFilters(html, event) {
     const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
+    console.log(parsedHTML)
 
     const facetDetailsElements = parsedHTML.querySelectorAll(
       '#FacetFiltersForm .js-filter, #FacetFiltersFormDropdown .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
