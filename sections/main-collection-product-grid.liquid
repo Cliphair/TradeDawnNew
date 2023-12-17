@@ -111,13 +111,14 @@
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
+          {% assign remove_filter = section.settings.remove_filters | downcase | split: "," %}
           {% render 'facets',
             results: collection,
             enable_filtering: section.settings.enable_filtering,
             enable_sorting: section.settings.enable_sorting,
             filter_type: section.settings.filter_type,
             paginate: paginate,
-            remove_filter: section.settings.remove_filters | downcase | split: ","
+            remove_filter: remove_filter
           %}
         </aside>
       {%- endif -%}
