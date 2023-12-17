@@ -118,13 +118,13 @@ class FacetFiltersForm extends HTMLElement {
       document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
     });
 
-    // const facetDetailsElementsDropdown = document.querySelectorAll("#FacetFiltersFormDropdown .js-filter");
-    // if (facetDetailsElementsDropdown){
-    //   const testRender = Array.from(facetDetailsElementsDropdown).filter((element) => !matchesIndex(element));
-    //   testRender.forEach((element) => {
-    //     document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
-    //   });
-    // }
+    const facetDetailsElementsDropdown = document.querySelectorAll("#FacetFiltersFormDropdown .js-filter");
+    if (facetDetailsElementsDropdown){
+      const testRender = Array.from(facetDetailsElementsDropdown).filter((element) => !matchesIndex(element));
+      testRender.forEach((element) => {
+        document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
+      });
+    }
 
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
