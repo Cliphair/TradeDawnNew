@@ -104,7 +104,7 @@ class FacetFiltersForm extends HTMLElement {
     const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
 
     const facetDetailsElements = parsedHTML.querySelectorAll(
-      '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
+      '#FacetFiltersForm .js-filter, #FacetFiltersFormDropdown .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
     );
     const matchesIndex = (element) => {
       const jsFilter = event ? event.target.closest('.js-filter') : undefined;
@@ -195,7 +195,7 @@ class FacetFiltersForm extends HTMLElement {
 
       sortFilterForms.forEach((form) => {
         if (!isMobile) {
-          if (form.id === 'FacetSortForm' || form.id === 'FacetFiltersForm' || form.id === 'FacetSortDrawerForm') {
+          if (form.id === 'FacetSortForm' || form.id === 'FacetFiltersForm' || form.id === 'FacetFiltersFormDropdown' || form.id === 'FacetSortDrawerForm') {
             const noJsElements = document.querySelectorAll('.no-js-list');
             noJsElements.forEach((el) => el.remove());
             forms.push(this.createSearchParams(form));
