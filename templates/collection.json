@@ -11,6 +11,22 @@
     },
     "3a28e8ca-c48d-450f-915d-3d46d3365e99": {
       "type": "collection-filter-dropdown",
+      "blocks": {
+        "96c5803c-9cd3-4982-8e98-cac80334140b": {
+          "type": "colour",
+          "settings": {
+          }
+        },
+        "56638928-35dd-4c42-8ba3-330e06968a02": {
+          "type": "type",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "96c5803c-9cd3-4982-8e98-cac80334140b",
+        "56638928-35dd-4c42-8ba3-330e06968a02"
+      ],
       "settings": {
         "color_scheme": "",
         "padding_top": 40,
