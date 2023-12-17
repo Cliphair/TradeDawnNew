@@ -51,7 +51,7 @@
         "low_inventory": 5,
         "enable_filtering": true,
         "filter_type": "horizontal",
-        "remove_filters": "Colour,Product type",
+        "remove_filters": "Colour, Product type",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
