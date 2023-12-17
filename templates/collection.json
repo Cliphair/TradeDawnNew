@@ -9,6 +9,14 @@
         "color_scheme": "background-faded-blue"
       }
     },
+    "3a28e8ca-c48d-450f-915d-3d46d3365e99": {
+      "type": "collection-filter-dropdown",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -245,6 +253,7 @@
   },
   "order": [
     "banner",
+    "3a28e8ca-c48d-450f-915d-3d46d3365e99",
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
     "b400924f-2211-460e-841c-e909605faf8f",
