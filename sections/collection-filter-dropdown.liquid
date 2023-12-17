@@ -19,7 +19,9 @@
   <div>
     <div>
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
-        <form>
+        <form
+          id="FacetFiltersForm"
+          >
           {% for block in section.blocks %}
             {% for filter in collection.filters %}
               {% assign filter_label = filter.label | handleize %}
