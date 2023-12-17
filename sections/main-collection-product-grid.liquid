@@ -111,7 +111,7 @@
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
-          {% assign remove_filter = section.settings.remove_filters | downcase | split: "," %}
+          {% assign remove_filter = section.settings.remove_filters | downcase | strip | remove: " " | split: "," %}
           {% render 'facets',
             results: collection,
             enable_filtering: section.settings.enable_filtering,
