@@ -116,7 +116,8 @@
             enable_filtering: section.settings.enable_filtering,
             enable_sorting: section.settings.enable_sorting,
             filter_type: section.settings.filter_type,
-            paginate: paginate
+            paginate: paginate,
+            remve_filter: section.settings.remove_filters | split: ","
           %}
         </aside>
       {%- endif -%}
@@ -393,6 +394,12 @@
       "default": "horizontal",
       "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
       "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
+    },
+    {
+      "type": "text",
+      "id": "remove_filters",
+      "label": "Remove filter by",
+      "info": "Add label from unwanted filters in this collection"
     },
     {
       "type": "checkbox",
