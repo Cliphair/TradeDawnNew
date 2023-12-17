@@ -275,7 +275,7 @@ class FacetRemove extends HTMLElement {
 
   closeFilter(event) {
     event.preventDefault();
-    const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
+    const form = this.closest('facet-filters-form') || document.querySelectorAll('facet-filters-form');
     form.onActiveFilterClick(event);
   }
 }
