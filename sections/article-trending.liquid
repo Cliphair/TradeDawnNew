@@ -6,7 +6,7 @@
     padding-right:{{ section.settings.mobile-right-padding }}px;
     padding-left:{{ section.settings.mobile-left-padding }}px;
     {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
-    background-image: url({{ section.settings.background_image | image_url: 'master' }});
+    background-image: url({{ section.settings.background_image | asset_url }});
   }
 
   #section-{{ section.id }} .trending-section-header{
