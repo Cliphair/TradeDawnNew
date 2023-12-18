@@ -117,6 +117,51 @@
                 >
               {%- endif -%}
             </div>
+            {% if display_type_image %}
+              {% liquid
+                case type_image_src
+                  when 'second'
+                    assign type_image = card_product.media[1]
+                  when 'type'
+                    assign image_handle = card_product.type | handle | append: '-type-image.webp'
+                    assign try_image = images[image_handle]
+                    unless try_image == empty
+                      assign type_image = try_image
+                    endunless
+                  when 'shade'
+                    assign image_handle = card_product.metafields.custom.colour_name | handle | append: '-type-image.webp'
+                    assign try_image = images[image_handle]
+                    unless try_image == empty
+                      assign type_image = try_image
+                    endunless
+                  when 'metafield'
+                    assign type_image = card_product.metafields.custom.type_image
+                endcase
+              %}
+
+              {% if type_image %}
+                <div class="type-media">
+                  <img
+                    srcset="
+                      {%- if type_image.width >= 165 -%}{{ type_image | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if type_image.width >= 360 -%}{{ type_image | image_url: width: 360 }} 360w,{%- endif -%}
+                      {%- if type_image.width >= 533 -%}{{ type_image | image_url: width: 533 }} 533w,{%- endif -%}
+                      {%- if type_image.width >= 720 -%}{{ type_image | image_url: width: 720 }} 720w,{%- endif -%}
+                      {%- if type_image.width >= 940 -%}{{ type_image | image_url: width: 940 }} 940w,{%- endif -%}
+                      {%- if type_image.width >= 1066 -%}{{ type_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                      {{ type_image | image_url }} {{ type_image.width }}w
+                    "
+                    src="{{ type_image | image_url: width: 533 }}"
+                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 | times: 0.4 }}px, (min-width: 990px) calc((100vw - 130px) / 4 * 0.4), (min-width: 750px) calc((100vw - 120px) / 3 * 0.4), calc((100vw - 35px) / 2 * 0.4)"
+                    alt=""
+                    class="motion-reduce"
+                    loading="lazy"
+                    width="{{ type_image.width }}"
+                    height="{{ type_image.height }}"
+                  >
+                </div>
+              {% endif %}
+            {% endif %}
             {% render 'product-favourite' %}
           </div>
         {%- endif -%}

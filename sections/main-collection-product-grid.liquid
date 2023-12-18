@@ -2,6 +2,7 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'collection-grid.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -122,7 +123,7 @@
       {%- endif -%}
 
       <div
-        class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if section.settings.display_type_image %} with-type-image{% endif %}"
         id="ProductGridContainer"
         {% if settings.animations_reveal_on_scroll %}
           data-cascade
@@ -181,7 +182,9 @@
                     show_type: section.settings.show_type,
                     badge_style: section.settings.badge_style,
                     display_low_inventory: section.settings.display_low_inventory,
-                    low_inventory: section.settings.low_inventory | times: 1
+                    low_inventory: section.settings.low_inventory | times: 1,
+                    display_type_image: section.settings.display_type_image,
+                    type_image_src: section.settings.type_image_src
                   %}
                 </li>
               {%- endfor -%}
@@ -325,6 +328,41 @@
       "id": "enable_quick_add",
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "header",
+      "content": "Type image"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_type_image",
+      "default": false,
+      "label": "Display type image"
+    },
+    {
+      "type": "select",
+      "id": "type_image_src",
+      "options": [
+        {
+          "value": "second",
+          "label": "Second product image"
+        },
+        {
+          "value": "type",
+          "label": "By product type"
+        },
+        {
+          "value": "shade",
+          "label": "By product shade"
+        },
+        {
+          "value": "metafield",
+          "label": "By product metafield"
+        }
+      ],
+      "default": "second",
+      "label": "Type image source",
+      "info": "Better if use square or circle images"
     },
     {
       "type": "header",

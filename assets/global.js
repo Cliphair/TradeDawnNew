@@ -765,11 +765,6 @@ class SliderComponentCustom extends SliderComponent {
     const isFirstSlide = this.currentPage === 1;
     const isLastSlide = this.currentPage === this.sliderItemsToShow.length;
 
-    if (!isFirstSlide && !isLastSlide) {
-      this.applyAnimationToAnnouncementBar(event.currentTarget.name);
-      return;
-    }
-
     if (isFirstSlide && event.currentTarget.name === 'previous') {
       this.slideScrollPosition =
         this.slider.scrollLeft + this.sliderFirstItemNode.clientWidth * this.sliderItemsToShow.length;
@@ -1104,6 +1099,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      this.updateKlarnaMessage();
     }
   }
 
@@ -1145,6 +1141,14 @@ class VariantSelects extends HTMLElement {
     const shareButton = document.getElementById(`Share-${this.dataset.section}`);
     if (!shareButton || !shareButton.updateUrl) return;
     shareButton.updateUrl(`${window.shopUrl}${this.dataset.url}?variant=${this.currentVariant.id}`);
+  }
+
+  updateKlarnaMessage() {
+    const klarnaWidget = document.querySelector("klarna-placement");
+    if (klarnaWidget) {
+      klarnaWidget.setAttribute("data-purchase-amount", this.currentVariant.price);
+      window.Klarna.OnsiteMessaging.refresh();
+    }
   }
 
   updateVariantInput() {
