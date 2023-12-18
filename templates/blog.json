@@ -1,41 +1,64 @@
 {
   "sections": {
+    "b6c51df6-b6e1-4084-867c-38313ffac6d0": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15283893993533__b6c51df6-b6e1-4084-867c-38313ffac6d0-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ blog.title }}",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--15283893993533__b6c51df6-b6e1-4084-867c-38313ffac6d0-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "article-trending": {
       "type": "article-trending",
       "blocks": {
         "5716e86e-a1dd-45bc-8e47-c88945d86ade": {
           "type": "article",
           "settings": {
-            "article": "hair-blog/which-hair-extensions-types-are-best-for-thin-fine-hair",
+            "article": "hair-blog\/which-hair-extensions-types-are-best-for-thin-fine-hair",
             "tag": ""
           }
         },
         "5402d0d3-1bdc-4861-a143-fe7531c705d9": {
           "type": "article",
           "settings": {
-            "article": "hair-blog/everything-about-seamless-hair-extensions",
+            "article": "hair-blog\/everything-about-seamless-hair-extensions",
             "tag": "",
-            "image": "shopify://shop_images/everything_about_seamless_hair_banner_f4269923-2d91-46b3-9432-5363b9e0b0ea.jpg"
+            "image": "shopify:\/\/shop_images\/everything_about_seamless_hair_banner_f4269923-2d91-46b3-9432-5363b9e0b0ea.jpg"
           }
         },
         "dff1892d-f087-4429-bd33-d574d379456c": {
           "type": "article",
           "settings": {
-            "article": "hair-blog/how-many-grams-of-hair-extensions-do-i-need",
+            "article": "hair-blog\/how-many-grams-of-hair-extensions-do-i-need",
             "tag": ""
           }
         },
         "77301814-c4d1-420f-a28f-ec9558776a06": {
           "type": "article",
           "settings": {
-            "article": "hair-blog/how-to-choose-the-perfect-length-of-hair-extensions-for-you",
+            "article": "hair-blog\/how-to-choose-the-perfect-length-of-hair-extensions-for-you",
             "tag": ""
           }
         },
         "6096bc59-0a89-4e4c-b229-2c53ef1c0848": {
           "type": "article",
           "settings": {
-            "article": "hair-blog/everything-you-need-to-know-about-tape-hair-extensions",
+            "article": "hair-blog\/everything-you-need-to-know-about-tape-hair-extensions",
             "tag": ""
           }
         }
@@ -83,7 +106,7 @@
           "settings": {
             "tag": "The Hair Extensions Bible",
             "title": "The Hair Extensions Bible",
-            "image": "shopify://shop_images/The_Hair_Extensions_Bible.png"
+            "image": "shopify:\/\/shop_images\/The_Hair_Extensions_Bible.png"
           }
         },
         "bd2f8056-113b-48d8-9cca-75aef60bf58f": {
@@ -91,7 +114,7 @@
           "settings": {
             "tag": "Hair Care & Tips",
             "title": "Hair Care & Tips",
-            "image": "shopify://shop_images/Haircare_Advise.png"
+            "image": "shopify:\/\/shop_images\/Haircare_Advise.png"
           }
         },
         "c2287495-3a9e-4641-9e8f-482ed2f23dbb": {
@@ -99,7 +122,7 @@
           "settings": {
             "tag": "Top Trends",
             "title": "Top Trends",
-            "image": "shopify://shop_images/Top_Trends.png"
+            "image": "shopify:\/\/shop_images\/Top_Trends.png"
           }
         },
         "d7a1ed68-bad2-4d3b-904d-b4a378f8d9d4": {
@@ -107,7 +130,7 @@
           "settings": {
             "tag": "Styling Guides & Tutorials",
             "title": "Styling Guides & Tutorials",
-            "image": "shopify://shop_images/Guides_and_Tutorials.png"
+            "image": "shopify:\/\/shop_images\/Guides_and_Tutorials.png"
           }
         },
         "381dcb5a-6cbc-4644-86ec-6f1f40c6ca8e": {
@@ -115,7 +138,7 @@
           "settings": {
             "tag": "Wedding & Occasion Hair",
             "title": "Wedding & Occasion Hair",
-            "image": "shopify://shop_images/Wedding.png"
+            "image": "shopify:\/\/shop_images\/Wedding.png"
           }
         },
         "91bb1e68-7f77-439e-a0d3-1382fa883ec1": {
@@ -123,7 +146,7 @@
           "settings": {
             "tag": "Lifestyle & Pop Culture",
             "title": "Lifestyle & Pop Culture",
-            "image": "shopify://shop_images/Lifestyle.png"
+            "image": "shopify:\/\/shop_images\/Lifestyle.png"
           }
         }
       },
@@ -166,6 +189,7 @@
     }
   },
   "order": [
+    "b6c51df6-b6e1-4084-867c-38313ffac6d0",
     "article-trending",
     "article-categories",
     "main"
