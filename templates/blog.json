@@ -73,7 +73,7 @@
       "settings": {
         "header": "Trending On Cliphair",
         "background_image": "shopify:\/\/shop_images\/MicrosoftTeams-image_19_f8c53a86-a79a-40f0-b46e-9bcb4af961a5.jpg",
-        "header_colour": "#fff",
+        "header_colour": "#ffffff",
         "text_colour": "#752e89",
         "bg_colour": "#ffffff",
         "max-width": "1250",
@@ -181,7 +181,7 @@
       "settings": {
         "layout": "grid",
         "show_image": true,
-        "image_height": "medium",
+        "image_height": "small",
         "show_date": false,
         "show_author": false,
         "padding_top": 36,
