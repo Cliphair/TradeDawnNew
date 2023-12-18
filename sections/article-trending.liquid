@@ -6,6 +6,7 @@
     padding-right:{{ section.settings.mobile-right-padding }}px;
     padding-left:{{ section.settings.mobile-left-padding }}px;
     {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
+    background-image: url({{ section.settings.background_image | image_url: 'master' }});
   }
 
   #section-{{ section.id }} .trending-section-header{
@@ -203,6 +204,11 @@
     {
       "type": "header",
       "content": "Universal Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
     },
     {
       "type": "color",
