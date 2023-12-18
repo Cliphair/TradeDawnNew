@@ -72,6 +72,7 @@
       ],
       "settings": {
         "header": "Trending On Cliphair",
+        "background_image": "shopify:\/\/shop_images\/MicrosoftTeams-image_19_f8c53a86-a79a-40f0-b46e-9bcb4af961a5.jpg",
         "header_colour": "#000000",
         "text_colour": "#000000",
         "bg_colour": "#ffffff",
