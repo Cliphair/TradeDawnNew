@@ -106,6 +106,7 @@ class FacetFiltersForm extends HTMLElement {
     const facetDetailsElements = parsedHTML.querySelectorAll(
       '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
     );
+    
     const matchesIndex = (element) => {
       const jsFilter = event ? event.target.closest('.js-filter') : undefined;
       return jsFilter ? element.dataset.index === jsFilter.dataset.index : false;
@@ -116,6 +117,14 @@ class FacetFiltersForm extends HTMLElement {
     facetsToRender.forEach((element) => {
       document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
     });
+
+    const facetDetailsElementsDropdown = document.querySelectorAll("#FacetFiltersFormDropdown .js-filter");
+    if (facetDetailsElementsDropdown){
+      const testRender = Array.from(facetDetailsElementsDropdown).filter((element) => !matchesIndex(element));
+      testRender.forEach((element) => {
+        document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
+      });
+    }
 
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
@@ -195,7 +204,7 @@ class FacetFiltersForm extends HTMLElement {
 
       sortFilterForms.forEach((form) => {
         if (!isMobile) {
-          if (form.id === 'FacetSortForm' || form.id === 'FacetFiltersForm' || form.id === 'FacetSortDrawerForm') {
+          if (form.id === 'FacetSortForm' || form.id === 'FacetFiltersForm' || form.id === 'FacetFiltersFormDropdown' || form.id === 'FacetSortDrawerForm') {
             const noJsElements = document.querySelectorAll('.no-js-list');
             noJsElements.forEach((el) => el.remove());
             forms.push(this.createSearchParams(form));
@@ -275,8 +284,8 @@ class FacetRemove extends HTMLElement {
 
   closeFilter(event) {
     event.preventDefault();
-    const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
-    form.onActiveFilterClick(event);
+    const forms = document.querySelectorAll('facet-filters-form');
+    forms.forEach((form) => form.onActiveFilterClick(event));
   }
 }
 
