@@ -18,12 +18,17 @@
     justify-content:flex-start;
   }
   
-  .article-categories-inner-container > .category{
+  .article-categories-inner-container > .category {
     width:100%;
     min-width:120px;
     max-width:150px;
     margin-right:20px;
     text-decoration:none;
+  }
+
+  .article-categories-inner-container > .category:hover{
+    text-decoration:none;
+    color: var(--colour-cliphair-purple-dark);
   }
   
   .article-categories-inner-container > .category.last{
