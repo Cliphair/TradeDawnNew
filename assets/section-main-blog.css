@@ -8,9 +8,19 @@
 .blog-articles .card-wrapper {
   width: 100%;
 }
-
+.main-blog {
+  border-top: 1px solid var(--color-gray-300);
+}
 .main-blog .title--primary {
   text-align: center;
+}
+
+.main-blog .blog-articles .card__inner .article-card__image-wrapper {
+  border: 1px solid #000;
+}
+
+.main-blog .blog-articles .card__information {
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 750px) {
@@ -18,6 +28,8 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
+    width: 80%;
+    margin: 0 auto;
   }
 
   .blog-articles--collage > *:nth-child(3n + 1),

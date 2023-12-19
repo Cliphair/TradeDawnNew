@@ -1373,7 +1373,7 @@ class ProductRecommendations extends HTMLElement {
       if (!entries[0].isIntersecting) return;
       observer.unobserve(this);
 
-      fetch(this.dataset.url)
+      fetch(this.dataset.recommendation)
         .then((response) => response.text())
         .then((text) => {
           const html = document.createElement('div');
