@@ -415,13 +415,20 @@
             {%- endif -%}
           </div>
         {%- endif -%}
-        <div class="card__badge {{ settings.badge_position }}">
+        <div class="card__badge {{ settings.badge_position }} {{ badge_style }}">
           {%- if card_product.available == false -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"
               class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
             >
               {{- 'products.product.sold_out' | t -}}
+            </span>
+          {% elsif display_low_inventory and inventory <= low_inventory and card_product.type != 'Gift Card' %}
+            <span
+              id="Badge-{{ section_id }}-{{ card_product.id }}"
+              class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+            >
+              {{ inventory }} LEFT
             </span>
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span

@@ -106,7 +106,7 @@ class FacetFiltersForm extends HTMLElement {
     const facetDetailsElements = parsedHTML.querySelectorAll(
       '#FacetFiltersForm .js-filter, #FacetFiltersFormMobile .js-filter, #FacetFiltersPillsForm .js-filter'
     );
-    
+
     const matchesIndex = (element) => {
       const jsFilter = event ? event.target.closest('.js-filter') : undefined;
       return jsFilter ? element.dataset.index === jsFilter.dataset.index : false;
@@ -116,15 +116,14 @@ class FacetFiltersForm extends HTMLElement {
 
     facetsToRender.forEach((element) => {
       document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
-    });
 
-    const facetDetailsElementsDropdown = document.querySelectorAll("#FacetFiltersFormDropdown .js-filter");
-    if (facetDetailsElementsDropdown){
-      const testRender = Array.from(facetDetailsElementsDropdown).filter((element) => !matchesIndex(element));
-      testRender.forEach((element) => {
-        document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
-      });
-    }
+      // updates facets list for the dropown-collection-filter section
+      let dropdownElement = document.querySelector(`.js-filter[data-index="dropdown-${element.dataset.index}"]`);
+      if (dropdownElement) {
+        // only updates ul element
+        dropdownElement.querySelector('summary ~ div ul').innerHTML = element.querySelector('summary ~ div ul').innerHTML;
+      }
+    });
 
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);

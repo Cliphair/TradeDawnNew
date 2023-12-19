@@ -20,7 +20,7 @@
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
         <form
           id="FacetFiltersFormDropdown"
-          >
+        >
           {% for block in section.blocks %}
             {% for filter in collection.filters %}
               {% assign filter_label = filter.label | handleize %}
@@ -28,7 +28,7 @@
                 <details
                   id="Details-dropdown-{{ forloop.index }}-{{ section.id }}"
                   class="js-filter"
-                  data-index="{{ forloop.index }}"
+                  data-index="dropdown-{{ forloop.index }}"
                 >
                   <summary
                     class="facets__summary caption-large focus-offset"
