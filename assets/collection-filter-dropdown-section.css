@@ -1,0 +1,58 @@
+.section-collection-filter-dropdown form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  column-gap: var(--grid-mobile-vertical-spacing);
+  row-gap: var(--grid-mobile-horizontal-spacing);
+}
+
+.section-collection-filter-dropdown form>details {
+  width: 100%;
+  min-width: fit-content;
+  max-width: 100%;
+  position: relative;
+}
+
+.section-collection-filter-dropdown .facets__summary {
+  border: 1px solid;
+  margin-bottom: 0;
+  padding: 0.5rem 0;
+}
+
+.section-collection-filter-dropdown .facets__summary span {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section-collection-filter-dropdown .facets__summary span:before {
+  content: "FITLER: ";
+}
+
+.section-collection-filter-dropdown .facets__summary .icon-caret {
+  right: 0.5rem;
+  height: 1rem;
+  top: calc(50% - 0.5rem)
+}
+
+.section-collection-filter-dropdown .facets-wrap {
+  margin: 0;
+}
+
+.section-collection-filter-dropdown .facets__display {
+  z-index: 2;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .section-collection-filter-dropdown form {
+    flex-direction: row;
+    column-gap: var(--grid-desktop-vertical-spacing);
+    row-gap: var(--grid-desktop-horizontal-spacing);
+  }
+
+  .section-collection-filter-dropdown form>details {
+    max-width: 50%;
+  }
+}

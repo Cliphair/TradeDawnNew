@@ -64,6 +64,7 @@ class FacetFiltersForm extends HTMLElement {
         FacetFiltersForm.renderProductGridContainer(html);
         FacetFiltersForm.renderProductCount(html);
         if (typeof initializeScrollAnimationTrigger === 'function') initializeScrollAnimationTrigger(html.innerHTML);
+        FacetFiltersForm.filterDropdownCloseDetails();
       });
   }
 
@@ -73,6 +74,7 @@ class FacetFiltersForm extends HTMLElement {
     FacetFiltersForm.renderProductGridContainer(html);
     FacetFiltersForm.renderProductCount(html);
     if (typeof initializeScrollAnimationTrigger === 'function') initializeScrollAnimationTrigger(html.innerHTML);
+    FacetFiltersForm.filterDropdownCloseDetails();
   }
 
   static renderProductGridContainer(html) {
@@ -118,7 +120,8 @@ class FacetFiltersForm extends HTMLElement {
       document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
 
       // updates facets list for the dropown-collection-filter section
-      let dropdownElement = document.querySelector(`.js-filter[data-index="dropdown-${element.dataset.index}"]`);
+      let dropdownIndex = element.dataset.index.replace("mobile-", "")
+      let dropdownElement = document.querySelector(`.js-filter[data-index="dropdown-${dropdownIndex}"]`);
       if (dropdownElement) {
         // only updates ul element
         dropdownElement.querySelector('summary ~ div ul').innerHTML = element.querySelector('summary ~ div ul').innerHTML;
@@ -224,6 +227,17 @@ class FacetFiltersForm extends HTMLElement {
         ? ''
         : event.currentTarget.href.slice(event.currentTarget.href.indexOf('?') + 1);
     FacetFiltersForm.renderPage(url);
+  }
+
+  static filterDropdownCloseDetails() {
+    const filterDropdown = document.querySelector('#FacetFiltersFormDropdown');
+
+    if (!filterDropdown) return;
+
+    let details = filterDropdown.querySelectorAll('.js-filter');
+    details.forEach((element) => {
+      element.open = false;
+    });
   }
 }
 

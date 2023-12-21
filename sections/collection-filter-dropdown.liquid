@@ -1,4 +1,5 @@
 {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+{{ 'collection-filter-dropdown-section.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -15,110 +16,108 @@
 {%- endstyle -%}
 
 {% if section.blocks.size > 0 %}
-  <div>
-    <div>
-      <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
-        <form
-          id="FacetFiltersFormDropdown"
-        >
-          {% for block in section.blocks %}
-            {% for filter in collection.filters %}
-              {% assign filter_label = filter.label | handleize %}
-              {% if filter_label == block.type %}
-                <details
-                  id="Details-dropdown-{{ forloop.index }}-{{ section.id }}"
-                  class="js-filter"
-                  data-index="dropdown-{{ forloop.index }}"
+  <div class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+    <facet-filters-form class="facets facets-vertical-sort page-width no-js-hidden">
+      <form
+        id="FacetFiltersFormDropdown"
+      >
+        {% for block in section.blocks %}
+          {% for filter in collection.filters %}
+            {% assign filter_label = filter.label | handleize %}
+            {% if filter_label == block.type %}
+              <details
+                id="Details-dropdown-{{ forloop.index }}-{{ section.id }}"
+                class="js-filter"
+                data-index="dropdown-{{ forloop.index }}"
+              >
+                <summary
+                  class="facets__summary caption-large focus-offset"
+                  aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
                 >
-                  <summary
-                    class="facets__summary caption-large focus-offset"
-                    aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
-                  >
-                    <div>
-                      <span>
-                        {{- filter.label | escape }}
-                      </span>
-                      {% render 'icon-caret' %}
-                    </div>
-                  </summary>
-                  <div
-                    id="Facet-dropdown-{{ forloop.index }}-{{ section.id }}"
-                    class="parent-display"
-                  >
-                    <fieldset class="facets-wrap parent-wrap">
-                      <legend class="visually-hidden">{{ filter.label | escape }}</legend>
-                      <ul
-                        class=" list-unstyled no-js-hidden"
-                        role="list"
-                      >
-                        {%- for value in filter.values -%}
-                          <li class="list-menu__item facets__item">
-                            <label
-                              for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                              class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
-                            >
-                              <input
-                                type="checkbox"
-                                name="{{ value.param_name }}"
-                                value="{{ value.value }}"
-                                id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                {% if value.active %}
-                                  checked
-                                {% endif %}
-                                {% if value.count == 0 and value.active == false %}
-                                  disabled
-                                {% endif %}
-                              >
-
-                              <svg
-                                width="1.6rem"
-                                height="1.6rem"
-                                viewBox="0 0 16 16"
-                                aria-hidden="true"
-                                focusable="false"
-                              >
-                                <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                              </svg>
-
-                              <svg
-                                aria-hidden="true"
-                                class="icon icon-checkmark"
-                                width="1.1rem"
-                                height="0.7rem"
-                                viewBox="0 0 11 7"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
-                                  stroke="currentColor"
-                                  stroke-width="1.75"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round" />
-                              </svg>
-
-                              <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
-                              <span class="visually-hidden">
-                                {{- value.label | escape }} (
-                                {%- if value.count == 1 -%}
-                                  {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
-                                {%- else -%}
-                                  {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
-                                {%- endif -%}
-                                )</span
-                              >
-                            </label>
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    </fieldset>
+                  <div>
+                    <span>
+                      {{- filter.label | escape }}
+                    </span>
+                    {% render 'icon-caret' %}
                   </div>
-                </details>
-              {% endif %}
-            {% endfor %}
+                </summary>
+                <div
+                  id="Facet-dropdown-{{ forloop.index }}-{{ section.id }}"
+                  class="parent-display facets__display"
+                >
+                  <fieldset class="facets-wrap parent-wrap">
+                    <legend class="visually-hidden">{{ filter.label | escape }}</legend>
+                    <ul
+                      class=" list-unstyled no-js-hidden"
+                      role="list"
+                    >
+                      {%- for value in filter.values -%}
+                        <li class="list-menu__item facets__item">
+                          <label
+                            for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                            class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
+                          >
+                            <input
+                              type="checkbox"
+                              name="{{ value.param_name }}"
+                              value="{{ value.value }}"
+                              id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                              {% if value.active %}
+                                checked
+                              {% endif %}
+                              {% if value.count == 0 and value.active == false %}
+                                disabled
+                              {% endif %}
+                            >
+
+                            <svg
+                              width="1.6rem"
+                              height="1.6rem"
+                              viewBox="0 0 16 16"
+                              aria-hidden="true"
+                              focusable="false"
+                            >
+                              <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                            </svg>
+
+                            <svg
+                              aria-hidden="true"
+                              class="icon icon-checkmark"
+                              width="1.1rem"
+                              height="0.7rem"
+                              viewBox="0 0 11 7"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
+                                stroke="currentColor"
+                                stroke-width="1.75"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+
+                            <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                            <span class="visually-hidden">
+                              {{- value.label | escape }} (
+                              {%- if value.count == 1 -%}
+                                {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+                              {%- else -%}
+                                {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+                              {%- endif -%}
+                              )</span
+                            >
+                          </label>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </fieldset>
+                </div>
+              </details>
+            {% endif %}
           {% endfor %}
-        </form>
-      </facet-filters-form>
-    </div>
+        {% endfor %}
+      </form>
+    </facet-filters-form>
   </div>
 {% endif %}
 
@@ -176,8 +175,8 @@
       "limit": 1
     },
     {
-      "type": "type",
-      "name": "Type",
+      "type": "product-type",
+      "name": "Product Type",
       "limit": 1
     }
   ],
