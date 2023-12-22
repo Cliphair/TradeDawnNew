@@ -26,7 +26,7 @@
     data-recommendation="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
+      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">
         {{ section.settings.heading }}
       </h2>
       <ul
@@ -35,13 +35,19 @@
       >
         {% for recommendation in recommendations.products %}
           <li class="grid__item">
-            {% render 'card-product',
+            {%
+              render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
               show_secondary_image: section.settings.show_secondary_image,
               show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating
+              show_rating: section.settings.show_rating,
+              colour_as_title: section.settings.colour_as_title,
+              show_type: section.settings.show_type,
+              badge_style: section.settings.badge_style,
+              display_low_inventory: section.settings.display_low_inventory,
+              low_inventory: section.settings.low_inventory | times: 1
             %}
           </li>
         {% endfor %}
@@ -88,6 +94,26 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.collapsible_content.settings.heading_alignment.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "range",
@@ -187,6 +213,19 @@
     },
     {
       "type": "checkbox",
+      "id": "colour_as_title",
+      "default": false,
+      "label": "Use colour as title",
+      "info": "Uses metafield Colour Name, if empty title will be used instead."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_type",
+      "default": false,
+      "label": "Show type"
+    },
+    {
+      "type": "checkbox",
       "id": "show_vendor",
       "default": false,
       "label": "t:sections.related-products.settings.show_vendor.label"
@@ -201,6 +240,42 @@
     {
       "type": "header",
       "content": "t:sections.related-products.settings.header_mobile.content"
+    },
+    {
+      "type": "header",
+      "content": "Badge settings"
+    },
+    {
+      "type": "select",
+      "id": "badge_style",
+      "options": [
+        {
+          "value": "float",
+          "label": "Float"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed"
+        }
+      ],
+      "default": "float",
+      "label": "Badge style"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_low_inventory",
+      "default": false,
+      "label": "Display low inventory badge"
+    },
+    {
+      "type": "range",
+      "id": "low_inventory",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "un",
+      "label": "Low inventory quantity",
+      "default": 5
     },
     {
       "type": "select",

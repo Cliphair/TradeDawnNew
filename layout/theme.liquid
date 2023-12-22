@@ -41,13 +41,25 @@
       <!-- Manual hreflang between UK and US sites -->
       <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
       <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}">
-      <link rel="alternate" hreflang="de-DE" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de' }}">
-      <link rel="alternate" hreflang="en-CA" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca' }}">
-      <link rel="alternate" hreflang="en-AU" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' }}">
+      <link
+        rel="alternate"
+        hreflang="de-DE"
+        href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de' }}"
+      >
+      <link
+        rel="alternate"
+        hreflang="en-CA"
+        href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca' }}"
+      >
+      <link
+        rel="alternate"
+        hreflang="en-AU"
+        href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' }}"
+      >
       <link rel="alternate" hreflang="en-GB" href="{{ canonical_url  }}">
       <!-- End manual hreflang between UK and US sites -->
     {% endunless %}
-    
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -428,7 +440,7 @@
     var clearpay_cart_total_price = {{ cart.total_price | json }};
     var clearpay_js_snippet_version = '1.2.0';
   </script>
-  <script type="text/javascript" src="https://static.afterpay.com/shopify-clearpay-javascript.js"></script>
+  <script type="text/javascript" src="https://static.afterpay.com/shopify-clearpay-javascript.js" async></script>
 {% else %}
   <!-- Clearpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
 {% endif %}
