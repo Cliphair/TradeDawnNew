@@ -64,9 +64,10 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-    <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      {% render 'product-media-gallery', variant_images: variant_images %}
+    <div class="grid__item product__media-wrapper product__media-{{ section.settings.media_fit }}{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+      {% render 'product-media-gallery', variant_images: variant_images, media_ratio: section.settings.image_ratio %}
     </div>
+
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <product-info
         id="ProductInfo-{{ section.id }}"
@@ -87,6 +88,15 @@
               >
                 {{- block.settings.text -}}
               </p>
+            {% when 'product-subtitle' %}
+              {% if product.metafields.descriptors.subtitle != blank %}
+                <p
+                  class="product__text inline-richtext product__subtitle"
+                  {{ block.shopify_attributes }}
+                >
+                  {{- product.metafields.descriptors.subtitle -}}
+                </p>
+              {% endif %}
             {%- when 'payment_services' -%}
               <div class="payment_services">
                 <!-- Placement v2 -->
@@ -110,14 +120,34 @@
                   </h2>
                 </a>
               </div>
-            {%- when 'features_text' -%}
-              {%- if block.settings.features_text != blank -%}
-                <div class="product__features_text">
-                  {{ block.settings.features_text }}
+            {%- when 'short-description' -%}
+              {% liquid
+                if product.metafields.descriptors.short_descriprion != blank
+                  assign ShortDescription = product.metafields.descriptors.short_descriprion
+                elsif product.metafields.c_f.ShortDescription != blank
+                  assign ShortDescription = product.metafields.c_f.ShortDescription
+                endif
+              %}
+
+              {%- if ShortDescription -%}
+                <div
+                  class="product__text inline-richtext short-description"
+                  {{ block.shopify_attributes }}
+                >
+                  {% if block.settings.title != blank %}
+                    <h3>{{ block.settings.title }}</h3>
+                  {% endif %}
+                  {{- ShortDescription -}}
                 </div>
               {%- endif -%}
+
             {%- when 'price' -%}
-              <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+              <div
+                class="no-js-hidden price-block"
+                id="price-{{ section.id }}"
+                role="status"
+                {{ block.shopify_attributes }}
+              >
                 {%- render 'price',
                   product: product,
                   use_variant: true,
@@ -235,8 +265,33 @@
                     {% render 'icon-caret' %}
                   </summary>
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                    {{ block.settings.content }}
-                    {{ block.settings.page.content }}
+                    {% case block.settings.type %}
+                      {% when 'description' %}
+                        {{ product.description }}
+                      {% when 'specification' %}
+                        {% liquid
+                          assign path = product.type | handle | append: '-specification'
+                          assign page_content = pages[path]
+                        %}
+                        {% if page_content.content != blank %}
+                          {{ page_content.content }}
+                        {% else %}
+                          <p>Update is in progress</p>
+                        {% endif %}
+                      {% when 'instructions' %}
+                        {% liquid
+                          assign path = product.type | handle | append: '-instructions'
+                          assign page_content = pages[path].content
+                        %}
+                        {% if page_content.content != blank %}
+                          {{ page_content.content }}
+                        {% else %}
+                          <p>Update is in progress</p>
+                        {% endif %}
+                      {% when 'custom' %}
+                        {{ block.settings.content }}
+                        {{ block.settings.page.content }}
+                    {% endcase %}
                   </div>
                 </details>
               </div>
@@ -484,6 +539,7 @@
                 product_form_id: product_form_id,
                 section_id: section.id,
                 show_pickup_availability: true,
+                colour_scheme: block.settings.color_scheme,
                 enable_sc-out-of-stock_app: block.settings['enable_sc-out-of-stock_app']
               -%}
             {%- when 'rating' -%}
@@ -676,10 +732,15 @@
         </a>
       </product-info>
     </div>
+
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
-      <div class="grid__item product__media-wrapper small-hide">
-        {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}
+      <div class="grid__item product__media-wrapper product__media-{{ section.settings.media_fit }} small-hide">
+        {% render 'product-media-gallery',
+          variant_images: variant_images,
+          is_duplicate: true,
+          media_ratio: section.settings.image_ratio
+        %}
       </div>
     {%- endif -%}
   </div>
@@ -847,13 +908,25 @@
       ]
     },
     {
-      "type": "features_text",
-      "name": "Product Features",
+      "type": "product-subtitle",
+      "name": "Product subtitle",
+      "limit": 1,
       "settings": [
         {
-          "type": "richtext",
-          "id": "features_text",
-          "label": "Text"
+          "type": "paragraph",
+          "content": "This section uses the product subtitle metafield."
+        }
+      ]
+    },
+    {
+      "type": "short-description",
+      "name": "Short description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
         }
       ]
     },
@@ -1026,6 +1099,12 @@
           "id": "enable_sc-out-of-stock_app",
           "default": false,
           "label": "Enable SC Out Of Stock app"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "background-1"
         }
       ]
     },
@@ -1071,6 +1150,30 @@
       "type": "collapsible_tab",
       "name": "t:sections.main-product.blocks.collapsible_tab.name",
       "settings": [
+        {
+          "type": "select",
+          "id": "type",
+          "label": "Type",
+          "options": [
+            {
+              "value": "description",
+              "label": "Description"
+            },
+            {
+              "value": "specification",
+              "label": "Specification"
+            },
+            {
+              "value": "instructions",
+              "label": "Instructions"
+            },
+            {
+              "value": "custom",
+              "label": "Custom"
+            }
+          ],
+          "default": "custom"
+        },
         {
           "type": "text",
           "id": "heading",
@@ -1261,6 +1364,10 @@
           ],
           "default": "check_mark",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
+        },
+        {
+          "type": "paragraph",
+          "content": "Below settings work only if using custom type."
         },
         {
           "type": "richtext",
@@ -2201,6 +2308,26 @@
       "type": "header",
       "content": "t:sections.main-product.settings.header.content",
       "info": "t:sections.main-product.settings.header.info"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
     },
     {
       "type": "select",

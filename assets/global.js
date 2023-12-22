@@ -1079,16 +1079,17 @@ customElements.define('slideshow-component', SlideshowComponent);
 class VariantSelects extends HTMLElement {
   constructor() {
     super();
-    this.addEventListener('change', this.onVariantChange);
+    this.addEventListener('change', this.onVariantChange.bind(this));
   }
 
-  onVariantChange() {
+  onVariantChange(event) {
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
     this.updateVariantStatuses();
+    this.updateDisabledOptions(event);
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -1101,6 +1102,13 @@ class VariantSelects extends HTMLElement {
       this.updateShareUrl();
       this.updateKlarnaMessage();
     }
+  }
+
+  updateDisabledOptions(event) {
+    let element = event.target;
+    element.querySelector("option:disabled").selected = false;
+    element.querySelector("option:disabled").value = "";
+
   }
 
   updateOptions() {
@@ -1169,7 +1177,7 @@ class VariantSelects extends HTMLElement {
     const inputWrappers = [...this.querySelectorAll('.product-form__input')];
     inputWrappers.forEach((option, index) => {
       if (index === 0) return;
-      const optionInputs = [...option.querySelectorAll('input[type="radio"], option')];
+      const optionInputs = [...option.querySelectorAll('input[type="radio"], option:not(.option-name)')];
       const previousOptionSelected = inputWrappers[index - 1].querySelector(':checked').value;
       const availableOptionInputsValue = selectedOptionOneVariants
         .filter((variant) => variant.available && variant[`option${index}`] === previousOptionSelected)

@@ -9,6 +9,12 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+<style>
+  select option:disabled {
+    cursor: none;
+    pointer-events: none;
+  }
+</style>
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
@@ -44,7 +50,7 @@
     >
       {%- for option in product.options_with_values -%}
         <div class="product-form__input product-form__input--dropdown">
-          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+          <label class="form__label visually-hidden" for="Option-{{ section.id }}-{{ forloop.index0 }}">
             {{ option.name }}
           </label>
           <div class="select">
@@ -54,6 +60,9 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
+              <option value="{{ option.selected_value | escape }}" selected="selected" disabled class="option-name">
+                Select Your {{ option.name | remove: 'Select ' }}
+              </option>
               {% render 'product-variant-options', product: product, option: option, block: block %}
             </select>
             {% render 'icon-caret' %}
