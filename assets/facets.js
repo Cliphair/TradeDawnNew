@@ -65,6 +65,7 @@ class FacetFiltersForm extends HTMLElement {
         FacetFiltersForm.renderProductCount(html);
         if (typeof initializeScrollAnimationTrigger === 'function') initializeScrollAnimationTrigger(html.innerHTML);
         FacetFiltersForm.filterDropdownCloseDetails();
+        reloadYotpoWidgets();
       });
   }
 
@@ -75,6 +76,7 @@ class FacetFiltersForm extends HTMLElement {
     FacetFiltersForm.renderProductCount(html);
     if (typeof initializeScrollAnimationTrigger === 'function') initializeScrollAnimationTrigger(html.innerHTML);
     FacetFiltersForm.filterDropdownCloseDetails();
+    reloadYotpoWidgets();
   }
 
   static renderProductGridContainer(html) {

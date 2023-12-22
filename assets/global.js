@@ -152,6 +152,11 @@ function onKeyUpEscape(event) {
   summaryElement.focus();
 }
 
+function reloadYotpoWidgets() {
+  console.log("Yotpo widget reload");
+  yotpoWidgetsContainer.initWidgets(false);
+}
+
 class QuantityInput extends HTMLElement {
   constructor() {
     super();
@@ -1399,6 +1404,7 @@ class ProductRecommendations extends HTMLElement {
           if (html.querySelector('.grid__item')) {
             this.classList.add('product-recommendations--loaded');
           }
+          reloadYotpoWidgets();
         })
         .catch((e) => {
           console.error(e);
