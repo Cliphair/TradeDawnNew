@@ -7,6 +7,9 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
   }
+  .Blog_Sidebar ul {
+    list-style: none;
+  }
   .article-template > *:first-child:not(.article-template__hero-container) {
     margin-top: calc(5rem + var(--page-width-margin));
   }
