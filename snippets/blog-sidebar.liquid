@@ -1,13 +1,36 @@
-{% assign my_object = '[{
-    "title": "The Hair Extensions Bible",
-    "image": "shopify:\/\/shop_images\/The_Hair_Extensions_Bible.png"
-  }, {
-    "title": "Hair Care & Tips",
-    "image": "shopify:\/\/shop_images\/Haircare_Advise.png"
-}]' %}
-
 <ul>
-  {% for item in my_object %}
-    <li>{{ item.title }}</li>
-  {% endfor %}
+  <li>
+    <a
+      class="category"
+      href="/blogs/hair-blog/tagged/the-hair-extensions-bible"
+      title="The Hair Extensions Bible Posts"
+    >
+      <img
+        src="{{ 'shopify:\/\/shop_images\/The_Hair_Extensions_Bible.png' | image_url: width: 533 }}"
+        alt="The Hair Extensions Bible"
+        class=""
+        loading="lazy"
+        width="200"
+        height="200"
+      >
+      <p class="category-title">The Hair Extensions Bible</p>
+    </a>
+  </li>
+  <li>
+    <a
+      class="category"
+      href="/blogs/hair-blog/tagged/hair-care-tips"
+      title="The Hair Extensions Bible Posts"
+    >
+      <img
+        src="{{ 'shopify:\/\/shop_images\/Haircare_Advise.png' | image_url: width: 533 }}"
+        alt="Hair Care & Tips"
+        class=""
+        loading="lazy"
+        width="200"
+        height="200"
+      >
+      <p class="category-title">Hair Care & Tips</p>
+    </a>
+  </li>
 </ul>
