@@ -1,0 +1,13 @@
+{% assign my_object = '[{
+    "title": "The Hair Extensions Bible",
+    "image": "shopify:\/\/shop_images\/The_Hair_Extensions_Bible.png"
+  }, {
+    "title": "Hair Care & Tips",
+    "image": "shopify:\/\/shop_images\/Haircare_Advise.png"
+}]' %}
+
+<ul>
+  {% for item in my_object %}
+    <li>{{ item.title }}</li>
+  {% endfor %}
+</ul>
