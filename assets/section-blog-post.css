@@ -27,7 +27,17 @@
     color: #4a4a4a;
     text-transform: uppercase;
   }
-  .purple-overlay {
+  .Blog_Sidebar .purple-overlay {
+    width: 200px;
+    height: 200px;
+  }
+  .Blog_Sidebar .purple-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #ba69a1;
     opacity: 0.5;
   }
