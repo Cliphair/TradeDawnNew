@@ -27,7 +27,7 @@
     color: #4a4a4a;
     text-transform: uppercase;
   }
-  .Blog_Sidebar .blog-sidebar-img::after {
+  .purple-overlay {
     background-color: #ba69a1;
     opacity: 0.5;
   }
