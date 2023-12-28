@@ -2,6 +2,10 @@
   margin-top: 5rem;
 }
 
+.blog_wrapper {
+  background-color: var( --bg-cliphair-faded-blue);
+}
+
 @media screen and (min-width: 750px) {
   .blog_wrapper {
     display: grid;
@@ -30,6 +34,7 @@
   .Blog_Sidebar .purple-overlay {
     width: 200px;
     height: 200px;
+    position: relative;
   }
   .Blog_Sidebar .purple-overlay::after {
     content: "";
