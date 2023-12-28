@@ -4,10 +4,6 @@
   <article class="article-template page-width page-width--narrow" itemscope itemtype="http://schema.org/BlogPosting">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
-        {%- when '@app' -%}
-          <div class="page-width page-width--narrow">
-            {% render block %}
-          </div>
         {%- when 'featured_image' -%}
           {%- if article.image -%}
             <div
@@ -281,6 +277,17 @@
     {% render 'blog-sidebar' %}
   </div>
 </div>
+
+<article class="article-template page-width page-width--narrow" itemscope itemtype="http://schema.org/BlogPosting">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when '@app' -%}
+        <div class="page-width page-width--narrow">
+          {% render block %}
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+</article>
 
 <script type="application/ld+json">
   {
