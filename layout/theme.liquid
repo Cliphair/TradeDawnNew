@@ -310,7 +310,15 @@
     <!-- End Yotpo -->
   </head>
 
-  <body class="{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}{% if request.page_type == 'product' %} product gradient-blue{% endif %}{% if request.page_type == 'collection' %} collection gradient-blue{% endif %} {% if request.page_type == 'index' %}home{% endif %}">
+  <body
+    class="
+      {% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}
+      {% if request.page_type == 'product' %} product gradient-blue{% endif %}
+      {% if request.page_type == 'article' %} article gradient-blue{% endif %}
+      {% if request.page_type == 'collection' %} collection gradient-blue{% endif %}
+      {% if request.page_type == 'index' %}home{% endif %}
+    "
+  >
     <!-- Klarna message -->
     <script
       async
