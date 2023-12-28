@@ -36,9 +36,196 @@
       ],
       "settings": {
       }
+    },
+    "12bc967e-f184-4f62-b448-da40706e950b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15283893927997__12bc967e-f184-4f62-b448-da40706e950b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Commitment To Sustainability",
+            "heading_size": "h1"
+          }
+        },
+        "template--15283893927997__12bc967e-f184-4f62-b448-da40706e950b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your good hair days shouldn't hurt the planet! Our sustainable practices don't just stop at our super cute recyclable packaging. We're always looking for ways to decrease our environmental impact through material sourcing, manufacturing and partnering with eco-conscious organisations that are leading the way.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15283893927997__12bc967e-f184-4f62-b448-da40706e950b-heading-1",
+        "template--15283893927997__12bc967e-f184-4f62-b448-da40706e950b-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-faded-pink",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
+            "text_label": "FSC Certified",
+            "link": ""
+          }
+        },
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
+            "text_label": "Biodegradable",
+            "link": ""
+          }
+        },
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
+            "text_label": "Vegan",
+            "link": ""
+          }
+        },
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
+            "text_label": "Sustainable",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-1",
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-2",
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-3",
+        "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-logo_image-4"
+      ],
+      "settings": {
+        "background_color": "#fff",
+        "text_color": "#121212",
+        "images_per_row": 4
+      }
+    },
+    "e429f763-5eb8-4348-b4cd-a17bb30b9f6e": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
+            "text_label": "Vegan Certified",
+            "link": ""
+          }
+        },
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
+            "text_label": "Soy Ink",
+            "link": ""
+          }
+        },
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
+            "text_label": "Organic",
+            "link": ""
+          }
+        },
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
+            "text_label": "100% Recyclable",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-1",
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-2",
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-3",
+        "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-logo_image-4"
+      ],
+      "settings": {
+        "background_color": "#fff",
+        "text_color": "#121212",
+        "images_per_row": 4
+      }
+    },
+    "2e1934dd-28b9-4bbb-b01e-0576cbadc4b2": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White.svg",
+            "text_label": "Ethically Sourced",
+            "link": ""
+          }
+        },
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
+            "text_label": "Outstanding Reviews",
+            "link": ""
+          }
+        },
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
+            "text_label": "Cliphair Rewards",
+            "link": ""
+          }
+        },
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
+            "text_label": "Free Delivery & Returns",
+            "link": ""
+          }
+        },
+        "da9d00ec-2d22-4240-a002-8b910ec693e4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "Buy Now Pay Later",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-1",
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-2",
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-3",
+        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-logo_image-4",
+        "da9d00ec-2d22-4240-a002-8b910ec693e4"
+      ],
+      "settings": {
+        "background_color": "#bda6c2",
+        "text_color": "#fff",
+        "images_per_row": 5
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "12bc967e-f184-4f62-b448-da40706e950b",
+    "a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e",
+    "e429f763-5eb8-4348-b4cd-a17bb30b9f6e",
+    "2e1934dd-28b9-4bbb-b01e-0576cbadc4b2"
   ]
 }
