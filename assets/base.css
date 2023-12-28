@@ -3018,6 +3018,7 @@ details-disclosure>details {
 
 .top-of-page .header-wrapper {
   background: transparent;
+  border: none;
 }
 
 @media screen and (forced-colors: active) {
