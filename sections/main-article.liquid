@@ -1,6 +1,6 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<div class="blog_wrapper">
+<div class="blog_wrapper page-width page-width--narrow">
   <article class="article-template page-width page-width--narrow" itemscope itemtype="http://schema.org/BlogPosting">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
