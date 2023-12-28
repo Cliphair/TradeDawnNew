@@ -132,7 +132,7 @@
       "settings": {
         "enable_sticky_info": true,
         "image_ratio": "square",
-        "media_size": "medium",
+        "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
@@ -177,7 +177,7 @@
         "heading_alignment": "center",
         "blog": "hair-blog",
         "post_limit": 3,
-        "columns_mobile": 2,
+        "columns_mobile": 1,
         "columns_desktop": 3,
         "color_scheme": "background-2",
         "show_image": true,
