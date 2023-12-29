@@ -62,7 +62,7 @@
         "heading_alignment": "left",
         "layout": "none",
         "arrow_style": "half-arrow",
-        "color_scheme": "background-faded-pink",
+        "color_scheme": "accent-2",
         "open_first_collapsible_row": false,
         "faq_schema": false,
         "padding_top": 36,
@@ -141,8 +141,185 @@
         "heading_alignment": "left",
         "layout": "none",
         "arrow_style": "half-arrow",
-        "color_scheme": "background-faded-pink",
+        "color_scheme": "accent-2",
         "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5c50884a-a478-4841-8c8f-da58bf52a3a7": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions be straightened, curled or tonged?",
+            "icon": "none",
+            "row_content": "<p>Yes, As the hair is human it can be styled using heat which includes tongs, straighteners, hairdryers and wavers. We do also advise to use <a href=\"https:\/\/www.cliphair.co.uk\/products\/cliphair-heat-spray\" target=\"_blank\" title=\"heat protection spray for hair extensions\">heat protect spray <\/a>to prevent the hair from drying out.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions be washed?",
+            "icon": "none",
+            "row_content": "<p>Yes, the hair extensions can and should be washed when necessary. The only change you need to make is to swap your shampoo for a sulphate\/alcohol free product as these ingredients will dry the hair out decreasing the life span.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions be dyed or toned?",
+            "icon": "none",
+            "row_content": "<p>All human hair extensions can be dyed, cut and styled just like natural hair can but as they are not attached to their original root and have been chemically treated already, they can react differently to colour than you may expect.<\/p><p>We also advise to only ever darken or tone your extensions and <strong>never bleach or lighten them<\/strong> as this can seriously decrease the life span. If you are planning to dye your extensions, we strongly recommend taking them to a professional colourist with experience in dying hair extensions to avoid an incorrect result or damage to the hair.<\/p><p>Always dye a small section of the hair first before applying the dye all over to test the colour. <strong>Please note once the hair extensions have been dyed or chemically altered this will void our returns\/complaints policy.<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you use any hairbrush to brush the Hair extensions?",
+            "icon": "none",
+            "row_content": "<p>No. Using brushes that have bobbles on the ends or very thick bristles can cause shedding and damage to the seams. We advise to only use brushes like our <a href=\"https:\/\/www.cliphair.co.uk\/products\/detangling-hair-brush\" target=\"_blank\" title=\"hair extensions brush\">Cliphair Detangling Brush<\/a>.<\/p>",
+            "page": ""
+          }
+        },
+        "02822dce-be53-4899-bf2b-0099823b514c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should you store Hair extensions?",
+            "icon": "none",
+            "row_content": "<p>Hair extensions that are removed daily should be stored in a clean, dry box or bag away from sunlight, heat and water. All of our Clip-Ins come in a wide box that is perfect for keeping your extensions safe when you are not using them!<\/p><p>For the full detailed <a href=\"https:\/\/www.cliphair.co.uk\/pages\/care-instructions\" target=\"_blank\" title=\"hair extensions care guide\">Cliphair Hair extensions Care guide please use this link<\/a>.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-1",
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-2",
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-3",
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-4",
+        "02822dce-be53-4899-bf2b-0099823b514c"
+      ],
+      "settings": {
+        "heading": "Care and Usage",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "accent-2",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3c7da3b5-1a3a-4624-b5aa-5279a8b9639d": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is Cliphair based?",
+            "icon": "none",
+            "row_content": "<p>Cliphair is a UK company based in Surrey, England.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you deliver worldwide?",
+            "icon": "none",
+            "row_content": "<p>Yes. We deliver all over the world, no matter where you’re ordering from we can ship to you in a matter of days!<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What shipping methods do you offer in the UK?",
+            "icon": "none",
+            "row_content": "<p>In the UK we offer free delivery for all orders over £30 which arrives in 3-5 working days. We also offer Next day and Special Saturday delivery options for a small price.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What shipping methods do you offer worldwide?",
+            "icon": "none",
+            "row_content": "<p>We offer free delivery for orders over £100-150 for countries outside of the UK, depending on where you are. We can deliver as soon as 1-4 working days, so even if you are 10000 miles away you can still receive your hair in under a week from ordering!<\/p>",
+            "page": ""
+          }
+        },
+        "dd9f56d0-b939-4bc5-b8ec-d07e410fe7a7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which couriers do Cliphair use?",
+            "icon": "none",
+            "row_content": "<p>We use Royal Mail and DPD for shipments inside of the UK and DHL for all international orders.<\/p>",
+            "page": ""
+          }
+        },
+        "0599d527-e85b-4ce1-b4c8-49a7d1222a68": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions and products be returned?",
+            "icon": "none",
+            "row_content": "<p>Yes, as long as the item has not been used or altered in any way you have 90 days to send the order back to us for either a full refund or exchange.<\/p><p>We offer free returns\/exchanges inside the UK.<\/p><p><strong>*<\/strong> For more detailed shipping information please <a href=\"https:\/\/www.cliphair.co.uk\/pages\/shipping-information\" target=\"_blank\" title=\"cliphair shipping info\"><strong>use this link<\/strong><\/a>.<\/p><p><strong>*<\/strong> For the full returns\/exchange policy please <a href=\"https:\/\/www.cliphair.co.uk\/pages\/returns-information\" target=\"_blank\" title=\"cliphair returns\"><strong>use this link<\/strong><\/a>.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-1",
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-2",
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-3",
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-4",
+        "dd9f56d0-b939-4bc5-b8ec-d07e410fe7a7",
+        "0599d527-e85b-4ce1-b4c8-49a7d1222a68"
+      ],
+      "settings": {
+        "heading": "Shipping and returns",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a2bc4d53-7d95-420d-a75b-22a6e0e9aa97": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__a2bc4d53-7d95-420d-a75b-22a6e0e9aa97-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer trade discounts?",
+            "icon": "none",
+            "row_content": "<p>Yes we do. Since 2007 Cliphair has been supporting salons and professional hairdressers both in the UK and internationally. Our dedicated Trade website offers you everything you can see on the retail site and more to ensure you can deliver fabulous results using our Remy human hair extensions at truly competitive prices.<\/p><p>The benefits of registering for a Trade account include:<\/p><ul><li>Discount prices<\/li><li>Preferential restock alerts<\/li><li>Priority stock ordering<\/li><li>Trade specific promotions<\/li><li>Dedicated trade team to support with day-to-day enquiries<\/li><li>Opportunity to promote your work on our social media platforms<\/li><\/ul><p>Register now: <a href=\"https:\/\/cliphairtrade.com\/account\/register\" target=\"_blank\">https:\/\/cliphairtrade.com\/account\/register<\/a><\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__a2bc4d53-7d95-420d-a75b-22a6e0e9aa97-collapsible_row-1"
+      ],
+      "settings": {
+        "heading": "Trade Enquiries",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "",
+        "open_first_collapsible_row": true,
         "faq_schema": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -160,6 +337,9 @@
   "order": [
     "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c",
     "00bf3b8c-d18a-4fb4-b587-03b6c69ac620",
+    "5c50884a-a478-4841-8c8f-da58bf52a3a7",
+    "3c7da3b5-1a3a-4624-b5aa-5279a8b9639d",
+    "a2bc4d53-7d95-420d-a75b-22a6e0e9aa97",
     "main"
   ]
 }
