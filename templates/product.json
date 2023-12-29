@@ -9,8 +9,14 @@
             "heading_size": "h2"
           }
         },
+        "b7b87992-8206-4a9f-83f6-2f9ec8cfe139": {
+          "type": "product-subtitle",
+          "settings": {
+          }
+        },
         "caption": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
@@ -114,6 +120,7 @@
       },
       "block_order": [
         "title",
+        "b7b87992-8206-4a9f-83f6-2f9ec8cfe139",
         "caption",
         "price",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
