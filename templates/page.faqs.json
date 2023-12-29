@@ -1,7 +1,156 @@
 {
   "sections": {
+    "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are your Hair extensions made from human hair?",
+            "icon": "none",
+            "row_content": "<p>Yes. All of the hair extensions across our entire range are made from 100% Remy, human hair. Human hair, unlike synthetic or animal hair, can be styled, dyed, washed and brushed giving you way more freedom and a far more natural finish.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is your hair Remy? And what does this mean?",
+            "icon": "none",
+            "row_content": "<p>Yes, all of our hair extensions are 100% Remy, human hair. <a href=\"https:\/\/www.cliphair.co.uk\/collections\/remy-royale-double-drawn-hair-weft-extensions\" target=\"_blank\" title=\"highest quality human hair\">“Remy” <\/a>is the best quality of hair extension available as it is “cuticle correct”, meaning all the cuticles on the hair shaft run in the same direction (downwards). This ensures the hair will stay shiny, soft and tangle free for months, even years if well cared for.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What grade are your hair extensions?",
+            "icon": "none",
+            "row_content": "<p>We have 2 different grades of hair extension in our collection. The first is our luxury range called<a href=\"https:\/\/www.cliphair.co.uk\/collections\/remy-royale-double-drawn-hair-weft-extensions\" target=\"_blank\" title=\"remy royale hair\">“Remy Royale” <\/a>which is made from AAAAA grade hair this includes mostly professional hair extensions. The second is the AAA grade hair which is used for most of our products.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is your hair Double Drawn?",
+            "icon": "none",
+            "row_content": "<p>All the hair in the <a href=\"https:\/\/www.cliphair.co.uk\/collections\/remy-royale-double-drawn-hair-weft-extensions\" target=\"_blank\" title=\"remy royale hair\">“Remy Royale” <\/a>collection is Double Drawn. The rest of our hair is Single Drawn but of a very good thickness.<\/p>",
+            "page": ""
+          }
+        },
+        "1a970fc7-b7ea-46ef-939a-06727238e688": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your clips made from?",
+            "icon": "none",
+            "row_content": "<p>We use small metal clips with silicone lining for extra comfort and secure grip. The silicone tubing is also much better for the hair as it prevents rubbing and breakage. They weigh less than 1g each and are just 1inch wide meaning they are very easy to hide even in the finest of hair.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-1",
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-2",
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-3",
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-4",
+        "1a970fc7-b7ea-46ef-939a-06727238e688"
+      ],
+      "settings": {
+        "heading": "Quality of our Hair Extensions",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "background-faded-pink",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "00bf3b8c-d18a-4fb4-b587-03b6c69ac620": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are Clip-in Hair Extensions?",
+            "icon": "none",
+            "row_content": "<p>If you are looking for a quick do it yourself hair extension system with no commitment involved, then look no further. Clip-in Hair Extensions are strips of hair that have small metal snap clips attached to the seams that can be applied and removed in a matter of minutes with absolutely no help from professionals needed! They can be used to add length, thickness, volume and colour the possibilities are endless.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I attach Clip-ins to my hair?",
+            "icon": "none",
+            "row_content": "<p>Clip-ins attach to the hair at your roots hidden by another layer of hair on top, the small metal silicone lined snap clips simply grip to your hair. Depending on the set you have, whether it is a multi-piece or one piece will determine where they are placed. A great tip for helping the clips to grip into fine, silky hair is to give your root a good backcomb before applying, this will create a little nest for the clip to attach to reinforcing the hold!<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do Clip-ins take to put in?",
+            "icon": "none",
+            "row_content": "<p>After a little practice even a Full head 8-piece Clip-In set can be applied in under 5 minutes, and its even quicker to remove them. Compare that with a 2 hour visit to the salon having permanent extensions attached and it's no surprise Clip-Ins are our top seller!<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does my own hair need to be to use Clip-in Hair Extensions?",
+            "icon": "none",
+            "row_content": "<p>Your hair will need to be at least 4 inches long to be able to hold and hide the extensions. Any shorter than this you should look into having a more permanent type applied as they have much smaller attachments which are easier to hide.<\/p>",
+            "page": ""
+          }
+        },
+        "ab18d31f-52fe-4829-9f4c-b0a76b5580a8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do Clip-In Extensions last?",
+            "icon": "none",
+            "row_content": "<p>As our hair extensions are human, they have a long-life span. With the correct care and maintenance, its not uncommon for quality clip-ins to last up to 12 months. However, if over worn and not treated well they will need replacing between 3-6 months. The better you look after the hair and the less you wear it the longer it will last. It’s good to bear in mind that very light shades will usually have a shorter life due to the chemical processing they go through during manufacturing. Check out our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/care-instructions\" target=\"_blank\" title=\"hair extensions care guide\">Clip-In Care guide here.<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "c049d401-cc26-4148-ba66-792b407905c9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I sleep in Clip-In hair extensions?",
+            "icon": "none",
+            "row_content": "<p>No. Clip-ins or temporary hair pieces should be removed before sleeping, showering and swimming. Leaving them in whilst doing any of these activities can cause damage to your own hair so its crucial, they are removed.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-1",
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-2",
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-3",
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-4",
+        "ab18d31f-52fe-4829-9f4c-b0a76b5580a8",
+        "c049d401-cc26-4148-ba66-792b407905c9"
+      ],
+      "settings": {
+        "heading": "Clip in Hair Extensions",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "background-faded-pink",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -9,6 +158,8 @@
     }
   },
   "order": [
+    "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c",
+    "00bf3b8c-d18a-4fb4-b587-03b6c69ac620",
     "main"
   ]
 }
