@@ -17,7 +17,7 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
+  <div class="collapsible-content collapsible-none-layout isolate content-container content-container--full-width">
     <div class="collapsible-content__wrapper section-{{ section.id }}-padding">
       <div class="page-width">
         <div class="faq-wrapper">
@@ -152,26 +152,6 @@
         }
       ],
       "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "label": "t:sections.collapsible_content.settings.layout.label",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.collapsible_content.settings.layout.options__1.label"
-        },
-        {
-          "value": "row",
-          "label": "t:sections.collapsible_content.settings.layout.options__2.label"
-        },
-        {
-          "value": "section",
-          "label": "t:sections.collapsible_content.settings.layout.options__3.label"
-        }
-      ],
-      "default": "none"
     },
     {
       "type": "select",

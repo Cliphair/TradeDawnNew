@@ -1,7 +1,7 @@
 .faq-wrapper {
   padding-top: 1rem;
   border-top: 1px solid;
-  border-color: rgb(var(--color-main-headers));
+  border-color: rgba(var(--color-foreground), 0.75);
 }
 
 @media screen and (min-width: 750px) {
