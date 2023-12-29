@@ -14,14 +14,6 @@
           "settings": {
           }
         },
-        "caption": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -41,12 +33,6 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "dropdown"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {
           }
         },
         "3efc918c-8182-4ef3-bc33-60a83ed7ef86": {
@@ -99,42 +85,21 @@
             "content": "",
             "page": ""
           }
-        },
-        "description": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "type": "custom",
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "title",
         "b7b87992-8206-4a9f-83f6-2f9ec8cfe139",
-        "caption",
         "price",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "a0b50969-ea33-4844-941d-db5577728e55",
         "variant_picker",
-        "quantity_selector",
         "3efc918c-8182-4ef3-bc33-60a83ed7ef86",
         "buy_buttons",
         "share",
         "collapsible-row-0",
         "collapsible-row-1",
-        "collapsible-row-2",
-        "description",
-        "collapsible-row-3"
+        "collapsible-row-2"
       ],
       "settings": {
         "enable_sticky_info": true,
