@@ -1,9 +1,4 @@
 <div class="mobile-menu-search">
-  {%- if settings.predictive_search_enabled -%}
-    <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-  {%- else -%}
-    <search-form class="search-modal__form">
-  {%- endif -%}
   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
     <div class="field">
       <input
@@ -43,28 +38,5 @@
         </svg>
       </button>
     </div>
-
-    {%- if settings.predictive_search_enabled -%}
-      <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-        <div class="predictive-search__loading-state">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            class="spinner"
-            viewBox="0 0 66 66"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-          </svg>
-        </div>
-      </div>
-
-      <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-    {%- endif -%}
   </form>
-  {%- if settings.predictive_search_enabled -%}
-    </predictive-search>
-  {%- else -%}
-    </search-form>
-  {%- endif -%}
 </div>
