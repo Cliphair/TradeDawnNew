@@ -35,3 +35,7 @@
     color: var(--colour-cliphair-blue);
     text-transform: uppercase;
 }
+
+div.snize-ac-results.snize-ac-results-mobile {
+    background-color: #fff;
+}
