@@ -2711,18 +2711,22 @@ details[open] .modal-overlay::after {
   height: 100%;
 }
 
-.header .search-modal__content {
-  display: none;
-}
-
 .header .search .field,
 .header .search .field:before,
 .header .search .field:after {
   border-radius: 2rem;
 }
 
+#Desktop-Search-Inline {
+  display: none;
+}
 @media screen and (min-width: 990px) {
+  
   .header .search-modal__content {
+    display: flex;
+  }
+
+  #Desktop-Search-Inline {
     display: flex;
   }
 
