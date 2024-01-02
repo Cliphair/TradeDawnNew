@@ -20,14 +20,12 @@
 .color-background-faded-pink p {
     color: var(--colour-cliphair-grey-dark);
 }
-
 .color-background-white h2 {
     color: var(--colour-cliphair-blue);
 }
 .color-background-white p {
     color: var(--colour-cliphair-grey-dark);
 }
-
 .color-background-faded-blue h2 {
     color: var(--colour-cliphair-blue);
 }
@@ -35,7 +33,6 @@
     color: var(--colour-cliphair-blue);
     text-transform: uppercase;
 }
-
 div.snize-ac-results.snize-ac-results-mobile {
-    background-color: #fff;
+    background-color: #fff !important;
 }
