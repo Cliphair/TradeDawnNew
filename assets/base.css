@@ -2711,10 +2711,6 @@ details[open] .modal-overlay::after {
   height: 100%;
 }
 
-.header .search-modal__content {
-  display: none;
-}
-
 .header .search .field,
 .header .search .field:before,
 .header .search .field:after {
