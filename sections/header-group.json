@@ -18,11 +18,19 @@
             "text": "Second announcement",
             "link": ""
           }
+        },
+        "announcement_X6aUFC": {
+          "type": "announcement",
+          "settings": {
+            "text": "Third Announcmenet",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement-bar-0",
-        "announcement-bar-1"
+        "announcement-bar-1",
+        "announcement_X6aUFC"
       ],
       "settings": {
         "color_scheme": "",
