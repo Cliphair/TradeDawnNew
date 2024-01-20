@@ -14,7 +14,7 @@
             <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
               <summary
                 id="HeaderMenu-{{ link.handle }}"
-                class="header__menu-item list-menu__item link focus-inset"
+                class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
               >
                 <a
                   id="HeaderMenu-{{ link.handle }}"
@@ -32,7 +32,7 @@
                     {{- link.title | escape -}}
                   </span>
                 </a>
-                {% render 'icon-caret' %}
+                {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
