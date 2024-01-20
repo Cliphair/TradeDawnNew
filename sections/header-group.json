@@ -35,6 +35,7 @@
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
+        "show_scroll_arrow": false,
         "show_social": false,
         "auto_rotate": true,
         "change_slides_speed": 5,
@@ -50,6 +51,7 @@
         "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
+        "show_icon_arrow": false,
         "color_scheme": "background-1",
         "menu_color_scheme": "",
         "enable_country_selector": true,
