@@ -2720,8 +2720,9 @@ details[open] .modal-overlay::after {
 #Desktop-Search-Inline {
   display: none;
 }
+
 @media screen and (min-width: 990px) {
-  
+
   .header .search-modal__content {
     display: flex;
   }
