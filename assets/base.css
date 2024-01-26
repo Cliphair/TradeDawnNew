@@ -1156,7 +1156,7 @@ summary::-webkit-details-marker {
   position: absolute;
   top: 0;
   left: 0;
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 
@@ -3585,6 +3585,10 @@ details-disclosure>details {
     --border-offset: 0px;
     /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+
+.image--circle {
+  border-radius: 50%;
 }
 
 /* Deferred media pop-up */

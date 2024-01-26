@@ -32,7 +32,7 @@
     <div class="card__inner ratio" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
       {%- if card_image -%}
         <div class="card__media">
-          <div class="media media--transparent media--hover-effect{% if circle_image %} media--circle{% endif %}">
+          <div class="media media--transparent media--hover-effect{% if circle_image %} image--circle{% endif %}">
             <img
               srcset="
                 {%- if card_image.width >= 165 -%}{{ card_image | image_url: width: 165 }} 165w,{%- endif -%}
