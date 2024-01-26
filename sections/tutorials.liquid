@@ -18,7 +18,10 @@
   }
 {% endstyle %}
 
-<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<div
+  data-type="{{ section.settings.type | handle }}"
+  class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+>
   {%- liquid
     assign image_ratio = 1
     if section.settings.image_ratio == 'portrait'
@@ -29,7 +32,6 @@
   -%}
 
   <div
-    id="tutorial-{{ section.settings.type | handle }}"
     class="videos-list-wrapper page-width isolate no-heading no-mobile-link {{ section.settings.text_allignment }}"
   >
     {%- unless section.settings.title == blank -%}

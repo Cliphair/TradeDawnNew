@@ -1,0 +1,41 @@
+.videos-filter-wrapper {
+  border-top: 1px solid;
+  border-color: var(--color-foreground);
+}
+
+.videos-filter-wrapper ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 10px;
+  margin: 0;
+}
+
+.videos-filter-wrapper li {
+  cursor: pointer;
+}
+
+.videos-filter-wrapper li[selected],
+.videos-filter-wrapper li:hover,
+.videos-filter-wrapper option[selected] {
+  font-weight: 600;
+  color: #ba69a1;
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width:990px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}

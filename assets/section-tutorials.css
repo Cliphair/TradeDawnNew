@@ -7,13 +7,13 @@
 }
 
 /* section styles */
-.section-tutorials:not(:first-of-type),
-.section-tutorials.hidden {
+.section-tutorials~.section-tutorials>div,
+.section-tutorials>div.hidden {
   display: none;
 }
 
-.section-tutorials.visible {
-  display: block;
+.section-tutorials>div.visible {
+  display: block !important;
 }
 
 .section-tutorials .main-image-wrapper>img {
