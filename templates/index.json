@@ -222,17 +222,17 @@
         "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/marie_claire.webp",
+            "image": "shopify:\/\/shop_images\/metro.png",
             "text_label": "",
-            "link": ""
+            "link": "https:\/\/metro.co.uk\/2022\/02\/07\/this-is-how-often-you-should-wash-your-hair-depending-on-hair-type-16061705\/"
           }
         },
         "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Readers_Digest.webp",
+            "image": "shopify:\/\/shop_images\/marie_claire.webp",
             "text_label": "",
-            "link": ""
+            "link": "https:\/\/www.marieclaire.co.uk\/promotional-feature\/kate-middleton-ponytail-tips-cliphair-760263"
           }
         },
         "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-3": {
@@ -240,15 +240,39 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/grazia.webp",
             "text_label": "",
-            "link": ""
+            "link": "https:\/\/graziadaily.co.uk\/beauty-hair\/hair\/clip-in-ponytail-extensions-uk\/"
           }
         },
         "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/the_sun2.png",
+            "image": "shopify:\/\/shop_images\/independent.webp",
             "text_label": "",
-            "link": ""
+            "link": "https:\/\/www.independent.co.uk\/extras\/indybest\/fashion-beauty\/best-clip-in-hair-extensions-b1891280.html"
+          }
+        },
+        "image_MwfzQ6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Readers_Digest.webp",
+            "text_label": "",
+            "link": "https:\/\/www.readersdigest.co.uk\/lifestyle\/fashion-beauty\/top-5-celebrity-ponytails-and-how-to-create-them"
+          }
+        },
+        "image_7qHd4N": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/daily_mail.webp",
+            "text_label": "",
+            "link": "https:\/\/www.dailymail.co.uk\/femail\/article-7553741\/The-10-beauty-fashion-brands-NEED-know.html"
+          }
+        },
+        "image_QeR9nM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/the_sun.png",
+            "text_label": "",
+            "link": "https:\/\/www.thesun.co.uk\/fabulous\/18696203\/hairstyle-according-to-star-sign\/"
           }
         }
       },
@@ -256,12 +280,23 @@
         "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-1",
         "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-2",
         "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-3",
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-4"
+        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-4",
+        "image_MwfzQ6",
+        "image_7qHd4N",
+        "image_QeR9nM"
       ],
       "settings": {
-        "background_color": "#f4f4f4",
-        "text_color": "#121212",
-        "images_per_row": 4
+        "title": "<strong>LOVED BY<\/strong>",
+        "heading_size": "h2",
+        "introduction": "",
+        "text_allignment": "center",
+        "columns_desktop": 5,
+        "swipe_on_desktop": true,
+        "color_scheme": "background-collection-titles",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "60c353fa-c484-4da2-b7b1-75781aa41474": {
@@ -623,18 +658,65 @@
             "text_label": "Sustainable",
             "link": ""
           }
+        },
+        "image_eXtqEV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
+            "text_label": "Soy Ink",
+            "link": ""
+          }
+        },
+        "image_Rwj6VQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
+            "text_label": "Organic",
+            "link": ""
+          }
+        },
+        "image_dgTyrR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
+            "text_label": "100% Recyclable",
+            "link": ""
+          }
+        },
+        "image_hBphpA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
+            "text_label": "Vegan Certified",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1",
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2",
         "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4"
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4",
+        "image_eXtqEV",
+        "image_Rwj6VQ",
+        "image_dgTyrR",
+        "image_hBphpA"
+      ],
+      "custom_css": [
+        "img {max-height: 70px;}"
       ],
       "settings": {
-        "background_color": "#ffffff",
-        "text_color": "#121212",
-        "images_per_row": 4
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "611787f7-b6a9-44a5-9e4d-fe031630a4b7": {
@@ -679,10 +761,19 @@
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-3",
         "template--15283894157373__611787f7-b6a9-44a5-9e4d-fe031630a4b7-logo_image-4"
       ],
+      "disabled": true,
       "settings": {
-        "background_color": "#ffffff",
-        "text_color": "#121212",
-        "images_per_row": 4
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b": {
@@ -736,10 +827,21 @@
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4",
         "cbdbff03-f013-487f-8288-6c9a46426bc6"
       ],
+      "custom_css": [
+        "img {max-height: 70px;}"
+      ],
       "settings": {
-        "background_color": "#bda6c2",
-        "text_color": "#ffffff",
-        "images_per_row": 5
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 5,
+        "swipe_on_desktop": false,
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
