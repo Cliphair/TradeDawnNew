@@ -1,46 +1,174 @@
-.logoList--container {
-    padding: 20px 0;
-    margin: auto;
+/* .logoList--container {
+	padding: 20px 0;
+	margin: auto;
 }
 
 .logoList--container ul {
-    display: flex;
-    overflow-x: scroll;
+	display: flex;
+	overflow-x: scroll;
 }
+
 .logoList--item {
-    display: block;
-    min-width: 50%;
-    text-align: center;
+	display: block;
+	min-width: 50%;
+	text-align: center;
 }
 
 @media screen and (min-width: 750px) {
 
-    .logoList--container ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        justify-content: center;
-        overflow-x: scroll;
-    }
+	.logoList--container ul {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+		justify-content: center;
+		overflow-x: scroll;
+	}
 
-    .logoList--container.images-3 ul {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .logoList--container.images-4 ul {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .logoList--container.images-5 ul {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .logoList--container.images-6 ul {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    .logoList--item {
-        display: inline-block;
-        max-width: 220px;
-    }
+	.logoList--container.images-3 ul {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.logoList--container.images-4 ul {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.logoList--container.images-5 ul {
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+	.logoList--container.images-6 ul {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.logoList--item {
+		display: inline-block;
+		max-width: 220px;
+	}
 }
 
 .logoList--item img {
-    width: 100%;
+	width: 100%;
+}
+
+/* Overwrite base styles */
+.section-images-list .slider--tablet:after {
+	content: unset !important;
+}
+
+.section-images-list .slider-button .icon {
+	height: 22px !important;
+}
+
+.section-images-list .grid--1-col .grid__item {
+	width: 100%;
+}
+
+@media screen and (min-width:990px) {
+	.section-images-list .slider--desktop.grid--1-col-desktop .grid__item {
+		width: 100%;
+	}
+
+	.section-images-list .slider--desktop.grid--2-col-desktop .grid__item {
+		width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2)
+	}
+
+	.section-images-list .slider--desktop.grid--3-col-desktop .grid__item {
+		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 2)) / 3)
+	}
+
+	.section-images-list .slider--desktop.grid--4-col-desktop .grid__item {
+		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 3)) / 4)
+	}
+
+	.section-images-list .slider--desktop.grid--5-col-desktop .grid__item {
+		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 4)) / 5)
+	}
+
+	.section-images-list .slider--desktop.grid--6-col-desktop .grid__item {
+		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 5)) / 6)
+	}
+}
+
+*/
+
+/* Section style */
+.section-images-list .intro-wrapper {
+	margin-bottom: 4rem;
+}
+
+.section-images-list .images-list-title,
+.section-images-list .intro-wrapper p {
+	margin: 0;
+}
+
+.section-images-list slider-component {
+	position: relative;
+	padding: 0 2rem;
+}
+
+.section-images-list .grid {
+	align-items: center;
+	margin-bottom: 0 !important;
+	scroll-padding-left: 0 !important;
+}
+
+.section-images-list .images-list__item {
+	text-align: center;
+	margin: 0 !important;
+}
+
+.section-images-list .images-list__item a {
+	color: rgba(var(--color-link), var(--alpha-link));
+	text-underline-offset: 0.3rem;
+	text-decoration-thickness: 0.1rem;
+	display: block;
+}
+
+.section-images-list .images-list__item a:hover {
+	color: rgb(var(--color-link));
+	text-decoration-thickness: 0.2rem;
+}
+
+.section-images-list .images-list__item img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.section-images-list .images-list__item p {
+	margin: 5px 0 0;
+	line-height: 1.2em;
+}
+
+.section-images-list .slider-buttons>.slider-button {
+	position: absolute;
+	top: calc(50% - 22px);
+}
+
+.section-images-list .slider-buttons>.slider-button[disabled] {
+	opacity: 0;
+}
+
+.section-images-list .slider-buttons>.slider-button--next {
+	right: -1.5rem;
+}
+
+.section-images-list .slider-buttons>.slider-button--prev {
+	left: -1.5rem;
+}
+
+@media screen and (min-width:768px) {
+	.section-images-list slider-component {
+		padding: 0;
+	}
+
+	.section-images-list .slider-buttons>.slider-button--next {
+		right: -5rem;
+	}
+
+	.section-images-list .slider-buttons>.slider-button--prev {
+		left: -5rem;
+	}
 }
