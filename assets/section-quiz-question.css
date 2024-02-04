@@ -50,7 +50,8 @@
   margin-bottom: 1rem;
 }
 
-.quiz .information-wrapper button[name='back'] {
+.quiz .information-wrapper button[name='back'],
+.quiz .information-wrapper button[name='reset'] {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -59,13 +60,16 @@
 }
 
 .quiz .information-wrapper button[name='back']:focus-visible,
-.quiz .information-wrapper button[name='back']:hover {
+.quiz .information-wrapper button[name='back']:hover,
+.quiz .information-wrapper button[name='reset']:focus-visible,
+.quiz .information-wrapper button[name='reset']:hover {
   outline: 0;
   box-shadow: none;
   border-color: inherit;
 }
 
-.quiz .information-wrapper button[name='back']:disabled {
+.quiz .information-wrapper button[name='back']:disabled,
+.quiz .information-wrapper button[name='reset']:disabled {
   border-color: transparent;
   cursor: not-allowed;
 }

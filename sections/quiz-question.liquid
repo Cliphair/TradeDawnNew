@@ -39,15 +39,17 @@
       %}
 
       <div class="quiz-question-wrapper page-width {{ section.settings.text_allignment }}  section-{{ section.id }}-padding">
-        <div class="information-wrapper">
-          <button type="button" name="back" class="">
-            {% render 'icon-arrow' %}
-            Back
-          </button>
-          <p class="visually-hidden">
-            <span class="current-question">0</span> of <span class="total-questions">0</span>
-          </p>
-        </div>
+        {% if section.settings.show_information %}
+          <div class="information-wrapper">
+            <button type="button" name="back" class="">
+              {% render 'icon-arrow' %}
+              Back
+            </button>
+            <p class="visually-hidden">
+              <span class="current-question">0</span> of <span class="total-questions">0</span>
+            </p>
+          </div>
+        {% endif %}
 
         <div class="question-wrapper">
           <h2
@@ -258,6 +260,16 @@
       "default": false,
       "id": "button_style_secondary",
       "label": "Use outline button style"
+    },
+    {
+      "type": "checkbox",
+      "default": true,
+      "id": "show_information",
+      "label": "Show information section"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Layout"
     },
     {
       "type": "range",

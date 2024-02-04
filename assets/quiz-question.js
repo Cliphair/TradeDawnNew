@@ -38,10 +38,11 @@ if (!customElements.get('quiz-question')) {
         }
 
         // update counters and elements with correct question numbers
+        const counterElement = this.querySelector('.information-wrapper p');
         if (this.counterTotalWrapper) this.counterTotalWrapper.innerText = questionsArray.length;
         if (this.counterCurrentWrapper) this.counterCurrentWrapper.innerText = questionNumber;
+        if (counterElement) counterElement.classList.remove('visually-hidden');
         this.dataset.questionNumber = questionNumber;
-        this.querySelector('.information-wrapper p').classList.remove('visually-hidden');
 
         // check if this is the final page and if some question was answered before
         let lastRespondedQuestion = this.checkLastResponded();

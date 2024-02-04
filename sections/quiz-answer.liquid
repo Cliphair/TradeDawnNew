@@ -31,15 +31,15 @@
       %}
 
       <div class="quiz-question-wrapper page-width section-{{ section.id }}-padding">
-        <div class="information-wrapper">
-          <button type="button" name="back" class="">
-            {% render 'icon-arrow' %}
-            Back
-          </button>
-          <p class="">
-            <span class="current-question">Final Answer</span>
-          </p>
-        </div>
+        {% if section.settings.show_information %}
+          <div class="information-wrapper">
+            <button type="button" name="back" class="">
+              {% render 'icon-arrow' %}
+              Back
+            </button>
+            <button type="button" name="reset" class="">Restart Quiz</button>
+          </div>
+        {% endif %}
 
         <div class="title-wrapper {{ section.settings.text_allignment }}">
           <h2
@@ -233,6 +233,12 @@
       "default": false,
       "id": "button_style_secondary",
       "label": "Use outline button style"
+    },
+    {
+      "type": "checkbox",
+      "default": true,
+      "id": "show_information",
+      "label": "Show information section"
     },
     {
       "type": "header",
