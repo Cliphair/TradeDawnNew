@@ -1,0 +1,270 @@
+{{ 'section-quiz-question.css' | asset_url | stylesheet_tag }}
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+<style>
+  .section-quiz-answer:has(> .visible) {
+    display: block !important;
+  }
+</style>
+{% if section.settings.id != blank %}
+  <div class="color-{{ section.settings.color_scheme }} gradient {% if section.settings.visible %}visible{% endif %}">
+    <quiz-answer data-quiz-id="{{ section.settings.id }}">
+      {% liquid
+        assign ratio = 1
+        if section.settings.image_ratio == 'portrait'
+          assign ratio = 0.6667
+        endif
+      %}
+
+      <div class="quiz-question-wrapper page-width section-{{ section.id }}-padding">
+        <div class="information-wrapper">
+          <button type="button" name="back" class="">
+            {% render 'icon-arrow' %}
+            Back
+          </button>
+          <p class="">
+            <span class="current-question">Final Answer</span>
+          </p>
+        </div>
+
+        <div class="title-wrapper {{ section.settings.text_allignment }}">
+          <h2
+            id="SectionHeading-{{ section.id }}"
+            class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          >
+            {{ section.settings.title }}
+          </h2>
+        </div>
+
+        <div class="answer-wrapper">
+          <div
+            class="media media--transparent media--hover-effect ratio"
+            style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+          >
+            {% assign image = images['Rectangle_74.png'] %}
+            <img
+              class="{{ section.settings.image_ratio }}"
+              srcset="
+                {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if image.width >= 535 -%}{{ image | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if image.width >= 750 -%}{{ image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if image.width >= 1070 -%}{{ image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ image | image_url }} {{ image.width }}w
+              "
+              src="{{ image | image_url: width: settings.page_width }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: 0.3 }}px, (min-width: 750px) calc((100vw - 100px) * 0.3), calc(100vw - 30px)"
+              alt="{{ image.alt }}"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="text-wrapper">
+            <h3 class="h2"><a href="#">Placeholder</a></h3>
+            <p>Placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder</p>
+            <div class="button-wrapper">
+              <a
+                href="#"
+                class="button {% if section.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+              >
+                Shop Now
+              </a>
+            </div>
+            {% if section.settings.message != empty %}
+              <p>{{ section.settings.message }}</p>
+            {% endif %}
+
+            <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+              <div class="grid__item">
+                <div
+                  class="accordion"
+                >
+                  <details
+                    id="Details-{{ section.id }}"
+                  >
+                    <summary id="Summary-1-{{ section.id }}">
+                      <h4 class="accordion__title inline-richtext h4">You could also use:</h4>
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div
+                      class="accordion__content rte"
+                      id="CollapsibleAccordion-1-{{ section.id }}"
+                      role="region"
+                      aria-labelledby="Summary-1-{{ section.id }}"
+                    >
+                      <p>Bla bla bla</p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </quiz-answer>
+  </div>
+
+  {% liquid
+    assign fileName = section.settings.id | handle | append: '.js'
+  %}
+
+  <script src="{{ fileName | asset_url}}" type="application/json" id="{{ section.settings.id }}-answers" defer></script>
+  <script src="{{ 'quiz-answer.js' | asset_url }}" defer></script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Quiz answer",
+  "tag": "section",
+  "class": "section quiz section-quiz-answer hidden",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "default": false,
+      "id": "visible",
+      "label": "Make visible",
+      "info": "This allows you to preview and set up the section"
+    },
+    {
+      "type": "paragraph",
+      "content": "This section looks for a JSON file with the id as the name"
+    },
+    {
+      "type": "text",
+      "id": "id",
+      "label": "Quiz id",
+      "info": "This field is used to organize the quiz and it needs to be match all other questions in this quiz."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "message",
+      "label": "Commom message",
+      "info": "This message will be used for all the answers"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "text_allignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Text allignment"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "square",
+      "label": "Image ratio"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "checkbox",
+      "default": false,
+      "id": "button_style_secondary",
+      "label": "Use outline button style"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Quiz answer",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
