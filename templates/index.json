@@ -242,7 +242,7 @@
         "id": "journey",
         "page": "journey",
         "question": "What is your hair type?",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "text_allignment": "center",
         "image_ratio": "portrait",
         "color_scheme": "background-2",
