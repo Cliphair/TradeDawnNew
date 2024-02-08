@@ -112,7 +112,7 @@
         "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "HOW TO CHOOSE THE RIGHT HAIR EXTENSIONS FOR YOU",
+            "heading": "<strong>HOW TO CHOOSE THE RIGHT HAIR EXTENSIONS FOR YOU<\/strong>",
             "heading_size": "h0"
           }
         }
@@ -138,7 +138,7 @@
         "a7031854-9bd7-41fe-b425-7e6f75e38807": {
           "type": "collections",
           "settings": {
-            "block-title": "CHOOSE BY HAIR COLOUR…",
+            "block-title": "<strong>CHOOSE BY HAIR COLOUR…<\/strong>",
             "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit, euismod dolore magna erat.<\/p>",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
@@ -150,7 +150,7 @@
         "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf": {
           "type": "collections",
           "settings": {
-            "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
+            "block-title": "<strong>CHOOSE BY HAIR EXTENSION TYPE…<\/strong>",
             "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat.<br\/><\/p>",
             "collection-list": "choose-by-hair-extensions-type",
             "button_label": "",
@@ -242,7 +242,7 @@
         "id": "journey",
         "page": "journey",
         "question": "What is your hair type?",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "text_allignment": "center",
         "image_ratio": "portrait",
         "color_scheme": "background-2",
