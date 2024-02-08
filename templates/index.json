@@ -256,6 +256,90 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_collage_bg_qibWaW": {
+      "type": "rich-text-collage-bg",
+      "blocks": {
+        "heading_3EjH4p": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>FIND YOUR LOOK<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Dn3thJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Search through our gallery of styles to find your perfect look!<\/p>"
+          }
+        },
+        "button_DMUj9Q": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "image_CXggPb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iceblonde-tw-1.webp"
+          }
+        },
+        "image_wE8M3e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6-qwp-1.webp"
+          }
+        },
+        "image_XmkpVj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/60-fhs-2.webp"
+          }
+        },
+        "image_jLnG3R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3-dw-2.webp"
+          }
+        },
+        "image_MDRm6y": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1b-cw-2.webp"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3EjH4p",
+        "text_Dn3thJ",
+        "button_DMUj9Q",
+        "image_CXggPb",
+        "image_wE8M3e",
+        "image_XmkpVj",
+        "image_jLnG3R",
+        "image_MDRm6y"
+      ],
+      "custom_css": [
+        ".button {margin-top: 5rem;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-4",
+        "full_width": true,
+        "mobile-row": 2,
+        "mobile-column": 2,
+        "desktop-row": 2,
+        "desktop-column": 6,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "fef9cc49-05dc-468b-82e4-1520264647b6": {
       "type": "rich-text",
       "blocks": {
@@ -930,6 +1014,7 @@
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "rich_text_ez6FdW",
     "quiz_question_G3AdFU",
+    "rich_text_collage_bg_qibWaW",
     "fef9cc49-05dc-468b-82e4-1520264647b6",
     "f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2",
     "60c353fa-c484-4da2-b7b1-75781aa41474",
