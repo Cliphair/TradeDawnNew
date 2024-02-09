@@ -6,7 +6,7 @@
         "show_collection_description": true,
         "text_alignment": "center",
         "show_collection_image": false,
-        "color_scheme": "background-1"
+        "color_scheme": "background-grey"
       }
     },
     "6db3206b-59ea-491c-ac8c-e47b80ac9838": {
@@ -38,6 +38,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "color_scheme": "accent-1",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -174,7 +175,7 @@
         "text_allignment": "center",
         "columns_desktop": 4,
         "swipe_on_desktop": false,
-        "color_scheme": "background-grey",
+        "color_scheme": "accent-4",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
