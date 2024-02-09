@@ -131,3 +131,14 @@
     }
   }
 }
+
+/* section button */
+.button-wrapper {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.button-wrapper .button {
+  width: 100%;
+  max-width: 350px;
+}

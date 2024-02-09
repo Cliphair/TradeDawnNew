@@ -106,6 +106,20 @@
             {%- endfor -%}
           </div>
         </div>
+        {%- if section.settings.button_label != blank -%}
+          <div class="button-wrapper">
+            <a
+              {% if section.settings.link %}
+                href="{{ section.settings.link }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+              class="button {% if section.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+            >
+              {{- section.settings.button_label | escape -}}
+            </a>
+          </div>
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -302,6 +316,26 @@
       "default": "image_second",
       "label": "t:sections.collapsible_content.settings.desktop_layout.label",
       "info": "t:sections.collapsible_content.settings.desktop_layout.info"
+    },
+    {
+      "type": "header",
+      "content": "Section button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Button link"
+    },
+    {
+      "type": "checkbox",
+      "default": false,
+      "id": "button_style_secondary",
+      "label": "Use outline button style"
     },
     {
       "type": "header",

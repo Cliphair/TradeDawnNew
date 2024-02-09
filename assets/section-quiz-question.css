@@ -104,6 +104,7 @@
 
 .section-quiz-question .answer-card h3 {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .section-quiz-question .answer-card h3:hover {
