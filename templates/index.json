@@ -332,7 +332,7 @@
         "content_alignment": "center",
         "color_scheme": "accent-3",
         "full_width": true,
-        "mobile-row": 2,
+        "mobile-row": 3,
         "mobile-column": 2,
         "desktop-row": 2,
         "desktop-column": 6,
