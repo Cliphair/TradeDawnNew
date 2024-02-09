@@ -107,6 +107,7 @@
         "template--15283893731389__31af79c0-9e7e-484e-a7a5-98d79d83f95d-heading-1",
         "template--15283893731389__31af79c0-9e7e-484e-a7a5-98d79d83f95d-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -158,6 +159,7 @@
         "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-3",
         "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-4"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -214,6 +216,7 @@
         "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-3",
         "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-4"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -279,6 +282,7 @@
         "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-4",
         "dde6965d-7f57-4c8d-9800-8c1a82267348"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
