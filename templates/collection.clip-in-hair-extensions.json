@@ -92,32 +92,32 @@
     "39d20f8e-c5ee-4208-a519-6e172591f7e9": {
       "type": "image-list",
       "blocks": {
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-1": {
-          "type": "logo_image",
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-1": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
             "text_label": "FSC Certified",
             "link": ""
           }
         },
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-2": {
-          "type": "logo_image",
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-2": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
             "text_label": "Biodegradable",
             "link": ""
           }
         },
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-3": {
-          "type": "logo_image",
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-3": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
             "text_label": "Vegan",
             "link": ""
           }
         },
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-4": {
-          "type": "logo_image",
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-4": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
             "text_label": "Sustainable",
@@ -126,46 +126,43 @@
         }
       },
       "block_order": [
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-1",
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-2",
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-3",
-        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-logo_image-4"
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-1",
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-2",
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-3",
+        "template--15283893731389__39d20f8e-c5ee-4208-a519-6e172591f7e9-image-4"
       ],
       "settings": {
-        "background_color": "#ffffff",
-        "text_color": "#121212",
-        "images_per_row": 4
       }
     },
     "48017b3d-2927-419a-8b96-746a8881f3ba": {
       "type": "image-list",
       "blocks": {
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-1": {
-          "type": "logo_image",
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-1": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
             "text_label": "Soy Ink",
             "link": ""
           }
         },
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-2": {
-          "type": "logo_image",
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-2": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
             "text_label": "Organic",
             "link": ""
           }
         },
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-3": {
-          "type": "logo_image",
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-3": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
             "text_label": "100% Recyclable",
             "link": ""
           }
         },
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-4": {
-          "type": "logo_image",
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-4": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
             "text_label": "Vegan Certified",
@@ -174,46 +171,43 @@
         }
       },
       "block_order": [
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-1",
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-2",
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-3",
-        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-logo_image-4"
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-1",
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-2",
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-3",
+        "template--15283893731389__48017b3d-2927-419a-8b96-746a8881f3ba-image-4"
       ],
       "settings": {
-        "background_color": "#ffffff",
-        "text_color": "#121212",
-        "images_per_row": 4
       }
     },
     "eb6f1049-92f2-45bb-8c23-3d9878c665bc": {
       "type": "image-list",
       "blocks": {
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-1": {
-          "type": "logo_image",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-1": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
             "text_label": "Ethically Sourced",
             "link": ""
           }
         },
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-2": {
-          "type": "logo_image",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-2": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
             "text_label": "Outstanding Reviews",
             "link": ""
           }
         },
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-3": {
-          "type": "logo_image",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-3": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
             "text_label": "Cliphair Reviews",
             "link": ""
           }
         },
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-4": {
-          "type": "logo_image",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-4": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
             "text_label": "Free Delivery & Returns",
@@ -221,7 +215,7 @@
           }
         },
         "dde6965d-7f57-4c8d-9800-8c1a82267348": {
-          "type": "logo_image",
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
             "text_label": "Buy Now Pay Later",
@@ -230,16 +224,13 @@
         }
       },
       "block_order": [
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-1",
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-2",
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-3",
-        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-logo_image-4",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-1",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-2",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-3",
+        "template--15283893731389__eb6f1049-92f2-45bb-8c23-3d9878c665bc-image-4",
         "dde6965d-7f57-4c8d-9800-8c1a82267348"
       ],
       "settings": {
-        "background_color": "#bda6c2",
-        "text_color": "#ffffff",
-        "images_per_row": 5
       }
     }
   },
