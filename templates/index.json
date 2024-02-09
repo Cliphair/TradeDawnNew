@@ -17,7 +17,7 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "accent-4",
+            "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
         },
@@ -35,7 +35,7 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "accent-4",
+            "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
         },
@@ -53,7 +53,7 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "accent-4",
+            "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
         }
@@ -102,8 +102,8 @@
         "div3"
       ],
       "settings": {
-        "background_color": "#f0f0f0",
-        "text_color": "#000000"
+        "background_color": "#ededed",
+        "text_color": "#121212"
       }
     },
     "fa403c60-2db5-49a7-86e9-d40d37498baa": {
@@ -126,7 +126,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "background-faded-blue",
+        "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -171,7 +171,7 @@
         "hide_card_arrow": true,
         "columns_desktop": 5,
         "swipe_on_desktop": true,
-        "color_scheme": "background-faded-blue",
+        "color_scheme": "accent-1",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -202,7 +202,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "background-2",
+        "color_scheme": "accent-2",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
@@ -245,8 +245,8 @@
         "heading_size": "h1",
         "text_allignment": "center",
         "image_ratio": "portrait",
-        "color_scheme": "background-2",
-        "button_style_secondary": false,
+        "color_scheme": "accent-2",
+        "button_style_secondary": true,
         "show_information": false,
         "columns_desktop": 3,
         "swipe_on_desktop": false,
