@@ -172,7 +172,7 @@
       "accent-1": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "linear-gradient(165deg,#fff 30%, #a5f3fc30 50%,#fff 70%)",
+          "background_gradient": "linear-gradient(165deg,#fff 30%, #a5f3fc20 50%,#fff 70%)",
           "headers": "#2d2f76",
           "text": "#121212",
           "button": "#ba69a1",
