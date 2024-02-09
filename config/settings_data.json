@@ -7,7 +7,7 @@
     "heading_scale": 100,
     "type_body_font": "futura_n3",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1600,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 40,
     "spacing_grid_vertical": 40,
@@ -189,7 +189,7 @@
           "text": "#121212",
           "button": "#ba69a1",
           "button_label": "#ffffff",
-          "secondary_button_label": "#ba69a1",
+          "secondary_button_label": "#121212",
           "shadow": "#ba69a1"
         }
       },
@@ -284,7 +284,7 @@
           "headers": "#ffffff",
           "text": "#ffffff",
           "button": "#ba69a1",
-          "button_label": "#fff",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ba69a1",
           "shadow": "#ba69a1"
         }
