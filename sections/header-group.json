@@ -53,7 +53,7 @@
         "show_line_separator": true,
         "show_icon_arrow": false,
         "color_scheme": "background-faded-blue",
-        "menu_color_scheme": "",
+        "menu_color_scheme": "background-faded-blue",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "mobile_logo_position": "center",
