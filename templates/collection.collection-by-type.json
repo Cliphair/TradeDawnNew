@@ -17,15 +17,15 @@
           "settings": {
           }
         },
-        "37334cfe-2d73-48a6-8e55-1f85db600a25": {
-          "type": "product-type",
+        "length_YQGWqK": {
+          "type": "length",
           "settings": {
           }
         }
       },
       "block_order": [
         "5c39b4ef-b204-4a4a-8a10-eebe8e8bd649",
-        "37334cfe-2d73-48a6-8e55-1f85db600a25"
+        "length_YQGWqK"
       ],
       "settings": {
         "color_scheme": "background-1",
@@ -42,7 +42,7 @@
         "image_shape": "default",
         "show_secondary_image": false,
         "colour_as_title": true,
-        "show_type": true,
+        "show_type": false,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
