@@ -581,7 +581,7 @@
         "columns_desktop": 3,
         "swipe_on_desktop": true,
         "color_scheme": "accent-1",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
