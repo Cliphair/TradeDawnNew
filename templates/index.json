@@ -246,7 +246,7 @@
         "text_allignment": "center",
         "image_ratio": "portrait",
         "color_scheme": "accent-2",
-        "button_style_secondary": true,
+        "button_style_secondary": false,
         "show_information": false,
         "columns_desktop": 3,
         "swipe_on_desktop": false,
