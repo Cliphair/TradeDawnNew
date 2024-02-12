@@ -453,7 +453,7 @@
         "title": "<strong>THE CLIPHAIR QUALITY PROMISE<\/strong>",
         "introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat.<br\/> <br\/>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat. Dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat. <\/p>",
         "heading_size": "h1",
-        "text_allignment": "center",
+        "text_allignment": "left",
         "image_ratio": "adapt",
         "color_scheme": "accent-4",
         "slider_visual": "dots",
