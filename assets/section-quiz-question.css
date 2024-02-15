@@ -102,6 +102,10 @@
   padding-left: 0;
 }
 
+.section-quiz-question .button-wrapper{
+  margin-top:0;
+}
+
 .section-quiz-question .answer-card h3 {
   width: 100%;
   max-width:unset;
@@ -189,6 +193,10 @@
 .quiz .answer-wrapper .text-wrapper h3:hover a {
   color: rgb(var(--color-link));
   text-decoration-thickness: 0.2rem;
+}
+
+.quiz .answer-wrapper .button-wrapper{
+  margin-top:0;
 }
 
 .quiz .answer-wrapper .button-wrapper a.button {
