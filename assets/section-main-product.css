@@ -1617,13 +1617,80 @@ a.product__text {
 }
 
 /* Style Overrides */
-/* payment services on-site messaging block */
-.price-block+.payment_services {
+
+.price-block+.payment_services,
+.price-block+.yotpo-widget-instance {
   margin-top: -1.5rem;
 }
 
+/* payment services block */
 .payment_services~square-placement {
   margin-top: 15px !important;
+}
+
+klarna-placement::part(osm-message),
+klarna-placement::part(osm-cta),
+klarna-placement::part(osm-legal) {
+  font-size: 12px;
+  letter-spacing: 0.06rem;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+klarna-placement::part(osm-legal) {
+  margin: 0;
+}
+
+klarna-placement::part(osm-badge-container) {
+  background: rgb(255, 179, 199);
+}
+
+klarna-placement,
+.clearpay-placement {
+  border: 1px solid #eae7e4;
+  padding: 10px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.clearpay-placement {
+  margin-top: 10px;
+}
+
+/* payment icons */
+.payment-methods-flags {
+  margin: 15px 0;
+}
+
+.payment-methods-flags ul {
+  padding: 0;
+  list-style: none;
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (min-width:768px) {
+  .payment-methods-flags ul {
+    justify-content: flex-start;
+  }
+}
+
+.payment-methods-flags ul li svg {
+  filter: grayscale(1);
+}
+
+@media screen and (max-width:320px) {
+  .payment-methods-flags ul {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
 }
 
 /* product subtitle block */

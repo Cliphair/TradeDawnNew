@@ -99,13 +99,32 @@
               {% endif %}
             {%- when 'payment_services' -%}
               <div class="payment_services">
-                <!-- Placement v2 -->
-                <klarna-placement
-                  data-key="credit-promotion-badge"
-                  data-locale="en-GB"
-                  data-purchase-amount="{{ product.selected_or_first_available_variant.price }}"
-                ></klarna-placement>
-                <!-- end Placement -->
+                <div class="klarna-pacement">
+                  <!-- Placement v2 -->
+                  <klarna-placement
+                    data-key="credit-promotion-badge"
+                    data-locale="en-GB"
+                    data-purchase-amount="{{ product.selected_or_first_available_variant.price }}"
+                  ></klarna-placement>
+                  <!-- end Placement -->
+                </div>
+                <div class="clearpay-placement">
+                  <div id="clearpay"></div>
+                </div>
+
+                <div class="payment-methods-flags">
+                  <ul>
+                    {% assign enabled_payment_types = 'master,visa,paypal,apple_pay,shopify_pay,google_pay,american_express'
+                      | remove: ' '
+                      | split: ','
+                    %}
+                    {%- for type in enabled_payment_types -%}
+                      <li class="list-payment__item">
+                        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
               </div>
             {%- when 'order_deadline' -%}
               <div class="order_deadline">
@@ -967,7 +986,7 @@
     },
     {
       "type": "payment_services",
-      "name": "Payment on-site messaging",
+      "name": "Payment services",
       "limit": 1
     },
     {
