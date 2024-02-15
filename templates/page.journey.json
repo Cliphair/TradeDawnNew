@@ -194,7 +194,7 @@
         "color_scheme": "",
         "button_style_secondary": false,
         "show_information": true,
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "swipe_on_desktop": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
