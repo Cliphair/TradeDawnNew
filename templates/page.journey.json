@@ -167,7 +167,7 @@
           "type": "answer",
           "settings": {
             "id": "clip-in",
-            "answer": "Clip-Ins ( DIY product)",
+            "answer": "Clip-Ins (DIY product)",
             "answer_image": "shopify:\/\/shop_images\/Clip_In_af2b4728-f605-44a7-83a7-543c895d4e9d.jpg"
           }
         },
@@ -175,7 +175,7 @@
           "type": "answer",
           "settings": {
             "id": "permanent",
-            "answer": "Permanent (needs professional application)",
+            "answer": "Permanent (professional application)",
             "answer_image": "shopify:\/\/shop_images\/permanent_extensions_1df2bd0b-6854-40f9-8184-26400c592c9e.jpg"
           }
         }
