@@ -2,13 +2,68 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+        "show_title": true,
+        "heading_size": "h2",
+        "show_content": true,
+        "text_alignment": "center",
+        "color_scheme": "",
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "quiz_question_jkayw4": {
+      "type": "quiz-question",
+      "blocks": {
+        "answer_NtqBp8": {
+          "type": "answer",
+          "settings": {
+            "id": "thin",
+            "answer": "Thin\/Fine"
+          }
+        },
+        "answer_EmNq4A": {
+          "type": "answer",
+          "settings": {
+            "id": "medium",
+            "answer": "Medium\/Average Thickness"
+          }
+        },
+        "answer_QrN6fM": {
+          "type": "answer",
+          "settings": {
+            "id": "thick",
+            "answer": "Thick to Very Thick"
+          }
+        }
+      },
+      "block_order": [
+        "answer_NtqBp8",
+        "answer_EmNq4A",
+        "answer_QrN6fM"
+      ],
+      "settings": {
+        "id": "journey",
+        "page": "journey",
+        "question": "What is your hair type?",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "square",
+        "color_scheme": "",
+        "button_style_secondary": false,
+        "show_information": true,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "quiz_question_jkayw4"
   ]
 }
