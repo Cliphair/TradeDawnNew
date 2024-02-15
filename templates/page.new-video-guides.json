@@ -99,12 +99,24 @@
             "button_label": "Ultra-Volume - View Collection",
             "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
           }
+        },
+        "video_JVTDq4": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ritVrGKljKs",
+            "cover_image": "shopify:\/\/shop_images\/5_3c16a6ab-2032-4303-ba34-c39dfd1888d6.jpg",
+            "description": "HOW TO APPLY CURLY CLIP-INS?",
+            "title": "HOW TO APPLY CURLY CLIP-INS?",
+            "button_label": "Curly - View Collection",
+            "link": "shopify:\/\/collections\/curly-clip-in-hair-extensions"
+          }
         }
       },
       "block_order": [
         "video_p3DWak",
         "video_RjznNa",
-        "video_qwfp6w"
+        "video_qwfp6w",
+        "video_JVTDq4"
       ],
       "settings": {
         "type": "apply-style",
@@ -114,7 +126,7 @@
         "introduction": "<p>Hi, first day? Don't worry, you won't be the new kid for too long. This is your Glam Handbook: tutorials, hairstyle ideas, and more... All in one place.<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
         "text_allignment": "center",
         "image_ratio": "portrait",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "color_scheme": "accent-1",
         "button_style_secondary": false,
         "columns_mobile": "2",
