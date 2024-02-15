@@ -104,7 +104,9 @@
 
 .section-quiz-question .answer-card h3 {
   width: 100%;
+  max-width:unset;
   box-sizing: border-box;
+  margin-top:0;
 }
 
 .section-quiz-question .answer-card h3:hover {
@@ -191,6 +193,8 @@
 
 .quiz .answer-wrapper .button-wrapper a.button {
   width: 100%;
+  max-width:unset;
+  margin-top:0;
 }
 
 .quiz .answer-wrapper .accordion {
