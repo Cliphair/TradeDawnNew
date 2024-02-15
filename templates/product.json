@@ -141,16 +141,16 @@
         "padding_bottom": 28
       }
     },
-    "cb0bf916-3e7b-44a5-bee5-ef9302e54a26": {
-      "type": "yotpo-review-app",
+    "506f6558-7efd-4e91-a56a-75b4a46d81cc": {
+      "type": "frequently-bought-together-app",
       "settings": {
         "container_color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "506f6558-7efd-4e91-a56a-75b4a46d81cc": {
-      "type": "frequently-bought-together-app",
+    "cb0bf916-3e7b-44a5-bee5-ef9302e54a26": {
+      "type": "yotpo-review-app",
       "settings": {
         "container_color_scheme": "",
         "padding_top": 36,
@@ -344,8 +344,8 @@
   "order": [
     "main",
     "related-products",
-    "cb0bf916-3e7b-44a5-bee5-ef9302e54a26",
     "506f6558-7efd-4e91-a56a-75b4a46d81cc",
+    "cb0bf916-3e7b-44a5-bee5-ef9302e54a26",
     "2ba62760-f7d7-46c5-ae93-8ade6e208816",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
