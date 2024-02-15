@@ -119,7 +119,7 @@
         "video_JVTDq4"
       ],
       "custom_css": [
-        ".deferred-media__poster-button{color:white;}"
+        ".deferred-media__poster-button {color: white;}"
       ],
       "settings": {
         "type": "apply-style",
@@ -129,7 +129,7 @@
         "introduction": "<p>Hi, first day? Don't worry, you won't be the new kid for too long. This is your Glam Handbook: tutorials, hairstyle ideas, and more... All in one place.<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
         "text_allignment": "center",
         "image_ratio": "portrait",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "color_scheme": "accent-1",
         "button_style_secondary": false,
         "columns_mobile": "2",
