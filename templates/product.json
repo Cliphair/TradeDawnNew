@@ -14,13 +14,14 @@
           "settings": {
           }
         },
-        "price": {
-          "type": "price",
+        "3efc918c-8182-4ef3-bc33-60a83ed7ef86": {
+          "type": "short-description",
           "settings": {
+            "title": "Features"
           }
         },
-        "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
-          "type": "payment_services",
+        "price": {
+          "type": "price",
           "settings": {
           }
         },
@@ -33,12 +34,6 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "dropdown"
-          }
-        },
-        "3efc918c-8182-4ef3-bc33-60a83ed7ef86": {
-          "type": "short-description",
-          "settings": {
-            "title": "Features"
           }
         },
         "buy_buttons": {
@@ -54,6 +49,11 @@
           "type": "share",
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
+          "type": "payment_services",
+          "settings": {
           }
         },
         "collapsible-row-0": {
@@ -90,13 +90,13 @@
       "block_order": [
         "title",
         "b7b87992-8206-4a9f-83f6-2f9ec8cfe139",
+        "3efc918c-8182-4ef3-bc33-60a83ed7ef86",
         "price",
-        "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "a0b50969-ea33-4844-941d-db5577728e55",
         "variant_picker",
-        "3efc918c-8182-4ef3-bc33-60a83ed7ef86",
         "buy_buttons",
         "share",
+        "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2"
