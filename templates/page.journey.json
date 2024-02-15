@@ -94,6 +94,9 @@
         "answer_hCExC3",
         "answer_99rqHW"
       ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.slider {justify-content: center; }}"
+      ],
       "settings": {
         "id": "journey",
         "page": "journey",
@@ -104,7 +107,7 @@
         "color_scheme": "accent-2",
         "button_style_secondary": false,
         "show_information": true,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "swipe_on_desktop": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -184,6 +187,9 @@
         "answer_Nacie8",
         "answer_aCkDFB"
       ],
+      "custom_css": [
+        "@media screen and (min-width:990px){.slider{justify-content:center; }}"
+      ],
       "settings": {
         "id": "journey",
         "page": "journey",
@@ -194,7 +200,7 @@
         "color_scheme": "accent-2",
         "button_style_secondary": false,
         "show_information": true,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "swipe_on_desktop": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
