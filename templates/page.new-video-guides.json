@@ -242,6 +242,116 @@
             "button_label": "Seamless - View Collection",
             "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
           }
+        },
+        "video_WRNiAh": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=-ZKiF2oiVvg",
+            "cover_image": "shopify:\/\/shop_images\/19_5d0ed650-1be5-4990-a997-c3c6cc7acf61.jpg",
+            "description": "FRENCH BRAID USING CLIP-INS",
+            "title": "FRENCH BRAID USING CLIP-INS",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
+        },
+        "video_wAXMGp": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_dvsCrIL3o8",
+            "cover_image": "shopify:\/\/shop_images\/20_2d7a2b14-9fe0-4cb8-bd1e-9eb4268a0762.jpg",
+            "description": "SLEEK PONYTAIL IN SECONDS",
+            "title": "SLEEK PONYTAIL IN SECONDS",
+            "button_label": "ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_eapmbL": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=m7-k071PqVE",
+            "cover_image": "shopify:\/\/shop_images\/21_6572579d-a8d5-45aa-af9b-3927fe9569f3.jpg",
+            "description": "CURLING WITH A STRAIGHTENER",
+            "title": "CURLING WITH A STRAIGHTENER",
+            "button_label": "Double Weft - View Collection",
+            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+          }
+        },
+        "video_3p4KJr": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=cQQ8LEfdla8",
+            "cover_image": "shopify:\/\/shop_images\/22_e821e452-4b57-48aa-a9ef-f1ec554336e3.jpg",
+            "description": "WAVEY HAIR",
+            "title": "WAVEY HAIR",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_ikUA6Y": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=TIGcC6evz3w",
+            "cover_image": "shopify:\/\/shop_images\/23_559c2e65-daf0-46bb-a84f-dd5814661cba.jpg",
+            "description": "PONYTAIL & SEAMLESS 2 GYM HAIRSTYLES",
+            "title": "PONYTAIL & SEAMLESS 2 GYM HAIRSTYLES",
+            "button_label": "Ponytail & Seamless - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-hair-extensions"
+          }
+        },
+        "video_fDzqcQ": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=3Dqs0IRVX3Y",
+            "cover_image": "shopify:\/\/shop_images\/24_27438040-c548-4846-900d-81e6faf6bc40.jpg",
+            "description": "VOLUME USING CLIP-INS",
+            "title": "VOLUME USING CLIP-INS",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
+        },
+        "video_pyeiHV": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Jl1X6b3U_ms",
+            "cover_image": "shopify:\/\/shop_images\/25_36c2f097-998c-48f8-811a-03c7943bfd13.jpg",
+            "description": "BABY BRAID",
+            "title": "BABY BRAID",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_kVLnyr": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=TUDSUj960ac",
+            "cover_image": "shopify:\/\/shop_images\/26_29db3bd8-9cdc-4ee6-919a-e4e9cad095be.jpg",
+            "description": "SIDE PART HALF UP STYLE",
+            "title": "SIDE PART HALF UP STYLE",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_f9CtBw": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=54KbBA5FmcY",
+            "cover_image": "shopify:\/\/shop_images\/28_9cdb3b59-018c-4527-8cda-4158eb953363.jpg",
+            "description": "PERMANENT APPLICATION",
+            "title": "PERMANENT APPLICATION",
+            "button_label": "Nano Ring - View Collection",
+            "link": "shopify:\/\/collections\/nano-rings-hair-extensions"
+          }
+        },
+        "video_dcrNf7": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=OFb55rO7pBc",
+            "cover_image": "shopify:\/\/shop_images\/29_080f53ff-6fd4-45e1-ba46-b884d8ac3f65.jpg",
+            "description": "HOW TO ADD DARKER TONES?",
+            "title": "HOW TO ADD DARKER TONES?",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
         }
       },
       "block_order": [
@@ -260,7 +370,17 @@
         "video_M8TeQj",
         "video_8U4UfA",
         "video_cYtQMm",
-        "video_rhjF7h"
+        "video_rhjF7h",
+        "video_WRNiAh",
+        "video_wAXMGp",
+        "video_eapmbL",
+        "video_3p4KJr",
+        "video_ikUA6Y",
+        "video_fDzqcQ",
+        "video_pyeiHV",
+        "video_kVLnyr",
+        "video_f9CtBw",
+        "video_dcrNf7"
       ],
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
