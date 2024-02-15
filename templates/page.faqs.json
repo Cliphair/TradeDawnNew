@@ -9,7 +9,7 @@
         "text_alignment": "center",
         "color_scheme": "background-grey",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c": {
@@ -69,7 +69,7 @@
         "1a970fc7-b7ea-46ef-939a-06727238e688"
       ],
       "settings": {
-        "heading": "Quality of our Hair Extensions",
+        "heading": "QUALITY OF OUR HAIR EXTENSIONS",
         "heading_size": "h2",
         "heading_alignment": "left",
         "arrow_style": "half-arrow",
@@ -147,7 +147,7 @@
         "c049d401-cc26-4148-ba66-792b407905c9"
       ],
       "settings": {
-        "heading": "Clip in Hair Extensions",
+        "heading": "CLIP IN HAIR EXTENSIONS",
         "heading_size": "h2",
         "heading_alignment": "left",
         "arrow_style": "half-arrow",
@@ -215,7 +215,7 @@
         "02822dce-be53-4899-bf2b-0099823b514c"
       ],
       "settings": {
-        "heading": "Care and Usage",
+        "heading": "CARE & USAGE OF OUR HAIR EXTENSIONS",
         "heading_size": "h2",
         "heading_alignment": "left",
         "arrow_style": "half-arrow",
@@ -293,11 +293,11 @@
         "0599d527-e85b-4ce1-b4c8-49a7d1222a68"
       ],
       "settings": {
-        "heading": "Shipping and returns",
+        "heading": "SHIPPING & RETURNS",
         "heading_size": "h2",
         "heading_alignment": "left",
         "arrow_style": "half-arrow",
-        "color_scheme": "accent-1",
+        "color_scheme": "background-grey",
         "open_first_collapsible_row": false,
         "faq_schema": false,
         "padding_top": 36,
@@ -321,7 +321,7 @@
         "template--15448673845309__a2bc4d53-7d95-420d-a75b-22a6e0e9aa97-collapsible_row-1"
       ],
       "settings": {
-        "heading": "Trade Enquiries",
+        "heading": "CLIPHAIR TRADE ENQUIRIES",
         "heading_size": "h2",
         "heading_alignment": "left",
         "arrow_style": "half-arrow",
