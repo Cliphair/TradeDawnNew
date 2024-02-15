@@ -110,13 +110,145 @@
             "button_label": "Curly - View Collection",
             "link": "shopify:\/\/collections\/curly-clip-in-hair-extensions"
           }
+        },
+        "video_6q8pJ8": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=wTA95Beg698",
+            "cover_image": "shopify:\/\/shop_images\/6_22b0ec82-7510-4371-a594-19b4cabc62bd.jpg",
+            "description": "HOW TO ADD VOLUME?",
+            "title": "HOW TO ADD VOLUME?",
+            "button_label": "Quad Weft - View Collection",
+            "link": "shopify:\/\/collections\/quad-weft-hair-extensions"
+          }
+        },
+        "video_9rCWtT": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=JpdOH9psWCE",
+            "cover_image": "shopify:\/\/shop_images\/7_5f74286e-eecd-4def-b001-60fff915f732.jpg",
+            "description": "HOW TO MAKE CLIP-INS LOOK NATURAL?",
+            "title": "HOW TO MAKE CLIP-INS LOOK NATURAL?",
+            "button_label": "Ultra-Volume- View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
+        },
+        "video_bDwnBt": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=S5gpQ1ewxKU",
+            "cover_image": "shopify:\/\/shop_images\/8_3835d698-e76e-424a-b521-ce99f1782d75.jpg",
+            "description": "FLICKED UP 90’S PONYTAIL",
+            "title": "FLICKED UP 90’S PONYTAIL",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_pgjqVX": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=y7dNbq2fgj4",
+            "cover_image": "shopify:\/\/shop_images\/9_edc38423-5778-4fe2-8d77-41f803eea4ff.jpg",
+            "description": "HOW TO APPLY CLIP-INS – BLUNT BOB EDITION?",
+            "title": "HOW TO APPLY CLIP-INS – BLUNT BOB EDITION?",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_RAEtDd": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=bytqAHMlk9I",
+            "cover_image": "shopify:\/\/shop_images\/10_88704fc9-fcdd-4cbb-8c23-5659a5b5a4ff.jpg",
+            "description": "BIG BOUNCY PIN CURLS",
+            "title": "BIG BOUNCY PIN CURLS",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
+        },
+        "video_zNQyLR": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=D5ZQDcTSypo",
+            "cover_image": "shopify:\/\/shop_images\/11_0281d1c1-fe57-413f-b5db-7fb4b9043517.jpg",
+            "description": "PIN CURLS USING CLIP-INS",
+            "title": "PIN CURLS USING CLIP-INS",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_ewGFBR": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=keaFT5tFmGg",
+            "cover_image": "shopify:\/\/shop_images\/12_a99bb7b7-ecf6-4deb-8072-90f5a4daa1b4.jpg",
+            "description": "BEACHY WAVES",
+            "title": "BEACHY WAVES",
+            "button_label": "Double Weft - View Collection",
+            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+          }
+        },
+        "video_g8zqNU": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=1DbsxjJtAic",
+            "cover_image": "shopify:\/\/shop_images\/13_121108cd-0dfe-4fb1-8896-f88591424672.jpg",
+            "description": "SIDE PART PONYTAIL",
+            "title": "SIDE PART PONYTAIL",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_M8TeQj": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=5MqsTgA1Hlw",
+            "cover_image": "shopify:\/\/shop_images\/15_daeb71c0-1bd6-47b9-bf13-026fb8fdfe92.jpg",
+            "description": "2 PONYTAIL HAIRSTYLES",
+            "title": "2 PONYTAIL HAIRSTYLES",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_8U4UfA": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=-xhZ9-EkqKs",
+            "cover_image": "shopify:\/\/shop_images\/16_0aef26ad-25e4-4fa7-bc46-36e8530ba384.jpg",
+            "description": "BRAID IN SECONDS",
+            "title": "BRAID IN SECONDS",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_cYtQMm": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ioKZwL5aUWE",
+            "cover_image": "shopify:\/\/shop_images\/17_0c6726db-f329-454d-bb68-9f6d945549b0.jpg",
+            "description": "GRWM USING CLIP-INS",
+            "title": "GRWM USING CLIP-INS",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
         }
       },
       "block_order": [
         "video_p3DWak",
         "video_RjznNa",
         "video_qwfp6w",
-        "video_JVTDq4"
+        "video_JVTDq4",
+        "video_6q8pJ8",
+        "video_9rCWtT",
+        "video_bDwnBt",
+        "video_pgjqVX",
+        "video_RAEtDd",
+        "video_zNQyLR",
+        "video_ewGFBR",
+        "video_g8zqNU",
+        "video_M8TeQj",
+        "video_8U4UfA",
+        "video_cYtQMm"
       ],
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
