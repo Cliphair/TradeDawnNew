@@ -111,11 +111,103 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "quiz_question_4agX9E": {
+      "type": "quiz-question",
+      "blocks": {
+        "answer_jwdXWJ": {
+          "type": "answer",
+          "settings": {
+            "id": "length",
+            "answer": "Add Length"
+          }
+        },
+        "answer_BgKN9A": {
+          "type": "answer",
+          "settings": {
+            "id": "volume",
+            "answer": "Add Volume"
+          }
+        },
+        "answer_pKrFXz": {
+          "type": "answer",
+          "settings": {
+            "id": "length-volume",
+            "answer": "Add Length & Volume"
+          }
+        }
+      },
+      "block_order": [
+        "answer_jwdXWJ",
+        "answer_BgKN9A",
+        "answer_pKrFXz"
+      ],
+      "settings": {
+        "id": "journey",
+        "page": "journey",
+        "question": "What are your hair extension goals?",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "square",
+        "color_scheme": "",
+        "button_style_secondary": false,
+        "show_information": true,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quiz_question_nHUaJd": {
+      "type": "quiz-question",
+      "blocks": {
+        "answer_Nacie8": {
+          "type": "answer",
+          "settings": {
+            "id": "clip-in",
+            "answer": "Clip-Ins ( DIY product)",
+            "answer_image": "shopify:\/\/shop_images\/Clip_In_af2b4728-f605-44a7-83a7-543c895d4e9d.jpg"
+          }
+        },
+        "answer_aCkDFB": {
+          "type": "answer",
+          "settings": {
+            "id": "permanent",
+            "answer": "Permanent (needs professional application)",
+            "answer_image": "shopify:\/\/shop_images\/permanent_extensions_1df2bd0b-6854-40f9-8184-26400c592c9e.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "answer_Nacie8",
+        "answer_aCkDFB"
+      ],
+      "settings": {
+        "id": "journey",
+        "page": "journey",
+        "question": "Do you want Clip-ins or Permanent extensions?",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "color_scheme": "",
+        "button_style_secondary": false,
+        "show_information": true,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "quiz_question_jkayw4",
-    "quiz_question_6XeMep"
+    "quiz_question_6XeMep",
+    "quiz_question_4agX9E",
+    "quiz_question_nHUaJd"
   ]
 }
