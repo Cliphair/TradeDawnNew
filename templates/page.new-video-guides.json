@@ -64,43 +64,6 @@
         "padding_bottom": 0
       }
     },
-    "tutorials_iwjnLk": {
-      "type": "tutorials",
-      "blocks": {
-        "video_3Va7xf": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=Qv3JPsPQpw8",
-            "cover_image": "shopify:\/\/shop_images\/62_1aa4917f-66e9-4155-9c3a-b2b82839933f.jpg",
-            "description": "GIGI HADID BABY BRAIDS",
-            "title": "GIGI HADID BABY BRAIDS",
-            "button_label": "Seamless - View Collection",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_3Va7xf"
-      ],
-      "custom_css": [
-        ".deferred-media__poster-button {color: white;}"
-      ],
-      "settings": {
-        "type": "celebrity",
-        "banner": "shopify:\/\/shop_images\/celebrity-min.jpg",
-        "title": "Celebrity",
-        "heading_size": "h1",
-        "introduction": "<p>That new Kardashian platinum blonde? Check. Ariana Grande's iconic ponytail? Check. Here you can find all of our celebrity content: from our weekly lookbook to whatever caught our eye at the latest Met Gala.<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
-        "text_allignment": "center",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "color_scheme": "accent-1",
-        "button_style_secondary": false,
-        "columns_mobile": "2",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "tutorials_pDW6YK": {
       "type": "tutorials",
       "blocks": {
@@ -1136,6 +1099,103 @@
         "padding_bottom": 36
       }
     },
+    "tutorials_iwjnLk": {
+      "type": "tutorials",
+      "blocks": {
+        "video_3Va7xf": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Qv3JPsPQpw8",
+            "cover_image": "shopify:\/\/shop_images\/62_1aa4917f-66e9-4155-9c3a-b2b82839933f.jpg",
+            "description": "GIGI HADID BABY BRAIDS",
+            "title": "GIGI HADID BABY BRAIDS",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_gzJMtV": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=sekMVDvPeTk",
+            "cover_image": "shopify:\/\/shop_images\/63_7aa39b76-3fe1-4569-9508-967fc7320626.jpg",
+            "description": "MADDY PEREZ PONY",
+            "title": "MADDY PEREZ PONY",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_4RXwgk": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=tE3bzej-P8w",
+            "cover_image": "shopify:\/\/shop_images\/64_a7856e0b-55ae-45c8-9ffa-4440b8329516.jpg",
+            "description": "MADDISON BEER BOW HALF UP",
+            "title": "MADDISON BEER BOW HALF UP",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_Lp4dwA": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=thCmEHYi8K4",
+            "cover_image": "shopify:\/\/shop_images\/66_2e08651f-675a-45dd-91ea-f9010977b0e7.jpg",
+            "description": "PARIS HILTON HALF UP",
+            "title": "PARIS HILTON HALF UP",
+            "button_label": "Ponytail & Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-hair-extensions"
+          }
+        },
+        "video_Qc86Dx": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=QovP6vxILJM",
+            "cover_image": "shopify:\/\/shop_images\/67_0e78c2b0-2252-4326-a8e8-be695a260fb0.jpg",
+            "description": "KYLIE JENNER SIDE PART HALF UP",
+            "title": "KYLIE JENNER SIDE PART HALF UP",
+            "button_label": "Seamless- View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_twyNAC": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=0oSNDQn8xpo",
+            "cover_image": "shopify:\/\/shop_images\/69_c43c2784-22de-45ec-95b9-8254596fd2d6.jpg",
+            "description": "WAVY HIGH PONY",
+            "title": "WAVY HIGH PONY",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        }
+      },
+      "block_order": [
+        "video_3Va7xf",
+        "video_gzJMtV",
+        "video_4RXwgk",
+        "video_Lp4dwA",
+        "video_Qc86Dx",
+        "video_twyNAC"
+      ],
+      "custom_css": [
+        ".deferred-media__poster-button {color: white;}"
+      ],
+      "settings": {
+        "type": "celebrity",
+        "banner": "shopify:\/\/shop_images\/celebrity-min.jpg",
+        "title": "Celebrity",
+        "heading_size": "h1",
+        "introduction": "<p>That new Kardashian platinum blonde? Check. Ariana Grande's iconic ponytail? Check. Here you can find all of our celebrity content: from our weekly lookbook to whatever caught our eye at the latest Met Gala.<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "accent-1",
+        "button_style_secondary": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "67a94c71-0b44-4f05-aa2f-594b1239edd9": {
       "type": "image-list",
       "blocks": {
@@ -1303,11 +1363,11 @@
   "order": [
     "main",
     "tutorials_filter_krcENH",
-    "tutorials_iwjnLk",
     "tutorials_pDW6YK",
     "tutorials_Kpgrwm",
     "tutorials_hDm6EF",
     "tutorials_p4iifm",
+    "tutorials_iwjnLk",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
