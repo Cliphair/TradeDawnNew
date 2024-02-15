@@ -231,6 +231,17 @@
             "button_label": "Ultra-Volume - View Collection",
             "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
           }
+        },
+        "video_rhjF7h": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=J-AJRoEIddU",
+            "cover_image": "shopify:\/\/shop_images\/18_a36cc199-09ef-4ff5-9442-d59e18fcee34.jpg",
+            "description": "SPACE\/BABY BUNS",
+            "title": "SPACE\/BABY BUNS",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
         }
       },
       "block_order": [
@@ -248,7 +259,8 @@
         "video_g8zqNU",
         "video_M8TeQj",
         "video_8U4UfA",
-        "video_cYtQMm"
+        "video_cYtQMm",
+        "video_rhjF7h"
       ],
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
