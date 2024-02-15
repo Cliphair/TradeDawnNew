@@ -95,7 +95,7 @@
         "answer_99rqHW"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.slider {justify-content: center; }}"
+
       ],
       "settings": {
         "id": "journey",
@@ -103,11 +103,11 @@
         "question": "What is your hair length?",
         "heading_size": "h1",
         "text_allignment": "center",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "color_scheme": "accent-2",
         "button_style_secondary": false,
         "show_information": true,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "swipe_on_desktop": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -188,7 +188,7 @@
         "answer_aCkDFB"
       ],
       "custom_css": [
-        "@media screen and (min-width:990px){.slider{justify-content:center; }}"
+        "@media screen and (min-width: 990px) {.slider {justify-content: center; }}"
       ],
       "settings": {
         "id": "journey",
@@ -196,11 +196,11 @@
         "question": "Do you want Clip-ins or Permanent extensions?",
         "heading_size": "h1",
         "text_allignment": "center",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "color_scheme": "accent-2",
         "button_style_secondary": false,
         "show_information": true,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "swipe_on_desktop": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
