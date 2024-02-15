@@ -5,7 +5,7 @@
       "settings": {
         "show_title": true,
         "heading_size": "h1",
-        "show_content": true,
+        "show_content": false,
         "text_alignment": "center",
         "color_scheme": "background-grey",
         "padding_top": 36,
