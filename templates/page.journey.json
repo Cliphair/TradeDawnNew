@@ -194,10 +194,27 @@
         "color_scheme": "",
         "button_style_secondary": false,
         "show_information": true,
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "swipe_on_desktop": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quiz_answer_YPArwe": {
+      "type": "quiz-answer",
+      "settings": {
+        "visible": false,
+        "id": "journey",
+        "title": "Your perfect match is...",
+        "message": "If you need help choosing the correct shade, let us help you with our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service\" title=\"colour match\">free colour match<\/a> service.",
+        "heading_size": "h1",
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "color_scheme": "",
+        "button_style_secondary": false,
+        "show_information": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -208,6 +225,7 @@
     "quiz_question_jkayw4",
     "quiz_question_6XeMep",
     "quiz_question_4agX9E",
-    "quiz_question_nHUaJd"
+    "quiz_question_nHUaJd",
+    "quiz_answer_YPArwe"
   ]
 }
