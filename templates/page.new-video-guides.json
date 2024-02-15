@@ -118,6 +118,9 @@
         "video_qwfp6w",
         "video_JVTDq4"
       ],
+      "custom_css": [
+        ".deferred-media__poster-button{color:white;}"
+      ],
       "settings": {
         "type": "apply-style",
         "banner": "shopify:\/\/shop_images\/webitse_apply_banner_1-min.jpg",
