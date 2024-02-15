@@ -2,29 +2,122 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "show_title": true,
-        "heading_size": "h2",
-        "show_content": true,
-        "text_alignment": "center",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "custom_page_f9hgAa": {
-      "type": "custom-page",
       "settings": {
         "show_title": true,
         "heading_size": "h1",
-        "title_alignment": "center",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "accent-4",
-        "list": "help",
-        "blog": "hair-blog",
-        "limit_articles": 3,
+        "show_content": false,
+        "text_alignment": "center",
+        "color_scheme": "background-grey",
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "tutorials_filter_krcENH": {
+      "type": "tutorials-filter",
+      "blocks": {
+        "link_LQVU6D": {
+          "type": "link",
+          "settings": {
+            "item": "APPLY & STYLE",
+            "target": "apply-style"
+          }
+        },
+        "link_zYzFcw": {
+          "type": "link",
+          "settings": {
+            "item": "TRANSFORMATIONS",
+            "target": "transformations"
+          }
+        },
+        "link_8iErzB": {
+          "type": "link",
+          "settings": {
+            "item": "CAMPAIGNS",
+            "target": "campaigns"
+          }
+        },
+        "link_9A8mgY": {
+          "type": "link",
+          "settings": {
+            "item": "BRIDAL",
+            "target": "bridal"
+          }
+        },
+        "link_EK7VjP": {
+          "type": "link",
+          "settings": {
+            "item": "CELEBRITY",
+            "target": "celebrity"
+          }
+        }
+      },
+      "block_order": [
+        "link_LQVU6D",
+        "link_zYzFcw",
+        "link_8iErzB",
+        "link_9A8mgY",
+        "link_EK7VjP"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "tutorials_pDW6YK": {
+      "type": "tutorials",
+      "blocks": {
+        "video_p3DWak": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=CVtt-E7i15I",
+            "cover_image": "shopify:\/\/shop_images\/2_d8cb5fea-e630-43a9-acec-4ff0d965ddc8.jpg",
+            "description": "BOW HALF-UP STYLE",
+            "title": "BOW HALF-UP STYLE",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
+        },
+        "video_RjznNa": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Aovf-ewaSeo",
+            "cover_image": "shopify:\/\/shop_images\/3_f39187c9-d77f-402b-9772-9eae2235f8ee.jpg",
+            "description": "BRAIDED HALF-UP STYLE",
+            "title": "BRAIDED HALF-UP STYLE",
+            "button_label": "Seamless - View Collection",
+            "link": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair"
+          }
+        },
+        "video_qwfp6w": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Zsf0KMLS2d8",
+            "cover_image": "shopify:\/\/shop_images\/4_cb777e33-1ea3-404d-9b8a-6b974728a494.jpg",
+            "description": "HOW TO APPLY CLIP-INS IN SHORTHAIR?",
+            "title": "HOW TO APPLY CLIP-INS IN SHORTHAIR?",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
+        }
+      },
+      "block_order": [
+        "video_p3DWak",
+        "video_RjznNa",
+        "video_qwfp6w"
+      ],
+      "settings": {
+        "type": "apply-style",
+        "banner": "shopify:\/\/shop_images\/webitse_apply_banner_1-min.jpg",
+        "title": "APPLY & STYLE",
+        "heading_size": "h1",
+        "introduction": "<p>Hi, first day? Don't worry, you won't be the new kid for too long. This is your Glam Handbook: tutorials, hairstyle ideas, and more... All in one place.<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "accent-1",
+        "button_style_secondary": false,
+        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -195,7 +288,8 @@
   },
   "order": [
     "main",
-    "custom_page_f9hgAa",
+    "tutorials_filter_krcENH",
+    "tutorials_pDW6YK",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
