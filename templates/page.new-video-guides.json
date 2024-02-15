@@ -64,162 +64,92 @@
         "padding_bottom": 0
       }
     },
-    "tutorials_Kpgrwm": {
+    "tutorials_hDm6EF": {
       "type": "tutorials",
       "blocks": {
-        "video_UUhR33": {
+        "video_PUFKjG": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=iAv86YIT7Wg",
-            "cover_image": "shopify:\/\/shop_images\/77_ac2d8a2f-e526-4b8d-9944-1474d000ca7e.jpg",
-            "description": "BOUNCY CURLS",
-            "title": "BOUNCY CURLS",
-            "button_label": "Double Weft - View Collection",
-            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=mG1IvhXEbHE",
+            "cover_image": "shopify:\/\/shop_images\/77_5e06700d-bc20-4743-9826-a5c0ef84285f.jpg",
+            "description": "EMBRACE THE RED - REDHEAD CAMPAIGN",
+            "title": "EMBRACE THE RED - REDHEAD CAMPAIGN",
+            "button_label": "View Campaign",
+            "link": "shopify:\/\/pages\/red-head-campaign-2022"
           }
         },
-        "video_7hqih9": {
+        "video_ntMebp": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=W7brdHylNpU",
-            "cover_image": "shopify:\/\/shop_images\/78_62a2da0c-edc2-412a-b2ab-c32e9ea01907.jpg",
-            "description": "RETRO PONY",
-            "title": "RETRO PONY",
-            "button_label": "Ponytail - View Collection",
-            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=tv2PGEwEFOo",
+            "cover_image": "shopify:\/\/shop_images\/75_dcfef562-568c-44ed-9442-d905a0208d8d.jpg",
+            "description": "EMBRACE THE RED BTS",
+            "title": "EMBRACE THE RED BTS",
+            "button_label": "View Campaign",
+            "link": "shopify:\/\/pages\/red-head-campaign-2022"
           }
         },
-        "video_GVpkex": {
+        "video_VpdT9L": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=QYi14vXaHck",
-            "cover_image": "shopify:\/\/shop_images\/79_e54db57a-46ec-4620-8ec1-754a51eb1f49.jpg",
-            "description": "SOFT WAVES",
-            "title": "SOFT WAVES",
-            "button_label": "Tape-In - View Collection",
-            "link": "shopify:\/\/collections\/tape-in-hair-extensions"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=0_DhxLoNr7A",
+            "cover_image": "shopify:\/\/shop_images\/72_c8ec1b7f-7c13-47d0-9632-7165ab07ec70.jpg",
+            "description": "THE STRAIGHT UP PONYTAIL BTS",
+            "title": "THE STRAIGHT UP PONYTAIL BTS",
+            "button_label": "",
+            "link": ""
           }
         },
-        "video_Rd8en3": {
+        "video_9YJ7p3": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=v1v8ClRVFJI",
-            "cover_image": "shopify:\/\/shop_images\/80_ac6f7892-3ac1-4b68-a5cc-1266da5f5b3e.jpg",
-            "description": "BOUNCY CURLS",
-            "title": "BOUNCY CURLS",
-            "button_label": "Ultra-Volume - View Collection",
-            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=gCxPfiK-P6w",
+            "cover_image": "shopify:\/\/shop_images\/76_104f5dde-e138-458b-86eb-cc46c00a687c.jpg",
+            "description": "CLIPHAIR REDHEAD CAMPAIGN",
+            "title": "CLIPHAIR REDHEAD CAMPAIGN",
+            "button_label": "View Campaign",
+            "link": "shopify:\/\/pages\/red-head-campaign-2022"
           }
         },
-        "video_PaARUm": {
+        "video_KUHFgR": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=oTFAz9NPlH8",
-            "cover_image": "shopify:\/\/shop_images\/81_1921ee25-8265-429d-bb4d-06bf1bf2ce8e.jpg",
-            "description": "INSTANT LENGTH",
-            "title": "INSTANT LENGTH",
-            "button_label": "Ponytail - View Collection",
-            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=xJFOWBTni3Y",
+            "cover_image": "shopify:\/\/shop_images\/79_fe08d38d-30ab-432d-a1e8-38abb72ed89e.jpg",
+            "description": "BRIDAL BTS SAY YES TO CLIPHAIR",
+            "title": "BRIDAL BTS SAY YES TO CLIPHAIR",
+            "button_label": "View Campaign",
+            "link": "\/pages\/2022-cliphair-bridal-hair-extensions"
           }
         },
-        "video_bNiXJe": {
+        "video_4RdLe3": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=bGCdSp6buyE",
-            "cover_image": "shopify:\/\/shop_images\/82_7d7c1c65-7495-4153-8dba-84191877be2e.jpg",
-            "description": "MIXING SHADES",
-            "title": "MIXING SHADES",
-            "button_label": "Nano Ring - View Collection",
-            "link": "shopify:\/\/collections\/nano-rings-hair-extensions"
-          }
-        },
-        "video_RHwcHy": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=3uSK9fJpYJw",
-            "cover_image": "shopify:\/\/shop_images\/83_9281c5ad-54c8-419b-b7eb-324d7887a6c0.jpg",
-            "description": "GREY\/SILVER",
-            "title": "GREY\/SILVER",
-            "button_label": "Double Weft - View Collection",
-            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
-          }
-        },
-        "video_BDMw69": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=suXr5j_AaOQ",
-            "cover_image": "shopify:\/\/shop_images\/84_3bf63d6a-3b97-4123-bb81-0cb40def0251.jpg",
-            "description": "BRIDAL",
-            "title": "BRIDAL",
-            "button_label": "Double Weft - View Collection",
-            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
-          }
-        },
-        "video_c4MXM3": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=tztqIiysAas",
-            "cover_image": "shopify:\/\/shop_images\/85_e25de5e7-554d-40fb-99ef-3be2d94eb8d3.jpg",
-            "description": "MIXING SHADES",
-            "title": "MIXING SHADES",
-            "button_label": "Nano Ring - View Collection",
-            "link": "shopify:\/\/collections\/nano-rings-hair-extensions"
-          }
-        },
-        "video_jBQVwz": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=h_v2R5QTju8",
-            "cover_image": "shopify:\/\/shop_images\/86_d0c6b5b6-4fa1-4513-8cea-afaf46fd6a98.jpg",
-            "description": "MERMAID WAVES",
-            "title": "MERMAID WAVES",
-            "button_label": "Double Weft - View Collection",
-            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
-          }
-        },
-        "video_HT8Kef": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=M1-FDAs2PBY",
-            "cover_image": "shopify:\/\/shop_images\/TRANSFORMATIONS_5.png",
-            "description": "SLEEK PONY",
-            "title": "SLEEK PONY",
-            "button_label": "Ponytail - View Collection",
-            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
-          }
-        },
-        "video_diX968": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=Tm6buy3MlY4",
-            "cover_image": "shopify:\/\/shop_images\/TRANSFORMATIONS_6.png",
-            "description": "SLEEK STRAIGHT",
-            "title": "SLEEK STRAIGHT",
-            "button_label": "Double Weft - View Collection",
-            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=CgqtsTw_BTk",
+            "cover_image": "shopify:\/\/shop_images\/73_72e79bf6-6473-4509-a668-2de804f404ac.jpg",
+            "description": "HOW TO APPLY THE STRAIGHT UP PONYTAIL",
+            "title": "HOW TO APPLY THE STRAIGHT UP PONYTAIL",
+            "button_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "video_UUhR33",
-        "video_7hqih9",
-        "video_GVpkex",
-        "video_Rd8en3",
-        "video_PaARUm",
-        "video_bNiXJe",
-        "video_RHwcHy",
-        "video_BDMw69",
-        "video_c4MXM3",
-        "video_jBQVwz",
-        "video_HT8Kef",
-        "video_diX968"
+        "video_PUFKjG",
+        "video_ntMebp",
+        "video_VpdT9L",
+        "video_9YJ7p3",
+        "video_KUHFgR",
+        "video_4RdLe3"
+      ],
+      "custom_css": [
+        ".deferred-media__poster-button {color: white;}"
       ],
       "settings": {
-        "type": "transformations",
-        "banner": "shopify:\/\/shop_images\/BEFORE_AFTER_for_website_1-min.jpg",
-        "title": "Transformations",
+        "type": "campaigns",
+        "title": "Campaigns",
         "heading_size": "h1",
-        "introduction": "<p>If, when watching a romcom, your favourite scene is the corny beauty transformation montage, then this is the right corner for you. Go on, have fun! With the right hair extensions, our next glam makeover could be... You!<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
+        "introduction": "<p>Did you think we're just a hair extensions shop? Think again. Competitions, giveaways, and our exclusive Bridal Stylist Awards are only a few of the amazing projects that we launch to get involved with both stylist professionals, customers, and influencers.<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
         "text_allignment": "center",
         "image_ratio": "portrait",
         "columns_desktop": 3,
@@ -831,6 +761,175 @@
         "padding_bottom": 36
       }
     },
+    "tutorials_Kpgrwm": {
+      "type": "tutorials",
+      "blocks": {
+        "video_UUhR33": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=iAv86YIT7Wg",
+            "cover_image": "shopify:\/\/shop_images\/77_ac2d8a2f-e526-4b8d-9944-1474d000ca7e.jpg",
+            "description": "BOUNCY CURLS",
+            "title": "BOUNCY CURLS",
+            "button_label": "Double Weft - View Collection",
+            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+          }
+        },
+        "video_7hqih9": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=W7brdHylNpU",
+            "cover_image": "shopify:\/\/shop_images\/78_62a2da0c-edc2-412a-b2ab-c32e9ea01907.jpg",
+            "description": "RETRO PONY",
+            "title": "RETRO PONY",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_GVpkex": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=QYi14vXaHck",
+            "cover_image": "shopify:\/\/shop_images\/79_e54db57a-46ec-4620-8ec1-754a51eb1f49.jpg",
+            "description": "SOFT WAVES",
+            "title": "SOFT WAVES",
+            "button_label": "Tape-In - View Collection",
+            "link": "shopify:\/\/collections\/tape-in-hair-extensions"
+          }
+        },
+        "video_Rd8en3": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=v1v8ClRVFJI",
+            "cover_image": "shopify:\/\/shop_images\/80_ac6f7892-3ac1-4b68-a5cc-1266da5f5b3e.jpg",
+            "description": "BOUNCY CURLS",
+            "title": "BOUNCY CURLS",
+            "button_label": "Ultra-Volume - View Collection",
+            "link": "shopify:\/\/collections\/ultra-clip-in-hair-extensions"
+          }
+        },
+        "video_PaARUm": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=oTFAz9NPlH8",
+            "cover_image": "shopify:\/\/shop_images\/81_1921ee25-8265-429d-bb4d-06bf1bf2ce8e.jpg",
+            "description": "INSTANT LENGTH",
+            "title": "INSTANT LENGTH",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_bNiXJe": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=bGCdSp6buyE",
+            "cover_image": "shopify:\/\/shop_images\/82_7d7c1c65-7495-4153-8dba-84191877be2e.jpg",
+            "description": "MIXING SHADES",
+            "title": "MIXING SHADES",
+            "button_label": "Nano Ring - View Collection",
+            "link": "shopify:\/\/collections\/nano-rings-hair-extensions"
+          }
+        },
+        "video_RHwcHy": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=3uSK9fJpYJw",
+            "cover_image": "shopify:\/\/shop_images\/83_9281c5ad-54c8-419b-b7eb-324d7887a6c0.jpg",
+            "description": "GREY\/SILVER",
+            "title": "GREY\/SILVER",
+            "button_label": "Double Weft - View Collection",
+            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+          }
+        },
+        "video_BDMw69": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=suXr5j_AaOQ",
+            "cover_image": "shopify:\/\/shop_images\/84_3bf63d6a-3b97-4123-bb81-0cb40def0251.jpg",
+            "description": "BRIDAL",
+            "title": "BRIDAL",
+            "button_label": "Double Weft - View Collection",
+            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+          }
+        },
+        "video_c4MXM3": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=tztqIiysAas",
+            "cover_image": "shopify:\/\/shop_images\/85_e25de5e7-554d-40fb-99ef-3be2d94eb8d3.jpg",
+            "description": "MIXING SHADES",
+            "title": "MIXING SHADES",
+            "button_label": "Nano Ring - View Collection",
+            "link": "shopify:\/\/collections\/nano-rings-hair-extensions"
+          }
+        },
+        "video_jBQVwz": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=h_v2R5QTju8",
+            "cover_image": "shopify:\/\/shop_images\/86_d0c6b5b6-4fa1-4513-8cea-afaf46fd6a98.jpg",
+            "description": "MERMAID WAVES",
+            "title": "MERMAID WAVES",
+            "button_label": "Double Weft - View Collection",
+            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+          }
+        },
+        "video_HT8Kef": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=M1-FDAs2PBY",
+            "cover_image": "shopify:\/\/shop_images\/TRANSFORMATIONS_5.png",
+            "description": "SLEEK PONY",
+            "title": "SLEEK PONY",
+            "button_label": "Ponytail - View Collection",
+            "link": "shopify:\/\/collections\/clip-in-ponytail-extensions"
+          }
+        },
+        "video_diX968": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Tm6buy3MlY4",
+            "cover_image": "shopify:\/\/shop_images\/TRANSFORMATIONS_6.png",
+            "description": "SLEEK STRAIGHT",
+            "title": "SLEEK STRAIGHT",
+            "button_label": "Double Weft - View Collection",
+            "link": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions"
+          }
+        }
+      },
+      "block_order": [
+        "video_UUhR33",
+        "video_7hqih9",
+        "video_GVpkex",
+        "video_Rd8en3",
+        "video_PaARUm",
+        "video_bNiXJe",
+        "video_RHwcHy",
+        "video_BDMw69",
+        "video_c4MXM3",
+        "video_jBQVwz",
+        "video_HT8Kef",
+        "video_diX968"
+      ],
+      "custom_css": [
+        ".deferred-media__poster-button {color: white;}"
+      ],
+      "settings": {
+        "type": "transformations",
+        "banner": "shopify:\/\/shop_images\/BEFORE_AFTER_for_website_1-min.jpg",
+        "title": "Transformations",
+        "heading_size": "h1",
+        "introduction": "<p>If, when watching a romcom, your favourite scene is the corny beauty transformation montage, then this is the right corner for you. Go on, have fun! With the right hair extensions, our next glam makeover could be... You!<\/p><p>Take a look at our extensive selection of tutorial videos!<\/p>",
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "accent-1",
+        "button_style_secondary": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "67a94c71-0b44-4f05-aa2f-594b1239edd9": {
       "type": "image-list",
       "blocks": {
@@ -998,8 +1097,9 @@
   "order": [
     "main",
     "tutorials_filter_krcENH",
-    "tutorials_Kpgrwm",
+    "tutorials_hDm6EF",
     "tutorials_pDW6YK",
+    "tutorials_Kpgrwm",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
