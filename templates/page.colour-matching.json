@@ -12,11 +12,23 @@
         "padding_bottom": 0
       }
     },
+    "custom_banner_9zVbaW": {
+      "type": "custom-banner",
+      "settings": {
+        "max-width": "768",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/colour-matching-whatsapp-banner-desktop.webp",
+        "mobile-image": "shopify:\/\/shop_images\/colour-matching-whatsapp-banner-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 28
+      }
+    },
     "form_builder_KN33jz": {
       "type": "form-builder",
       "settings": {
         "id": "sqVgFr82Jys_VTYq5ta3MA",
-        "max-width": "800",
+        "max-width": "768",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 36
@@ -25,6 +37,7 @@
   },
   "order": [
     "main",
+    "custom_banner_9zVbaW",
     "form_builder_KN33jz"
   ]
 }
