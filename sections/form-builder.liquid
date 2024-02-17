@@ -12,8 +12,16 @@
   }
 {%- endstyle -%}
 
+{% if section.settings['max-width'] != empty %}
+  <style>
+    .custom-width-{{  section.id }}{
+      max-width:{{ section.settings.max-width }}px;
+    }
+  </style>
+{% endif %}
+
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding">
+  <div class="page-width custom-width-{{  section.id }} section-{{ section.id }}-padding">
     <div style="margin:0 auto;" class="pxFormGenerator" id="{{  section.settings.id }}"></div>
   </div>
 </div>
@@ -28,6 +36,12 @@
       "type": "text",
       "id": "id",
       "label": "Form id"
+    },
+    {
+      "type": "text",
+      "id": "max-width",
+      "label": "Custom width (px)",
+      "info": "Keep empty if want to use default width."
     },
     {
       "type": "color_scheme",
