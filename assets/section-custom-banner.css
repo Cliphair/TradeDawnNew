@@ -1,0 +1,19 @@
+.section-custom-banner a {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.section-custom-banner a[aria-disabled] {
+  cursor: not-allowed;
+}
+
+.section-custom-banner a picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
