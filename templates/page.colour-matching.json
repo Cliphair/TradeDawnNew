@@ -16,6 +16,7 @@
       "type": "form-builder",
       "settings": {
         "id": "sqVgFr82Jys_VTYq5ta3MA",
+        "max-width": "800",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
