@@ -2,13 +2,31 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "custom_css": [
+        "h1{margin-bottom:0;}"
+      ],
       "settings": {
+        "show_title": true,
+        "heading_size": "h1",
+        "show_content": false,
+        "text_alignment": "center",
+        "color_scheme": "accent-4",
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 0
+      }
+    },
+    "colour_chart_list_Kjmjzz": {
+      "type": "colour-chart-list",
+      "settings": {
+        "list": "shop-by-shade",
+        "color_scheme": "accent-4",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "colour_chart_list_Kjmjzz"
   ]
 }
