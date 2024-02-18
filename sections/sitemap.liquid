@@ -1,0 +1,123 @@
+{% liquid
+  if section.settings.limit and section.settings.limit != 0
+    assign limit = section.settings.limit
+  else
+    assign limit = 1000
+  endif
+%}
+
+{{ 'section-sitemap.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="categories-container page-width section-{{ section.id }}-padding">
+    <div id="collections" class="category">
+      <h2 class="category-title">Collections</h2>
+      <ul>
+        {% for collection in collections limit: limit %}
+          <li class="sitemap-item">
+            <a href="{{ collection.url }}">{{ collection.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div id="products" class="category">
+      <h2 class="category-title">Products</h2>
+      <ul>
+        {% paginate collections.all.products by limit %}
+          {% for product in collections.all.products limit: limit %}
+            <li class="sitemap-item">
+              <a href="{{ product.url }}">{{ product.title }}</a>
+            </li>
+          {% endfor %}
+        {% endpaginate %}
+      </ul>
+    </div>
+    <div id="blog-posts" class="category">
+      <h2 class="category-title">Blog Posts</h2>
+      <ul>
+        {% paginate blogs['hair-blog'].articles by limit %}
+          {% for article in blogs['hair-blog'].articles limit: limit %}
+            <li class="sitemap-item">
+              <a href="{{ article.url }}">{{ article.title }}</a>
+            </li>
+          {% endfor %}
+        {% endpaginate %}
+      </ul>
+    </div>
+    <div id="pages" class="category">
+      <h2 class="category-title">Pages</h2>
+      <ul>
+        {% for page in pages limit: limit %}
+          <li class="sitemap-item">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Sitemap",
+  "tag": "section",
+  "class": "section section-sitemap",
+  "settings": [
+    {
+      "type": "number",
+      "id": "limit",
+      "label": "Limit items",
+      "info": "if not value added, all items from all categories will be loaded."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sitemap"
+    }
+  ]
+}
+{% endschema %}
