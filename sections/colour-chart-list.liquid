@@ -1,0 +1,161 @@
+{{ 'section-colour-chart-list.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% if section.settings.list %}
+  <div class="color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width section-{{ section.id }}-padding">
+      <div class="links-categories">
+        {% for link in section.settings.list.links %}
+          {% if link.levels > 0 %}
+            <div class="category">
+              <input
+                id="categorie-{{ link.title | strip_html | handle }}"
+                type="checkbox"
+                name="categories"
+                value="{{ link.title | strip_html | handle }}"
+              >
+              <label for="categorie-{{ link.title | strip_html | handle }}">
+                {% liquid
+                  assign image_handle = link.title | strip_html | handle | append: '.webp'
+                  assign image = images[image_handle]
+                %}
+                {% if image != empty %}
+                  <img
+                    src="{{ image | image_url }}"
+                    loading="lazy"
+                    height="{{ image.height }}"
+                    width="{{ image.width }}"
+                    alt="{{ image.alt }}"
+                  >
+                {% else %}
+                  <p>Please add an image with the following name: {{ image_handle }}</p>
+                {% endif %}
+                <p>{{ link.title | strip_html }}</p>
+              </label>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="links-list">
+        {% for link in section.settings.list.links %}
+          {% if link.levels > 0 %}
+            {% for second-level-link in link.links %}
+              {% if second-level-link.type == 'collection_link' %}
+                {% assign collection = second-level-link.object %}
+                <a
+                  href="{{ second-level-link.url }}"
+                  title="{{ second-level-link.title | strip_html | escape }}"
+                  class="collection_link"
+                  data-group="{{ link.title | strip_html | handle }}"
+                >
+                  <img
+                    src="{{ collection.image | image_url }}"
+                    loading="lazy"
+                    height="{{ collection.image.height }}"
+                    width="{{ collection.image.width }}"
+                    alt="{{ collection.image.alt }}"
+                  >
+                  <p>{{ second-level-link.title }}</p>
+                  <button
+                    href="{{ second-level-link.url }}"
+                    title="{{ second-level-link.title | strip_html | escape }}"
+                    class="button button--full-width"
+                  >
+                    See Products
+                  </button>
+                </a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<script src="{{ 'section-colour-chart-list.js' | asset_url }}" defer="defer"></script>
+
+<script>
+  const categories = document.querySelectorAll('.category label');
+  for (let category of categories) {
+    category.addEventListener('click', function () {
+      const timeOut = setTimeout(() => {
+        let checkeds = returnCheckeds();
+
+        if (checkeds.length > 0) {
+          hideAll();
+          for (let i = 0; i < checkeds.length; i++) {
+            showCheckeds(checkeds[i]);
+          }
+        } else {
+          showAll();
+        }
+      }, 50);
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Color chart list",
+  "tag": "section",
+  "class": "section section-colour-chart-list",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "list",
+      "label": "Select list",
+      "info": "This section works with a list of collections."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Color chart list"
+    }
+  ]
+}
+{% endschema %}
