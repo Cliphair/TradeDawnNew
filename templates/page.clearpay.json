@@ -2,6 +2,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "heading_size": "h1",
@@ -11,9 +12,200 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_banner_FyanQL": {
+      "type": "custom-banner",
+      "settings": {
+        "max-width": "1250",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/CP_Web_topstrip_shopnowpayitin4_blackmint_1920x100_f5857d6f-939a-4e5a-b37d-fb0ea0e961eb.png",
+        "mobile-image": "shopify:\/\/shop_images\/clearpay-announcementbar.webp",
+        "url": "shopify:\/\/pages\/hair-extensions-by-colour",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "custom_banner_tLQ6aF": {
+      "type": "custom-banner",
+      "settings": {
+        "max-width": "1250",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/clearpay-how-it-works-dekstop.webp",
+        "mobile-image": "shopify:\/\/shop_images\/clearpay-how-it-works-mobile.webp",
+        "url": "shopify:\/\/pages\/hair-extensions-by-colour",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_hG9Laa": {
+      "type": "rich-text",
+      "blocks": {
+        "button_7jXAcn": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/pages\/hair-extensions-by-colour",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_7jXAcn"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-9cba1edc-fe76-4bc2-b10e-7979218644a9",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "collapsible_content_hagUbM": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_GaJFpj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Clearpay?",
+            "icon": "none",
+            "row_content": "<p>Clearpay is a payment service that lends customers a fixed amount of credit to make purchases instantly and then pay for them in 4 automatic instalments, made every 2 weeks, without any interest (late fees apply). Please use Clearpay responsibly.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UPhYbc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I use Clearpay?",
+            "icon": "none",
+            "row_content": "<p>Just shop on Merchant Site and check out as normal. At checkout, choose the Clearpay payment method. You will be directed to the Clearpay website to register and provide payment details (Visa, Mastercard or Amex).<\/p><p>If you've used Clearpay before, just log in to your Clearpay account.<\/p><p>Then complete your order!<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ceVPx6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " Where can I use Clearpay?",
+            "icon": "none",
+            "row_content": "<p>Take a look at the ​<a href=\"https:\/\/www.clearpay.co.uk\/en-GB\/index\" target=\"_blank\">Clearpay Shop Directory​<\/a> to check out our amazing partners where you can use Clearpay.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_E7WENc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who can use Clearpay?",
+            "icon": "none",
+            "row_content": "<p>Clearpay is only available to permanent UK residents aged 18+ (excluding Channel Islands) with a UK billing address.<\/p><p>Customers with international billing addresses will not be able to use Clearpay or create a Clearpay account.<\/p><p>Other eligibility criteria apply. See <a href=\"https:\/\/www.clearpay.co.uk\/en-GB\/terms-of-service\" target=\"_blank\">Clearpay Terms of Service<\/a> for further details.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_XXNWRM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does the Clearpay payment schedule work?",
+            "icon": "none",
+            "row_content": "<p>Clearpay will split the total value of your order into 4 instalments payable every fortnight. The exact amounts and dates will be displayed for you to agree to before you confirm your purchase.<\/p><p>If you would like to make additional unscheduled payments before they are due, you may log into your Clearpay account to make your payments early. Clearpay will then adjust the amount owed accordingly.<\/p><p>You can log in to your Clearpay account anytime to view your payment schedule or make a payment before the next due date.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EKVPMn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if I can't pay a Clearpay instalment?",
+            "icon": "none",
+            "row_content": "<p>If you cannot make a payment, please contact Clearpay <a href=\"https:\/\/help.clearpay.co.uk\/hc\/en-gb\/requests\/new\" target=\"_blank\">here<\/a>.<\/p><p>As soon as you miss a payment, Clearpay will immediately stop you from making any further purchases with Clearpay.<\/p><p>Clearpay will give you until 11pm on the following day to make your repayment and then you will incur a late fee if you are still not able to make the payment by then. This will be an initial £6 and a further fee of £6 if the missed payment is not made within 7 days. If your order is less than £24, the total late fee will be £6. If your order is £24 or over, total late fees will not exceed 25% of the total order or £24, whichever is less.<\/p><p>Clearpay debt may be passed to a debt collection agency and this may affect your ability to use Clearpay in future. We encourage you to use Clearpay responsibly. Please see <a href=\"https:\/\/www.clearpay.co.uk\/en-GB\/terms-of-service\" target=\"_blank\">Clearpay Terms of Service<\/a> for further details.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rh34Rf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When will my items be delivered if I use Clearpay?",
+            "icon": "none",
+            "row_content": "<p>Clearpay orders are delivered within our standard delivery timeframes like any order from Merchant Site.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TabmyG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is there a limit to how much I can spend on a single Clearpay transaction?",
+            "icon": "none",
+            "row_content": "<p>Yes, your order value including shipping must be between Merchant Minimum Order and £1000 to use Clearpay. Your maximum order value may be lower depending on factors such as being a new customer or your payment history.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zAgrxi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use another form of payment with Clearpay?",
+            "icon": "none",
+            "row_content": "<p>Yes, you may also use a gift card, cash, or a promotional code with Clearpay to pay for your purchase.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pC7zVi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I return or exchange an item purchased with Clearpay?",
+            "icon": "none",
+            "row_content": "<p>Items purchased with Clearpay follow our standard return process.<\/p><p>Please note, refunds for Clearpay purchases will be refunded from Merchant Site ​to Clearpay. We cannot provide an exchange or cash refund.<\/p><p>When the refund is processed, any upcoming payments you have to Clearpay will be cancelled and any payments you have already made will be refunded back to the card you paid with. Please note that until the merchant has confirmed the receipt of any return goods, you will be liable to continue to make your payments to Clearpay.<\/p><p>You can view the details by logging in to your Clearpay account.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YU9k3c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I find out more about Clearpay",
+            "icon": "none",
+            "row_content": "<p>Visit the Clearpay website <a href=\"https:\/\/help.clearpay.co.uk\/hc\/en-gb\/categories\/360001635351-I-M-A-CUSTOMER\" target=\"_blank\">h​ere<\/a>​ for a comprehensive list of FAQs, Clearpay Terms of Service ​<a href=\"https:\/\/www.clearpay.co.uk\/en-GB\/terms-of-service\" target=\"_blank\">here<\/a>, and Privacy Policy <a href=\"https:\/\/www.clearpay.co.uk\/en-GB\/privacy-policy\" target=\"_blank\">h​ere<\/a><\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_GaJFpj",
+        "collapsible_row_UPhYbc",
+        "collapsible_row_ceVPx6",
+        "collapsible_row_E7WENc",
+        "collapsible_row_XXNWRM",
+        "collapsible_row_EKVPMn",
+        "collapsible_row_rh34Rf",
+        "collapsible_row_TabmyG",
+        "collapsible_row_zAgrxi",
+        "collapsible_row_pC7zVi",
+        "collapsible_row_YU9k3c"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQS",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "faq_schema": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_banner_FyanQL",
+    "custom_banner_tLQ6aF",
+    "rich_text_hG9Laa",
+    "collapsible_content_hagUbM"
   ]
 }
