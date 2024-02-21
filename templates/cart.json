@@ -33,7 +33,7 @@
     "featured-collection": {
       "type": "featured-collection",
       "custom_css": [
-        "h2{text-align:center;}"
+        "h2 {text-align: center;}"
       ],
       "settings": {
         "title": "YOU MAY ALSO LIKE",
@@ -56,7 +56,7 @@
         "show_type": false,
         "show_vendor": false,
         "show_rating": true,
-        "enable_quick_add": true,
+        "enable_quick_add": false,
         "badge_style": "fixed",
         "display_low_inventory": true,
         "low_inventory": 5,
