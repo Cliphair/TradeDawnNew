@@ -180,7 +180,8 @@
         {% if block.settings.url %}
           <a class="item" href="{{ block.settings.url }}" target="_blank" title="{{ block.settings.text }}">
             <img
-              data-src="{{ block.settings.image | image_url }}"
+              src="{{ block.settings.image | image_url }}"
+              loading='lazy'
               class="lazyload {% if block.settings.circle_image %}circle_image{% endif %}"
               height="{{ block.settings.image.height }}"
               width="{{ block.settings.image.width }}"
@@ -193,7 +194,8 @@
         {% else %}
           <div class="item">
             <img
-              data-src="{{ block.settings.image | image_url }}"
+              src="{{ block.settings.image | image_url }}"
+              loading='lazy'
               class="lazyload {% if block.settings.circle_image %}circle_image{% endif %}"
               height="{{ block.settings.image.height }}"
               width="{{ block.settings.image.width }}"
