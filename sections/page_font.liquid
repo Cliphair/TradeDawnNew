@@ -1,0 +1,36 @@
+<style>
+  {% assign page_font = section.settings.font %}
+  {{ page_font | font_face }}
+
+  main.page-main h1,
+  main.page-main h2,
+  main.page-main h3,
+  main.page-main h4,
+  main.page-main h5,
+  main.page-main h6,
+  main.page-main p,
+  main.page-main a,
+  main.page-main label,
+  main.page-main select{
+    font-family: {{ page_font.family }}, {{ page_font.fallback_families }};
+  }
+</style>
+{% schema %}
+{
+  "name": "Page Font",
+  "settings": [
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Page font",
+      "default": "libre_baskerville_n4"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

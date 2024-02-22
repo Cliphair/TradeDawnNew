@@ -1,0 +1,302 @@
+.section-video-carrousel {
+  width: 100%;
+  margin: 0;
+}
+
+.section-video-carrousel>.inner-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-video-carrousel .section_header>* {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.section-video-carrousel .intro_container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.section-video-carrousel .intro_container>*,
+.section-video-carrousel .video_title {
+  text-align: center;
+
+  line-height: 1.2em;
+  margin: 0 0 5px;
+}
+
+.section-video-carrousel .intro_container>.br {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-video-carrousel .images_container {
+  width: 100%;
+  position: relative;
+}
+
+.section-video-carrousel .images_container .images {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.section-video-carrousel .images_container .images.stacked {
+  flex-wrap: wrap;
+}
+
+.section-video-carrousel .images_container .images.align-left-mobile {
+  justify-content: flex-start;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.section-video-carrousel .images_container .images::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.section-video-carrousel .images_container .images {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.section-video-carrousel .images>.placeholder_image_container {
+  position: relative;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-video-carrousel .images>.placeholder_image_container>div {
+  width: 100%;
+}
+
+.section-video-carrousel .images.stacked>.placeholder_image_container {
+  margin-bottom: 15px;
+}
+
+
+.section-video-carrousel .images>.placeholder_image_container .image-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.section-video-carrousel .images>.placeholder_image_container .image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: initial;
+  object-fit: cover;
+}
+
+.section-video-carrousel .placeholder_image_container .button_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: content-box;
+}
+
+.section-video-carrousel .placeholder_image_container .button_container>.play_button {
+  opacity: 0.6;
+  font-size: 10vw;
+  cursor: pointer;
+}
+
+.section-video-carrousel .placeholder_image_container .button_container>.play_button:hover {
+  opacity: 1;
+}
+
+.section-video-carrousel .placeholder_image_container>a,
+.section-video-carrousel .placeholder_image_container .video_title>a {
+  display: block;
+  text-underline-offset: 0.2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.section-video-carrousel .placeholder_image_container>a:hover,
+.section-video-carrousel .placeholder_image_container .video_title:hover>a {
+  text-decoration-thickness: 2px;
+  color: initial;
+}
+
+.section-video-carrousel .placeholder_image_container .video_title {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-video-carrousel .video-description>* {
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.section-video-carrousel .video-description {
+  margin: 15px 0;
+}
+
+.section-video-carrousel .video-button {
+  text-decoration: none !important;
+  display: inline-block !important;
+  padding: 2px 35px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.section-video-carrousel .video-button:hover {
+  text-decoration: underline !important;
+  text-underline-offset: .2rem;
+}
+
+#bts__video-container .video__container {
+  max-width: unset;
+}
+
+.section-video-carrousel .dot-container {
+  text-align: center;
+}
+
+.section-video-carrousel .dot-container span.dot-icon {
+  opacity: 0.7;
+}
+
+.section-video-carrousel .dot-container span.dot-icon:hover {
+  opacity: 1;
+}
+
+.section-video-carrousel .dot-container span.dot-icon.selected {
+  opacity: 1;
+}
+
+.section-video-carrousel .scroll-arrow {
+  position: absolute;
+  display: none;
+}
+
+.section-video-carrousel .scroll-arrow:hover {
+  opacity: 0.7;
+}
+
+.section-video-carrousel .scroll-arrow.right {
+  right: 15px;
+}
+
+.section-video-carrousel .scroll-arrow.left {
+  left: 15px;
+}
+
+.section-video-carrousel .scroll-arrow.arrow-mobile {
+  display: block;
+}
+
+.section-video-carrousel .btn-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.section-video-carrousel .btn-container>a {
+  padding: 5px 20px;
+}
+
+.section-video-carrousel .btn-container>a:hover {
+  text-decoration: underline;
+}
+
+.section-video-carrousel .socila-media-wrapper {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.section-video-carrousel .socila-media-wrapper>a {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (min-width:768px) {
+  .section-video-carrousel .images_container .images.align-left-mobile {
+    justify-content: center;
+  }
+
+  .section-video-carrousel .images_container .images.align-left-tablet {
+    justify-content: flex-start;
+  }
+
+  .section-video-carrousel .scroll-arrow.arrow-mobile {
+    display: none;
+  }
+
+  .section-video-carrousel .scroll-arrow.arrow-tablet {
+    display: block;
+  }
+
+  .section-video-carrousel .socila-media-wrapper>a {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .section-video-carrousel .intro_container>.br {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-video-carrousel .images_container .images.align-left-tablet {
+    justify-content: center;
+  }
+
+  .section-video-carrousel .images_container .images.align-left-desktop {
+    justify-content: flex-start;
+  }
+
+  .section-video-carrousel .images>.placeholder_image_container {
+    padding: 10px;
+  }
+
+  .section-video-carrousel .placeholder_image_container .button_container>.play_button {
+    font-size: 60px;
+  }
+
+  .section-video-carrousel .video-button {
+    padding: 5px 40px;
+  }
+
+  .section-video-carrousel .scroll-arrow.arrow-tablet {
+    display: none;
+  }
+
+  .section-video-carrousel .scroll-arrow.arrow-desktop {
+    display: block;
+  }
+
+  .section-video-carrousel .btn-container {
+    margin-top: 15px;
+  }
+
+  .section-video-carrousel .socila-media-wrapper>a {
+    font-size: 30px;
+  }
+}

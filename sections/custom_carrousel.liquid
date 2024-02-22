@@ -1,0 +1,442 @@
+{% assign arrows = 'none' %}
+{% if section.blocks.size >= 4 and section.blocks.size <= 7 %}
+  {% assign arrows = 'mobile_arrow' %}
+  {% assign align = 'start-mobile' %}
+{% elsif section.blocks.size >= 4 and section.blocks.size >= 8 %}
+  {% assign arrows = 'mobile_arrow tablet_arrow' %}
+  {% assign align = 'start-mobile start-tablet' %}
+{% endif %}
+
+{% if section.settings.max_width != empty %}
+  <style>
+    #{{ section.id }}{
+      max-width: {{section.settings.max_width}}px;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    font-size: {{ section.settings.mobile-font_size }}px;
+    background: {{ section.settings.bg_color }};
+    width: 100%;
+    margin: 0 auto;
+
+  }
+
+  #{{section.id}} .section_header{
+    font-size: calc({{ section.settings.mobile-font_size }}px + 5px);
+    margin:0;
+    padding:0;
+    line-height:100%;
+    text-align:center;
+    color: {{ section.settings.text_color }};
+    margin-bottom:10px;
+    font-weight:400;
+  }
+
+  #{{ section.id }} .carrousel_container{
+    width:100%;
+    position:relative;
+  }
+
+  #{{ section.id }} .carrousel_items{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    overflow-x:scroll;
+    justify-content:center;
+    align-items:stretch;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #{{ section.id }} .carrousel_items::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #{{ section.id }} .carrousel_items{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  #{{ section.id }} .carrousel_items.start-mobile{
+    justify-content:flex-start;
+  }
+
+  #{{ section.id }} .carrousel_items > .item{
+    width:calc(100% / {{ section.blocks.size }});
+    min-width:110px;
+    max-width:120px;
+    margin-right: 25px;
+    text-align:center;
+    cursor:pointer;
+  }
+
+  #{{ section.id }} .carrousel_items > .item:hover{
+    text-decoration:none;
+  }
+
+  #{{ section.id }} .carrousel_items > .item > img{
+    width:100%;
+    height:auto;
+    aspect-ratio:initial;
+    object-fit:cover;
+    margin-bottom:5px;
+  }
+
+  #{{ section.id }} .carrousel_items > .item > img.circle_image{
+    border-radius:50%;
+  }
+
+  #{{ section.id }} .carrousel_items > .item > p{
+    font-size: {{ section.settings.mobile-font_size }}px;
+    margin:0;
+    padding:0;
+    line-height:100%;
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .arrow-container{
+    top:25%!important;
+  }
+
+  #{{ section.id }} .arrow-container.none{
+    display:none;
+  }
+
+  #{{ section.id }} .arrow-container.mobile_arrow{
+    display:block;
+  }
+
+  #{{ section.id }} .arrow-container > span{
+    color:#d0d0d0;
+    opacity:0.6;
+    margin:0;
+    font-size:50px;
+  }
+
+  #{{ section.id }} .arrow-container > span:hover{
+    opacity:1;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} .arrow-container.mobile_arrow{
+      display:none;
+    }
+
+    #{{ section.id }} .arrow-container.mobile_arrow.tablet_arrow{
+      display:block;
+    }
+
+    #{{ section.id }} .carrousel_items.start-mobile{
+      justify-content:center;
+    }
+
+    #{{ section.id }} .carrousel_items.start-mobile.start-tablet{
+      justify-content:flex-start;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+      font-size: {{ section.settings.desktop-font_size }}px;
+    }
+
+    #{{section.id}} .section_header{
+      font-size: calc({{ section.settings.desktop-font_size }}px + 5px);
+    }
+
+    #{{ section.id }} .carrousel_items > .item > p{
+      font-size: {{ section.settings.desktop-font_size }}px;
+    }
+
+    #{{ section.id }} .arrow-container.mobile_arrow.tablet_arrow{
+      display:none;
+    }
+
+    #{{ section.id }} .carrousel_items.start-mobile.start-tablet{
+      justify-content:center;
+    }
+  }
+</style>
+
+<section id="{{ section.id }}">
+  {% if section.settings.header != empty %}
+    <h2 class="section_header">{{ section.settings.header }}</h2>
+  {% endif %}
+  <div class="carrousel_container">
+    <div class="carrousel_items {{ align }}">
+      {% for block in section.blocks %}
+        {% if block.settings.url %}
+          <a class="item" href="{{ block.settings.url }}" target="_blank" title="{{ block.settings.text }}">
+            <img
+              data-src="{{ block.settings.image | image_url }}"
+              class="lazyload {% if block.settings.circle_image %}circle_image{% endif %}"
+              height="{{ block.settings.image.height }}"
+              width="{{ block.settings.image.width }}"
+              alt="{{ block.settings.image.alt }}"
+            >
+            {% if block.settings.text != empty %}
+              <p>{{ block.settings.text }}</p>
+            {% endif %}
+          </a>
+        {% else %}
+          <div class="item">
+            <img
+              data-src="{{ block.settings.image | image_url }}"
+              class="lazyload {% if block.settings.circle_image %}circle_image{% endif %}"
+              height="{{ block.settings.image.height }}"
+              width="{{ block.settings.image.width }}"
+              alt="{{ block.settings.image.alt }}"
+            >
+            {% if block.settings.text != empty %}
+              <p>{{ block.settings.text }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="arrow-container {{ arrows }}">
+      <span
+        class="scroll-arrow left"
+        onclick="scrollArrow(this)"
+        data-target="carrousel_items"
+        data-direction="left"
+        data-speed="50"
+        data-distance="240"
+        data-step="40"
+        ><i class="fa-solid fa-angle-left"></i
+      ></span>
+      <span
+        class="scroll-arrow right"
+        onclick="scrollArrow(this)"
+        data-target="carrousel_items"
+        data-direction="right"
+        data-speed="50"
+        data-distance="240"
+        data-step="40"
+        ><i class="fa-solid fa-angle-right"></i
+      ></span>
+    </div>
+  </div>
+</section>
+
+<script>
+  //Arrow functions
+  function scrollArrow(button) {
+    let target = button.getAttribute('data-target');
+    let direction = button.getAttribute('data-direction');
+    let speed = parseInt(button.getAttribute('data-speed'));
+    let distance = parseInt(button.getAttribute('data-distance'));
+    let step = parseInt(button.getAttribute('data-step'));
+    let container = document.getElementsByClassName(target)[0];
+
+    sideScroll(container, direction, speed, distance, step);
+  }
+
+  function sideScroll(element, direction, speed, distance, step) {
+    scrollAmount = 0;
+    var slideTimer = setInterval(function () {
+      if (direction == 'left') {
+        element.scrollLeft -= step;
+      } else {
+        element.scrollLeft += step;
+      }
+      scrollAmount += step;
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
+      }
+    }, speed);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Custom Carrousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Section Header"
+    },
+    {
+      "type": "header",
+      "content": "Universal Settings"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "label": "Max width",
+      "info": "Enter the value in px. Ex: 1400, 1250, ...",
+      "id": "max_width"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile-font_size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_top",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_right",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Left",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Desktop Settings"
+    },
+    {
+      "type": "range",
+      "id": "desktop-font_size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_top",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_right",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Left",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Carrousel Item",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "circle_image",
+          "label": "Make Image Circle",
+          "info": "This setting will work just for square images.",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL",
+          "info": "Add the URL that you want to send the user to."
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

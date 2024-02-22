@@ -1,0 +1,237 @@
+<link rel="preload" href="{{ 'section-page-header.css' | asset_url }}" as="style">
+{{ 'section-page-header.css' | asset_url | stylesheet_tag }}
+
+<style>
+  {% if section.settings.hide %}
+    #{{section.id}}{
+      position: absolute !important;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      clip: rect(0 0 0 0);
+      word-wrap: normal !important;
+    }
+  {% endif %}
+
+  #{{section.id}}.title_container{
+    padding-top:{{section.settings.mobile-top-padding}}px;
+    padding-bottom:{{section.settings.mobile-bottom-padding}}px;
+    padding-right:{{section.settings.mobile-right-padding}}px;
+    padding-left:{{section.settings.mobile-left-padding}}px;
+    background:{{section.settings.bg_colour}};
+  }
+
+  #{{section.id}} .title_text{
+    font-size:{{section.settings.mobile-font-size}}px;
+    color:{{section.settings.text_colour}};
+  }
+
+  #{{section.id}} .title_text>.tag{
+    font-size:calc({{section.settings.mobile-font-size}}px - 8px);
+  }
+
+  @media only screen and (min-width:992px){
+  	#{{section.id}}.title_container{
+      padding-top:{{section.settings.desktop-top-padding}}px;
+      padding-bottom:{{section.settings.desktop-bottom-padding}}px;
+      padding-right:{{section.settings.desktop-right-padding}}px;
+      padding-left:{{section.settings.desktop-left-padding}}px;
+    }
+
+    #{{section.id}} .title_text{
+      font-size:{{section.settings.desktop-font-size}}px;
+    }
+
+    #{{section.id}} .title_text>.tag{
+      font-size:calc({{section.settings.desktop-font-size}}px - 8px);
+    }
+  }
+</style>
+
+<section id="{{ section.id }}" class="title_container">
+  <h1 class="title_text">
+    {% if section.settings['custom-title'] %}
+      <span class="first-line">{{ section.settings['first-line'] }}</span>
+      <span class="second-line">{{ section.settings['second-line'] }}</span>
+    {% else %}
+      {% case template.name %}
+        {% when 'blog' %}
+          {{ blog.title }}}
+        {% when 'collection' %}
+          {{ collection.title }}}
+        {% when 'page' %}
+          {{ page.title }}
+      {% endcase %}
+    {% endif %}
+    {% if current_tags -%}
+      <span class="tag">{{ current_tags.first | replace: '-', ' ' }}</span>
+    {%- endif %}
+  </h1>
+</section>
+
+{% schema %}
+{
+  "name": "Page Title",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "custom-title",
+      "label": "Use Custom Title?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Custom Title Settings"
+    },
+    {
+      "type": "text",
+      "id": "first-line",
+      "label": "First Line"
+    },
+    {
+      "type": "text",
+      "id": "second-line",
+      "label": "Second Line"
+    },
+    {
+      "type": "header",
+      "content": "Universal Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide",
+      "label": "Hide Text?",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "text_colour",
+      "label": "Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_colour",
+      "label": "Background Colour",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile-font-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile Font Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mobile-top-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-bottom-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Bottom Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-right-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Right Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-left-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile Left Padding",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Desktop Settings"
+    },
+    {
+      "type": "range",
+      "id": "desktop-font-size",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Desktop Font Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "desktop-top-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Top Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-bottom-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Bottom Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-right-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Right Padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-left-padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop Left Padding",
+      "default": 0
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

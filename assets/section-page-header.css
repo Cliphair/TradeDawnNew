@@ -1,0 +1,15 @@
+.title_container {
+  width: 100%;
+  text-align: center;
+}
+
+.title_container>.title_text {
+  margin: 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.title_container>.title_text * {
+  display: block;
+  width: 100%;
+}

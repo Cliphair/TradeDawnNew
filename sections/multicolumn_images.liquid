@@ -1,0 +1,492 @@
+{% if section.settings.max_width != empty %}
+  <style>
+    #{{ section.id }}{
+      max-width: {{section.settings.max_width}}px;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #{{ section.id }}{
+    padding-top:{{ section.settings.mobile-p_top }}px;
+    padding-bottom:{{ section.settings.mobile-p_bottom }}px;
+    padding-right:{{ section.settings.mobile-p_right }}px;
+    padding-left:{{ section.settings.mobile-p_left }}px;
+    width:100%;
+    margin:0 auto;
+  }
+
+  #{{ section.id }} > .header_container{
+    background:{{ section.settings.header_bg_color }};
+    width:100%;
+    text-align:center;
+  }
+
+  #{{ section.id }} > .header_container > .section_header{
+    text-transform:uppercase;
+    color:{{ section.settings.header_color }};
+    font-size: calc({{ section.settings.mobile-font_size }}px + 5px);
+    margin:0;
+    padding:10px 0 5px;
+    line-height:100%;
+    font-weight:400;
+  }
+
+  #{{ section.id }} > .intro_container{
+    width:100%;
+    text-align:center;
+    margin: 20px 0 10px;
+    padding: 0 15px;
+  }
+
+  #{{ section.id }} > .intro_container .section_sub-heading{
+    text-transform:uppercase;
+    color:{{ section.settings.sub_header_color }};
+    font-size: calc({{ section.settings.mobile-font_size }}px + 2px);
+    margin:0;
+    padding:0;
+    opacity: calc({{section.settings.sub_header_opacity }} / 100);
+    font-weight:400;
+    letter-spacing: 2px;
+    margin-bottom:10px;
+  }
+
+  #{{ section.id }} > .intro_container .section_sub-heading > span{
+    display:block;
+  }
+
+  #{{ section.id }} > .intro_container > p{
+    color:black;
+    margin:0;
+    padding:0;
+    line-height:1.2rem;
+    font-size: {{ section.settings.mobile-font_size }}px;
+    letter-spacing:0.5px;
+  }
+
+  #{{ section.id }} > .column_container{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:center;
+  }
+
+  #{{ section.id }} > .column_container.center-aligned{
+    justify-content:center;
+  }
+
+  #{{ section.id }} > .column_container > .column{
+    width:50%;
+    padding:5px 10px;
+  }
+
+  #{{ section.id }} > .column_container > .column:hover{
+    text-decoration:none;
+  }
+
+  #{{ section.id }} > .column_container > .column > img{
+    width:100%;
+    height:auto;
+    aspect-ratio:initial;
+    object-fit:cover;
+  }
+
+  #{{ section.id }} > .column_container > .column > img{
+    width:100%;
+    height:auto;
+    aspect-ratio:initial;
+    object-fit:cover;
+  }
+
+  #{{ section.id }} > .column_container > .column > p{
+    width:100%;
+    color:{{ section.settings.buttons_color }};
+    background:{{ section.settings.buttons_bg_color }};
+    padding: 10px 0 7px;
+    margin: 5px 0 0;
+    line-height: 100%;
+    font-size: 10px;
+    text-align:center;
+  }
+
+  #{{ section.id }} .view-collection{
+    width:100%;
+    max-width:300px;
+    margin:0 auto;
+    text-align:center;
+    margin-top:10px;
+  }
+
+  #{{ section.id }} .view-collection > *{
+    width:100%;
+    background:{{ section.settings.buttons_color }};
+    color:{{ section.settings.buttons_bg_color }};
+    padding: 10px 0 7px;
+    margin: 5px 0 0;
+    line-height: 100%;
+    font-size: 14px;
+    text-align:center;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} > .column_container > .column{
+      width:33.333%;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }}{
+      padding-top:{{ section.settings.desktop-p_top }}px;
+      padding-bottom:{{ section.settings.desktop-p_bottom }}px;
+      padding-right:{{ section.settings.desktop-p_right }}px;
+      padding-left:{{ section.settings.desktop-p_left }}px;
+    }
+
+    #{{ section.id }} > .header_container > .section_header{
+      font-size: calc({{ section.settings.desktop-font_size }}px + 5px);
+      padding:15px 0 10px;
+    }
+
+    #{{ section.id }} > .header_container > .intro_container > .section_sub-heading{
+      font-size: calc({{ section.settings.desktop-font_size }}px + 2px);
+    }
+
+    #{{ section.id }} > .intro_container{
+      padding: 0 25px;
+    }
+
+    #{{ section.id }} > .intro_container > p{
+      font-size: {{ section.settings.desktop-font_size }}px;
+    }
+
+    #{{ section.id }} > .column_container > .column > p{
+      font-size: 12px;
+    }
+
+    #{{ section.id }} .view-collection > *{
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width:1200px){
+    #{{ section.id }} > .column_container{
+      justify-content:center;
+    }
+
+    #{{ section.id }} > .column_container > .column{
+      width:calc(100% / {{ section.blocks.size }});
+      max-width: calc(100% / 5)
+    }
+  }
+</style>
+
+<section id="{{ section.id }}">
+  {% if section.settings.header != empty %}
+    <div class="header_container">
+      <h2 class="section_header">{{ section.settings.header }}</h2>
+    </div>
+  {% endif %}
+  {% if section.settings.intro != empty or section.settings.sub_header != empty %}
+    <div class="intro_container">
+      {% if section.settings.sub_header != empty %}
+        <h3 class="section_sub-heading">{{ section.settings.sub_header | replace: 'p>', 'span>' }}</h3>
+      {% endif %}
+      {% if section.settings.intro != empty %}{{ section.settings.intro }}{% endif %}
+    </div>
+  {% endif %}
+  <div class="column_container {% if section.blocks.size == 1 %}center-aligned{% endif %}">
+    {% for block in section.blocks %}
+      {% if block.settings.url %}
+        <a href="{{ block.settings.url }}" title="{{ block.settings.button_text }}" class="column">
+          <img
+            data-src="{{ block.settings.image | image_url }}"
+            class="lazyload"
+            height="{{ block.settings.image.height }}"
+            width="{{ block.settings.image.width }}"
+            alt="{{ block.settings.image.alt }}"
+          >
+          {% if section.settings.have_buttons %}
+            <p>{{ block.settings.button_text }}</p>
+          {% endif %}
+        </a>
+      {% else %}
+        <div class="column">
+          <img
+            data-src="{{ block.settings.image | image_url }}"
+            class="lazyload"
+            height="{{ block.settings.image.height }}"
+            width="{{ block.settings.image.width }}"
+            alt="{{ block.settings.image.alt }}"
+          >
+          {% if section.settings.have_buttons %}
+            <p>{{ block.settings.button_text }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% if section.settings.show_collection %}
+    <div class="view-collection">
+      <a href="{{ section.settings.url }}" target="_self">
+        {% if section.settings['collection-text'] != empty %}
+          {{ section.settings['collection-text'] }}
+        {% else %}
+          View All
+        {% endif %}
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Multicolumn",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Max width",
+      "info": "Enter the value in px. Ex: 1400, 1250, ...",
+      "id": "max_width"
+    },
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color",
+      "label": "Header Background Colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Sub Header Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "sub_header",
+      "label": "Subheading"
+    },
+    {
+      "type": "color",
+      "id": "sub_header_color",
+      "label": "Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "sub_header_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Text Opacity",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Buttons Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "have_buttons",
+      "label": "Have Buttons?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "buttons_color",
+      "label": "Buttons Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "buttons_bg_color",
+      "label": "Buttons Background Colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Intro Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro Text"
+    },
+    {
+      "type": "header",
+      "content": "Collection Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection",
+      "label": "Show View All Button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "collection-text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Collection URL"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile-font_size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_top",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_right",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Left",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Desktop Settings"
+    },
+    {
+      "type": "range",
+      "id": "desktop-font_size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_top",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_right",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Left",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url",
+          "info": "Add the url that you want to send the user to."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        }
+      ],
+      "limit": 6
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
