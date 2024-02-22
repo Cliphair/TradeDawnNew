@@ -201,8 +201,8 @@
       {% if block.settings.url %}
         <a href="{{ block.settings.url }}" title="{{ block.settings.button_text }}" class="column">
           <img
-            data-src="{{ block.settings.image | image_url }}"
-            class="lazyload"
+            src="{{ block.settings.image | image_url }}"
+            loading='lazy'
             height="{{ block.settings.image.height }}"
             width="{{ block.settings.image.width }}"
             alt="{{ block.settings.image.alt }}"
@@ -214,8 +214,8 @@
       {% else %}
         <div class="column">
           <img
-            data-src="{{ block.settings.image | image_url }}"
-            class="lazyload"
+            src="{{ block.settings.image | image_url }}"
+            loading='lazy'
             height="{{ block.settings.image.height }}"
             width="{{ block.settings.image.width }}"
             alt="{{ block.settings.image.alt }}"
