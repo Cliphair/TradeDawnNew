@@ -29,7 +29,17 @@
     },
     "165053090392f2dcc0": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0 !important;}"
+      ],
       "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/7_db1b1822-71dc-4847-a388-b0e1a4de30c6.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/7_5c6af920-7abc-45ce-9745-6c1056682a7a.jpg",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "16642871960d40fae8": {
@@ -391,7 +401,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/26_51d9c12e-92a5-472a-b0ba-1e368bbbc90f.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/80e4f57cc8834a2f936e1488a6146b65.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "bdc998d1-815a-46f8-9f36-e62f96eb4b3d": {
@@ -399,7 +412,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/25_27d37682-f1aa-46a4-bab6-79728dbb8702.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/edff5d0ed136457fa61daf2ca5e65f32.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "145755f4-4d91-4e80-8bb6-52a475d8285a": {
@@ -407,7 +423,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/28_4dc8a830-4711-4eae-ae76-f31b9b641fd8.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de0868bc7c8443ee99d40d5e57810985.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "8f9b5f9f-b72e-48ef-be92-af04af2a64ba": {
@@ -415,7 +434,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/29_0d01d2f3-6ba9-4f93-ae60-b87953bee351.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86fb37e2e9bb453a8a2d481235cf9356.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "108959fc-d268-47b9-ae16-8301bb72b95e": {
@@ -423,7 +445,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/30_dccc5b33-cf90-44dd-85ba-7e7f31dc620c.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86fb37e2e9bb453a8a2d481235cf9356.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "b5bec1f2-acd1-4ab1-9231-a0a9ec115c94": {
@@ -431,7 +456,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/27_70d63c93-8306-480c-b7ff-e635f60d0f43.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7c012d86b43848cd9d684e76635600b9.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         }
       },
@@ -447,9 +475,11 @@
         "header": "<h2>Hear From Our Red Heads<\/h2>",
         "intro": "<p>What does being a redhead mean to you?<\/p><p>Who is your ULTIMATE redhead icon of all times? What hairstyle that brings your hair to life?<\/p><p><em><strong>Heres what our fabulous redheads have to say!<\/strong><\/em><\/p>",
         "image_orientation": "portrait",
+        "title-position": "bottom",
         "text_color": "#ffffff",
         "bg_color": "#d3b6a1",
         "max_width": "1440",
+        "social-media": false,
         "header-mobile-font_size": 22,
         "text-mobile-font_size": 12,
         "mobile-p_top": 20,
@@ -481,7 +511,7 @@
         "btn-text": "",
         "btn-url": "",
         "btn-color": "#000000",
-        "btn-bg-color": "#FFFFFF",
+        "btn-bg-color": "#ffffff",
         "btn-size-mobile": 12,
         "btn-size-desktop": 12
       }
@@ -559,7 +589,11 @@
     "166488890677063517": {
       "type": "custom-banner",
       "settings": {
-        "url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1"
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },

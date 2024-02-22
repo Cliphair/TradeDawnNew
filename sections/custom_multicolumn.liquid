@@ -429,8 +429,9 @@
           {% for block in section.blocks %}
             <div class="placeholder_image_container">
               <img
-                data-src="{{ block.settings.placeholder | image_url }}"
+                src="{{ block.settings.placeholder | image_url }}"
                 class="placeholder_image lazyload"
+                loading='lazy'
                 height="{{ block.settings.placeholder.height }}"
                 width="{{ block.settings.placeholder.width }}"
                 alt="{{ block.settings.placeholder.alt }}"
@@ -490,7 +491,8 @@
         >
           <img
             class="lazyload product_image"
-            data-src="{{ section.settings.product_image | image_url }}"
+            loading='lazy'
+            src="{{ section.settings.product_image | image_url }}"
             width="{{ section.settins.product_image.width }}"
             height="{{ section.settins.product_image.height }}"
             alt="{{ section.settins.product_image.alt }}"
