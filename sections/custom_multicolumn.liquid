@@ -440,14 +440,12 @@
                 <span
                   data-url="{{ block.settings.video_link }}"
                   class="play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}"
-                  ><i class="icon icon-play"></i
-                ></span>
+                  >{% render 'icon-play' %}</span>
                 {% if block.settings.video_link_desktop %}
                   <span
                     data-url="{{ block.settings.video_link_desktop }}"
                     class="play_button play_button_{{ randomNumber }} desktop_btn"
-                    ><i class="icon icon-play"></i
-                  ></span>
+                    >{% render 'icon-play' %}</span>
                 {% endif %}
               </div>
             </div>
@@ -463,8 +461,7 @@
               data-speed="50"
               data-distance="500"
               data-step="50"
-              ><i class="fa-solid fa-angle-left"></i
-            ></span>
+              >{% render 'icon-caret' %}</span>
             <span
               class="scroll-arrow right"
               onclick="scrollArrow(this)"
@@ -473,8 +470,7 @@
               data-speed="50"
               data-distance="500"
               data-step="50"
-              ><i class="fa-solid fa-angle-right"></i
-            ></span>
+              >{% render 'icon-caret' %}</span>
           </div>
         {% endif %}
       </div>
