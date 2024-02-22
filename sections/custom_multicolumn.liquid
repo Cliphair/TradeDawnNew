@@ -239,8 +239,11 @@
   #{{ section.id }} .video_container .videos .button_container > .play_button{
     color:{{ section.settings.play-color }};
     opacity:0.6;
-    font-size:{{ section.settings.play-size-mobile }}px;
     cursor:pointer;
+  }
+
+  #{{ section.id }} .video_container .videos .button_container > .play_button > svg{
+    height:{{ section.settings.play-size-mobile }}px;
   }
 
   #{{ section.id }} .video_container .videos .button_container > .play_button.desktop_btn{
