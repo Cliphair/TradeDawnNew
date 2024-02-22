@@ -255,13 +255,18 @@
   }
 
   #{{section.id}} .arrow-container{
-    top:32%;
-    position:absolute;
+    top: calc(50% - 30px);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   #{{section.id}} .arrow-container > *{
     color:#D0D0D0;
     opacity:0.6;
+    display:inline-block;
   }
 
   #{{section.id}} .arrow-container > * > svg{
