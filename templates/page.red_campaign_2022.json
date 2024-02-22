@@ -28,84 +28,8 @@
       }
     },
     "165053090392f2dcc0": {
-      "type": "custom_banner",
-      "blocks": {
-        "165053090272b87ee2-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/7_db1b1822-71dc-4847-a388-b0e1a4de30c6.jpg",
-            "enable": true,
-            "bg_v_alignment": "bg-middle",
-            "type": "none",
-            "video_id": "",
-            "link": "",
-            "link_target": "_self",
-            "link_button_yes": false,
-            "link_button_text": "Shop now",
-            "link_button_only_yes": false,
-            "btn_hor_aligment": "center",
-            "button_animation": "fadeIn",
-            "button_delay": "",
-            "button_text_color": "#ffffff",
-            "button_text_color_on": "#ffffff",
-            "button_bgcolor": "#ff358b",
-            "button_bgcolor_on": "#000000",
-            "button_othercss": "",
-            "captions_h_alignment": "txt-center",
-            "captions_v_alignment": "txt-middle",
-            "caption_1_yes": false,
-            "caption_1": "Lorem Ipsum",
-            "caption_1_animation": "fadeIn",
-            "caption_1_delay": "",
-            "caption_1_color": "#ffffff",
-            "caption_1_hor_alignment": "global",
-            "caption_1_bgcolor": "",
-            "caption_1_fontweight": "400",
-            "caption_1_fontsize": "lg",
-            "caption_1_lineheight": "",
-            "caption_1_othercss": "",
-            "caption_2_yes": false,
-            "caption_2": "Lorem Ipsum",
-            "caption_2_animation": "fadeIn",
-            "caption_2_delay": "",
-            "caption_2_hor_alignment": "global",
-            "caption_2_color": "#ffffff",
-            "caption_2_bgcolor": "",
-            "caption_2_fontweight": "400",
-            "caption_2_fontsize": "lg",
-            "caption_2_lineheight": "",
-            "caption_2_othercss": "",
-            "caption_3_yes": false,
-            "caption_3": "Lorem Ipsum",
-            "caption_3_animation": "fadeIn",
-            "caption_3_delay": "",
-            "caption_3_hor_alignment": "global",
-            "caption_3_color": "#ffffff",
-            "caption_3_bgcolor": "",
-            "caption_3_fontweight": "400",
-            "caption_3_fontsize": "lg",
-            "caption_3_lineheight": "",
-            "caption_3_othercss": ""
-          }
-        }
-      },
-      "block_order": [
-        "165053090272b87ee2-0"
-      ],
+      "type": "custom-banner",
       "settings": {
-        "block_width": "global_width",
-        "outer_margin": "offset-top-0",
-        "autoplay": false,
-        "dots": false,
-        "arrows": false,
-        "autoplay_speed": "5000",
-        "slideshow_height": "md",
-        "keep_scale": true,
-        "keep_scale_width": "1920",
-        "keep_scale_height": "632",
-        "keep_scale_mwidth": "1000",
-        "keep_scale_mheight": "1000",
-        "display_type": "desktop"
       }
     },
     "16642871960d40fae8": {
@@ -633,26 +557,9 @@
       }
     },
     "166488890677063517": {
-      "type": "custom_banner",
+      "type": "custom-banner",
       "settings": {
-        "header": "<h2>FIND YOUR PERFRCT MATCH<\/h2>",
-        "image": "shopify:\/\/shop_images\/Redhead_colour_match_banner_mobile.jpg",
-        "desktop_image": "shopify:\/\/shop_images\/Redhead_colour_match_banner_desktop.jpg",
-        "url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1",
-        "text_color": "#ffffff",
-        "bg_color": "#d3b6a1",
-        "header_bg_color": "#d3b6a1",
-        "max_width": "1440",
-        "mobile-font_size": 17,
-        "mobile-p_top": 8,
-        "mobile-p_bottom": 0,
-        "mobile-p_right": 0,
-        "mobile-p_left": 0,
-        "desktop-font_size": 21,
-        "desktop-p_top": 8,
-        "desktop-p_bottom": 0,
-        "desktop-p_right": 0,
-        "desktop-p_left": 0
+        "url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1"
       }
     }
   },
