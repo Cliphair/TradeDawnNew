@@ -48,7 +48,7 @@
     data-step-tablet="{{ stepTablet }}"
     data-step-desktop="{{ stepDesktop }}"
   >
-    <i class="fa-solid fa-angle-left"></i>
+    {% render 'icon-caret' %}
   </span>
   <span
     class="scroll-arrow right {% if customClass %}{{ customClass }}{% endif %}"
@@ -60,7 +60,7 @@
     data-step-tablet="{{ stepTablet }}"
     data-step-desktop="{{ stepDesktop }}"
   >
-    <i class="fa-solid fa-angle-right"></i>
+    {% render 'icon-caret' %}
   </span>
 
   <script>
