@@ -45,6 +45,10 @@
   text-decoration:none;
 }
 
+.bridal23-hair-quiz-section > .inner-container > a:hover{
+  text-decoration:underline;
+}
+
 @media screen and (min-width:992px){
   .bridal23-hair-quiz-section > .inner-container > .text-container{
     margin-bottom:20px;
