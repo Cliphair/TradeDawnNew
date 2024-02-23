@@ -1,0 +1,119 @@
+{% if section.settings.max-width != empty %}
+  <style>
+    #section-{{ section.id }} .break-line{
+      max-width:{{ section.settings.max_width }}px;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding: {{ section.settings.mobile-p_top-bottom }}px {{section.settings.mobile-p_sides}}px;
+    width:100%;
+  }
+
+  #section-{{ section.id }} .break-line{
+    width:100%;
+    margin:0 auto;
+    height: {{ section.settings.height }}px;
+    background:{{ section.settings.bg_color }};
+  }
+
+  @media screen and (min-width: 992px) {
+    #section-{{ section.id }}{
+      padding: {{ section.settings.desktop-p_top-bottom }}px {{section.settings.desktop-p_sides}}px;
+    } 
+  }
+</style>
+
+<section id='section-{{ section.id }}'>
+  <div class='break-line'></div>
+</section>
+
+{% schema %}
+  {
+    "name": "Break Line",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "range",
+        "id": "height",
+        "min": 0,
+        "max": 10,
+        "step": 0.5,
+        "unit": "px",
+        "label": "Line Height",
+        "default": 1
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top-bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top and Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_sides",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Sides",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top-bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top and Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_sides",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Sides",
+        "default": 0
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
