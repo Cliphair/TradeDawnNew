@@ -2,16 +2,16 @@
   {% assign page_font = section.settings.font %}
   {{ page_font | font_face }}
 
-  main.page-main h1,
-  main.page-main h2,
-  main.page-main h3,
-  main.page-main h4,
-  main.page-main h5,
-  main.page-main h6,
-  main.page-main p,
-  main.page-main a,
-  main.page-main label,
-  main.page-main select{
+  main.content-for-layout h1,
+  main.content-for-layout h2,
+  main.content-for-layout h3,
+  main.content-for-layout h4,
+  main.content-for-layout h5,
+  main.content-for-layout h6,
+  main.content-for-layout p,
+  main.content-for-layout a,
+  main.content-for-layout label,
+  main.content-for-layout select{
     font-family: {{ page_font.family }}, {{ page_font.fallback_families }};
   }
 </style>
