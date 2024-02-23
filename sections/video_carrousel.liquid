@@ -268,9 +268,11 @@
 <script>
     var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
 
-  playBtns{{randomNumber}}.setEventListener('click', function(){
-  	btsVideoTag(this.dataset.url)
-  });
+  for (let button of playBtns{{randomNumber}}){
+    button.addEventListener('click', function(){
+    	btsVideoTag(this.dataset.url)
+    });
+  }
 </script>
 
 {% schema %}
