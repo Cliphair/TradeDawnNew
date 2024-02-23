@@ -1,6 +1,100 @@
+<link rel="preload" href="{{ 'section-video-banner.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'" />
+<noscript>
+  {{ 'section-video-banner.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+{% if section.settings.max-width != empty %}
+<style>
+  #section-{{ section.id }} > video{
+    max-width: {{ section.settings.max-width }}px;
+  }
+</style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    background: {{ section.settings.bg-color }};
+  }
+</style>
+
+<section id='section-{{ section.id }}' class='section-video-banner'>
+  {% if section.settings.url and section.settings.image %}
+    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline oncontextmenu="return false;"  preload="auto">
+      <source src="{{ section.settings.url }}" type="video/mp4">
+      <img src='{{ section.settings.image | image_url }}' class='fallback-image' height='{{ section.settings.image.height }}' width='{{ section.settings.image.width }}' alt='{{ section.settings.image.alt }}'>
+    </video>
+    <!-- Optional: some overlay text to describe the video -->
+    <!-- <div class="pause-btn-container">
+      <button class='pause-btn'><i class="fa-solid fa-pause"></i></button>
+    </div> -->
+  {% endif %}
+</section>
+
+<script>
+// Get the video
+let video = document.querySelector("#section-{{ section.id }} > video");
+// // Get the button
+// let btn = document.querySelector("#section-{{ section.id }} > .pause-btn-container > .pause-btn");
+
+// btn.addEventListener("click", function(){
+//   pause();
+// })
+  
+// Pause and play the video, and change the button text
+function pause() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+  } else {
+    video.pause();
+    btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+  }
+}
+
+</script>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Video Banner",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Video Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Fallback Image",
+        "info": "Image will be used if video doesn't load"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "text",
+        "id": "max-width",
+        "label": "Max Width"
+      },
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      }
+    ],
+    "presets": [
+      {"name": "Video Banner"}
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
