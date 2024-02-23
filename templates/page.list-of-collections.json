@@ -7,9 +7,25 @@
         "heading_size": "h1",
         "show_content": true,
         "text_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "accent-4",
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "collection_carrousel_by_url_wipWMw": {
+      "type": "collection-carrousel-by-url",
+      "settings": {
+        "heading_size": "h1",
+        "text_allignment": "left",
+        "image_ratio": "portrait",
+        "hide_card_arrow": true,
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
+        "color_scheme": "accent-4",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "main_page_more_info_Q3wUMD": {
@@ -41,6 +57,7 @@
   },
   "order": [
     "main",
+    "collection_carrousel_by_url_wipWMw",
     "main_page_more_info_Q3wUMD",
     "page_faq_KbgfYy"
   ]
