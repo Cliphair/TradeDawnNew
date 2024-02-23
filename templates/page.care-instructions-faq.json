@@ -2,6 +2,9 @@
   "sections": {
     "page-content": {
       "type": "main-page",
+      "custom_css": [
+        "h1 {margin-bottom: 0;}"
+      ],
       "settings": {
         "show_title": true,
         "heading_size": "h1",
@@ -9,7 +12,29 @@
         "text_alignment": "center",
         "color_scheme": "background-grey",
         "padding_top": 36,
-        "padding_bottom": 0
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_N8hV3E": {
+      "type": "rich-text",
+      "blocks": {
+        "text_zLP6MX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you want long lasting, healthy looking, beautiful hair extensions it is essential that you care for them well and use the correct products. Neglected hair extensions can look dry, unnatural and become difficult to manage, follow our care guide to keep your hair looking and feeling gorgeous!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_zLP6MX"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     },
     "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c": {
@@ -18,9 +43,9 @@
         "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are your Hair extensions made from human hair?",
+            "heading": "Brushing",
             "icon": "none",
-            "row_content": "<p>Yes. All of the hair extensions across our entire range are made from 100% Remy, human hair. Human hair, unlike synthetic or animal hair, can be styled, dyed, washed and brushed giving you way more freedom and a far more natural finish.<\/p>",
+            "row_content": "<p><strong>ALWAYS<\/strong> brush your extensions before applying them, before washing them and after you take them out.<br\/><br\/>Only use an extension safe hairbrush like <a href=\"https:\/\/www.cliphair.co.uk\/products\/detangling-hair-brush\" title=\"The Wet One by Cliphair Detangling Hairbrush\">The Wet One by Cliphair Detangling brush<\/a>. Brushes with bobbled ends or very fine teeth can catch the seams of the hair extensions causing hair fallout.<br\/><br\/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.<br\/><br\/><strong>NEVER<\/strong> brush your hair extensions whilst they are wet. This puts too much tension on the seams and can cause them to break.<br\/><br\/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.<\/p>",
             "page": ""
           }
         },
@@ -69,7 +94,7 @@
         "1a970fc7-b7ea-46ef-939a-06727238e688"
       ],
       "settings": {
-        "heading": "QUALITY OF OUR HAIR EXTENSIONS",
+        "heading": "Clip Ins, Ponytails & Fringes",
         "heading_size": "h2",
         "heading_alignment": "left",
         "arrow_style": "half-arrow",
@@ -498,6 +523,7 @@
   },
   "order": [
     "page-content",
+    "rich_text_N8hV3E",
     "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c",
     "00bf3b8c-d18a-4fb4-b587-03b6c69ac620",
     "5c50884a-a478-4841-8c8f-da58bf52a3a7",
