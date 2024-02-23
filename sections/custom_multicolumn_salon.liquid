@@ -251,6 +251,13 @@
     opacity:1;
   }
 
+  #{{ section.id }} .video_container .videos .button_container > .play_button svg{
+    width:{{ section.settings.play-size-mobile }}px;
+    aspect-ratio:1;
+    padding:10px;
+    border:2px solid;
+  }
+
   #{{section.id}} .arrow-container{
     top:32%;
   }
@@ -422,9 +429,9 @@
             <div class='placeholder_image_container'>
               <img src='{{ block.settings.placeholder | image_url }}' class='placeholder_image lazyload' height='{{ block.settings.placeholder.height }}' width='{{ block.settings.placeholder.width }}' alt='{{ block.settings.placeholder.alt }}' loading='lazy'>
               <div class='button_container'>
-                <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}'><i class="icon icon-play"></i></span>
+                <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}'>{% render 'icon-play' %}</span>
                 {% if block.settings.video_link_desktop %}
-                  <span data-url='{{ block.settings.video_link_desktop }}' class='play_button play_button_{{ randomNumber }} desktop_btn'><i class="icon icon-play"></i></span>
+                  <span data-url='{{ block.settings.video_link_desktop }}' class='play_button play_button_{{ randomNumber }} desktop_btn'>{% render 'icon-play' %}</span>
                 {% endif %}
               </div>
             </div>
@@ -432,8 +439,8 @@
         </div>
         {% if section.blocks.size >= 2 %}
           <div class='arrow-container'>
-            <span class='scroll-arrow left' onclick='scrollArrow(this)' data-target='videos' data-direction='left' data-speed='50' data-distance='500' data-step='50'><i class="fa-solid fa-angle-left"></i></span>
-            <span class='scroll-arrow right' onclick='scrollArrow(this)' data-target='videos' data-direction='right' data-speed='50' data-distance='500' data-step='50'><i class="fa-solid fa-angle-right"></i></span>
+            <span class='scroll-arrow left' onclick='scrollArrow(this)' data-target='videos' data-direction='left' data-speed='50' data-distance='500' data-step='50'>{% render 'icon-caret' %}</span>
+            <span class='scroll-arrow right' onclick='scrollArrow(this)' data-target='videos' data-direction='right' data-speed='50' data-distance='500' data-step='50'>{% render 'icon-caret' %}</span>
           </div>
         {% endif %}
       </div>
