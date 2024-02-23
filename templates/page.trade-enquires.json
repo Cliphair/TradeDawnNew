@@ -1,66 +1,5 @@
 {
   "sections": {
-    "6f8e37b0-896b-4dad-b5d1-f75372515afe": {
-      "type": "custom_multicolumn_bridal",
-      "blocks": {
-        "c597cf1a-b3a5-402a-bf87-bc814b094f84": {
-          "type": "video",
-          "settings": {
-            "placeholder": "shopify:\/\/shop_images\/bts-banner.jpg",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/274eb7fccd4145d0a77a45af2683cd8e.mp4",
-            "video_link_desktop": ""
-          }
-        }
-      },
-      "block_order": [
-        "c597cf1a-b3a5-402a-bf87-bc814b094f84"
-      ],
-      "disabled": true,
-      "settings": {
-        "bg_color": "#ffffff",
-        "max_width": "1440",
-        "mobile-p_top": 0,
-        "mobile-p_bottom": 10,
-        "mobile-p_right": 10,
-        "mobile-p_left": 10,
-        "desktop-p_top": 0,
-        "desktop-p_bottom": 16,
-        "desktop-p_right": 16,
-        "desktop-p_left": 16,
-        "enable_text": true,
-        "custom_text": true,
-        "header": "THE SECRET RECIPE FOR A GREAT PHOTOSHOOT?",
-        "sub_header": "",
-        "description": "<p>Having fun together. Sneak-a-peek behind the glitz and glamour of “Brides Wear Cliphair”<\/p>",
-        "read_more": "",
-        "text_width": 60,
-        "title_tag": "h2",
-        "header_mobile_font": 16,
-        "header_desktop_font": 20,
-        "text_mobile_font": 12,
-        "text_desktop_font": 20,
-        "header_color": "#000000",
-        "header_opacity": 100,
-        "sub_header_color": "#000000",
-        "text_color": "#000000",
-        "enable_video": true,
-        "video_width": 60,
-        "play-size-mobile": 60,
-        "play-size-desktop": 70,
-        "play-color": "#ffffff",
-        "enable_product": false,
-        "product": "",
-        "product_price": "",
-        "product_width": 50,
-        "product_mobile_font": 12,
-        "product_desktop_font": 18,
-        "product_text_color": "#000000",
-        "product_bg_color": "#ffffff",
-        "enable_form": false,
-        "form_id": "",
-        "form_width": 50
-      }
-    },
     "166445343207c9fec0": {
       "type": "page_font_bridal23",
       "settings": {
@@ -460,7 +399,6 @@
     }
   },
   "order": [
-    "6f8e37b0-896b-4dad-b5d1-f75372515afe",
     "166445343207c9fec0",
     "0c153882-297c-45dd-9e13-0c3b0fe48078",
     "57c89bc1-e173-4782-bfe1-7229f34f91ab",
