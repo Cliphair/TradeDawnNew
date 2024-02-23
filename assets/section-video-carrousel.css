@@ -123,7 +123,7 @@
 }
 
 .section-video-carrousel .placeholder_image_container .button_container>.play_button svg {
-  font-size: 70px;
+  width: 70px;
 }
 
 .section-video-carrousel .placeholder_image_container .button_container>.play_button:hover {
