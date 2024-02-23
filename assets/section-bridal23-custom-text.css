@@ -1,0 +1,55 @@
+.bridal23-hair-quiz-section{
+  width:100%;
+  margin:0;
+}
+
+.bridal23-hair-quiz-section > .inner-container{
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+}
+
+.bridal23-hair-quiz-section > .inner-container > .title-container > *{
+  line-height:1.2em;
+  margin-bottom: 10px;
+  font-weight:400;
+}
+
+.bridal23-hair-quiz-section > .inner-container > .text-container{
+  margin-bottom:15px;
+}
+
+.bridal23-hair-quiz-section > .inner-container > .text-container > *{
+  line-height:1.2em;
+  margin-bottom:15px;
+}
+
+.bridal23-hair-quiz-section > .inner-container > .text-container span.number{
+    display: inline-flex;
+    box-sizing: content-box;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 2px;
+    margin: 0 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bridal23-hair-quiz-section > .inner-container > a{
+  line-height:1.2em;
+  position:relative;
+  padding:10px 25px;
+  margin-top: 5px;
+  display: inline-block;
+  box-shadow: 5px 5px 5px #77777773;
+}
+
+@media screen and (min-width:992px){
+  .bridal23-hair-quiz-section > .inner-container > .text-container{
+    margin-bottom:20px;
+  }
+
+  .bridal23-hair-quiz-section > .inner-container > a{
+    padding:10px 45px;
+  }
+}
