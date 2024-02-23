@@ -266,12 +266,12 @@
 </section>
 
 <script>
-    var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
+  var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
 
   for (let button of playBtns{{randomNumber}}){
     button.addEventListener('click', function(){
       console.log('test')
-      btsVideoTag(this.dataset.url)
+      btsVideoTag(button.dataset.url)
     });
   }
 </script>
