@@ -1,0 +1,117 @@
+.trending-articles-container-bridal23{
+  margin:0 auto;
+  position:relative;
+}
+
+.trending-section-header{
+  line-height:1.2em;
+  margin: 0 0 20px;
+  text-align:center;
+}
+
+.trending-section-intro > *{
+  margin: 0 0 10px;
+  padding: 0;
+  line-height: 1.2em;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.trending-articles-inner-container{
+  display:flex;
+  justify-content:flex-start;
+  align-items:stretch;
+  overflow-x:auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.trending-articles-inner-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.trending-articles-inner-container{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.trending-articles-inner-container > .trending-article{
+  margin:0;
+  padding-right:10px;
+  box-sizing:content-box;
+}
+
+.trending-articles-inner-container > .trending-article.last{
+  padding-right:0px;
+}
+
+.trending-articles-inner-container > .trending-article:hover{
+  text-decoration:none;
+}
+
+.trending-articles-inner-container > .trending-article > .trending-article-image{
+  width:100%;
+  height:auto;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+
+.trending-articles-inner-container > .trending-article > .trending-text-container{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:15px;
+}
+
+.trending-text-container > .trending-title{
+  margin-bottom:7px;
+  text-align:center;
+  letter-spacing:0.5px;
+  text-transform:capitalize;
+}
+
+.trending-text-container > .trending-title:hover{
+  text-decoration:underline;
+}
+
+.trending-text-container > .trending-read-more{
+  opacity:0.5;
+  text-decoration:underline;
+  cursor:pointer;
+  text-underline-offset:.2rem;
+  font-weight:800;
+  margin:0;
+  transition:opacity ease 1s;
+}
+
+.trending-text-container > .trending-read-more:hover{
+  opacity:1;
+  text-decoration:none;
+}
+
+.trending-dot-container{
+  text-align:center;
+}
+
+.trending-dot-container > .trending-dot{
+  opacity:0.5;
+  height:10px;
+  width:10px;
+  margin-right:10px;
+}
+
+.trending-dot-container.text-container{
+  margin-top:25px;
+}
+
+.trending-dot-container.text-container > .trending-section-btn{
+  text-decoration:none;
+  padding:10px 20px;
+  text-transform: uppercase;
+  font-weight:800;
+}
+
+.trending-dot-container.text-container > .trending-section-btn:hover{
+  text-decoration:underline;
+}
