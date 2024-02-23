@@ -353,7 +353,7 @@
       "settings": {
         "bg_color": "#c8c8c8",
         "max_width": "1024",
-        "height": 0.5,
+        "height": 1,
         "mobile-p_top-bottom": 10,
         "mobile-p_sides": 10,
         "desktop-p_top-bottom": 10,
