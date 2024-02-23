@@ -22,6 +22,8 @@
   padding: 10px 25px 5px;
   margin-top:15px;
   display:inline-block;
+  line-height:1.2em;
+  text-decoration:none;
 }
 
 .action-button-container > .section-btn:hover{
