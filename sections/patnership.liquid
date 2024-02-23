@@ -1,6 +1,216 @@
+<link rel="preload" href="{{ 'section-partnership.css' | asset_url }}" as="style" />
+{{ 'section-partnership.css' | asset_url | stylesheet_tag }}
+<style>
+  #section-{{ section.id }}{
+    padding-top:{{ section.settings.mobile-top-padding }}px;
+    padding-bottom:{{ section.settings.mobile-bottom-padding }}px;
+    padding-right:{{ section.settings.mobile-right-padding }}px;
+    padding-left:{{ section.settings.mobile-left-padding }}px;
+    background:{{section.settings.bg_colour}};
+  }
+  
+  .partnership-container{
+    {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
+  }
+  
+  .partnership-container > p{
+    color:{{section.settings.text_colour}};
+    font-size:{{section.settings.text-mobile-font-size}}px;
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top:{{ section.settings.desktop-top-padding }}px;
+      padding-bottom:{{ section.settings.desktop-bottom-padding }}px;
+      padding-right:{{ section.settings.desktop-right-padding }}px;
+      padding-left:{{ section.settings.desktop-left-padding }}px;
+    }
+  
+    .partnership-container > p{
+      font-size:{{section.settings.text-desktop-font-size}}px;
+    }
+  }
+  
+</style>
+<div id="section-{{ section.id }}" class="partnership-outer-container">
+  <div class="partnership-container">
+    {% for block in section.blocks %}
+        {% case block.type %}
+          {% when "image" %}
+            {% if block.settings.image %}
+              <img data-src="{{ block.settings.image | image_url }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" class="lazyload" alt="{{ block.settings.image.alt}}">
+            {% endif %}
+          {% when "text" %}
+            {% if block.settings.text != empty %}<p>{{ block.settings.text | replace: "p>", "span>" }}</p>{% endif %}
+        {% endcase %}
+      {% endfor %}
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Partnership",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "text_colour",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_colour",
+        "label": "Background Colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "max-width",
+        "label": "Max Width",
+        "info": "Please enter max-width value in pixels, ex: 1250, 1440."
+      },
+      {
+        "type": "header",
+		"content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+		"id": "text-mobile-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Mobile Font Size",
+		"default": 14
+      },
+      {
+        "type": "range",
+		"id": "mobile-top-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Top Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-bottom-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Bottom Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-right-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Right Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-left-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Left Padding",
+		"default": 0
+      },
+      {
+		"type": "header",
+		"content": "Desktop Settings"
+      },
+      {
+		"type": "range",
+		"id": "text-desktop-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Desktop Font Size",
+		"default": 20
+      },
+      {
+        "type": "range",
+		"id": "desktop-top-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Top Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-bottom-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Bottom Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-right-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Right Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-left-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Left Padding",
+		"default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select an image"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
