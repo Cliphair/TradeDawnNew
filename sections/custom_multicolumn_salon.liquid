@@ -261,16 +261,32 @@
 
   #{{section.id}} .arrow-container{
     top:32%;
+    position:absolute;
+    width:100%;
   }
   
   #{{section.id}} .arrow-container > *{
     color:#D0D0D0;
     opacity:0.6;
-    font-size:70px;
+    position:absolute;
+  }
+
+  #{{section.id}} .arrow-container > * svg{
+    width:70px;
   }
 
   #{{section.id}} .arrow-container > *:hover{
     opacity:1;
+  }
+
+  #{{section.id}} .arrow-container > .right{
+    right:0;
+    transform:rotate(270deg);
+  }
+
+  #{{section.id}} .arrow-container > .left{
+    left:0;
+    transform:rotate(90deg);
   }
 
   #bts__video-container .video__container{
