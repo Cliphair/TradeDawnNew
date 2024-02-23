@@ -51,7 +51,7 @@ function btsVideoTag(videoUrl){
     		</div>
     	`;
     }
-    document.querySelector('body').appendChild(video)
+    document.querySelector('body').innerHTML.prepend(video)
 }
   
 function btsCloseBtn(){
