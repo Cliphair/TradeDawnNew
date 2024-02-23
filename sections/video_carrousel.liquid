@@ -183,10 +183,11 @@
 
               <div class="image-wrapper">
                 <img
-                  data-src="{{ block.settings.image | image_url }}"
+                  src="{{ block.settings.image | image_url }}"
                   height="{{ block.settings.image.height }}"
                   width="{{ block.settings.image.width }}"
                   class="lazyload image"
+                  loading='lazy'
                   alt="{{ block.settings.image.alt }}"
                 >
                 <div
