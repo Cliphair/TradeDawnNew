@@ -1,55 +1,55 @@
 <style>
   {% assign title1 = section.settings.font-titles-1 %}
   {{ title1 | font_face }}
-  main.page-main h1,
-  main.page-main h2,
-  main.page-main h3,
-  main.page-main h4,
-  main.page-main h5,
-  main.page-main h6,
-  main.page-main p,
-  main.page-main a,
-  main.page-main ul,
-  main.page-main li,
-  main.page-main label,
-  main.page-main select{
+  main.content-for-layout h1,
+  main.content-for-layout h2,
+  main.content-for-layout h3,
+  main.content-for-layout h4,
+  main.content-for-layout h5,
+  main.content-for-layout h6,
+  main.content-for-layout p,
+  main.content-for-layout a,
+  main.content-for-layout ul,
+  main.content-for-layout li,
+  main.content-for-layout label,
+  main.content-for-layout select{
     font-family: {{ title1.family }}, {{ title1.fallback_families }};
   }
 
   {% assign title2 = section.settings.font-titles-2 %}
   {{ title2 | font_face }}
-  main.page-main h1 > em,
-  main.page-main h2 > em,
-  main.page-main h3 > em,
-  main.page-main h4 > em,
-  main.page-main h5 > em,
-  main.page-main h6 > em{
+  main.content-for-layout h1 > em,
+  main.content-for-layout h2 > em,
+  main.content-for-layout h3 > em,
+  main.content-for-layout h4 > em,
+  main.content-for-layout h5 > em,
+  main.content-for-layout h6 > em{
     font-family: {{ title2.family }}, {{ title1.fallback_families }};
   }
 
   {% assign text1 = section.settings.font-text-1 %}
   {{ text1 | font_face }}
-  main.page-main p,
-  main.page-main a,
-  main.page-main li,
-  main.page-main ul,
-  main.page-main label,
-  main.page-main select{
+  main.content-for-layout p,
+  main.content-for-layout a,
+  main.content-for-layout li,
+  main.content-for-layout ul,
+  main.content-for-layout label,
+  main.content-for-layout select{
     font-family: {{ text1.family }}, {{ text1.fallback_families }};
   }
 
   {% assign text2 = section.settings.font-text-2 %}
   {{ text2 | font_face }}
-  main.page-main p > em,
-  main.page-main a > em,
-  main.page-main label > em,
-  main.page-main select > em{
+  main.content-for-layout p > em,
+  main.content-for-layout a > em,
+  main.content-for-layout label > em,
+  main.content-for-layout select > em{
     font-family: {{ text2.family }}, {{ text2.fallback_families }};
   }
 
   {% assign btns = section.settings.font-btns %}
   {{ btns | font_face }}
-  main.page-main a{
+  main.content-for-layout a{
     font-family: {{ btns.family }}, {{ btns.fallback_families }};
   }
 </style>
