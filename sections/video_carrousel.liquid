@@ -98,7 +98,7 @@
   #section-{{ section.id }} .scroll-arrow{
     color:{{ section.settings.arrow-color }};
     position:absolute;
-    top:{{ section.settings.arrow-position-mobile }}%;
+    top:calc(50% - ({{ section.settings.arrow-size-mobile }}px / 2));
   }
 
   #section-{{ section.id }} .scroll-arrow.right{
