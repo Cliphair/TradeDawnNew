@@ -158,51 +158,10 @@
   "name": "Collection list by url",
   "tag": "section",
   "class": "section section-collection-carrousel",
-  "max_blocks": 15,
   "disabled_on": {
     "groups": ["header", "footer"]
   },
   "settings": [
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "Small"
-        },
-        {
-          "value": "h1",
-          "label": "Medium"
-        },
-        {
-          "value": "h0",
-          "label": "Large"
-        }
-      ],
-      "default": "h1",
-      "label": "Heading size"
-    },
-    {
-      "type": "select",
-      "id": "text_allignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
-      ],
-      "default": "left",
-      "label": "Text allignment"
-    },
     {
       "type": "select",
       "id": "image_ratio",
@@ -299,59 +258,6 @@
       "unit": "px",
       "label": "Bottom padding",
       "default": 36
-    }
-  ],
-  "blocks": [
-    {
-      "type": "collections",
-      "name": "Collections",
-      "settings": [
-        {
-          "type": "inline_richtext",
-          "id": "block-title",
-          "label": " Block heading"
-        },
-        {
-          "type": "richtext",
-          "id": "block-introduction",
-          "label": " Block introduction"
-        },
-        {
-          "type": "link_list",
-          "id": "collection-list",
-          "label": "Collections list"
-        },
-        {
-          "type": "header",
-          "content": "Block view all button"
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Button label"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Button link"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary",
-          "label": "Use outline button style",
-          "default": false
-        },
-        {
-          "type": "header",
-          "content": "Image settings"
-        },
-        {
-          "type": "checkbox",
-          "id": "circle_images",
-          "label": "Make images circle",
-          "default": false
-        }
-      ]
     }
   ],
   "presets": [
