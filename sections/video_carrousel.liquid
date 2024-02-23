@@ -268,7 +268,7 @@
 <script>
     var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
 
-  playBtns{{randomNumber}}.click(function(){
+  playBtns{{randomNumber}}.addEventListener('click', function(){
   	btsVideoTag(this.dataset.url)
   });
 </script>
