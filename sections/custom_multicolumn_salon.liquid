@@ -551,11 +551,13 @@
 
 {% if section.settings.enable_video %}
   <script>
-    var playBtns{{randomNumber}} = $('.play_button_{{randomNumber}}');
-  
-    playBtns{{randomNumber}}.click(function(){
-    	btsVideoTag(this.dataset.url)
-    });  
+    var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
+
+    for(let button of playBtns{{randomNumber}}){
+      button.addEventListener('click', function(){
+        btsVideoTag(button.dataset.url)
+      });
+    }
   </script>
   
   <script>
