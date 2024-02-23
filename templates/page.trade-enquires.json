@@ -132,7 +132,13 @@
     "0633b861-fa70-4e85-9192-1fab3592021f": {
       "type": "custom-banner",
       "settings": {
-        "url": ""
+        "max-width": "1440",
+        "bg-color": "#e4dde5",
+        "desktop-image": "shopify:\/\/shop_images\/trade-enquiries-benefits-banner-desktop.webp",
+        "mobile-image": "shopify:\/\/shop_images\/trade-enquiries-benefits-banner-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "6ac59c33-6b1c-46e8-9bf8-2c1acb072c2f": {
