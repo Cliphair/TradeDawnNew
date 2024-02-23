@@ -139,12 +139,12 @@
           {% assign article = link.object %}
           <a href='{{ article.url }}' title='{{ article.title }}' class='trending-article {% if forloop.last %}last{% endif %}' data-index='trending_{{ forloop.index }}'>  
             {% if image %}
-              <img data-src='{{ image | image_url }}' width='{{ image.width }}' height='{{ image.height }}' alt='{{ image.alt }}' class='lazyload trending-article-image'>
+              <img loading='lazy' src='{{ image | image_url }}' width='{{ image.width }}' height='{{ image.height }}' alt='{{ image.alt }}' class='lazyload trending-article-image'>
             {% else %}
               {% if article.metafields.global.main_image %}
-                <img data-src='{{ article.metafields.global.main_image }}' alt='{{ article.title }}' class='lazyload trending-article-image'>
+                <img loading='lazy' src='{{ article.metafields.global.main_image }}' alt='{{ article.title }}' class='lazyload trending-article-image'>
               {% else %}
-                <img data-src='{{ article.image | image_url }}' width='{{ article.image.width }}' height='{{ article.image.height }}' alt='{{ article.image.alt }}' class='lazyload trending-article-image'>
+                <img loading='lazy' src='{{ article.image | image_url }}' width='{{ article.image.width }}' height='{{ article.image.height }}' alt='{{ article.image.alt }}' class='lazyload trending-article-image'>
               {% endif %}
             {% endif %}
             
