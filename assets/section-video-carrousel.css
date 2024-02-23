@@ -119,8 +119,11 @@
 
 .section-video-carrousel .placeholder_image_container .button_container>.play_button {
   opacity: 0.6;
-  font-size: 10vw;
   cursor: pointer;
+}
+
+.section-video-carrousel .placeholder_image_container .button_container>.play_button > svg {
+  font-size: 70px;
 }
 
 .section-video-carrousel .placeholder_image_container .button_container>.play_button:hover {
