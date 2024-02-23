@@ -26,6 +26,38 @@ function closeReadLess(btn) {
     btn.parentElement.classList.add('hidden');
 }
 
+function btsVideoTag(videoUrl){
+  let video=``;
+    if (videoUrl.includes("youtube")){
+      let videoId = videoUrl.includes("shorts") ? videoUrl.split("/shorts/")[1] : videoUrl.split("/watch?v=")[1];
+      video = `
+    		<div id='bts__video-container' class='video__bg' onclick='btsCloseBtn()'>
+    			<div class='video__container'>
+    			  <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}?si=uhRBra05BAOkACcF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    			</div>
+    		</div>
+    	`;
+    } else{
+      	video = `
+    		<div id='bts__video-container' class='video__bg' onclick='btsCloseBtn()'>
+    			<div class='video__container'>
+    			  <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+                  <video class='bts__video' autoplay muted controls>
+                      <source src="${videoUrl}" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+    			</div>
+    		</div>
+    	`;
+    }
+    document.querySelector('body').prepend(video)
+}
+  
+function btsCloseBtn(){
+  	document.querySelector("#bts__video-container").remove();
+}
+
 // OLD FUNCTIONS THAT WILL BE REMOVED WHEN COLLECTIONS UPDATED
 // Custom read more and less functions
 function readMore(clicked_id) {
