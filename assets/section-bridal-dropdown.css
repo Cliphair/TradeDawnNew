@@ -1,0 +1,106 @@
+.section-bridal-dropdown{
+  width:100%;
+  margin:0;
+}
+
+.section-bridal-dropdown > .section-inner-container{
+  width:100%;
+  padding:0;
+  margin:0 auto;
+}
+
+.section-bridal-dropdown .section_header,
+.section-bridal-dropdown .section-intro{
+  text-align:center;
+  margin-bottom:10px;
+  
+}
+
+.section-bridal-dropdown .dropdown-container {
+  padding:0;
+}
+
+.section-bridal-dropdown .section_header *{
+  line-height:1.2rem;
+  margin:0;
+}
+
+.section-bridal-dropdown .section-intro *{
+  line-height:1.2rem;
+  margin:0;
+}
+
+
+.section-bridal-dropdown .dropdown-container > .item > div *{
+  line-height:1.2rem;
+  margin:0 0 12px;
+}
+
+.section-bridal-dropdown .dropdown-container > .item > div *:last-child{
+  margin-bottom:0;
+}
+
+.section-bridal-dropdown .item{
+  padding: 10px 0;
+  border-bottom:1px solid;
+  border-color: rgb(0 0 0 / 10%);
+  margin-bottom:5px;
+  cursor:pointer;
+}
+
+.section-bridal-dropdown .item-title{
+  position:relative;
+}
+
+.section-bridal-dropdown .item-title:hover > *:after{
+  opacity:1;
+  transform: rotate(360deg);
+}
+
+.section-bridal-dropdown .item-title > *:after{
+  content:"+";
+  opacity: 0.5;
+  position:absolute;
+  right:0;
+  transition: transform .7s ease-in-out;
+}
+
+.section-bridal-dropdown .item.active > .item-title > *:after{
+  content:"-";
+}
+
+.section-bridal-dropdown .item-body{
+  margin-top: 10px;
+}
+
+.section-bridal-dropdown .item-body p a{
+  text-decoration:underline;
+  text-underline-offset:0.2rem;
+}
+
+.section-bridal-dropdown .item-body p a:hover{
+  text-decoration:none;
+}
+
+.section-bridal-dropdown .item-body ul{
+  padding-inline-start:20px;
+}
+
+.section-bridal-dropdown .section-intro *, .section-bridal-dropdown .dropdown-container>.item>div li{
+  margin-bottom:5px;
+}
+
+@media screen and (min-width:992px){
+  .section-bridal-dropdown .item{
+    padding: 20px 0;
+    margin-bottom:10px;
+  }
+
+  .section-bridal-dropdown .item-body{
+    margin-top: 20px;
+  }
+
+  .section-bridal-dropdown .section-intro *, .section-bridal-dropdown .dropdown-container>.item>div li{
+    margin-bottom:10px;
+  }
+}
