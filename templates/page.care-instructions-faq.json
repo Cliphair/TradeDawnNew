@@ -1,0 +1,509 @@
+{
+  "sections": {
+    "page-content": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "heading_size": "h1",
+        "show_content": false,
+        "text_alignment": "center",
+        "color_scheme": "background-grey",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are your Hair extensions made from human hair?",
+            "icon": "none",
+            "row_content": "<p>Yes. All of the hair extensions across our entire range are made from 100% Remy, human hair. Human hair, unlike synthetic or animal hair, can be styled, dyed, washed and brushed giving you way more freedom and a far more natural finish.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is your hair Remy? And what does this mean?",
+            "icon": "none",
+            "row_content": "<p>Yes, all of our hair extensions are 100% Remy, human hair. <a href=\"https:\/\/www.cliphair.co.uk\/collections\/remy-royale-double-drawn-hair-weft-extensions\" target=\"_blank\" title=\"highest quality human hair\">“Remy” <\/a>is the best quality of hair extension available as it is “cuticle correct”, meaning all the cuticles on the hair shaft run in the same direction (downwards). This ensures the hair will stay shiny, soft and tangle free for months, even years if well cared for.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What grade are your hair extensions?",
+            "icon": "none",
+            "row_content": "<p>We have 2 different grades of hair extension in our collection. The first is our luxury range called<a href=\"https:\/\/www.cliphair.co.uk\/collections\/remy-royale-double-drawn-hair-weft-extensions\" target=\"_blank\" title=\"remy royale hair\">“Remy Royale” <\/a>which is made from AAAAA grade hair this includes mostly professional hair extensions. The second is the AAA grade hair which is used for most of our products.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is your hair Double Drawn?",
+            "icon": "none",
+            "row_content": "<p>All the hair in the <a href=\"https:\/\/www.cliphair.co.uk\/collections\/remy-royale-double-drawn-hair-weft-extensions\" target=\"_blank\" title=\"remy royale hair\">“Remy Royale” <\/a>collection is Double Drawn. The rest of our hair is Single Drawn but of a very good thickness.<\/p>",
+            "page": ""
+          }
+        },
+        "1a970fc7-b7ea-46ef-939a-06727238e688": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your clips made from?",
+            "icon": "none",
+            "row_content": "<p>We use small metal clips with silicone lining for extra comfort and secure grip. The silicone tubing is also much better for the hair as it prevents rubbing and breakage. They weigh less than 1g each and are just 1inch wide meaning they are very easy to hide even in the finest of hair.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-1",
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-2",
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-3",
+        "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-4",
+        "1a970fc7-b7ea-46ef-939a-06727238e688"
+      ],
+      "settings": {
+        "heading": "QUALITY OF OUR HAIR EXTENSIONS",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "arrow_style": "half-arrow",
+        "color_scheme": "accent-4",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "00bf3b8c-d18a-4fb4-b587-03b6c69ac620": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are Clip-in Hair Extensions?",
+            "icon": "none",
+            "row_content": "<p>If you are looking for a quick do it yourself hair extension system with no commitment involved, then look no further. Clip-in Hair Extensions are strips of hair that have small metal snap clips attached to the seams that can be applied and removed in a matter of minutes with absolutely no help from professionals needed! They can be used to add length, thickness, volume and colour the possibilities are endless.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I attach Clip-ins to my hair?",
+            "icon": "none",
+            "row_content": "<p>Clip-ins attach to the hair at your roots hidden by another layer of hair on top, the small metal silicone lined snap clips simply grip to your hair. Depending on the set you have, whether it is a multi-piece or one piece will determine where they are placed. A great tip for helping the clips to grip into fine, silky hair is to give your root a good backcomb before applying, this will create a little nest for the clip to attach to reinforcing the hold!<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do Clip-ins take to put in?",
+            "icon": "none",
+            "row_content": "<p>After a little practice even a Full head 8-piece Clip-In set can be applied in under 5 minutes, and its even quicker to remove them. Compare that with a 2 hour visit to the salon having permanent extensions attached and it's no surprise Clip-Ins are our top seller!<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does my own hair need to be to use Clip-in Hair Extensions?",
+            "icon": "none",
+            "row_content": "<p>Your hair will need to be at least 4 inches long to be able to hold and hide the extensions. Any shorter than this you should look into having a more permanent type applied as they have much smaller attachments which are easier to hide.<\/p>",
+            "page": ""
+          }
+        },
+        "ab18d31f-52fe-4829-9f4c-b0a76b5580a8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do Clip-In Extensions last?",
+            "icon": "none",
+            "row_content": "<p>As our hair extensions are human, they have a long-life span. With the correct care and maintenance, its not uncommon for quality clip-ins to last up to 12 months. However, if over worn and not treated well they will need replacing between 3-6 months. The better you look after the hair and the less you wear it the longer it will last. It’s good to bear in mind that very light shades will usually have a shorter life due to the chemical processing they go through during manufacturing. Check out our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/care-instructions\" target=\"_blank\" title=\"hair extensions care guide\">Clip-In Care guide here.<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "c049d401-cc26-4148-ba66-792b407905c9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I sleep in Clip-In hair extensions?",
+            "icon": "none",
+            "row_content": "<p>No. Clip-ins or temporary hair pieces should be removed before sleeping, showering and swimming. Leaving them in whilst doing any of these activities can cause damage to your own hair so its crucial, they are removed.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-1",
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-2",
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-3",
+        "template--15448673845309__00bf3b8c-d18a-4fb4-b587-03b6c69ac620-collapsible_row-4",
+        "ab18d31f-52fe-4829-9f4c-b0a76b5580a8",
+        "c049d401-cc26-4148-ba66-792b407905c9"
+      ],
+      "settings": {
+        "heading": "CLIP IN HAIR EXTENSIONS",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "arrow_style": "half-arrow",
+        "color_scheme": "accent-4",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5c50884a-a478-4841-8c8f-da58bf52a3a7": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions be straightened, curled or tonged?",
+            "icon": "none",
+            "row_content": "<p>Yes, As the hair is human it can be styled using heat which includes tongs, straighteners, hairdryers and wavers. We do also advise to use <a href=\"https:\/\/www.cliphair.co.uk\/products\/cliphair-heat-spray\" target=\"_blank\" title=\"heat protection spray for hair extensions\">heat protect spray <\/a>to prevent the hair from drying out.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions be washed?",
+            "icon": "none",
+            "row_content": "<p>Yes, the hair extensions can and should be washed when necessary. The only change you need to make is to swap your shampoo for a sulphate\/alcohol free product as these ingredients will dry the hair out decreasing the life span.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions be dyed or toned?",
+            "icon": "none",
+            "row_content": "<p>All human hair extensions can be dyed, cut and styled just like natural hair can but as they are not attached to their original root and have been chemically treated already, they can react differently to colour than you may expect.<\/p><p>We also advise to only ever darken or tone your extensions and <strong>never bleach or lighten them<\/strong> as this can seriously decrease the life span. If you are planning to dye your extensions, we strongly recommend taking them to a professional colourist with experience in dying hair extensions to avoid an incorrect result or damage to the hair.<\/p><p>Always dye a small section of the hair first before applying the dye all over to test the colour. <strong>Please note once the hair extensions have been dyed or chemically altered this will void our returns\/complaints policy.<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you use any hairbrush to brush the Hair extensions?",
+            "icon": "none",
+            "row_content": "<p>No. Using brushes that have bobbles on the ends or very thick bristles can cause shedding and damage to the seams. We advise to only use brushes like our <a href=\"https:\/\/www.cliphair.co.uk\/products\/detangling-hair-brush\" target=\"_blank\" title=\"hair extensions brush\">Cliphair Detangling Brush<\/a>.<\/p>",
+            "page": ""
+          }
+        },
+        "02822dce-be53-4899-bf2b-0099823b514c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should you store Hair extensions?",
+            "icon": "none",
+            "row_content": "<p>Hair extensions that are removed daily should be stored in a clean, dry box or bag away from sunlight, heat and water. All of our Clip-Ins come in a wide box that is perfect for keeping your extensions safe when you are not using them!<\/p><p>For the full detailed <a href=\"https:\/\/www.cliphair.co.uk\/pages\/care-instructions\" target=\"_blank\" title=\"hair extensions care guide\">Cliphair Hair extensions Care guide please use this link<\/a>.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-1",
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-2",
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-3",
+        "template--15448673845309__5c50884a-a478-4841-8c8f-da58bf52a3a7-collapsible_row-4",
+        "02822dce-be53-4899-bf2b-0099823b514c"
+      ],
+      "settings": {
+        "heading": "CARE & USAGE OF OUR HAIR EXTENSIONS",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "arrow_style": "half-arrow",
+        "color_scheme": "background-grey",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3c7da3b5-1a3a-4624-b5aa-5279a8b9639d": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is Cliphair based?",
+            "icon": "none",
+            "row_content": "<p>Cliphair is a UK company based in Surrey, England.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you deliver worldwide?",
+            "icon": "none",
+            "row_content": "<p>Yes. We deliver all over the world, no matter where you’re ordering from we can ship to you in a matter of days!<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What shipping methods do you offer in the UK?",
+            "icon": "none",
+            "row_content": "<p>In the UK we offer free delivery for all orders over £30 which arrives in 3-5 working days. We also offer Next day and Special Saturday delivery options for a small price.<\/p>",
+            "page": ""
+          }
+        },
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What shipping methods do you offer worldwide?",
+            "icon": "none",
+            "row_content": "<p>We offer free delivery for orders over £100-150 for countries outside of the UK, depending on where you are. We can deliver as soon as 1-4 working days, so even if you are 10000 miles away you can still receive your hair in under a week from ordering!<\/p>",
+            "page": ""
+          }
+        },
+        "dd9f56d0-b939-4bc5-b8ec-d07e410fe7a7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which couriers do Cliphair use?",
+            "icon": "none",
+            "row_content": "<p>We use Royal Mail and DPD for shipments inside of the UK and DHL for all international orders.<\/p>",
+            "page": ""
+          }
+        },
+        "0599d527-e85b-4ce1-b4c8-49a7d1222a68": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can the Hair extensions and products be returned?",
+            "icon": "none",
+            "row_content": "<p>Yes, as long as the item has not been used or altered in any way you have 90 days to send the order back to us for either a full refund or exchange.<\/p><p>We offer free returns\/exchanges inside the UK.<\/p><p><strong>*<\/strong> For more detailed shipping information please <a href=\"https:\/\/www.cliphair.co.uk\/pages\/shipping-information\" target=\"_blank\" title=\"cliphair shipping info\"><strong>use this link<\/strong><\/a>.<\/p><p><strong>*<\/strong> For the full returns\/exchange policy please <a href=\"https:\/\/www.cliphair.co.uk\/pages\/returns-information\" target=\"_blank\" title=\"cliphair returns\"><strong>use this link<\/strong><\/a>.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-1",
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-2",
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-3",
+        "template--15448673845309__3c7da3b5-1a3a-4624-b5aa-5279a8b9639d-collapsible_row-4",
+        "dd9f56d0-b939-4bc5-b8ec-d07e410fe7a7",
+        "0599d527-e85b-4ce1-b4c8-49a7d1222a68"
+      ],
+      "settings": {
+        "heading": "SHIPPING & RETURNS",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "arrow_style": "half-arrow",
+        "color_scheme": "accent-1",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a2bc4d53-7d95-420d-a75b-22a6e0e9aa97": {
+      "type": "faq-page",
+      "blocks": {
+        "template--15448673845309__a2bc4d53-7d95-420d-a75b-22a6e0e9aa97-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer trade discounts?",
+            "icon": "none",
+            "row_content": "<p>Yes we do. Since 2007 Cliphair has been supporting salons and professional hairdressers both in the UK and internationally. Our dedicated Trade website offers you everything you can see on the retail site and more to ensure you can deliver fabulous results using our Remy human hair extensions at truly competitive prices.<\/p><p>The benefits of registering for a Trade account include:<\/p><ul><li>Discount prices<\/li><li>Preferential restock alerts<\/li><li>Priority stock ordering<\/li><li>Trade specific promotions<\/li><li>Dedicated trade team to support with day-to-day enquiries<\/li><li>Opportunity to promote your work on our social media platforms<\/li><\/ul><p>Register now: <a href=\"https:\/\/cliphairtrade.com\/account\/register\" target=\"_blank\">https:\/\/cliphairtrade.com\/account\/register<\/a><\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15448673845309__a2bc4d53-7d95-420d-a75b-22a6e0e9aa97-collapsible_row-1"
+      ],
+      "settings": {
+        "heading": "CLIPHAIR TRADE ENQUIRIES",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "arrow_style": "half-arrow",
+        "color_scheme": "accent-1",
+        "open_first_collapsible_row": true,
+        "faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "67a94c71-0b44-4f05-aa2f-594b1239edd9": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
+            "text_label": "FSC Certified",
+            "link": ""
+          }
+        },
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
+            "text_label": "Biodegradable",
+            "link": ""
+          }
+        },
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
+            "text_label": "Vegan",
+            "link": ""
+          }
+        },
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
+            "text_label": "Sustainable",
+            "link": ""
+          }
+        },
+        "image_eXtqEV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
+            "text_label": "Soy Ink",
+            "link": ""
+          }
+        },
+        "image_Rwj6VQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
+            "text_label": "Organic",
+            "link": ""
+          }
+        },
+        "image_dgTyrR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
+            "text_label": "100% Recyclable",
+            "link": ""
+          }
+        },
+        "image_hBphpA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
+            "text_label": "Vegan Certified",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1",
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2",
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3",
+        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4",
+        "image_eXtqEV",
+        "image_Rwj6VQ",
+        "image_dgTyrR",
+        "image_hBphpA"
+      ],
+      "custom_css": [
+        "img {max-height: 70px;}"
+      ],
+      "settings": {
+        "title": "<strong>OUR COMMITMENT TO SUSTAINABILITY<\/strong>",
+        "heading_size": "h1",
+        "introduction": "<p>Your good hair days shouldn't hurt the planet! Our sustainable practices don't just stop at our super cute recyclable packaging. We're always looking for ways to decrease our environmental impact through material sourcing, manufacturing and partnering with eco-conscious organisations that are leading the way.<\/p>",
+        "text_allignment": "center",
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
+        "color_scheme": "accent-4",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "Ethically<br>Sourced",
+            "link": ""
+          }
+        },
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
+            "text_label": "Outstanding<br>Reviews",
+            "link": ""
+          }
+        },
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
+            "text_label": "Cliphair<br>Rewards",
+            "link": ""
+          }
+        },
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
+            "text_label": "Free Delivery<br>& Returns",
+            "link": ""
+          }
+        },
+        "cbdbff03-f013-487f-8288-6c9a46426bc6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "Buy Now<br>Pay Later",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4",
+        "cbdbff03-f013-487f-8288-6c9a46426bc6"
+      ],
+      "custom_css": [
+        "img {max-height: 70px;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 5,
+        "swipe_on_desktop": false,
+        "color_scheme": "background-collection-titles",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "page-content",
+    "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c",
+    "00bf3b8c-d18a-4fb4-b587-03b6c69ac620",
+    "5c50884a-a478-4841-8c8f-da58bf52a3a7",
+    "3c7da3b5-1a3a-4624-b5aa-5279a8b9639d",
+    "a2bc4d53-7d95-420d-a75b-22a6e0e9aa97",
+    "67a94c71-0b44-4f05-aa2f-594b1239edd9",
+    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
+  ]
+}
