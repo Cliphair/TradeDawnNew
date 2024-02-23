@@ -1,0 +1,77 @@
+{% comment %}
+  Fields:
+    -> String: containerClass (required)
+      class from the container that will scroll on click;
+    -> Int: limit (required)
+      number of elements inside the container. This value is index0, start counting on 0;
+    -> Int: stepMobile
+      number of elements displayed on mobile, set up as 1 if not passed;
+    -> Int: stepTablet
+      number of elements displayed on tablet, set up as the same as mobile if not passed;
+    -> Int: stepDesktop
+      number of elements displayed on mobile, set up as the same as tablet if not passed;
+    -> String: customClass
+      any custom class to be added to the arrow container;
+
+  Render snippet right after container.
+  {% render "arrows", containerClass: containerClass (required), limit: limit (required), stepMobile: stepMobile, stepTablet: stepTablet, stepDesktop: stepDesktop, customClass: customClass %}
+{% endcomment %}
+
+{% if containerClass and limit %}
+  <style>
+    .scroll-arrow.disabled{
+      pointer-events:none;
+      opacity:0.3;
+    }
+  </style>
+  
+  {% liquid
+    unless stepMobile
+      assign stepMobile = 1
+    endunless
+
+    unless stepTablet
+      assign stepTablet = stepMobile
+    endunless
+
+    unless stepDesktop
+      assign stepDesktop = stepTablet
+    endunless
+  %}
+  <span
+    class="scroll-arrow left disabled {% if customClass %}{{ customClass }}{% endif %}"
+    data-direction="left"
+    data-container-class="{{ containerClass }}"
+    data-limit="{{ limit }}"
+    data-index="0"
+    data-step-mobile="{{ stepMobile }}"
+    data-step-tablet="{{ stepTablet }}"
+    data-step-desktop="{{ stepDesktop }}"
+  >
+    <i class="fa-solid fa-angle-left"></i>
+  </span>
+  <span
+    class="scroll-arrow right {% if customClass %}{{ customClass }}{% endif %}"
+    data-direction="right"
+    data-container-class="{{ containerClass }}"
+    data-limit="{{ limit }}"
+    data-index="0"
+    data-step-mobile="{{ stepMobile }}"
+    data-step-tablet="{{ stepTablet }}"
+    data-step-desktop="{{ stepDesktop }}"
+  >
+    <i class="fa-solid fa-angle-right"></i>
+  </span>
+
+  <script>
+    var scrollArrows = document.querySelectorAll('.{{ containerClass }} ~ .scroll-arrow');
+
+    if (scrollArrows.length != 0) {
+      for (let arrow of scrollArrows) {
+        arrow.addEventListener('click', function () {
+          newScrollArrow(this);
+        });
+      }
+    }
+  </script>
+{% endif %}
