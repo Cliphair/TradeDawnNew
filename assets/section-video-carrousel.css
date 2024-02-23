@@ -122,7 +122,7 @@
   cursor: pointer;
 }
 
-.section-video-carrousel .placeholder_image_container .button_container>.play_button > svg {
+.section-video-carrousel .placeholder_image_container .button_container>.play_button svg {
   font-size: 70px;
 }
 
