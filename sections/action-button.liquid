@@ -1,6 +1,293 @@
+<link rel="preload" href="{{ 'section-action-button.css' | asset_url }}" as="style" />
+{{ 'section-action-button.css' | asset_url | stylesheet_tag }}
+
+<style>
+  #section-{{ section.id }}{
+    padding-top:{{ section.settings.mobile-top-padding }}px;
+    padding-bottom:{{ section.settings.mobile-bottom-padding }}px;
+    padding-right:{{ section.settings.mobile-right-padding }}px;
+    padding-left:{{ section.settings.mobile-left-padding }}px;
+    background:{{section.settings.bg_colour}};
+  }
+
+  .action-button-container{
+    {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
+  }
+
+  .action-button-container > .section-header{
+    font-size:{{section.settings.header-mobile-font-size}}px;
+    color:{{section.settings.header_colour}};
+  }
+
+  .action-button-container > .section-intro{
+    font-size:{{section.settings.text-mobile-font-size}}px;
+    color:{{section.settings.text_colour}};
+  }
+
+  .action-button-container > .section-btn{
+    font-size:{{section.settings.btn-mobile-font-size}}px;
+    color:{{section.settings.btn_colour}};
+    background:{{section.settings.btn_bg_colour}};
+  }
+
+  .action-button-container > .section-btn:hover{
+    color:{{section.settings.btn_colour}};
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top:{{ section.settings.desktop-top-padding }}px;
+      padding-bottom:{{ section.settings.desktop-bottom-padding }}px;
+      padding-right:{{section.settings.desktop-right-padding }}px;
+      padding-left:{{ section.settings.desktop-left-padding }}px;
+    }
+  
+    .action-button-container > .section-header{
+      font-size:{{section.settings.header-desktop-font-size}}px;
+    }
+  
+    .action-button-container > .section-intro{
+      font-size:{{section.settings.text-desktop-font-size}}px;
+    }
+  
+    .action-button-container > .section-btn{
+      font-size:{{section.settings.btn-desktop-font-size}}px;
+    }
+  }
+</style>
+
+<div id="section-{{ section.id }}" class="action-button-outer-container">
+  <div class="action-button-container">
+    {% if section.settings.header != empty %}<h2 class="section-header">{{ section.settings.header }}</h2>{% endif %}
+    {% if section.settings.intro != empty %}<p class="section-intro">{{ section.settings.intro | replace: "p>", "span>" }}</p>{% endif %}
+    <a href="{{ section.settings.url }}" target="_blank" class="section-btn">
+      {% if section.settings.btn_text != empty %}
+        {{ section.settings.btn_text }}
+      {% else %}
+        Sign In
+      {% endif %}
+    </a>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Action Button",
+    "settings": [
+      {
+        "type": "text",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "richtext",
+        "id": "intro",
+        "label": "Section Intro"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Link To"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "header_colour",
+        "label": "Header Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "text_colour",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "btn_colour",
+        "label": "Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_colour",
+        "label": "Background Colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "btn_bg_colour",
+        "label": "Button Background Colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "max-width",
+        "label": "Max Width",
+        "info": "Please enter max-width value in pixels, ex: 1250, 1440."
+      },
+      {
+        "type": "header",
+		"content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+		"id": "header-mobile-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Header Mobile Font Size",
+		"default": 14
+      },
+      {
+        "type": "range",
+		"id": "text-mobile-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Mobile Font Size",
+		"default": 14
+      },
+      {
+        "type": "range",
+		"id": "btn-mobile-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Button Mobile Font Size",
+		"default": 14
+      },
+      {
+        "type": "range",
+		"id": "mobile-top-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Top Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-bottom-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Bottom Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-right-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Right Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-left-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Left Padding",
+		"default": 0
+      },
+      {
+		"type": "header",
+		"content": "Desktop Settings"
+      },
+      {
+		"type": "range",
+		"id": "header-desktop-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Header Desktop Font Size",
+		"default": 20
+      },
+      {
+		"type": "range",
+		"id": "text-desktop-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Desktop Font Size",
+		"default": 20
+      },
+      {
+		"type": "range",
+		"id": "btn-desktop-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Desktop Font Size",
+		"default": 20
+      },
+      {
+        "type": "range",
+		"id": "desktop-top-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Top Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-bottom-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Bottom Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-right-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Right Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-left-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Left Padding",
+		"default": 0
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
