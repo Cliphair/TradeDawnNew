@@ -1,19 +1,1217 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "166445343207c9fec0": {
+      "type": "page_font_red23",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "font-titles-1": "inter_n6",
+        "font-text-1": "inter_n4",
+        "font-btns": "inter_n4"
+      }
+    },
+    "6368dc69-0f53-4509-a1fe-d8783409b1a1": {
+      "type": "page-header",
+      "settings": {
+        "custom-title": false,
+        "first-line": "NEED A PAGE TITLE",
+        "second-line": "",
+        "hide": true,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "mobile-font-size": 14,
+        "mobile-top-padding": 0,
+        "mobile-bottom-padding": 0,
+        "mobile-right-padding": 0,
+        "mobile-left-padding": 0,
+        "desktop-font-size": 20,
+        "desktop-top-padding": 0,
+        "desktop-bottom-padding": 0,
+        "desktop-right-padding": 0,
+        "desktop-left-padding": 0
+      }
+    },
+    "962c8e4b-0648-4235-b6a6-143559c32b12": {
+      "type": "video-banner",
+      "settings": {
+        "url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3e34ac00c5444d218810c56c172177d3.mp4",
+        "image": "shopify:\/\/shop_images\/salon-int.webp",
+        "max-width": "1440",
+        "bg-color": "#f0f0f0"
+      }
+    },
+    "79b16b39-2361-437c-b5ef-afb510088104": {
+      "type": "infinite-text",
+      "blocks": {
+        "295a767c-d6fe-4b3f-90a2-b0b7d55431dd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "bd676e28-cbe3-4946-a6ea-694a48f8ecb1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "38021af6-a064-41c9-aad8-e11b15983d93": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "174fee33-0b1a-4e2e-b80d-0f4907a472f4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "e7603af0-1d03-497f-87ad-12533fffc333": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "1c491202-7fe0-493a-85ef-466b09842675": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "d07e6982-9d86-4df6-ae90-e7ba91b57ab6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "75ecf55c-727b-476e-903f-3bbf889d7573": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "5a565487-7efd-40c0-a05d-51bab1f91f35": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "101024b2-3276-4b3b-90bd-ba1c444d5029": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        },
+        "484f28e0-22ee-4a5d-908d-eb10bbb0b983": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>#<em>Cliphairatsalon<\/em><\/p>",
+            "custom_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "295a767c-d6fe-4b3f-90a2-b0b7d55431dd",
+        "bd676e28-cbe3-4946-a6ea-694a48f8ecb1",
+        "38021af6-a064-41c9-aad8-e11b15983d93",
+        "174fee33-0b1a-4e2e-b80d-0f4907a472f4",
+        "e7603af0-1d03-497f-87ad-12533fffc333",
+        "1c491202-7fe0-493a-85ef-466b09842675",
+        "d07e6982-9d86-4df6-ae90-e7ba91b57ab6",
+        "75ecf55c-727b-476e-903f-3bbf889d7573",
+        "5a565487-7efd-40c0-a05d-51bab1f91f35",
+        "101024b2-3276-4b3b-90bd-ba1c444d5029",
+        "484f28e0-22ee-4a5d-908d-eb10bbb0b983"
+      ],
+      "settings": {
+        "text_color": "#767676",
+        "bg_color": "#f0f0f0",
+        "custom_bg_color": "#ffffff",
+        "max_width": "",
+        "no_wrap": false,
+        "mobile-font_size": 16,
+        "mobile-p_top": 4,
+        "mobile-p_bottom": 2,
+        "mobile-p_right": 0,
+        "mobile-p_left": 0,
+        "desktop-font_size": 20,
+        "desktop-p_top": 6,
+        "desktop-p_bottom": 4,
+        "desktop-p_right": 0,
+        "desktop-p_left": 0
+      }
+    },
+    "92ed07ca-d7f5-4c6f-86fd-63751e8fc43e": {
+      "type": "custom_multicolumn_salon",
+      "settings": {
+        "bg_color": "#faf0fd",
+        "max_width": "1600",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "<p><strong>Salon International, the annual event that gathers <\/strong><em><strong>all the best in the industry<\/strong><\/em><strong> under one roof to celebrate all things hair and beauty. <\/strong><\/p>",
+        "sub_header": "",
+        "description": "The result? A weekend of networking, live demonstrations, special discounts, education and an exclusive look into the latest trends and technologies of haircare and styling. What better time for us to make our mark at the hairdressing event of the year than at Salon Internationals 50th anniversary",
+        "read_more": ", Cliphair debuted in style with brand new product launches, live tutorials, charity fundraising and all the exclusive discounts you would expect from a specialised trade show and much more.",
+        "text_width": 100,
+        "title_tag": "h1",
+        "header_mobile_font": 16,
+        "header_desktop_font": 30,
+        "text_mobile_font": 13,
+        "text_desktop_font": 20,
+        "header_color": "#646464",
+        "header_opacity": 100,
+        "sub_header_color": "#646464",
+        "text_color": "#646464",
+        "enable_video": false,
+        "video_width": 50,
+        "play-size-mobile": 40,
+        "play-size-desktop": 60,
+        "play-color": "#000000",
+        "enable_product": false,
+        "product": "",
+        "product_price": "",
+        "product_width": 50,
+        "product_mobile_font": 12,
+        "product_desktop_font": 18,
+        "product_text_color": "#000000",
+        "product_bg_color": "#ffffff",
+        "enable_form": false,
+        "form_id": "",
+        "form_width": 50
+      }
+    },
+    "23b17f62-e108-4a37-bb4b-5fe998b11017": {
+      "type": "custom_multicolumn_salon",
+      "blocks": {
+        "508caed1-cb7b-486e-b3a9-e71d4ae4846b": {
+          "type": "video",
+          "settings": {
+            "placeholder": "shopify:\/\/shop_images\/salon-int.webp",
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3a6f6606e5414ed780a115464cb4514f.mp4",
+            "video_link_desktop": ""
+          }
+        }
+      },
+      "block_order": [
+        "508caed1-cb7b-486e-b3a9-e71d4ae4846b"
+      ],
+      "custom_css": [
+        ".video_container .videos .placeholder_image {aspect-ratio: 1;}",
+        "@media screen and (min-width: 768px) {.text_container {text-align: left; margin-right: 40px; } .custom-multicolumn-container {justify-content: center; }}"
+      ],
+      "settings": {
+        "bg_color": "#faf0fd",
+        "max_width": "992",
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 50,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "<h2>This Is: Cliphair At Salon.<\/h2>",
+        "sub_header": "<p>Our mission: <\/p>",
+        "description": "To show the supreme quality of our hair extensions to the world and meet the salon professionals that already stock with us face to face. <em>Here’s how it went...  <\/em>",
+        "read_more": "",
+        "text_width": 40,
+        "title_tag": "h1",
+        "header_mobile_font": 16,
+        "header_desktop_font": 30,
+        "text_mobile_font": 13,
+        "text_desktop_font": 20,
+        "header_color": "#646464",
+        "header_opacity": 100,
+        "sub_header_color": "#646464",
+        "text_color": "#646464",
+        "enable_video": true,
+        "video_width": 30,
+        "play-size-mobile": 60,
+        "play-size-desktop": 79,
+        "play-color": "#f9f9f9",
+        "enable_product": false,
+        "product": "",
+        "product_price": "",
+        "product_width": 50,
+        "product_mobile_font": 12,
+        "product_desktop_font": 18,
+        "product_text_color": "#000000",
+        "product_bg_color": "#ffffff",
+        "enable_form": false,
+        "form_id": "",
+        "form_width": 50
+      }
+    },
+    "6b78c291-f84c-43d5-ba01-fee41b8e1e45": {
+      "type": "column-carrousel",
+      "blocks": {
+        "aabad1c9-41e8-4368-8d82-cd0b82fda3c7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-invisi.webp",
+            "description": "<p><strong>Invisible tapes<\/strong><\/p><ul><li>More discreet<\/li><li>Versatile<\/li><li>Double drawn<\/li><li>Quick application<\/li><\/ul>",
+            "url": "shopify:\/\/collections\/remy-royale-invisible-tape-in-hair-extensions",
+            "button_text": ""
+          }
+        },
+        "467d104a-c473-49db-b4db-f48b8b6082cb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-flat-weft.webp",
+            "description": "<p><strong>Flat weft weave<\/strong><\/p><ul><li>More discreet<\/li><li>Longer lasting<\/li><li>Double drawn<\/li><li>Quick Application<\/li><\/ul>",
+            "url": "shopify:\/\/collections\/flat-weft-hair-extensions",
+            "button_text": ""
+          }
+        },
+        "b9596b4b-1db1-4ef3-ac5a-f4ec9b91e09c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-premium-tape.webp",
+            "description": "<p><strong>Premium tapes<\/strong><\/p><ul><li>Classic tab<\/li><li>Double-drawn<\/li><li>Discreet<\/li><li>Quick application <\/li><\/ul>",
+            "url": "shopify:\/\/collections\/remy-royale-tape-in-extensions",
+            "button_text": ""
+          }
+        },
+        "057020d6-1ba7-4aab-80c1-966079170908": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-nano-bond.webp",
+            "description": "<p><strong>Nano Bonds<\/strong><\/p><ul><li>New silicone tip<\/li><li>Stronger grip<\/li><li>Ultra discreet<\/li><li>Double drawn<\/li><\/ul>",
+            "url": "shopify:\/\/collections\/nano-bond-hair-extensions",
+            "button_text": ""
+          }
+        },
+        "df6ea653-0745-4d72-ba94-92bd8a0792c6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-flat-tip.webp",
+            "description": "<p><strong>Flat tip<\/strong><\/p><ul><li>Easier to mould<\/li><li>Super discreet<\/li><li>Low maintenance<\/li><li>Double drawn<\/li><\/ul>",
+            "url": "shopify:\/\/collections\/flat-tip-hair-extensions",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "aabad1c9-41e8-4368-8d82-cd0b82fda3c7",
+        "467d104a-c473-49db-b4db-f48b8b6082cb",
+        "b9596b4b-1db1-4ef3-ac5a-f4ec9b91e09c",
+        "057020d6-1ba7-4aab-80c1-966079170908",
+        "df6ea653-0745-4d72-ba94-92bd8a0792c6"
+      ],
+      "custom_css": [
+        ".column {padding: 0 10px;}"
+      ],
+      "settings": {
+        "max_width": "1440",
+        "bg_color": "#f8f8f8",
+        "display": "carrousel",
+        "item_per_row_mobile": 1.6,
+        "item_per_row_tablet": 3.4,
+        "item_per_row_desktop": 5,
+        "circle_images": false,
+        "include-arrows": false,
+        "arrow-position-mobile": 20,
+        "arrow-position-desktop": 12,
+        "arrow-size": 50,
+        "arrow-colour": "#646464",
+        "include-dots": false,
+        "dot_icon_size": 16,
+        "dot_icon_colour": "#000000",
+        "header": "<h2>5 Brand New Professional <br\/>Hair Extensions Were Launched<\/h2>",
+        "header_color": "#646464",
+        "header_bg_color": "#f8f8f8",
+        "sub_header": "",
+        "sub_header_color": "#646464",
+        "have_buttons": false,
+        "buttons_color": "#646464",
+        "buttons_bg_color": "#f8f8f8",
+        "intro": "",
+        "show_collection": false,
+        "collection-text": "",
+        "url": "",
+        "header-mobile-font_size": 16,
+        "mobile-font_size": 13,
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "header-desktop-font_size": 30,
+        "desktop-font_size": 20,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20
+      }
+    },
+    "b37dfb63-471e-46e1-9cb1-a7cdfb9fa563": {
+      "type": "video_carrousel",
+      "blocks": {
+        "a6849c18-f99c-4bc7-a428-11520236f4ce": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-int-tutorial-video-thumb-1.webp",
+            "video_link": "https:\/\/www.youtube.com\/shorts\/KQFaljXifR4",
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "shopify:\/\/pages\/sleek-straight-lookbook-holiday-campaign-2023"
+          }
+        },
+        "8bc302be-4798-46c3-8adb-d36358bf4923": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-int-tutorial-video-thumb-3.webp",
+            "video_link": "https:\/\/www.youtube.com\/shorts\/N_h6ZTbNPaY",
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "shopify:\/\/pages\/sultry-waves-lookbook-holiday-campaign-2023"
+          }
+        },
+        "fef9efa9-ee1b-4abe-9478-84c54171f44c": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-int-tutorial-video-thumb-2.webp",
+            "video_link": "https:\/\/www.youtube.com\/shorts\/hJAqxhjfsvs",
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "shopify:\/\/pages\/half-up-half-down-lookbook-holiday-campaign-2023"
+          }
+        },
+        "5ae29172-f8b0-4c0f-900a-f376f9d96d3b": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-int-tutorial-video-thumb-4.webp",
+            "video_link": "https:\/\/www.youtube.com\/shorts\/N9qfAmsQp4o",
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": "shopify:\/\/pages\/power-ponytail-lookbook-holiday-campaign-2023"
+          }
+        }
+      },
+      "block_order": [
+        "a6849c18-f99c-4bc7-a428-11520236f4ce",
+        "8bc302be-4798-46c3-8adb-d36358bf4923",
+        "fef9efa9-ee1b-4abe-9478-84c54171f44c",
+        "5ae29172-f8b0-4c0f-900a-f376f9d96d3b"
+      ],
+      "custom_css": [
+        ".section_header > *,.intro_container > * {text-align: left; line-height: 1.5em;}",
+        ".section_header {margin-bottom: 15px;}",
+        ".intro_container > * {margin-bottom: 30px;}",
+        ".btn-container {margin-top: 30px;}",
+        ".btn-container > a {padding: 10px 40px; border-radius: 30px; font-weight: 800; margin-top: 30px;}",
+        ".placeholder_image_container .button_container > .play_button {font-size: min(20vw, 90px);}",
+        "@media screen and (min-width: 992px) {.section_header {margin-bottom: 25px; } .intro_container > * {margin-bottom: 50px; }}"
+      ],
+      "settings": {
+        "header": "<p>Tutorials Gallery<\/p>",
+        "intro": "<p>Our hair extensions were under the spotlight when hair stylists Jack Luckhurst, Jason Meacher and our annual bridal competition winners Zoe Webb and Anastasia Dawson used them to create <strong>6 stunning transformations<\/strong> for our live hair tutorials. They showcased a variety of skills from applying permanent extensions such as Invisible tapes and Weaves to enhancing bridal up-dos using Clip-Ins.<\/p>",
+        "image_orientation": "portrait",
+        "title-position": "bottom",
+        "text_color": "#646464",
+        "bg_color": "#ffffff",
+        "max_width": "1440",
+        "social-media": false,
+        "header-mobile-font_size": 16,
+        "text-mobile-font_size": 13,
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "header-desktop-font_size": 30,
+        "text-desktop-font_size": 20,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "display": "carrousel",
+        "display-mobile": 1.6,
+        "display-tablet": 2,
+        "display-desktop": 4,
+        "include-dots": false,
+        "dot-color": "#d9d9d9",
+        "dot-size": 12,
+        "include-arrows": true,
+        "arrow-color": "#646464",
+        "arrow-size-mobile": 50,
+        "arrow-size-tablet": 50,
+        "arrow-size-desktop": 70,
+        "arrow-position-mobile": 30,
+        "arrow-position-tablet": 35,
+        "arrow-position-desktop": 30,
+        "include-btn": false,
+        "btn-text": "",
+        "btn-url": "",
+        "btn-color": "#646464",
+        "btn-bg-color": "#e2e2e2",
+        "btn-size-mobile": 16,
+        "btn-size-desktop": 20
+      }
+    },
+    "9153105e-f1cc-457b-81ff-b3e66e6aaa77": {
+      "type": "break-line",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#b5b5b5",
+        "max_width": "1600",
+        "height": 1,
+        "mobile-p_top-bottom": 20,
+        "mobile-p_sides": 20,
+        "desktop-p_top-bottom": 30,
+        "desktop-p_sides": 50
+      }
+    },
+    "0d9b8688-af86-4c56-91d1-d095eb11dd34": {
+      "type": "column-carrousel",
+      "blocks": {
+        "b4270538-4fd2-4ed4-8802-6f7f3e37b0e6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-product-1.webp",
+            "description": "",
+            "url": "shopify:\/\/products\/hair-extensions-colour-ring",
+            "button_text": ""
+          }
+        },
+        "9ec73177-7c9b-4972-8e93-5a3faeec0261": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-product-2.webp",
+            "description": "",
+            "url": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair",
+            "button_text": ""
+          }
+        },
+        "568edc71-609e-4663-a482-db85325fd6bb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-product-3.webp",
+            "description": "",
+            "url": "shopify:\/\/collections\/remy-royale-invisible-tape-in-hair-extensions",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "b4270538-4fd2-4ed4-8802-6f7f3e37b0e6",
+        "9ec73177-7c9b-4972-8e93-5a3faeec0261",
+        "568edc71-609e-4663-a482-db85325fd6bb"
+      ],
+      "custom_css": [
+        ".column {padding: 0 30px; margin-bottom: 15px;}"
+      ],
+      "settings": {
+        "max_width": "1440",
+        "bg_color": "#ffffff",
+        "display": "column",
+        "item_per_row_mobile": 1,
+        "item_per_row_tablet": 3,
+        "item_per_row_desktop": 3,
+        "circle_images": false,
+        "include-arrows": true,
+        "arrow-position-mobile": 12,
+        "arrow-position-desktop": 12,
+        "arrow-size": 12,
+        "arrow-colour": "#000000",
+        "include-dots": false,
+        "dot_icon_size": 16,
+        "dot_icon_colour": "#000000",
+        "header": "<h2>SALON INTERNATIONAL <br\/>BEST SELLERS<\/h2>",
+        "header_color": "#646464",
+        "header_bg_color": "#ffffff",
+        "sub_header": "",
+        "sub_header_color": "#646464",
+        "have_buttons": true,
+        "buttons_color": "#646464",
+        "buttons_bg_color": "#ffffff",
+        "intro": "",
+        "show_collection": false,
+        "collection-text": "",
+        "url": "",
+        "header-mobile-font_size": 16,
+        "mobile-font_size": 13,
+        "mobile-p_top": 10,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "header-desktop-font_size": 30,
+        "desktop-font_size": 20,
+        "desktop-p_top": 30,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20
+      }
+    },
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e37": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "b2e25af8-50df-4002-b665-35e07beb662c": {
+          "type": "title",
+          "settings": {
+            "title": "<h2><strong>Trade Account Signup<\/strong><\/h2>"
+          }
+        },
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
+          "type": "intro",
+          "settings": {
+            "intro": "<p>Cliphair have been supplying salons and professional hairdressers with <em>affordable luxury human hair extensions since 2007<\/em>, both in the UK and internationally. Being at Salon International gave us the opportunity to personally meet many of our existing trade members and build relationships with brand new customers.<\/p><p><strong>183 of you set up a new trade account with us at Salon International.<br\/>We now supply hair extensions to over 3500 salons and free lance professionals worldwide!<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b2e25af8-50df-4002-b665-35e07beb662c",
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988"
+      ],
+      "custom_css": [
+        ".inner-container > a {box-shadow: none; padding: 5px 30px;}",
+        ".inner-container * {text-align: left;}",
+        "@media screen and (min-width: 992px) {.inner-container > .title-container {margin-bottom: 25px; } .inner-container > a {padding: 5px 50px; }}"
+      ],
+      "settings": {
+        "max-width": "1440",
+        "bg-colour": "#f8f8f8",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 2,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 2,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "title-mobile-f_size": 15,
+        "title-desktop-f_size": 30,
+        "title-color": "#646464",
+        "text-mobile-f_size": 13,
+        "text-desktop-f_size": 20,
+        "text-color": "#646464",
+        "btn-mobile-f_size": 13,
+        "btn-desktop-f_size": 20,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#000000"
+      }
+    },
+    "3184a1ba-37df-45c6-89ce-8e28161521f9": {
+      "type": "custom-banner",
+      "settings": {
+        "url": ""
+      }
+    },
+    "bridal23_custom-text": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
+          "type": "intro",
+          "settings": {
+            "intro": "<p><em>Want to know more?<\/em><\/p>"
+          }
+        },
+        "1a47bcbd-1805-4f90-888f-1e086368cbe3": {
+          "type": "button",
+          "settings": {
+            "btn-text": "INQUIRE ABOUT TRADE NOW",
+            "btn-url": "shopify:\/\/pages\/trade-enquiries"
+          }
+        }
+      },
+      "block_order": [
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988",
+        "1a47bcbd-1805-4f90-888f-1e086368cbe3"
+      ],
+      "custom_css": [
+        ".title-container {margin-bottom: 15px;}",
+        ".text-container > ul {list-style-position: inside; padding-inline-start: 0;}",
+        ".bridal23-hair-quiz-section > .inner-container > a {border-radius: 30px; box-shadow: none; padding: 7px 30px;}",
+        ".inner-container {text-align: left;}"
+      ],
+      "settings": {
+        "max-width": "1440",
+        "bg-colour": "#f8f8f8",
+        "mobile-p_top": 16,
+        "mobile-p_bottom": 16,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 26,
+        "desktop-p_bottom": 26,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "title-mobile-f_size": 15,
+        "title-desktop-f_size": 30,
+        "title-color": "#646464",
+        "text-mobile-f_size": 13,
+        "text-desktop-f_size": 20,
+        "text-color": "#646464",
+        "btn-mobile-f_size": 13,
+        "btn-desktop-f_size": 20,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#8b8b8b"
+      }
+    },
+    "5f3347d6-9da6-42ec-9418-a4b80bc67a5c": {
+      "type": "custom_multicolumn_salon",
+      "blocks": {
+        "224d87ef-6120-406f-8eca-0912a7e8f1e4": {
+          "type": "video",
+          "settings": {
+            "placeholder": "shopify:\/\/shop_images\/salon-face-to-face.webp",
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/94560af79f8642438c577ed767bff070.mp4",
+            "video_link_desktop": ""
+          }
+        }
+      },
+      "block_order": [
+        "224d87ef-6120-406f-8eca-0912a7e8f1e4"
+      ],
+      "custom_css": [
+        ".text_container {text-align: left;}",
+        ".text_container * {line-height: 1.5em;}"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_width": "992",
+        "mobile-p_top": 20,
+        "mobile-p_bottom": 20,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 30,
+        "desktop-p_bottom": 30,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "<p><strong>Face <\/strong><em><strong>to<\/strong><\/em><strong> Face… <br\/>At Salon International <\/strong><\/p>",
+        "sub_header": "<p>What better way to get to know each other, other than <em>a good old chat<\/em>?<\/p>",
+        "description": "We sent our special correspondent around the convention to discuss everything hair. From your worst hair extensions nightmare to your favourite hair shade of the year, here’s what we found out… ",
+        "read_more": "",
+        "text_width": 40,
+        "title_tag": "h1",
+        "header_mobile_font": 20,
+        "header_desktop_font": 30,
+        "text_mobile_font": 13,
+        "text_desktop_font": 20,
+        "header_color": "#646464",
+        "header_opacity": 100,
+        "sub_header_color": "#646464",
+        "text_color": "#646464",
+        "enable_video": true,
+        "video_width": 30,
+        "play-size-mobile": 80,
+        "play-size-desktop": 70,
+        "play-color": "#ffffff",
+        "enable_product": false,
+        "product": "",
+        "product_price": "",
+        "product_width": 50,
+        "product_mobile_font": 12,
+        "product_desktop_font": 18,
+        "product_text_color": "#000000",
+        "product_bg_color": "#ffffff",
+        "enable_form": false,
+        "form_id": "",
+        "form_width": 50
+      }
+    },
+    "a2889847-cdb4-49ac-9c6f-2d49e079f1e0": {
+      "type": "custom-carrousel-3",
+      "blocks": {
+        "773ba6e6-65cf-44ac-8af2-fb08180c431e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-coming-soon-1.webp",
+            "circle_image": false,
+            "border": false,
+            "text": "The Wet One Hairbrush",
+            "subtitle": "",
+            "url": "",
+            "image-url": ""
+          }
+        },
+        "d5289475-13ff-4eca-ba4d-7ddaaecf39a1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-coming-soon-2.webp",
+            "circle_image": false,
+            "border": false,
+            "text": "Quench The Thirst Collection",
+            "subtitle": "",
+            "url": "",
+            "image-url": ""
+          }
+        },
+        "cb96d513-c19a-405a-9389-ecc9a8f849df": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-coming-soon-3.webp",
+            "circle_image": false,
+            "border": false,
+            "text": "Wave Comb & Pouch",
+            "subtitle": "",
+            "url": "",
+            "image-url": ""
+          }
+        },
+        "770f4e88-e92f-4871-8ff9-a55acb6c0487": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-coming-soon-4.webp",
+            "circle_image": false,
+            "border": false,
+            "text": "Silver Lining Purple Toning Shampoo",
+            "subtitle": "",
+            "url": "",
+            "image-url": ""
+          }
+        },
+        "2f450639-19df-4f3b-9277-a8f56f7c8c1e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salon-coming-soon-5.webp",
+            "circle_image": false,
+            "border": false,
+            "text": "Pin Tail Comb",
+            "subtitle": "",
+            "url": "",
+            "image-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "773ba6e6-65cf-44ac-8af2-fb08180c431e",
+        "d5289475-13ff-4eca-ba4d-7ddaaecf39a1",
+        "cb96d513-c19a-405a-9389-ecc9a8f849df",
+        "770f4e88-e92f-4871-8ff9-a55acb6c0487",
+        "2f450639-19df-4f3b-9277-a8f56f7c8c1e"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.section_header {margin-bottom: 35px; } .carrousel-container .carrousel-items > .item {padding: 0 20px; }}",
+        ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
+      ],
+      "settings": {
+        "header": "<h2><strong>SNEAK PEAKS - COMING SOON<\/strong><\/h2>",
+        "intro": "<p>Salon International was a opportunity for customers to get the first look at <strong>our brand new hair care and accessories collection that will be launched in 2024. <\/strong><\/p>",
+        "main-button-text": "",
+        "main-button-url": "",
+        "max_width": "1440",
+        "bg_color": "#ffffff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 16,
+        "desktop-p_left": 16,
+        "mobile-header-font_size": 16,
+        "desktop-header-font_size": 30,
+        "header_color": "#646464",
+        "mobile-text-font_size": 13,
+        "desktop-text-font_size": 20,
+        "text_color": "#646464",
+        "include-button": false,
+        "button-text": "",
+        "mobile-button-font_size": 15,
+        "desktop-button-font_size": 20,
+        "button_color": "#000000",
+        "btn-bg_color": "#ffffff",
+        "mobile-col": 1.5,
+        "tablet-col": 3.5,
+        "desktop-col": 5,
+        "include-arrows": true,
+        "mobile-arrow-size": 40,
+        "tablet-arrow-size": 50,
+        "desktop-arrow-size": 0,
+        "mobile-arrow": 35,
+        "tablet-arrow": 35,
+        "desktop-arrow": 0,
+        "arrow_color": "#646464"
+      }
+    },
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e40": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "b2e25af8-50df-4002-b665-35e07beb662c": {
+          "type": "title",
+          "settings": {
+            "title": "<h2><strong>WOMENS AID CHARITY COLLABORATION<\/strong><\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "b2e25af8-50df-4002-b665-35e07beb662c"
+      ],
+      "custom_css": [
+        ".inner-container > a {box-shadow: none; padding: 5px 30px;}",
+        "@media screen and (min-width: 992px) {.inner-container > .title-container {margin-bottom: 25px; } .inner-container > a {padding: 5px 50px; }}"
+      ],
+      "settings": {
+        "max-width": "1440",
+        "bg-colour": "#ffffff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 2,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 2,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "title-mobile-f_size": 15,
+        "title-desktop-f_size": 30,
+        "title-color": "#646464",
+        "text-mobile-f_size": 13,
+        "text-desktop-f_size": 20,
+        "text-color": "#646464",
+        "btn-mobile-f_size": 13,
+        "btn-desktop-f_size": 20,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#000000"
+      }
+    },
+    "f86f14eb-17ac-47e6-b8c7-eabdfa17677b": {
+      "type": "custom_multicolumn_salon",
+      "custom_css": [
+        ".text_container {text-align: left;}",
+        ".text_container * {line-height: 1.5em;}"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_width": "992",
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 30,
+        "desktop-p_bottom": 30,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "",
+        "sub_header": "<p>We teamed up with Women’s Aid Federation of England who provide life saving support to women and children experiencing domestic abuse in the UK to raise money for their organization. 100% of takings made from our “<em>Guess how many rings in the jar<\/em>” game were donated. We raised a total of <strong>£213<\/strong> and will continue to fund raise and raise awareness for this remarkable charity. Thank you so much to everybody that took part!<\/p><p><strong>If you or a friend need help<\/strong><\/p><ul><li>Connect to a female support worker now via <a href=\"https:\/\/chat.womensaid.org.uk\/\" title=\"https:\/\/chat.womensaid.org.uk\/\"><strong>Live Chat | Women's Aid Live Chat <\/strong><\/a><strong>(womensaid.org.uk)<\/strong><\/li><li>Send an email to a support worker at <strong>Helpline@womensaid.org.uk<\/strong><\/li><\/ul>",
+        "description": "",
+        "read_more": "",
+        "text_width": 40,
+        "title_tag": "h1",
+        "header_mobile_font": 16,
+        "header_desktop_font": 30,
+        "text_mobile_font": 12,
+        "text_desktop_font": 20,
+        "header_color": "#646464",
+        "header_opacity": 100,
+        "sub_header_color": "#646464",
+        "text_color": "#646464",
+        "enable_video": false,
+        "video_width": 50,
+        "play-size-mobile": 40,
+        "play-size-desktop": 60,
+        "play-color": "#000000",
+        "enable_product": true,
+        "product": "",
+        "product_image": "shopify:\/\/shop_images\/salon-womans-aid.webp",
+        "product_price": "",
+        "product_width": 40,
+        "product_mobile_font": 12,
+        "product_desktop_font": 18,
+        "product_text_color": "#000000",
+        "product_bg_color": "#ffffff",
+        "enable_form": false,
+        "form_id": "",
+        "form_width": 50
+      }
+    },
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e42": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
+          "type": "intro",
+          "settings": {
+            "intro": "<p><strong>Feel free to make a donation yourself by using the QR code. Any amount little or large is greatly appreciated.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988"
+      ],
+      "custom_css": [
+        ".inner-container > a {box-shadow: none; padding: 5px 30px;}",
+        "@media screen and (min-width: 992px) {.inner-container > .title-container {margin-bottom: 25px; } .inner-container > a {padding: 5px 50px; }}"
+      ],
+      "settings": {
+        "max-width": "992",
+        "bg-colour": "#ffffff",
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "title-mobile-f_size": 15,
+        "title-desktop-f_size": 30,
+        "title-color": "#646464",
+        "text-mobile-f_size": 13,
+        "text-desktop-f_size": 20,
+        "text-color": "#646464",
+        "btn-mobile-f_size": 13,
+        "btn-desktop-f_size": 20,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#000000"
+      }
+    },
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e43": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "56403f08-85b7-465b-ae91-3d08f8d02a0a": {
+          "type": "title",
+          "settings": {
+            "title": "<p><strong>Social Media Section<\/strong> - Behind The Hashtag: #Cliphairatsalon<\/p>"
+          }
+        },
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
+          "type": "intro",
+          "settings": {
+            "intro": "<p>See how our amazing customers got involved with our Salon International Social Media Giveaway by taking a pic at our photo wall and reposting on their socials!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "56403f08-85b7-465b-ae91-3d08f8d02a0a",
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988"
+      ],
+      "custom_css": [
+        ".inner-container > a {box-shadow: none; padding: 5px 30px;}",
+        "@media screen and (min-width: 992px) {.inner-container > .title-container {margin-bottom: 25px; } .inner-container > a {padding: 5px 50px; }}"
+      ],
+      "settings": {
+        "max-width": "992",
+        "bg-colour": "#fef7ff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 10,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 20,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "title-mobile-f_size": 15,
+        "title-desktop-f_size": 30,
+        "title-color": "#646464",
+        "text-mobile-f_size": 13,
+        "text-desktop-f_size": 20,
+        "text-color": "#646464",
+        "btn-mobile-f_size": 13,
+        "btn-desktop-f_size": 20,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#000000"
+      }
+    },
+    "dd3d21f7-dc7a-4760-8f5e-c76942888d97": {
+      "type": "custom-banner",
+      "settings": {
+        "url": ""
+      }
+    },
+    "c40d35d5-1ed0-4861-90e6-3cbeff9d1e0c": {
+      "type": "article-trending-tag-bridal23",
+      "disabled": true,
+      "custom_css": [
+        ".trending-section-btn {padding: 10px 30px; border-radius: 30px;}"
+      ],
+      "settings": {
+        "header": "Blogs",
+        "intro": "",
+        "tag": "bridal-blogs",
+        "header_colour": "#646464",
+        "text_colour": "#646464",
+        "bg_colour": "#ffffff",
+        "max-width": "1440",
+        "header-mobile-font-size": 16,
+        "text-mobile-font-size": 12,
+        "arrow-mobile-size": 40,
+        "mobile-top-padding": 30,
+        "mobile-bottom-padding": 30,
+        "mobile-right-padding": 10,
+        "mobile-left-padding": 10,
+        "header-desktop-font-size": 30,
+        "text-desktop-font-size": 20,
+        "arrow-desktop-size": 50,
+        "desktop-top-padding": 50,
+        "desktop-bottom-padding": 50,
+        "desktop-right-padding": 20,
+        "desktop-left-padding": 20,
+        "display-mobile": 2,
+        "display-tablet": 3,
+        "display-desktop": 3,
+        "enable_arrows": true,
+        "colour-arrow": "#ffffff",
+        "mobile-arrow": 35,
+        "tablet-arrow": 35,
+        "desktop-arrow": 40,
+        "include-btn": true,
+        "btn-text": "MORE BLOGS",
+        "btn-url": "https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/tagged\/bridal-blogs",
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#8b8b8b"
+      }
+    },
+    "fa93aa5a-0b7a-4e00-b48b-578a0e758a28": {
+      "type": "custom_multicolumn_salon",
+      "custom_css": [
+        ".text_container {text-align: left;}"
+      ],
+      "settings": {
+        "bg_color": "#fcfcfc",
+        "max_width": "992",
+        "mobile-p_top": 20,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 30,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "",
+        "sub_header": "",
+        "description": "<strong>Did you attend our stand? Tell us how we did and what you enjoyed most. If there was anything that would have made it better we’d love to know<\/strong>",
+        "read_more": "",
+        "text_width": 100,
+        "title_tag": "h1",
+        "header_mobile_font": 16,
+        "header_desktop_font": 30,
+        "text_mobile_font": 13,
+        "text_desktop_font": 20,
+        "header_color": "#646464",
+        "header_opacity": 100,
+        "sub_header_color": "#646464",
+        "text_color": "#646464",
+        "enable_video": false,
+        "video_width": 50,
+        "play-size-mobile": 40,
+        "play-size-desktop": 60,
+        "play-color": "#000000",
+        "enable_product": false,
+        "product": "",
+        "product_price": "",
+        "product_width": 50,
+        "product_mobile_font": 12,
+        "product_desktop_font": 18,
+        "product_text_color": "#000000",
+        "product_bg_color": "#ffffff",
+        "enable_form": true,
+        "form_id": "JmsheKt5v1-23s_vaWmdeA",
+        "form_width": 100
+      }
+    },
+    "e2f1cba5-450b-4f18-b7f7-68b2979b08bd": {
+      "type": "bridal_dropdown",
+      "blocks": {
+        "963cb829-5abc-430b-aa41-c9999a9a5666": {
+          "type": "item",
+          "settings": {
+            "title": "<h3>What is Salon International? <\/h3>",
+            "body": "<p>Salon International is the biggest hairdressing trade show in the UK. Every year, it brings together la creme de la creme of the hair world: among the sea of live demonstrations and launches, colouring techniques, treatments, hair care, hair extensions, and styling tools & methods get presented at this incredible convention. <\/p>"
+          }
+        },
+        "37e8c7f1-722f-4702-bbce-9e8b581dae7a": {
+          "type": "item",
+          "settings": {
+            "title": "<h3>Can anybody go to Salon International?   <\/h3>",
+            "body": "<p>Yes, anybody can purchase their ticket! You don't need to work in the hair industry or own a salon to come and marvel at the stalls at Salon International. However, the convention isn't designed to focus on retail customers -- although you can purchase things on your own if you are interested in it. Some companies will be happy to sell single pieces of their products without necessarily sticking to bulk-buyers!<\/p>"
+          }
+        },
+        "5bbe76b3-da75-4df7-93af-847a7165a945": {
+          "type": "item",
+          "settings": {
+            "title": "<h3>Will Cliphair be exhibiting at Salon International 2024?<\/h3>",
+            "body": "<p>We are definitely interested in coming back to Salon International again, and we are making plans for our 2024 stall. However, the final details will be discussed with the company further down the road. Stay tuned - we will certainly make our announcement when the time comes!<\/p>"
+          }
+        },
+        "e5e823f4-b94e-49c7-8e89-c86c4d1cdbc6": {
+          "type": "item",
+          "settings": {
+            "title": "<h3>Where is Salon International? <\/h3>",
+            "body": "<p>Salon International takes place yearly at the ExCel London. The complete address is: <\/p><p>Royal Victoria Dock, 1 Western Gateway, London E16 1XL<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "963cb829-5abc-430b-aa41-c9999a9a5666",
+        "37e8c7f1-722f-4702-bbce-9e8b581dae7a",
+        "5bbe76b3-da75-4df7-93af-847a7165a945",
+        "e5e823f4-b94e-49c7-8e89-c86c4d1cdbc6"
+      ],
+      "custom_css": [
+        ".section_header {text-align: left;}"
+      ],
+      "settings": {
+        "section_title": "<h2>FAQ'S<\/h2>",
+        "intro": "",
+        "text_color": "#646464",
+        "bg_color": "#ffffff",
+        "max_width": "992",
+        "is_faq": true,
+        "header-mobile-font_size": 16,
+        "text-mobile-font_size": 12,
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "header-desktop-font_size": 30,
+        "text-desktop-font_size": 20,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 20,
+        "desktop-p_left": 20
       }
     }
   },
   "order": [
-    "main"
+    "166445343207c9fec0",
+    "6368dc69-0f53-4509-a1fe-d8783409b1a1",
+    "962c8e4b-0648-4235-b6a6-143559c32b12",
+    "79b16b39-2361-437c-b5ef-afb510088104",
+    "92ed07ca-d7f5-4c6f-86fd-63751e8fc43e",
+    "23b17f62-e108-4a37-bb4b-5fe998b11017",
+    "6b78c291-f84c-43d5-ba01-fee41b8e1e45",
+    "b37dfb63-471e-46e1-9cb1-a7cdfb9fa563",
+    "9153105e-f1cc-457b-81ff-b3e66e6aaa77",
+    "0d9b8688-af86-4c56-91d1-d095eb11dd34",
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e37",
+    "3184a1ba-37df-45c6-89ce-8e28161521f9",
+    "bridal23_custom-text",
+    "5f3347d6-9da6-42ec-9418-a4b80bc67a5c",
+    "a2889847-cdb4-49ac-9c6f-2d49e079f1e0",
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e40",
+    "f86f14eb-17ac-47e6-b8c7-eabdfa17677b",
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e42",
+    "50f217a8-9848-4960-a7a2-bd7066c83c7e43",
+    "dd3d21f7-dc7a-4760-8f5e-c76942888d97",
+    "c40d35d5-1ed0-4861-90e6-3cbeff9d1e0c",
+    "fa93aa5a-0b7a-4e00-b48b-578a0e758a28",
+    "e2f1cba5-450b-4f18-b7f7-68b2979b08bd"
   ]
 }

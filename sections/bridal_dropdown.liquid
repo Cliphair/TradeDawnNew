@@ -1,6 +1,310 @@
+{{ 'section-bridal-dropdown.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.max_width != empty %}
+<style>
+  #section-{{ section.id }} > .section-inner-container{
+    max-width: {{section.settings.max_width}}px;
+  }
+</style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding-bottom:{{ section.settings.mobile-p_bottom }}px;
+    padding-top:{{ section.settings.mobile-p_top }}px;;
+    padding-left:{{ section.settings.mobile-p_left }}px;;
+    padding-right:{{ section.settings.mobile-p_right }}px;;
+    background:{{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} .section_header *{
+    font-size:{{ section.settings.header-mobile-font_size }}px;
+    color:{{ section.settings.text_color }};
+  }
+  
+  #section-{{ section.id }} .section-intro *,
+  #section-{{ section.id }} .dropdown-container > .item > div *{
+    color:{{ section.settings.text_color }};
+    font-size:{{ section.settings.text-mobile-font_size }}px;
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-bottom:{{ section.settings.desktop-p_bottom }}px;
+      padding-top:{{ section.settings.desktop-p_top }}px;;
+      padding-left:{{ section.settings.desktop-p_left }}px;;
+      padding-right:{{ section.settings.desktop-p_right }}px;;
+    }
+    
+    #section-{{ section.id }} .section_header *{
+      font-size:{{ section.settings.header-desktop-font_size }}px;
+    }
+    
+    #section-{{ section.id }} .section-intro *,
+    #section-{{ section.id }} .dropdown-container > .item > div *{
+      font-size:{{ section.settings.text-desktop-font_size }}px;
+    }
+  }
+</style>
+
+<section id='section-{{ section.id }}' class='section-bridal-dropdown'>
+
+  <div class='section-inner-container'>
+  
+    {% if section.settings.section_title != empty %}
+      <div class='section_header'>
+        {{ section.settings.section_title }}
+      </div>
+    {% endif %}
+    
+    {% if section.settings.intro != empty %}
+      <div class='section-intro'>
+        {{ section.settings.intro }}
+      </div>
+    {% endif %}
+    
+    {% if section.blocks.size >= 1 %}
+      <div class='dropdown-container'>
+        {% for block in section.blocks %}
+          {% if block.settings.title != empty and block.settings.body != empty %}
+            <div class='item'>
+              <div class='item-title'>{{ block.settings.title }}</div>
+              <div class='item-body hidden'>{{ block.settings.body }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %} 
+    
+  </div>
+  
+</section>
+
+{% if section.settings.is_faq %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for block in section.blocks %}
+        {
+          "@type": "Question",
+          "name": "{{ block.settings.title | strip_html | strip | strip_newlines }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ block.settings.body | strip_html | strip | strip_newlines  }}"
+          }
+        }{% if forloop.last != true %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  </script>
+{% endif %}
+
+<script>
+  var items = document.querySelectorAll("#section-{{ section.id }} .item");
+  for (let item of items) {
+    item.addEventListener("click", function(){
+      this.classList.toggle("active");
+      this.querySelector(".item-body").classList.toggle("hidden")
+    })
+  }
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Bridal Dropdown",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "section_title",
+        "label": "Section Title"
+      },
+      {
+        "type": "richtext",
+        "id": "intro",
+        "label": "Section Intro"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_faq",
+        "label": "Is FAQ",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "text-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 26
+      },
+      {
+        "type": "range",
+        "id": "text-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Dropdown Item",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Item title"
+          },
+          {
+            "type": "richtext",
+            "id": "body",
+            "label": "Item body"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
