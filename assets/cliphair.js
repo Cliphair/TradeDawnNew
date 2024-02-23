@@ -83,3 +83,240 @@ function readLess(clicked_id) {
     openButton.classList.toggle('closed');
     textContainer.classList.toggle('closed');
 }
+
+// Functions to scroll an element into view based on a button click
+function addButtonClick(btnClass){
+  let buttons = document.querySelectorAll(`.${btnClass}`);
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+
+      let target = button.dataset.target;
+      let element = document.querySelector(`[data-index="${target}"]`);
+
+      scrollToElement(element);
+      removeActiveClass(btnClass);
+      addActiveClass(target);
+    })
+  })
+}
+
+function addActiveClass(target){
+  let button = document.querySelector(`[data-target="${target}"]`);
+  button.classList.add("active");
+}
+
+function removeActiveClass(elementClass){
+  let button = document.querySelector(`.${elementClass}.active`);
+  button.classList.remove("active");
+}
+
+function scrollToElement(element){
+  element.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+
+// Scroll Function
+function scrollTo(containerClass, elementIndex) {
+  if(!containerClass)  return;
+    let container = document.querySelector(`.${containerClass}`);
+    if (!container) {
+        return;
+    }
+    let childElements = container.children;
+    let childElementLengthIndexed = childElements.length - 1;
+    elementIndex = (elementIndex < 0) ? 0 : ((elementIndex > childElementLengthIndexed) ? childElementLengthIndexed : elementIndex);
+    childElements[elementIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Scroll Functions For Arrow.liquid Snippet
+function newScrollArrow(button) {
+    // initiate values
+    let current = parseInt(button.dataset.index);
+    let limit = parseInt(button.dataset.limit);
+    let direction = button.dataset.direction;
+    let containerClass = button.dataset.containerClass;
+    let step = parseInt(button.dataset.stepMobile);
+
+    // change step based on the window size
+    let windowSize = window.innerWidth;
+    if (windowSize >= 992) {
+        step = parseInt(button.dataset.stepDesktop);
+    } else if (windowSize >= 768 && windowSize < 992) {
+        step = parseInt(button.dataset.stepTablet);
+    }
+
+    let next = 0;
+    if (direction == "right") {
+        next = (current + step >= limit) ? limit : current + step;
+        if (current % step == 0) {
+            next = current + step + (step - 1);
+            next = (next >= limit) ? limit : next;
+        }
+    } else {
+        next = (current - step <= 0) ? 0 : current - step;
+        if (current % step == 0) {
+            next = current - step - (step - 1);
+            next = (next <= 0) ? 0 : next;
+        }
+    }
+
+    if (current == limit || current == 0) {
+        if (direction == "right") {
+            next = current + step + (step - 1);
+            next = (next >= limit) ? limit : next;
+        } else {
+            next = current - step - (step - 1);
+            next = (next <= 0) ? 0 : next;
+        }
+    }
+
+    scrollTo(containerClass, next); // scroll to element
+    updateArrowsIndex(containerClass, next); // update arrows index value
+    disabelArrows(containerClass); // disable arrows
+    enableArrows(containerClass); // enable arrow
+
+    // update dots information
+    let reference = (direction == "right") ? Math.floor(next / step) : Math.ceil(next / step);
+    updateDots(containerClass, reference, next);
+}
+
+function updateArrowsIndex(containerClass, value) {
+    let arrows = document.querySelectorAll(`.${containerClass} ~ .scroll-arrow`)
+    for (let arrow of arrows) {
+        arrow.dataset.index = value;
+    }
+}
+
+function disabelArrows(containerClass) {
+    let arrows = document.querySelectorAll(`.${containerClass} ~ .scroll-arrow`)
+
+    for (let arrow of arrows) {
+        let arrowIndex = parseInt(arrow.dataset.index);
+        let arrowLimit = parseInt(arrow.dataset.limit);
+
+        if (arrow.dataset.direction == "right") {
+            if (arrowIndex >= arrowLimit) {
+                arrow.classList.add("disabled");
+            }
+        } else {
+            if (arrowIndex <= 0) {
+                arrow.classList.add("disabled");
+            }
+        }
+    }
+}
+
+function enableArrows(containerClass) {
+    let arrows = document.querySelectorAll(`.${containerClass} ~ .scroll-arrow`)
+
+    for (let arrow of arrows) {
+        let arrowIndex = parseInt(arrow.dataset.index);
+        let arrowLimit = parseInt(arrow.dataset.limit);
+
+        if (arrow.dataset.direction == "right") {
+            if (arrowIndex < arrowLimit) {
+                arrow.classList.remove("disabled");
+            }
+        } else {
+            if (arrowIndex > 0) {
+                arrow.classList.remove("disabled");
+            }
+        }
+    }
+}
+
+function updateDots(containerClass, reference, next) {
+    let dots = document.querySelectorAll(`.${containerClass} ~ .dot-container .dot-icon`)
+    if (dots.length != 0) {
+        updateDotIndex(containerClass, next);
+        updateDotActive(containerClass, reference);
+        removeDotSelectedClass(containerClass);
+        addDotSelectedClass(containerClass, reference);
+    }
+}
+
+// Scroll Functions For Dots.liquid Snippet
+function scrollDots(button) {
+    // initiate variables
+    let limit = parseInt(button.dataset.limit);
+    let current = parseInt(button.dataset.index);
+    let reference = parseInt(button.dataset.reference);
+    let active = parseInt(button.dataset.active);
+    let containerClass = button.dataset.containerClass;
+    let step = parseInt(button.dataset.step);
+    let next = current;
+    let isFirst = button.dataset.first;
+    let isLast = button.dataset.last;
+
+    // calculate next based on the reference position
+    if (active < reference) {
+        let dif = reference - active;
+        next = (current + (step * dif));
+        if (current % step == 0 || current == limit || current == 0) {
+            next = current + (step * dif) + (step - 1);
+        }
+        next = (next >= limit) ? limit : next;
+    } else if (active > reference) {
+        let dif = active - reference;
+        next = (current - (step * dif));
+        if (current % step == 0 || current == limit || current == 0) {
+            next = current - (step * dif) - (step - 1);
+        }
+        next = (next <= 0) ? 0 : next;
+    }
+
+    // if it's first dot, update next to 0
+    if (isFirst) {
+        next = 0;
+    }
+    // if it's last dot, update net to the limit;
+    if (isLast) {
+        next = limit;
+    }
+
+    scrollTo(containerClass, next); // scroll to next element
+    updateDotIndex(containerClass, next); // update dots index information
+    updateDotActive(containerClass, reference); // update dots active value
+    removeDotSelectedClass(containerClass); // remove active class from all the dots
+    addDotSelectedClass(containerClass, reference); // add active class to active dots
+    updateArrows(containerClass, next); // if there are arrow, update arrows
+}
+
+function removeDotSelectedClass(containerClass) {
+    let buttons = document.querySelectorAll(`.${containerClass} ~ .dot-container .selected`);
+    for (let button of buttons) {
+        button.classList.remove("selected");
+    }
+}
+
+function addDotSelectedClass(containerClass, reference) {
+    let buttons = document.querySelectorAll(`.${containerClass} ~ .dot-container [data-reference="${reference}"]`);
+    for (let button of buttons) {
+        button.classList.add("selected");
+    }
+}
+
+function updateDotIndex(containerClass, index) {
+    let dotButtons = document.querySelectorAll(`.${containerClass} ~ .dot-container .dot-icon`);
+    for (let dot of dotButtons) {
+        dot.dataset.index = index;
+    }
+}
+
+function updateDotActive(containerClass, active) {
+    let dotButtons = document.querySelectorAll(`.${containerClass} ~ .dot-container .dot-icon`);
+    for (let dot of dotButtons) {
+        dot.dataset.active = active;
+    }
+}
+
+function updateArrows(containerClass, index) {
+    let arrows = document.querySelectorAll(`.${containerClass} ~ .scroll-arrow`)
+    if (arrows.length != 0) {
+        for (let arrow of arrows) {
+            updateArrowsIndex(containerClass, index)
+        }
+        disabelArrows(containerClass);
+        enableArrows(containerClass);
+    }
+}
