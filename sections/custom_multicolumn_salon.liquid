@@ -420,7 +420,7 @@
         <div class='videos'>
           {% for block in section.blocks %}
             <div class='placeholder_image_container'>
-              <img data-src='{{ block.settings.placeholder | image_url }}' class='placeholder_image lazyload' height='{{ block.settings.placeholder.height }}' width='{{ block.settings.placeholder.width }}' alt='{{ block.settings.placeholder.alt }}'>
+              <img src='{{ block.settings.placeholder | image_url }}' class='placeholder_image lazyload' height='{{ block.settings.placeholder.height }}' width='{{ block.settings.placeholder.width }}' alt='{{ block.settings.placeholder.alt }}' loading='lazy'>
               <div class='button_container'>
                 <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}'><i class="icon icon-play"></i></span>
                 {% if block.settings.video_link_desktop %}
@@ -443,7 +443,7 @@
       <!-- Product Section -->
       <div class='product_container'>
         <a href='{{ section.settings.product.url }}' target='_blank' title='{{ section.settings.product.title }}' class='product'>
-          <img class='lazyload product_image' data-src='{{ section.settings.product_image | image_url }}' width='{{ section.settins.product_image.width }}' height='{{ section.settins.product_image.height }}' alt='{{ section.settins.product_image.alt }}'>
+          <img loading='lazy' class='lazyload product_image' src='{{ section.settings.product_image | image_url }}' width='{{ section.settins.product_image.width }}' height='{{ section.settins.product_image.height }}' alt='{{ section.settins.product_image.alt }}'>
         </a>
       </div>
     {% endif %}
