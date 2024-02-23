@@ -38,7 +38,7 @@
         {% case block.type %}
           {% when "image" %}
             {% if block.settings.image %}
-              <img data-src="{{ block.settings.image | image_url }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" class="lazyload" alt="{{ block.settings.image.alt}}">
+              <img src="{{ block.settings.image | image_url }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" class="lazyload" alt="{{ block.settings.image.alt}}" loadin='lazy'>
             {% endif %}
           {% when "text" %}
             {% if block.settings.text != empty %}<p>{{ block.settings.text | replace: "p>", "span>" }}</p>{% endif %}
