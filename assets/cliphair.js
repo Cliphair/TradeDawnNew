@@ -27,31 +27,32 @@ function closeReadLess(btn) {
 }
 
 function btsVideoTag(videoUrl){
+  let videoBgContainer = document.createElement("div");
+  videoBgContainer.id = 'bts__video-container';
+  videoBgContainer.classList.add('video__bg');
+  
   let video=``;
     if (videoUrl.includes("youtube")){
       let videoId = videoUrl.includes("shorts") ? videoUrl.split("/shorts/")[1] : videoUrl.split("/watch?v=")[1];
       video = `
-    		<div id='bts__video-container' class='video__bg' onclick='btsCloseBtn()'>
-    			<div class='video__container'>
-    			  <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}?si=uhRBra05BAOkACcF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    			</div>
-    		</div>
+          <div class='video__container'>
+            <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}?si=uhRBra05BAOkACcF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
     	`;
     } else{
       	video = `
-    		<div id='bts__video-container' class='video__bg' onclick='btsCloseBtn()'>
-    			<div class='video__container'>
-    			  <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
-                  <video class='bts__video' autoplay muted controls>
-                      <source src="${videoUrl}" type="video/mp4">
-                      Your browser does not support the video tag.
-                  </video>
-    			</div>
-    		</div>
+          <div class='video__container'>
+            <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+            <video class='bts__video' autoplay muted controls>
+                <source src="${videoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
     	`;
     }
-    document.querySelector('body').innerHTML += video
+    videoBgContainer.innerHTML = video;
+    document.querySelector('body').prepend(videoBgContainer)
 }
   
 function btsCloseBtn(){
