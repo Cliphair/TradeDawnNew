@@ -1,6 +1,280 @@
+<link rel="preload" href="{{ 'section-blue-light-faq.css' | asset_url }}" as="style" />
+{{ 'section-blue-light-faq.css' | asset_url | stylesheet_tag }}
+<style>
+  #section-{{ section.id }}{
+    padding-top:{{ section.settings.mobile-top-padding }}px;
+    padding-bottom:{{ section.settings.mobile-bottom-padding }}px;
+    padding-right:{{ section.settings.mobile-right-padding }}px;
+    padding-left:{{ section.settings.mobile-left-padding }}px;
+    background:{{section.settings.bg_colour}};
+  }
+
+  .faq-container{
+    {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
+  }
+
+  .question{
+    font-size:{{section.settings.question-mobile-font-size}}px;
+    color:{{section.settings.question_colour}};
+  }
+
+  .answer{
+    font-size:{{section.settings.answer-mobile-font-size}}px;
+    color:{{section.settings.answer_colour}};
+  }
+
+  .read-more{
+    color:{{section.settings.answer_colour}};
+    font-size:{{section.settings.answer-mobile-font-size}}px;
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top:{{ section.settings.desktop-top-padding }}px;
+      padding-bottom:{{ section.settings.desktop-bottom-padding }}px;
+      padding-right:{{ section.settings.desktop-right-padding }}px;
+      padding-left:{{ section.settings.desktop-left-padding }}px;
+    }
+
+    .question{
+      font-size:{{section.settings.question-desktop-font-size}}px;
+    }
+    
+    .answer{
+      font-size:{{section.settings.answer-desktop-font-size}}px;
+    }
+    
+    .read-more{
+      font-size:{{section.settings.answer-desktop-font-size}}px;
+    }
+  } 
+</style>
+
+<div id="section-{{ section.id }}" class="faq-outer-container">
+  <div class="faq-container">
+    {% for block in section.blocks %}
+      <h3 class="question">{{ block.settings.question }}</h3>
+      <p class="answer">{{ block.settings.answer | replace: "p>", "span>"}}</p>
+      {% if block.settings.read_more != empty %}
+        <button id='hidden-{{ block.id }}' data-target='hidden-{{ block.id }}' class='read-more' onclick='read_more(this)'>Read More</button>
+        <div class='hidden-{{ block.id }} read-more-container closed'>
+          <p class="answer">{{ block.settings.read_more | replace: "p>", "span>"}}</p>
+          <button data-target='hidden-{{ block.id }}' class='read-more' onclick='read_less(this)'>Read Less</button>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+
+  function read_more(button){
+    let target = button.dataset.target;
+  	let container= document.getElementsByClassName(target)[0];
+
+    container.classList.toggle('closed');
+    button.classList.toggle('closed');
+  }
+  
+  function read_less(clicked_button){
+    let target = clicked_button.dataset.target;
+  	let container= document.getElementsByClassName(target)[0];
+    let readMoreButton = document.getElementById(target);
+    console.log(readMoreButton)
+    container.classList.toggle('closed');
+    readMoreButton.classList.toggle('closed');
+  }
+  
+</script>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Blue Light FAQ",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "question_colour",
+        "label": "Question Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "answer_colour",
+        "label": "Answer Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_colour",
+        "label": "Background Colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "max-width",
+        "label": "Max Width",
+        "info": "Please enter max-width value in pixels, ex: 1250, 1440."
+      },
+      {
+        "type": "header",
+		"content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+		"id": "question-mobile-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Question Mobile Font Size",
+		"default": 14
+      },
+      {
+        "type": "range",
+		"id": "answer-mobile-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Answer Mobile Font Size",
+		"default": 14
+      },
+      {
+        "type": "range",
+		"id": "mobile-top-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Top Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-bottom-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Bottom Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-right-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Right Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "mobile-left-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Mobile Left Padding",
+		"default": 0
+      },
+      {
+		"type": "header",
+		"content": "Desktop Settings"
+      },
+      {
+		"type": "range",
+		"id": "question-desktop-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Question Desktop Font Size",
+		"default": 20
+      },
+      {
+		"type": "range",
+		"id": "answer-desktop-font-size",
+		"min": 0,
+		"max": 50,
+		"step": 1,
+		"unit": "px",
+		"label": "Answer Desktop Font Size",
+		"default": 20
+      },
+      {
+        "type": "range",
+		"id": "desktop-top-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Top Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-bottom-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Bottom Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-right-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Right Padding",
+		"default": 0
+      },
+      {
+        "type": "range",
+		"id": "desktop-left-padding",
+		"min": 0,
+		"max": 100,
+		"step": 2,
+		"unit": "px",
+		"label": "Desktop Left Padding",
+		"default": 0
+      }
+    ],
+    "blocks":[
+      {
+        "name": "Item",
+        "type": "item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer"
+          },
+           {
+            "type": "richtext",
+            "id": "read_more",
+            "label": "Read more content"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
