@@ -53,6 +53,8 @@ function btsVideoTag(videoUrl){
     }
     videoBgContainer.innerHTML = video;
     document.querySelector('body').prepend(videoBgContainer)
+    document.querySelector("#bts__video-container").addEventListener('click', btsCloseBtn);
+  
 }
   
 function btsCloseBtn(){
