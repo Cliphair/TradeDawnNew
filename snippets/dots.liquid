@@ -1,0 +1,180 @@
+{% comment %}
+  Fields:
+    -> String: containerClass (required)
+      class from the container that will scroll on click;
+    -> Int: elementsCounter (required)
+      number of elements inside the container. This value is index0, start counting on 0;
+    -> Int: mobileDots
+      number of elements displayed on mobile, set up as 1 if not passed;
+    -> Int: tabletDots
+      number of elements displayed on tablet, set up as the same as mobile if not passed;
+    -> Int: desktopDots
+      number of elements displayed on mobile, set up as the same as tablet if not passed;
+
+  Render snippet right after container.
+  {% render "dots", containerClass: containerClass (required), elementsCounter: elementsCounter (required), mobileDots: mobileDots, tabletDots: tabletDots, desktopDots: desktopDots %}
+{% endcomment %}
+
+{% if containerClass and elementsCounter %}
+  <style>
+    .dot-container > *{
+      width:100%;
+      display:flex;
+      flex-direction:row;
+      justify-content:center;
+    }
+  
+    .dot-container > .tablet,
+    .dot-container > .desktop{
+      display:none;
+    }
+
+    @media screen and (min-width:768px){
+      .dot-container > .mobile{
+        display:none;
+      }
+
+      .dot-container > .tablet{
+        display:flex;
+      }
+    }
+
+    @media screen and (min-width:992px){
+      .dot-container > .tablet{
+        display:none;
+      }
+
+      .dot-container > .desktop{
+        display:flex;
+      }
+    }
+  </style>
+  
+  {% liquid
+    unless mobileDots
+      assign mobileDots = 1
+    endunless
+
+    unless tabletDots
+      assign tabletDots = mobileDots
+    endunless
+
+    unless desktopDots
+      assign desktopDots = tabletDots
+    endunless
+  %}
+
+  <div class="dot-container">
+    <div class="mobile">
+      {% assign reference = 0 %}
+      {% for i in (0..elementsCounter) %}
+        {% liquid
+          assign displayMobile = false
+          assign elementModulo = i | modulo: mobileDots
+          if elementModulo == 0
+            assign displayMobile = true
+          endif
+        %}
+
+        {% if displayMobile %}
+          <span
+            class="dot-icon {% if forloop.first %}selected{% endif %}"
+            data-active="0"
+            data-reference="{{ reference }}"
+            data-container-class="{{ containerClass }}"
+            data-index="0"
+            data-step="{{ mobileDots }}"
+            data-limit="{{ elementsCounter }}"
+            {% if forloop.first %}
+              data-first="true"
+            {% endif %}
+            {% if forloop.last %}
+              data-last="true"
+            {% endif %}
+          >
+            
+          </span>
+          {% assign reference = reference | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="tablet">
+      {% assign reference = 0 %}
+      {% for i in (0..elementsCounter) %}
+        {% liquid
+          assign displayTablet = false
+          assign elementModulo = i | modulo: tabletDots
+          if elementModulo == 0
+            assign displayTablet = true
+          endif
+        %}
+
+        {% if displayTablet %}
+          <span
+            class="dot-icon {% if forloop.first %}selected{% endif %}"
+            data-active="0"
+            data-reference="{{ reference }}"
+            data-container-class="{{ containerClass }}"
+            data-index="0"
+            data-step="{{ tabletDots }}"
+            data-limit="{{ elementsCounter }}"
+            {% if forloop.first %}
+              data-first="true"
+            {% endif %}
+            {% if forloop.last %}
+              data-last="true"
+            {% endif %}
+          >
+          </span>
+          {% assign reference = reference | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="desktop">
+      {% assign reference = 0 %}
+      {% for i in (0..elementsCounter) %}
+        {% liquid
+          assign displayDesktop = false
+          assign elementModulo = i | modulo: desktopDots
+          if elementModulo == 0
+            assign displayDesktop = true
+          endif
+        %}
+
+        {% if displayDesktop %}
+          <span
+            class="dot-icon {% if forloop.first %}selected{% endif %}"
+            data-active="0"
+            data-reference="{{ reference }}"
+            data-container-class="{{ containerClass }}"
+            data-index="0"
+            data-step="{{ desktopDots }}"
+            data-limit="{{ elementsCounter }}"
+            {% if forloop.first %}
+              data-first="true"
+            {% endif %}
+            {% if forloop.last %}
+              data-last="true"
+            {% endif %}
+          >
+          </span>
+          {% assign reference = reference | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    var dotButtons = document.querySelectorAll('.{{ containerClass }} ~ .dot-container .dot-icon');
+
+    if (dotButtons.length != 0) {
+      for (let dot of dotButtons) {
+        dot.addEventListener('click', function () {
+          scrollDots(this);
+        });
+      }
+    }
+  </script>
+{% endif %}
