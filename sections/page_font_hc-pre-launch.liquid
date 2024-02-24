@@ -1,6 +1,76 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@0;1&display=swap');
+  {% assign text1 = section.settings.font-text-1 %}
+  {{ text1 | font_face }}
+
+  main.content-for-layout h1,
+  main.content-for-layout h2,
+  main.content-for-layout h3,
+  main.content-for-layout h4,
+  main.content-for-layout h5,
+  main.content-for-layout h6,
+  main.content-for-layout p,
+  main.content-for-layout a,
+  main.content-for-layout ul,
+  main.content-for-layout li,
+  main.content-for-layout label,
+  main.content-for-layout select{
+    font-family: {{ text1.family }}, {{ text1.fallback_families }};
+  }
+
+  main.content-for-layout h1 em,
+  main.content-for-layout h2 em,
+  main.content-for-layout h3 em,
+  main.content-for-layout h4 em,
+  main.content-for-layout h5 em,
+  main.content-for-layout h6 em{
+    font-family: 'Libre Caslon Text', serif;
+  }
+
+  main.content-for-layout p,
+  main.content-for-layout a,
+  main.content-for-layout li,
+  main.content-for-layout ul,
+  main.content-for-layout label,
+  main.content-for-layout select{
+    font-family: {{ text1.family }}, {{ text1.fallback_families }};
+  }
+
+  main.content-for-layout p em,
+  main.content-for-layout a em,
+  main.content-for-layout label em,
+  main.content-for-layout select em{
+    font-family: 'Libre Caslon Text', serif;
+  }
+
+  {% assign btns = section.settings.font-btns %}
+  {{ btns | font_face }}
+  main.content-for-layout a{
+    font-family: {{ btns.family }}, {{ btns.fallback_families }};
+  }
+</style>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Page Font HC Pre Launch",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font-text-1",
+        "label": "Page Text (primary)",
+        "default": "libre_baskerville_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "font-btns",
+        "label": "Page Buttons",
+        "default": "libre_baskerville_n4"
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
