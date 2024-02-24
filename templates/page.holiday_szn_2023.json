@@ -865,6 +865,7 @@
         ".placeholder_image_container .button_container > .play_button {color: white;}",
         ".socila-media-wrapper {background: #f1f0ec; padding: 10px 0;}",
         ".socila-media-wrapper > a {color: #494949;}",
+        "a{font-size:unset; line-height:1; display:inline-block;}",
         "@media screen and (min-width: 992px) {.section_header {margin-bottom: 35px; } .socila-media-wrapper {margin-top: 35px; }}"
       ],
       "settings": {
