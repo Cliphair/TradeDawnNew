@@ -15,7 +15,7 @@
       ],
       "settings": {
         "max-width": "2560",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/holiday-szn-page-banner-desktop.webp",
         "mobile-image": "shopify:\/\/shop_images\/holiday-szn-page-banner-mobile.webp",
         "url": "",
@@ -264,7 +264,7 @@
         "47fc98ce-6df2-4739-bea0-1570fbc4fc4b"
       ],
       "custom_css": [
-        "a{text-decoration:none;}",
+        "a {text-decoration: none;}",
         "@media screen and (min-width: 990px) {.section_header {margin-bottom: 35px; } .carrousel-container .carrousel-items > .item {padding: 0 20px; }}",
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
       ],
@@ -737,7 +737,8 @@
         "f29be8e9-ab56-4b62-80a0-f788bcc7a717"
       ],
       "custom_css": [
-        ".section-text-image_carrousel {background-color: #f1f0ec;}"
+        ".section-text-image_carrousel {background-color: #f1f0ec;}",
+        "h2 {margin-top: 0;}"
       ],
       "settings": {
         "header": "<h2><em>Gift Card Option<\/em><\/h2>",
@@ -768,14 +769,18 @@
         "arrow_color": "#373737"
       }
     },
-    "f01fe659-58a9-4a10-adaa-7a612581d3a2": {
+    "ec0d60a1-4d84-4914-8098-8753fe7c83ec": {
       "type": "custom-banner",
+      "custom_css": [
+
+      ],
       "settings": {
-        "max-width": "",
-        "bg-color": "#FFF",
-        "url": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "max-width": "992",
+        "bg-color": "#f1f0ec",
+        "desktop-image": "shopify:\/\/shop_images\/holiday-szn-why-cliphair.webp",
+        "url": "shopify:\/\/pages\/colour-matching-service",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "3d5d0c82-2333-4ff9-aa67-abe598fcb6eb": {
@@ -907,14 +912,12 @@
         "btn-size-desktop": 12
       }
     },
-    "ec0d60a1-4d84-4914-8098-8753fe7c83ec": {
+    "f01fe659-58a9-4a10-adaa-7a612581d3a2": {
       "type": "custom-banner",
-      "custom_css": [
-
-      ],
       "settings": {
-        "max-width": "",
-        "bg-color": "#FFF",
+        "max-width": "992",
+        "bg-color": "#ffffff",
+        "desktop-image": "shopify:\/\/shop_images\/colour_matching_banner_mobile.webp",
         "url": "shopify:\/\/pages\/colour-matching-service",
         "padding_top": 36,
         "padding_bottom": 36
@@ -1280,9 +1283,9 @@
     "4b60c7fb-d08c-4b0f-85cd-abaf0c10127f",
     "ec0d60a1-4d84-4914-8098-8753fe7c83ec3",
     "ec0d60a1-4d84-4914-8098-8753fe7c83ec38",
-    "f01fe659-58a9-4a10-adaa-7a612581d3a2",
-    "3d5d0c82-2333-4ff9-aa67-abe598fcb6eb",
     "ec0d60a1-4d84-4914-8098-8753fe7c83ec",
+    "3d5d0c82-2333-4ff9-aa67-abe598fcb6eb",
+    "f01fe659-58a9-4a10-adaa-7a612581d3a2",
     "a2889847-cdb4-49ac-9c6f-2d49e079f1e2",
     "a2889847-cdb4-49ac-9c6f-2d49e079f1e1",
     "50f217a8-9848-4960-a7a2-bd7066c83c7e37"
