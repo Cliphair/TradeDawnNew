@@ -6,7 +6,7 @@ const validated = true; // uncomment when testing
 // Quiz just works if email validated before
 if(validated){ 
   removeParametersFromURL();
-  document.querySelector( "#quiz" ).removeAttr('style'); 
+  document.querySelector( "#quiz" ).style=''; 
   
   // Add click event to the answers
   let answerButtons = document.getElementsByClassName('answer');
