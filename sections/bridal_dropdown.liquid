@@ -103,7 +103,6 @@
 
 <script>
   var dropdown_items = document.querySelectorAll("#section-{{ section.id }} .item");
-  console.log(dropdown_items)
   for (let item of dropdown_items) {
     item.addEventListener("click", function(){
       this.classList.toggle("active");
