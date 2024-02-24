@@ -899,7 +899,8 @@
       "type": "custom_multicolumn_salon",
       "custom_css": [
         ".text_container {text-align: left;}",
-        ".text_container * {line-height: 1.5em;}"
+        ".text_container * {line-height: 1.5em;}",
+        "ul {padding: 0 15px;}"
       ],
       "settings": {
         "bg_color": "#ffffff",
