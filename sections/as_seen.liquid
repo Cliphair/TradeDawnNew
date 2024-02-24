@@ -109,7 +109,7 @@
           	{% for block in section.blocks %}
           		{% if block.settings.logo_img != nil%}
                     <a class='press_url' {% if block.settings.url != nil %}href='{{block.settings.url}}' target="_blank" rel='noopener norefeer'{% else %}href='#'{% endif %}>
-                        <img class='press_logo lazyload' data-src='{{ block.settings.logo_img | img_url: 'master' }}' width='{{ block.settings.logo_img.width }}' height='{{ block.settings.logo_img.height }}' alt='{{ block.settings.logo_img.alt }}' style='opacity:calc({{block.settings.opacity}}/10);'>
+                        <img class='press_logo lazyload' loading='lazy' src='{{ block.settings.logo_img | img_url: 'master' }}' width='{{ block.settings.logo_img.width }}' height='{{ block.settings.logo_img.height }}' alt='{{ block.settings.logo_img.alt }}' style='opacity:calc({{block.settings.opacity}}/10);'>
                     </a>
           		{% endif%}
           	{% endfor %}
