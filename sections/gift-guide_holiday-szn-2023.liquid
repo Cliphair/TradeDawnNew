@@ -1,6 +1,646 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{% if section.settings.display == 'carrousel' %}
+  {% capture containerClass %}container-{{ section.id }}{% endcapture %}
+  {% assign limit = section.blocks.size | minus: 1 %}
+  {% capture customClass %}
+    {% if section.settings.item_per_row_mobile == section.blocks.size %}hidden-mobile {% endif %}
+    {% if section.settings.item_per_row_tablet == section.blocks.size %}hidden-tablet {% endif %}
+    {% if section.settings.item_per_row_desktop == section.blocks.size %}hidden-desktop{% endif %}
+  {% endcapture %}
+  {% assign stepMobile = section.settings.item_per_row_mobile | floor %}
+  {% assign stepTablet = section.settings.item_per_row_tablet | floor %}
+  {% assign stepDesktop = section.settings.item_per_row_desktop | floor %}
+{% endif %}
+
+<link rel="preload" href="{{ 'section-column-carrousel.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'">
+<noscript>
+  {{ 'section-column-carrousel.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+{% if section.settings.max_width != empty %}
+  <style>
+    #section-{{ section.id }} > .section-inner-container{
+        max-width: {{ section.settings.max_width }}px;
+    }
+  </style>
+{% endif %}
+
+{%- style -%}
+  #section-{{ section.id }}{
+    padding-top:{{ section.settings.mobile-p_top }}px;
+    padding-bottom:{{ section.settings.mobile-p_bottom }}px;
+    padding-right:{{ section.settings.mobile-p_right }}px;
+    padding-left:{{ section.settings.mobile-p_left }}px;
+    background: {{ section.settings.bg_color }};
+    position:relative;
   }
+
+  #section-{{ section.id }} .bg{
+    width:100%;
+    height:auto;
+    aspect-ratio:initial;
+    object-fit:cover;
+    display:block;
+    min-height: 300px;
+    object-position: center;
+  }
+
+  #section-{{ section.id }} .bg-desktop{
+    display:none;
+  }
+
+  
+  #section-{{ section.id }} .section-inner-container{
+    width:70%;
+    max-width:720px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #section-{{ section.id }} .header_container{
+    background:{{ section.settings.header_bg_color }};
+  }
+
+  #section-{{ section.id }} .header_container > *{
+    color:{{ section.settings.header_color }};
+    font-size: {{ section.settings.header-mobile-font_size }}px;
+  }
+
+  #section-{{ section.id }} .intro_container .section_sub-heading{
+    color:{{ section.settings.sub_header_color }};
+    font-size: calc({{ section.settings.header-mobile-font_size }}px - 5px);
+  }
+
+  #section-{{ section.id }} .intro_container > p{
+    color:{{ section.settings.sub_header_color }};
+    font-size: {{ section.settings.mobile-font_size }}px;
+  }
+
+  #section-{{ section.id }} .column_container > .column{
+    width:calc(100% / {{ section.settings.item_per_row_mobile }});
+    min-width:calc(100% / {{ section.settings.item_per_row_mobile }});
+  }
+
+  #section-{{ section.id }} .column_container > .column > p{
+    color:{{ section.settings.buttons_color }};
+    background:{{ section.settings.buttons_bg_color }};
+  }
+
+  #section-{{ section.id }} .view-collection > *{
+    background:{{ section.settings.buttons_color }};
+    color:{{ section.settings.buttons_bg_color }};
+  }
+
+  #section-{{ section.id }} .arrow-container {
+    top: {{ section.settings.arrow-position-mobile }}%;
+  }
+
+  #section-{{ section.id }} .arrow-container > * {
+    color: {{ section.settings.arrow-colour }};
+    font-size: {{ section.settings.arrow-size }}px;
+    opacity:1;
+  }
+
+  #section-{{ section.id }} .arrow-container > *:hover {
+    opacity:0.6;
+  }
+
+  #section-{{ section.id }} .arrow-container > .scroll-arrow * {
+    width: {{ section.settings.arrow-size }}px;
+    height: {{ section.settings.arrow-size }}px;
+  }
+
+  #section-{{ section.id }} .dot-container{
+    background: {{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} .dot-container .dot-icon{
+    background-color: {{ section.settings.dot_icon_colour }};
+    height:{{ section.settings.dot_icon_size }}px;
+    width:{{ section.settings.dot_icon_size }}px;
+  }
+
+  @media screen and (min-width:768px){
+    #section-{{ section.id }} .column_container > .column{
+      width:calc(100% / {{ section.settings.item_per_row_tablet }});
+      min-width:calc(100% / {{ section.settings.item_per_row_tablet }});
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top:{{ section.settings.desktop-p_top }}px;
+      padding-bottom:{{ section.settings.desktop-p_bottom }}px;
+      padding-right:{{ section.settings.desktop-p_right }}px;
+      padding-left:{{ section.settings.desktop-p_left }}px;
+    }
+
+    #section-{{ section.id }} .bg-mobile{
+      display:none;
+    }
+
+    #section-{{ section.id }} .bg-desktop{
+      display:block;
+    }
+
+    #section-{{ section.id }} .section-inner-container{
+      width:50%;
+      right:50%;
+    }
+
+    #section-{{ section.id }} .header_container > *{
+      font-size: {{ section.settings.header-desktop-font_size }}px;
+    }
+
+    #section-{{ section.id }} .header_container > .intro_container > .section_sub-heading{
+      font-size: calc({{ section.settings.header-desktop-font_size }}px - 5px);
+    }
+
+    #section-{{ section.id }} .column_container > .column{
+      width:calc(100% / {{ section.settings.item_per_row_desktop }});
+      min-width:calc(100% / {{ section.settings.item_per_row_desktop }});
+    }
+
+    #section-{{ section.id }} .intro_container > p{
+      font-size: {{ section.settings.desktop-font_size }}px;
+    }
+
+    #section-{{ section.id }} .arrow-container {
+      top: {{ section.settings.arrow-position-desktop }}%;
+    }
+  }
+{%- endstyle -%}
+
+<section id="section-{{ section.id }}" class="column-carrousel-section">
+  <img class='bg' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/holiday-snz-guift-guide-bg.webp?v=1701089998' loading='eager' width='2280' height='875' alt='holiday season 2023 gift guide bg'>
+  <div class="section-inner-container page-width">
+    {% if section.settings.header != empty %}
+      <div class="header_container">
+        {{ section.settings.header }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.intro != empty or section.settings.sub_header != empty %}
+      <div class="intro_container">
+        {% if section.settings.sub_header != empty -%}
+          <h3 class="section_sub-heading">{{ section.settings.sub_header | replace: 'p>', 'span>' }}</h3>
+        {%- endif %}
+        {% if section.settings.intro != empty %}
+          {{ section.settings.intro }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="column_container {% if section.settings.display == 'carrousel' %}carrousel {% endif %}{% if section.blocks.size == 1 %}center-aligned{% endif %} container-{{ section.id }}">
+      {% for block in section.blocks %}
+        {% if block.settings.url %}
+          <a href="{{ block.settings.url }}" title="{{ block.settings.button_text }}" class="column">
+            {% if block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url }}"
+                height="{{ block.settings.image.height }}"
+                width="{{ block.settings.image.width }}"
+                alt="{{ block.settings.image.alt }}"
+                loading="lazy"
+                class="{% if section.settings.circle_images %}circle{% endif %}"
+              >
+            {% endif %}
+            {% if block.settings.description != empty %}{{ block.settings.description }}{% endif %}
+            {% if section.settings.have_buttons -%}
+              <p>{{ block.settings.button_text }}</p>
+            {%- endif %}
+          </a>
+        {% else %}
+          <div class="column">
+            {% if block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url }}"
+                height="{{ block.settings.image.height }}"
+                width="{{ block.settings.image.width }}"
+                alt="{{ block.settings.image.alt }}"
+                loading="lazy"
+                class="{% if section.settings.circle_images %}circle{% endif %}"
+              >
+            {% endif %}
+            {% if block.settings.description != empty %}{{ block.settings.description }}{% endif %}
+            {% if section.settings.have_buttons -%}
+              <p>{{ block.settings.button_text }}</p>
+            {%- endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if section.settings.show_collection %}
+      <div class="view-collection">
+        <a href="{{ section.settings.url }}" target="_self">
+          <em>
+            {% if section.settings['collection-text'] != empty %}
+              {{ section.settings['collection-text'] }}
+            {% else %}
+              View All
+            {% endif %}
+          </em>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Gift Guides",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Max width",
+      "info": "Enter the value in px. Ex: 1400, 1250, ...",
+      "id": "max_width"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background Colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Display Settings"
+    },
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display",
+      "options": [
+        {
+          "value": "carrousel",
+          "label": "Carrousel"
+        },
+        {
+          "value": "column",
+          "label": "Column"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "range",
+      "id": "item_per_row_mobile",
+      "min": 1,
+      "max": 10,
+      "step": 0.2,
+      "unit": "un",
+      "label": "Item per row (mobile)",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "item_per_row_tablet",
+      "min": 1,
+      "max": 10,
+      "step": 0.2,
+      "unit": "un",
+      "label": "Item per row (tablet)",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "item_per_row_desktop",
+      "min": 1,
+      "max": 10,
+      "step": 0.2,
+      "unit": "un",
+      "label": "Item per row (desktop)",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "circle_images",
+      "label": "Make Circle Images?",
+      "info": "If selected, make sure to add squared images.",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Arrow Settings",
+      "info": "Only for carrousel mode"
+    },
+    {
+      "type": "checkbox",
+      "id": "include-arrows",
+      "label": "Include swipe arrows",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "arrow-position-mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Arrow Position (mobile)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "arrow-position-desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Arrow Position (desktop)",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "arrow-size",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Arrow Size",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "arrow-colour",
+      "label": "Arrow Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Dots Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "include-dots",
+      "label": "Include swipe dots",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "dot_icon_size",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Dot Icon Size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "dot_icon_colour",
+      "label": "Icons",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color",
+      "label": "Header Background Colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Sub Header/Text Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "sub_header",
+      "label": "Subheading"
+    },
+    {
+      "type": "color",
+      "id": "sub_header_color",
+      "label": "Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Buttons Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "have_buttons",
+      "label": "Have Buttons?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "buttons_color",
+      "label": "Buttons Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "buttons_bg_color",
+      "label": "Buttons Background Colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Intro Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro Text"
+    },
+    {
+      "type": "header",
+      "content": "Collection Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection",
+      "label": "Show View All Button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "collection-text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Collection URL"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "range",
+      "id": "header-mobile-font_size",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Header Font Size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile-font_size",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Text Font Size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_top",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_right",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile-p_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Left",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Desktop Settings"
+    },
+    {
+      "type": "range",
+      "id": "header-desktop-font_size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Header Font Size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "desktop-font_size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Text Font Size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_top",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_right",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Right",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop-p_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Left",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url",
+          "info": "Add the url that you want to send the user to."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        }
+      ],
+      "limit": 10
+    }
+  ]
+}
 {% endschema %}
