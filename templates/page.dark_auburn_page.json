@@ -20,6 +20,21 @@
         "desktop_sides_padding": 20
       }
     },
+    "custom_banner_f8RqjP": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div{padding:0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/8_4f5209fa-0942-4933-b2d1-843cd6086de2.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/9_1f5a9c2b-ef7e-41a4-8b67-a572b09ec1a1.jpg",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "e455aabe-2509-4672-9aa1-0abd72e87cd3": {
       "type": "infinite-text",
       "blocks": {
@@ -148,7 +163,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Untitled_750_x_500_px_3.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/edff5d0ed136457fa61daf2ca5e65f32.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         }
       },
@@ -159,9 +177,11 @@
         "header": "<h2>GET TO KNOW AMY<\/h2>",
         "intro": "<p>What does being a redhead mean to you?<\/p><p>Who is your ULTIMATE redhead icon of all times?  What hairstyle that brings your hair to life?<\/p><p><em><strong>Heres what our Amy has to say!<\/strong><\/em><\/p>",
         "image_orientation": "landscape",
+        "title-position": "bottom",
         "text_color": "#ffffff",
         "bg_color": "#d3b6a1",
         "max_width": "1500",
+        "social-media": false,
         "header-mobile-font_size": 22,
         "text-mobile-font_size": 12,
         "mobile-p_top": 20,
@@ -174,6 +194,7 @@
         "desktop-p_bottom": 20,
         "desktop-p_right": 0,
         "desktop-p_left": 0,
+        "display": "carrousel",
         "display-mobile": 2,
         "display-tablet": 3,
         "display-desktop": 4,
@@ -192,7 +213,7 @@
         "btn-text": "",
         "btn-url": "",
         "btn-color": "#000000",
-        "btn-bg-color": "#FFFFFF",
+        "btn-bg-color": "#ffffff",
         "btn-size-mobile": 12,
         "btn-size-desktop": 12
       }
@@ -279,6 +300,7 @@
   "order": [
     "166445343207c9fec0",
     "1664893445d1aa2011",
+    "custom_banner_f8RqjP",
     "e455aabe-2509-4672-9aa1-0abd72e87cd3",
     "12288ffa-73fb-49c0-b4bb-ef72af88db9c",
     "1664746053df8a22c8",
