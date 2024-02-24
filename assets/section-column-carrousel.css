@@ -131,6 +131,7 @@
   opacity:0.5;
   margin-right:12px;
   cursor:pointer;
+  border-radius:50%;
 }
 
 .column-carrousel-section .dot-container .dot-icon.selected,
