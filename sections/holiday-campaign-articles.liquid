@@ -1,0 +1,384 @@
+{{ 'section-holiday-campaign-articles.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.max_width != empty %}
+<style>
+  #section-{{ section.id }} > .inner-container{
+    max-width: {{section.settings.max_width}}px;
+  }
+</style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    color: {{ section.settings.text_color }};
+    background: {{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} .section_header > *{
+    font-size: {{ section.settings.header-mobile-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .intro_container > *,
+  #section-{{ section.id }} .article-wrapper > .article-text *,
+  #section-{{ section.id }} .read-more__btn,
+  #section-{{ section.id }} .read-less__btn{
+    font-size: {{ section.settings.text-mobile-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .article-wrapper > .article-text .button-read-more{
+    font-size:{{ section.settings.btn-size-mobile }}px;
+    color:{{ section.settings.btn-color }};
+    background:{{ section.settings.btn-bg-color }};
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+    }
+  
+    #section-{{ section.id }} .section_header > *{
+      font-size: {{ section.settings.header-desktop-font_size }}px;
+    }
+  
+    #section-{{ section.id }} .intro_container > *,
+    #section-{{ section.id }} .article-wrapper > .article-text *,
+    #section-{{ section.id }} .read-more__btn,
+    #section-{{ section.id }} .read-less__btn{
+      font-size: {{ section.settings.text-desktop-font_size }}px;
+    }
+
+    #section-{{ section.id }} .article-wrapper > .article-text .button-read-more{
+      font-size:{{ section.settings.btn-size-desktop }}px;
+    }
+  }
+</style>
+
+<div id='section-{{ section.id }}' class='section-holiday-articles'>
+
+  <div class='inner-container'>
+
+    {% if section.settings.header != empty %}
+      <div class='section_header'>
+        {{ section.settings.header }}
+      </div>
+    {% endif %}
+    
+    {% if section.settings.intro != empty %}
+      <div class='intro_container'>
+        {{ section.settings.intro }}
+      </div>
+    {% endif %}
+    
+    <div class='articles-container'>
+      {% for block in section.blocks limit:3 %}
+        <div class='article-wrapper'>
+          <div class='article-image'>
+            {% if block.settings.article.metafields.custom.banner %}
+              <img loading='lazy' src='{{ block.settings.article.metafields.custom.banner | image_url }}' height='{{ block.settings.article.metafields.custom.banner.height }}' width='{{ block.settings.article.metafields.custom.banner.width }}' alt='{{ block.settings.article.metafields.custom.banner.alt }}' >
+            {% elsif block.settings.article.metafields.global.main_image %}
+              <img loading='lazy' src='{{ block.settings.article.metafields.global.main_image }}' width='848' heigh='477' alt='Article heading image'>
+            {% else %}
+              <img loading='lazy' src='{{ block.settings.article.image | image_url }}' height='{{ block.settings.article.image.height }}' width='{{ block.settings.article.image.width }}' alt='{{ block.settings.article.image.alt }}' >
+            {% endif %}
+          </div>
+
+          <div class='article-text'>
+            <h3 class='title'>{{ block.settings.article.title }}</h3>
+            <div class='description'><p>{{ block.settings.article.excerpt | truncatewords: 25 }}</p></div>
+            <a href='{{ block.settings.article.url }}' title='{{ block.settings.article.title }}' class='button-read-more'>READ BLOG</a>
+          </div>
+        </div>
+      {% endfor %}
+
+      {% if section.blocks.size > 3 %}
+        <a class='read-more__btn'>More Blogs</a>
+      {% endif  %}
+    </div>
+    {% if section.blocks.size > 3 %}
+      <div class='articles-container closed'>
+        {% for block in section.blocks offset:3 %}
+          <div class='article-wrapper'>
+            <div class='article-image'>
+              {% if block.settings.article.metafields.custom.banner %}
+                <img loading='lazy' src='{{ block.settings.article.metafields.custom.banner | image_url }}' height='{{ block.settings.article.metafields.custom.banner.height }}' width='{{ block.settings.article.metafields.custom.banner.width }}' alt='{{ block.settings.article.metafields.custom.banner.alt }}' >
+              {% elsif block.settings.article.metafields.global.main_image %}
+                <img loading='lazy' src='{{ block.settings.article.metafields.global.main_image }}' width='848' heigh='477' alt='Article heading image'>
+              {% else %}
+                <img loading='lazy' src='{{ block.settings.article.image | image_url }}' height='{{ block.settings.article.image.height }}' width='{{ block.settings.article.image.width }}' alt='{{ block.settings.article.image.alt }}' >
+              {% endif %}
+            </div>
+  
+            <div class='article-text'>
+              <h3 class='title'>{{ block.settings.article.title }}</h3>
+              <div class='description'><p>{{ block.settings.article.excerpt | truncatewords: 25 }}</p></div>
+              <a href='{{ block.settings.article.url }}' title='{{ block.settings.article.title }}' class='button-read-more'>READ BLOG</a>
+            </div>
+          </div>
+        {% endfor %}
+        <a class='read-less__btn'>Less Blogs</a>
+      </div>
+    {% endif  %}
+  </div>
+  
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      let readMoreBtns = document.getElementsByClassName('read-more__btn');
+      let readLessBtns = document.getElementsByClassName('read-less__btn');
+  
+      for (let btn of readMoreBtns) {
+          btn.addEventListener('click', () => {
+              openReadMore(btn);
+          })
+      }
+  
+      for (let btn of readLessBtns) {
+          btn.addEventListener('click', () => {
+              closeReadLess(btn);
+          })
+      }
+  })
+
+  function openReadMore(btn) {
+      btn.classList.add('closed');
+      btn.parentElement.nextElementSibling.classList.remove('closed')
+  }
+  
+  function closeReadLess(btn) {
+      btn.parentElement.previousElementSibling.querySelector('a.closed').classList.remove('closed');
+      btn.parentElement.classList.add('closed');
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Holiday page articles",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "richtext",
+        "id": "intro",
+        "label": "Section Intro"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "text-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 26
+      },
+      {
+        "type": "range",
+        "id": "text-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "color",
+        "id": "btn-color",
+        "label": "Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "btn-bg-color",
+        "label": "Button Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "range",
+        "id": "btn-size-mobile",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Size Mobile",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "btn-size-desktop",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Size Desktop",
+        "default": 12
+      }
+    ],
+    "blocks": [
+      {
+        "type": "article",
+        "name": "Article",
+        "settings":[
+          {
+            "type": "article",
+            "id": "article",
+            "label": "Article"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
