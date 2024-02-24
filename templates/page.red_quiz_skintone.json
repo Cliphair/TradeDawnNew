@@ -1,19 +1,48 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "52a9f752-1856-4203-a8c4-f74c2bbb09fa": {
+      "type": "page_font_bridal23",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "font-titles-1": "inter_n5",
+        "font-titles-2": "libre_baskerville_i4",
+        "font-text-1": "inter_n4",
+        "font-text-2": "inter_n4",
+        "font-btns": "inter_n4"
+      }
+    },
+    "77bf34cd-2379-4f64-bbf9-f60babcf238b": {
+      "type": "page-header",
+      "custom_css": [
+        "h1 {font-weight: unset;}"
+      ],
+      "settings": {
+        "custom-title": true,
+        "first-line": "Radiate in Red: Which Red Hair Shade is Meant for You?",
+        "second-line": "",
+        "hide": false,
+        "text_colour": "#ffffff",
+        "bg_colour": "#c26539",
+        "mobile-font-size": 20,
+        "mobile-top-padding": 10,
+        "mobile-bottom-padding": 10,
+        "mobile-right-padding": 10,
+        "mobile-left-padding": 10,
+        "desktop-font-size": 25,
+        "desktop-top-padding": 20,
+        "desktop-bottom-padding": 20,
+        "desktop-right-padding": 0,
+        "desktop-left-padding": 0
+      }
+    },
+    "template": {
+      "type": "red_quiz_skintone",
+      "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "52a9f752-1856-4203-a8c4-f74c2bbb09fa",
+    "77bf34cd-2379-4f64-bbf9-f60babcf238b",
+    "template"
   ]
 }
