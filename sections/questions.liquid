@@ -6,7 +6,7 @@
 <div id='quiz' style='display:none;'>
   
   <div class='info'>
-    <p class='back_btn hidden_btn'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+    <p class='back_btn hidden_btn'>{% render 'icon-arrow' %} Back</p>
     <p>Question <span id='question_counter'>1</span> of {{ section.blocks.size }}</p>
   </div>
   
@@ -19,7 +19,7 @@
         <p class='question'>{{ forloop.index }}. {{ block.settings.question }}</p>
         
         {% if block.settings.image %}
-          <img data-src='{{ block.settings.image | image_url }}' class='lazyload question_image' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+          <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload question_image' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
         {% endif %}
 
         <div class='answer_container {{ block.settings.direction }}_direction'>
