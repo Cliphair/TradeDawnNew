@@ -138,24 +138,23 @@
   
       for (let btn of readMoreBtns) {
           btn.addEventListener('click', () => {
-            openReadMore(btn);
+            openReadMoreArticle(btn);
           })
       }
   
       for (let btn of readLessBtns) {
           btn.addEventListener('click', () => {
-            closeReadLess(btn);
+            closeReadLessArticle(btn);
           })
       }
   })
 
-  function openReadMore(btn) {
-    console.log('test')
+  function openReadMoreArticle(btn) {
       btn.classList.add('closed');
       btn.parentElement.nextElementSibling.classList.remove('closed')
   }
   
-  function closeReadLess(btn) {
+  function closeReadLessArticle(btn) {
       btn.parentElement.previousElementSibling.querySelector('a.closed').classList.remove('closed');
       btn.parentElement.classList.add('closed');
   }
