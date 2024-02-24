@@ -467,12 +467,12 @@
               <div class="button_container">
                 <span
                   data-url="{{ block.settings.video_link }}"
-                  class="play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}"
+                  class="play_button play_button_{{ section.id }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}"
                   >{% render 'icon-play' %}</span>
                 {% if block.settings.video_link_desktop %}
                   <span
                     data-url="{{ block.settings.video_link_desktop }}"
-                    class="play_button play_button_{{ randomNumber }} desktop_btn"
+                    class="play_button play_button_{{ section.id }} desktop_btn"
                     >{% render 'icon-play' %}</span>
                 {% endif %}
               </div>
@@ -572,9 +572,9 @@
 
 {% if section.settings.enable_video %}
   <script>
-    var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
+    var playBtns{{section.id}} = document.querySelectorAll('.play_button_{{section.id}}');
 
-    for(let button of playBtns{{randomNumber}}){
+    for(let button of playBtns{{section.id}}){
       button.addEventListener('click', function(){
         btsVideoTag(button.dataset.url)
       });
