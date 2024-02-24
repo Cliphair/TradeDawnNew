@@ -1,19 +1,287 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "166445343207c9fec0": {
+      "type": "page_font",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "font": "josefin_sans_n4"
+      }
+    },
+    "1664893445d1aa2011": {
+      "type": "back-to",
+      "settings": {
+        "back_url": "shopify:\/\/pages\/red-head-campaign-2022",
+        "back_text": "Back To Redhead Campaign 2022 Page",
+        "max_width": false,
+        "mobile_font": 10,
+        "mobile_tb_padding": 5,
+        "mobile_sides_padding": 15,
+        "desktop_font": 12,
+        "desktop_tb_padding": 7,
+        "desktop_sides_padding": 20
+      }
+    },
+    "ff93b577-d35a-409b-9215-9f5dab27ae2e": {
+      "type": "infinite-text",
+      "blocks": {
+        "8c80b4e4-3675-4de4-b240-830411d7fb56": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#EmbraceTheRed <\/p>",
+            "custom_bg": false
+          }
+        },
+        "05389fd4-55a0-4c32-9fea-b2a8d5b327f0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ten Fiery Shades Available<\/p>",
+            "custom_bg": false
+          }
+        },
+        "a6610ea0-7dbc-477d-ba5d-956c070cc5c0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#EmbraceTheRed <\/p>",
+            "custom_bg": false
+          }
+        },
+        "aa341c8a-88d4-4163-ad6b-8b98601ad800": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ten Fiery Shades Available<\/p>",
+            "custom_bg": false
+          }
+        },
+        "e2d9f4d6-771f-424f-87f2-076f637615d5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#EmbraceTheRed <\/p>",
+            "custom_bg": false
+          }
+        },
+        "c0b2af78-d5bf-4d96-8aec-91ca486125a3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ten Fiery Shades Available<\/p>",
+            "custom_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "8c80b4e4-3675-4de4-b240-830411d7fb56",
+        "05389fd4-55a0-4c32-9fea-b2a8d5b327f0",
+        "a6610ea0-7dbc-477d-ba5d-956c070cc5c0",
+        "aa341c8a-88d4-4163-ad6b-8b98601ad800",
+        "e2d9f4d6-771f-424f-87f2-076f637615d5",
+        "c0b2af78-d5bf-4d96-8aec-91ca486125a3"
+      ],
+      "settings": {
+        "text_color": "#ffffff",
+        "bg_color": "#d3b6a1",
+        "custom_bg_color": "#ffffff",
+        "max_width": "",
+        "no_wrap": false,
+        "mobile-font_size": 12,
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 0,
+        "mobile-p_left": 0,
+        "desktop-font_size": 18,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 0,
+        "desktop-p_left": 0
+      }
+    },
+    "4c7a8059-4f6c-4601-94c0-4cde2319aee3": {
+      "type": "custom_multicolumn",
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_width": "1500",
+        "mobile-p_top": 14,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 20,
+        "mobile-p_left": 20,
+        "desktop-p_top": 30,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 30,
+        "desktop-p_left": 30,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "<h2>SYDNIE IS WEARING CINNAMON SWIRL<\/h2>",
+        "sub_header": "24” DOUBLE WEFTED CLIP IN EXTENSIONS",
+        "description": "<p>Creamy and spicy, Cinnamon Swirl is one of our most popular mixed shades, embodying the depth and texture. Highlights and lowlights merge together to create the shade you've always wanted.<\/p>",
+        "read_more": "",
+        "text_width": 50,
+        "title_tag": "h1",
+        "header_mobile_font": 14,
+        "header_desktop_font": 20,
+        "text_mobile_font": 12,
+        "text_desktop_font": 18,
+        "header_color": "#7f220e",
+        "header_opacity": 40,
+        "sub_header_color": "#767676",
+        "text_color": "#000000",
+        "enable_video": false,
+        "video_width": 50,
+        "play-size-mobile": 40,
+        "play-size-desktop": 60,
+        "play-color": "#000000",
+        "enable_product": true,
+        "product": "double-wefted-full-head-clip-in-human-hair-extensions-27-30",
+        "product_image": "shopify:\/\/shop_images\/Untitled_design_23_e8e5a4e8-6c12-4353-be87-189f79baad4d.jpg",
+        "product_price": "115",
+        "product_width": 30,
+        "product_mobile_font": 12,
+        "product_desktop_font": 18,
+        "product_text_color": "#ffffff",
+        "product_bg_color": "#ce8f61",
+        "enable_form": false,
+        "form_id": "",
+        "form_width": 50
+      }
+    },
+    "1664746053df8a22c8": {
+      "type": "video_carrousel",
+      "blocks": {
+        "2e266794-9043-4fd6-bd27-340aec4d2029": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_750_x_500_px.jpg",
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/86fb37e2e9bb453a8a2d481235cf9356.mp4",
+            "video_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "2e266794-9043-4fd6-bd27-340aec4d2029"
+      ],
+      "settings": {
+        "header": "<h2>GET TO KNOW SYDNIE<\/h2>",
+        "intro": "<p>What does being a redhead mean to you?<\/p><p>Who is your ULTIMATE redhead icon of all times?  What hairstyle that brings your hair to life?<\/p><p><\/p><p><strong>Heres what our Syndie has to say!<\/strong><\/p>",
+        "image_orientation": "landscape",
+        "text_color": "#ffffff",
+        "bg_color": "#d3b6a1",
+        "max_width": "1500",
+        "header-mobile-font_size": 22,
+        "text-mobile-font_size": 12,
+        "mobile-p_top": 20,
+        "mobile-p_bottom": 20,
+        "mobile-p_right": 0,
+        "mobile-p_left": 0,
+        "header-desktop-font_size": 26,
+        "text-desktop-font_size": 16,
+        "desktop-p_top": 20,
+        "desktop-p_bottom": 20,
+        "desktop-p_right": 0,
+        "desktop-p_left": 0,
+        "display-mobile": 2,
+        "display-tablet": 3,
+        "display-desktop": 4,
+        "include-dots": true,
+        "dot-color": "#ffffff",
+        "dot-size": 8,
+        "include-arrows": false,
+        "arrow-color": "#000000",
+        "arrow-size-mobile": 12,
+        "arrow-size-tablet": 12,
+        "arrow-size-desktop": 12,
+        "arrow-position-mobile": 20,
+        "arrow-position-tablet": 20,
+        "arrow-position-desktop": 30,
+        "include-btn": false,
+        "btn-text": "",
+        "btn-url": "",
+        "btn-color": "#000000",
+        "btn-bg-color": "#FFFFFF",
+        "btn-size-mobile": 12,
+        "btn-size-desktop": 12
+      }
+    },
+    "1664459317add8ab16": {
+      "type": "multicolumn_images",
+      "blocks": {
+        "6f16976e-b69d-455a-8cd1-3a56b9690ee9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/21_ac900049-c979-4c05-aa89-b7a81d308936.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        },
+        "2410cf39-3162-4722-a00d-dbbbbb683876": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/22_58a0d452-c09f-4251-8df1-a6a5636eac12.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        },
+        "f0849554-a0a9-41cf-b3c1-c8a82b93f5ff": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sydnie_3.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        },
+        "b52a651c-61be-4d6e-9604-e345c1c04a84": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sydnie_1.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        },
+        "2e360090-51f7-4613-9630-b14092802230": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sydnie_2.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "6f16976e-b69d-455a-8cd1-3a56b9690ee9",
+        "2410cf39-3162-4722-a00d-dbbbbb683876",
+        "f0849554-a0a9-41cf-b3c1-c8a82b93f5ff",
+        "b52a651c-61be-4d6e-9604-e345c1c04a84",
+        "2e360090-51f7-4613-9630-b14092802230"
+      ],
+      "settings": {
+        "max_width": "1500",
+        "header": "SYDNIE’S TRANSFORMATION",
+        "header_color": "#ffffff",
+        "header_bg_color": "#ce8f61",
+        "sub_header": "",
+        "sub_header_color": "#000000",
+        "sub_header_opacity": 100,
+        "have_buttons": false,
+        "buttons_color": "#ffffff",
+        "buttons_bg_color": "#ce8f61",
+        "intro": "",
+        "show_collection": false,
+        "collection-text": "",
+        "url": "",
+        "mobile-font_size": 12,
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 0,
+        "mobile-p_left": 0,
+        "desktop-font_size": 16,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 0,
+        "desktop-p_left": 0
       }
     }
   },
   "order": [
-    "main"
+    "166445343207c9fec0",
+    "1664893445d1aa2011",
+    "ff93b577-d35a-409b-9215-9f5dab27ae2e",
+    "4c7a8059-4f6c-4601-94c0-4cde2319aee3",
+    "1664746053df8a22c8",
+    "1664459317add8ab16"
   ]
 }
