@@ -28,6 +28,21 @@
         "desktop-left-padding": 0
       }
     },
+    "custom_banner_y8aiUw": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/discount-page-banner-desktop.webp",
+        "mobile-image": "shopify:\/\/shop_images\/discount-page-banner-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "b1f47739-8db2-4a53-8c42-834bfda16f14": {
       "type": "custom_multicolumn_hc",
       "custom_css": [
@@ -508,11 +523,11 @@
     "video_carrousel_fdzedfasd": {
       "type": "video_carrousel",
       "custom_css": [
-        ".socila-media-wrapper > a {background: #fefbff; padding: 20px; border-radius: 50%; aspect-ratio: 1\/1; display: inline-block; font-size: 20px; margin: 0 10px;}",
+        ".socila-media-wrapper > a {background: #fefbff; padding: 20px; border-radius: 50%; aspect-ratio: 1\/1; display: inline-block; font-size: unset; line-height: 1; margin: 0 10px;}",
         "@media screen and (min-width: 768px) {.socila-media-wrapper > a {padding: 30px; font-size: 40px; margin: 0 15px; }}"
       ],
       "settings": {
-        "header": "",
+        "header": "<p>Follow Us On<\/p>",
         "intro": "",
         "image_orientation": "portrait",
         "title-position": "bottom",
@@ -558,8 +573,16 @@
     },
     "custom-banner_BiRbdx": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0;}"
+      ],
       "settings": {
-        "url": "shopify:\/\/pages\/journey"
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/discount-page-banner-2.webp",
+        "url": "shopify:\/\/pages\/journey",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "video_carrousel_fdzedfdasdas": {
@@ -629,13 +652,19 @@
     "custom-banner_yDJxtB": {
       "type": "custom-banner",
       "settings": {
-        "url": ""
+        "max-width": "768",
+        "bg-color": "#fefbff",
+        "desktop-image": "shopify:\/\/shop_images\/why-cliphair-shade-fefbff.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "8ef15549-887d-43b3-b5a9-adb613c708a7",
     "e9e4959a-efe2-488f-89ff-2322f5b4ddbe",
+    "custom_banner_y8aiUw",
     "b1f47739-8db2-4a53-8c42-834bfda16f14",
     "klarna-clearpay-logo",
     "5f607072-65c7-4026-956b-4ed2b272c97c",
