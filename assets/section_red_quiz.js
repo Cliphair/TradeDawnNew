@@ -84,7 +84,7 @@ var answers = {
     </div>`
 }
 
-$( document ).ready(function() {  
+document.addEventListener("DOMContentLoaded", () => { 
     let buttons = document.getElementsByClassName('quiz__option');
   	let backButtons = document.getElementsByClassName('back-btn');
   
