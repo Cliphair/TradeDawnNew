@@ -246,7 +246,7 @@
             <div class="article">
               {% if article.metafields.global.main_image %}
                 <img
-                  data-src="{{ article.metafields.global.main_image }}"
+                  loading='lazy' src="{{ article.metafields.global.main_image }}"
                   class="lazyload article_img"
                   height="{{ article.metafields.global.main_image.height }}"
                   width="{{ article.metafields.global.main_image.width }}"
@@ -254,7 +254,7 @@
                 >
               {% else %}
                 <img
-                  data-src="{{ article.image.src | image_url }}"
+                  loading='lazy' src="{{ article.image.src | image_url }}"
                   class="lazyload article_img"
                   height="{{ article.image.height }}"
                   width="{{ article.image.width }}"
