@@ -319,7 +319,8 @@
         "df6ea653-0745-4d72-ba94-92bd8a0792c6"
       ],
       "custom_css": [
-        ".column {padding: 0 10px;}"
+        ".column {padding: 0 10px;}",
+        "li {line-height: 1.1em;}"
       ],
       "settings": {
         "max_width": "1440",
@@ -616,7 +617,11 @@
     "3184a1ba-37df-45c6-89ce-8e28161521f9": {
       "type": "custom-banner",
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "bridal23_custom-text": {
@@ -1030,7 +1035,11 @@
     "dd3d21f7-dc7a-4760-8f5e-c76942888d97": {
       "type": "custom-banner",
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "c40d35d5-1ed0-4861-90e6-3cbeff9d1e0c": {
