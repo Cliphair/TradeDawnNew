@@ -123,7 +123,6 @@ function backScreen(button){
   	document.body.scrollTop = 50; // For Safari
     document.documentElement.scrollTop = 50; // For Chrome, Firefox, IE and Opera
   	changePosition(currentId, nextId);
-    hideInspiration();
 }
 
 function answerScreen(){
