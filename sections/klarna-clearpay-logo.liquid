@@ -1,0 +1,259 @@
+{% if section.settings.max_width != empty %}
+<style>
+  #section-{{ section.id }} > .inner-container{
+    max-width: {{section.settings.max_width}}px;
+  }
+</style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    background: {{ section.settings.bg_color }};
+  }
+
+  .klarna-clearpay-section .inner-container{
+    width:100%;
+    margin:0 auto;
+  }
+  
+  .klarna-clearpay-section ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    align-items: stretch;
+    flex-wrap:wrap;
+    gap: 10px;
+  }
+
+  .klarna-clearpay-section ul li{
+    display: flex;
+    align-items: center;
+  }
+
+  .klarna-clearpay-section ul li.logo{
+    width:60px;
+  }
+
+  .klarna-clearpay-section ul li.logo.clearpay{
+    background:#b2fce4;
+    border-radius:4px;
+    margin-bottom:5px;
+  }
+
+  .klarna-clearpay-section ul li.logo > *{
+    width:100%;
+    height: auto;
+  }
+
+  #section-{{ section.id }} ul li.text *{
+    font-size: {{ section.settings.text-mobile-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  .klarna-clearpay-section ul li.text *{
+    line-height:1.2em;
+    margin:0 0 5px;
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+    }
+    
+    .klarna-clearpay-section ul li.logo{
+      width:120px;
+    }
+
+    #section-{{ section.id }} ul li.text *{
+      font-size: {{ section.settings.text-desktop-font_size }}px;
+    }
+  }
+</style>
+
+<div id='section-{{ section.id }}' class='klarna-clearpay-section'>
+  <ul class='inner-container'>
+    {% for block in section.blocks %}  
+      {% case block.type %}
+        {% when 'klarna' %}
+          <li class='klarna logo'>
+            <!-- Placement v2 -->
+            <klarna-placement
+              data-key="sidebar-promotion-auto-size"
+              data-locale="en-GB"
+            ></klarna-placement>
+            <!-- end Placement -->
+          </li>
+        {% when 'clearpay' %}
+          <li class='clearpay logo'><img src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/cp-logo.png?v=1705663936' loading='lazy' width="1000" height='340' alt='clearpay logo'></li>
+        {% when 'text' %}
+          <li class='text'>{{ block.settings.text }}</li>
+      {% endcase %}
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+  {
+    "name": "Klarna & Clearpay Logo",
+    "settings": [
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+       {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "text-mobile-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "text-desktop-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      }
+    ],
+    "blocks":[
+      {
+        "type": "klarna",
+        "name": "Klarna logo",
+        "limit": 1
+      },
+      {
+        "type": "clearpay",
+        "name": "Clearpay logo",
+        "limit": 1
+      },
+      {
+        "type": "text",
+        "name": "Text message",
+        "limit": 1,
+        "settings":[
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text message"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
