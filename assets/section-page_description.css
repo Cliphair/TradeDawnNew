@@ -83,7 +83,7 @@
   line-height: 1.2em;
 }
 
-.description__container button.btn__read-more{
+.description__container button.btn--read-more{
   background: black;
   color: white;
   text-transform: uppercase;
