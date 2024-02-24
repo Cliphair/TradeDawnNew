@@ -206,7 +206,7 @@ function addDropdownFunction(){
 }
 
 function openAndClose(){
-  let currentStatus = $('.sign').innetText();
+  let currentStatus = document.querySelector('.sign').innetText();
 
   document.querySelector('#dropdown-hidden').classList.toggle('hidden');
 
