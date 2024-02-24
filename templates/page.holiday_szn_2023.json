@@ -3,8 +3,24 @@
     "166445343207c9fec0": {
       "type": "page_font_bfcm",
       "settings": {
+        "font-titles-1": "libre_baskerville_n4",
         "font-text-1": "inter_n4",
         "font-btns": "inter_n4"
+      }
+    },
+    "custom_banner_gEey7w": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div{padding:0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/holiday-szn-page-banner-desktop.webp",
+        "mobile-image": "shopify:\/\/shop_images\/holiday-szn-page-banner-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "50f217a8-9848-4960-a7a2-bd7066c83c7e": {
@@ -720,7 +736,7 @@
         "f29be8e9-ab56-4b62-80a0-f788bcc7a717"
       ],
       "custom_css": [
-        ".section-text-image_carrousel {background-color:#F1F0EC ;}"
+        ".section-text-image_carrousel {background-color: #f1f0ec;}"
       ],
       "settings": {
         "header": "<h2><em>Gift Card Option<\/em><\/h2>",
@@ -754,7 +770,11 @@
     "f01fe659-58a9-4a10-adaa-7a612581d3a2": {
       "type": "custom-banner",
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "3d5d0c82-2333-4ff9-aa67-abe598fcb6eb": {
@@ -892,7 +912,11 @@
 
       ],
       "settings": {
-        "url": "shopify:\/\/pages\/colour-matching-service"
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "shopify:\/\/pages\/colour-matching-service",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "a2889847-cdb4-49ac-9c6f-2d49e079f1e2": {
@@ -1246,6 +1270,7 @@
   },
   "order": [
     "166445343207c9fec0",
+    "custom_banner_gEey7w",
     "50f217a8-9848-4960-a7a2-bd7066c83c7e",
     "bridal23_custom-text",
     "a2889847-cdb4-49ac-9c6f-2d49e079f1e0",
