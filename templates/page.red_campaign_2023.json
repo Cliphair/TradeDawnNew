@@ -29,6 +29,21 @@
         "desktop-left-padding": 0
       }
     },
+    "custom_banner_EDnwRa": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div{padding:0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/red23-banner-2-desktop.webp",
+        "mobile-image": "shopify:\/\/shop_images\/red23-banner-2-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "7cce3bf5-9242-4795-aece-a9f41cebe8ba": {
       "type": "page_description",
       "custom_css": [
@@ -85,7 +100,7 @@
         ".section_header > * {text-transform: unset;}"
       ],
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "max_width": "1200",
         "mobile-p_top": 20,
         "mobile-p_bottom": 0,
@@ -123,7 +138,7 @@
         "product_mobile_font": 12,
         "product_desktop_font": 18,
         "product_text_color": "#000000",
-        "product_bg_color": "#FFFFFF",
+        "product_bg_color": "#ffffff",
         "enable_form": false,
         "form_id": "",
         "form_width": 50
@@ -206,7 +221,7 @@
         "main-button-text": "",
         "main-button-url": "",
         "max_width": "1200",
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "mobile-p_top": 20,
         "mobile-p_bottom": 20,
         "mobile-p_right": 16,
@@ -226,7 +241,7 @@
         "mobile-button-font_size": 12,
         "desktop-button-font_size": 18,
         "button_color": "#000000",
-        "btn-bg_color": "#FFFFFF",
+        "btn-bg_color": "#ffffff",
         "mobile-col": 1.5,
         "tablet-col": 3.5,
         "desktop-col": 5,
@@ -404,10 +419,17 @@
       ],
       "disabled": true,
       "settings": {
+        "header": "",
+        "intro": "",
         "max-width": "1200",
         "text-colour": "#737373",
         "button-colour": "#ffffff",
         "button-bg-colour": "#c26539",
+        "image-position": "left",
+        "button-position": "inside",
+        "display-mobile": 1,
+        "display-tablet": 2,
+        "display-desktop": 3,
         "title-mobile-font-size": 16,
         "text-mobile-font-size": 13,
         "mobile-tb-padding": 0,
@@ -415,7 +437,14 @@
         "title-desktop-font-size": 20,
         "text-desktop-font-size": 16,
         "desktop-tb-padding": 20,
-        "desktop-sides-padding": 16
+        "desktop-sides-padding": 16,
+        "mobile-arrow-size": 12,
+        "tablet-arrow-size": 12,
+        "desktop-arrow-size": 12,
+        "mobile-arrow": 30,
+        "tablet-arrow": 40,
+        "desktop-arrow": 40,
+        "arrow_color": "#000000"
       }
     },
     "89f0622b-3c7f-4488-aeeb-25f4ab4a5075": {
@@ -1353,6 +1382,7 @@
   "order": [
     "a72f7002-0dee-4ae6-b071-522d0057a0c9",
     "68d2186c-caeb-4c22-a040-7d2a7f551861",
+    "custom_banner_EDnwRa",
     "7cce3bf5-9242-4795-aece-a9f41cebe8ba",
     "5d5e609b-298e-48c7-bf88-42b90e473120",
     "eb3b90e6-183d-4300-a96b-7297ab1936df",
