@@ -1,0 +1,58 @@
+<style>
+  .reviews-outer-container{
+    width:100%;
+    margin:0;
+    padding:20px 5px 0px;
+    background: {{ section.settings.bg_color }};
+  }
+
+  .reviews-inner-container{
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    padding-bottom:50px;
+    text-align:center;
+    max-width:1250px;
+  }
+</style>
+<div class='reviews-outer-container'>
+  <div class='reviews-inner-container'>
+    <div class="yotpo yotpo-reviews-carousel"  
+      data-header-customisation-enabled="1"  
+      data-header-customisation-color="#56575f"  
+      data-header-customisation-font-size="18"  
+      data-header-customisation-text="See What People Are Saying About Us!"  
+      data-header-customisation-alignment="left"  
+      data-background-color="transparent"  
+      data-mode="top_rated"  
+      data-type="site"  
+      data-count="9"  
+      data-show-bottomline="1"  
+      data-autoplay-enabled="1"  
+      data-autoplay-speed="3000"  
+      data-show-navigation="1"  
+      data-testimonials-page-enabled="1"  
+      data-testimonials-page-text="See All Reviews"  
+      data-testimonials-page-link="https://www.cliphair.co.uk/pages/testimonials">&nbsp;</div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Site Review Yotpo",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
