@@ -87,6 +87,25 @@ function readLess(clicked_id) {
     textContainer.classList.toggle('closed');
 }
 
+// Read more button custom pages
+function readMoreCustom(button){
+  let target = button.dataset.target;
+  let container= document.getElementsByClassName(target)[0];
+
+  container.classList.toggle('closed');
+  button.classList.toggle('closed');
+}
+
+function readLessCustom(clicked_button){
+  let target = clicked_button.dataset.target;
+  let container= document.getElementsByClassName(target)[0];
+  let readMoreButton = document.getElementById(target);
+  console.log(readMoreButton)
+  container.classList.toggle('closed');
+  readMoreButton.classList.toggle('closed');
+}
+
+// SCROLL ARROW AND DOTS SNIPPETS
 // Functions to scroll an element into view based on a button click
 function addButtonClick(btnClass){
   let buttons = document.querySelectorAll(`.${btnClass}`);
