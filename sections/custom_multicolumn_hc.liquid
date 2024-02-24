@@ -1,0 +1,981 @@
+{% liquid 
+  assign min = 1
+  assign max = 100
+  assign diff = max | minus: min
+  assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min 
+%}
+
+{% if section.settings.enable_text %}
+  {% if section.settings.custom_text %}
+      {% assign custom_text = true %}
+      {% assign header = section.settings.header %}
+      {% assign sub_header = section.settings.sub_header %}
+      {% assign description = section.settings.description %}
+      {% if section.settings.read_more != empty %}
+        {% assign read_more = true %}
+        {% assign read_more_content = section.settings.read_more %}
+      {% endif %}
+  {% endif %}
+{% endif %}
+
+{% if section.settings.max_width != empty %}
+<style>
+  #{{ section.id }} > .custom-multicolumn-container{
+    max-width: {{section.settings.max_width}}px;
+  }
+</style>
+{% endif %}
+
+<style>
+  #{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    background: {{ section.settings.bg_color }};
+    width: 100%;
+    margin:0;
+  }
+
+  #{{ section.id }} > .custom-multicolumn-container{
+    margin: 0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-wrap:nowrap;
+  }
+
+  #{{ section.id }} .text_container,
+  #{{ section.id }} .video_container,
+  #{{ section.id }} .product_container,
+  #{{ section.id }} .form_container{
+    width:100%;
+    margin:15px 0 0;
+    padding:0;
+    text-align:center;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} > .custom-multicolumn-container{
+      flex-direction:row;
+      flex-wrap:wrap; 
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+    }
+  }
+  
+  /* Text Section */
+  #{{ section.id }} .section_header > *{
+    font-size:{{ section.settings.header_mobile_font}}px;
+    margin:0;
+    padding:0;
+    line-height:1.2em;
+    margin-bottom:20px;
+    color: {{ section.settings.header_color }};
+    opacity: calc({{section.settings.header_opacity }} / 100);
+  }
+
+  #{{ section.id }} .section_sub_header > *{
+    font-size:{{ section.settings.text_mobile_font }}px;
+    margin:0;
+    padding:0;
+    line-height:1.2em;
+    margin-bottom:10px;
+    color: {{ section.settings.sub_header_color }};
+  }
+  
+  #{{ section.id }} .description_container{
+    width:100%;
+    margin-top:5px;
+    padding:0;
+  }
+
+  #{{ section.id }} .description_container .read-more-wrapper > p:last-of-type{
+    display: inline-block;
+  }
+  
+  #{{ section.id }} .description_container p{
+    font-size: {{ section.settings.text_mobile_font }}px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .description_container .shop_now_btn{
+    font-size: calc({{ section.settings.text_mobile_font }}px + 2px);
+    margin: 0;
+    padding: 8px 30px 5px;
+    color: {{ section.settings.product_text_color }};
+    background: {{ section.settings.product_bg_color }};
+    letter-spacing: 2px;
+    text-decoration: none;
+    line-height: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  #{{ section.id }} .description_container .shop_now_btn:hover{
+    text-decoration: underline;
+  }
+
+  #{{ section.id }} .text_container button.btn__read-more{
+  	background: black;
+    color: white;
+    text-transform: uppercase;
+    border:0;
+    border-radius:0;
+    padding:5px 15px;
+    margin-top:10px;
+    text-align:center;
+    font-size: {{ section.settings.text_mobile_font }}px;
+    line-height:1.2em;
+  }
+
+  #{{ section.id }} .text_container a.btn__read-more{
+  	color: inherit;
+    font-size: {{ section.settings.text_mobile_font }}px;
+    text-transform:uppercase;
+    text-underline-offset: 0.2rem;
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:600;
+  }
+
+  #{{ section.id }} .text_container a.btn__read-more:hover{
+  	text-decoration-thickness: 0.2rem;
+    text-decoration:underline;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} .text_container{
+      width:{{ section.settings.text_width }}%;
+      min-width:{{ section.settings.text_width }}%;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }} .section_header > *{
+      font-size:{{ section.settings.header_desktop_font}}px;
+      margin-bottom: 40px;
+    }
+  
+    #{{ section.id }} .section_sub_header > *{
+      font-size:{{ section.settings.text_desktop_font }}px;
+      margin-bottom: 20px;
+    }
+    
+    #{{ section.id }} .description_container p{
+      font-size: {{ section.settings.text_desktop_font }}px;
+      margin-bottom:7px;
+    }
+
+    #{{ section.id }} .description_container .shop_now_btn{
+      font-size: calc({{ section.settings.text_desktop_font }}px + 2px);
+      margin-top: 20px;
+      padding: 8px 50px 5px;
+    }
+  
+    #{{ section.id }} .text_container button.btn__read-more{
+      font-size: {{ section.settings.text_desktop_font }}px;
+    }
+
+    #{{ section.id }} .text_container a.btn__read-more{
+      font-size: {{ section.settings.text_desktop_font }}px;
+    }
+  }
+
+  /* Video Section */
+  #{{ section.id }} .video_container{
+    position:relative;
+    max-width:425px;
+  }
+  
+  #{{ section.id }} .video_container .videos{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    overflow-x:scroll;
+  }
+ 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #{{ section.id }} .video_container .videos::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #{{ section.id }} .video_container .videos{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  #{{ section.id }} .video_container .videos .placeholder_image_container{
+    width:100%;
+    min-width:100%;
+    position:relative;
+  }
+  
+  #{{ section.id }} .video_container .videos .placeholder_image{
+    width:100%;
+    height:auto;
+    aspect-ratio:initial;
+    object-fit:cover;
+  }
+
+  #{{ section.id }} .video_container .videos .button_container{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  #{{ section.id }} .video_container .videos .button_container > .play_button{
+    color:{{ section.settings.play-color }};
+    opacity:0.6;
+    font-size:{{ section.settings.play-size-mobile }}px;
+    cursor:pointer;
+  }
+
+  #{{ section.id }} .video_container .videos .button_container > .play_button.desktop_btn{
+    display:none;
+  }
+
+  #{{ section.id }} .video_container .videos .button_container > .play_button:hover{
+    opacity:1;
+  }
+
+  #{{section.id}} .arrow-container{
+    top:32%;
+  }
+  
+  #{{section.id}} .arrow-container > *{
+    color:#D0D0D0;
+    opacity:0.6;
+    font-size:70px;
+  }
+
+  #{{section.id}} .arrow-container > *:hover{
+    opacity:1;
+  }
+
+  #bts__video-container .video__container{
+    max-width:unset;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} .video_container{
+      width:{{ section.settings.video_width }}%;
+      min-width:{{ section.settings.video_width }}%;
+    }
+  }
+  
+  @media screen and (min-width:992px){
+    #{{ section.id }} .video_container .videos .button_container > .play_button{
+      font-size:{{ section.settings.play-size-desktop }}px;
+    }
+
+    #{{ section.id }} .video_container .videos .button_container > .play_button.mobile_btn{
+      display:none;
+    }
+
+    #{{ section.id }} .video_container .videos .button_container > .play_button.desktop_btn{
+      display:block;
+    }
+  }
+
+  /* Form Section */
+  @media screen and (min-width:768px){
+    #{{ section.id }} .form_container{
+      width:{{ section.settings.form_width }}%;
+      min-width:{{ section.settings.form_width }}%;
+    }
+  }
+
+  /* Product Section */
+  #{{ section.id }} .product_container{
+    display:flex;
+    align-items:center;
+    justify-content:center;    
+  }
+  
+  #{{ section.id }} .product{
+    display:block;
+    text-align:center;
+    position:relative;
+
+  }
+
+  #{{ section.id }} .product > .product_image{
+    width:100%;
+    height:auto;
+    aspect-ratio:initial;
+    object-fit:cover;
+  }
+
+  #{{ section.id }} .product > .product_price_container{
+    position:absolute;
+    aspect-ratio:1/1;
+    background:{{section.settings.product_bg_color}};
+    text-align:center;
+    padding:15px;
+    left: -30px;
+    bottom: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #{{ section.id }} .product > .product_price_container > span{
+    font-size:{{section.settings.product_mobile_font}}px;
+    color:{{section.settings.product_text_color}};
+    display:block;
+    line-height:100%;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} .product_container{
+      width:{{ section.settings.product_width }}%;
+      min-width:{{ section.settings.product_width }}%;
+      justify-content: flex-start;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }} .product > .product_price_container{
+      bottom: unset;
+      top: 50px;
+      right: -50px;
+      left: unset;
+    }
+
+    #{{ section.id }} .product > .product_price_container > span{
+      font-size:{{section.settings.product_desktop_font}}px;
+    }
+  }
+</style>
+
+<section id='{{ section.id }}'>
+  <div class='custom-multicolumn-container'>
+    {% if section.settings.enable_text %}
+      <!-- Text Section -->
+      <div class='text_container'>
+        {% liquid
+          unless custom_text
+            assign description = page.content
+            assign read_more = false
+            if description contains '<!-- read more -->'
+              assign read_more = true
+              assign array = description | split: '<!-- read more -->'
+              assign description = array[0]
+              assign read_more_content = array[1]
+            endif
+          endunless
+        %}
+
+        {% if custom_text %}
+          <div class='section_header'>
+            {{ header }}
+          </div>
+    
+          {% if sub_header %}   
+              <div class='section_sub_header'>
+                {{ sub_header }}
+              </div>
+          {% endif %}
+        {% endif %}
+      
+        <div class='description_container'>
+          <div>
+            <p>
+              {{ description }}
+              {% if read_more %}
+                <a href='#' class='btn__read-more read-more__btn read-more'> Read More</a>
+              {% endif %}
+            </p>
+            {% if read_more %}
+              <div class='read_more_{{  randomNumber }} read-more-wrapper closed'>
+                {{ read_more_content }}
+                <a class='btn__read-more read-less__btn' > Read Less</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  
+    {% if section.settings.enable_video %}
+      <!-- Video Section -->
+      <div class='video_container'>
+        <div class='videos'>
+          {% for block in section.blocks %}
+            <div class='placeholder_image_container'>
+              <img data-src='{{ block.settings.placeholder | image_url }}' class='placeholder_image lazyload' height='{{ block.settings.placeholder.height }}' width='{{ block.settings.placeholder.width }}' alt='{{ block.settings.placeholder.alt }}'>
+              <div class='button_container'>
+                <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}'><i class="icon icon-play"></i></span>
+                {% if block.settings.video_link_desktop %}
+                  <span data-url='{{ block.settings.video_link_desktop }}' class='play_button play_button_{{ randomNumber }} desktop_btn'><i class="icon icon-play"></i></span>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% if section.blocks.size >= 2 %}
+          <div class='arrow-container'>
+            <span class='scroll-arrow left' onclick='scrollArrow(this)' data-target='videos' data-direction='left' data-speed='50' data-distance='500' data-step='50'><i class="fa-solid fa-angle-left"></i></span>
+            <span class='scroll-arrow right' onclick='scrollArrow(this)' data-target='videos' data-direction='right' data-speed='50' data-distance='500' data-step='50'><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  
+    {% if section.settings.enable_product %}
+      <!-- Product Section -->
+      <div class='product_container'>
+        <a href='{{ section.settings.product.url }}' target='_blank' title='{{ section.settings.product.title }}' class='product'>
+          <img class='lazyload product_image' data-src='{{ section.settings.product_image | image_url }}' width='{{ section.settins.product_image.width }}' height='{{ section.settins.product_image.height }}' alt='{{ section.settins.product_image.alt }}'>
+        </a>
+      </div>
+    {% endif %}
+    
+    {% if section.settings.enable_form %}
+      <!-- Form Section -->
+      <div class='form_container'>
+        <div style="margin:10px auto 0; width:100%;" class="pxFormGenerator" id="{{ section.settings.form_id }}"></div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      let readMoreBtns = document.getElementsByClassName('read-more__btn');
+      let readLessBtns = document.getElementsByClassName('read-less__btn');
+  
+      for (let btn of readMoreBtns) {
+          btn.addEventListener('click', () => {
+              openReadMore(btn);
+          })
+      }
+  
+      for (let btn of readLessBtns) {
+          btn.addEventListener('click', () => {
+              closeReadLess(btn);
+          })
+      }
+  })
+
+  function openReadMore(btn) {
+      btn.classList.add('closed');
+      btn.parentElement.nextElementSibling.classList.remove('closed')
+  }
+  
+  function closeReadLess(btn) {
+      btn.parentElement.previousElementSibling.querySelector('a.closed').classList.remove('closed');
+      btn.parentElement.classList.add('closed');
+  }
+</script>
+
+{% if section.settings.enable_video %}
+  <script>
+    var playBtns{{randomNumber}} = $('.play_button_{{randomNumber}}');
+  
+    playBtns{{randomNumber}}.click(function(){
+    	btsVideoTag(this.dataset.url)
+    });  
+  </script>
+  
+  <script>
+    //Arrow functions
+    function scrollArrow (button){
+      	let target = button.getAttribute("data-target");
+      	let direction = button.getAttribute("data-direction");
+      	let speed = parseInt(button.getAttribute("data-speed"));
+      	let distance = document.getElementsByClassName("videos")[0].offsetWidth;
+      	let step = parseInt(button.getAttribute("data-step"));
+    	let container = document.getElementsByClassName(target)[0];
+      
+      	sideScroll(container,direction,speed,distance,step);
+    }
+    
+    function sideScroll(element,direction,speed,distance,step){
+        scrollAmount = 0;
+        var slideTimer = setInterval(function(){
+            if(direction == 'left'){
+                element.scrollLeft -= step;
+            } else {
+                element.scrollLeft += step;
+            }
+            scrollAmount += step;
+            if(scrollAmount >= distance){
+                window.clearInterval(slideTimer);
+            }
+        }, speed);
+    }  
+  </script>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Custom Multicolumn",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Devices"
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Devices"
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Text Column"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_text",
+        "label": "Enable Text Column?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "custom_text",
+        "label": "Use custom text",
+        "info": "Select this box if you don't want to use the page title and description. Instead, you want to use the custom fields below.",
+        "default": false
+      },
+      {
+        "type": "richtext",
+        "id": "header",
+        "label": "Header"
+      },
+      {
+        "type": "richtext",
+        "id": "sub_header",
+        "label": "Sub Header"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "richtext",
+        "id": "read_more",
+        "label": "Read More Content"
+      },
+      {
+        "type": "header",
+        "content": "Text Column Settings"
+      },
+      {
+        "type": "range",
+        "id": "text_width",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Text Section Width",
+        "default": 50,
+        "info": "This width will be used for desktop devices."
+      },
+      {
+        "type": "select",
+        "id": "title_tag",
+        "label": "Title Tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          }
+        ],
+        "default": "h1",
+        "info": "Select which tag do you want to use for the header: <h1> or <h2>."
+      },
+      {
+        "type": "header",
+        "content": "Font Size"
+      },
+      {
+        "type": "range",
+        "id": "header_mobile_font",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "header_desktop_font",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "text_mobile_font",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "text_desktop_font",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "header",
+        "content": "Colours"
+      },
+      {
+        "type": "color",
+        "id": "header_color",
+        "label": "Header Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "header_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Header Opacity",
+        "default": 100
+      },
+      {
+        "type": "color",
+        "id": "sub_header_color",
+        "label": "Sub Header Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Video Column"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_video",
+        "label": "Enable Video Column?",
+        "default": false,
+        "info": "If checked, use blocks field to add videos."
+      },
+      {
+        "type": "header",
+        "content": "Video Column Settings"
+      },
+      {
+        "type": "range",
+        "id": "video_width",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Video Section Width",
+        "default": 50,
+        "info": "This width will be used for desktop devices."
+      },
+      {
+        "type": "range",
+        "id": "play-size-mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Play Button Size (mobile)",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "play-size-desktop",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Play Button Size (desktop)",
+        "default": 60
+      },
+      {
+        "type": "color",
+        "id": "play-color",
+        "label": "Play Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Product Column"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_product",
+        "label": "Enable Product Column?",
+        "default": false
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product Picker"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "product_price",
+        "label": "From Price",
+        "info": "Enter only numbers"
+      },
+      {
+        "type": "header",
+        "content": "Product Column Settings"
+      },
+      {
+        "type": "range",
+        "id": "product_width",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Product Section Width",
+        "default": 50,
+        "info": "This width will be used for desktop devices."
+      },
+      {
+        "type": "header",
+        "content": "Font Size"
+      },
+      {
+        "type": "range",
+        "id": "product_mobile_font",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Price Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "product_desktop_font",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Price Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "header",
+        "content": "Colours"
+      },
+      {
+        "type": "color",
+        "id": "product_text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "product_bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Form Column"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_form",
+        "label": "Enable Form Column?",
+        "default": false,
+        "info": "This section is to be used with the form builder app."
+      },
+      {
+        "type": "text",
+        "id": "form_id",
+        "label": "Form Id",
+        "info": "You find this information on the Form Builder app"
+      },
+      {
+        "type": "header",
+        "content": "Form Column Settings"
+      },
+      {
+        "type": "range",
+        "id": "form_width",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Form Section Width",
+        "default": 50,
+        "info": "This width will be used for desktop devices."
+      }    
+    ],
+    "blocks": [
+      {
+        "type": "video",
+        "name": "Video",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "placeholder",
+            "label": "Placeholder Image"
+          },
+          {
+            "type": "url",
+            "id": "video_link",
+            "label": "Video Link"
+          },
+          {
+            "type": "url",
+            "id": "video_link_desktop",
+            "label": "Video Link Desktop",
+            "info": "Just use this field if you want to have a different video on desktop devices."
+          }
+        ],
+        "limit": 3
+      }
+    ]
+  }
+{% endschema %}
