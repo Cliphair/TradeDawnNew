@@ -202,7 +202,10 @@ function changePosition(current, next){
 
 // dropdown functions
 function addDropdownFunction(){
-  document.querySelector('#dropdown-btn').click(openAndClose)
+  let dropdown = document.querySelector('#dropdown-btn');
+  if(dropdown){
+    dropdown.addEventListener('click', openAndClose)
+  }
 }
 
 function openAndClose(){
