@@ -6,7 +6,7 @@ const validated = true; // uncomment when testing
 // Quiz just works if email validated before
 if(validated){ 
   removeParametersFromURL();
-  $( "#quiz" ).removeAttr('style'); 
+  document.querySelector( "#quiz" ).removeAttr('style'); 
   
   // Add click event to the answers
   let answerButtons = document.getElementsByClassName('answer');
@@ -80,7 +80,7 @@ function updateCounter(newValue){
 
 // Scroll the page to the top
 function scrollToTop(){
-  $("html, body").animate({ scrollTop: 100 }, "slow");
+  document.querSelector('body').animate({ scrollTop: 100 }, "slow");
 }
 
 // Make back button visible on the page
