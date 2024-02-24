@@ -312,7 +312,7 @@
       ],
       "custom_css": [
         ".button_container > .play_button {font-size: min(15vw, 70px);}",
-        "a{color:inherit;}",
+        "a {color: inherit;}",
         "@media screen and (min-width: 768px) {.section_header {margin-bottom: 25px; } .placeholder_image_container {padding: 30px; }}"
       ],
       "settings": {
@@ -898,6 +898,7 @@
         ".placeholder_image_container {padding: 15px 15px 5px;}",
         ".placeholder_image_container .image {border-radius: 10px;}",
         ".button_container > .play_button {font-size: min(15vw, 70px);}",
+        "a{color:inherit;}",
         "@media screen and (min-width: 992px) {.placeholder_image_container {padding: 25px 25px 5px; }}"
       ],
       "settings": {
