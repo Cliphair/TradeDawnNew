@@ -106,6 +106,28 @@
   {% endif %}
 </section>
 
+<script>
+  // Read more button custom pages
+  function readMoreCustom(button){
+    console.log('test 12354')
+    let target = button.dataset.target;
+    let container= document.getElementsByClassName(target)[0];
+  
+    container.classList.toggle('closed');
+    button.classList.toggle('closed');
+  }
+  
+  function readLessCustom(clicked_button){
+    console.log('test 12354')
+    let target = clicked_button.dataset.target;
+    let container= document.getElementsByClassName(target)[0];
+    let readMoreButton = document.getElementById(target);
+    console.log(readMoreButton)
+    container.classList.toggle('closed');
+    readMoreButton.classList.toggle('closed');
+  }
+</script>
+
 {% schema %}
   {
     "name": "Page Description",
