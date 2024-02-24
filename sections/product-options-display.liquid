@@ -1,0 +1,333 @@
+{{ 'section-product-options-display.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.max_width != empty %}
+<style>
+  #section-{{ section.id }} > .inner-container{
+    max-width: {{section.settings.max_width}}px;
+  }
+</style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    color: {{ section.settings.text_color }};
+    background: {{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} .section_header > *{
+    font-size: {{ section.settings.header-mobile-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .intro_container > *{
+    font-size: {{ section.settings.text-mobile-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .option-title{
+    font-size: calc({{ section.settings.btn-size-mobile }}px + 2px);
+  }
+
+  #section-{{ section.id }} .option-list{
+    font-size: {{ section.settings.btn-size-mobile }}px;
+  }
+
+  #section-{{ section.id }} .option-list > .option{
+    background:{{ section.settings.btn-bg-color }};
+    border-color:{{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} .option-list > .option:hover{
+    border-color:{{ section.settings.btn-color }};
+  }
+
+  #section-{{ section.id }} .option-list > .option *{
+    color:{{ section.settings.btn-color }};
+  }
+
+  @media screen and (min-width:768px){
+
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+    }
+  
+    #section-{{ section.id }} .section_header > *{
+      font-size: {{ section.settings.header-desktop-font_size }}px;
+    }
+  
+    #section-{{ section.id }} .intro_container > *{
+      font-size: {{ section.settings.text-desktop-font_size }}px;
+    }
+
+    #section-{{ section.id }} .option-title{
+      font-size: calc({{ section.settings.btn-size-desktop }}px + 2px);
+    }
+    
+    #section-{{ section.id }} .option-list{
+      font-size: {{ section.settings.btn-size-desktop }}px;
+    }
+  }
+</style>
+
+<div id='section-{{ section.id }}' class='section-product-option'>
+  <div class='inner-container'>
+    {% if section.settings.header != empty %}
+      <div class='section_header'>
+        {{ section.settings.header }}
+      </div>
+    {% endif %}
+    
+    {% if section.settings.intro != empty %}
+      <div class='intro_container'>
+        {{ section.settings.intro }}
+      </div>
+    {% endif %}
+    
+    <div class='options-wrapper'>
+      {% assign product = section.settings.product %}
+      <p class='option-title'>
+        {% for option in product.options %}
+          <span>{{ option }}</span>
+          {% if product.options.size > 1 and forloop.index < product.options.size  %} / {% endif %}
+        {% endfor %}
+      </p>
+      <ul class='option-list'>
+        {% for variant in product.variants %}
+          <li class='option'><a href='{{ variant.url }}' target='_blank' title='{{ product.title | append: " - " | append: variant.title }}'>{{ variant.title | remove: ".00" }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Options display",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "richtext",
+        "id": "intro",
+        "label": "Section Intro"
+      },
+      {
+        "type":"product",
+        "id": "product",
+        "label": "Product"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "text-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 26
+      },
+      {
+        "type": "range",
+        "id": "text-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "color",
+        "id": "btn-color",
+        "label": "Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "btn-bg-color",
+        "label": "Button Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "range",
+        "id": "btn-size-mobile",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Size Mobile",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "btn-size-desktop",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Size Desktop",
+        "default": 12
+      }
+    ],
+    "blocks": [
+    ],
+    "presets": [
+      {
+        "name": "Options display"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
