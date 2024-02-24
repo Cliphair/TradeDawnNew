@@ -11,7 +11,7 @@
     "custom_banner_gEey7w": {
       "type": "custom-banner",
       "custom_css": [
-        "div > div{padding:0;}"
+        "div > div {padding: 0;}"
       ],
       "settings": {
         "max-width": "2560",
@@ -264,6 +264,7 @@
         "47fc98ce-6df2-4739-bea0-1570fbc4fc4b"
       ],
       "custom_css": [
+        "a{text-decoration:none;}",
         "@media screen and (min-width: 990px) {.section_header {margin-bottom: 35px; } .carrousel-container .carrousel-items > .item {padding: 0 20px; }}",
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
       ],
