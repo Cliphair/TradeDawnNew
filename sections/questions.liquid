@@ -1,6 +1,156 @@
+<link rel="preload" href="{{ 'email_quiz.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'" />
+<noscript>
+  {{ 'email_quiz.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+<div id='quiz' style='display:none;'>
+  
+  <div class='info'>
+    <p class='back_btn hidden_btn'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+    <p>Question <span id='question_counter'>1</span> of {{ section.blocks.size }}</p>
+  </div>
+  
+  {% for block in section.blocks %}
+    {% if block.settings.question != empty %}
+      {% assign question_number = forloop.index %}
+      
+      <div class='question_container {% if forloop.first %}active{% endif %} {% if forloop.last %}last_question{% endif %}' data-current='{{ question_number }}' data-next='{{ question_number | plus:1 }}' {% unless forloop.first %}data-previous='{{ question_number | minus:1 }}'{% endunless %}>
+      
+        <p class='question'>{{ forloop.index }}. {{ block.settings.question }}</p>
+        
+        {% if block.settings.image %}
+          <img data-src='{{ block.settings.image | image_url }}' class='lazyload question_image' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+        {% endif %}
+
+        <div class='answer_container {{ block.settings.direction }}_direction'>
+          {% if block.settings.answer1 != empty %}
+            <div class='answer' data-answer='a' data-question='q{{ question_number }}'>{{ block.settings.answer1 }}</div>
+          {% endif %}
+
+          {% if block.settings.answer2 != empty %}
+            <div class='answer' data-answer='b' data-question='q{{ question_number }}'>{{ block.settings.answer2 }}</div>
+          {% endif %}
+
+          {% if block.settings.answer3 != empty %}
+            <div class='answer' data-answer='c' data-question='q{{ question_number }}'>{{ block.settings.answer3 }}</div>
+          {% endif %}
+
+          {% if block.settings.answer4 != empty %}
+            <div class='answer' data-answer='d' data-question='q{{ question_number }}'>{{ block.settings.answer4 }}</div>
+          {% endif %}
+
+          {% if block.settings.answer5 != empty %}
+            <div class='answer' data-answer='e' data-question='q{{ question_number }}'>{{ block.settings.answer5 }}</div>
+          {% endif %}
+        </div>
+        
+      </div>
+    {% endif %}  
+  {% endfor %}
+</div>
+
+<script>
+  const numberOfQuestions = {{ section.blocks.size }};
+  const answers = {};
+  const explanationArray = {};
+  
+  {% for block in section.blocks %}
+    {% capture question %}q{{forloop.index}}{% endcapture %}
+    answers["{{ question }}"] = "{{ block.settings.answer | downcase }}";
+    explanationArray["{{ question }}"] = `{{ block.settings.explanation }}`;
+  {% endfor %}
+</script>
+
+{{ 'email_quiz.js' | asset_url | script_tag }}
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Quiz Questions",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Question",
+        "type": "question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Question image. Not required."
+          },
+          {
+            "type": "text",
+            "id": "answer1",
+            "label": "Answer 1",
+            "info": "Not required."
+          },
+          {
+            "type": "text",
+            "id": "answer2",
+            "label": "Answer 2",
+            "info": "Not required."
+          },
+          {
+            "type": "text",
+            "id": "answer3",
+            "label": "Answer 3",
+            "info": "Not required."
+          },
+          {
+            "type": "text",
+            "id": "answer4",
+            "label": "Answer 4",
+            "info": "Not required."
+          },
+          {
+            "type": "text",
+            "id": "answer5",
+            "label": "Answer 5",
+            "info": "Not required."
+          },
+          {
+            "type": "select",
+            "id": "direction",
+            "label": "Answer Direction",
+            "options": [
+              {
+                "value": "row",
+                "label": "Row"
+              },
+              {
+                "value": "column",
+                "label": "Column"
+              }
+            ],
+            "default": "row",
+            "info": "Only for desktop."
+          },
+          {
+            "type":"header",
+            "content": "Answer"
+          },
+          {
+            "type":"text",
+            "id": "answer",
+            "label": "Correct Answer"
+          },
+          {
+            "type": "richtext",
+            "id": "explanation",
+            "label": "Answer Explanation"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
