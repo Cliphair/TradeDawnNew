@@ -1,6 +1,232 @@
+{% if section.settings.custom_description and section.settings.description != empty %}
+  {% assign description = section.settings.description %}
+{% else %}
+  {% assign description = page.content %}
+{% endif %}
+
+{% if description != blank and description contains '<!-- read more -->' %}
+	{% assign description = description | split: '<!-- read more -->' %}
+	{% assign description1 = description[0] %}
+	{% assign description2 = description[1] %}
+{% endif %}
+
+
+
+<link rel="preload" href="{{ 'section-page_description.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'" />
+<noscript>
+  {{ 'section-page_description.css' | asset_url | stylesheet_tag }}
+</noscript>
+<style>
+  #section-{{ section.id }}.description__container{
+    padding-top:{{section.settings.description__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.description__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.description__mobile-padding-sides}}px;
+    padding-right:{{section.settings.description__mobile-padding-sides}}px;
+    background-color:{{section.settings.bg_colour}};
+  }
+  
+  #section-{{ section.id }} .section-title{
+    font-size: {{section.settings.description__mobile-font-size}}px;
+    color:{{section.settings.header_colour}};
+  }
+
+  #section-{{ section.id }} .section-title > *{
+    font-size: {{section.settings.description__mobile-font-size}}px;
+    color:{{section.settings.header_colour}};
+  }
+  
+  #section-{{ section.id }} .description,
+  #section-{{ section.id }} .section-title{
+    {% if section.settings.max-width %}max-width:{{section.settings.max-width}}px;{% endif %}
+  }
+
+  #section-{{ section.id }} .description  *{
+    color:{{section.settings.text_colour}};
+    font-size: calc({{section.settings.description__mobile-font-size}}px - 3px);
+  }  
+  
+  @media only screen and (min-width:992px){
+    #section-{{ section.id }}.description__container{
+      padding-top:{{section.settings.description__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.description__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.description__desktop-padding-sides}}px;
+      padding-right:{{section.settings.description__desktop-padding-sides}}px;
+    }
+    
+    #section-{{ section.id }} .description * {
+      font-size: calc({{section.settings.description__desktop-font-size}}px - 5px);
+    }
+    
+    #section-{{ section.id }} .section-title > *{
+      font-size: {{section.settings.description__desktop-font-size}}px;
+    }
+  }
+
+</style>
+
+<section id='section-{{ section.id }}' class='description__container'>
+  {% if section.settings.section_title != empty%}
+  	<h2 class='section-title {% if section.settings.header_bold %}title-bold{% endif %}'>
+    	<span>{{section.settings.section_title }}</span>
+        {% if section.settings.title2 != empty %}<span>{{section.settings.title2}}</span>{% endif %}
+  	</h2>
+  {% endif %}
+  
+  {% if description != blank and description1 %}
+  	<!-- mobile -->
+    <div class='read-more__container description description__mobile'>
+      <div class='displayed-container'>
+        <div>{{ description1 }}</div>
+      </div>
+      <button id='hidden-container' data-target='hidden-container' class='btn__read-more read-more' onclick='readMoreCustom(this)'>Read More</button>
+      <div class='hidden-container closed'>
+        <div>{{ description2 }}</div>
+        <button data-target='hidden-container' class='btn__read-more' onclick='readLessCustom(this)'>Read Less</button>
+      </div>
+    </div>
+  	
+  	<!-- dektop -->
+  	<div class='description description__desktop'>
+      <div class='displayed-container'>
+        <div>{{ description1 }}</div>
+        <div>{{ description2 }}</div>
+      </div>
+  	</div>
+  
+  {% else %}
+  
+  	<div class='description displayed-container'>
+      <div>{{ description }}</div>
+  	</div>
+  
+  {% endif %}
+</section>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Page Description",
+    "settings": [		
+		{
+          "type": "inline_richtext",
+          "id": "section_title",
+          "label": "Title (first line)"
+		},
+        {
+          "type": "inline_richtext",
+          "id": "title2",
+          "label": "Title (second line)",
+          "info": "mobile only"
+		},
+        {
+          "type": "color",
+          "id": "header_colour",
+          "label": "Header Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "checkbox",
+          "id": "header_bold",
+          "label": "Make header bold",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "text_colour",
+          "label": "Text Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "bg_colour",
+          "label": "Background Colour",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "max-width",
+          "label": "Max Width",
+          "info": "Please enter max-width value in pixels, ex: 1250, 1440."
+        },
+        {
+          "type": "checkbox",
+          "id": "custom_description",
+          "label": "Use custom description",
+          "default": false
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Custom Description"
+        },
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "description__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Mobile Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "description__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Top and Bottom Padding",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "description__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Sides Padding",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "description__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Desktop Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "description__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Top and Bottom Padding",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "description__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Sides Padding",
+			"default": 0
+		}
+	]
   }
 {% endschema %}
+
