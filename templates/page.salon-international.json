@@ -617,11 +617,13 @@
     "3184a1ba-37df-45c6-89ce-8e28161521f9": {
       "type": "custom-banner",
       "settings": {
-        "max-width": "",
-        "bg-color": "#FFF",
-        "url": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "max-width": "1500",
+        "bg-color": "#f8f8f8",
+        "desktop-image": "shopify:\/\/shop_images\/salon-trade-enquiry.webp",
+        "mobile-image": "shopify:\/\/shop_images\/salon-trade-enquiry-mobile.webp",
+        "url": "shopify:\/\/pages\/trade-enquiries",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "bridal23_custom-text": {
