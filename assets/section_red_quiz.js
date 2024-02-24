@@ -124,7 +124,8 @@ function nextScreen(button){
   	}	
   	
   	screen.style.left = '0px';
-  	$('body').animate({ scrollTop: "50px" }, 1000);
+  	document.body.scrollTop = 100; // For Safari
+    document.documentElement.scrollTop = 100; // For Chrome, Firefox, IE and Opera
   	setTimeout(() => {changePosition(currentId, nextId);}, 500)
     setTimeout(function(){
       document.getElementById(currentId).style.display = 'none';
