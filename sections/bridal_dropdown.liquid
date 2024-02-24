@@ -102,9 +102,9 @@
 {% endif %}
 
 <script>
-  let items-{{ section.id }} = document.querySelectorAll("#section-{{ section.id }} .item");
-  console.log(items-{{ section.id }})
-  for (let item of items-{{ section.id }}) {
+  var dropdown_items = document.querySelectorAll("#section-{{ section.id }} .item");
+  console.log(dropdown_items)
+  for (let item of dropdown_items) {
     item.addEventListener("click", function(){
       this.classList.toggle("active");
       this.querySelector(".item-body").classList.toggle("hidden")
