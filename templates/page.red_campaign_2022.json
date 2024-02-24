@@ -34,7 +34,7 @@
       ],
       "settings": {
         "max-width": "2560",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/7_db1b1822-71dc-4847-a388-b0e1a4de30c6.jpg",
         "mobile-image": "shopify:\/\/shop_images\/7_5c6af920-7abc-45ce-9745-6c1056682a7a.jpg",
         "url": "",
@@ -588,9 +588,14 @@
     },
     "166488890677063517": {
       "type": "custom-banner",
+      "custom_css": [
+        "div>div{padding:0;}"
+      ],
       "settings": {
-        "max-width": "",
-        "bg-color": "#FFF",
+        "max-width": "1440",
+        "bg-color": "#ffffff",
+        "desktop-image": "shopify:\/\/shop_images\/Redhead_colour_match_banner_desktop.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/Redhead_colour_match_banner_mobile.jpg",
         "url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1",
         "padding_top": 36,
         "padding_bottom": 36
