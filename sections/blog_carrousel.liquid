@@ -155,14 +155,18 @@
 
   #{{ section.id }} .arrow-container{
     display:none;
-    top:43%;
+    top:calc(50% - 35px);
+    position:absolute;
   }
 
   #{{ section.id }} .arrow-container > *{
-    font-size:50px;
     color: #D0D0D0;
     opacity:0.6;
-    font-size:70px;
+    position:absolute;
+  }
+
+  #{{ section.id }} .arrow-container > * svg{
+    width:70px;
   }
 
   #{{ section.id }} .arrow-container > *:hover{
@@ -171,10 +175,12 @@
 
   #{{ section.id }} .arrow-container > .left{
     left:-8px;
+    transform:rotate(90deg);
   }
 
   #{{ section.id }} .arrow-container > .right{
     right:3px;
+    transform:rotate(2700deg);
   }
 
   #{{ section.id }} .arrow-container.arrow_mobile{
@@ -182,9 +188,9 @@
   }
 
   @media screen and (min-width:768px){
-    #{{ section.id }} .arrow-container{
+    /* #{{ section.id }} .arrow-container{
       top:43%;
-    }
+    } */
 
     #{{ section.id }} .articles_container > .article{
       width:calc(100% / 3 - 10px);
