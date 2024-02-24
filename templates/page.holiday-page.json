@@ -312,6 +312,7 @@
       ],
       "custom_css": [
         ".button_container > .play_button {font-size: min(15vw, 70px);}",
+        "a{color:inherit;}",
         "@media screen and (min-width: 768px) {.section_header {margin-bottom: 25px; } .placeholder_image_container {padding: 30px; }}"
       ],
       "settings": {
@@ -1005,7 +1006,11 @@
       "type": "custom-banner",
       "disabled": true,
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "66a55995-ad95-4d23-9e93-a553e77cba62": {
