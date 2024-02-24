@@ -1,6 +1,149 @@
+<section class='back__section {%if section.settings.max_width %}max_width{%endif%}'>
+  <a href='{{section.settings.back_url}}'>{% render 'icon-arrow' %} <span>{{section.settings.back_text}}</span></a>
+</section>
+
+<style>
+  .back__section{
+  	width:100%;
+    margin:0 auto;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding-top:{{section.settings.mobile_tb_padding}}px;
+    padding-bottom:{{section.settings.mobile_tb_padding}}px;
+    padding-left:{{section.settings.mobile_sides_padding}}px;
+    padding-right:{{section.settings.mobile_sides_padding}}px;
+  }
+  
+  .max_width{
+  	max-width:1250px;
+  }
+  
+  .back__section * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+    font-size:{{section.settings.mobile_font}}px;
+  }
+
+  .back__section svg {
+  	transform:rotate(180deg);
+  }
+  
+  @media screen and (min-width:992px){
+    .back__section{
+      padding-top:{{section.settings.desktop_tb_padding}}px;
+      padding-bottom:{{section.settings.desktop_tb_padding}}px;
+      padding-left:{{section.settings.desktop_sides_padding}}px;
+      padding-right:{{section.settings.desktop_sides_padding}}px;
+    }
+    
+  	.back__section * {
+      font-size:{{section.settings.desktop_font}}px;
+    }
+  }
+  
+</style>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Back Arrow",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Settigns"
+		},
+		{
+			"type":"url",
+			"label": "Page URL",
+			"info": "Add the URL that you want to send the user to.",
+			"id": "back_url"
+		},
+		{
+			"type":"text",
+			"label": "Button Text",
+			"id": "back_text",
+			"default": "Back To Bridal Campaign"
+		},
+		{
+			"type": "checkbox",
+			"label": "Set Up Max-Width",
+			"info": "Select this box if you want to set the section max-width to 1250px.",
+			"id": "max_width"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "mobile_font",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Mobile Font Size",
+			"default": 10
+		},
+		{
+			"type": "range",
+			"id": "mobile_tb_padding",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 5
+		},
+		{
+			"type": "range",
+			"id": "mobile_sides_padding",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 15
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "desktop_font",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Desktop Font Size",
+			"default": 12
+		},
+		{
+			"type": "range",
+			"id": "desktop_tb_padding",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 7
+		},
+		{
+			"type": "range",
+			"id": "desktop_sides_padding",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 20
+		}
+	]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
