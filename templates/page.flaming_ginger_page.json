@@ -1,19 +1,287 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "166445343207c9fec0": {
+      "type": "page_font",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "font": "josefin_sans_n4"
+      }
+    },
+    "1664893445d1aa2011": {
+      "type": "back-to",
+      "settings": {
+        "back_url": "shopify:\/\/pages\/red-head-campaign-2022",
+        "back_text": "Back To Redhead Campaign 2022 Page",
+        "max_width": false,
+        "mobile_font": 10,
+        "mobile_tb_padding": 5,
+        "mobile_sides_padding": 15,
+        "desktop_font": 12,
+        "desktop_tb_padding": 7,
+        "desktop_sides_padding": 20
+      }
+    },
+    "06d0f6b3-e8b7-45c5-b181-ebb53ce3f99b": {
+      "type": "infinite-text",
+      "blocks": {
+        "ec70a6f5-8b00-46b4-adc2-d2b2e958271e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#EmbraceTheRed<\/p>",
+            "custom_bg": false
+          }
+        },
+        "c31aee64-ce9a-4fd3-a5ee-11ae0e7eaeeb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ten Fiery Shades Available<\/p>",
+            "custom_bg": false
+          }
+        },
+        "dd1a9e41-8e32-482e-a91f-df860ee24cd5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#EmbraceTheRed<\/p>",
+            "custom_bg": false
+          }
+        },
+        "edbad374-d15f-4521-88e7-23ce2b3d786f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ten Fiery Shades Available<\/p>",
+            "custom_bg": false
+          }
+        },
+        "7c8f2f8f-ad65-4d0d-b8e4-7b23b7cfe280": {
+          "type": "text",
+          "settings": {
+            "text": "<p>#EmbraceTheRed<\/p>",
+            "custom_bg": false
+          }
+        },
+        "71203ddf-d897-4cfa-9ab2-65ee612a47c4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ten Fiery Shades Available<\/p>",
+            "custom_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "ec70a6f5-8b00-46b4-adc2-d2b2e958271e",
+        "c31aee64-ce9a-4fd3-a5ee-11ae0e7eaeeb",
+        "dd1a9e41-8e32-482e-a91f-df860ee24cd5",
+        "edbad374-d15f-4521-88e7-23ce2b3d786f",
+        "7c8f2f8f-ad65-4d0d-b8e4-7b23b7cfe280",
+        "71203ddf-d897-4cfa-9ab2-65ee612a47c4"
+      ],
+      "settings": {
+        "text_color": "#ffffff",
+        "bg_color": "#d3b6a1",
+        "custom_bg_color": "#ffffff",
+        "max_width": "",
+        "no_wrap": false,
+        "mobile-font_size": 12,
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 0,
+        "mobile-p_left": 0,
+        "desktop-font_size": 18,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 0,
+        "desktop-p_left": 0
+      }
+    },
+    "3abedbf8-01b2-4407-9168-ec9bb7d22fa2": {
+      "type": "custom_multicolumn",
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_width": "1500",
+        "mobile-p_top": 14,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 20,
+        "mobile-p_left": 20,
+        "desktop-p_top": 30,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 30,
+        "desktop-p_left": 30,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "<h2>Courtney is wearing Flaming Ginger<\/h2>",
+        "sub_header": "16\" Remy Royale Seamless Clip In",
+        "description": "<p>If your hair is screaming \"look at me!\", then Flaming Ginger is screaming back at it. These hair extensions tune in and raise both frequency and temperature. Not for the faint-hearted! A (literal) beacon of light in a crowd of more subtle shades, Flaming Ginger is unapologetically vibrant, outspoken, honest and perhaps even a little cheeky. Tap in if this resonates with you.<\/p>",
+        "read_more": "",
+        "text_width": 50,
+        "title_tag": "h1",
+        "header_mobile_font": 14,
+        "header_desktop_font": 20,
+        "text_mobile_font": 12,
+        "text_desktop_font": 18,
+        "header_color": "#7f220e",
+        "header_opacity": 40,
+        "sub_header_color": "#767676",
+        "text_color": "#000000",
+        "enable_video": false,
+        "video_width": 50,
+        "play-size-mobile": 40,
+        "play-size-desktop": 60,
+        "play-color": "#000000",
+        "enable_product": true,
+        "product": "remy-royale-seamless-clip-ins-ginger-red-natural-red-350",
+        "product_image": "shopify:\/\/shop_images\/Untitled_design_27_9ac1f4e8-56f1-44ee-b5cb-0ea462dffdb3.jpg",
+        "product_price": "140",
+        "product_width": 30,
+        "product_mobile_font": 12,
+        "product_desktop_font": 18,
+        "product_text_color": "#ffffff",
+        "product_bg_color": "#ce8f61",
+        "enable_form": false,
+        "form_id": "",
+        "form_width": 50
+      }
+    },
+    "1664746053df8a22c8": {
+      "type": "video_carrousel",
+      "blocks": {
+        "2e266794-9043-4fd6-bd27-340aec4d2029": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_750_x_500_px_4.jpg",
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/80e4f57cc8834a2f936e1488a6146b65.mp4",
+            "video_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "2e266794-9043-4fd6-bd27-340aec4d2029"
+      ],
+      "settings": {
+        "header": "<h2>GET TO KNOW COURTNEY<\/h2>",
+        "intro": "<p>What does being a redhead mean to you?<\/p><p>Who is your ULTIMATE redhead icon of all times?  What hairstyle that brings your hair to life? <\/p><p><em><strong>Heres what our Courtney has to say!<\/strong><\/em><\/p>",
+        "image_orientation": "landscape",
+        "text_color": "#ffffff",
+        "bg_color": "#d3b6a1",
+        "max_width": "1500",
+        "header-mobile-font_size": 22,
+        "text-mobile-font_size": 12,
+        "mobile-p_top": 20,
+        "mobile-p_bottom": 20,
+        "mobile-p_right": 0,
+        "mobile-p_left": 0,
+        "header-desktop-font_size": 26,
+        "text-desktop-font_size": 16,
+        "desktop-p_top": 20,
+        "desktop-p_bottom": 20,
+        "desktop-p_right": 0,
+        "desktop-p_left": 0,
+        "display-mobile": 2,
+        "display-tablet": 3,
+        "display-desktop": 4,
+        "include-dots": true,
+        "dot-color": "#ffffff",
+        "dot-size": 8,
+        "include-arrows": false,
+        "arrow-color": "#000000",
+        "arrow-size-mobile": 12,
+        "arrow-size-tablet": 12,
+        "arrow-size-desktop": 12,
+        "arrow-position-mobile": 20,
+        "arrow-position-tablet": 20,
+        "arrow-position-desktop": 30,
+        "include-btn": false,
+        "btn-text": "",
+        "btn-url": "",
+        "btn-color": "#000000",
+        "btn-bg-color": "#FFFFFF",
+        "btn-size-mobile": 12,
+        "btn-size-desktop": 12
+      }
+    },
+    "1664459317add8ab16": {
+      "type": "multicolumn_images",
+      "blocks": {
+        "6f16976e-b69d-455a-8cd1-3a56b9690ee9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/17_5fc6c4e8-74a6-43e3-91fa-f5e44e57662b.jpg",
+            "url": "",
+            "button_text": "SHOP STRAWBERRY BLONDE"
+          }
+        },
+        "2410cf39-3162-4722-a00d-dbbbbb683876": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18_1f663d7c-10ed-40de-8056-4e8772d3d466.jpg",
+            "url": "",
+            "button_text": "SHOP CINNAMON SWIRL"
+          }
+        },
+        "8e6e006d-96ea-43e9-8724-cfc08620bba8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Courtney_1.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        },
+        "ba570c37-bf95-4238-9f36-af186ab4dcb6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Courtney_2.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        },
+        "31d59c56-73f2-454e-8ae5-f1b86080453c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Courtney_3.jpg",
+            "url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "6f16976e-b69d-455a-8cd1-3a56b9690ee9",
+        "2410cf39-3162-4722-a00d-dbbbbb683876",
+        "8e6e006d-96ea-43e9-8724-cfc08620bba8",
+        "ba570c37-bf95-4238-9f36-af186ab4dcb6",
+        "31d59c56-73f2-454e-8ae5-f1b86080453c"
+      ],
+      "settings": {
+        "max_width": "1500",
+        "header": "COURTNEY’S TRANSFORMATION",
+        "header_color": "#ffffff",
+        "header_bg_color": "#ce8f61",
+        "sub_header": "",
+        "sub_header_color": "#000000",
+        "sub_header_opacity": 100,
+        "have_buttons": false,
+        "buttons_color": "#ffffff",
+        "buttons_bg_color": "#ce8f61",
+        "intro": "",
+        "show_collection": false,
+        "collection-text": "",
+        "url": "",
+        "mobile-font_size": 12,
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 0,
+        "mobile-p_left": 0,
+        "desktop-font_size": 16,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 0,
+        "desktop-p_left": 0
       }
     }
   },
   "order": [
-    "main"
+    "166445343207c9fec0",
+    "1664893445d1aa2011",
+    "06d0f6b3-e8b7-45c5-b181-ebb53ce3f99b",
+    "3abedbf8-01b2-4407-9168-ec9bb7d22fa2",
+    "1664746053df8a22c8",
+    "1664459317add8ab16"
   ]
 }
