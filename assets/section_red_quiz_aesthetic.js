@@ -114,7 +114,7 @@ var answers = {
     </div>`
 }
 
-$( document ).ready(function() {  
+document.addEventListener("DOMContentLoaded", () => { 
     let buttons = document.getElementsByClassName('quiz__option');
   	let backButtons = document.getElementsByClassName('back-btn');
   
@@ -154,7 +154,8 @@ function nextScreen(button){
   	}	
   	
   	screen.style.left = '0px';
-  	$('body').animate({ scrollTop: "100px" }, 1000);
+  	document.body.scrollTop = 50; // For Safari
+    document.documentElement.scrollTop = 50; // For Chrome, Firefox, IE and Opera
   	setTimeout(() => {changePosition(currentId, nextId);}, 500)
     setTimeout(function(){
       document.getElementById(currentId).style.display = 'none';
@@ -169,9 +170,9 @@ function backScreen(button){
 
     document.getElementById(nextId).style.display = 'block';
   	screen.style.left = '-9999px';
-  	$('body').animate({ scrollTop: "100px" }, 1000);
+  	document.body.scrollTop = 50; // For Safari
+    document.documentElement.scrollTop = 50; // For Chrome, Firefox, IE and Opera
   	changePosition(currentId, nextId);
-    hideReviews();
     hideInspiration();
 }
 
@@ -237,19 +238,22 @@ function changePosition(current, next){
 
 // dropdown functions
 function addDropdownFunction(){
-  $('#dropdown-btn').click(openAndClose)
+  let dropdown = document.querySelector('#dropdown-btn');
+  if(dropdown){
+    dropdown.addEventListener('click', openAndClose)
+  }
 }
 
 function openAndClose(){
-  let currentStatus = $('.sign').text();
+  let currentStatus = document.querySelector('.sign').innetText();
 
-  $('#dropdown-hidden').toggleClass('hidden');
+  document.querySelector('#dropdown-hidden').classList.toggle('hidden');
 
   if(currentStatus === '+ '){
-    $('.sign').text('- ')
-    $('.sub-text').text('(click to close)')
+    document.querySelector('.sign').innetText('- ')
+    document.querySelector('.sub-text').innetText('(click to close)')
   } else{
-    $('.sign').text('+ ')
-    $('.sub-text').text('(click to open)')
+    document.querySelector('.sign').innetText('+ ')
+    document.querySelector('.sub-text').innetText('(click to open)')
   }
 }
