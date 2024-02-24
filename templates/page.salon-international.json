@@ -900,7 +900,7 @@
       "custom_css": [
         ".text_container {text-align: left;}",
         ".text_container * {line-height: 1.5em;}",
-        "ul {padding: 0 15px;}"
+        "ul {padding: 0 15px!important;}"
       ],
       "settings": {
         "bg_color": "#ffffff",
