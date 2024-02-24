@@ -541,38 +541,6 @@
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    let readMoreBtns = document.getElementsByClassName('read-more__btn');
-    let readLessBtns = document.getElementsByClassName('read-less__btn');
-
-    for (let btn of readMoreBtns) {
-      btn.addEventListener('click', () => {
-        event.preventDefault();
-        openReadMore(btn);
-      });
-    }
-
-    for (let btn of readLessBtns) {
-      btn.addEventListener('click', () => {
-        event.preventDefault();
-        closeReadLess(btn);
-      });
-    }
-  });
-
-  function openReadMore(btn) {
-    btn.classList.add('closed');
-    console.log(btn)
-    btn.parentElement.nextElementSibling.classList.remove('closed');
-  }
-
-  function closeReadLess(btn) {
-    btn.parentElement.previousElementSibling.querySelector('a.closed').classList.remove('closed');
-    btn.parentElement.classList.add('closed');
-  }
-</script>
-
 {% if section.settings.enable_video %}
   <script>
     var playBtns{{randomNumber}} = document.querySelectorAll('#{{ section.id }} .play_button_{{randomNumber}}');
