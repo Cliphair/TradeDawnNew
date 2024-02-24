@@ -138,19 +138,19 @@
   
       for (let btn of readMoreBtns) {
           btn.addEventListener('click', () => {
-            console.log('test')
-              openReadMore(btn);
+            openReadMore(btn);
           })
       }
   
       for (let btn of readLessBtns) {
           btn.addEventListener('click', () => {
-              closeReadLess(btn);
+            closeReadLess(btn);
           })
       }
   })
 
   function openReadMore(btn) {
+    console.log('test')
       btn.classList.add('closed');
       btn.parentElement.nextElementSibling.classList.remove('closed')
   }
