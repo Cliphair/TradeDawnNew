@@ -89,6 +89,7 @@ function readLess(clicked_id) {
 
 // Read more button custom pages
 function readMoreCustom(button){
+  event.preventDefault()
   let target = button.dataset.target;
   let container= document.getElementsByClassName(target)[0];
 
@@ -97,6 +98,7 @@ function readMoreCustom(button){
 }
 
 function readLessCustom(clicked_button){
+  event.preventDefault()
   let target = clicked_button.dataset.target;
   let container= document.getElementsByClassName(target)[0];
   let readMoreButton = document.getElementById(target);
