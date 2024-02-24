@@ -80,7 +80,7 @@ function updateCounter(newValue){
 
 // Scroll the page to the top
 function scrollToTop(){
-  document.querSelector('body').animate({ scrollTop: 100 }, "slow");
+  document.querySelector('body').animate({ scrollTop: 100 }, "slow");
 }
 
 // Make back button visible on the page
