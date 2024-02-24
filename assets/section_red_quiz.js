@@ -202,19 +202,19 @@ function changePosition(current, next){
 
 // dropdown functions
 function addDropdownFunction(){
-  $('#dropdown-btn').click(openAndClose)
+  document.querySelector('#dropdown-btn').click(openAndClose)
 }
 
 function openAndClose(){
-  let currentStatus = $('.sign').text();
+  let currentStatus = $('.sign').innetText();
 
-  $('#dropdown-hidden').toggleClass('hidden');
+  document.querySelector('#dropdown-hidden').classList.toggle('hidden');
 
   if(currentStatus === '+ '){
-    $('.sign').text('- ')
-    $('.sub-text').text('(click to close)')
+    document.querySelector('.sign').innetText('- ')
+    document.querySelector('.sub-text').innetText('(click to close)')
   } else{
-    $('.sign').text('+ ')
-    $('.sub-text').text('(click to open)')
+    document.querySelector('.sign').innetText('+ ')
+    document.querySelector('.sub-text').innetText('(click to open)')
   }
 }
