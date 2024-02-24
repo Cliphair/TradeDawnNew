@@ -1,0 +1,349 @@
+<style>
+  {% assign page_font = section.settings.font %}
+  {{ page_font | font_face }}
+  
+  #quiz > *{
+ 	font-family: {{ page_font.family }}, {{ page_font.fallback_families }};
+  }
+</style>
+
+
+{{ 'section_red_quiz.css' | asset_url | stylesheet_tag}}
+
+
+<div id='quiz'>
+  
+  <div id='q1' class='quiz__outer-container first'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='q2' data-next='q1' style='opacity:0'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+      <p>Question 1 of 7</p>
+    </div>
+    <h2 class='quiz__subtitle'>What colour dominates your wardrobe?</h2>
+
+    <div class='quiz__inner-container first-container'>
+      
+      <div class='quiz__option' data-type='answer' data-current='q1' data-answer='a' data-next='q2'>
+        <div class='quiz__txt-container'>
+          <h3>Earthy tones (browns, greens, and neutrals)</h3>
+        </div>
+      </div>
+       
+      <div class='quiz__option' data-type='answer' data-current='q1' data-answer='b' data-next='q2'>
+        <div class='quiz__txt-container'>
+          <h3>Pastels and soft colours</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q1' data-answer='c' data-next='q2'>
+        <div class='quiz__txt-container'>
+          <h3>Bold and vibrant colours</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q1' data-answer='d' data-next='q2'>
+        <div class='quiz__txt-container'>
+          <h3>Monochromatic black, white, and grey</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q1' data-answer='e' data-next='q2'>
+        <div class='quiz__txt-container'>
+          <h3>I wear a mix of everything!</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id='q2' class='quiz__outer-container'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='q2' data-next='q1'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+      <p>Question 2 of 7</p>
+    </div>
+
+  	<h2 class='quiz__subtitle'>Which word best describes your fashion sense?</h2>
+    
+    <div class='quiz__inner-container second-container'>
+      
+      <div class='quiz__option' data-type='answer' data-current='q2' data-next='q3' data-answer='a'>
+        <div class='quiz__txt-container'>
+          <h3>Bohemian</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q2' data-next='q3' data-answer='b'>
+        <div class='quiz__txt-container'>
+          <h3>Romantic</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q2' data-next='q3' data-answer='c'>
+        <div class='quiz__txt-container'>
+          <h3>Edgy</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q2' data-next='q3' data-answer='d'>
+        <div class='quiz__txt-container'>
+          <h3>Classic</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q2' data-next='q3' data-answer='e'>
+        <div class='quiz__txt-container'>
+          <h3>Eclectic</h3>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  
+  <div id='q3' class='quiz__outer-container'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='q3' data-next='q2'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+      <p>Question 3 of 7</p>
+    </div>
+
+  	<h2 class='quiz__subtitle'>What's your ideal vacation destination?</h2>
+    
+    <div class='quiz__inner-container third-container'>
+      
+      <div class='quiz__option' data-type='answer' data-current='q3' data-next='q4' data-answer='a'>
+        <div class='quiz__txt-container'>
+          <h3>A cosy cabin in the woods</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q3' data-next='q4' data-answer='b'>
+        <div class='quiz__txt-container'>
+          <h3>A charming European city</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q3' data-next='q4' data-answer='c'>
+        <div class='quiz__txt-container'>
+          <h3>A bustling metropolis</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q3' data-next='q4' data-answer='d'>
+        <div class='quiz__txt-container'>
+          <h3>A beachfront resort</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q3' data-next='q4' data-answer='e'>
+        <div class='quiz__txt-container'>
+          <h3>Anywhere with adventure!</h3>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id='q4' class='quiz__outer-container'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='q4' data-next='q3'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+      <p>Question 4 of 7</p>
+    </div>
+
+  	<h2 class='quiz__subtitle'>Your favourite season is?</h2>
+    
+    <div class='quiz__inner-container fourth-container'>
+      
+      <div class='quiz__option' data-type='answer' data-current='q4' data-next='q5' data-answer='a'>
+        <div class='quiz__txt-container'>
+          	<h3>Fall</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q4' data-next='q5' data-answer='b'>
+        <div class='quiz__txt-container'>
+          <h3>Spring</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q4' data-next='q5' data-answer='c'>
+        <div class='quiz__txt-container'>
+          <h3>Summer</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q4' data-next='q5' data-answer='d'>
+        <div class='quiz__txt-container'>
+          <h3>Winter</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q4' data-next='q5' data-answer='e'>
+        <div class='quiz__txt-container'>
+          <h3>I love them all!</h3>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <div id='q5' class='quiz__outer-container'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='q5' data-next='q4'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+      <p>Question 5 of 7</p>
+    </div>
+
+  	<h2 class='quiz__subtitle'>What's your go-to makeup look?</h2>
+    
+    <div class='quiz__inner-container fourth-container'>
+      
+      <div class='quiz__option' data-type='answer' data-current='q5' data-next='q6' data-answer='a'>
+        <div class='quiz__txt-container'>
+          	<h3>Warm and natural with earthy tones</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q5' data-next='q6' data-answer='b'>
+        <div class='quiz__txt-container'>
+          <h3>Soft and feminine with pinks and rosy hues</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q5' data-next='q6' data-answer='c'>
+        <div class='quiz__txt-container'>
+          <h3>Bold and dramatic with smoky eyes</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q5' data-next='q6' data-answer='d'>
+        <div class='quiz__txt-container'>
+          <h3>Classic with red lipstick</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q5' data-next='q6' data-answer='e'>
+        <div class='quiz__txt-container'>
+          <h3>I experiment with different looks regularly!</h3>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <div id='q6' class='quiz__outer-container'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='q6' data-next='q5'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+      <p>Question 6 of 7</p>
+    </div>
+
+  	<h2 class='quiz__subtitle'>Choose your ideal evening activity:</h2>
+    
+    <div class='quiz__inner-container fourth-container'>
+      
+      <div class='quiz__option' data-type='answer' data-current='q6' data-next='q7' data-answer='a'>
+        <div class='quiz__txt-container'>
+          	<h3>Cozying up by the fireplace with a good book</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q6' data-next='q7' data-answer='b'>
+        <div class='quiz__txt-container'>
+          <h3>Enjoying a candlelit dinner</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q6' data-next='q7' data-answer='c'>
+        <div class='quiz__txt-container'>
+          <h3>Dancing the night away at a nightclub</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q6' data-next='q7' data-answer='d'>
+        <div class='quiz__txt-container'>
+          <h3>Attending a formal gala</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q6' data-next='q7' data-answer='e'>
+        <div class='quiz__txt-container'>
+          <h3>Trying something new and exciting!</h3>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <div id='q7' class='quiz__outer-container'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='q7' data-next='q6'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+      <p>Question 7 of 7</p>
+    </div>
+
+  	<h2 class='quiz__subtitle'>If you could describe your personality in one word, it would be:</h2>
+    
+    <div class='quiz__inner-container fourth-container'>
+      
+      <div class='quiz__option' data-type='answer' data-current='q7' data-next='last' data-answer='a'>
+        <div class='quiz__txt-container'>
+          	<h3>Down-to-earth</h3>
+        </div>
+      </div>
+      
+      <div class='quiz__option' data-type='answer' data-current='q7' data-next='last' data-answer='b'>
+        <div class='quiz__txt-container'>
+          <h3>Romantic</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q7' data-next='last' data-answer='c'>
+        <div class='quiz__txt-container'>
+          <h3>Daring</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q7' data-next='last' data-answer='d'>
+        <div class='quiz__txt-container'>
+          <h3>Timeless</h3>
+        </div>
+      </div>
+
+      <div class='quiz__option' data-type='answer' data-current='q7' data-next='last' data-answer='e'>
+        <div class='quiz__txt-container'>
+          <h3>Adventurous</h3>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div id='last' class='container quiz__outer-container'>
+    <div class='container back-container'>
+      <p class='back-btn' data-type='back' data-current='last' data-next='q7'><i class="fas fa-long-arrow-alt-left"></i> Back</p>
+    </div>
+
+  	<h2 class='quiz__subtitle'>Your perfect match is...</h2>
+    
+    <div id='answer' class='row answer__inner-container third-container'>
+    	<div class=' answer__image-container'>
+          <img class='answer__image lazyload' width='471' height'705' data-src='#'>
+        </div>
+        <div class='answer__text-container'>
+          <h3>Strawberry Blonde or Copper Hair</h3>
+          <p>You might enjoy the subtlety of Strawberry Blonde or Copper hair. These shades are gentle, offering a beautiful yet natural look, perfect for cooler and paler skin tones. Remember to maintain the health of your hair with regular treatments and using colour-protecting products.</p>
+          <a href='#' title='#' class='btn purple product__btn'>Shop Now</a>
+          <p>Note: This quiz provides general suggestions based on the provided content and may not be accurate for every individual. Always consult with a professional stylist for the best results. If you need help choosing the correct shade, let us help you with our <a href='https://www.cliphair.co.uk/pages/colour-matching-service' title='colour match'>free colour match</a> service.</p>
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+{{ 'section_red_quiz_aesthetic.js' | asset_url | script_tag }}
+{% schema %}
+  {
+    "name": "Journey",
+    "settings": [
+	]
+  }
+{% endschema %}
+
