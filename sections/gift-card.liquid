@@ -1,0 +1,681 @@
+{% assign limit = section.blocks.size | minus: 1 %}
+{% assign mobileStep = section.settings.display-mobile | times: 1 %}
+{% assign tabletStep = section.settings.display-tablet| times: 1 %}
+{% assign desktopStep = section.settings.display-desktop | times: 1 %}
+
+{% assign arrowClass = "" %}
+{% assign containerAlign = "" %}
+{% if section.blocks.size <= mobileStep %}
+  {% assign arrowClass = arrowClass | append: " mobile-none" %}
+  {% assign containerAlign = containerAlign | append: " mobile-center" %}
+{% endif %}
+{% if section.blocks.size <= tabletStep  %}
+  {% assign arrowClass =  arrowClass | append: " tablet-none" %}
+  {% assign containerAlign = containerAlign | append: " tablet-center" %}
+{% endif %}
+{% if section.blocks.size <= desktopStep  %}
+  {% assign arrowClass = arrowClass | append: " desktop-none" %}
+  {% assign containerAlign = containerAlign | append: " desktop-center" %}
+{% endif %}
+
+<style>  
+  #section-{{ section.id }}{
+    padding:{{ section.settings.mobile-tb-padding }}px {{ section.settings.mobile-sides-padding }}px;
+  }
+  
+  #section-{{ section.id }} .inner-container{
+    width:100%;
+    margin:0 auto;
+    {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
+    position:relative;
+  }
+  
+  #section-{{ section.id }} .section_header > *{
+    text-align:center;
+    font-size:{{ section.settings.title-mobile-font-size }}px;
+    color: {{ section.settings.text-colour }};
+    margin-bottom:20px;
+    line-height:1.2em;
+  }
+
+  #section-{{ section.id }} .section_intro > *{
+    text-align:center;
+    font-size:{{ section.settings.text-mobile-font-size }}px;
+    color: {{ section.settings.text-colour }};
+    margin-bottom:30px;
+    line-height:1.2em;
+  }
+
+  #section-{{ section.id }} .carrousel{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 40px;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #section-{{ section.id }} .carrousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #section-{{ section.id }} .carrousel{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  #section-{{ section.id }} .carrousel .entry{
+    width: calc((100% - (40px * {{ section.settings.display-mobile | floor | minus: 1 }})) / {{ section.settings.display-mobile }});
+    min-width: calc((100% - (40px * {{ section.settings.display-mobile | floor | minus: 1 }})) / {{ section.settings.display-mobile }});
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #section-{{ section.id }} .carrousel .entry > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+
+  #section-{{ section.id }} .carrousel .entry .image-container{
+    border:none;
+    display: block;
+    min-width:50%;
+    aspect-ratio:unset;
+  }
+
+  #section-{{ section.id }} .carrousel .entry .image-container.right{
+    padding: 0 10px 0 0;
+  }
+
+  #section-{{ section.id }} .carrousel .entry .image-container.left{
+    padding: 0 0 0 10px;
+  }
+
+  #section-{{ section.id }} .entry .image-container > img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: initial;
+    object-fit: cover;
+  }
+
+  #section-{{ section.id }} .carrousel .entry .text-container{
+    min-width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align:initial;
+  }
+
+  #section-{{ section.id }} .entry .text-container *{
+    color:{{ section.settings.text-colour }};
+    font-size:{{ section.settings.text-mobile-font-size }}px;
+    line-height:1.2em;
+    width:100%;
+  }
+
+  #section-{{ section.id }} .entry .text-container > .title-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #section-{{ section.id }} .entry .text-container > .title-container *{
+    margin:0;
+    width:fit-content;
+  }
+
+  #section-{{ section.id }} .entry .text-container > .title-container img{
+    width: auto;
+    height: calc({{ section.settings.text-mobile-font-size }}px + 10px);
+    object-fit: fill;
+    border-radius: 20px;
+    aspect-ratio: 91/47;
+  }
+
+  #section-{{ section.id }} .entry .text-container > div{
+    margin-bottom:20px;
+  }
+
+  #section-{{ section.id }} .entry .text-container > ul{
+    padding-inline-start: 5px;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  #section-{{ section.id }} .entry .text-container > ul > *{
+    margin-bottom:5px;
+    width:calc(100%/3);
+  }
+
+  #section-{{ section.id }} .entry .entry-button{
+    padding:7px 35px;
+    color:{{ section.settings.button-colour }};;
+    background:{{ section.settings.button-bg-colour }};;
+    display:inline-block;
+    margin:0;
+    font-size:{{ section.settings.text-mobile-font-size }}px;
+    line-height:1.2em;
+    text-align:center;
+    cursor:pointer;
+    width:fit-content;
+    border-radius:30px;
+  }
+
+  #section-{{ section.id }} .entry .entry-button:hover{
+    text-decoration:underline;
+    text-underline-offset:.2rem;
+  }
+
+  #section-{{ section.id }} .scroll-arrow{
+    position:absolute;
+    top:{{ section.settings.mobile-arrow }}%;
+    color:{{ section.settings.arrow_color }};
+    font-size:{{ section.settings.mobile-arrow-size }}px;
+    width:{{ section.settings.mobile-arrow-size }}px;
+    height:{{ section.settings.mobile-arrow-size }}px;
+  }
+
+  #section-{{ section.id }} .scroll-arrow:hover{
+    opacity: 0.7;
+  }
+
+  #section-{{ section.id }} .scroll-arrow.right{
+    right: 5px;
+    text-align:right;
+  }
+
+  #section-{{ section.id }} .scroll-arrow.left{
+    left: 5px;
+    text-align:left;
+  }
+  
+  #section-{{ section.id }} .scroll-arrow.mobile-none{
+    display:none;
+  }
+    
+  @media screen and (min-width:768px) and (max-width:991px){
+    #section-template--15381740191805__ec0d60a1-4d84-4914-8098-8753fe7c83ec38 .carrousel .entry > div{
+      justify-content: center;
+    }
+    
+    #section-{{ section.id }} .carrousel .entry .text-container,
+    #section-{{ section.id }} .carrousel .entry .image-container{
+      min-width:30%;
+      width:30%;
+    }
+  }
+    
+  @media screen and (min-width:768px){
+    #section-{{ section.id }} .carrousel .entry{
+      width: calc((100% - (40px * {{ section.settings.display-tablet | floor | minus: 1 }})) / {{ section.settings.display-tablet }});
+      min-width: calc((100% - (40px * {{ section.settings.display-tablet | floor | minus: 1 }})) / {{ section.settings.display-tablet }});
+    }
+
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.tablet-arrow }}%;
+      font-size:{{ section.settings.tablet-arrow-size }}px;
+      width:{{ section.settings.tablet-arrow-size }}px;
+      height:{{ section.settings.tablet-arrow-size }}px;
+    }
+    
+    #section-{{ section.id }} .scroll-arrow.mobile-none{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.tablet-none{
+      display:none;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding:{{ section.settings.desktop-tb-padding }}px {{ section.settings.desktop-sides-padding }}px;
+    }
+
+    #section-{{ section.id }} .section_header > *{
+      font-size:{{ section.settings.title-desktop-font-size }}px;
+      margin-bottom:30px;
+    }
+
+    #section-{{ section.id }} .section_intro > *{
+      font-size:{{ section.settings.text-desktop-font-size }}px;
+      margin-bottom:35px;
+    }
+
+    #section-{{ section.id }} .carrousel{
+      gap: 50px;
+    }
+
+    #section-{{ section.id }} .carrousel .entry{
+    width: calc((100% - (50px * {{ section.settings.display-desktop | floor | minus: 1 }})) / {{ section.settings.display-desktop }});
+    min-width: calc((100% - (50px * {{ section.settings.display-desktop | floor | minus: 1 }})) / {{ section.settings.display-desktop }});
+  }
+
+    #section-{{ section.id }} .entry .text-container *,
+    #section-{{ section.id }} .entry .entry-button{
+      font-size:{{ section.settings.text-desktop-font-size }}px;
+    }
+
+    #section-{{ section.id }} .entry .text-container > .title-container img{
+      height: calc({{ section.settings.text-desktop-font-size }}px + 10px);
+    }
+
+    #section-{{ section.id }} .entry .text-container > ul > *{
+      margin-bottom:15px;
+    }
+
+    #section-template--15381740191805__ec0d60a1-4d84-4914-8098-8753fe7c83ec38 .entry .entry-button{
+      margin-top: 15px;
+    }
+
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.desktop-arrow }}%;
+      font-size:{{ section.settings.desktop-arrow-size }}px;
+      width:{{ section.settings.desktop-arrow-size }}px;
+      height:{{ section.settings.desktop-arrow-size }}px;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.tablet-none{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.desktop-none{
+      display:none;
+    }
+  }
+  
+</style>
+
+<section id='section-{{ section.id }}' class='section-text-image_carrousel'>
+  
+  <div class='inner-container'>
+    {% if section.settings.header != empty %}
+      <div class='section_header'>
+        {{ section.settings.header }}
+      </div>
+    {% endif %}
+  
+    {% if section.settings.intro != empty %}
+      <div class='section_intro'>{{ section.settings.intro }}</div>
+    {% endif %}
+    
+    <div class='carrousel carrousel-{{ section.id }}'>
+      
+      {% for block in section.blocks %}
+        <div class='entry'>
+          <div>
+            {% if section.settings.image-position == 'right' %}
+              <div class='image-container {{ section.settings.image-position }}'>
+                <img src='{{ block.settings.image | image_url }}' loading='lazy' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+              </div>
+            {% endif %}
+          
+            <div class='text-container'>
+              <div class='title-container'>
+                {{ block.settings.title }}
+                {% if block.settings.title-image %}
+                  <img src='{{ block.settings.title-image | image_url }}' loading='lazy' height='{{ block.settings.title-image.height }}' width='{{ block.settings.title-image.width }}' alt='{{ block.settings.title-image.alt }}'>
+                {% endif %}
+              </div>
+              
+              {{ block.settings.description }}
+              {% if block.settings.button-url and section.settings.button-position == 'inside' %}
+                <a href='{{ block.settings.button-url }}' class='entry-button'>{{ block.settings.button-text }}</a>
+              {% endif %}
+            </div>
+            
+            {% if section.settings.image-position == 'left' %}
+              <div class='image-container {{ section.settings.image-position }}'>
+                <img src='{{ block.settings.image | image_url }}' loading='lazy' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+              </div>
+            {% endif %}
+          </div>
+          
+          {% if block.settings.button-url and section.settings.button-position == 'outside' %}
+            <a href='{{ block.settings.button-url }}' class='entry-button'>{{ block.settings.button-text }}</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+      
+    </div>
+    
+    {% capture containerClass %}carrousel-{{ section.id }}{% endcapture%}
+    {% assign mobileStep = section.settings.display-mobile | times: 1 | floor %}
+    {% assign tabletStep = section.settings.display-tablet| times: 1 | floor %}
+    {% assign desktopStep = section.settings.display-desktop | times: 1 | floor %}
+    {% render "arrows", containerClass: containerClass, limit: limit, stepMobile: mobileStep, stepTablet: tabletStep, stepDesktop: desktopStep, customClass: arrowClass %}
+    
+  </div>
+  
+</section>
+
+{% schema %}
+  {
+    "name": "Gift Card",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General Settings"
+      },
+            {
+        "type": "richtext",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "richtext",
+        "id": "intro",
+        "label": "Section Intro"
+      },
+      {
+        "type": "text",
+        "id": "max-width",
+        "label": "Max width"
+      },
+      {
+        "type": "header",
+        "content": "Colour Settings"
+      },
+      {
+        "type": "color",
+        "id": "text-colour",
+        "label": "Text colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "button-colour",
+        "label": "Button colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "button-bg-colour",
+        "label": "Button background colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Display Settings"
+      },
+      {
+        "type": "select",
+        "id": "image-position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "select",
+        "id": "button-position",
+        "label": "Button position",
+        "options": [
+          {
+            "value": "inside",
+            "label": "Inside"
+          },
+          {
+            "value": "outside",
+            "label": "Outside"
+          }
+        ],
+        "default": "inside"
+      },
+      {
+        "type": "range",
+        "id": "display-mobile",
+        "min": 1,
+        "max": 10,
+        "step": 0.2,
+        "unit": "un",
+        "label": "Display mobile",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "display-tablet",
+        "min": 1,
+        "max": 10,
+        "step": 0.2,
+        "unit": "un",
+        "label": "Display tablet",
+        "default": 2
+      },
+      {
+        "type": "range",
+        "id": "display-desktop",
+        "min": 1,
+        "max": 10,
+        "step": 0.2,
+        "unit": "un",
+        "label": "Display desktop",
+        "default": 3
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "title-mobile-font-size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Title Font size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "text-mobile-font-size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "mobile-tb-padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Top and Bottom Padding",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "mobile-sides-padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Sides Padding",
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "title-desktop-font-size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Title Font size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "text-desktop-font-size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "desktop-tb-padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Top and Bottom Padding",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "desktop-sides-padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Sides Padding",
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Arrow Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "tablet-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (tablet)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (desktop)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Mobile",
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "tablet-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Tablet",
+        "default": 40
+      },
+            {
+        "type": "range",
+        "id": "desktop-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Desktop",
+        "default": 40
+      },
+      {
+        "type": "color",
+        "id": "arrow_color",
+        "label": "Arrow Colour",
+        "default": "#000000"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "entry",
+        "name": "Entry",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "title-image",
+            "label": "Title Image"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "button-text",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button-url",
+            "label": "Button Link"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
