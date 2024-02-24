@@ -1,0 +1,643 @@
+{% capture containerClass %}container-{{ section.id }}{% endcapture %}
+{% assign limit = section.blocks.size | minus: 1 %}
+{% assign mobileStep = section.settings.mobile-col | times: 1 %}
+{% assign tabletStep = section.settings.tablet-col | times: 1 %}
+{% assign desktopStep = section.settings.desktop-col | times: 1 %}
+
+{% assign arrowClass = "" %}
+{% assign containerAlign = "" %}
+{% if section.blocks.size <= mobileStep %}
+  {% assign arrowClass = arrowClass | append: " mobile-none" %}
+  {% assign containerAlign = containerAlign | append: " mobile-center" %}
+{% endif %}
+{% if section.blocks.size <= tabletStep  %}
+  {% assign arrowClass =  arrowClass | append: " tablet-none" %}
+  {% assign containerAlign = containerAlign | append: " tablet-center" %}
+{% endif %}
+{% if section.blocks.size <= desktopStep  %}
+  {% assign arrowClass = arrowClass | append: " desktop-none" %}
+  {% assign containerAlign = containerAlign | append: " desktop-center" %}
+{% endif %}
+
+<link rel="preload" href="{{ 'section-custom-carrousel-2.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'" />
+<noscript>
+  {{ 'section-custom-carrousel-2.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+{% if section.settings.mex_width != empty %}
+  <style>
+    #section-{{ section.id }} > .inner-container{
+      max-width: {{ section.settings.max_width }}px;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    background: {{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} .section_header > *{
+    font-size:{{ section.settings.mobile-header-font_size }}px;
+    color: {{ section.settings.header_color }};
+  }
+
+  #section-{{ section.id }} .section_intro > *{
+    font-size:{{ section.settings.mobile-text-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item{
+    width:calc(100% / {{section.settings.mobile-col}});
+    min-width:calc(100% / {{section.settings.mobile-col}});
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item img.border{
+    border-color:{{ section.settings.header_color }};
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title{
+    font-size: {{ section.settings.mobile-text-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title > .block-subtitle{
+    font-size: calc({{ section.settings.mobile-text-font_size }}px - 2px);
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-btn{
+    font-size: {{ section.settings.mobile-button-font_size }}px;
+    color: {{ section.settings.button_color }};
+    background: {{ section.settings.btn-bg_color }};
+  }
+
+  #section-{{ section.id }} .scroll-arrow{
+    position:absolute;
+    top:{{ section.settings.mobile-arrow }}%;
+    color:{{ section.settings.arrow_color }};
+    font-size:{{ section.settings.mobile-arrow-size }}px;
+    width:{{ section.settings.mobile-arrow-size }}px;
+    height:{{ section.settings.mobile-arrow-size }}px;
+  }
+
+  #section-{{ section.id }} .scroll-arrow:hover{
+    opacity: 0.7;
+  }
+
+  #section-{{ section.id }} .scroll-arrow.right{
+    right: 15px;
+    text-align:right;
+  }
+
+  #section-{{ section.id }} .scroll-arrow.left{
+    left: 15px;
+    text-align:left;
+  }
+  
+  #section-{{ section.id }} .scroll-arrow.mobile-none{
+    display:none;
+  }
+
+  #section-{{ section.id }} .main-button-container > .section-btn{
+    font-size: {{ section.settings.mobile-text-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  @media screen and (min-width:768px){
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item{
+      width:calc(100% / {{section.settings.tablet-col}});
+      min-width:calc(100% / {{section.settings.tablet-col}});
+    }
+
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.tablet-arrow }}%;
+      font-size:{{ section.settings.tablet-arrow-size }}px;
+      width:{{ section.settings.tablet-arrow-size }}px;
+      height:{{ section.settings.tablet-arrow-size }}px;
+    }
+    
+    #section-{{ section.id }} .scroll-arrow.mobile-none{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.tablet-none{
+      display:none;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+    }
+
+    #section-{{ section.id }} .section_header > *{
+      font-size:{{section.settings.desktop-header-font_size }}px;
+    }
+
+    #section-{{ section.id }} .section_intro > *{
+      font-size:{{section.settings.desktop-text-font_size }}px;
+    }
+
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item{
+      width:calc(100% / {{section.settings.desktop-col}});
+      min-width:calc(100% / {{section.settings.desktop-col}});
+    }
+    
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title{
+      font-size: {{ section.settings.desktop-text-font_size }}px;
+    }
+  
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title > .block-subtitle{
+      font-size: calc({{ section.settings.desktop-text-font_size }}px - 2px);
+    }
+
+    #section-{{ section.id }}  .carrousel-container .carrousel-items > .item .item-btn{
+      font-size: {{ section.settings.desktop-button-font_size }}px;
+    }
+
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.desktop-arrow }}%;
+      font-size:{{ section.settings.desktop-arrow-size }}px;
+      width:{{ section.settings.desktop-arrow-size }}px;
+      height:{{ section.settings.desktop-arrow-size }}px;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.tablet-none{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.desktop-none{
+      display:none;
+    }
+
+    #section-{{ section.id }} .main-button-container > .section-btn{
+      font-size: {{ section.settings.desktop-text-font_size }}px;
+    }
+  }
+</style>
+
+<section id='section-{{ section.id }}' class='custom-carrousel-container'>
+
+  <div class='inner-container'>
+    {% if section.settings.header != empty %}
+      <div class='section_header'>{{ section.settings.header }}</div>
+    {% endif %}
+  
+    {% if section.settings.intro != empty %}
+      <div class='section_intro'>{{ section.settings.intro }}</div>
+    {% endif %}
+    
+    <div class='carrousel-container'>
+      
+      <div class='carrousel-items container-{{ section.id }} {{ containerAlign }}'>
+        
+        {% for block in section.blocks %}
+          <div class='item {% if forloop.last %}last{% endif %}'>
+            <a
+              {% if block.settings.image-url %}
+                href='{{ block.settings.image-url }}'
+              {% else %}
+                href='{{ block.settings.url }}'
+              {% endif %}
+              title="{{ block.settings.text }}"
+            >
+              <img data-src='{{ block.settings.image | image_url }}' class='lazyload {% if block.settings.circle_image %}circle_image{% endif %} {% if block.settings.border %}border{% endif %}' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+            </a>
+            {% if block.settings.text != empty %}
+              <a href='{{ block.settings.url }}' title='{{ block.settings.text }}' class='item-title'>
+                <span class='block-title'>{{ block.settings.text }}</span>
+                {% if block.settings.subtitle != empty %}
+                  <span class='block-subtitle'>{{ block.settings.subtitle }}</span>
+                {% endif %}
+              </a>
+            {% endif %}
+          
+            {% if section.settings.include-button %}
+              <a href='{{ block.settings.url }}' title='{{ block.settings.text }}' class='item-btn'>{{ section.settings.button-text | remove: "<p>" | remove: "</p>" }}</a>
+            {% endif %}
+          
+          </div>
+        {% endfor %}
+      </div>
+  
+      {% if section.settings.include-arrows %}
+        {% assign mobileStep = section.settings.mobile-col | times: 1 | floor %}
+        {% assign tabletStep = section.settings.tablet-col | times: 1 | floor %}
+        {% assign desktopStep = section.settings.desktop-col | times: 1 | floor %}
+        {% render "arrows", containerClass: containerClass, limit: limit, stepMobile: mobileStep, stepTablet: tabletStep, stepDesktop: desktopStep, customClass: arrowClass %}
+      {% endif %}
+    </div>
+
+    {% if section.settings.main-button-text != empty and section.settings.main-button-url %}
+      <div class='main-button-container'>
+        <a href='{{ section.settings.main-button-url }}' title='{{ section.setting.main-button-text }}' class='section-btn'>{{ section.settings.main-button-text }}</a>
+      </div>
+    {% endif %}
+    
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Carrousel 2.0",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "richtext",
+        "id": "intro",
+        "label": "Section Intro"
+      },
+      {
+        "type": "text",
+        "id": "main-button-text",
+        "label": "Section Button Text"
+      },
+      {
+        "type": "url",
+        "id": "main-button-url",
+        "label": "Section Button URL"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Header Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-header-font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-header-font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "color",
+        "id": "header_color",
+        "label": "Header Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Text Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-text-font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-text-font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-button",
+        "label": "Include Button",
+        "default": true
+      },
+      {
+        "type": "richtext",
+        "id": "button-text",
+        "label": "Button Text"
+      },
+      {
+        "type": "range",
+        "id": "mobile-button-font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-button-font_size",
+        "min": 12,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "btn-bg_color",
+        "label": "Button Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Display Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-col",
+        "min": 1,
+        "max": 10,
+        "step": 0.5,
+        "label": "Columns Mobile",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "tablet-col",
+        "min": 1,
+        "max": 10,
+        "step": 0.5,
+        "label": "Columns Tablet",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "desktop-col",
+        "min": 1,
+        "max": 10,
+        "step": 0.5,
+        "label": "Columns Desktop",
+        "default": 3
+      },
+      {
+        "type": "header",
+        "content": "Arrow Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-arrows",
+        "label": "Include Arrows",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "mobile-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "tablet-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (tablet)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (desktop)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Mobile",
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "tablet-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Tablet",
+        "default": 40
+      },
+            {
+        "type": "range",
+        "id": "desktop-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Desktop",
+        "default": 40
+      },
+      {
+        "type": "color",
+        "id": "arrow_color",
+        "label": "Arrow Colour",
+        "default": "#000000"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Carrousel Item",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "checkbox",
+            "id": "circle_image",
+            "label": "Make Image Circle",
+            "info": "This setting will work just for square images.",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "border",
+            "label": "Add Border",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "URL",
+            "info": "Add the URL that you want to send the user to."
+          },
+          {
+            "type": "url",
+            "id": "image-url",
+            "label": "Image URL",
+            "info": "Not required, only if you want to add a different link to the image."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
