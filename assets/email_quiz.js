@@ -80,7 +80,8 @@ function updateCounter(newValue){
 
 // Scroll the page to the top
 function scrollToTop(){
-  document.querySelector('body').animate({ scrollTop: 100 }, "slow");
+  document.body.scrollTop = 100; // For Safari
+  document.documentElement.scrollTop = 100; // For Chrome, Firefox, IE and Opera
 }
 
 // Make back button visible on the page
