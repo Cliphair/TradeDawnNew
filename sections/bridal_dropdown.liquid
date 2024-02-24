@@ -102,7 +102,7 @@
 {% endif %}
 
 <script>
-  var items = document.querySelectorAll("#section-{{ section.id }} .item");
+  let items = document.querySelectorAll("#section-{{ section.id }} .item");
   console.log(items)
   for (let item of items) {
     item.addEventListener("click", function(){
