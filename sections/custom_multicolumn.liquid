@@ -548,12 +548,14 @@
 
     for (let btn of readMoreBtns) {
       btn.addEventListener('click', () => {
+        event.preventDefault();
         openReadMore(btn);
       });
     }
 
     for (let btn of readLessBtns) {
       btn.addEventListener('click', () => {
+        event.preventDefault();
         closeReadLess(btn);
       });
     }
