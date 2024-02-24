@@ -208,7 +208,7 @@
               {% endif %}
               title="{{ block.settings.text }}"
             >
-              <img data-src='{{ block.settings.image | image_url }}' class='lazyload {% if block.settings.circle_image %}circle_image{% endif %} {% if block.settings.border %}border{% endif %}' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+              <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload {% if block.settings.circle_image %}circle_image{% endif %} {% if block.settings.border %}border{% endif %}' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
             </a>
             {% if block.settings.text != empty %}
               <a href='{{ block.settings.url }}' title='{{ block.settings.text }}' class='item-title'>
