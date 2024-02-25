@@ -519,6 +519,9 @@
         "698952ff-6132-41fa-9c2b-658edf38d204",
         "32edf211-b8bb-47c9-ba9f-6fefec7ef90d"
       ],
+      "custom_css": [
+        "a {text-decoration: none;}"
+      ],
       "settings": {
         "header": "<p>BESTSELLING PRODUCTS<\/p>",
         "intro": "<p>Our bestselling extensions for bridal and wedding hair are designed to elevate your wedding day look. Explore our range of wedding hair must haves - the most beloved accessories or marriage season.<\/p>",
@@ -642,6 +645,9 @@
         "4af42190-07c8-4cd2-9231-76187a2b0a86",
         "fd7795af-4030-4740-a8d4-eaed24d56a63",
         "5c8117d0-27b7-43f1-93c3-f7a894512c1c"
+      ],
+      "custom_css": [
+        "a {text-decoration: none;}"
       ],
       "settings": {
         "header": "<p>SHOP BY SHADE<\/p>",
