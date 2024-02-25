@@ -1,6 +1,562 @@
+{% assign limit = section.blocks.size | minus: 1 %}
+{% capture containerClass %}container-{{ section.id }}{% endcapture %}
+{% assign stepMobile = section.settings.display-mobile | times: 1 %}
+{% assign stepTablet = section.settings.display-tablet | times: 1 %}
+{% assign stepDesktop = section.settings.display-desktop | times: 1 %}
+
+{% assign arrowClass = '' %}
+{% assign containerAlign = '' %}
+{% if section.blocks.size <= stepMobile %}
+  {% assign arrowClass = arrowClass | append: " mobile-hidden" %}
+  {% assign containerAlign = containerAlign | append: " mobile-centered" %}
+{% endif %}
+{% if section.blocks.size <= stepTablet %}
+  {% assign arrowClass = arrowClass | append: " tablet-hidden" %}
+  {% assign containerAlign = containerAlign | append: " tablet-centered" %}
+{% endif %}
+{% if section.blocks.size <= stepDesktop %}
+  {% assign arrowClass = arrowClass | append: " desktop-hidden" %}
+  {% assign containerAlign = containerAlign | append: " desktop-centered" %}
+{% endif %}
+
+<link rel="preload" href="{{ 'section-bridal23-reviews.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'" />
+<noscript>
+  {{ 'section-bridal23-reviews.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+{% if section.settings.max-width != empty %}
+  <style>
+    #section-{{ section.id }} > .inner-container{
+      max-width:{{ section.settings.max-width }}px;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    background:{{ section.settings.bg-color }};
+  }
+
+  #section-{{ section.id }} .reviews-header > *{
+    color:{{ section.settings.header-color }};
+    font-size:{{ section.settings.header-mobile-font_size }}px;
+  }
+
+  #section-{{ section.id }} .review{
+    width:calc(100% / {{ section.settings.display-mobile }});
+    min-width:calc(100% / {{ section.settings.display-mobile }});
+  }
+
+  #section-{{ section.id }} .review > .text-container *{
+    color:{{ section.settings.text-color }};
+    font-size:{{ section.settings.text-mobile-font_size }}px;
+  }
+
+  #section-{{ section.id }} .button-container > a{
+    font-size:{{ section.settings.text-mobile-font_size }}px;
+    color:{{section.settings.btn-color}};
+    background:{{section.settings.btn-bg-color}};
+  }
+
+  #section-{{ section.id }} .dot-icon {
+    color: {{ section.settings.dot-color }};
+    width: {{ section.settings.dot-size}}px;
+    height:{{ section.settings.dot-size}}px;
+    background:{{ section.settings.dot-color }};
+  }
+
+  #section-{{ section.id }} .scroll-arrow{
+    top:{{ section.settings.arrow-position-mobile }}%;
+    font-size:{{ section.settings.arrow-size-mobile }}px;
+    height:{{ section.settings.arrow-size-mobile }}px;
+    width:{{ section.settings.arrow-size-mobile }}px;
+    color:{{ section.settings.arrow-color }};
+  }
+
+  @media screen and (min-width: 768px){
+    #section-{{ section.id }} .review{
+      width:calc(100% / {{ section.settings.display-tablet }});
+      min-width:calc(100% / {{ section.settings.display-tablet }});
+    }
+    
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.arrow-position-tablet }}%;
+      font-size:{{ section.settings.arrow-size-tablet }}px;
+      height:{{ section.settings.arrow-size-tablet }}px;
+      width:{{ section.settings.arrow-size-tablet }}px;
+    }
+  }
+
+  @media screen and (min-width: 992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.tablet-p_top }}px;
+      padding-bottom: {{ section.settings.tablet-p_bottom }}px;
+      padding-right: {{ section.settings.tablet-p_right }}px;
+      padding-left: {{ section.settings.tablet-p_left }}px;
+    }
+    
+    #section-{{ section.id }} .reviews-header > *{
+      font-size:{{ section.settings.header-desktop-font_size }}px;;
+    }
+
+    #section-{{ section.id }} .review{
+      width:calc(100% / {{ section.settings.display-desktop }});
+      min-width:calc(100% / {{ section.settings.display-desktop }});
+    }
+
+    #section-{{ section.id }} .review > .text-container *{
+      font-size:{{ section.settings.text-desktop-font_size }}px;
+    }
+
+    #section-{{ section.id }} .button-container > a{
+      font-size:{{ section.settings.text-desktop-font_size }}px;
+    }
+    
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.arrow-position-desktop }}%;
+      font-size:{{ section.settings.arrow-size-desktop }}px;
+      height:{{ section.settings.arrow-size-desktop }}px;
+      width:{{ section.settings.arrow-size-desktop }}px;
+    }
+  }
+</style>
+
+<section id='section-{{ section.id }}' class='section-bridal23-reviews'>
+  <div class='inner-container'>
+    {% if section.settings.title != empty %}<div class='reviews-header'>{{ section.settings.title }}</div>{% endif %}
+
+    <div class='reviews-outer-container'>
+      <div class='reviews-inner-container container-{{ section.id }} {{ containerAlign }}'>
+        {% for block in section.blocks %}
+          <div class='review'>
+            <div class='img-container'>
+              <img src='{{ block.settings.image | image_url }}'>
+            </div>
+            <div class='text-container'>
+              {{ block.settings.title }}
+              <div class='info-container'>
+                {% for i in (1..block.settings.review-stars) %}
+                  <i class="fa-solid fa-star"></i>
+                {% endfor %}
+                <span class='author'>{{ block.settings.author }}</span>
+              </div>
+              <div class='content-container'>
+                {{ block.settings.content }}
+                {% if block.settings.read-more != empty %}
+                  <p id='read-more-{{ forloop.index }}' class='read-more-btn' data-target='read-more-{{ forloop.index }}' onclick="read_more(this)">Read More</p>
+                  <div class='read-more-container read-more-{{ forloop.index }} closed'>
+                    {{ block.settings.read-more }}
+                    <p class='read-more-btn' data-target='read-more-{{ forloop.index }}' onclick="read_less(this)">Read Less</p>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>  
+        {% endfor %}
+      </div>
+
+      {% if section.settings.include-dots %}
+        {% render "dots", containerClass: containerClass, elementsCounter: limit, mobileDots: stepMobile, tabletDots: stepTablet, desktopDots: stepDesktop %}
+      {% endif %}
+  
+      {% if section.settings.include-arrows %}
+        {% render "arrows", containerClass: containerClass, limit: limit, stepMobile: stepMobile, stepTablet: stepTablet, stepDesktop: stepDesktop, customClass: arrowClass %}
+      {% endif %}
+    </div>
+    
+    {% if section.settings.include-btn %}
+      <div class='button-container'>
+        <a href='{{ section.settings.btn-url }}' class=''>{{ section.settings.btn-text }}</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Bridal 2023 Reviews",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Section Title"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "text",
+        "id": "max-width",
+        "label": "Max Width"
+      },
+      {
+        "type": "color",
+        "id": "header-color",
+        "label": "Header Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "text-color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "text-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 26
+      },
+      {
+        "type": "range",
+        "id": "text-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Display Settings"
+      },
+      {
+        "type": "range",
+        "id": "display-mobile",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Mobile Columns",
+        "default": 2
+      },
+      {
+        "type": "range",
+        "id": "display-tablet",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Tablet Columns",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "display-desktop",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Desktop Columns",
+        "default": 4
+      },
+      {
+        "type": "header",
+        "content": "Dots Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-dots",
+        "label": "Include Dots",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "dot-color",
+        "label": "Dots Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "dot-size",
+        "min": 8,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Dots Size",
+        "default": 8
+      },
+      {
+        "type": "header",
+        "content": "Arrow Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-arrows",
+        "label": "Include Arrows",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "arrow-color",
+        "label": "Arrows Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-mobile",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Mobile",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-tablet",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Tablet",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-desktop",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Desktop",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Mobile",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-tablet",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Tablet",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-desktop",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Desktop",
+        "default": 30
+      },
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-btn",
+        "label": "Include Button",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "btn-text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn-url",
+        "label": "Button URL"
+      },
+      {
+        "type": "color",
+        "id": "btn-color",
+        "label": "Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "btn-bg-color",
+        "label": "Button Background Colour",
+        "default": "#FFFFFF"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Review",
+        "type": "review",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Review Title"
+          },
+          {
+            "type": "text",
+            "id": "author",
+            "label": "Review Author"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Review Text"
+          },
+          {
+            "type": "richtext",
+            "id": "read-more",
+            "label": "Review Read More"
+          },
+          {
+            "type": "range",
+            "id": "review-stars",
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "unit": "un",
+            "label": "Reviews Stars",
+            "default": 5
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Review Image"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
