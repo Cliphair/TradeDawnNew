@@ -1,0 +1,516 @@
+{% capture containerClass %}images-container-{{ section.id }}{% endcapture %}
+{% assign limit = section.blocks.size | minus: 1 %}
+
+{% assign stepMobile = section.settings.display-mobile | times: 1 %}
+{% assign stepTablet = section.settings.display-tablet | times: 1 %}
+{% assign stepDesktop = section.settings.display-desktop | times: 1 %}
+
+{% assign arrowClass = '' %}
+{% assign containerAlign = '' %}
+{% if section.blocks.size <= stepMobile %}
+  {% assign arrowClass = arrowClass | append: " hidden-mobile" %}
+  {% assign containerAlign = containerAlign | append: " mobile-centered" %}
+{% endif %}
+{% if section.blocks.size <= stepTablet %}
+  {% assign arrowClass = arrowClass | append: " hidden-tablet" %}
+  {% assign containerAlign = containerAlign | append: " tablet-centered" %}
+{% endif %}
+{% if section.blocks.size <= stepDesktop %}
+  {% assign arrowClass = arrowClass | append: " hidden-desktop" %}
+  {% assign containerAlign = containerAlign | append: " desktop-centered" %}
+{% endif %}
+
+{% if section.settings.max_width != empty %}
+  <style>
+    #section-{{ section.id }} > .inner-container{
+      max-width:{{ section.settings.max_width }}px;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    width:100%;
+    margin:0;
+    padding-top:{{ section.settings.mobile-p_top }}px;
+    padding-bottom:{{ section.settings.mobile-p_bottom }}px;
+    padding-right:{{ section.settings.mobile-p_right }}px;
+    padding-left:{{ section.settings.mobile-p_left }}px;
+    background:{{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} > .inner-container{
+    width:100%;
+    margin:0 auto;
+    padding:0;
+  }
+
+  #section-{{ section.id }} .header-container > *{
+    text-align:center;
+    color:{{ section.settings.text_color }};
+    font-size: {{ section.settings.header-mobile-font_size }}px;
+    line-height:1.2rem;
+    margin-bottom:20px;
+  }
+
+  #section-{{ section.id }} .before-after-container{
+    position:relative;
+  }
+
+  #section-{{ section.id }} .before-after-container > .images-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:flex-start;
+    padding:0;
+    margin:0;
+    overflow-x:scroll;
+    overflow-y:hidden;
+  }
+
+  #section-{{ section.id }} .before-after-container > .images-container.mobile-centered{
+    justify-content:center;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #section-{{ section.id }} .before-after-container > .images-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #section-{{ section.id }} .before-after-container > .images-container{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  #section-{{ section.id }} .before-after-container > .images-container > img{
+    width:calc(100% / {{ section.settings.display-mobile }});
+    min-width:calc(100% / {{ section.settings.display-mobile }});
+    aspect-ratio:initial;
+    object-fit:cover;
+    height:auto;
+    display:block;
+    padding: 0 5px;
+  }
+
+  #section-{{ section.id }} .before-after-container > .shade-container{
+    position:absolute;
+    top: -20px;
+    right: -10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  #section-{{ section.id }} .before-after-container > .shade-container > img{
+    width:100%;
+    aspect-ratio:initial;
+    object-fit:cover;
+    height:auto;
+    display:block;
+    border-radius: 50%;
+  }
+
+  #section-{{ section.id }} .scroll-arrow{
+    position:absolute;
+    top:{{ section.settings.arrow-position-mobile }}%;
+    font-size:{{ section.settings.arrow-size-mobile }}px;
+    width:{{ section.settings.arrow-size-mobile }}px;
+    height:{{ section.settings.arrow-size-mobile }}px;
+    color:{{ section.settings.arrow-color }};
+  }
+
+  #section-{{ section.id }} .scroll-arrow.hidden-mobile{
+    display:none;
+  }
+
+  #section-{{ section.id }} .scroll-arrow.right{
+    right:15px;
+    text-align:right;
+  }
+
+  #section-{{ section.id }} .scroll-arrow.left{
+    left:15px;
+    text-align:left;
+  }
+
+  @media screen and (min-width: 768px) {
+    #section-{{ section.id }} .before-after-container > .images-container.mobile-centered{
+      justify-content:flex-start;
+    }
+    
+    #section-{{ section.id }} .before-after-container > .images-container.tablet-centered{
+      justify-content:center;
+    }
+    
+    #section-{{ section.id }} .before-after-container > .images-container > img{
+      width:calc(100% / {{ section.settings.display-tablet }});
+      min-width:calc(100% / {{ section.settings.display-tablet }});
+    }
+
+    #section-{{ section.id }} .before-after-container > .shade-container{
+      height: 90px;
+      width: 90px;
+    }
+  
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.arrow-position-tablet }}%;
+      font-size:{{ section.settings.arrow-size-tablet }}px;
+      width:{{ section.settings.arrow-size-tablet }}px;
+      height:{{ section.settings.arrow-size-tablet }}px;
+    }
+  
+    #section-{{ section.id }} .scroll-arrow.hidden-mobile{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.hidden-tablet{
+      display:none;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    #section-{{ section.id }}{
+      padding-top:{{ section.settings.desktop-p_top }}px;
+      padding-bottom:{{ section.settings.desktop-p_bottom }}px;
+      padding-right:{{ section.settings.desktop-p_right }}px;
+      padding-left:{{ section.settings.desktop-p_left }}px;
+    }
+
+    #section-{{ section.id }} .header-container > *{
+      font-size: {{ section.settings.header-desktop-font_size }}px;
+    }
+  
+    #section-{{ section.id }} .before-after-container > .images-container.tablet-centered{
+      justify-content:flex-start;
+    }
+    
+    #section-{{ section.id }} .before-after-container > .images-container.desktop-centered{
+      justify-content:center;
+    }
+    
+    #section-{{ section.id }} .before-after-container > .images-container > img{
+      width:calc(100% / {{ section.settings.display-desktop }});
+      min-width:calc(100% / {{ section.settings.display-desktop }});
+    }
+  
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.arrow-position-desktop }}%;
+      font-size:{{ section.settings.arrow-size-desktop }}px;
+      width:{{ section.settings.arrow-size-desktop }}px;
+      height:{{ section.settings.arrow-size-desktop }}px;
+    }
+  
+    #section-{{ section.id }} .scroll-arrow.hidden-tablet{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.hidden-desktop{
+      display:none;
+    }
+  }
+</style>
+
+<section id='section-{{ section.id }}' class='section-before-after'>
+  <div class='inner-container'>
+    {% if section.settings.header != empty %}<div class='header-container'>{{ section.settings.header }}</div>{% endif %}
+    
+    <div class='before-after-container'>
+      
+      {% if section.blocks.size > 0 %}
+
+        
+          <div class='images-container images-container-{{ section.id }} {{ containerAlign }}'>
+            {% for block in section.blocks %}
+              <img data-src='{{ block.settings.image | image_url }}' class='lazyload' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>         
+            {% endfor %}
+          </div>
+        
+        
+        {% if section.settings.shade-image %}
+          <div class='shade-container '>
+            <img data-src='{{ section.settings.shade-image | image_url }}' class='lazyload' height='{{ section.settings.shade-image.height }}' width='{{ section.settings.shade-image.width }}' alt='{{ section.settings.shade-image.alt }}'>
+          </div>
+        {% endif %}
+
+        {% if section.settings.include-arrows %}
+          {% render "arrows", containerClass: containerClass, limit: limit, stepMobile: stepMobile, stepTablet: stepTablet, stepDesktop: stepDesktop, customClass: arrowClass %}
+        {% endif %}
+        
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Before & After",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "image_picker",
+        "id": "shade-image",
+        "label": "Shade Image"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 26
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Display Settings"
+      },
+      {
+        "type": "range",
+        "id": "display-mobile",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Mobile Columns",
+        "default": 2
+      },
+      {
+        "type": "range",
+        "id": "display-tablet",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Tablet Columns",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "display-desktop",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Desktop Columns",
+        "default": 4
+      },
+      {
+        "type": "header",
+        "content": "Arrows Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-arrows",
+        "label": "Include Arrows",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "arrow-color",
+        "label": "Arrows Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-mobile",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Mobile",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-tablet",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Tablet",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-desktop",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Desktop",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Mobile",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-tablet",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Tablet",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-desktop",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Desktop",
+        "default": 30
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Before & After",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Before & After Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
