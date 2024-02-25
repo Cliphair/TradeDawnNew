@@ -16,7 +16,7 @@
         <div class='choices__img-container'>
           <img class='lazyload placeholder-img' loading='lazy' src='{{ block.settings.choices__placeholder-image | img_url: 'master' }}' width='{{ block.settings.choices__placeholder-image.width }}' height='{{ block.settings.choices__placeholder-image.height }}' alt='{{ block.settings.choices__choice-title }}'>
           <div class='choices__btn-container'>
-            <span class='choices__paly-btn' data-url='{{block.settings.choices__video-url}}' ><i class="fa-solid fa-play"></i></span>
+            <span class='choices__paly-btn' data-url='{{block.settings.choices__video-url}}' >{% render 'icon-play' %}</span>
           </div>
         </div>
 		
@@ -37,8 +37,8 @@
   
   {% if section.blocks.size > 1%}
     <div class='choices__arrow-container arrow-container'>
-      <span id='choices__arrow-left' class='left'><i class="fa-solid fa-angle-left"></i></span>
-      <span id='choices__arrow-right' class='right'><i class="fa-solid fa-angle-right"></i></span>
+      <span id='choices__arrow-left' class='left'>{% render 'icon-caret' %}</span>
+      <span id='choices__arrow-right' class='right'>{% render 'icon-caret' %}</span>
     </div>
    {% endif %}
   
@@ -150,12 +150,12 @@
   }
   
   .choices__paly-btn{
-    font-size:calc({{section.settings.choices__mobile-font-size}}px + 15px);
     border-radius:50%;
     border:1px solid white;
     padding:10px;
     cursor:pointer;
     background:white;
+    line-height:1;
   }
   
   .choices__paly-btn > *{
@@ -165,6 +165,11 @@
   
   .choices__paly-btn:hover > *{
     opacity:1;
+  }
+
+  .choices__paly-btn svg{
+    width:calc({{section.settings.choices__mobile-font-size}}px + 15px);
+    height:calc({{section.settings.choices__mobile-font-size}}px + 15px);
   }
   
   .choices__choice-title{
