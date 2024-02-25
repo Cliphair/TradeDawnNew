@@ -28,7 +28,7 @@
               <div class='bts__img-container'>
                 <img class='bts__image lazyload' loading='lazy' src='{{ block.settings.bts__placeholder-image | img_url: 'master' }}' alt='{{ block.settings.bts__bts-title }}'>
                 <div class='bts__btn-container'>
-                  <span class='bts__paly-btn' data-url='{{block.settings.bts__video-url}}' ><i class="fa-solid fa-play"></i></span>
+                  <span class='bts__paly-btn' data-url='{{block.settings.bts__video-url}}' >{% render 'icon-play' %}</span>
                 </div>
               </div>
               <h3 class='bts__style-title'>{{ block.settings.bts__bts-title }}</h3>
@@ -167,6 +167,11 @@
   
   .bts__paly-btn:hover > *{
     opacity:1;
+  }
+
+  .bts__paly-btn svg{
+    height:calc({{section.settings.bts__mobile-font-size}}px + 15px);
+    width:calc({{section.settings.bts__mobile-font-size}}px + 15px);
   }
   
   .video__bg{
