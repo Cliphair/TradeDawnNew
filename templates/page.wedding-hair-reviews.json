@@ -1,19 +1,716 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "61e65321-c2f6-420a-ab5c-13125830a934": {
+      "type": "page-header",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "custom-title": true,
+        "first-line": "Wedding Hair Extensions Reviews",
+        "second-line": "",
+        "hide": true,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "mobile-font-size": 14,
+        "mobile-top-padding": 0,
+        "mobile-bottom-padding": 0,
+        "mobile-right-padding": 0,
+        "mobile-left-padding": 0,
+        "desktop-font-size": 20,
+        "desktop-top-padding": 0,
+        "desktop-bottom-padding": 0,
+        "desktop-right-padding": 0,
+        "desktop-left-padding": 0
+      }
+    },
+    "1651073081ef4f3484": {
+      "type": "back-to",
+      "settings": {
+        "back_url": "shopify:\/\/pages\/2022-cliphair-bridal-hair-extensions",
+        "back_text": "Back To Bridal Campaign",
+        "max_width": true,
+        "mobile_font": 10,
+        "mobile_tb_padding": 5,
+        "mobile_sides_padding": 15,
+        "desktop_font": 12,
+        "desktop_tb_padding": 7,
+        "desktop_sides_padding": 20
+      }
+    },
+    "165097875230149339": {
+      "type": "bridal_reviews",
+      "blocks": {
+        "18a33ce6-955d-47b4-b3db-ab05387e7f1d": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Perfect!",
+            "reviews__reviews-author": "Hayley P",
+            "reviews__reviews-product": "full-head-set-clip-in-hair-extensions-brown-blonde-mix-12-16-613",
+            "reviews__reviews-content": "<p>Perfect for Adding volume and length to my hair for the wedding! Love the texture and colour of them, they look perfect in my hair! Quality is great and price is very reasonable!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "964bcbab-c4f4-49b3-aa3a-b2c21679e7b5": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "So happy with them",
+            "reviews__reviews-author": "Maya E",
+            "reviews__reviews-product": "full-head-set-clip-in-hair-extensions-ice-blonde",
+            "reviews__reviews-content": "<p>The colour is a really good Match the length is how I want it and thickness is fantastic all I’ve done is try them on as it’s for my wedding but I am so happy with them and can’t wait to shop again for more!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "390359f9-68de-45b7-8d27-6bc4474a60e1": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "100% would buy again! ",
+            "reviews__reviews-author": "Chloe B",
+            "reviews__reviews-product": "balayage-hair-extensions-double-weft-chestnut-bronde",
+            "reviews__reviews-content": "<p>I’m getting married in a few months and as I can’t get to the hairdressers to source extensions, I was recommended ClipHair. They are fantastic! The colour match through the website is spot on, they were informative and gave me links to different types of hair that would match my own, shipping is free which is a massive bonus and the fact you can return it (again for free!) is the cherry on the top!<\/p>",
+            "reviews__reviews-content-read-more": "<p>Delivery was fast and the hair turned up really well packaged.  The hair itself is beautiful and so soft. Can’t fault it! Would 100% recommend to anyone. And the best bit, I’m not a girly girl by any means, I just wanted lovely hair for my wedding but I am 100% going to purchase more hair through ClipHair!<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "bdc6d2fb-47c0-4862-a461-d5dee61464af": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Loved these!",
+            "reviews__reviews-author": "Kirsty S",
+            "reviews__reviews-product": "double-wefted-full-head-remy-clip-in-human-hair-extensions-blonde-me-60-ss",
+            "reviews__reviews-content": "<p>I love these clip ins, I have used them many times now are they are still in great condition, I use them in my kit as a stylist for my clients to wear and borrow for their wedding day!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "85856b68-335d-4c9a-85a8-6ad97a405153": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Amazing match and quality",
+            "reviews__reviews-author": "Aimee A",
+            "reviews__reviews-product": "tape-in-remy-human-hair-extension-blonde-mix-18-613",
+            "reviews__reviews-content": "<p>I messaged their customer services for a colour match and the service team were amazing. The match was perfect and applying was very easy. Recommend to all. Cannot wait to style for my wedding day<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "ba446076-5f4b-4813-a8e1-4441ed425472": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Very impressed!",
+            "reviews__reviews-author": "Rhoda W",
+            "reviews__reviews-product": "remy-royale-seamless-clip-ins-dark-espresso-melt",
+            "reviews__reviews-content": "<p>Very impressed with the product and the service. I used the colour matching service, which was quick and easy and the colour of the product recommended for me was perfect. I purchased the extensions for my wedding and the hair stylist said the quality of the product was one of the best she'd used. Would highly recommend both the product and the colour matching service if unsure<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "3deba197-77f3-4c8d-a1bb-2b8c7a5cfa5f": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Great quality extensions & perfect colour match",
+            "reviews__reviews-author": "Amanda K",
+            "reviews__reviews-product": "full-head-set-clip-in-hair-extensions-brown-blonde-mix-6-613",
+            "reviews__reviews-content": "<p>This is my third set of extensions from Cliphair (initially recommended by my wedding hair stylist). Great quality extensions, and a pretty perfect colour match. I bought this latest set to wear at a black-tie event, and my hair looked great all evening. Perhaps a little long for me, but I will have them cut and will no doubt wear them on repeat!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "61b274ff-c664-4ad2-a4bb-95057f58ae03": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Very Happy Customer",
+            "reviews__reviews-author": "Samantha C",
+            "reviews__reviews-product": "seamless-clip-in-hair-extensions-double-drawn-darkest-brown",
+            "reviews__reviews-content": "<p>I ordered these hair extensions for my weddinghair and they were perfect, the colour was spot on and the quality was amazing, great value for money and the customer service was excellent! I would definitely recommend your site to others! Thank you, I am a very happy customer<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "7cad9d86-5dd8-4417-a3fe-a5be6d75d2ad": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I absolutely love them",
+            "reviews__reviews-author": "Iciar F",
+            "reviews__reviews-product": "full-head-remy-clip-in-human-hair-extensions-toffee-brown-5",
+            "reviews__reviews-content": "<p>I absolutely love them! I had a wedding to attend, so I brought them for my hairdresser to curl and she was astonished with the amazing quality of the hair. My hair has never looked better!!! =)<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "9886f3c6-fd09-416f-85f7-0dccbf39722f": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Love these, super long!",
+            "reviews__reviews-author": "Kerry M",
+            "reviews__reviews-product": "full-head-set-clip-in-hair-extensions-darkest-brown-2",
+            "reviews__reviews-content": "<p>Great quality human hair extensions. Perfect colour. Fast and secure delivery. Very pleased with these as I am using them for my wedding next month! 😊<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "5d259978-09f9-4c41-b69c-13211451d82f": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I received the extensions",
+            "reviews__reviews-author": "Davina B",
+            "reviews__reviews-product": "full-head-remy-clip-in-human-hair-extensions-medium-brown-4",
+            "reviews__reviews-content": "<p>I received the extensions just in time for a wedding! I was so happy! Delivery was very fast. Everyone told me the quality looks great and they matched my hair incredibly. I am very satisfied with your product. Thanks!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "f087c4ca-eef8-46f7-8fb0-d74c5304485d": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Absolutely perfect colour match!",
+            "reviews__reviews-author": "Victoria M",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-light-chestnut-brown-6",
+            "reviews__reviews-content": "<p>Absolutely perfect colour match. I watched one YouTube video on the best way to clip and blend them in, curled them with my curling tongs at home and then was ready to go! I have had so many compliments on them. I am really really happy, excellent price and service as well. Now just practice makes perfect ready to wear them for my wedding day!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "7bafdf9f-5307-4d17-8ee8-fa7d6ce6b048": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Amazing hair!",
+            "reviews__reviews-author": "Francesca A",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-ginger-red-natural-red-350",
+            "reviews__reviews-content": "<p>Just an amazing product! I bought these to add a bit more volume to my hair on my wedding as a fair amount was in a barrel roll at the front. Very good quality, an exact match to my hair which is quite hard to find.  <\/p>",
+            "reviews__reviews-content-read-more": "<p>no one would tell I had extensions in either,which is always good. My hair is now long and thick and feels amazing!<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "a31ec08d-98d1-48f8-82c1-ab66dbafc71a": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I bought these",
+            "reviews__reviews-author": "Madelyn R",
+            "reviews__reviews-product": "one-piece-clip-in-hair-extension-brown-blonde-mix-10-16",
+            "reviews__reviews-content": "<p>I bought these as a last ditched attempt to thicken my hair for a wedding and was so impressed.  <\/p>",
+            "reviews__reviews-content-read-more": "<p>I went slightly lighter than the recommended colour match, and also had to trim them significantly to suit my hair, but they were a perfect match, so light to wear, so comfy, gave my broken hair the boost I needed and got so many compliments from people who were then shocked I had extensions in. No one could tell. Will buy again!<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "0ef19511-3365-4291-ac71-dc199019ab94": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Incredible Quality!",
+            "reviews__reviews-author": "Nikki D ",
+            "reviews__reviews-product": "full-head-remy-clip-in-human-hair-extensions-deep-red",
+            "reviews__reviews-content": "<p>The quality is incredible, the weft is light, soft, very versatile. They’re so easy to use, easy use clips too. The colour itself on the website is slightly different to what I got sadly but don’t let that put you off as they can be dyed, and the team are so helpful too! <\/p>",
+            "reviews__reviews-content-read-more": "<p>All in all, I can’t stop wearing them and cannot wait to wear them for my wedding day.<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "b0781b46-988a-4b72-acb0-8a7c46d7659e": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "As a bridal hair stylist",
+            "reviews__reviews-author": "Joanna H",
+            "reviews__reviews-product": "highlighted-set-clip-in-hair-extensions-brown-blonde-mix-18-613",
+            "reviews__reviews-content": "<p>As a bridal hair stylist, I needed to source some clip in extensions already highlighted to go in one of my brides hair. This was the first time I have ever offered to source the extensions on behalf of the brides, so I was nervous as I wanted to get it right. I sent several pictures of my bride's hair at different angles and in natural daylight to ensure the best possible colour match. <\/p>",
+            "reviews__reviews-content-read-more": "<p>They arrived really quickly once confirmed the order and I posted them to my client who said they were a perfect colour match. I was so pleased with the service, that now I am confidently offering to source the extensions for my brides as I feel the colour matches are really good. Thank you and look forward to using your company again xxx<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "e12ea7c6-a959-40aa-a45e-5f6a055e93fd": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Very Happy Customer!",
+            "reviews__reviews-author": "Samantha C",
+            "reviews__reviews-product": "ultra-volume-clip-in-hair-extensions-240-280g",
+            "reviews__reviews-content": "<p>I ordered these hair extensions for my weddinghair and they were perfect, the colour was spot on and the quality was amazing, great value for money and the customer service was excellent! I would definitely recommend your site to others! Thank you, I am a very happy customer!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "704f841f-92ad-44c0-bf04-abafb88237cb": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I absolutely love them...",
+            "reviews__reviews-author": "Iciar F",
+            "reviews__reviews-product": "full-head-remy-clip-in-human-hair-extensions-toffee-brown-5",
+            "reviews__reviews-content": "<p>I absolutely love them! I had a wedding to attend, so I brought them for my hairdresser to curl and she was astonished with the amazing quality of the hair. My hair has never looked better<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "b45cd3e3-eccc-46af-ba38-6710d678fee3": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I received the extensions!",
+            "reviews__reviews-author": "Davina B",
+            "reviews__reviews-product": "full-head-remy-clip-in-human-hair-extensions-medium-brown-4",
+            "reviews__reviews-content": "<p>I received the extensions just in time for a wedding! I was so happy! Delivery was very fast. Everyone told Me the quality looks great and they matched my hair incredibly. I am very satisfied with your product. Thanks!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "2486774b-d649-4f86-aef6-d3d887aeab67": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Felt very excited when",
+            "reviews__reviews-author": "Elaine T",
+            "reviews__reviews-product": "full-head-remy-clip-in-human-hair-extensions-medium-brown-4",
+            "reviews__reviews-content": "<p>I felt very excited when ordering these extensions, thankfully delivery was quick and I was like a kid at Christmas when I received them. The colour is beautiful, and they feel very soft, I just hope I can maintain the quality of these<\/p>",
+            "reviews__reviews-content-read-more": "<p>Haven't worn them out yet as I am keeping them for my son's wedding, but have tried them on, they clip in easily, feel very light, and look fabulous!Thank You Cliphair! I would definitely order from here again and recommend them to friends and family! <\/p>",
+            "reviews__review": 5
+          }
+        },
+        "98896968-c79c-4439-be16-f525d699cb70": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Love, love, love",
+            "reviews__reviews-author": "Callista L",
+            "reviews__reviews-product": "full-head-remy-clip-in-human-hair-extensions-medium-brown-4",
+            "reviews__reviews-content": "<p>Love, love, love these hair extensions. I bought these for my wedding, so I have more volume and length. They are perfect just what I was looking for! The clips are already sewn on so all you have to do is clip them in and off you go :) I live overseas and the extensions where in Gib in just under a week. Thank you for your amazing product!!!  <\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "63858c36-d1fb-422f-9c7e-fe51a2c1adee": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I loved my hair!",
+            "reviews__reviews-author": "Mackenzie N ",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-brown-blonde-mix-10-16",
+            "reviews__reviews-content": "<p>I love my hair; I'm wearing it for my wedding and it's going to be perfect! It matches my hair perfectly and it really added volume! Customer service also rocked! I put down the wrong state and they emailed me within a day to tell me who to contact!! They were great! <\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "ea348dd0-08ce-429d-b722-64d59d0c122c": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I've always been nervous",
+            "reviews__reviews-author": "Emily H",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-light-ash-blonde-22",
+            "reviews__reviews-content": "<p>I've always been nervous about using extensions, but these were recommended to me by my weddinghairdresser and they really haven't disappointed. They look very natural and give my thin hair a real boost. A year later they are still in good condition. Would buy again! <\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "c5042113-d1a6-44c8-91a0-b426ce23edb3": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I used this product for",
+            "reviews__reviews-author": "Julie S",
+            "reviews__reviews-product": "full-head-set-clip-in-hair-extensions-brown-blonde-mix-6-613",
+            "reviews__reviews-content": "<p>I used this product for my wedding day, the colour was a perfect match and it made such a big difference to my hair on the day. My hairdresser added some extensions to the back of my hair and curled it, then put it up into a modern hair style with a curly 'bun' to one side and a plait on the other.<\/p>",
+            "reviews__reviews-content-read-more": "<p>It was beautiful. We had tried this without the extensions and it didn't look anywhere near as good. I recommend this product, they are easy to use, curl and remove at the end of the night. The style stayed in until I went to bed! <\/p>",
+            "reviews__review": 5
+          }
+        },
+        "587aa8da-1bd9-4a34-bd64-3d0cd3651067": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "These hair extensions are fabulous",
+            "reviews__reviews-author": "Sofia S",
+            "reviews__reviews-product": "full-head-set-clip-in-hair-extensions-brown-blonde-mix-6-613",
+            "reviews__reviews-content": "<p>These hair extensions are fabulous, I was very surprised by the quality of the hair! The colour is as presented in the photos and totally blended with my hair. Used it to make a braid for a wedding and it worked out amazing. I'm a fan!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "cfb87520-be75-4020-8320-a3c40315572e": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "A great quality",
+            "reviews__reviews-author": "Susan K",
+            "reviews__reviews-product": "mahogany-red-99j-straight-up-wrap-around-ponytail-extension",
+            "reviews__reviews-content": "<p>A great quality and really easy to use product. I bought to add volume to my hair for my wedding. Would definitely recommend, delivery was quick and product is great!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "6f055846-d82b-41db-95cf-53e95143d354": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I ordered this product",
+            "reviews__reviews-author": "Zoe H",
+            "reviews__reviews-product": "double-wefted-full-head-remy-clip-in-human-hair-extensions-dark-brown-3",
+            "reviews__reviews-content": "<p>I ordered this product to use on my wedding day in July. I have had my trial & I am delighted with the hair as it is such good quality & the colour is such a good match!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "217b941a-e0ba-42f2-aa70-15aadead6849": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I bought the 18inch darkest brown",
+            "reviews__reviews-author": "Huma A",
+            "reviews__reviews-product": "full-head-set-clip-in-hair-extensions-darkest-brown-2",
+            "reviews__reviews-content": "<p>I bought the 18inch darkest brown full head straight clip in extensions. Received them on time as I bought them to wear at a wedding. Easy to clip inand you couldn't even tell I had any extensions in as they looked just like my own hair. Great price, even better!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "20de4a3d-4aa5-4047-a203-aaa04d6c08e5": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "The best clip ins! ",
+            "reviews__reviews-author": "Zoe W",
+            "reviews__reviews-product": "double-wefted-full-head-remy-clip-in-human-hair-extensions-dark-brown-3",
+            "reviews__reviews-content": "<p>The quality of these hair extensions is amazing, the hair is so thick and blends so easily with my hair. Treated myself to some new extensions as I wanted some good quality ones for my wedding in the summer this year and they are even better than I remember, and I love the box they now come in.  <\/p>",
+            "reviews__reviews-content-read-more": "<p>Perfect to keep them stored away. I’ve worn them once so far and the clips stay in place, and they were so easy to style. The colour match is also spot on. Love them! <\/p><p>Perfect!<span style=\"text-decoration:underline\"><strong> <\/strong><\/span> <\/p>",
+            "reviews__review": 5
+          }
+        },
+        "ef018d11-a609-4e68-8b44-a7048b8462ce": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Perfect! ",
+            "reviews__reviews-author": "Katie W",
+            "reviews__reviews-product": "remy-royale-seamless-clip-ins-16-60",
+            "reviews__reviews-content": "<p>I used the colour match service and was directed to these extensions. Perfect colour match and so impressed with the quality. Can’t wait to use them for my wedding!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "5a4a0736-4c42-4738-89a1-88b8c1cf37d5": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "So happy !",
+            "reviews__reviews-author": "Paige J",
+            "reviews__reviews-product": "ultra-volume-clip-in-hair-extensions-240-280g",
+            "reviews__reviews-content": "<p>I am so happy with the hair extensions I got from Clip Hair. I went for the newest 'Ultra Volume thick weft 240-280, in ash blonde with highlights. The hair quality is beautiful. I had clip hair for my wedding last year (I was a red head then) and I knew I wanted to get a new set when I went blonde.<\/p>",
+            "reviews__reviews-content-read-more": "<p>My hair is fine, but I have a lot of it, making it look thick. This hair blended so well without much effort. I love it with waves in as looks really natural. I highly recommend the extensions, they last ages and look great.<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "9dd914af-1200-418b-951e-75ec1998e673": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Amazing Hair! ",
+            "reviews__reviews-author": "Lauren W",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-medium-brown-4",
+            "reviews__reviews-content": "<p>This was my first time ordering from Clip Hair and wow, I will 100% be re-ordering from them again! The quality is super thick and soft, and the colour was a perfect match so it blended amazingly and will be used on my wedding day!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "74922900-a67d-4f26-b34a-aa8b43c3f335": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I am very happy with a fast",
+            "reviews__reviews-author": "Christine S",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-brown-mix-2-4-6",
+            "reviews__reviews-content": "<p>I am very happy with a fast, reliable service. I received the extensions early the morning after I ordered them! My hairdresser agreed they were good quality, they were curled and used for an updo, and the end result was amazing, I truly felt like a Princess! <\/p>",
+            "reviews__reviews-content-read-more": "<p>A great product, I will most definitely be wearing them again, I can't believe I've never used hair extensions before! I would highly recommend!<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "27795379-6f09-4072-92f3-7d06e56652f3": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Amazing!",
+            "reviews__reviews-author": "Manpreet B",
+            "reviews__reviews-product": "remy-royale-seamless-clip-ins-dark-brown-3",
+            "reviews__reviews-content": "<p>I Ordered these last minute for my brother’s wedding. The service I received was amazing!! I have dip dye hair and after sending a photo of my hair they helped me match the extensions I needed and they were spot on and looked great! <\/p>",
+            "reviews__reviews-content-read-more": "<p>Easy to clip in and curl. Everyone gave me such nice compliments. I would definitely recommend this website!! Thank you!<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "0c733fde-348a-4009-8534-e801f086e5f1": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "As a wedding hair specialist ",
+            "reviews__reviews-author": "Lisa C",
+            "reviews__reviews-product": "remy-royale-i-tips-blondemix-16-60",
+            "reviews__reviews-content": "<p>As a wedding hair specialist, I use a lot of clip hair products, the quality of these extensions is amazing the result is natural, my brides fall in love with their hair when they see the result Clip hair can achieve, 100% recommend clip hair!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "e39f61f8-e459-4f76-a791-1bce518debce": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Amazing!",
+            "reviews__reviews-author": "Riann C",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-darkest-brown-2",
+            "reviews__reviews-content": "<p>Amazing! Super thick and the colour matched perfectly! Gorgeous hair, I love them! I bought these extensions for my wedding and when I went to the salon to have my hair styled by the hairdresser, they fell in love with them! All of the hairdressers got the Website from me and decided to purchase them as well! I would absolutely recommend it to everyone!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        },
+        "b86c90c8-1c61-4c8e-8cf4-66173c75002b": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "I bought these extensions!",
+            "reviews__reviews-author": "Eleanor L",
+            "reviews__reviews-product": "double-wefted-set-clip-in-hair-extensions-light-chestnut-brown-6",
+            "reviews__reviews-content": "<p>I bought these extensions for my wedding as my own hair doesn't have enough volume for the half-updo I wanted. The colour match is amazing, it is exactly the same colour as my own hair, everybody complimented them, and some people didn't believe I had extensions in!  <\/p>",
+            "reviews__reviews-content-read-more": "<p>The quality of the hair is absolutely beautiful, smooth and glossy. I wouldn't hesitate to recommend these to my friends!<\/p>",
+            "reviews__review": 5
+          }
+        },
+        "ac2be6de-9246-4edd-be43-8866650a3694": {
+          "type": "Review",
+          "settings": {
+            "reviews__reviews-title": "Beautiful extensions",
+            "reviews__reviews-author": "Rachael A",
+            "reviews__reviews-product": "double-weft-set-real-human-clip-in-hair-extensions-dark-auburn-copper-red-33",
+            "reviews__reviews-content": "<p>These extensions are stunning. Very soft and silky feel and gorgeous colour. I would say more of a red auburn than a copper. I wore them as a bridesmaid and got loads of compliments!<\/p>",
+            "reviews__reviews-content-read-more": "",
+            "reviews__review": 5
+          }
+        }
+      },
+      "block_order": [
+        "18a33ce6-955d-47b4-b3db-ab05387e7f1d",
+        "964bcbab-c4f4-49b3-aa3a-b2c21679e7b5",
+        "390359f9-68de-45b7-8d27-6bc4474a60e1",
+        "bdc6d2fb-47c0-4862-a461-d5dee61464af",
+        "85856b68-335d-4c9a-85a8-6ad97a405153",
+        "ba446076-5f4b-4813-a8e1-4441ed425472",
+        "3deba197-77f3-4c8d-a1bb-2b8c7a5cfa5f",
+        "61b274ff-c664-4ad2-a4bb-95057f58ae03",
+        "7cad9d86-5dd8-4417-a3fe-a5be6d75d2ad",
+        "9886f3c6-fd09-416f-85f7-0dccbf39722f",
+        "5d259978-09f9-4c41-b69c-13211451d82f",
+        "f087c4ca-eef8-46f7-8fb0-d74c5304485d",
+        "7bafdf9f-5307-4d17-8ee8-fa7d6ce6b048",
+        "a31ec08d-98d1-48f8-82c1-ab66dbafc71a",
+        "0ef19511-3365-4291-ac71-dc199019ab94",
+        "b0781b46-988a-4b72-acb0-8a7c46d7659e",
+        "e12ea7c6-a959-40aa-a45e-5f6a055e93fd",
+        "704f841f-92ad-44c0-bf04-abafb88237cb",
+        "b45cd3e3-eccc-46af-ba38-6710d678fee3",
+        "2486774b-d649-4f86-aef6-d3d887aeab67",
+        "98896968-c79c-4439-be16-f525d699cb70",
+        "63858c36-d1fb-422f-9c7e-fe51a2c1adee",
+        "ea348dd0-08ce-429d-b722-64d59d0c122c",
+        "c5042113-d1a6-44c8-91a0-b426ce23edb3",
+        "587aa8da-1bd9-4a34-bd64-3d0cd3651067",
+        "cfb87520-be75-4020-8320-a3c40315572e",
+        "6f055846-d82b-41db-95cf-53e95143d354",
+        "217b941a-e0ba-42f2-aa70-15aadead6849",
+        "20de4a3d-4aa5-4047-a203-aaa04d6c08e5",
+        "ef018d11-a609-4e68-8b44-a7048b8462ce",
+        "5a4a0736-4c42-4738-89a1-88b8c1cf37d5",
+        "9dd914af-1200-418b-951e-75ec1998e673",
+        "74922900-a67d-4f26-b34a-aa8b43c3f335",
+        "27795379-6f09-4072-92f3-7d06e56652f3",
+        "0c733fde-348a-4009-8534-e801f086e5f1",
+        "e39f61f8-e459-4f76-a791-1bce518debce",
+        "b86c90c8-1c61-4c8e-8cf4-66173c75002b",
+        "ac2be6de-9246-4edd-be43-8866650a3694"
+      ],
+      "settings": {
+        "reviews__section-title": "Wedding Hair Extensions Reviews",
+        "reviews__mobile-font-size": 15,
+        "reviews__mobile-padding-topbottom": 0,
+        "reviews__mobile-padding-sides": 0,
+        "reviews__desktop-font-size": 25,
+        "reviews__desktop-padding-topbottom": 0,
+        "reviews__desktop-padding-sides": 0
+      }
+    },
+    "165062557218170705": {
+      "type": "page_description",
+      "disabled": true,
+      "settings": {
+        "section_title": "",
+        "title2": "",
+        "header_colour": "#000000",
+        "header_bold": false,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "max-width": "",
+        "description__mobile-font-size": 15,
+        "description__mobile-padding-topbottom": 0,
+        "description__mobile-padding-sides": 0,
+        "description__desktop-font-size": 16,
+        "description__desktop-padding-topbottom": 9,
+        "description__desktop-padding-sides": 0
+      }
+    },
+    "1650634438a19ebea7": {
+      "type": "bts",
+      "blocks": {
+        "fa73deb5-c004-4136-8a89-f84a79d49796": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/bridal-livia.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "bdf23c36-4682-4631-99b2-d6addaf8111e": {
+          "type": "video",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__placeholder-image": "shopify:\/\/shop_images\/2_2de281b5-5181-4c7c-8a4a-58641faa7bf9.jpg",
+            "bts__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/1.MOV.mp4?v=1650635957",
+            "bts__page-url": ""
+          }
+        },
+        "7566e382-15dd-4586-9445-50e3c68d8004": {
+          "type": "video",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__placeholder-image": "shopify:\/\/shop_images\/1_0b073054-d268-4e59-8143-e7232b476b84.jpg",
+            "bts__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/3.MOV.mp4?v=1650635955",
+            "bts__page-url": ""
+          }
+        },
+        "0bd4ff38-364c-4f43-be0a-791efd285436": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/bridal-livia2.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "8d9ed9f6-6c16-45f8-b969-a071b5252701": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "bts__bts-title": "",
+            "bts__placeholder-image": "shopify:\/\/shop_images\/3_dd679b41-616c-4d0c-b118-69a5f150c536.jpg",
+            "bts__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/4.MOV.mp4?v=1650635955",
+            "bts__page-url": ""
+          }
+        },
+        "3788ef17-13e2-4343-85bf-2522dd463734": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/bridal-livia3.jpg",
+            "bts__page-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "fa73deb5-c004-4136-8a89-f84a79d49796",
+        "bdf23c36-4682-4631-99b2-d6addaf8111e",
+        "7566e382-15dd-4586-9445-50e3c68d8004",
+        "0bd4ff38-364c-4f43-be0a-791efd285436",
+        "8d9ed9f6-6c16-45f8-b969-a071b5252701",
+        "3788ef17-13e2-4343-85bf-2522dd463734"
+      ],
+      "disabled": true,
+      "settings": {
+        "bts__section-title": "The Process",
+        "bts__mobile-font-size": 15,
+        "bts__mobile-padding-topbottom": 10,
+        "bts__mobile-padding-sides": 15,
+        "bts__desktop-font-size": 25,
+        "bts__desktop-padding-topbottom": 0,
+        "bts__desktop-padding-sides": 0
+      }
+    },
+    "1650638469fa6fbeaf": {
+      "type": "bts",
+      "blocks": {
+        "e07a4aa9-7fc4-48d0-b84a-a3673bd6446d": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/1_5ecdea88-11ab-433d-b847-2879d3588ca7.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "d7b7e202-7c84-4cc4-acf9-7aa74d27f6a8": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/2_51255ed6-6675-4c33-93a4-c000887d0323.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "0a28834a-ab5e-4850-b9f8-431316ec32f4": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/3_23e0e267-457d-42c8-9373-d8383d93dcb1.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "ae929a0e-0d8e-4399-bb5c-77f36e084ad5": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/4_ad2302af-abd6-428b-836d-8431a594fff1.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "bb4ea191-de44-4797-a609-13a807a4d1f9": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/5_2c1802fb-c604-4f0e-9710-f6210d2de3bb.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "054af6d4-42fa-4e4a-a714-6420a8285d15": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/6_3c5cda01-840b-4782-867b-3288276ce0b3.jpg",
+            "bts__page-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "e07a4aa9-7fc4-48d0-b84a-a3673bd6446d",
+        "d7b7e202-7c84-4cc4-acf9-7aa74d27f6a8",
+        "0a28834a-ab5e-4850-b9f8-431316ec32f4",
+        "ae929a0e-0d8e-4399-bb5c-77f36e084ad5",
+        "bb4ea191-de44-4797-a609-13a807a4d1f9",
+        "054af6d4-42fa-4e4a-a714-6420a8285d15"
+      ],
+      "disabled": true,
+      "settings": {
+        "bts__section-title": "BEFORE & AFTER",
+        "bts__mobile-font-size": 15,
+        "bts__mobile-padding-topbottom": 0,
+        "bts__mobile-padding-sides": 0,
+        "bts__desktop-font-size": 25,
+        "bts__desktop-padding-topbottom": 0,
+        "bts__desktop-padding-sides": 0
+      }
+    },
+    "16506256328945beb6": {
+      "type": "products_used",
+      "blocks": {
+        "266ee023-31ec-449f-ac6c-b5a0f33e6618": {
+          "type": "product",
+          "settings": {
+            "products__product-id": "ultra-volume-clip-in-hair-extensions-240-280g",
+            "products__collection": "",
+            "products__product-title": "",
+            "products__product-image": "shopify:\/\/shop_images\/double_wefted_3f175c11-b98f-4604-b61a-25fb4b571bdf.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "266ee023-31ec-449f-ac6c-b5a0f33e6618"
+      ],
+      "disabled": true,
+      "settings": {
+        "products__section-title": "Shop This Product",
+        "intro": "",
+        "products__mobile-font-size": 15,
+        "products__mobile-padding-topbottom": 0,
+        "products__mobile-padding-sides": 15,
+        "products__desktop-font-size": 25,
+        "products__desktop-padding-topbottom": 0,
+        "products__desktop-padding-sides": 20,
+        "btn-full_width": false
       }
     }
   },
   "order": [
-    "main"
+    "61e65321-c2f6-420a-ab5c-13125830a934",
+    "1651073081ef4f3484",
+    "165097875230149339",
+    "165062557218170705",
+    "1650634438a19ebea7",
+    "1650638469fa6fbeaf",
+    "16506256328945beb6"
   ]
 }
