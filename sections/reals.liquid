@@ -333,30 +333,35 @@
 
 <script>
   
-  let playBtns = $('.choices__paly-btn');
-  playBtns.click(function(){
-   videoTag(this.dataset.url)
-  });
+  let playBtns = document.querySelectorAll('.choices__paly-btn');
+  for(let button of playBtns){
+    button.addEventListener('click', function(){
+      btsVideoTag(this.dataset.url)
+    })
+  }
+  // playBtns.click(function(){
+  //  videoTag(this.dataset.url)
+  // });
   
-  function videoTag(videoUrl){
-  	video = `
-		<div id='choices__video-container' class='video__bg'>
-			<div class='video__container'>
-			  <div class='close__video'><i onclick='closeBtn()' class="fa-solid fa-xmark close__btn"></i></div>
-              <video class='video' autoplay muted controls>
-                  <source src="${videoUrl}" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-			</div>
-		</div>
-	`;
-    jQuery('body').prepend(video)
+ //  function videoTag(videoUrl){
+ //  	video = `
+	// 	<div id='choices__video-container' class='video__bg'>
+	// 		<div class='video__container'>
+	// 		  <div class='close__video'><i onclick='closeBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+ //              <video class='video' autoplay muted controls>
+ //                  <source src="${videoUrl}" type="video/mp4">
+ //                  Your browser does not support the video tag.
+ //              </video>
+	// 		</div>
+	// 	</div>
+	// `;
+ //    jQuery('body').prepend(video)
 
-  }
+ //  }
   
-  function closeBtn(){
-  	$("#choices__video-container").remove();
-  }
+ //  function closeBtn(){
+ //  	$("#choices__video-container").remove();
+ //  }
 
   //Arrow functions
   var button = document.getElementById('choices__arrow-right');
