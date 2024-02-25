@@ -1,6 +1,431 @@
+<section class='bts__section-container'>
+  <h2 class='bts__section-title'>
+    {{section.settings.bts__section-title}}
+    <img src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/arrow_isolated.png?v=1650538505'>
+  </h2>
+  
+  <div class='bts__styles-container'>
+  	{% for block in section.blocks %}
+    	{% case block.type %}
+    		{%when 'image'%}
+            {% if block.settings.bts__page-url %}
+              <a href='{{ block.settings.bts__page-url }}' class='bts'> 
+                <div class='bts__img-container'>
+                  <img class='bts__image lazyload' loading='lazy' src='{{ block.settings.bts__image | img_url: 'master' }}' width='{{ block.settings.bts__image.width }}' height='{{ block.settings.bts__image.height }}' alt='{{ block.settings.bts__bts-title }}'>
+                </div>
+                <h3 class='bts__style-title'>{{ block.settings.bts__bts-title }}</h3>
+              </a>
+            {% else %}
+        	  <div class='bts'> 
+                <div class='bts__img-container'>
+                  <img class='bts__image lazyload' loading='lazy' src='{{ block.settings.bts__image | img_url: 'master' }}' width='{{ block.settings.bts__image.width }}' height='{{ block.settings.bts__image.height }}' alt='{{ block.settings.bts__bts-title }}'>
+                </div>
+                <h3 class='bts__style-title'>{{ block.settings.bts__bts-title }}</h3>
+              </div>
+    		{% endif %}
+    		{%when 'video'%}
+    		<div class='bts'>
+              <div class='bts__img-container'>
+                <img class='bts__image lazyload' loading='lazy' src='{{ block.settings.bts__placeholder-image | img_url: 'master' }}' alt='{{ block.settings.bts__bts-title }}'>
+                <div class='bts__btn-container'>
+                  <span class='bts__paly-btn' data-url='{{block.settings.bts__video-url}}' ><i class="fa-solid fa-play"></i></span>
+                </div>
+              </div>
+              <h3 class='bts__style-title'>{{ block.settings.bts__bts-title }}</h3>
+            </div>
+    	{% endcase %}
+    	
+    {% endfor %}
+  </div>
+  
+</section>
+
+<style>
+  .bts__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    padding-top:{{section.settings.bts__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.bts__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.bts__mobile-padding-sides}}px;
+    padding-right:{{section.settings.bts__mobile-padding-sides}}px;
+  }
+  
+  .bts__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+  }
+  
+  .bts__section-title{
+    font-size:{{section.settings.bts__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:550px;
+    margin:0 auto;
+    padding: 10px 0;
+    border:1px solid black;
+    position:relative;
+  }
+  
+  .bts__section-title > img{
+    height: 35px;
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+  }
+  
+  .bts__styles-container{
+  	width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-top:15px;
+  }
+  
+  .bts{
+  	width:45%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 15px;
+  }
+  
+  .bts__img-container{
+  	width:100%;
+    position:relative;
+    margin-bottom: 5px;
+  }
+  
+  .bts__image{
+  	width:100%;
+    height:auto;
+    object-fit:cover; 
+  }
+  
+  .bts__img-container > .bts__image-inside-border{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:5px;
+    border:1px solid white;
+  }
+  
+  .bts > .bts__style-title{
+  	text-transform:capitalize;
+    font-size: calc({{section.settings.bts__mobile-font-size}}px - 3px)
+  }
+  
+  .bts__btn-txt{
+  	padding:0px 20px;
+    position:relative;
+    border:1px solid black;
+    font-size: calc({{section.settings.bts__mobile-font-size}}px - 2px)
+  }
+  
+  .bts__btn-txt:hover .bts__btn-pointer {
+  	color:#9c3078;
+  }
+  
+  .bts__btn-pointer{
+  	position:absolute;
+    right:-6px;
+    bottom:0px;
+    font-size:17px;
+  }
+  
+  .bts__btn-container{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .bts__paly-btn{
+    font-size:calc({{section.settings.bts__mobile-font-size}}px + 15px);
+    border-radius:50%;
+    border:1px solid white;
+    padding:10px;
+    cursor:pointer;
+    background:white;
+  }
+  
+  .bts__paly-btn > *{
+  	color:black;
+    opacity:0.5;
+  }
+  
+  .bts__paly-btn:hover > *{
+    opacity:1;
+  }
+  
+  .video__bg{
+  	position:absolute;
+    z-index:1000000;
+    height:100%;
+    width:100%;
+    top:0;
+    right:0;
+    background:#000000a8;
+    padding: 10px 20px;
+    display:flex;
+  }
+  
+  .video__container{
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+  }
+  
+  .close__video{
+  	width:100%;
+    text-align:right;
+    cursor:pointer;
+  }
+  
+  .close__video > *{
+  	color:white;
+    font-size: calc({{section.settings.bts__mobile-font-size}}px - 2px);
+    opacity:0.5;
+  }
+  
+  .close__video > *:hover{
+    opacity:1;
+  }
+  
+  .video__container > .bts__video{
+    width: 100%;
+    max-height:80vh;
+  }
+  
+  @media only screen and (min-width:992px){
+  	.bts__section-container{
+      padding-top:{{section.settings.bts__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.bts__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.bts__desktop-padding-sides}}px;
+      padding-right:{{section.settings.bts__desktop-padding-sides}}px;
+    }
+    
+    .bts__section-title{
+      font-size:{{section.settings.bts__desktop-font-size}}px;
+    }
+    
+    .bts__section-title > img{
+      height: 40px;
+    }
+    
+    .bts > .bts__style-title{
+      font-size: calc({{section.settings.bts__desktop-font-size}}px - 7px)
+    }
+    
+    .bts__btn-txt{
+      font-size: calc({{section.settings.bts__desktop-font-size}}px - 5px)
+    }
+    
+    .close__video > *{
+      font-size: calc({{section.settings.bts__desktop-font-size}}px - 2px)
+    }
+  }
+  
+  @media only screen and (min-width:1200px){
+    .bts{
+      width:30%;
+    }
+    
+    .bts__btn-txt{
+      padding:5px 20px;
+    }
+    
+    .bts__btn-pointer{
+      font-size:20px;
+    }
+  }
+</style>
+
+<script>
+  
+  let btsPlayBtns = $('.bts__paly-btn');
+  btsPlayBtns.click(function(){
+   btsVideoTag(this.dataset.url)
+  });
+  
+  function btsVideoTag(videoUrl){
+  	let video = `
+		<div id='bts__video-container' class='video__bg'>
+			<div class='video__container'>
+			  <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+              <video class='bts__video' autoplay muted controls>
+                  <source src="${videoUrl}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+			</div>
+		</div>
+	`;
+    jQuery('body').prepend(video)
+
+  }
+  
+  function btsCloseBtn(){
+  	$("#bts__video-container").remove();
+  } 
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "BTS",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Section Settings"
+		},
+		{
+			"type":"text",
+			"id":"bts__section-title",
+			"label":"Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "bts__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "bts__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "bts__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "bts__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "bts__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "bts__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	],
+	"blocks": [
+		{
+			"name":"BTS Video",
+			"limit":6,
+			"type":"video",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Video Settings"
+				},
+				{
+					"type":"text",
+					"id":"bts__bts-title",
+					"label":"Video Title"
+				},
+				{
+					"type": "image_picker",
+					"id": "bts__placeholder-image",
+					"label": "Placeholder Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+					"type": "url",
+					"id": "bts__video-url",
+					"label": "Video URL",
+					"info": "Add the video URL that you want to display."
+				},
+				{
+					"type": "url",
+					"id": "bts__page-url",
+					"label": "Page URL",
+					"info": "Add the page URL that you want to send the user to."
+				}
+			]
+		},
+		{
+			"name":"BTS Image",
+			"limit":6,
+			"type":"image",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Image Settings"
+				},
+				{
+					"type":"text",
+					"id":"bts__bts-title",
+					"label":"Image Title"
+				},
+				{
+					"type": "image_picker",
+					"id": "bts__image",
+					"label": "Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+					"type": "url",
+					"id": "bts__page-url",
+					"label": "Page URL",
+					"info": "Add the page URL that you want to send the user to."
+				}
+			]
+		}
+	]
   }
 {% endschema %}
