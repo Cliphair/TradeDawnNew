@@ -143,7 +143,7 @@
       ],
       "settings": {
         "max-width": "2560",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/bridal-competition-banner-desktop.jpg",
         "mobile-image": "shopify:\/\/shop_images\/bridal-competition-banner-mobile.jpg",
         "url": "",
@@ -204,30 +204,22 @@
         "b2e25af8-50df-4002-b665-35e07beb662c": {
           "type": "title",
           "settings": {
-            "title": "<h2>FURTHER QUESTIONS?<\/h2>"
-          }
-        },
-        "1a47bcbd-1805-4f90-888f-1e086368cbe3": {
-          "type": "button",
-          "settings": {
-            "btn-text": "MESSAGE US",
-            "btn-url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1"
+            "title": "<h2><em>OUR WINNER PRIZES<\/em><\/h2>"
           }
         }
       },
       "block_order": [
-        "b2e25af8-50df-4002-b665-35e07beb662c",
-        "1a47bcbd-1805-4f90-888f-1e086368cbe3"
+        "b2e25af8-50df-4002-b665-35e07beb662c"
       ],
       "settings": {
         "max-width": "1440",
-        "bg-colour": "#ffffff",
-        "mobile-p_top": 10,
-        "mobile-p_bottom": 10,
+        "bg-colour": "#edeae7",
+        "mobile-p_top": 4,
+        "mobile-p_bottom": 4,
         "mobile-p_right": 10,
         "mobile-p_left": 10,
-        "desktop-p_top": 10,
-        "desktop-p_bottom": 20,
+        "desktop-p_top": 4,
+        "desktop-p_bottom": 4,
         "desktop-p_right": 10,
         "desktop-p_left": 10,
         "title-mobile-f_size": 16,
@@ -245,11 +237,11 @@
     "eaefe603-7ede-4341-b88f-d9256ef67c6b": {
       "type": "custom-banner",
       "custom_css": [
-        "div > div{padding:0;}"
+        "div > div {padding: 0;}"
       ],
       "settings": {
         "max-width": "768",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/prizes.jpg",
         "url": "",
         "padding_top": 0,
