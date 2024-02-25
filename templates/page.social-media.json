@@ -1,19 +1,377 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "1651073584fb7eadc0": {
+      "type": "back-to",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "back_url": "shopify:\/\/pages\/2022-cliphair-bridal-hair-extensions",
+        "back_text": "Back To Bridal Campaign",
+        "max_width": true,
+        "mobile_font": 10,
+        "mobile_tb_padding": 5,
+        "mobile_sides_padding": 15,
+        "desktop_font": 12,
+        "desktop_tb_padding": 7,
+        "desktop_sides_padding": 20
+      }
+    },
+    "page_header": {
+      "type": "page-header",
+      "settings": {
+        "first-line": "Hairstyles Created Using Cliphair",
+        "second-line": "",
+        "bg_colour": "#ffffff",
+        "mobile-font-size": 18,
+        "mobile-top-padding": 10,
+        "mobile-bottom-padding": 10,
+        "mobile-right-padding": 10,
+        "mobile-left-padding": 10,
+        "desktop-font-size": 25,
+        "desktop-top-padding": 14,
+        "desktop-bottom-padding": 14,
+        "desktop-right-padding": 14,
+        "desktop-left-padding": 14
+      }
+    },
+    "165062557218170705": {
+      "type": "page_description",
+      "settings": {
+        "description__mobile-font-size": 12,
+        "description__mobile-padding-topbottom": 10,
+        "description__mobile-padding-sides": 15,
+        "description__desktop-font-size": 18,
+        "description__desktop-padding-topbottom": 10,
+        "description__desktop-padding-sides": 20
+      }
+    },
+    "16506440159d1c4f66": {
+      "type": "instagram_embed",
+      "blocks": {
+        "59bcbdcb-45b7-440a-b066-59b110bf40e8": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CcM-O9qg1IN\/"
+          }
+        },
+        "ccf7367f-378a-482e-ac4b-d25b0f584248": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CTaIMeMDa3k\/"
+          }
+        },
+        "62d46ab1-dbf1-43a3-affb-e4df3e438ef3": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CSkSulIMeQP\/"
+          }
+        },
+        "12511005-4029-493f-aae5-dc0b183bec4c": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CSoEnvLHcMN\/"
+          }
+        },
+        "019d66a3-ac07-4e46-af69-2f4babe468af": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/COs8V9Uh3pD\/"
+          }
+        },
+        "38da2225-6b61-44a9-8ef6-54900ebd2655": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CPxUjtmBD8y\/"
+          }
+        }
+      },
+      "block_order": [
+        "59bcbdcb-45b7-440a-b066-59b110bf40e8",
+        "ccf7367f-378a-482e-ac4b-d25b0f584248",
+        "62d46ab1-dbf1-43a3-affb-e4df3e438ef3",
+        "12511005-4029-493f-aae5-dc0b183bec4c",
+        "019d66a3-ac07-4e46-af69-2f4babe468af",
+        "38da2225-6b61-44a9-8ef6-54900ebd2655"
+      ],
+      "settings": {
+        "insta__section-title": "Half Up Half Down",
+        "insta__mobile-font-size": 15,
+        "insta__mobile-padding-topbottom": 10,
+        "insta__mobile-padding-sides": 15,
+        "insta__desktop-font-size": 25,
+        "insta__desktop-padding-topbottom": 10,
+        "insta__desktop-padding-sides": 25
+      }
+    },
+    "1650896582eab52b0c": {
+      "type": "instagram_embed",
+      "blocks": {
+        "c1fdfde7-2f6d-40d8-a448-0a8a259af9bf": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CRq3lnYBQYw\/"
+          }
+        },
+        "e2cb9da2-5328-4bd4-9505-5cbbf7127ecf": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CRyBn9hpuhq\/"
+          }
+        },
+        "29f04bb4-e12e-442f-94a3-f091c8e456ad": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CRfBy_unh0q\/"
+          }
+        },
+        "b07346de-7247-45e5-8c7f-ba87e4e5f53f": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CR6Hbr8BHD8\/"
+          }
+        },
+        "a2478544-303a-478a-bf44-73485cec89c6": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CSoYKp3AKXL\/"
+          }
+        },
+        "d8c57829-dae1-49c2-af6c-d13d72199c3b": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CP2lg81B76q\/"
+          }
+        }
+      },
+      "block_order": [
+        "c1fdfde7-2f6d-40d8-a448-0a8a259af9bf",
+        "e2cb9da2-5328-4bd4-9505-5cbbf7127ecf",
+        "29f04bb4-e12e-442f-94a3-f091c8e456ad",
+        "b07346de-7247-45e5-8c7f-ba87e4e5f53f",
+        "a2478544-303a-478a-bf44-73485cec89c6",
+        "d8c57829-dae1-49c2-af6c-d13d72199c3b"
+      ],
+      "settings": {
+        "insta__section-title": "Hair Up",
+        "insta__mobile-font-size": 15,
+        "insta__mobile-padding-topbottom": 10,
+        "insta__mobile-padding-sides": 15,
+        "insta__desktop-font-size": 25,
+        "insta__desktop-padding-topbottom": 10,
+        "insta__desktop-padding-sides": 25
+      }
+    },
+    "1650897223cc3a165c": {
+      "type": "instagram_embed",
+      "blocks": {
+        "382a8b7d-8d02-4d2b-9578-33672aba193b": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CQ_WtkQBY8K\/"
+          }
+        },
+        "be9162e5-6913-43b3-9e93-5d2263cc3649": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CSFFbbyHRhU\/"
+          }
+        },
+        "984acd97-2a39-4112-8bd0-648cf17762e8": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CQ6YSoEhD_Y\/"
+          }
+        },
+        "c27ee68f-0075-4783-bcdb-79ab11d1209f": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CRo9xwbKRS0\/"
+          }
+        },
+        "61da0682-0a76-4faf-9840-c3838136ef2a": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CRy8deBh9OF\/"
+          }
+        },
+        "bf2efe71-0a90-4f75-ac81-e9721dcf006b": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CR9A_gGDBhw\/"
+          }
+        }
+      },
+      "block_order": [
+        "382a8b7d-8d02-4d2b-9578-33672aba193b",
+        "be9162e5-6913-43b3-9e93-5d2263cc3649",
+        "984acd97-2a39-4112-8bd0-648cf17762e8",
+        "c27ee68f-0075-4783-bcdb-79ab11d1209f",
+        "61da0682-0a76-4faf-9840-c3838136ef2a",
+        "bf2efe71-0a90-4f75-ac81-e9721dcf006b"
+      ],
+      "settings": {
+        "insta__section-title": "Hair Down",
+        "insta__mobile-font-size": 15,
+        "insta__mobile-padding-topbottom": 10,
+        "insta__mobile-padding-sides": 15,
+        "insta__desktop-font-size": 25,
+        "insta__desktop-padding-topbottom": 9,
+        "insta__desktop-padding-sides": 25
+      }
+    },
+    "16508976553735f94e": {
+      "type": "instagram_embed",
+      "blocks": {
+        "58cee6ea-5b12-405a-a231-499eb07cbd41": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/B6k__tLBqhe\/"
+          }
+        },
+        "d3821547-f459-4836-a669-91c9e8ce0e9e": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/B79gughBOfY\/"
+          }
+        },
+        "ab7f974a-9eb1-4d4f-9cae-f7c95ed234fb": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CBmIWdWlhQx\/"
+          }
+        },
+        "afff5f7e-7346-44fc-a2c4-2813df23d886": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CE8kSCYnMoD\/"
+          }
+        },
+        "a5240ac0-724e-4d0a-8da0-d2b864bedae3": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CZ95fOFI5Jp\/"
+          }
+        },
+        "b379fb6f-1190-4cbd-b495-a8d7687548cb": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CakalpRo1yR\/"
+          }
+        }
+      },
+      "block_order": [
+        "58cee6ea-5b12-405a-a231-499eb07cbd41",
+        "d3821547-f459-4836-a669-91c9e8ce0e9e",
+        "ab7f974a-9eb1-4d4f-9cae-f7c95ed234fb",
+        "afff5f7e-7346-44fc-a2c4-2813df23d886",
+        "a5240ac0-724e-4d0a-8da0-d2b864bedae3",
+        "b379fb6f-1190-4cbd-b495-a8d7687548cb"
+      ],
+      "settings": {
+        "insta__section-title": "Fishtail Braids",
+        "insta__mobile-font-size": 15,
+        "insta__mobile-padding-topbottom": 10,
+        "insta__mobile-padding-sides": 15,
+        "insta__desktop-font-size": 25,
+        "insta__desktop-padding-topbottom": 10,
+        "insta__desktop-padding-sides": 25
+      }
+    },
+    "165089810008021b70": {
+      "type": "instagram_embed",
+      "blocks": {
+        "6399f8ff-297b-4b11-b482-b24765097e36": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CSzE8y4HFxM\/"
+          }
+        },
+        "993879dc-19b4-4b2d-9988-cbfe3c0e247f": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CWjKT4xA3CJ\/"
+          }
+        },
+        "ba063dda-5eec-4e14-9be2-de0e3d0a6f24": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/Cb3FBG4KELJ\/"
+          }
+        },
+        "2e09e1bb-552e-44a9-9f50-ba3526927ab2": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CRozFkaB--e\/"
+          }
+        },
+        "1f7e7ce9-cf4a-4e93-a516-d47c7f63b6ed": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CTNPT1lNcno\/"
+          }
+        },
+        "4a45e15c-9dd5-4e9d-97b9-883852133023": {
+          "type": "embed",
+          "settings": {
+            "insta__insta-title": "",
+            "insta__page-url": "https:\/\/www.instagram.com\/p\/CcCioUgMT3k\/"
+          }
+        }
+      },
+      "block_order": [
+        "6399f8ff-297b-4b11-b482-b24765097e36",
+        "993879dc-19b4-4b2d-9988-cbfe3c0e247f",
+        "ba063dda-5eec-4e14-9be2-de0e3d0a6f24",
+        "2e09e1bb-552e-44a9-9f50-ba3526927ab2",
+        "1f7e7ce9-cf4a-4e93-a516-d47c7f63b6ed",
+        "4a45e15c-9dd5-4e9d-97b9-883852133023"
+      ],
+      "settings": {
+        "insta__section-title": "Ponytails",
+        "insta__mobile-font-size": 15,
+        "insta__mobile-padding-topbottom": 10,
+        "insta__mobile-padding-sides": 15,
+        "insta__desktop-font-size": 25,
+        "insta__desktop-padding-topbottom": 10,
+        "insta__desktop-padding-sides": 25
       }
     }
   },
   "order": [
-    "main"
+    "1651073584fb7eadc0",
+    "page_header",
+    "165062557218170705",
+    "16506440159d1c4f66",
+    "1650896582eab52b0c",
+    "1650897223cc3a165c",
+    "16508976553735f94e",
+    "165089810008021b70"
   ]
 }
