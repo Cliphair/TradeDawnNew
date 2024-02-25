@@ -9,7 +9,7 @@
         <div class='year__img-container'>
           <img class='year__image lazyload' loading='lazy' src='{{ block.settings.year__placeholder-image | img_url: 'master' }}' width='{{ block.settings.year__placeholder-image.width }}' height='{{ block.settings.year__placeholder-image.height }}' alt='{{ block.settings.year__bts-title }}'>
           <div class='year__btn-container'>
-            <span class='year__paly-btn' data-url='{{block.settings.year__video-url}}' ><i class="fa-solid fa-play"></i></span>
+            <span class='year__paly-btn' data-url='{{block.settings.year__video-url}}' >{% render 'icon-play' %}</span>
           </div>
         </div>
         <h3 class='year__style-title'>{{ block.settings.year__bts-title }}</h3>
@@ -139,6 +139,7 @@
   }
   
   .year__paly-btn > *{
+    width:calc({{section.settings.year__mobile-font-size}}px + 15px);
   	color:black;
     opacity:0.5;
   }
