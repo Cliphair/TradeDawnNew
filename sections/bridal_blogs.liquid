@@ -34,7 +34,7 @@
                       {% if article.tags contains 'wedding-hair' and counter <= limit %}
                           <div class="fromBlog-item">
                               <div class="fromBlog-item-bg">
-                                  {% if article.image %} {% assign image_alt = article.title | escape %}<img class='lazyload' data-src="{{ article | img_url: 'master'}}" alt="{{ image_alt }}">{% endif %}
+                                  {% if article.image %} {% assign image_alt = article.title | escape %}<img class='lazyload' loading='lazy' src="{{ article | img_url: 'master'}}" alt="{{ image_alt }}">{% endif %}
                               </div>
                               <div class="fromBlog-item-inside">
                                   <div class="fromBlog-item-title">{{ article.title }}</div>
