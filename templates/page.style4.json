@@ -1,19 +1,240 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "fd8ff921-b711-4fd4-9f70-af330438d6f8": {
+      "type": "page-header",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "custom-title": true,
+        "first-line": "Hair Down Wedding Hair Tutorial",
+        "second-line": "",
+        "hide": true,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "mobile-font-size": 14,
+        "mobile-top-padding": 0,
+        "mobile-bottom-padding": 0,
+        "mobile-right-padding": 0,
+        "mobile-left-padding": 0,
+        "desktop-font-size": 20,
+        "desktop-top-padding": 0,
+        "desktop-bottom-padding": 0,
+        "desktop-right-padding": 0,
+        "desktop-left-padding": 0
+      }
+    },
+    "165107295841752000": {
+      "type": "back-to",
+      "settings": {
+        "back_url": "shopify:\/\/pages\/2022-cliphair-bridal-hair-extensions",
+        "back_text": "Back To Bridal Campaign",
+        "max_width": false,
+        "mobile_font": 10,
+        "mobile_tb_padding": 5,
+        "mobile_sides_padding": 15,
+        "desktop_font": 12,
+        "desktop_tb_padding": 7,
+        "desktop_sides_padding": 20
+      }
+    },
+    "165062557218170705": {
+      "type": "page_description",
+      "settings": {
+        "section_title": "",
+        "title2": "",
+        "header_colour": "#000000",
+        "header_bold": false,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "max-width": "",
+        "description__mobile-font-size": 15,
+        "description__mobile-padding-topbottom": 10,
+        "description__mobile-padding-sides": 15,
+        "description__desktop-font-size": 16,
+        "description__desktop-padding-topbottom": 10,
+        "description__desktop-padding-sides": 20
+      }
+    },
+    "1650634438a19ebea7": {
+      "type": "bts",
+      "blocks": {
+        "fa73deb5-c004-4136-8a89-f84a79d49796": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/Rhianna_Hair_down_thumbnail_1_Bridal.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "bdf23c36-4682-4631-99b2-d6addaf8111e": {
+          "type": "video",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__placeholder-image": "shopify:\/\/shop_images\/Rhianna_Hair_down_thumbnail_2_Bridal.jpg",
+            "bts__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/Rhianna_Hair_Down_Bridal_Video_2.mp4?v=1650640259",
+            "bts__page-url": ""
+          }
+        },
+        "7566e382-15dd-4586-9445-50e3c68d8004": {
+          "type": "video",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__placeholder-image": "shopify:\/\/shop_images\/Rhianna_Hair_down_thumbnail_3_Bridal.jpg",
+            "bts__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/Rhianna_Hair_Down_Bridal_Video_3.mp4?v=1650640259",
+            "bts__page-url": ""
+          }
+        },
+        "0bd4ff38-364c-4f43-be0a-791efd285436": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/bridal-livia2.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "8d9ed9f6-6c16-45f8-b969-a071b5252701": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "bts__bts-title": "",
+            "bts__placeholder-image": "shopify:\/\/shop_images\/3_dd679b41-616c-4d0c-b118-69a5f150c536.jpg",
+            "bts__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/4.MOV.mp4?v=1650635955",
+            "bts__page-url": ""
+          }
+        },
+        "3788ef17-13e2-4343-85bf-2522dd463734": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/bridal-livia3.jpg",
+            "bts__page-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "fa73deb5-c004-4136-8a89-f84a79d49796",
+        "bdf23c36-4682-4631-99b2-d6addaf8111e",
+        "7566e382-15dd-4586-9445-50e3c68d8004",
+        "0bd4ff38-364c-4f43-be0a-791efd285436",
+        "8d9ed9f6-6c16-45f8-b969-a071b5252701",
+        "3788ef17-13e2-4343-85bf-2522dd463734"
+      ],
+      "settings": {
+        "bts__section-title": "The Process",
+        "bts__mobile-font-size": 15,
+        "bts__mobile-padding-topbottom": 10,
+        "bts__mobile-padding-sides": 15,
+        "bts__desktop-font-size": 25,
+        "bts__desktop-padding-topbottom": 10,
+        "bts__desktop-padding-sides": 20
+      }
+    },
+    "1650638469fa6fbeaf": {
+      "type": "bts",
+      "blocks": {
+        "e07a4aa9-7fc4-48d0-b84a-a3673bd6446d": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/17_0d5e1f71-1dd7-4ccb-925d-3ec7bfa64b13.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "d7b7e202-7c84-4cc4-acf9-7aa74d27f6a8": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/16_b4fff617-f23b-4e17-bc3b-69b86f7129c3.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "0a28834a-ab5e-4850-b9f8-431316ec32f4": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/19_a2c118c8-93fe-4a0c-9f8f-a43eb4ea3f0a.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "ae929a0e-0d8e-4399-bb5c-77f36e084ad5": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/20_f5d53784-3481-400f-8fa2-a07ad3f5597d.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "bb4ea191-de44-4797-a609-13a807a4d1f9": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/18_87eab5fd-7441-47fd-9a79-03ff3542c152.jpg",
+            "bts__page-url": ""
+          }
+        },
+        "054af6d4-42fa-4e4a-a714-6420a8285d15": {
+          "type": "image",
+          "settings": {
+            "bts__bts-title": "",
+            "bts__image": "shopify:\/\/shop_images\/21_2562e8ad-8dc6-4f4a-94c2-0499f031f6f9.jpg",
+            "bts__page-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "e07a4aa9-7fc4-48d0-b84a-a3673bd6446d",
+        "d7b7e202-7c84-4cc4-acf9-7aa74d27f6a8",
+        "0a28834a-ab5e-4850-b9f8-431316ec32f4",
+        "ae929a0e-0d8e-4399-bb5c-77f36e084ad5",
+        "bb4ea191-de44-4797-a609-13a807a4d1f9",
+        "054af6d4-42fa-4e4a-a714-6420a8285d15"
+      ],
+      "disabled": true,
+      "settings": {
+        "bts__section-title": "BEFORE & AFTER",
+        "bts__mobile-font-size": 15,
+        "bts__mobile-padding-topbottom": 10,
+        "bts__mobile-padding-sides": 15,
+        "bts__desktop-font-size": 25,
+        "bts__desktop-padding-topbottom": 10,
+        "bts__desktop-padding-sides": 20
+      }
+    },
+    "16506256328945beb6": {
+      "type": "products_used",
+      "blocks": {
+        "266ee023-31ec-449f-ac6c-b5a0f33e6618": {
+          "type": "product",
+          "settings": {
+            "products__product-id": "ultra-volume-clip-in-hair-extensions-240-280g",
+            "products__collection": "ultra-clip-in-hair-extensions",
+            "products__product-title": "",
+            "products__product-image": "shopify:\/\/shop_images\/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "266ee023-31ec-449f-ac6c-b5a0f33e6618"
+      ],
+      "settings": {
+        "products__section-title": "Shop This Product",
+        "intro": "",
+        "products__mobile-font-size": 15,
+        "products__mobile-padding-topbottom": 0,
+        "products__mobile-padding-sides": 15,
+        "products__desktop-font-size": 25,
+        "products__desktop-padding-topbottom": 0,
+        "products__desktop-padding-sides": 20,
+        "btn-full_width": false
       }
     }
   },
   "order": [
-    "main"
+    "fd8ff921-b711-4fd4-9f70-af330438d6f8",
+    "165107295841752000",
+    "165062557218170705",
+    "1650634438a19ebea7",
+    "1650638469fa6fbeaf",
+    "16506256328945beb6"
   ]
 }
