@@ -260,14 +260,14 @@
 <script>
   
     let btsPlayBtns = document.querySelectorAll('.bts__paly-btn');
-    for (let button of buttons){
+    for (let button of btsPlayBtns){
       button.addEventListener('click', function(){
         btsVideoTag(button.dataset.url)
       })
     }
-    btsPlayBtns.click(function(){
-     btsVideoTag(this.dataset.url)
-    });
+    // btsPlayBtns.click(function(){
+    //  btsVideoTag(this.dataset.url)
+    // });
     
    //  function btsVideoTag(videoUrl){
    //  	let video = `
