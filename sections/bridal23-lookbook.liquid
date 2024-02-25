@@ -1,6 +1,653 @@
+{% liquid 
+  assign min = 1
+  assign max = 100
+  assign diff = max | minus: min
+  assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min 
+%}
+
+{% capture containerClass %}container-{{ section.id }}{% endcapture %}
+{% assign limit = 0 %}
+{% for block in section.blocks %}{% unless block.type == "text" %}{% assign limit = limit | plus: 1 %}{% endunless %}{% endfor %}
+{% assign limit = limit | minus: 1 %}
+{% assign stepMobile = section.settings.display-mobile | times: 1 %}
+{% assign stepTablet = section.settings.display-tablet | times: 1 %}
+{% assign stepDesktop = section.settings.display-desktop | times: 1 %}
+
+{% assign arrowClass = "" %}
+{% assign containerAlign = "" %}
+{% assign blockSize = limit | plus: 1 %}
+{% if blockSize <= stepMobile %}
+  {% assign arrowClass = arrowClass | prepend: " mobile-hidden" %}
+  {% assign containerAlign = " mobile-center" %}
+{% endif %}
+{% if blockSize <= stepTablet %}
+  {% assign arrowClass = arrowClass | prepend: " tablet-hidden" %}
+  {% assign containerAlign = " tablet-center" %}
+{% endif %}
+{% if blockSize <= stepDesktop %}
+  {% assign arrowClass = arrowClass | prepend: " desktop-hidden" %}
+  {% assign containerAlign = " desktop-center" %}
+{% endif %}
+
+
+<link rel="preload" href="{{ 'section-bridal23-lookbook.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'" />
+<noscript>
+  {{ 'section-bridal23-lookbook.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+{% if section.settings.max_width != empty %}<style>#section-{{ section.id }} > .inner-container{max-width:{{ section.settings.max_width }}px;}</style>{% endif %}
+
+<style>
+  #section-{{ section.id }}{
+    padding-top:{{ section.settings.mobile-p_top }}px;
+    padding-bottom:{{ section.settings.mobile-p_bottom }}px;
+    padding-right:{{ section.settings.mobile-p_right }}px;
+    padding-left:{{ section.settings.mobile-p_left }}px;
+    background:{{ section.settings.bg_color }};
+  }
+
+  /* section header */
+  #section-{{ section.id }} .section-header > *{
+    font-size:{{ section.settings.header-mobile-font_size }}px;
+    color:{{ section.settings.text_color }};
+  }
+
+  /* section carrousel */
+  #section-{{ section.id }} .carrousel > .carrousel-item{
+    width:calc(100% / {{ section.settings.display-mobile }});
+    min-width:calc(100% / {{ section.settings.display-mobile }});
+  }
+
+  #section-{{ section.id }}  .carrousel > .carrousel-item > .shop-btn{
+    font-size:{{ section.settings.text-mobile-font_size }}px;
+    color:{{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }}  .carrousel > .carrousel-item > .shop-btn:hover{
+    color:{{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .carrousel > .carrousel-item.video-container > .play-btn-container > .play_button{
+    color:{{ section.settings.play-color }};
+    font-size: {{section.settings.play-mobile-size }}px;;
+  }
+
+  /* section text */
+  #section-{{ section.id }} .section-text > .text-container > *{
+    color:{{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .text-container > .into-container > *,
+  #section-{{ section.id }} .text-container > .description-container > *,
+  #section-{{ section.id }} .text-container > .btn-container > a{
+    font-size:{{ section.settings.text-mobile-font_size }}px;
+  }
+
+  #section-{{ section.id }} .text-container > .title-container > *{
+    font-size:{{ section.settings.header-mobile-font_size }}px;
+  }
+
+  #section-{{ section.id }} .text-container > .btn-container > a{
+    color:{{ section.settings.btn-color }};
+    background:{{ section.settings.btn-bg-color }};
+  }
+
+  #section-{{ section.id }} .text-container > .btn-container > a:hover{
+    color:{{ section.settings.btn-color }};
+    text-decoration-color:{{ section.settings.btn-color }};
+  }
+
+  /* arrows */
+  #section-{{ section.id }} .scroll-arrow{
+    color:{{ section.settings.arrow-color }};
+    font-size:{{ section.settings.arrow-size-mobile }}px;
+    width:{{ section.settings.arrow-size-mobile }}px;
+    height:{{ section.settings.arrow-size-mobile }}px;
+    top:{{ section.settings.arrow-position-mobile }}%;
+  }
+
+  @media screen and (min-width:768px){
+    /* section carrousel */
+    #section-{{ section.id }} .carrousel > .carrousel-item{
+      width:calc(100% / {{ section.settings.display-tablet }});
+      min-width:calc(100% / {{ section.settings.display-tablet }});
+    }
+  
+    #section-{{ section.id }} .carrousel > .carrousel-item.video-container > .play-btn-container > .play_button{
+      font-size: {{section.settings.play-desktop-size }}px;;
+    }
+
+    /* arrows */
+    #section-{{ section.id }} .scroll-arrow{
+      font-size:{{ section.settings.arrow-size-tablet }}px;
+      width:{{ section.settings.arrow-size-tablet }}px;
+      height:{{ section.settings.arrow-size-tablet }}px;
+      top:{{ section.settings.arrow-position-tablet }}%;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top:{{ section.settings.desktop-p_top }}px;
+      padding-bottom:{{ section.settings.desktop-p_bottom }}px;
+      padding-right:{{ section.settings.desktop-p_right }}px;
+      padding-left:{{ section.settings.desktop-p_left }}px;
+    }
+
+    /* section header */
+    #section-{{ section.id }} .section-header > *{
+      font-size:{{ section.settings.header-desktop-font_size }}px;
+    }
+
+    /* section carrousel */
+    #section-{{ section.id }} .carrousel > .carrousel-item{
+      width:calc(100% / {{ section.settings.display-desktop }});
+      min-width:calc(100% / {{ section.settings.display-desktop }});
+    }
+
+    #section-{{ section.id }}  .carrousel > .carrousel-item > .shop-btn{
+      font-size:{{ section.settings.text-desktop-font_size }}px;
+    }
+  
+    #section-{{ section.id }} .carrousel > .carrousel-item.video-container > .play-btn-container > .play_button{
+      font-size: {{section.settings.play-desktop-size }}px;;
+    }
+
+    /* section text */
+    #section-{{ section.id }} .text-container > .into-container > *,
+    #section-{{ section.id }} .text-container > .description-container > *,
+    #section-{{ section.id }} .text-container > .btn-container > a{
+      font-size:{{ section.settings.text-desktop-font_size }}px;
+    }
+  
+    #section-{{ section.id }} .text-container > .title-container > *{
+      font-size:{{ section.settings.header-desktop-font_size }}px;
+    }
+
+    /* arrows */
+    #section-{{ section.id }} .scroll-arrow{
+      font-size:{{ section.settings.arrow-size-desktop }}px;
+      width:{{ section.settings.arrow-size-desktop }}px;
+      height:{{ section.settings.arrow-size-desktop }}px;
+      top:{{ section.settings.arrow-position-desktop }}%;
+    }
+  }
+</style>
+
+<section id='section-{{ section.id }}' class='section-bridal23-lookbook'>
+  <div class='inner-container'>
+
+    {% if section.settings.header != empty %}
+      <div class='section-header'>
+        {{ section.settings.header }}
+      </div>
+    {% endif %}
+
+    <div class='section-carrousel'>
+      <div class='carrousel {{ containerAlign }} {{ containerClass }}'>
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'image' %}
+              <div class='img-container carrousel-item'>
+                <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+              </div>
+            {% when 'video' %}
+              <div class='video-container carrousel-item'>
+                <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                <div class='play-btn-container'>
+                  <span data-url="{{ block.settings.video-url }}" class='play_button play_button_{{ randomNumber }}'><i class="icon icon-play"></i></span>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+        {% for block in section.blocks %}
+          {% if block.type == "product-image" %}
+            <div class='img-container carrousel-item'>
+              {% for block in section.blocks %}
+                {% if block.type == "product-image" %}
+                  <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                  {% if block.settings.url %}<a href='{{ block.settings.url }}' class='shop-btn mobile'style="">SHOP NOW</a>{% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% if section.settings.include-arrows %}
+        {% render "arrows", containerClass: containerClass, limit: limit, stepMobile: stepMobile, stepTablet: stepTablet, stepDesktop: stepDesktop, customClass: arrowClass %}
+      {% endif %}
+    </div>
+
+    <div class='section-text'>
+      <div class='text-container'>
+        {% for block in section.blocks %}
+          {% if block.type == "text" %}
+            <div class='into-container'>{% if block.settings.intro != empty %}{{ block.settings.intro }}{% endif %}</div>
+            <div class='title-container'>{% if block.settings.title != empty %}{{ block.settings.title }}{% endif %}</div>
+            <div class='description-container'>{% if block.settings.text != empty %}{{ block.settings.text }}{% endif %}</div>
+            <div class='btn-container'>{% if block.settings.btn-text != empty and block.settings.btn-url %}<a href='{{ block.settings.btn-url }}' title='{{ block.settings.title | strip_html | lower }}' target="_blank">{{ block.settings.btn-text }}</a>{% endif %}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class='img-container mobile'>
+        {% for block in section.blocks %}
+          {% if block.type == "product-image" %}
+            <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div> 
+  </div>
+</section>
+
+<script>
+  var playBtns{{randomNumber}} = $('.play_button_{{randomNumber}}');
+
+  playBtns{{randomNumber}}.click(function(){
+  	btsVideoTag(this.dataset.url)
+  });  
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Bridal 23 Lookbook",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "text-mobile-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "header-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size",
+        "default": 26
+      },
+      {
+        "type": "range",
+        "id": "text-desktop-font_size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Display Settings"
+      },
+      {
+        "type": "range",
+        "id": "display-mobile",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Mobile Columns",
+        "default": 2
+      },
+      {
+        "type": "range",
+        "id": "display-tablet",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Tablet Columns",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "display-desktop",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "un",
+        "label": "Desktop Columns",
+        "default": 4
+      },
+      {
+        "type": "header",
+        "content": "Play Button Settings"
+      },
+      {
+        "type": "color",
+        "id": "play-color",
+        "label": "Play Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "play-mobile-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Play Button Size (mobile)",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "play-desktop-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Play Button Size (desktop)",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Arrows Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-arrows",
+        "label": "Include Arrows",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "arrow-color",
+        "label": "Arrows Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-mobile",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Mobile",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-tablet",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Tablet",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-size-desktop",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size Desktop",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-mobile",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Mobile",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-tablet",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Tablet",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "arrow-position-desktop",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Arrow Position Desktop",
+        "default": 30
+      },
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "color",
+        "id": "btn-color",
+        "label": "Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "btn-bg-color",
+        "label": "Button Background Colour",
+        "default": "#FFFFFF"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Text",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "intro",
+            "label": "Intro"
+          },
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "btn-text",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "btn-url",
+            "label": "Button URL"
+          }
+        ]
+      },
+      {
+        "type": "product-image",
+        "name": "Product Image",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Product Image"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Product/Collection URL"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "name": "Video",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Video Thumbnail"
+          },
+          {
+            "type": "url",
+            "id": "video-url",
+            "label": "Video URL"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
