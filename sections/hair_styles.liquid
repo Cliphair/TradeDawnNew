@@ -1,6 +1,518 @@
+{% assign min = 1 %}
+{% assign max = 100 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+
+<section id='{{section.id}}' class='style__section-container'>
+  {% if section.settings.styles__section-title != blank %}
+    <h2 class='style__section-title {%if section.settings.title-border%}title-border{% endif %}'>
+      {{section.settings.styles__section-title}}
+      <img src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/arrow_isolated.png?v=1650538505' alt='arrow image'>
+    </h2>
+  {%endif%}
+  
+  {% if section.settings.intro != blank%}
+    <div class='section_intro'>
+      {{section.settings.intro}}
+    </div>
+  {% endif %}
+  
+  <div class='style__styles-container'>
+  	{% for block in section.blocks %}
+    	{%assign size = section.blocks | size %}
+
+    	{% case block.type %}
+    
+            {%when 'h_style'%}
+                <div class='style {% unless size == 3 or size == 6 %}five-row{%endunless%}'>
+                  
+                  <a {% if block.settings.style__style-url == nil %}href='https://www.cliphair.co.uk/'{%else%}href='{{block.settings.style__style-url}}'{% endif %} class='style__img-container'>
+                    <img class='style__image {% if block.settings.circle %}circle_img {% endif %}lazyload' loading='lazy' src='{{ block.settings.style__style-image | img_url: 'master' }}' width='{{ block.settings.style__style-image.width }}' height='{{ block.settings.style__style-image.height }}' alt='{{ block.settings.style__style-title }}'>
+                  </a>
+                  
+                  <h3 class='style__style-title'>{{ block.settings.style__style-title }}</h3>
+                  
+                  {% if block.settings.style__style-url == nil %}
+                      <a class='style__btn-txt' href='https://www.cliphair.co.uk/'>
+                        
+                          {% if block.settings.styles__btn-text != empty%}
+                            {{block.settings.styles__btn-text}} <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                          {% else %}
+                            Lookbook <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                          {% endif %}
+                        
+                      </a>
+                  {%else%}
+                      <a class='style__btn-txt' href='{{block.settings.style__style-url}}'>
+                        
+                          {% if block.settings.styles__btn-text != empty%}
+                            	{{block.settings.styles__btn-text}} <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                          {% else %}
+                            	Lookbook <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                          {% endif %}
+                        
+                      </a>
+                  {% endif %}
+                </div>
+    	
+              {%when 'h_video'%}
+    
+              <div class='style {% unless size == 3 or size == 6 %}five-row{%endunless%}'>
+                
+                <div class='style__img-container'>
+                  <img class='style__image lazyload' loading='lazy' src='{{ block.settings.style__style-image | img_url: 'master' }}' width='{{ block.settings.style__style-image.width }}' height='{{ block.settings.style__style-image.height }}' alt='{{ block.settings.style__style-title }}'>
+                  <div class='style__btn-container'>
+                    <span class='style__paly-btn style__paly-btn-{{randomNumber}}' data-url='{{block.settings.style__video-url}}' ><i class="icon icon-play"></i></span>
+                  </div>
+                </div>
+                
+                <h3 class='style__style-title'>{{ block.settings.style__style-title }}</h3>
+                {% if block.settings.style__style-url == nil %}
+                
+                  <a class='style__btn-txt' href='https://www.cliphair.co.uk/'>
+                    
+                      {% if block.settings.styles__btn-text != empty%}
+                        	{{block.settings.styles__btn-text}} <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                      {% else %}
+                        	Lookbook <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                      {% endif %}
+                    
+                  </a>
+                {%else%}
+                    <a class='style__btn-txt' href='{{block.settings.style__style-url}}'>
+                        {% if block.settings.styles__btn-text != empty%}
+                          	{{block.settings.styles__btn-text}} <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                        {% else %}
+                          	Lookbook <i class="fa-solid fa-arrow-pointer style__btn-pointer"></i>
+                        {% endif %}
+                    </a>
+                {% endif %}
+              </div>
+    
+    	{% endcase %}
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  #{{section.id}}.style__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    padding-top:{{section.settings.styles__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.styles__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.styles__mobile-padding-sides}}px;
+    padding-right:{{section.settings.styles__mobile-padding-sides}}px;
+  }
+  
+ .style__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+  }
+  
+  #{{section.id}} .style__section-title{
+    font-size:{{section.settings.styles__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:750px;
+    margin:0 auto;
+    padding: 10px 0;
+    position:relative;
+  }
+  
+  #{{section.id}} .style__section-title.title-border{
+    border:1px solid black;
+  }
+  
+  #{{section.id}} .style__section-title > img{
+    height: 35px;
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+  }
+  
+  #{{section.id}} .section_intro{
+  	text-align:center;
+    width:100%;
+    margin:20px 0;
+  }
+  
+  #{{section.id}} .section_intro *{
+  	font-size:calc({{section.settings.styles__mobile-font-size}}px - 3px);
+    line-height:1.5rem;
+  }
+  
+  #{{section.id}} .style__styles-container{
+  	width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-top:15px;
+  }
+  
+  #{{section.id}} .style{
+  	width:45%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 15px;
+  }
+  
+  #{{section.id}} .style__img-container{
+  	width:100%;
+    position:relative;
+    margin-bottom: 5px;
+  }
+  
+  #{{section.id}} .style__image{
+  	width:100%;
+    height:auto;
+    object-fit:cover; 
+  }
+  
+  #{{section.id}} .style__image.circle_img{
+  	border-radius:50%;
+  }
+  
+  #{{section.id}} .style__img-container > .style__image-inside-border{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:5px;
+    border:1px solid white;
+  }
+  
+  #{{section.id}} .style > .style__style-title{
+  	text-transform:capitalize;
+    font-size: calc({{section.settings.styles__mobile-font-size}}px - 3px)
+  }
+  
+  #{{section.id}} .style__btn-txt{
+  	padding:0px 20px;
+    position:relative;
+    border:1px solid black;
+    font-size: calc({{section.settings.styles__mobile-font-size}}px - 2px)
+  }
+  
+  #{{section.id}} .style__btn-txt:hover .style__btn-pointer {
+  	color:#9c3078;
+  }
+  
+  .style__btn-pointer{
+  	position:absolute;
+    right:-6px;
+    bottom:0px;
+    font-size:17px;
+  }
+  
+  .style__btn-container{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .style__paly-btn{
+    font-size:calc({{section.settings.styles__mobile-font-size}}px + 20px);
+    cursor:pointer;
+  }
+  
+  .style__paly-btn > *{
+  	color:white;
+  }
+  
+  .style__paly-btn:hover > *{
+    opacity:0.5;
+  }
+  
+  .video__bg{
+  	position:absolute;
+    z-index:1000000;
+    height:100%;
+    width:100%;
+    top:0;
+    right:0;
+    background:#000000a8;
+    padding: 10px 20px;
+    display:flex;
+  }
+  
+  .video__container{
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+  }
+  
+  .close__video{
+  	width:100%;
+    text-align:right;
+    cursor:pointer;
+  }
+  
+  .close__video > *{
+  	color:white;
+    font-size: calc({{section.settings.style__mobile-font-size}}px - 2px);
+    opacity:0.5;
+  }
+  
+  .close__video > *:hover{
+    opacity:1;
+  }
+  
+  .video__container > .bts__video{
+    width: 100%;
+    max-height:80vh;
+  }
+  
+  @media only screen and (min-width:768px){
+    
+    #{{section.id}} .style{
+  	  width:30%;
+    }
+  }
+  
+  @media only screen and (min-width:992px){
+  	#{{section.id}}.style__section-container{
+      padding-top:{{section.settings.styles__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.styles__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.styles__desktop-padding-sides}}px;
+      padding-right:{{section.settings.styles__desktop-padding-sides}}px;
+    }
+    
+    #{{section.id}} .style__section-title{
+      font-size:{{section.settings.styles__desktop-font-size}}px;
+    }
+    
+    #{{section.id}} .style__section-title > img{
+      height: 40px;
+    }
+    
+    #{{section.id}} .section_intro *{
+      font-size:calc({{section.settings.styles__desktop-font-size}}px - 5px);
+      line-height:2rem;
+    }
+    
+    #{{section.id}} .style > .style__style-title{
+      font-size: calc({{section.settings.styles__desktop-font-size}}px - 7px)
+    }
+    
+    #{{section.id}} .style__btn-txt{
+      font-size: calc({{section.settings.styles__desktop-font-size}}px - 5px)
+    }
+    
+    .close__video > *{
+      font-size: calc({{section.settings.bts__desktop-font-size}}px - 2px)
+    }
+  }
+  
+  @media only screen and (min-width:1200px){
+    #{{section.id}} .style.five-row{
+      width:17%;
+    }
+    
+    #{{section.id}} .style__btn-txt{
+      padding:5px 20px;
+    }
+    
+    #{{section.id}} .style__btn-pointer{
+      font-size:20px;
+    }
+  }
+</style>
+
+<script>
+  var stylePlayBtns{{randomNumber}} = $('.style__paly-btn-{{randomNumber}}');
+
+  stylePlayBtns{{randomNumber}}.click(function(){
+  	btsVideoTag(this.dataset.url)
+  });  
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Hair Styles",
+	"max_blocks": 10,
+    "settings": [
+		{
+			"type": "header",
+			"content": "Section Settings"
+		},
+		{
+			"type":"text",
+			"id":"styles__section-title",
+			"label":"Section Title"
+		},
+		{
+			"type": "richtext",
+			"id": "intro",
+			"label": "Section Intro"
+		},
+		{
+          "type": "checkbox",
+          "id": "title-border",
+          "label": "Title Border",
+		  "info": "Select this box if you want the title to have a border.",
+          "default": true
+        },
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "styles__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "styles__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "styles__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "styles__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "styles__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "styles__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	],
+	"blocks": [
+		{
+			"name":"Hair Style",
+			"type":"h_style",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Style"
+				},
+				{
+					"type":"text",
+					"id":"style__style-title",
+					"label":"Style Title"
+				},
+				{
+                    "type":"text",
+                    "id":"styles__btn-text",
+                    "label":"Button Text"
+                },
+				{
+					"type": "image_picker",
+					"id": "style__style-image",
+					"label": "Style Image",
+					"info": "Image size 471px x 705px"
+				},
+				{
+                  "type": "checkbox",
+                  "id": "circle",
+                  "label": "Circle images",
+                  "info": "Select this box if you want the images to be a circle.",
+                  "default": false
+                },
+				{
+					"type": "url",
+					"id": "style__style-url",
+					"label": "URL",
+					"info": "Add the URL that you want to send the user to."
+				}
+			]
+		},
+		{
+			"name":"Hair Style Video",
+			"type":"h_video",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Style"
+				},
+				{
+					"type":"text",
+					"id":"style__style-title",
+					"label":"Style Title"
+				},
+				{
+                    "type":"text",
+                    "id":"styles__btn-text",
+                    "label":"Button Text"
+                },
+				{
+					"type": "image_picker",
+					"id": "style__style-image",
+					"label": "Style Image",
+					"info": "Image size 471px x 705px"
+				},
+				{
+					"type": "url",
+					"id": "style__style-url",
+					"label": "URL",
+					"info": "Add the URL that you want to send the user to."
+				},
+				{
+					"type": "url",
+					"id": "style__video-url",
+					"label": "Video URL",
+					"info": "Add the video URL that you want to display."
+				}
+			]
+		}
+	]
   }
 {% endschema %}
