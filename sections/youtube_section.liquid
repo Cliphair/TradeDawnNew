@@ -26,10 +26,27 @@
   .video_section > h2{
     margin-bottom: 5px;
   }
+
+  .row{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    algin-items:center;
+  }
+
+  .col-12{
+    width:100%;
+  }
   
   .video{
   	height: calc((100vw - 30px) / 1.78);
     border: 1px solid #9c3078;
+  }
+
+  @media only screen and (min-width:992px){
+    .col-md-6{
+      width:50%;
+    }
   }
   
   @media only screen and (min-width:992px){
