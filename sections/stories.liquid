@@ -1,6 +1,567 @@
+<section class='stories__section-container'>
+  <h2 class='stories__section-title'>
+    <div class='text-container'>
+      <span class='f-line'>{{section.settings.stories__section-title-fl}}</span>
+      <span class='s-line'>{{section.settings.stories__section-title-sl}}</span>
+    </div>
+    <div class='stories__icon-container'><img class='icon' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/arrow_isolated.png?v=1650538505' alt='arrow image'></div>
+  </h2>
+  
+  {% if section.settings.stories__section-description %}
+    <div class='stories__description-container'>
+      <p>{{ section.settings.stories__section-description }}</p>
+    </div>
+  {% endif %}
+  
+  <div class='stories__stories-container'>
+  	{% for block in section.blocks %}
+      <div class='story-outer {%if section.settings.three-row %}three-row{% endif %}'>
+        <div class='story-inner'>
+          {%if block.settings.stories__story-image %}
+          	<img class='lazyload' loading='lazy' src='{{ block.settings.stories__story-image | img_url: 'master' }}' width='{{ block.settings.stories__story-image.width }}' height='{{ block.settings.stories__story-image.height }}' alt='{{ block.settings.stories__story-image.alt }}'>
+          {%endif%}
+          <div class='stories__text-container'>
+            <p class='stories__story-author'>{{ block.settings.stories__story-author }}</p>
+            <p class='stories__story-title'>{{ block.settings.stories__story-title }}</p>
+            <div class='stories__story-content'>
+              {{ block.settings.stories__story-content }}
+              
+              {% unless block.settings.stories__story-content-read-more == empty %}
+              	<span id='hidden-container{{block.id}}' data-target='hidden-container{{block.id}}' class='btn__read-more' onclick='read_more(this)'>Read More</span>
+              	<div class='closed read_more_container hidden-container{{block.id}}'>
+              		{{block.settings.stories__story-content-read-more}}
+                  	<span class='btn__read-more' data-target='hidden-container{{block.id}}' onclick='read_less(this)'>Read Less</span>
+              	</div>
+              {% else %}
+              	<div class='placeholder-container'></div>
+              {% endunless %}
+            </div>
+          
+          
+            <div class='story-review-container'>
+              {% assign review_total = 5 %}
+              {% assign hearts = block.settings.stories__review %}
+              {% assign missign_hearts = review_total | minus: hearts %}	
+
+              {% for i in (1..hearts) %}
+                <span class='stories__story-review'><i class="fa-solid fa-heart pink"></i></span>
+              {% endfor %}
+
+              {% for i in (1..missign_hearts) %}
+                <span class='stories__story-review'><i class="fa-solid fa-heart grey"></i></span>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    
+    {% if section.settings.stories__section-url %}
+      <a href='{{section.settings.stories__section-url}}' class='last-card'>
+        <p>{{section.settings.stories__section-btn-title}}</p>
+        <p><i class="fa-solid fa-arrow-right"></i></p>
+      </a>
+    {% endif %}
+    
+  </div>
+  
+  {% if section.settings.stories__section-url %}
+    <div class='stories__button-container'>
+    	<a class='stories__explore-btn' href='{{section.settings.stories__section-url}}'>{{section.settings.stories__section-btn-title}}</a>
+    </div>
+  {% endif %}
+  
+  <div class='arrow-container'>
+    <span id='arrow-left' class='left'><i class="fa-solid fa-angle-left"></i></span>
+    <span id='arrow-right' class='right'><i class="fa-solid fa-angle-right"></i></span>
+  </div>
+  
+</section>
+
+<style>
+  .stories__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    position:relative;
+    padding-top:{{section.settings.stories__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.stories__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.stories__mobile-padding-sides}}px;
+    padding-right:{{section.settings.stories__mobile-padding-sides}}px;
+  }
+  
+  .stories__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+    line-height:1.5rem;
+  }
+  
+  .stories__section-title{
+  	font-size:{{section.settings.stories__mobile-font-size}}px;
+    text-transform:capitalize;
+    max-width:450px;
+    margin:0 auto;
+    padding: 10px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row;  
+  }
+  
+  .stories__description-container{
+  	text-align:center;
+    width:100%;
+    margin:5px 0 15px;
+  }
+  
+  .text-container{
+  	text-align:center;
+  }
+  
+  .text-container *{
+  	display:block;
+    width:100%;
+  }
+  
+  .stories__section-title > .stories__icon-container{
+    position: relative;
+    max-height: 100%;
+  }
+  
+  .stories__icon-container > img{
+    position: absolute;
+    height: 35px;
+    top: -18px;
+    left: 10px;
+    object-fit:cover;
+  }
+  
+  .stories__stories-container{
+  	width:100%;
+    overflow-x:auto;
+    position:relative;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .stories__stories-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .stories__stories-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .story-outer{
+  	min-width:100%;
+    width:100%;
+    padding:0 30px;
+  }
+  
+  .story-inner > img {
+  	width:100%;
+    height:auto;
+    object-fit:cover;
+    margin-bottom:10px;
+  }
+  
+  .stories__text-container{
+  	display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stories__text-container > *,
+  .stories__story-content > *,
+  .read_more_container > *{
+    font-size:calc({{section.settings.stories__mobile-font-size}}px - 4px);
+  }
+  
+  .stories__description-container > *{
+    font-size:calc({{section.settings.stories__mobile-font-size}}px - 3px);
+  }
+  
+  .stories__story-author{
+  	text-transform:capitalize;
+  }
+  
+  .stories__story-title{
+  	text-decoration:underline;
+    margin-bottom: 15px;
+    text-align:center;
+  }
+  
+  .stories__story-content{
+  	text-align:center;
+  }
+  
+  .story-review-container{
+  	text-align:center;
+    margin-top:10px;
+  }
+  
+  .stories__section-container .stories__story-review > .pink{
+  	color:#ff8ea2 !important;
+  }
+  
+  .stories__section-container .stories__story-review > .grey{
+  	color:#80808040 !important;
+  }
+  
+  .stories__story-content span.btn__read-more{
+  	background: black;
+    color: white;
+    text-transform: uppercase;
+    border:0;
+    border-radius:0;
+    padding:3px 10px;
+    text-align:center;
+    font-size: calc({{section.settings.stories__mobile-font-size}}px - 4px);
+    cursor:pointer;
+  }
+  
+  .last-card{
+  	min-width:50%;
+    width:50%;
+    padding:0 30px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+    margin:auto;
+  }
+  
+  .last-card > *{
+  	margin-bottom:0px;
+    text-transform:capitalize;
+  }
+  
+  .stories__button-container{
+  	width:100%;
+    text-align:center;
+    margin-top:10px;
+  }
+  
+  .stories__explore-btn{
+  	padding:5px 20px;
+    border:1px solid black;
+    font-size: calc({{section.settings.stories__mobile-font-size}}px - 5px)
+  }
+  
+  .arrow-container{
+  	position:absolute;
+    top:50%;
+    right:0;
+    left:0;
+  }
+  
+  .arrow-container > *{
+  	font-size:calc({{section.settings.stories__mobile-font-size}}px + 10px);
+    position:absolute;
+    
+  }
+  
+  .arrow-container > *:hover{
+    opacity:0.3;
+  }
+  
+  .arrow-container > .left{
+  	left:15px
+  }
+  
+  .arrow-container > .right{
+  	right:15px
+  }
+  
+  .placeholder-container{
+  	height:{{section.settings.stories__mobile-font-size}}px
+  }
+  
+  @media only screen and (min-width:768px){    
+    .story-outer{
+      min-width:50%;
+      width:50%;
+    }
+  }  
+
+  @media only screen and (min-width:992px){
+  	.stories__section-container{
+      padding-top:{{section.settings.stories__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.stories__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.stories__desktop-padding-sides}}px;
+      padding-right:{{section.settings.stories__desktop-padding-sides}}px;
+    }
+    
+    .stories__section-container * {
+      line-height:2rem;
+    }
+    
+    .stories__section-title{
+      font-size:{{section.settings.stories__desktop-font-size}}px;
+    }
+
+    .stories__description-container *{
+    	font-size:calc({{section.settings.stories__desktop-font-size}}px - 5px);
+    }
+    
+    .stories__icon-container > img{
+      height: 50px;
+      top: -25px;
+      left: 18px;
+    }
+    
+    .story-outer{
+      min-width:50%;
+      width:50%;
+    }
+    
+    .story-outer.three-row{
+      min-width:33.33%;
+      width:33.33%;
+    }
+    
+    .stories__text-container > *,
+    .stories__story-content > *,
+    .read_more_container > *{
+      font-size:calc({{section.settings.stories__desktop-font-size}}px - 7px);
+    }
+    
+    .stories__story-content span.btn__read-more{
+      font-size: calc({{section.settings.stories__desktop-font-size}}px - 9px);
+    }
+    
+    .last-card{
+      min-width:25%;
+      width:25%;
+    }
+    
+    .stories__explore-btn{
+      font-size: calc({{section.settings.stories__desktop-font-size}}px - 12px);
+      padding:5px 20px;
+    }
+    
+    .arrow-container > *{
+      font-size:calc({{section.settings.stories__desktop-font-size}}px + 5px);
+    }
+    
+    .placeholder-container{
+      height:{{section.settings.stories__desktop-font-size}}px
+    }
+  }
+</style>
+
+<script>  
+  //Arrow functions
+  var button = document.getElementById('arrow-right');
+  button.onclick = function () {
+      var container = document.getElementsByClassName('stories__stories-container')[0];
+      var distance = container.clientWidth;
+      if (distance > 768){
+          distance = distance / 2
+      }
+      sideScroll(container,'right',50,distance,50);
+  };
+
+  var back = document.getElementById('arrow-left');
+  back.onclick = function () {
+      var container = document.getElementsByClassName('stories__stories-container')[0];
+      var distance = container.clientWidth;
+      if (distance > 768){
+          distance = distance / 2
+      }
+      sideScroll(container,'left',50,distance,50);
+  };
+
+  function sideScroll(element,direction,speed,distance,step){
+      scrollAmount = 0;
+      var slideTimer = setInterval(function(){
+          if(direction == 'left'){
+              element.scrollLeft -= step;
+          } else {
+              element.scrollLeft += step;
+          }
+          scrollAmount += step;
+          if(scrollAmount >= distance){
+              window.clearInterval(slideTimer);
+          }
+      }, speed);
+  }  
+</script>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+   {
+    "name": "Stories",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Cotent"
+		},
+		{
+			"type":"text",
+			"id":"stories__section-title-fl",
+			"label":"Title First Line"
+		},
+		{
+			"type":"text",
+			"id":"stories__section-title-sl",
+			"label":"Title Second Line"
+		},
+		{
+			"type": "textarea",
+			"id": "stories__section-description",
+			"label": "Section Description"
+		},
+		{
+			"type": "text",
+			"id": "stories__section-btn-title",
+			"label": "Last Card Text",
+			"default": "Read More Reviews"
+		},
+		{
+			"type": "url",
+			"id": "stories__section-url",
+			"label": "URL",
+			"info": "Add the URL that you want to send the customer to."
+		},
+		{
+			"type": "checkbox",
+            "id": "three-row",
+            "label": "Three reviews in a row",
+			"info": "This option applies for desktop view (>= 992px)",
+            "default": false
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "stories__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "stories__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "stories__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "stories__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "stories__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "stories__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	],
+	"blocks": [
+		{
+			"name":"Story",
+			"type":"story",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Story"
+				},				
+				{
+					"type":"text",
+					"id":"stories__story-author",
+					"label":"Story Author"
+				},
+				{
+					"type":"text",
+					"id":"stories__story-title",
+					"label":"Story Title"
+				},
+				{
+					"type":"richtext",
+					"id":"stories__story-content",
+					"label":"Story Content"
+				},
+				{
+					"type":"richtext",
+					"id":"stories__story-content-read-more",
+					"label":"Read More Content"
+				},
+				{
+					"type": "image_picker",
+					"id": "stories__story-image",
+					"label": "Story Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+                    "type": "range",
+                    "id": "stories__review",
+                    "min": 0,
+                    "max": 5,
+                    "step": 1,
+                    "label": "Hearts",
+                    "default": 0
+                }
+			]
+		}
+	]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
