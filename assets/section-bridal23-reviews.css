@@ -79,8 +79,8 @@
   line-height:1;
 }
 
-.section-bridal23-reviews .review > .text-container > .info-container > i{
-  color:#fec600!important;
+.section-bridal23-reviews .review > .text-container > .info-container svg{
+  fill:#fec600!important;
   margin-bottom:0;
 }
 
