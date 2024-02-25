@@ -1,6 +1,380 @@
+<section class='year__section-container'>
+  <h2 class='year__section-title'>
+    {{section.settings.year__section-title}}
+  </h2>
+  
+  <div class='year__styles-container'>
+  	{% for block in section.blocks %}    		
+      <div class='year'>
+        <div class='year__img-container'>
+          <img class='year__image lazyload' data-src='{{ block.settings.year__placeholder-image | img_url: 'master' }}' width='{{ block.settings.year__placeholder-image.width }}' height='{{ block.settings.year__placeholder-image.height }}' alt='{{ block.settings.year__bts-title }}'>
+          <div class='year__btn-container'>
+            <span class='year__paly-btn' data-url='{{block.settings.year__video-url}}' ><i class="fa-solid fa-play"></i></span>
+          </div>
+        </div>
+        <h3 class='year__style-title'>{{ block.settings.year__bts-title }}</h3>
+      </div>	
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .year__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    padding-top:{{section.settings.year__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.year__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.year__mobile-padding-sides}}px;
+    padding-right:{{section.settings.year__mobile-padding-sides}}px;
+  }
+  
+  .year__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+    line-height:1.5rem;
+  }
+  
+  .year__section-title{
+    font-size:{{section.settings.year__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:450px;
+    margin:0 auto;
+    padding: 10px 0;
+    border:1px solid black;
+    position:relative;
+  }
+  
+  .year__section-title > img{
+    height: 35px;
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+  }
+  
+  .year__styles-container{
+  	width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-top:15px;
+  }
+  
+  .year{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 15px;
+  }
+  
+  .year__img-container{
+  	width:100%;
+    position:relative;
+    margin-bottom: 5px;
+  }
+  
+  .year__image{
+  	width:100%;
+    height:auto;
+    object-fit:cover; 
+  }
+  
+  .year__img-container > .year__image-inside-border{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:5px;
+    border:1px solid white;
+  }
+  
+  .year > .year__style-title{
+  	text-transform:capitalize;
+    font-size: calc({{section.settings.year__mobile-font-size}}px - 3px)
+  }
+  
+  .year__btn-txt{
+  	padding:0px 20px;
+    position:relative;
+    border:1px solid black;
+    font-size: calc({{section.settings.year__mobile-font-size}}px - 2px)
+  }
+  
+  .year__btn-txt:hover .year__btn-pointer {
+  	color:#9c3078;
+  }
+  
+  .year__btn-pointer{
+  	position:absolute;
+    right:-6px;
+    bottom:0px;
+    font-size:17px;
+  }
+  
+  .year__btn-container{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .year__paly-btn{
+    font-size:calc({{section.settings.year__mobile-font-size}}px + 15px);
+    border-radius:50%;
+    border:1px solid white;
+    padding:10px;
+    cursor:pointer;
+    background:white;
+  }
+  
+  .year__paly-btn > *{
+  	color:black;
+    opacity:0.5;
+  }
+  
+  .year__paly-btn:hover > *{
+    opacity:1;
+  }
+
+  .video__bg{
+  	position:absolute;
+    z-index:1000000;
+    height:100%;
+    width:100%;
+    top:0;
+    right:0;
+    background:#000000a8;
+    padding: 10px 20px;
+    display:flex;
+  }
+  
+  .video__container{
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+  }
+  
+  .close__video{
+  	width:100%;
+    text-align:right;
+    cursor:pointer;
+  }
+  
+  .close__video > *{
+  	color:white;
+    font-size: calc({{section.settings.year__mobile-font-size}}px - 2px);
+    opacity:0.5;
+  }
+  
+  .close__video > *:hover{
+    opacity:1;
+  }
+  
+  .video__container > .year__video{
+    width: 100%;
+  }
+  
+  @media only screen and (min-width:992px){
+  	.year__section-container{
+      padding-top:{{section.settings.year__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.year__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.year__desktop-padding-sides}}px;
+      padding-right:{{section.settings.year__desktop-padding-sides}}px;
+    }
+    
+    .year__section-container * {
+      line-height:1.5rem;
+    }
+    
+    .year__section-title{
+      font-size:{{section.settings.year__desktop-font-size}}px;
+    }
+    
+    .year__section-title > img{
+      height: 40px;
+    }
+    
+    .year > .year__style-title{
+      font-size: calc({{section.settings.year__desktop-font-size}}px - 7px)
+    }
+    
+    .year__btn-txt{
+      font-size: calc({{section.settings.year__desktop-font-size}}px - 5px)
+    }
+    
+    .close__video > *{
+      font-size: calc({{section.settings.year__desktop-font-size}}px - 2px)
+    }
+  }
+  
+  @media only screen and (min-width:1200px){   
+    .year__btn-txt{
+      padding:5px 20px;
+    }
+    
+    .year__btn-pointer{
+      font-size:20px;
+    }
+  }
+</style>
+
+<script>
+  
+  let yearPlayBtns = $('.year__paly-btn');
+  yearPlayBtns.click(function(){
+   yearVideoTag(this.dataset.url)
+  });
+  
+  function yearVideoTag(videoUrl){
+  	let video = `
+		<div id='year__video-container' class='video__bg'>
+			<div class='video__container'>
+			  <div class='close__video'><i onclick='yearCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+              <video class='bts__video' autoplay muted controls>
+                  <source src="${videoUrl}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+			</div>
+		</div>
+	`;
+    jQuery('body').prepend(video)
+
+  }
+  
+  function yearCloseBtn(){
+  	$("#year__video-container").remove();
+  } 
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Wedding 2022",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Section Settings"
+		},
+		{
+			"type":"text",
+			"id":"year__section-title",
+			"label":"Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "year__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "year__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "year__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "year__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "year__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "year__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	],
+	"blocks": [
+		{
+			"name":"Video",
+			"limit":1,
+			"type":"video",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Video Settings"
+				},
+				{
+					"type":"text",
+					"id":"year__bts-title",
+					"label":"Video Title"
+				},
+				{
+					"type": "image_picker",
+					"id": "year__placeholder-image",
+					"label": "Placeholder Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+					"type": "url",
+					"id": "year__video-url",
+					"label": "Video URL",
+					"info": "Add the video URL that you want to display."
+				},
+				{
+					"type": "url",
+					"id": "year__page-url",
+					"label": "Page URL",
+					"info": "Add the page URL that you want to send the user to."
+				}
+			]
+		}
+	]
   }
 {% endschema %}
