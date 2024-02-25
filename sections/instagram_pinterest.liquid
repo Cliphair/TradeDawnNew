@@ -1,6 +1,346 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<section id='{{ section.id }}' class='insta-pin__section-container'>
+  
+  {% if section.settings.intro != blank%}
+    <div class='section_intro'>
+      {{section.settings.intro}}
+    </div>
+  {% endif %}
+  
+  <div class='row flex'>
+
+    {% if section.settings.instagram %}
+      <div class='col col-md-6'>
+        {% if section.settings.add_subtitle %}<h2 class='insta-pin__section-title'>Instagram</h2>{% endif %}     
+        <div class='insta-pin__img-container'>
+          {% for block in section.blocks %}
+          	{% case block.type %}
+          		{%when 'instagram'%}
+          		{% if block.settings.insta-pin_url == nil %}
+                    <a class='insta-pin__image-link' href='{{block.settings.insta-pin__url}}' target='_blank' rel="noopener">
+                      <img class='insta-pin__image lazyload' loading='lazy' src='{{ block.settings.insta-pin__image | img_url: 'master' }}' width='{{ block.settings.insta-pin__image.width }}' height='{{ block.settings.insta-pin__image.height }}' alt='{{ block.settings.insta-pin__image.alt }}'>
+                    </a>
+          		{%else%}
+          		  <a class='insta-pin__image-link' href='{{ block.settings.insta-pin__url }}' target='_blank' rel="noopener">
+                      <img class='insta-pin__image lazyload' loading='lazy' src='{{ block.settings.insta-pin__image | img_url: 'master' }}' width='{{ block.settings.insta-pin__image.width }}' height='{{ block.settings.insta-pin__image.height }}' alt='{{ block.settings.insta-pin__image.alt }}'>
+                    </a>
+          		{% endif%}
+          	{%endcase%}
+          {% endfor %}
+        </div>
+        <a class='insta-pin__link-btn' href='{{ section.settings.insta-pin__insta-url}}'>{{section.settings.insta-pin__insta-title}}</a>
+      </div>
+    {% endif %}
+    {% if section.settings.pinterest %}
+      <div class='col col-md-6'>
+        {% if section.settings.add_subtitle %}<h2 class='insta-pin__section-title'>Pinterest</h2>{% endif %}
+        <div class='insta-pin__img-container'>
+          {% for block in section.blocks %}
+          	{% case block.type %}
+          		{%when 'pinterest'%}
+          		{% if block.settings.insta-pin_url == nil %}
+                    <a class='insta-pin__image-link' href='{{block.settings.insta-pin__url}}' target='_blank' rel="noopener">
+                      <img class='insta-pin__image lazyload' loading='lazy' src='{{ block.settings.insta-pin__image | img_url: 'master' }}' width='{{ block.settings.insta-pin__image.width }}' height='{{ block.settings.insta-pin__image.height }}' alt='{{ block.settings.insta-pin__image.alt }}'>
+                    </a>
+          		{%else%}
+          		  <a class='insta-pin__image-link' href='{{ block.settings.insta-pin__url }}' target='_blank' rel="noopener">
+                      <img class='insta-pin__image lazyload' loading='lazy' src='{{ block.settings.insta-pin__image | img_url: 'master' }}' width='{{ block.settings.insta-pin__image.width }}' height='{{ block.settings.insta-pin__image.height }}' alt='{{ block.settings.insta-pin__image.alt }}'>
+                    </a>
+          		{% endif%}
+          	{%endcase%}
+          {% endfor %}
+        </div>
+        <a class='insta-pin__link-btn' href='{{ section.settings.insta-pin__pin-url}}'>{{section.settings.insta-pin__pin-title}}</a>
+      </div>
+    {% endif %}
+  </div>
+  
+</section>
+
+<style>
+  .insta-pin__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    padding-top:{{section.settings.insta-pin__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.insta-pin__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.insta-pin__mobile-padding-sides}}px;
+    padding-right:{{section.settings.insta-pin__mobile-padding-sides}}px;
   }
+
+  #{{section.id}} .section_intro{
+  	text-align:center;
+    width:100%;
+    margin:0 0 20px;
+  }
+  
+  #{{section.id}} .section_intro *{
+  	font-size:calc({{section.settings.insta-pin__mobile-font-size}}px - 3px);
+    line-height:1.5rem;
+  }
+  
+  .insta-pin__section-container .col.col-md-6{
+  	display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+  }
+
+  .insta-pin__section-container > .row{
+    justify-content:center;
+  }
+
+  .insta-pin__section-container * {
+    font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+  }
+
+  .insta-pin__section-title{
+    font-size:{{section.settings.insta-pin__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:450px;
+    margin:0 auto;
+    padding: 10px 0 20px;
+  }
+  
+  .insta-pin__img-container{
+  	width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:15px;
+  }
+  
+  .insta-pin__image-link{
+  	width:50%;
+    padding:0px 15px;
+    cursor:pointer;
+  }
+  
+  .insta-pin__image{
+  	width:100%;
+    height:auto;
+    object-fit:cover;
+  }
+  
+  .insta-pin__link-btn{
+  	padding:10px 20px;
+    border:1px solid black;
+    font-size: {{section.settings.insta-pin__mobile-font-size}}px;
+    width:100%;
+    text-decoration:underline;
+    text-align:center;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (min-width:992px){
+  	.insta-pin__section-container{
+      padding-top:{{section.settings.insta-pin__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.insta-pin__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.insta-pin__desktop-padding-sides}}px;
+      padding-right:{{section.settings.insta-pin__desktop-padding-sides}}px;
+    }
+   
+    #{{section.id}} .section_intro *{
+    	font-size:calc({{section.settings.insta-pin__desktop-font-size}}px - 5px);
+        line-height:2rem;
+    }
+    
+    .insta-pin__section-title{
+      font-size:{{section.settings.insta-pin__desktop-font-size}}px;
+    }
+    
+    .insta-pin__link-btn{
+      font-size: {{section.settings.insta-pin__desktop-font-size}}px;
+    }
+    }
+  }
+  
+</style>
+{% schema %}
+{
+	"name": "Instagram and Pinterest",
+	"settings": [
+		{
+			"type": "richtext",
+			"id": "intro",
+			"label": "Section Intro"
+		},
+        {
+          "type": "checkbox",
+          "id": "instagram",
+          "label": "Add Instagram Section?",
+          "default": true,
+          "info": "Select this box if you want to have a specific section for Instagram."
+        },
+        {
+          "type": "checkbox",
+          "id": "pinterest",
+          "label": "Add Pinterest Section?",
+          "default": true,
+          "info": "Select this box if you want to have a specific section for Pinterest."
+        },
+        {
+          "type": "checkbox",
+          "id": "add_subtitle",
+          "label": "Add Section Subtitle?",
+          "default": true,
+          "info": "Select this box if you want each section to have a subtitle."
+        },
+		{
+			"type": "header",
+			"content": "Layout"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "insta-pin__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "insta-pin__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "insta-pin__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "insta-pin__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "insta-pin__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "insta-pin__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type":"header",
+			"content": "Instagram Section"
+		},
+		{
+			"type": "url",
+			"id": "insta-pin__insta-url",
+			"label": "Instagram Page URL"
+		},
+		{
+			"type": "text",
+			"id": "insta-pin__insta-title",
+			"label": "Instagram Button Text",
+			"default": "Explore More"
+		},
+		{
+			"type":"header",
+			"content": "Pinterest Section"
+		},
+		{
+			"type": "url",
+			"id": "insta-pin__pin-url",
+			"label": "Pinterest Page URL"
+		},
+		{
+			"type": "text",
+			"id": "insta-pin__pin-title",
+			"label": "Pinterest Button Text",
+			"default": "Explore More"
+		}
+	],
+	"blocks":[
+		{
+			"name":"Instagram",
+			"limit":2,
+			"type":"instagram",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Instagram Image"
+				},
+				{
+					"type": "image_picker",
+					"id": "insta-pin__image",
+					"label": "Style Image",
+					"info": "Image size 471px x 705px"
+				},
+				{
+					"type": "url",
+					"id": "insta-pin__url",
+					"label": "URL",
+					"info": "Add the URL that you want to send the user to."
+				}
+			]
+		},
+		{
+			"name":"Pinterest",
+			"limit":2,
+			"type":"pinterest",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Pinterest Image"
+				},
+				{
+					"type": "image_picker",
+					"id": "insta-pin__image",
+					"label": "Style Image",
+					"info": "Image size 471px x 705px"
+				},
+				{
+					"type": "url",
+					"id": "insta-pin__url",
+					"label": "URL",
+					"info": "Add the URL that you want to send the user to."
+				}
+			]
+		}
+	]
+}
 {% endschema %}
