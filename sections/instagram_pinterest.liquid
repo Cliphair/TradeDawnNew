@@ -77,6 +77,18 @@
   	font-size:calc({{section.settings.insta-pin__mobile-font-size}}px - 3px);
     line-height:1.5rem;
   }
+
+  .row{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    algin-items:center;
+    gap: 30px;
+  }
+
+  .col-12{
+    width:100%;
+  }
   
   .insta-pin__section-container .col.col-md-6{
   	display:flex;
@@ -135,6 +147,16 @@
     text-decoration:underline;
     text-align:center;
     margin: 0 auto;
+  }
+
+  @media only screen and (min-width:768px){
+    .row{
+      flex-direction:row;
+    }
+    
+    .col-md-6{
+      width:calc(50% - 15px);
+    }
   }
   
   @media only screen and (min-width:992px){
