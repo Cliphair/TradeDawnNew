@@ -1,0 +1,133 @@
+<section id='{{section.id}}' class='inspiration__section-container'>
+  <p class='inspiration__section-title'>{{section.settings.inspiration__section-title}}</p>
+</section>
+
+<style>
+
+  #{{section.id}}.inspiration__section-container{
+    max-width:1250px;
+    width:95%;
+    margin:0 auto;
+    position:relative;
+    padding-top:{{section.settings.inspiration__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.inspiration__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.inspiration__mobile-padding-sides}}px;
+    padding-right:{{section.settings.inspiration__mobile-padding-sides}}px;
+    border-top:2px solid black;
+  }
+  
+  #{{section.id}}.inspiration__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+  }
+  
+  #{{section.id}} .inspiration__section-title{
+    font-size:{{section.settings.inspiration__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:450px;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (min-width:992px){
+  	#{{section.id}}.inspiration__section-container{
+      padding-top:{{section.settings.inspiration__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.inspiration__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.inspiration__desktop-padding-sides}}px;
+      padding-right:{{section.settings.inspiration__desktop-padding-sides}}px;
+    }
+    
+    #{{section.id}} .inspiration__section-title{
+      font-size:{{section.settings.inspiration__desktop-font-size}}px;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Inspiration Break Line",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Section Settings"
+		},
+		{
+			"type":"text",
+			"id":"inspiration__section-title",
+			"label":"Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "inspiration__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "inspiration__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "inspiration__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "inspiration__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "inspiration__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "inspiration__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	]
+  }
+{% endschema %}
+
