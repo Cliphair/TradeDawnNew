@@ -1,0 +1,427 @@
+<section class='reviews__section-container'>
+  {% if section.settings.reviews__section-title %}
+    <h2 class='reviews__section-title'>
+      <div class='text-container'>
+        <span class='f-line'>{{section.settings.reviews__section-title}}</span>
+      </div>
+      <div class='reviews__icon-container'><img class='icon' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/arrow_isolated.png?v=1650538505'></div>
+    </h2>
+  {% endif %}
+
+  <div class='reviews__reviews-container'>
+  	{% for block in section.blocks %}
+      <div class='reviews-outer'>
+        <div class='reviews-inner'>
+          <div class='reviews__text-container'>
+            <p class='reviews__reviews-title'>{{ block.settings.reviews__reviews-title }}</p>
+            <div class='meta-info'>
+            	<p class='reviews__reviews-author'>{{ block.settings.reviews__reviews-author }}</p>
+              	<a class='reviews__reviews-product' href='{{block.settings.reviews__reviews-product.url}}' title='{{block.settings.reviews__reviews-product.title}}'>Product Used</a>
+            </div>
+            <div class='reviews__reviews-content'>
+              {{ block.settings.reviews__reviews-content }}
+              
+              {% unless block.settings.reviews__reviews-content-read-more == empty %}
+              	<span id='hidden-container{{block.id}}' data-target='hidden-container{{block.id}}' class='btn__read-more' onclick='read_more(this)'>Read More</span>
+              	<div class='closed read_more_container hidden-container{{block.id}}'>
+              		{{block.settings.reviews__reviews-content-read-more}}
+                  	<span class='btn__read-more' data-target='hidden-container{{block.id}}' onclick='read_less(this)'>Read Less</span>
+              	</div>
+              {% endunless %}
+            </div>
+          
+            <div class='reviews-review-container'>
+              {% assign review_total = 5 %}
+              {% assign hearts = block.settings.reviews__review %}
+              {% assign missign_hearts = review_total | minus: hearts %}	
+
+              {% for i in (1..hearts) %}
+                <span class='reviews__reviews-review'><i class="fa-solid fa-heart pink"></i></span>
+              {% endfor %}
+
+              {% for i in (1..missign_hearts) %}
+                <span class='reviews__reviews-review'><i class="fa-solid fa-heart grey"></i></span>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    
+  </div>
+  
+</section>
+
+<style>
+  .reviews__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    position:relative;
+    padding-top:{{section.settings.reviews__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.reviews__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.reviews__mobile-padding-sides}}px;
+    padding-right:{{section.settings.reviews__mobile-padding-sides}}px;
+  }
+  
+  .reviews__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+  }
+  
+  .reviews__section-title{
+  	font-size:{{section.settings.reviews__mobile-font-size}}px;
+    text-transform:capitalize;
+    max-width:450px;
+    margin:0 auto 10px;
+    padding: 10px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row;
+  }
+  
+  .reviews__description-container{
+  	text-align:center;
+    width:100%;
+    margin:5px 0 15px;
+  }
+  
+  .text-container{
+  	text-align:center;
+  }
+  
+  .text-container *{
+  	display:block;
+    width:100%;
+  }
+  
+  .meta-info{
+  	width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:10px;
+  }
+  
+  .reviews__section-title > .reviews__icon-container{
+    position: relative;
+    max-height: 100%;
+  }
+  
+  .reviews__icon-container > img{
+    position: absolute;
+    height: 35px;
+    top: -18px;
+    left: 10px;
+    object-fit:cover;
+  }
+  
+  .reviews__reviews-container{
+  	width:100%;
+    position:relative;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  
+  .reviews-outer{
+  	min-width:100%;
+    width:100%;
+    padding:0 30px;
+    margin-bottom:15px;
+  }
+  
+  .reviews-inner{
+  	border:1px solid #cccccc;
+    border-radius:10px;
+    padding:10px;
+    height:100%;
+    display:flex;
+  }
+  
+  .reviews__text-container{
+  	display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .reviews__text-container > *,
+  .reviews__story-content > *,
+  .read_more_container > *,
+  .reviews__reviews-content > *{
+    font-size:calc({{section.settings.reviews__mobile-font-size}}px - 2px);
+    margin:5px 0 0;
+  }
+  
+  .reviews__reviews-author{
+  	text-transform:capitalize;
+    padding-right: 25px;
+    border-right: 1px solid black;
+  }
+  
+  .reviews__reviews-product{
+  	padding-left: 25px;
+  }
+  
+  .reviews__reviews-title{
+  	text-decoration:underline;
+    margin-bottom: 5px;
+    font-size:{{section.settings.reviews__mobile-font-size}}px;
+    text-align:center;
+  }
+  
+  .meta-info > *{
+  	font-size:calc({{section.settings.reviews__mobile-font-size}}px - 4px);
+    margin:0;
+  }
+  
+  .reviews__reviews-content{
+  	text-align:center;
+  }
+  
+  .reviews-review-container{
+  	text-align:center;
+    margin-top:10px;
+  }
+  
+  .reviews__section-container .reviews__reviews-review > .pink{
+  	color:#ff8ea2 !important;
+  }
+  
+  .reviews__section-container .reviews__reviews-review > .grey{
+  	color:#80808040 !important;
+  }
+  
+  .reviews__reviews-content span.btn__read-more{
+  	background: black;
+    color: white;
+    text-transform: uppercase;
+    border:0;
+    border-radius:0;
+    padding:3px 10px;
+    text-align:center;
+    font-size: calc({{section.settings.reviews__mobile-font-size}}px - 3px);
+    cursor:pointer;
+  }
+  
+  @media only screen and (min-width:768px){    
+    .reviews-outer{
+      min-width:50%;
+      width:50%;
+    }
+  }  
+
+  @media only screen and (min-width:992px){
+  	.reviews__section-container{
+      padding-top:{{section.settings.reviews__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.reviews__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.reviews__desktop-padding-sides}}px;
+      padding-right:{{section.settings.reviews__desktop-padding-sides}}px;
+    }
+    
+    .reviews__section-title{
+      font-size:{{section.settings.reviews__desktop-font-size}}px;
+    }
+    
+    .reviews__icon-container > img{
+      height: 50px;
+      top: -25px;
+      left: 18px;
+    }
+    
+    .reviews-outer{
+      min-width:50%;
+      width:50%;
+    }
+    
+    .reviews__text-container > *,
+    .reviews__story-content > *{
+      font-size:calc({{section.settings.reviews__desktop-font-size}}px - 5px);
+    }
+    
+    .read_more_container > *,
+    .reviews__reviews-content > *{
+      font-size:calc({{section.settings.reviews__desktop-font-size}}px - 8px);
+    }
+    
+    .meta-info > *{
+      font-size:calc({{section.settings.reviews__desktop-font-size}}px - 10px);
+      margin:0;
+    }
+
+    .reviews__reviews-title{
+      font-size:{{section.settings.reviews__desktop-font-size}}px
+    }
+    
+    .reviews__story-content span.btn__read-more{
+      font-size: calc({{section.settings.reviews__desktop-font-size}}px - 10px);
+    }
+
+  }
+</style>
+
+<script>
+
+  function read_more(button){
+    let target = button.dataset.target;
+  	let container= document.getElementsByClassName(target)[0];
+
+    container.classList.toggle('closed');
+    button.classList.toggle('closed');
+  }
+  
+  function read_less(clicked_button){
+    let target = clicked_button.dataset.target;
+  	let container= document.getElementsByClassName(target)[0];
+    let readMoreButton = document.getElementById(target);
+    console.log(readMoreButton)
+    container.classList.toggle('closed');
+    readMoreButton.classList.toggle('closed');
+  }
+  
+</script>
+
+{% schema %}
+   {
+    "name": "Wedding Reviews",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Content"
+		},
+		{
+			"type":"text",
+			"id":"reviews__section-title",
+			"label":"Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "reviews__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "reviews__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "reviews__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "reviews__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "reviews__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "reviews__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	],
+	"blocks": [
+		{
+			"name":"Review",
+			"type":"Review",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Review Content"
+				},
+				{
+					"type":"text",
+					"id":"reviews__reviews-title",
+					"label":"Review Title"
+				},
+				{
+					"type":"text",
+					"id":"reviews__reviews-author",
+					"label":"Review Author"
+				},
+				{
+					"type":"product",
+					"id":"reviews__reviews-product",
+					"label":"Product Used"
+				},				
+				{
+					"type":"richtext",
+					"id":"reviews__reviews-content",
+					"label":"Review Content"
+				},
+				{
+					"type":"richtext",
+					"id":"reviews__reviews-content-read-more",
+					"label":"Read More Content"
+				},
+				{
+                    "type": "range",
+                    "id": "reviews__review",
+                    "min": 0,
+                    "max": 5,
+                    "step": 1,
+                    "label": "Hearts",
+                    "default": 0
+                }
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
