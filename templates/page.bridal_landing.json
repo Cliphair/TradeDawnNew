@@ -21,6 +21,21 @@
         "desktop-left-padding": 14
       }
     },
+    "custom_banner_MVAWYW": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div{padding:0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/Untitled_design_9.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/wedding-quiz-mobile.jpg",
+        "url": "shopify:\/\/pages\/wedding-quiz",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "16504667938e1e9aca": {
       "type": "page_description",
       "settings": {
@@ -31,6 +46,8 @@
         "text_colour": "#000000",
         "bg_colour": "#ffffff",
         "max-width": "1250",
+        "custom_description": false,
+        "description": "",
         "description__mobile-font-size": 14,
         "description__mobile-padding-topbottom": 15,
         "description__mobile-padding-sides": 20,
@@ -467,6 +484,7 @@
   },
   "order": [
     "page_header",
+    "custom_banner_MVAWYW",
     "16504667938e1e9aca",
     "1650649506a58795bf",
     "165053331506c1d89f",
