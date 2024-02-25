@@ -1,6 +1,317 @@
+<section class='camp-video__section-container'>
+  <div class='row'>
+    
+    {% for block in section.blocks %}
+    	{% case block.type %}
+        	{%when 'campaign'%}
+      		<div class='col camp-video__container'>
+        		<h2 class='camp-video__section-title'>{{block.settings.camp-video__campaign-title}}</h2>
+        		<div class='campaign__container'>
+                  	<img class='lazyload' data-src='{{ block.settings.camp-video__campaign-image | img_url: 'master' }}' width='{{ block.settings.camp-video__campaign-image.width }}' height='{{ block.settings.camp-video__campaign-image.height }}' alt='{{ block.settings.camp-video__campaign-image.alt }}'>
+                  	<div class = 'campaign-desc'>{{block.settings.camp-video__campaign-text}}</div>
+        		</div>
+              
+        		{% if block.settings.camp-video__campaign-url == nil %}
+                  <a class='camp-video__link-btn' href='https://www.cliphair.co.uk/'>Explore More</a>
+                {% else %}
+                  <a class='camp-video__link-btn' href='{{block.settings.camp-video__campaign-url}}'>Explore More</a>
+                {%endif%}
+      		</div>
+			
+    		{%when 'tutorial'%}
+    		{% assign yt_reference = block.settings.camp-video__video-youtube_url | split: 'watch?v=' %}
+      		<div class='col camp-video__container'>
+        		<h2 class='camp-video__section-title'>{{ block.settings.camp-video__video-title }}</h2>
+        		<iframe class='yt_video'src='https://www.youtube.com/embed/{{yt_reference[1]}}?controls=0' class='video' width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        		
+                {% if block.settings.camp-video__video-url == nil %}
+                  <a class='camp-video__link-btn' href='https://www.cliphair.co.uk/'>Explore More</a>
+                {% else %}
+                  <a class='camp-video__link-btn' href='{{block.settings.camp-video__video-url}}'>Explore More</a>
+                {%endif%}
+              
+      		</div>
+    	{%endcase%}
+    {% endfor %}
+    
+  </div>
+</section>
+
+<style>
+
+  .camp-video__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    padding-top:{{section.settings.camp-video__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.camp-video__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.camp-video__mobile-padding-sides}}px;
+    padding-right:{{section.settings.camp-video__mobile-padding-sides}}px;
+  }
+  
+  .camp-video__section-container > .row{
+  	margin:0;
+  }
+  
+  .camp-video__section-container .col.col-md-6{
+  	display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+  }
+
+  .camp-video__section-container * {
+    font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+    line-height:1.5rem;
+  }
+  
+  .camp-video__container{
+  	display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    max-width:1250px;
+    margin-bottom: 20px;
+  }
+
+  .camp-video__section-title{
+    font-size:{{section.settings.camp-video__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:450px;
+    margin:0 auto;
+    padding: 10px 0 20px;
+  }
+  
+  .campaign__container{
+  	width:100%;
+    height:100%;
+    overflow-x:auto;
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+  }
+  
+  .campaign__container > *{
+  	width:100%;
+    min-width:100%;
+  }
+  
+  .campaign__container > img{
+  	width:100%;
+    height:auto;
+    object-fit:cover;
+  }
+  
+  .campaign-desc > * {
+  	font-size: calc( {{section.settings.camp-video__mobile-font-size}}px - 4px);
+  }
+  
+  .camp-video__link-btn{
+  	padding:10px 20px;
+    border:1px solid black;
+    font-size: {{section.settings.camp-video__mobile-font-size}}px;
+    width:100%;
+    text-decoration:underline;
+    text-align:center;
+    margin: 0 auto;
+  }
+  
+  .yt_video{
+  	height: calc((100vw - ({{section.settings.camp-video__desktop-padding-sides}}px * 2)) / 1.78);
+    margin-bottom:10px;
+  }
+  
+  @media only screen and (min-width:768px){
+    .campaign__container{
+      justify-content:center;
+    }
+    
+  	.campaign__container > *{
+      width:45%;
+      min-width:45%;
+      margin-right:15px;
+    }
+    
+    .camp-video__link-btn{
+      width:unset;
+    }
+  }
+  
+  @media only screen and (min-width:992px){
+  	.camp-video__section-container{
+      padding-top:{{section.settings.camp-video__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.camp-video__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.camp-video__desktop-padding-sides}}px;
+      padding-right:{{section.settings.camp-video__desktop-padding-sides}}px;
+    }
+    
+    .camp-video__section-container * {
+      line-height:2rem;
+    }
+    
+    .camp-video__section-title{
+      font-size:{{section.settings.camp-video__desktop-font-size}}px;
+    }
+    
+    .camp-video__link-btn{
+      font-size: {{section.settings.camp-video__desktop-font-size}}px;
+    }
+    
+    .campaign-desc > * {
+      font-size: calc( {{section.settings.camp-video__desktop-font-size}}px - 9px);
+    }
+
+  }
+  
+  @media only screen and (min-width:1251px){
+    .yt_video{
+  		height: calc((1250px - ({{section.settings.camp-video__desktop-padding-sides}}px * 2)) / 1.78);
+  	}
+  }
+
+</style>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "2021 and Tutorial",
+    "settings": [
+   		{
+			"type": "header",
+			"content": "Layout"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "camp-video__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "camp-video__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "camp-video__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "camp-video__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "camp-video__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "camp-video__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+    ],
+	"blocks": [
+		{
+			"name":"Last Campaign",
+			"type":"campaign",
+			"limit":1,
+			"settings":[
+				{
+					"type":"header",
+					"content": "Last Campaign"
+				},				
+				{
+					"type":"text",
+					"id":"camp-video__campaign-title",
+					"label":"Title"
+				},
+				{
+					"type": "image_picker",
+					"id": "camp-video__campaign-image",
+					"label": "Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+                    "type": "richtext",
+                    "id": "camp-video__campaign-text",
+                    "label": "Description"
+                },
+				{
+                    "type": "url",
+                    "id": "camp-video__campaign-url",
+                    "label": "Page URL"
+                }
+			]
+		},
+		{
+			"name":"Tutorial",
+			"type":"tutorial",
+			"limit":1,
+			"settings":[
+				{
+					"type":"header",
+					"content": "Tutorial"
+				},				
+				{
+					"type":"text",
+					"id":"camp-video__video-title",
+					"label":"Title"
+				},
+				{
+                    "type": "url",
+                    "id": "camp-video__video-url",
+                    "label": "Page URL"
+                },
+				{
+                    "type": "url",
+                    "id": "camp-video__video-youtube_url",
+                    "label": "Youtube video URL"
+                }
+			]
+		}
+	]
   }
 {% endschema %}
+
