@@ -418,6 +418,10 @@ input.radio:checked + label h3{
   line-height:1.2em;
 }
 
+.answer__text-container > h3 a{
+  color:inherit;
+}
+
 .answer__text-container > h3 > a:hover{
   color:black;
   text-underline-offset:0.2rem;
