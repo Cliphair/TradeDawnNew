@@ -35,11 +35,34 @@
         "desktop_sides_padding": 20
       }
     },
+    "custom_banner_ypVjY6": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/MicrosoftTeams-image_31_ab6ad191-2bda-4940-8f30-b0a500099f50.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/mobile_banner.jpg",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "16504667938e1e9aca": {
       "type": "page_description",
       "disabled": true,
       "settings": {
         "section_title": "",
+        "title2": "",
+        "header_colour": "#000000",
+        "header_bold": false,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "max-width": "",
+        "custom_description": false,
+        "description": "",
         "description__mobile-font-size": 12,
         "description__mobile-padding-topbottom": 15,
         "description__mobile-padding-sides": 20,
@@ -332,6 +355,7 @@
     },
     "16506235132555e8b4": {
       "type": "bridal_blogs",
+      "disabled": true,
       "settings": {
         "enable": true,
         "block_width": "fullwidth",
@@ -505,6 +529,7 @@
   "order": [
     "page_header",
     "1651073919ca145ff7",
+    "custom_banner_ypVjY6",
     "16504667938e1e9aca",
     "1650649506a58795bf",
     "165053331506c1d89f",
