@@ -145,6 +145,9 @@
     },
     "962c8e4b-0648-4235-b6a6-143559c32b12": {
       "type": "video-banner",
+      "custom_css": [
+
+      ],
       "settings": {
         "url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6952d1a19c594e65950681743fa3f72c.mp4",
         "image": "shopify:\/\/shop_images\/video-fallback.jpg",
@@ -736,7 +739,7 @@
       "settings": {
         "bg_color": "#c8c8c8",
         "max_width": "1024",
-        "height": 0.5,
+        "height": 1,
         "mobile-p_top-bottom": 10,
         "mobile-p_sides": 10,
         "desktop-p_top-bottom": 10,
@@ -905,7 +908,7 @@
     "6c9b1c46-fc59-48a0-aba8-8644d4d86ee6": {
       "type": "custom-banner",
       "custom_css": [
-        "div > div{padding:0;}"
+        "div > div {padding: 0;}"
       ],
       "settings": {
         "max-width": "1440",
@@ -1109,6 +1112,9 @@
     },
     "c40d35d5-1ed0-4861-90e6-3cbeff9d1e0c": {
       "type": "article-trending-tag-bridal23",
+      "custom_css": [
+        "a {text-decoration: none;}"
+      ],
       "settings": {
         "header": "THE CLIPHAIR’S BRIDAL DIGEST",
         "intro": "",
