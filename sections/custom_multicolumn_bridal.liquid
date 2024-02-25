@@ -261,7 +261,7 @@
   #{{ section.id }} .video_container .videos .button_container > .play_button{
     color:{{ section.settings.play-color }};
     opacity:0.6;
-    font-size:{{ section.settings.play-size-mobile }}px;
+    line-height:1;
     cursor:pointer;
   }
 
@@ -271,6 +271,15 @@
 
   #{{ section.id }} .video_container .videos .button_container > .play_button:hover{
     opacity:1;
+  }
+
+  #{{ section.id }} .video_container .videos .button_container > .play_button svg{
+    box-sizing:content-box;
+    width:{{ section.settings.play-size-mobile }}px;
+    height:{{ section.settings.play-size-mobile }}px;
+    padding:10px;
+    border:3px solid;
+    border-radius:50%;
   }
 
   #{{section.id}} .arrow-container{
@@ -450,9 +459,9 @@
             <div class='placeholder_image_container'>
               <img loading='lazy' src='{{ block.settings.placeholder | image_url }}' class='placeholder_image lazyload' height='{{ block.settings.placeholder.height }}' width='{{ block.settings.placeholder.width }}' alt='{{ block.settings.placeholder.alt }}'>
               <div class='button_container'>
-                <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}'><i class="icon icon-play"></i></span>
+                <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }} {% if block.settings.video_link_desktop %}mobile_btn{% endif %}'>{% render 'icon-play' %}</span>
                 {% if block.settings.video_link_desktop %}
-                  <span data-url='{{ block.settings.video_link_desktop }}' class='play_button play_button_{{ randomNumber }} desktop_btn'><i class="icon icon-play"></i></span>
+                  <span data-url='{{ block.settings.video_link_desktop }}' class='play_button play_button_{{ randomNumber }} desktop_btn'>{% render 'icon-play' %}</span>
                 {% endif %}
               </div>
             </div>
