@@ -91,15 +91,21 @@
   #section-{{ section.id }} .scroll-arrow.right{
     right: 15px;
     text-align:right;
+    transform:rotate(270deg);
   }
 
   #section-{{ section.id }} .scroll-arrow.left{
     left: 15px;
     text-align:left;
+    transform:rotate(90deg);
   }
   
   #section-{{ section.id }} .scroll-arrow.mobile-none{
     display:none;
+  }
+
+  #section-{{ section.id }} .scroll-arrow svg{
+    width:{{ section.settings.mobile-arrow-size }}px;
   }
 
   #section-{{ section.id }} .main-button-container > .section-btn{
