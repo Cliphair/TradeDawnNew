@@ -7,7 +7,7 @@
       		<div class='col camp-video__container'>
         		<h2 class='camp-video__section-title'>{{block.settings.camp-video__campaign-title}}</h2>
         		<div class='campaign__container'>
-                  	<img class='lazyload' data-src='{{ block.settings.camp-video__campaign-image | img_url: 'master' }}' width='{{ block.settings.camp-video__campaign-image.width }}' height='{{ block.settings.camp-video__campaign-image.height }}' alt='{{ block.settings.camp-video__campaign-image.alt }}'>
+                  	<img class='lazyload' loading='lazy' src='{{ block.settings.camp-video__campaign-image | img_url: 'master' }}' width='{{ block.settings.camp-video__campaign-image.width }}' height='{{ block.settings.camp-video__campaign-image.height }}' alt='{{ block.settings.camp-video__campaign-image.alt }}'>
                   	<div class = 'campaign-desc'>{{block.settings.camp-video__campaign-text}}</div>
         		</div>
               
