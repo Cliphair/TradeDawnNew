@@ -1,6 +1,476 @@
+<section class='pin__section-container'>
+  <h2 class='pin__section-title'>
+    {{section.settings.pin__section-title}}
+    <img src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/arrow_isolated.png?v=1650538505'>
+  </h2>
+  
+  <div class='pin__styles-container'>
+  	{% for block in section.blocks %}
+    	{% case block.type %}
+    		{%when 'image'%}
+    		<div class='pin'>
+              <div class='pin__img-container'>
+                <img class='pin__image lazyload' loading='lazy' src='{{ block.settings.pin__image | img_url: 'master' }}' alt='{{ block.settings.pin__pin-title }}'>
+                <div class='pin__image-inside-border'></div>
+              </div>
+              {% if block.settings.pin__pin-title %}
+              	<h3 class='pin__style-title'>{{ block.settings.pin__pin-title }}</h3>
+              {% endif %}
+            </div>
+    		
+    		{%when 'video'%}
+    		<div class='pin'>
+              <div class='pin__img-container'>
+                <img class='pin__image lazyload' loading='lazy' src='{{ block.settings.pin__placeholder-image | img_url: 'master' }}' alt='{{ block.settings.pin__pin-title }}'>
+                <div class='pin__btn-container'>
+                  <a class='pin__paly-btn' data-url='{{block.settings.pin__video-url}}' ><i class="fa-solid fa-play"></i></a>
+                </div>
+              </div>
+              {% if block.settings.pin__pin-title %}
+              	<h3 class='pin__style-title'>{{ block.settings.pin__pin-title }}</h3>
+              {% endif %}
+            </div>
+    
+    		{%when 'embed'%}
+    		<div class='pin pin_embed'>
+              <div class='pin__img-container'>
+                {%assign url = block.settings.pin__page-url | split: 'pin/' %}
+                {%assign pinterest_id = url[1] | replace: "/", ""%}
+                <center><iframe src="https://assets.pinterest.com/ext/embed.html?id={{pinterest_id}}" height="532" width="345" frameborder="0" scrolling="no" ></iframe></center>
+              </div>
+              {% if block.settings.pin__pin-title %}
+              	<h3 class='pinpin__style-title'>{{ block.settings.pin__pin-title }}</h3>
+              {% endif %}
+            </div>
+    	{% endcase %}
+    	
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .pin__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    padding-top:{{section.settings.pin__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.pin__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.pin__mobile-padding-sides}}px;
+    padding-right:{{section.settings.pin__mobile-padding-sides}}px;
+  }
+  
+  .pin__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+  }
+  
+  .pin__section-title{
+    font-size:{{section.settings.pin__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:450px;
+    margin:0 auto;
+    padding: 10px 0;
+    border:1px solid black;
+    position:relative;
+  }
+  
+  .pin__section-title > img{
+    height: 35px;
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+  }
+  
+  .pin__styles-container{
+  	width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-top:15px;
+  }
+  
+  .pin{
+  	width:45%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 15px;
+  }
+  
+  .pin_embed{
+  	width:100%
+  }
+  
+  .pin__img-container{
+  	width:100%;
+    position:relative;
+    margin-bottom: 5px;
+  }
+  
+  .pin__image{
+  	width:100%;
+    height:100%;
+    object-fit:cover; 
+  }
+  
+  .pin__img-container > .pin__image-inside-border{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:5px;
+    border:1px solid white;
+  }
+  
+  .pin > .pin__style-title{
+  	text-transform:capitalize;
+    font-size: calc({{section.settings.pin__mobile-font-size}}px - 3px)
+  }
+  
+  .pin__btn-txt{
+  	padding:0px 20px;
+    position:relative;
+    border:1px solid black;
+    font-size: calc({{section.settings.pin__mobile-font-size}}px - 2px)
+  }
+  
+  .pin__btn-txt:hover .pin__btn-pointer {
+  	color:#9c3078;
+  }
+  
+  .pin__btn-pointer{
+  	position:absolute;
+    right:-6px;
+    bottom:0px;
+    font-size:17px;
+  }
+  
+  .pin__btn-container{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .pin__paly-btn{
+    font-size:calc({{section.settings.pin__mobile-font-size}}px + 15px);
+    border-radius:50%;
+    border:1px solid white;
+    padding:10px;
+    cursor:pointer;
+    background:white;
+  }
+  
+  .pin__paly-btn > *{
+  	color:black;
+    opacity:0.5;
+  }
+  
+  .pin__paly-btn:hover > *{
+    opacity:1;
+  }
+  
+  .video__bg{
+  	position:absolute;
+    z-index:1000000;
+    height:100%;
+    width:100%;
+    top:0;
+    right:0;
+    background:#000000a8;
+    padding: 10px 20px;
+    display:flex;
+  }
+  
+  .video__container{
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+  }
+  
+  .close__video{
+  	width:100%;
+    text-align:right;
+    cursor:pointer;
+  }
+  
+  .close__video > *{
+  	color:white;
+    font-size: calc({{section.settings.pin__mobile-font-size}}px - 2px);
+    opacity:0.5;
+  }
+  
+  .close__video > *:hover{
+    opacity:1;
+  }
+  
+  .video__container > .pin__video{
+    width: 100%;
+  }
+  
+  @media only screen and (min-width:768px){
+  	.pin_embed{
+      width:45%;
+    }
+  }
+  
+  @media only screen and (min-width:992px){
+  	.pin__section-container{
+      padding-top:{{section.settings.pin__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.pin__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.pin__desktop-padding-sides}}px;
+      padding-right:{{section.settings.pin__desktop-padding-sides}}px;
+    }
+    
+    .pin__section-title{
+      font-size:{{section.settings.pin__desktop-font-size}}px;
+    }
+    
+    .pin__section-title > img{
+      height: 40px;
+    }
+    
+    .pin > .pin__style-title{
+      font-size: calc({{section.settings.pin__desktop-font-size}}px - 7px)
+    }
+    
+    .pin__btn-txt{
+      font-size: calc({{section.settings.pin__desktop-font-size}}px - 5px)
+    }
+    
+    .close__video > *{
+      font-size: calc({{section.settings.pin__desktop-font-size}}px - 2px)
+    }
+  }
+  
+  @media only screen and (min-width:1200px){
+    .pin{
+      width:30%;
+    }
+    
+    .pin__btn-txt{
+      padding:5px 20px;
+    }
+    
+    .pin__btn-pointer{
+      font-size:20px;
+    }
+  }
+</style>
+
+<script>
+  
+  let pinPlayBtns = $('.pin__paly-btn');
+  pinPlayBtns.click(function(){
+   pinVideoTag(this.dataset.url)
+  });
+  
+  function pinVideoTag(videoUrl){
+  	let video = `
+		<div id='pin__video-container' class='video__bg'>
+			<div class='video__container'>
+			  <div class='close__video'><i onclick='pinCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+              <video class='pin__video' autoplay muted controls>
+                  <source src="${videoUrl}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+			</div>
+		</div>
+	`;
+    jQuery('body').prepend(video)
+
+  }
+  
+  function pinCloseBtn(){
+  	$("#pin__video-container").remove();
+  } 
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Pinterest Embed",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Section Settings"
+		},
+		{
+			"type":"text",
+			"id":"pin__section-title",
+			"label":"Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "pin__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "pin__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "pin__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "pin__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "pin__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "pin__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	],
+	"blocks": [
+		{
+			"name":"Video",
+			"limit":6,
+			"type":"video",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Video Settings"
+				},
+				{
+					"type":"text",
+					"id":"pin__pin-title",
+					"label":"Video Title"
+				},
+				{
+					"type": "image_picker",
+					"id": "pin__placeholder-image",
+					"label": "Placeholder Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+					"type": "url",
+					"id": "pin__video-url",
+					"label": "Video URL",
+					"info": "Add the video URL that you want to display."
+				},
+				{
+					"type": "url",
+					"id": "pin__page-url",
+					"label": "Page URL",
+					"info": "Add the page URL that you want to send the user to."
+				}
+			]
+		},
+		{
+			"name":"Image",
+			"limit":6,
+			"type":"image",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Image Settings"
+				},
+				{
+					"type":"text",
+					"id":"pin__pin-title",
+					"label":"Image Title"
+				},
+				{
+					"type": "image_picker",
+					"id": "pin__image",
+					"label": "Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+					"type": "url",
+					"id": "pin__page-url",
+					"label": "Page URL",
+					"info": "Add the page URL that you want to send the user to."
+				}
+			]
+		},
+		{
+			"name":"Embed",
+			"limit":6,
+			"type":"embed",
+			"settings":[
+				{
+					"type":"header",
+					"content": "Image Settings"
+				},
+				{
+					"type":"text",
+					"id":"pin__pin-title",
+					"label":"Image Title"
+				},
+				{
+					"type": "image_picker",
+					"id": "pin__image",
+					"label": "Image",
+					"info": "Image size 750px x 500px"
+				},
+				{
+					"type": "url",
+					"id": "pin__page-url",
+					"label": "Page URL",
+					"info": "Add the post URL that you want to embed."
+				}
+			]
+		}
+	]
   }
 {% endschema %}
