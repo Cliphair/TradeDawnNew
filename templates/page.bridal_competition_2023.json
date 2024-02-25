@@ -198,6 +198,50 @@
         "form_width": 50
       }
     },
+    "bridal23_custom-text2": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "b2e25af8-50df-4002-b665-35e07beb662c": {
+          "type": "title",
+          "settings": {
+            "title": "<h2>FURTHER QUESTIONS?<\/h2>"
+          }
+        },
+        "1a47bcbd-1805-4f90-888f-1e086368cbe3": {
+          "type": "button",
+          "settings": {
+            "btn-text": "MESSAGE US",
+            "btn-url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1"
+          }
+        }
+      },
+      "block_order": [
+        "b2e25af8-50df-4002-b665-35e07beb662c",
+        "1a47bcbd-1805-4f90-888f-1e086368cbe3"
+      ],
+      "settings": {
+        "max-width": "1440",
+        "bg-colour": "#ffffff",
+        "mobile-p_top": 10,
+        "mobile-p_bottom": 10,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 10,
+        "desktop-p_bottom": 20,
+        "desktop-p_right": 10,
+        "desktop-p_left": 10,
+        "title-mobile-f_size": 16,
+        "title-desktop-f_size": 22,
+        "title-color": "#000000",
+        "text-mobile-f_size": 12,
+        "text-desktop-f_size": 18,
+        "text-color": "#000000",
+        "btn-mobile-f_size": 12,
+        "btn-desktop-f_size": 18,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#000000"
+      }
+    },
     "eaefe603-7ede-4341-b88f-d9256ef67c6b": {
       "type": "custom-banner",
       "custom_css": [
@@ -687,6 +731,7 @@
     "16642871960d40fae8",
     "19a2f8be-2f92-404c-bf35-436c5256aed0",
     "57c89bc1-e173-4782-bfe1-7229f34f91ab",
+    "bridal23_custom-text2",
     "eaefe603-7ede-4341-b88f-d9256ef67c6b",
     "eb3057fc-b572-468c-b752-4ea80f4bc4a3",
     "dadfbecf-21c8-4943-98aa-dc17b5361d98",
