@@ -189,11 +189,11 @@
           {% case block.type %}
             {% when 'image' %}
               <div class='img-container carrousel-item'>
-                <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
               </div>
             {% when 'video' %}
               <div class='video-container carrousel-item'>
-                <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
                 <div class='play-btn-container'>
                   <span data-url="{{ block.settings.video-url }}" class='play_button play_button_{{ randomNumber }}'><i class="icon icon-play"></i></span>
                 </div>
@@ -205,7 +205,7 @@
             <div class='img-container carrousel-item'>
               {% for block in section.blocks %}
                 {% if block.type == "product-image" %}
-                  <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                  <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
                   {% if block.settings.url %}<a href='{{ block.settings.url }}' class='shop-btn mobile'style="">SHOP NOW</a>{% endif %}
                 {% endif %}
               {% endfor %}
@@ -233,7 +233,7 @@
       <div class='img-container mobile'>
         {% for block in section.blocks %}
           {% if block.type == "product-image" %}
-            <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+            <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
           {% endif %}
         {% endfor %}
       </div>
@@ -242,11 +242,17 @@
 </section>
 
 <script>
-  var playBtns{{randomNumber}} = $('.play_button_{{randomNumber}}');
+  var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
 
-  playBtns{{randomNumber}}.click(function(){
-  	btsVideoTag(this.dataset.url)
-  });  
+  for (let button of playBtns{{randomNumber}}){
+    button.addEventListener('click', function(){
+      btsVideoTag(button.dataset.url)
+    })
+  }
+
+  // playBtns{{randomNumber}}.click(function(){
+  // 	btsVideoTag(this.dataset.url)
+  // });  
 </script>
 
 {% schema %}
