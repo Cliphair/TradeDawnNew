@@ -44,11 +44,11 @@
               {% assign missign_hearts = review_total | minus: hearts %}	
 
               {% for i in (1..hearts) %}
-                <span class='stories__story-review'><i class="fa-solid fa-heart pink"></i></span>
+                <span class='stories__story-review pink'>{% render 'icon-heart' %}</span>
               {% endfor %}
 
               {% for i in (1..missign_hearts) %}
-                <span class='stories__story-review'><i class="fa-solid fa-heart grey"></i></span>
+                <span class='stories__story-review grey'>{% render 'icon-heart' %}</span>
               {% endfor %}
 
             </div>
@@ -60,7 +60,7 @@
     {% if section.settings.stories__section-url %}
       <a href='{{section.settings.stories__section-url}}' class='last-card'>
         <p>{{section.settings.stories__section-btn-title}}</p>
-        <p><i class="fa-solid fa-arrow-right"></i></p>
+        <p>{% render 'icon-arrow' %}</p>
       </a>
     {% endif %}
     
@@ -73,8 +73,8 @@
   {% endif %}
   
   <div class='arrow-container'>
-    <span id='arrow-left' class='left'><i class="fa-solid fa-angle-left"></i></span>
-    <span id='arrow-right' class='right'><i class="fa-solid fa-angle-right"></i></span>
+    <span id='arrow-left' class='left'>{% render 'icon-caret' %}</span>
+    <span id='arrow-right' class='right'>{% render 'icon-caret' %}</span>
   </div>
   
 </section>
