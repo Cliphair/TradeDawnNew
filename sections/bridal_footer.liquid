@@ -1,6 +1,194 @@
+<section class='footer__section-container'>
+  <a class='footer__url' href='{{section.settings.footer__link}}' target='_blank'>
+  	<img class='lazyload footer__img' width='1250' height='258' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/wp3.jpg?v=1681907011' alt='WhatsApp QR code'>
+  </a>
+</section>
+
+<style>
+	.footer__section-container{
+      width:100%;
+      max-width:1250px;
+      margin:0 auto;
+      padding-top:{{section.settings.footer__mobile-padding-topbottom}}px;
+      padding-bottom:{{section.settings.footer__mobile-padding-topbottom}}px;
+      padding-left:{{section.settings.footer__mobile-padding-sides}}px;
+      padding-right:{{section.settings.footer__mobile-padding-sides}}px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      margin-bottom:-30px;
+    }
+
+    .footer__section-container * {
+      font-family: 'Libre Baskerville', serif;
+      font-weight:400;
+      color:black;
+      font-size: calc({{section.settings.footer__mobile-font-size}}px - 2px);
+      text-align:left;
+    }
+  
+    .footer__url{
+      width:100%;
+      min-height:92px;
+    }
+  
+  	.footer__url .footer__img{
+      width:100%;
+      height:auto;
+      min-height:92px;
+      object-fit:cover;
+    }
+  
+    .footer__section-container > .footer__title{
+	  font-size: {{section.settings.footer__mobile-font-size}}px;
+      text-decoration:underline;
+      margin-bottom:10px;
+    }
+  
+  	.footer_text{
+    	text-align:center;
+      	margin:0;
+    }
+  
+    .footer__img-container{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 15px 0;
+    }
+  
+    .qr-code{
+      width:100px;
+    }
+  	
+    .footer__arrow{	
+      position: absolute;
+      width: 20px;
+      left: 120px;
+      top: -12px;
+    }
+  
+    .footer__link{
+      text-decoration:underline;
+    }
+
+  	@media only screen and (min-width:992px){
+      .footer__section-container{
+        padding-top:{{section.settings.footer__desktop-padding-topbottom}}px;
+        padding-bottom:{{section.settings.footer__desktop-padding-topbottom}}px;
+        padding-left:{{section.settings.footer__desktop-padding-sides}}px;
+        padding-right:{{section.settings.footer__desktop-padding-sides}}px;
+      }
+
+      .footer__section-container * {
+        font-size: calc({{section.settings.footer__desktop-font-size}}px - 3px);
+      }
+      
+      .footer__section-container > .footer__title{
+        font-size: {{section.settings.footer__desktop-font-size}}px;
+      }
+      
+      .footer__img-container{
+        margin: 25px 0;
+      }
+    }
+</style>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Bridal Footer",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Section Settings"
+		},
+		{
+			"type":"text",
+			"id":"footer__title",
+			"label":"Section Title"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "footer__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "footer__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "footer__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "footer__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "footer__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "footer__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Content Settings"
+		},
+		{
+			"type": "url",
+			"id": "footer__link",
+			"label": "Page URL",
+			"info": "Add the page URL that you want to send the user to."
+		}
+	]
   }
 {% endschema %}
+
