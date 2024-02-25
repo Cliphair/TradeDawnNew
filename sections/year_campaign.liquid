@@ -192,7 +192,7 @@
   }
   
   .video__bg{
-    position:fixed;
+    position:fixed!important;
     z-index:1000000;
     height:100%;
     width:100%;
@@ -279,7 +279,6 @@
   let yearPlayBtns = document.querySelectorAll('.year__paly-btn');
   for (let button of yearPlayBtns){
     button.addEventListener('click', function(){
-      console.log('test')
       yearVideoTag(button.dataset.url)
     });
   }
