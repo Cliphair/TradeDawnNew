@@ -1,6 +1,370 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<div class="block {{ section.settings.block_width }} {{ section.settings.outer_margin }} full-nopad blogs__section-container">
+    <div class="container" style='margin-top:0; margin-bottom:25px'>
+        <div class="container">
+            <div class="title main_title">
+                <h2 class='blogs__section-title'>{{ section.settings.heading }}</h2>
+            </div>
+        </div>
+      	
+      	<div class='images_container'> 
+          <a href='/blogs/hair-blog/tagged/wedding-hair' class='img_mobile'><img loading='lazy' src='{{ section.settings.m_image | img_url: 'master' }}' width='{{ section.settings.m_image.width }}' height='{{ section.settings.m_image.height }}' alt='{{ section.settings.m_image.alt }}' class='lazyload'></a>
+          <a href='/blogs/hair-blog/tagged/wedding-hair' class='img_desktop'><img loading='lazy' src='{{ section.settings.d_image | img_url: 'master' }}' width='{{ section.settings.d_image.width }}' height='{{ section.settings.d_image.height }}' alt='{{ section.settings.d_image.alt }}' class='lazyload'></a>  
+      	</div>
+    
+      
+      	
+    </div>
+  	
+  	<a class='blogs__explore-btn' href='https://www.cliphair.co.uk/blogs/hair-blog/tagged/wedding-hair'>Explore More</a>
+</div>
+
+
+<style>
+  .blogs__section-container{
+    max-width:1250px;
+    width:90%;
+    margin:0 auto;
+    position:relative;
+    padding-top:{{section.settings.blogs__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.blogs__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.blogs__mobile-padding-sides}}px;
+    padding-right:{{section.settings.blogs__mobile-padding-sides}}px;
+    text-align:center;
+    margin-bottom:20px;
   }
+  
+  .blogs__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+  }
+  
+  .blogs__section-title{
+    font-size:{{section.settings.blogs__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:450px;
+    margin: 0 auto;
+  }
+  
+  .blogs__description-container{
+  	text-align:center;
+    width:100%;
+    margin:5px 0 15px;
+  }
+  
+  .blogs__description-container > *{
+  	font-size:calc({{section.settings.blogs__mobile-font-size}}px - 2px);
+  }
+  
+  .blog-carousel__card{
+      position:relative;
+      height:100%;
+      min-height: 350px;
+  }
+
+  .blog-carousel__img{
+      position: absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      object-fit:cover;
+      height:100%;
+      width:100%;
+      z-index:-2;
+      padding:10px;
+  }
+
+  .blog-carousel__txt-container{
+      z-index:10;
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 20px;
+  }
+
+  .blog-carousel__txt-container > *{
+      text-transform:captalize;
+      padding:5px;
+      text-align:center;  	
+  }
+  
+  .blogs__explore-btn{
+  	padding:10px 20px;
+    border:1px solid black;
+    font-size: {{section.settings.blogs__mobile-font-size}}px;
+    width:100%;
+    text-decoration:underline;
+    text-align:center;
+    margin: 0 auto;
+  }
+  
+  .blogs__section-container .title{
+  	margin-bottom:0;
+  }
+  
+  .fromBlog-wrapper{
+  	background-color:white;
+  }
+  
+  .fromBlog-item-inside > *{
+  	color:white;
+  }
+
+  .fromBlog-style-2 .fromBlog-item{
+      background: #0000003d;
+  }
+
+  .fromBlog-style-2 .fromBlog-item-bg img{
+      min-height:100%;
+      min-width:100%;
+      height:100%;
+      width:100%;
+      object-fit:cover;
+  }
+
+  .fromBlog-style-2 .fromBlog-item-inside{
+      background: rgb(0 0 0 / 42%);
+  }
+
+  .float-right{
+      float: right!important;
+  }
+  
+  .fromBlog-style-2.fromBlog-carousel.slick-initialized .fromBlog-item{
+  	height:473px;
+  }
+  
+  .fromBlog-style-2 .fromBlog-item-bg{
+  	height:unset;
+  }
+  
+  .arrow_container{
+  	margin-bottom:10px;
+  }
+  
+  .images_container{
+  	width:100%;
+    margin-top:10px;
+  }
+  
+  .img_mobile,
+  .img_desktop{
+  	width:100%;
+  }
+  
+  .img_mobile > img,
+  .img_desktop > img{
+  	width:100%;
+    height: auto;
+    object-fit:cover;
+  }
+  
+  .img_desktop{
+  	display:none;
+    max-width:950px;
+    margin:0 auto;
+  }
+  
+  @media only screen and (min-width:768px){
+    .slick-track{
+    	align-items:center;
+    }
+    
+    .img_desktop{
+      display:block;
+    }
+    
+    .img_mobile{
+      display:none;
+    }
+  }
+  
+  @media only screen and (min-width:992px){
+  	.blogs__section-container{
+      padding-top:{{section.settings.blogs__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.blogs__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.blogs__desktop-padding-sides}}px;
+      padding-right:{{section.settings.blogs__desktop-padding-sides}}px;
+    }
+    
+    .blogs__description-container > *{
+      font-size:calc({{section.settings.blogs__mobile-font-size}}px - 7px);
+    }
+    
+    .blogs__section-title{
+      font-size:{{section.settings.blogs__desktop-font-size}}px;
+    }
+    
+    .blogs__explore-btn{
+      font-size: calc({{section.settings.blogs__desktop-font-size}}px - 2px)
+    }
+  }
+  
+  @media only screen and (max-width:374px){
+    .fromBlog-style-2 .fromBlog-item-title{
+    	max-height: 100px;
+    	overflow: hidden;
+    }
+  }
+</style>
+
+{% schema %}
+{
+	"name": "New Bridal Blogs",
+	"class": "index-section",
+	"settings": [
+		{
+			"type": "image_picker",
+			"id":"m_image",
+			"label": "Mobile Image"
+		},
+		{
+			"type": "image_picker",
+			"id":"d_image",
+			"label": "Desktop Image"
+		},
+		{
+			"type": "header",
+			"content": "Layout"
+		},
+		{
+			"type":"select",
+			"id":"block_width",
+			"label":"Width",
+			"options":[
+				{"value":"boxed","label":"Boxed"},
+				{"value":"fullwidth","label":"Fullwidth"},
+				{"value":"global_width","label":"Use global site width"}
+			],
+			"default":"fullwidth",
+			"info":"click Save to see changes"
+		},
+		{
+			"type": "select",
+			"id": "outer_margin",
+			"label": "Outer top margin",
+			"options":[
+				{"value":"offset-top-0","label":"None"},
+				{"value":"offset-top-30","label":"30px"},
+				{"value":"offset-top-40","label":"40px"},
+				{"value":"offset-top-50","label":"50px"}
+			],
+			"default": "offset-top-50"
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "blogs__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "blogs__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "blogs__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "blogs__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "blogs__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "blogs__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "General"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Title",
+			"default":"From Blog"
+		},
+		{
+			"type": "textarea",
+			"id": "description",
+			"label": "Description"
+		},
+		{
+			"type": "blog",
+			"id": "from_blog_id",
+			"label": "Blog category"
+		},
+		{
+			"type": "text",
+			"id": "from_blog_limit",
+			"label": "Limit posts",
+			"default": "3"
+		},
+		{
+    		"type": "select",
+    		"id": "show_view_all",
+    		"label": "Show 'Show all' button",
+    		"options":[
+        		{"value":"none","label":"None"},
+        		{"value":"left","label":"Near carousel title"},
+        		{"value":"right","label":"Near arrows"}
+    		],
+    		"default": "none"
+		}
+	]
+}
 {% endschema %}

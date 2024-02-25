@@ -1,19 +1,483 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "page_header": {
+      "type": "page-header",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "custom-title": true,
+        "first-line": "Welcome to Cliphair Wedding Collection > Bridal Edit",
+        "second-line": "",
+        "hide": false,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "mobile-font-size": 18,
+        "mobile-top-padding": 10,
+        "mobile-bottom-padding": 10,
+        "mobile-right-padding": 10,
+        "mobile-left-padding": 10,
+        "desktop-font-size": 25,
+        "desktop-top-padding": 14,
+        "desktop-bottom-padding": 14,
+        "desktop-right-padding": 14,
+        "desktop-left-padding": 14
+      }
+    },
+    "16504667938e1e9aca": {
+      "type": "page_description",
+      "settings": {
+        "section_title": "",
+        "title2": "",
+        "header_colour": "#000000",
+        "header_bold": false,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "max-width": "1250",
+        "description__mobile-font-size": 14,
+        "description__mobile-padding-topbottom": 15,
+        "description__mobile-padding-sides": 20,
+        "description__desktop-font-size": 21,
+        "description__desktop-padding-topbottom": 30,
+        "description__desktop-padding-sides": 30
+      }
+    },
+    "1650649506a58795bf": {
+      "type": "year_campaign",
+      "blocks": {
+        "141490f9-93e8-49d6-9f0c-126efd0cb7c5": {
+          "type": "video",
+          "settings": {
+            "year__bts-title": "BTS Video",
+            "year__placeholder-image": "shopify:\/\/shop_images\/BTS_video.jpg",
+            "year__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/BRIDAL_BTS.mp4?v=1650879777",
+            "year__page-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "141490f9-93e8-49d6-9f0c-126efd0cb7c5"
+      ],
+      "settings": {
+        "year__section-title": "Cliphair Wedding Campaign 2022",
+        "year__mobile-font-size": 15,
+        "year__mobile-padding-topbottom": 0,
+        "year__mobile-padding-sides": 15,
+        "year__desktop-font-size": 25,
+        "year__desktop-padding-topbottom": 0,
+        "year__desktop-padding-sides": 20
+      }
+    },
+    "165053331506c1d89f": {
+      "type": "hair_styles",
+      "blocks": {
+        "a1af7f81-a6dc-4733-9906-d768a78d5e31": {
+          "type": "h_style",
+          "settings": {
+            "style__style-title": "Half Up Half Down",
+            "styles__btn-text": "",
+            "style__style-image": "shopify:\/\/shop_images\/thumbnail_1.jpg",
+            "circle": false,
+            "style__style-url": "shopify:\/\/pages\/half-up-half-down-wedding-lookbook"
+          }
+        },
+        "494b8615-3387-457d-ad91-e1259e299bbe": {
+          "type": "h_style",
+          "settings": {
+            "style__style-title": "Ponytail",
+            "styles__btn-text": "",
+            "style__style-image": "shopify:\/\/shop_images\/thumbnail_4.jpg",
+            "circle": false,
+            "style__style-url": "shopify:\/\/pages\/wedding-ponytail-lookbook"
+          }
+        },
+        "71d6318e-2aca-40d4-961c-5584e8a15159": {
+          "type": "h_style",
+          "settings": {
+            "style__style-title": "Hair Up",
+            "styles__btn-text": "",
+            "style__style-image": "shopify:\/\/shop_images\/thumbnail_2_7d781ced-534c-46be-96aa-ff47c12e8ed5.jpg",
+            "circle": false,
+            "style__style-url": "shopify:\/\/pages\/wedding-updo-hair-extensions"
+          }
+        },
+        "fbca1e34-1fe1-404c-816f-54ac61514ec6": {
+          "type": "h_style",
+          "settings": {
+            "style__style-title": "Hair Down",
+            "styles__btn-text": "",
+            "style__style-image": "shopify:\/\/shop_images\/tumbnail_5.jpg",
+            "circle": false,
+            "style__style-url": "shopify:\/\/pages\/wedding-hair-down-lookbook"
+          }
+        },
+        "828cc7e9-4cb1-4c67-a5cf-d0d5d47e6f13": {
+          "type": "h_style",
+          "settings": {
+            "style__style-title": "Braid",
+            "styles__btn-text": "",
+            "style__style-image": "shopify:\/\/shop_images\/thumbnail_3.jpg",
+            "circle": false,
+            "style__style-url": "shopify:\/\/pages\/wedding-braid-hair-extensions"
+          }
+        }
+      },
+      "block_order": [
+        "a1af7f81-a6dc-4733-9906-d768a78d5e31",
+        "494b8615-3387-457d-ad91-e1259e299bbe",
+        "71d6318e-2aca-40d4-961c-5584e8a15159",
+        "fbca1e34-1fe1-404c-816f-54ac61514ec6",
+        "828cc7e9-4cb1-4c67-a5cf-d0d5d47e6f13"
+      ],
+      "settings": {
+        "styles__section-title": "Styles From The Shoot",
+        "intro": "",
+        "title-border": true,
+        "styles__mobile-font-size": 15,
+        "styles__mobile-padding-topbottom": 0,
+        "styles__mobile-padding-sides": 15,
+        "styles__desktop-font-size": 25,
+        "styles__desktop-padding-topbottom": 0,
+        "styles__desktop-padding-sides": 20
+      }
+    },
+    "1650541433cf290c93": {
+      "type": "products_used",
+      "blocks": {
+        "856dd09a-ecb6-4d2e-b634-71518764c64b": {
+          "type": "product",
+          "settings": {
+            "products__product-id": "double-wefted-full-head-remy-clip-in-human-hair-extensions-brown-ginger-blonde-mix-6-27",
+            "products__collection": "double-wefted-clip-in-hair-extensions",
+            "products__product-title": "Double Weft",
+            "products__product-image": "shopify:\/\/shop_images\/double_wefted_3f175c11-b98f-4604-b61a-25fb4b571bdf.jpg"
+          }
+        },
+        "7620a393-7720-4ab1-9d1b-082b6b2c5c0f": {
+          "type": "product",
+          "settings": {
+            "products__product-id": "14-inch-mini-ponytail-extensions",
+            "products__collection": "straight-up-wrap-around-ponytail-hair-extensions",
+            "products__product-title": "Wrap Around",
+            "products__product-image": "shopify:\/\/shop_images\/6_db3d9e87-da37-4630-b88c-a7415e65d630.jpg"
+          }
+        },
+        "b66f690e-9b78-4930-8a31-04e22997f6b4": {
+          "type": "product",
+          "settings": {
+            "products__product-id": "one-piece-clip-in-hair-extensions-supreme-quad-weft",
+            "products__collection": "supreme-quad-weft-hair-extensions",
+            "products__product-title": "Supreme Quad Weft",
+            "products__product-image": "shopify:\/\/shop_images\/one_piece_clip_in_human_hair_extensions.jpg"
+          }
+        },
+        "a8c39e3a-9f2e-4e8a-98f1-09ffdc5b206f": {
+          "type": "product",
+          "settings": {
+            "products__product-id": "ultra-volume-clip-in-hair-extensions-240-280g",
+            "products__collection": "ultra-clip-in-hair-extensions",
+            "products__product-title": "Ultra Volume",
+            "products__product-image": "shopify:\/\/shop_images\/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg"
+          }
+        },
+        "dcb41512-c829-4c3b-83dd-d49258982ad1": {
+          "type": "product",
+          "settings": {
+            "products__product-id": "seamless-clip-in-hair-extensions-double-drawn-lightest-brown-bleach-blonde-mix",
+            "products__collection": "seamless-clip-in-hair-extensions-double-drawn-hair",
+            "products__product-title": "Seamless",
+            "products__product-image": "shopify:\/\/shop_images\/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "856dd09a-ecb6-4d2e-b634-71518764c64b",
+        "7620a393-7720-4ab1-9d1b-082b6b2c5c0f",
+        "b66f690e-9b78-4930-8a31-04e22997f6b4",
+        "a8c39e3a-9f2e-4e8a-98f1-09ffdc5b206f",
+        "dcb41512-c829-4c3b-83dd-d49258982ad1"
+      ],
+      "settings": {
+        "products__section-title": "Products Used",
+        "intro": "",
+        "products__mobile-font-size": 15,
+        "products__mobile-padding-topbottom": 15,
+        "products__mobile-padding-sides": 15,
+        "products__desktop-font-size": 25,
+        "products__desktop-padding-topbottom": 30,
+        "products__desktop-padding-sides": 20,
+        "btn-full_width": false
+      }
+    },
+    "1650545897aa942e97": {
+      "type": "stories",
+      "blocks": {
+        "e0a2e36e-2d05-42b9-9b8e-2054fddb7057": {
+          "type": "story",
+          "settings": {
+            "stories__story-author": "Rebecca J.",
+            "stories__story-title": "Perfect for my wedding",
+            "stories__story-content": "<p>I bought this hair for my wedding and honestly, it's amazing. I absolutely loved the quality, I ordered the double wefted in 20\" shade darkest brown at £124 pound. Packaging is great when I take them out I put them back in the box so it does come in handy. <\/p>",
+            "stories__story-content-read-more": "<p>Website was easy to get around and I looked at other reviewed to work out the shade I needed which was great. Although I didn't get seamless they are extremely flat and aren't bulky at the root so again it's just a money making thing, personally.<\/p>",
+            "stories__story-image": "shopify:\/\/shop_images\/1_c8037bf2-16c6-41ee-9225-4ae82c794794.jpg",
+            "stories__review": 5
+          }
+        },
+        "6e39a967-736b-4ca7-ba08-c8758b3fdd4f": {
+          "type": "story",
+          "settings": {
+            "stories__story-author": "Erica C.",
+            "stories__story-title": "Absolutely gorgeous soft hair",
+            "stories__story-content": "<p>I always buy from Cliphair. I even used them for my wedding day. I have black hair and the color absolutely matched. The clips do not cause any pain, and the hair is not heavy. I have washed them 3 times and the hair is still beautiful and shiny. <\/p>",
+            "stories__story-content-read-more": "",
+            "stories__story-image": "shopify:\/\/shop_images\/Untitled_design_2_b24d94ac-5015-4fc3-893a-659702fc9605.jpg",
+            "stories__review": 5
+          }
+        },
+        "0d7b2bcb-8fa9-4f1d-8deb-58d6783d5987": {
+          "type": "story",
+          "settings": {
+            "stories__story-author": "Rebecca K.",
+            "stories__story-title": "I always wanted long hair",
+            "stories__story-content": "<p>I always wanted long hair for myweddingbut my hair is really rubbish and I struggled to get a match. I was convinced these weren't a good match as they were so light but I decided to tone them with bleach London Rose shampoo as I use this on my hair also. <\/p>",
+            "stories__story-content-read-more": "<p>I showed them to my hairdresser for myweddinghair trial as a kind of off the cuff 'oh I got these but it's a shame they don't match' and she convinced me to let her try them and wow she got them blended so well, nobody could tell I was even wearing extensions! I had hair I could only dream of on myweddingday and it was totally unexpected! Thankyou!<\/p>",
+            "stories__story-image": "shopify:\/\/shop_images\/2_89ac3367-678f-44d2-8325-ed480fe6bdc1.jpg",
+            "stories__review": 5
+          }
+        }
+      },
+      "block_order": [
+        "e0a2e36e-2d05-42b9-9b8e-2054fddb7057",
+        "6e39a967-736b-4ca7-ba08-c8758b3fdd4f",
+        "0d7b2bcb-8fa9-4f1d-8deb-58d6783d5987"
+      ],
+      "settings": {
+        "stories__section-title-fl": "Your Cliphair Wedding Stories",
+        "stories__section-title-sl": "",
+        "stories__section-description": "These brides chose us for their special day, and we decided to dedicate this space to them to celebrate love, life, and great hair. Feeling inspired yet? Swipe to read how Cliphair played a role in these women's lives the moment they said \"I do\".",
+        "stories__section-btn-title": "Read More Reviews",
+        "stories__section-url": "shopify:\/\/pages\/wedding-hair-extensions-reviews",
+        "three-row": false,
+        "stories__mobile-font-size": 15,
+        "stories__mobile-padding-topbottom": 0,
+        "stories__mobile-padding-sides": 15,
+        "stories__desktop-font-size": 25,
+        "stories__desktop-padding-topbottom": 0,
+        "stories__desktop-padding-sides": 20
+      }
+    },
+    "16505562979192cd33": {
+      "type": "reals",
+      "blocks": {
+        "da453a14-71f3-41aa-b5a1-ad6df4ea6f31": {
+          "type": "story",
+          "settings": {
+            "choices__choice-title": "Braid",
+            "choices__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/274021507_753894478905910_5209356468240620528_n_1.mp4?v=1650571498",
+            "choices__placeholder-image": "shopify:\/\/shop_images\/blonde_braid.jpg"
+          }
+        },
+        "d10f1fe9-d0ab-437c-919e-ab4fb494c55a": {
+          "type": "story",
+          "settings": {
+            "choices__choice-title": "Hair Up",
+            "choices__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/222270539_239684324648462_488222764807211976_n_1_1.mp4?v=1650571498",
+            "choices__placeholder-image": "shopify:\/\/shop_images\/2_13cfd882-e678-4082-93ae-fec8f0280ddb.jpg"
+          }
+        },
+        "0d374084-57a3-4517-be36-98980af54ab8": {
+          "type": "story",
+          "settings": {
+            "choices__choice-title": "Hair Down",
+            "choices__video-url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0069\/6470\/7389\/files\/10000000_834932787146817_9010869754858824298_n_1_1.mp4?v=1650571499",
+            "choices__placeholder-image": "shopify:\/\/shop_images\/hollywood_waves_bridal.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "da453a14-71f3-41aa-b5a1-ad6df4ea6f31",
+        "d10f1fe9-d0ab-437c-919e-ab4fb494c55a",
+        "0d374084-57a3-4517-be36-98980af54ab8"
+      ],
+      "settings": {
+        "choices__section-title": "Stylists' Choice",
+        "choices__section-description": "These salon-quality hairstyles have been created by professionals who have chosen Cliphair as their go-to hair extensions provider. With our 100% ethically sourced Remy Human Hair paired with their expertise, the results are long-lasting, natural, and jaw-dropping.",
+        "choices__section-btn-title": "Explore More",
+        "choices__section-url": "https:\/\/www.cliphair.co.uk\/pages\/social-media-bridal-2022",
+        "choices__mobile-font-size": 15,
+        "choices__mobile-padding-topbottom": 25,
+        "choices__mobile-padding-sides": 15,
+        "choices__desktop-font-size": 25,
+        "choices__desktop-padding-topbottom": 50,
+        "choices__desktop-padding-sides": 20
+      }
+    },
+    "165062221714b964e1": {
+      "type": "inspiration_break-line",
+      "settings": {
+        "inspiration__section-title": "Need More Inspiration?",
+        "inspiration__mobile-font-size": 20,
+        "inspiration__mobile-padding-topbottom": 15,
+        "inspiration__mobile-padding-sides": 15,
+        "inspiration__desktop-font-size": 25,
+        "inspiration__desktop-padding-topbottom": 20,
+        "inspiration__desktop-padding-sides": 20
+      }
+    },
+    "16506235132555e8b4": {
+      "type": "bridal_blogs",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "block_width": "fullwidth",
+        "outer_margin": "offset-top-0",
+        "blogs__mobile-font-size": 15,
+        "blogs__mobile-padding-topbottom": 0,
+        "blogs__mobile-padding-sides": 0,
+        "blogs__desktop-font-size": 25,
+        "blogs__desktop-padding-topbottom": 0,
+        "blogs__desktop-padding-sides": 0,
+        "heading": "Wedding Blogs",
+        "description": "",
+        "from_blog_id": "hair-blog",
+        "from_blog_limit": "5",
+        "show_view_all": "none"
+      }
+    },
+    "165478861261028c23": {
+      "type": "new_blog_section",
+      "settings": {
+        "m_image": "shopify:\/\/shop_images\/blogs.png",
+        "d_image": "shopify:\/\/shop_images\/blogs2.png",
+        "block_width": "fullwidth",
+        "outer_margin": "offset-top-50",
+        "blogs__mobile-font-size": 15,
+        "blogs__mobile-padding-topbottom": 0,
+        "blogs__mobile-padding-sides": 0,
+        "blogs__desktop-font-size": 25,
+        "blogs__desktop-padding-topbottom": 0,
+        "blogs__desktop-padding-sides": 0,
+        "heading": "Wedding Blogs",
+        "description": "",
+        "from_blog_id": "",
+        "from_blog_limit": "3",
+        "show_view_all": "none"
+      }
+    },
+    "165065136161cc9dbd": {
+      "type": "instagram_pinterest",
+      "blocks": {
+        "fa4e03b4-aad5-4fdf-a047-324c0235e9b0": {
+          "type": "instagram",
+          "settings": {
+            "insta-pin__image": "shopify:\/\/shop_images\/10_9cb09a8b-7ce0-488f-b06b-2da0d7698175.jpg",
+            "insta-pin__url": "https:\/\/www.instagram.com\/p\/CS1RM5INp7P\/"
+          }
+        },
+        "66d62e42-d0df-4fd5-b3d0-695268ca9526": {
+          "type": "instagram",
+          "settings": {
+            "insta-pin__image": "shopify:\/\/shop_images\/11_2b9cfd3a-8d1b-4260-a408-131cda175895.jpg",
+            "insta-pin__url": "https:\/\/www.instagram.com\/p\/CP-_IdCrbL6\/"
+          }
+        },
+        "56f8b797-23ac-499a-ac3d-87144197ea00": {
+          "type": "pinterest",
+          "settings": {
+            "insta-pin__image": "shopify:\/\/shop_images\/12_85b5a4fb-b496-4b3d-822c-5bb289ed9029.jpg",
+            "insta-pin__url": "https:\/\/www.pinterest.co.uk\/pin\/281193570475184966\/"
+          }
+        },
+        "547766f5-b77a-4356-abbc-145ae6277219": {
+          "type": "pinterest",
+          "settings": {
+            "insta-pin__image": "shopify:\/\/shop_images\/13_7c315f76-bf86-4c12-b6bc-f20a81f48d85.jpg",
+            "insta-pin__url": "https:\/\/www.pinterest.co.uk\/pin\/281193570475187965\/"
+          }
+        }
+      },
+      "block_order": [
+        "fa4e03b4-aad5-4fdf-a047-324c0235e9b0",
+        "66d62e42-d0df-4fd5-b3d0-695268ca9526",
+        "56f8b797-23ac-499a-ac3d-87144197ea00",
+        "547766f5-b77a-4356-abbc-145ae6277219"
+      ],
+      "settings": {
+        "intro": "",
+        "instagram": true,
+        "pinterest": true,
+        "add_subtitle": true,
+        "insta-pin__mobile-font-size": 15,
+        "insta-pin__mobile-padding-topbottom": 15,
+        "insta-pin__mobile-padding-sides": 15,
+        "insta-pin__desktop-font-size": 25,
+        "insta-pin__desktop-padding-topbottom": 30,
+        "insta-pin__desktop-padding-sides": 0,
+        "insta-pin__insta-url": "https:\/\/www.cliphair.co.uk\/pages\/social-media-bridal-2022",
+        "insta-pin__insta-title": "Explore More",
+        "insta-pin__pin-url": "https:\/\/www.cliphair.co.uk\/pages\/pinterest-bridal-2022",
+        "insta-pin__pin-title": "Explore More"
+      }
+    },
+    "1650638226b46f525a": {
+      "type": "2021_videos",
+      "blocks": {
+        "24b0093a-48da-4fcb-ae47-21e88c6480c1": {
+          "type": "campaign",
+          "settings": {
+            "camp-video__campaign-title": "Our 2021 Campaign",
+            "camp-video__campaign-image": "shopify:\/\/shop_images\/bridal_hair_2021.jpg",
+            "camp-video__campaign-text": "<p>Young love and timeless beauty; after a long year that tested everyone's relationships - the brides are back! Dive deep in our 2021's wedding campaign to see how once again Cliphair helped those who said yes in one of our darkest time to glow of newly found light.<\/p>",
+            "camp-video__campaign-url": "https:\/\/www.cliphair.co.uk\/pages\/bridal-campaign-2021"
+          }
+        },
+        "b4b2d5cf-d913-427c-a330-b6f83a68f5f8": {
+          "type": "tutorial",
+          "disabled": true,
+          "settings": {
+            "camp-video__video-title": "Bridal Tutorials",
+            "camp-video__video-url": "https:\/\/www.youtube.com\/c\/cliphairlimited\/featured",
+            "camp-video__video-youtube_url": "https:\/\/www.youtube.com\/watch?v=tgfpzDzN_fw"
+          }
+        }
+      },
+      "block_order": [
+        "24b0093a-48da-4fcb-ae47-21e88c6480c1",
+        "b4b2d5cf-d913-427c-a330-b6f83a68f5f8"
+      ],
+      "settings": {
+        "camp-video__mobile-font-size": 15,
+        "camp-video__mobile-padding-topbottom": 0,
+        "camp-video__mobile-padding-sides": 15,
+        "camp-video__desktop-font-size": 25,
+        "camp-video__desktop-padding-topbottom": 0,
+        "camp-video__desktop-padding-sides": 20
+      }
+    },
+    "165066044454f5011f": {
+      "type": "bridal_footer",
+      "settings": {
+        "footer__title": "Get In Touch",
+        "footer__mobile-font-size": 15,
+        "footer__mobile-padding-topbottom": 0,
+        "footer__mobile-padding-sides": 0,
+        "footer__desktop-font-size": 25,
+        "footer__desktop-padding-topbottom": 0,
+        "footer__desktop-padding-sides": 0,
+        "footer__link": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1"
       }
     }
   },
   "order": [
-    "main"
+    "page_header",
+    "16504667938e1e9aca",
+    "1650649506a58795bf",
+    "165053331506c1d89f",
+    "1650541433cf290c93",
+    "1650545897aa942e97",
+    "16505562979192cd33",
+    "165062221714b964e1",
+    "16506235132555e8b4",
+    "165478861261028c23",
+    "165065136161cc9dbd",
+    "1650638226b46f525a",
+    "165066044454f5011f"
   ]
 }
