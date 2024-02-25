@@ -28,7 +28,7 @@
               
               {% unless block.settings.stories__story-content-read-more == empty %}
               	<span id='hidden-container{{block.id}}' data-target='hidden-container{{block.id}}' class='btn__read-more' onclick='read_more(this)'>Read More</span>
-              	<div class='closed read_more_container hidden-container{{block.id}}'>
+              	<div class='hidden read_more_container hidden-container{{block.id}}'>
               		{{block.settings.stories__story-content-read-more}}
                   	<span class='btn__read-more' data-target='hidden-container{{block.id}}' onclick='read_less(this)'>Read Less</span>
               	</div>
