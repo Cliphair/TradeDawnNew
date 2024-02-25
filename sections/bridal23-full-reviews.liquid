@@ -226,7 +226,7 @@
                 {{ block.settings.content }}
                 {% if block.settings.read-more != empty %}
                   <p id='read-more-{{ forloop.index }}' class='read-more-btn' data-target='read-more-{{ forloop.index }}' onclick="read_more(this)">Read More</p>
-                  <div class='read-more-container read-more-{{ forloop.index }} closed'>
+                  <div class='read-more-container read-more-{{ forloop.index }} hidden'>
                     {{ block.settings.read-more }}
                     <p class='read-more-btn' data-target='read-more-{{ forloop.index }}' onclick="read_less(this)">Read Less</p>
                   </div>
