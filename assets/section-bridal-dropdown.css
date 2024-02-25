@@ -32,7 +32,7 @@
 
 
 .section-bridal-dropdown .dropdown-container > .item > div *{
-  line-height:1.2rem;
+  line-height:1.2em;
   margin:0 0 12px;
 }
 
@@ -71,10 +71,6 @@
 
 .section-bridal-dropdown .item-body{
   margin-top: 10px;
-}
-
-.section-bridal-dropdown .item-body p{
-  line-height:1.2em;
 }
 
 .section-bridal-dropdown .item-body p a{
