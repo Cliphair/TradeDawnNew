@@ -24,7 +24,7 @@
     "custom_banner_MVAWYW": {
       "type": "custom-banner",
       "custom_css": [
-        "div > div{padding:0;}"
+        "div > div {padding: 0;}"
       ],
       "settings": {
         "max-width": "2560",
@@ -38,6 +38,9 @@
     },
     "16504667938e1e9aca": {
       "type": "page_description",
+      "custom_css": [
+        ".btn--read-more {padding: 10px 20px; margin-top:10px; color:white;}"
+      ],
       "settings": {
         "section_title": "",
         "title2": "",
