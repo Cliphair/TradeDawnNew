@@ -138,8 +138,17 @@
     },
     "19a2f8be-2f92-404c-bf35-436c5256aed0": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0;}"
+      ],
       "settings": {
-        "url": ""
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/bride-desktop.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/bride-mobile.jpg",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "57c89bc1-e173-4782-bfe1-7229f34f91ab": {
@@ -235,6 +244,9 @@
         "01181e71-d833-4436-ac59-7cc84fce23bb",
         "880f6fab-4f77-4019-8192-c3ef9f7de5e7",
         "a1e182ae-c69b-40b9-8be9-ef3bbedc8dd5"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "header": "<p><em>Romantic & Voluptuous<\/em><\/p>",
@@ -334,8 +346,12 @@
     },
     "c40d35d5-1ed0-4861-90e6-3cbeff9d1e0c": {
       "type": "article-trending-tag-bridal23",
+      "custom_css": [
+        "a{text-decoration:none;}"
+      ],
       "settings": {
         "header": "THE CLIPHAIR’S BRIDAL DIGEST",
+        "intro": "",
         "tag": "bride-lookbook-blogs",
         "header_colour": "#000000",
         "text_colour": "#000000",
