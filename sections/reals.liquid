@@ -14,7 +14,7 @@
     {% for block in section.blocks %}
       <div class='choice'>
         <div class='choices__img-container'>
-          <img class='lazyload placeholder-img' data-src='{{ block.settings.choices__placeholder-image | img_url: 'master' }}' width='{{ block.settings.choices__placeholder-image.width }}' height='{{ block.settings.choices__placeholder-image.height }}' alt='{{ block.settings.choices__choice-title }}'>
+          <img class='lazyload placeholder-img' loading='lazy' src='{{ block.settings.choices__placeholder-image | img_url: 'master' }}' width='{{ block.settings.choices__placeholder-image.width }}' height='{{ block.settings.choices__placeholder-image.height }}' alt='{{ block.settings.choices__choice-title }}'>
           <div class='choices__btn-container'>
             <span class='choices__paly-btn' data-url='{{block.settings.choices__video-url}}' ><i class="fa-solid fa-play"></i></span>
           </div>
@@ -506,11 +506,6 @@
 					"info": "Image size 471px x 705px"
 				}
 			]
-		}
-	],
-	"presets": [
-		{
-			"name":"Hairstylists Choice"
 		}
 	]
   }
