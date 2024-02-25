@@ -1,6 +1,281 @@
+{{ 'quiz_2023.css' | asset_url | stylesheet_tag}}
+
+<div id='quiz'>
+
+  <div id='first_of_hair' class='quiz__outer-container first'>
+    <h2 class='quiz__subtitle'>Who are <em>you</em> going as for this special occasion?</h2>
+
+    <div class='quiz__inner-container'>
+      <input type='radio' name='first' value='bride' id='bride' class='radio' data-target='pop-up-bride'>
+      <label for='bride' class='quiz__option'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/quiz-bride.jpg?v=1683623354' width='448' height='448' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>I'm The Bride</h3>
+        </div>
+      </label>
+      
+      <input type='radio' name='first' value='guest' id='guest' class='radio' data-target='pop-up-guests'>
+      <label for='guest' class='quiz__option'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/quiz-guest.jpg?v=1683623355' width='448' height='448' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>I'm A Guest</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='first' value='bridesmaid' id='bridesmaid' class='radio' data-target='pop-up-bridesmaids'>
+      <label for='bridesmaid' class='quiz__option'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/quiz-brdesmaid.jpg?v=1683623354' width='448' height='448' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>I'm A Bridesmaid</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='first' value='mother' id='mother' class='radio' data-target='pop-up-mother'>
+      <label for='mother' class='quiz__option'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/quiz-mother.jpg?v=1683623354' width='448' height='448' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>I'm The Bride's Mother</h3>
+        </div>
+      </label>
+    </div>
+    <div class='container control-container next'>
+      
+      <p class='next-btn' data-direction='next' data-type='style'>Next</p>
+    </div>
+  </div>
+  
+  <div id='style_of_hair' class='quiz__outer-container'>
+    <h2 class='quiz__subtitle'>Pick <em>your</em> desired wedding hairstyle</h2>
+    
+    <div class='quiz__inner-container first-container'>
+
+      <input type='radio' name='style' value='style_1' id='style_1' class='radio'>
+      <label for='style_1' class='quiz__option' data-type='style' data-answer='style_1'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/style-bun.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Bun</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='style' value='style_2' id='style_2' class='radio'>
+      <label for='style_2' class='quiz__option' data-type='style' data-answer='style_2'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/style-hair-down.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Hair Down</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='style' value='style_3' id='style_3' class='radio'>
+      <label for='style_3' class='quiz__option' data-type='style' data-answer='style_3'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/style-braid.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Braid</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='style' value='style_4' id='style_4' class='radio'>
+      <label for='style_4' class='quiz__option' data-type='style' data-answer='style_4'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/staly-half-up-half-down.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Half Up Half Down</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='style' value='style_5' id='style_5' class='radio'>
+      <label for='style_5' class='quiz__option' data-type='style' data-answer='style_5'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/style-ponytail.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Ponytail</h3>
+        </div>
+      </label>
+
+<!--       <input type='radio' name='style' value='style_6' id='style_6' class='radio'>
+      <label for='style_6' class='quiz__option' data-type='style' data-answer='style_6'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/short.png?v=1683812135' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Short Hairstyle</h3>
+        </div>
+      </label> -->
+    </div>
+    
+    <div class='container control-container'>
+      <p class='back-btn' data-type='first'>Back</p>
+      <p class='next-btn' data-type='type'>Next</p>
+      
+    </div>
+  </div>
+
+  <div id='short_type_of_hair' class='quiz__outer-container'>
+    
+  	<h2 class='quiz__subtitle'>What is <em>your</em> hair type?</h2>
+    
+    <div class='quiz__inner-container second-container'>
+      <input type='radio' name='short_type' value='type_1' id='short_type_1' class='radio'>
+      <label for='short_type_1' class='quiz__option' data-type='type' data-answer='type_1'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/type-thin.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Straight and Smooth</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='short_type' value='type_2' id='short_type_2' class='radio'>
+      <label for='short_type_2' class='quiz__option' data-type='type' data-answer='type_2'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/type-average.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Ringlet Curls</h3>
+        </div>
+      </label>
+
+    </div>
+    <div class='container control-container'>
+      
+      <p class='back-btn' data-type='style'>Back</p>
+      <p class='next-btn' data-type='final'>Next</p>
+    </div>
+  </div>
+  
+  <div id='type_of_hair' class='quiz__outer-container'>
+    
+  	<h2 class='quiz__subtitle'>What is <em>your</em> hair type?</h2>
+    
+    <div class='quiz__inner-container second-container'>
+      <input type='radio' name='type' value='type_1' id='type_1' class='radio'>
+      <label for='type_1' class='quiz__option' data-type='type' data-answer='type_1'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/type-thin.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Thin / Fine Hair</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='type' value='type_2' id='type_2' class='radio'>
+      <label for='type_2' class='quiz__option' data-type='type' data-answer='type_2'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/type-average.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Average Thickness</h3>
+        </div>
+      </label>
+
+      <input type='radio' name='type' value='type_3' id='type_3' class='radio'>
+      <label for='type_3' class='quiz__option' data-type='type' data-answer='type_3'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/type-thick.png?v=1683628977' width='450' height='450' class='lazyload'>
+        <div class='quiz__txt-container'>
+          <h3>Thick Hair</h3>
+        </div>
+      </label>
+    </div>
+    <div class='container control-container'>
+      
+      <p class='back-btn' data-type='style'>Back</p>
+      <p class='next-btn' data-type='final'>Next</p>
+    </div>
+  </div>
+  
+  <div id='final_of_hair' class='container quiz__outer-container'>
+  	<h2 class='quiz__subtitle'>This is <em>perfect</em> for you</h2>
+
+    <div id='answer' class='row quiz__inner-container'>
+      <div class=' answer__image-container'>
+        <img class='lazyload answer__image' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/Seamless_01ddd4bb-4268-4788-9694-8267013fca3e.jpg?v=1646752302'>
+      </div>
+      <div class=' answer__text-container'>
+        <h3><a href='https://www.cliphair.co.uk/collections/seamless-clip-in-hair-extensions-double-drawn-hair' title='Seamless collection'>Seamless Hair Extensions</a></h3>
+        <p>Quick and easy to apply, their concealed clips blend in perfectly with medium to fine hair – for a natural finish and hair that looks and feels like your own. Nobody will be able to tell that you’re wearing them!</p>
+        <p>If you need help choosing the correct shade, let us help you with our <a href='https://www.cliphair.co.uk/pages/colour-matching-service' title='colour match'>free colour match</a>. No silly software, no photo editing: our specialists will work with you to find the perfect shade to match your hair colour.</p>
+        <p>In love with this hairstyle? Check out the steps followed to create it and bring it to life on your own hair using our hair guide page.</p>
+        <a class='shop-now-btn'>shop now</a>
+      </div>
+    </div>
+   	<div class='container control-container previous'>
+      
+      <p class='back-btn' data-type='type'>Back</p>
+
+    </div>
+  </div>
+  
+</div>
+
+<div class='background' onclick='closePopUp()'>
+  <div id='pop-up-bride' class='pop-up-container'>
+    <div class='close-container'><p onclick='closePopUp()'><i class="fa-solid fa-xmark"></i></p></div>
+    
+    <h2 class='section-title'>The <em>Bride</em></h2>
+    
+    <div class='pop-up-entry'>
+      <div class='pop-up-entry-image-container'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/Group_9857.png?v=1683637520' width='450' alt='bride collage image' class='lazyload'>
+      </div>
+      <div class='pop-up-entry-text-container'>
+        <p>If you're a bride who wants to make a statement on your big day, consider a deep side part and soft, carefully styled ringlets. And for those with medium-length hair looking to add some extra volume, seamlessly blend in a set of Ultra Volume hair extensions to complete the look.</p>
+        <a href='/pages/bride-lookbook' target='_blank' title='Bride Lookbook Page' class=''>EXPLORE CAMPAIGN</a>
+      </div>
+      
+    </div>
+
+    <div class='continue-quiz-container'><p onclick='closePopUp()'>Continue Quiz</p></div>
+    
+  </div>
+  <div id='pop-up-bridesmaids' class='pop-up-container'>
+    <div class='close-container'><p onclick='closePopUp()'><i class="fa-solid fa-xmark"></i></p></div>
+    
+    <h2 class='section-title'>The <em>Bridesmaids</em></h2>
+    
+    <div class='pop-up-entry'>
+      <div class='pop-up-entry-image-container'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/bridesmaid_3d4ec18f-94c9-4823-b6b5-6564f1796863.jpg?v=1683812135' width='450' alt='bridesmaid collage image' class='lazyload'>
+      </div>
+      <div class='pop-up-entry-text-container'>
+        <p>A selection of carefully selected looks for loyal bridesmaids, designed to enhance their natural beauty and complement their authentic style. The list includes a cleverly designed half-up style, a textured explosion of hair, and long, flowing bohemian tresses to inspire you.</p>
+        <a href='/pages/bridesmaid-lookbook' title='Bridesmaid Lookbook Page' target='_blank' class=''>EXPLORE CAMPAIGN</a>
+      </div>
+      
+    </div>
+    
+    <div class='continue-quiz-container'><p onclick='closePopUp()'>Continue Quiz</p></div>
+    
+  </div>
+  <div id='pop-up-guests' class='pop-up-container'>
+    <div class='close-container'><p onclick='closePopUp()'><i class="fa-solid fa-xmark"></i></p></div>
+    
+    <h2 class='section-title'>The <em>Guests</em></h2>
+    
+    <div class='pop-up-entry'>
+      <div class='pop-up-entry-image-container'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/guest_62d11289-0c98-472b-9990-ebdb56473472.jpg?v=1683812135' width='450' alt='guest collage image' class='lazyload'>
+      </div>
+      <div class='pop-up-entry-text-container'>
+        <p>From gorgeous ponytails to glamorous braids, participating in the celebrations has never looked more promising. Find your perfect look to honour everlasting love in style.</p>
+        <a href='/pages/guest-lookbook' title='Guest Lookbook Page' target='_blank' class=''>EXPLORE CAMPAIGN</a>
+      </div>
+      
+    </div>
+
+    <div class='continue-quiz-container'><p onclick='closePopUp()'>Continue Quiz</p></div>
+    
+  </div>
+  <div id='pop-up-mother' class='pop-up-container'>
+    <div class='close-container'><p onclick='closePopUp()'><i class="fa-solid fa-xmark"></i></p></div>
+    
+    <h2 class='section-title'>The <em>Mother Of The Bride</em></h2>
+    
+    <div class='pop-up-entry'>
+      <div class='pop-up-entry-image-container'>
+        <img data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/mother.jpg?v=1683812135' width='450' alt='mother of the bride collage image' class='lazyload'>
+      </div>
+      <div class='pop-up-entry-text-container'>
+        <p>Depth and movement, enhanced by adding a dash of colour with a lightweight set of Classic Full Head extensions. Soft waves and added body bring even finer hair to life for a special day; only the best for the proud mother of the bride.</p>
+        <a href='/pages/mother-of-bride-lookbook' title="Bride's Mother Lookbook Page" target='_blank' class=''>EXPLORE CAMPAIGN</a>
+      </div>
+    </div>
+    <div class='continue-quiz-container'><p onclick='closePopUp()'>Continue Quiz</p></div>
+  </div>
+</div>
+
+{{ 'quiz_answers_2023.js' | asset_url | script_tag }}
+{{ 'quiz_2023.js' | asset_url | script_tag }}
 {% schema %}
   {
-    "name": "Section name",
+    "name": "Quiz",
     "settings": []
   }
 {% endschema %}
+
