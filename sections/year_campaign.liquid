@@ -233,29 +233,35 @@
 
 <script>
   
-  let yearPlayBtns = $('.year__paly-btn');
-  yearPlayBtns.click(function(){
-   yearVideoTag(this.dataset.url)
-  });
+  let yearPlayBtns = document.querySelectorAll('.year__paly-btn');
+  for (let button of yearPlayBtns){
+    button.addEventListener('click', function(){
+      yearVideoTag(button.dataset.url)
+    });
+  }
   
   function yearVideoTag(videoUrl){
+    let videoBgContainer = document.createElement("div");
+    videoBgContainer.id = 'year__video-container';
+    videoBgContainer.classList.add('video__bg');
+    
   	let video = `
-		<div id='year__video-container' class='video__bg'>
-			<div class='video__container'>
-			  <div class='close__video'><i onclick='yearCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
-              <video class='bts__video' autoplay muted controls>
-                  <source src="${videoUrl}" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-			</div>
-		</div>
+      <div class='video__container'>
+        <div class='close__video'><i onclick='yearCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+        <video class='bts__video' autoplay muted controls>
+            <source src="${videoUrl}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
 	`;
-    jQuery('body').prepend(video)
+    videoBgContainer.innerHTML = video;
+    document.querySelector('body').prepend(videoBgContainer)
+    document.querySelector("#year__video-container").addEventListener('click', btsCloseBtn);
 
   }
   
   function yearCloseBtn(){
-  	$("#year__video-container").remove();
+  	document.querySelector("#bts__video-container").remove();
   } 
 </script>
 
