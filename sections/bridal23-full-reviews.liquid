@@ -96,9 +96,9 @@
   }
 
   #section-{{ section.id }} .reviews-container > .review > .body > .stars > *{
-    color:#fec600!important;
+    fill:#fec600!important;
     margin-bottom:5px;
-    font-size:{{ section.settings.text-mobile-font_size }}px;
+    width:{{ section.settings.text-mobile-font_size }}px;
   }
 
   #section-{{ section.id }} .reviews-container > .review > .body > .content *{
@@ -180,7 +180,7 @@
     }
   
     #section-{{ section.id }} .reviews-container > .review > .body > .stars > *{
-      font-size:{{ section.settings.text-desktop-font_size }}px;
+      width:{{ section.settings.text-desktop-font_size }}px;
       margin-bottom:20px;
     }
   
@@ -219,7 +219,7 @@
               <div class='title'>{{ block.settings.title }}</div>
               <div class='stars'>
                 {% for i in (1..block.settings.review-stars) %}
-                  <i class="fa-solid fa-star"></i>
+                  {% render 'icon-star' %}
                 {% endfor %}
               </div>
               <div class='content'>
@@ -234,7 +234,7 @@
               </div>
               {% if block.settings.image %}
               <div class='image'>
-                <img data-src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
               </div>
               {% endif %}
               {% if block.settings.product %}
