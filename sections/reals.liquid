@@ -1,0 +1,523 @@
+<section class='choices__section-container'>
+  <h2 class='choices__section-title'>
+    <div class='icon-container'><img src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/arrow_isolated_flipped.png?v=1650540883' alt='arrow image'></div>
+    {{section.settings.choices__section-title}}   
+  </h2>
+  
+  {% if section.settings.choices__section-description %}
+    <div class='choices__description-container'>
+      <p>{{ section.settings.choices__section-description }}</p>
+    </div>
+  {% endif %}
+  
+  <div class='choices__choices-container'>
+    {% for block in section.blocks %}
+      <div class='choice'>
+        <div class='choices__img-container'>
+          <img class='lazyload placeholder-img' data-src='{{ block.settings.choices__placeholder-image | img_url: 'master' }}' width='{{ block.settings.choices__placeholder-image.width }}' height='{{ block.settings.choices__placeholder-image.height }}' alt='{{ block.settings.choices__choice-title }}'>
+          <div class='choices__btn-container'>
+            <span class='choices__paly-btn' data-url='{{block.settings.choices__video-url}}' ><i class="fa-solid fa-play"></i></span>
+          </div>
+        </div>
+		
+        <h3 class='choices__choice-title'>{{block.settings.choices__choice-title}}</h3>
+      </div>
+    {% endfor %}
+  </div>
+  
+  {%if section.settings.choices__section-btn-title != empty %}
+    <div class='choices__button-container'>
+      {% if section.settings.choices__section-url == nil%}
+          <a class='choices__explore-btn' href='https://www.cliphair.co.uk/'>{{section.settings.choices__section-btn-title}}</a>
+      {% else %}
+          <a class='choices__explore-btn' href='{{section.settings.choices__section-url}}'>{{section.settings.choices__section-btn-title}}</a>
+      {% endif %}
+    </div>
+  {%endif%}
+  
+  {% if section.blocks.size > 1%}
+    <div class='choices__arrow-container arrow-container'>
+      <span id='choices__arrow-left' class='left'><i class="fa-solid fa-angle-left"></i></span>
+      <span id='choices__arrow-right' class='right'><i class="fa-solid fa-angle-right"></i></span>
+    </div>
+   {% endif %}
+  
+</section>
+
+<style>
+  .choices__section-container{
+    width:100%;
+    max-width:1250px;
+    margin:0 auto;
+    position:relative;
+    padding-top:{{section.settings.choices__mobile-padding-topbottom}}px;
+    padding-bottom:{{section.settings.choices__mobile-padding-topbottom}}px;
+    padding-left:{{section.settings.choices__mobile-padding-sides}}px;
+    padding-right:{{section.settings.choices__mobile-padding-sides}}px;
+  }
+  
+  .choices__section-container * {
+  	font-family: 'Libre Baskerville', serif;
+    font-weight:400;
+    color:black;
+    line-height:1.5rem;
+  }
+  
+  .choices__section-title{
+    font-size:{{section.settings.choices__mobile-font-size}}px;
+    text-transform:capitalize;
+    text-align:center;
+    width:100%;
+    max-width:450px;
+    margin:0 auto;
+    padding: 10px 0;
+    border:1px solid black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row;
+  }
+  
+  .choices__section-title > .icon-container{
+    position: relative;
+    max-height: 100%;
+  }
+  
+  .icon-container > img{
+    position: absolute;
+    height: 35px;
+    top: -18px;
+    left: -20px;
+    object-fit:cover;
+  }
+  
+  .choices__description-container{
+  	text-align:center;
+    width:100%;
+    margin:10px 0 15px;
+  }
+  
+  .choices__choices-container{
+  	width:100%;
+    height:100%;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .choices__choices-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .choices__choices-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .choice{
+  	min-width:100%;
+    width:100%;
+    padding:20px 30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+  }
+  
+  .choices__img-container{
+  	width:100%;
+    position:relative;
+    margin-bottom:10px;
+  }
+  
+  .placeholder-img{
+  	width:100%;
+    height:auto;
+    object-fit:cover;
+  }
+  
+  .choices__btn-container{
+  	position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .choices__paly-btn{
+    font-size:calc({{section.settings.choices__mobile-font-size}}px + 15px);
+    border-radius:50%;
+    border:1px solid white;
+    padding:10px;
+    cursor:pointer;
+    background:white;
+  }
+  
+  .choices__paly-btn > *{
+  	color:black;
+    opacity:0.5;
+  }
+  
+  .choices__paly-btn:hover > *{
+    opacity:1;
+  }
+  
+  .choices__choice-title{
+  	font-size: calc({{section.settings.choices__mobile-font-size}}px - 2px)
+  }
+  
+  .choices__description-container > *{
+  	font-size: calc({{section.settings.choices__mobile-font-size}}px - 4px)
+  }
+  
+  .choices__explore-btn{
+  	padding:0px 20px;
+    border:1px solid black;
+    font-size: calc({{section.settings.choices__mobile-font-size}}px - 2px)
+  }
+  
+  .choices__button-container{
+  	width:100%;
+    text-align:center;
+    margin-top:10px;
+  }
+  
+  .choices__button-container > .choices__explore-btn{
+  	padding:5px 20px;
+  }
+  
+  .video__bg{
+  	position:absolute;
+    z-index:1000000;
+    height:100%;
+    width:100%;
+    top:0;
+    right:0;
+    background:#000000a8;
+    padding: 10px 20px;
+    display:flex;
+  }
+  
+  .video__container{
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+  }
+  
+  .close__video{
+  	width:100%;
+    text-align:right;
+    cursor:pointer;
+  }
+  
+  .close__video > *{
+  	color:white;
+    font-size: calc({{section.settings.choices__mobile-font-size}}px - 2px);
+    opacity:0.5;
+  }
+  
+  .close__video > *:hover{
+    opacity:1;
+  }
+  
+  .video__container > .video{
+    width: 320px;
+  }
+  
+  .arrow-container{
+  	position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    font-size: calc({{section.settings.choices__mobile-font-size}}px + 3px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  
+  .arrow-container > .left{
+  	margin-left:15px;
+  }
+  
+  .arrow-container > .right{
+  	margin-right:15px;
+  }
+  
+  @media only screen and (min-width:768px){
+    .choices__choices-container{
+      justify-content:center;
+    }
+    
+  	.choice{
+      min-width:30%;
+      width:30%;
+    }
+    
+    .choices__arrow-container{
+      display:none;
+    }
+  }
+    
+  @media only screen and (min-width:992px){
+  	.choices__section-container{
+      padding-top:{{section.settings.choices__desktop-padding-topbottom}}px;
+      padding-bottom:{{section.settings.choices__desktop-padding-topbottom}}px;
+      padding-left:{{section.settings.choices__desktop-padding-sides}}px;
+      padding-right:{{section.settings.choices__desktop-padding-sides}}px;
+    }
+    
+    .choices__section-container * {
+      line-height:2rem;
+    }
+  
+    .choices__section-title{
+      font-size:{{section.settings.choices__desktop-font-size}}px;
+    }
+    
+    .icon-container > img{
+      height: 40px;
+      top: -20px;
+      left: -20px;
+    }
+    
+    .choices__paly-btn{
+      font-size:calc({{section.settings.choices__desktop-font-size}}px + 15px);
+    }
+
+    .choices__choice-title{
+      font-size: calc({{section.settings.choices__desktop-font-size}}px - 2px)
+    }
+    
+
+    .choices__description-container > *{
+      font-size: calc({{section.settings.choices__desktop-font-size}}px - 9px)
+    }
+    
+    .choices__button-container{
+      width:100%;
+      text-align:center;
+      margin-top:10px;
+    }
+
+    .choices__explore-btn{
+      font-size: calc({{section.settings.choices__desktop-font-size}}px - 2px);
+      padding:5px 20px;
+    }
+    
+    .close__video > *{
+      font-size: calc({{section.settings.choices__desktop-font-size}}px - 2px)
+    }
+  }
+</style>
+
+<script>
+  
+  let playBtns = $('.choices__paly-btn');
+  playBtns.click(function(){
+   videoTag(this.dataset.url)
+  });
+  
+  function videoTag(videoUrl){
+  	video = `
+		<div id='choices__video-container' class='video__bg'>
+			<div class='video__container'>
+			  <div class='close__video'><i onclick='closeBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+              <video class='video' autoplay muted controls>
+                  <source src="${videoUrl}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+			</div>
+		</div>
+	`;
+    jQuery('body').prepend(video)
+
+  }
+  
+  function closeBtn(){
+  	$("#choices__video-container").remove();
+  }
+
+  //Arrow functions
+  var button = document.getElementById('choices__arrow-right');
+  button.onclick = function () {
+      var container = document.getElementsByClassName('choices__choices-container')[0];
+      var distance = container.clientWidth;
+      if (distance > 768){
+          distance = distance / 2
+      }
+      sideScroll(container,'right',50,distance,50);
+  };
+
+  var back = document.getElementById('choices__arrow-left');
+  back.onclick = function () {
+      var container = document.getElementsByClassName('choices__choices-container')[0];
+      var distance = container.clientWidth;
+      if (distance > 768){
+          distance = distance / 2
+      }
+      sideScroll(container,'left',50,distance,50);
+  };
+
+  function sideScroll(element,direction,speed,distance,step){
+      scrollAmount = 0;
+      var slideTimer = setInterval(function(){
+          if(direction == 'left'){
+              element.scrollLeft -= step;
+          } else {
+              element.scrollLeft += step;
+          }
+          scrollAmount += step;
+          if(scrollAmount >= distance){
+              window.clearInterval(slideTimer);
+          }
+      }, speed);
+  }  
+</script>
+
+{% schema %}
+   {
+    "name": "Hairstylists Choice",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Content"
+		},
+		{
+			"type":"text",
+			"id":"choices__section-title",
+			"label":"Title First Line"
+		},
+		{
+			"type": "textarea",
+			"id": "choices__section-description",
+			"label": "Section Description"
+		},
+		{
+			"type": "text",
+			"id": "choices__section-btn-title",
+			"label": "Button Text",
+			"default": "Explore More"
+		},
+		{
+			"type": "url",
+			"id": "choices__section-url",
+			"label": "URL",
+			"info": "Add the URL that you want to send the customer to."
+		},
+		{
+			"type": "header",
+			"content": "Mobile Settings"
+		},
+		{
+			"type": "range",
+			"id": "choices__mobile-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 15
+		},
+		{
+			"type": "range",
+			"id": "choices__mobile-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "choices__mobile-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Desktop Settings"
+		},
+		{
+			"type": "range",
+			"id": "choices__desktop-font-size",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Title Font Size",
+			"default": 25
+		},
+		{
+			"type": "range",
+			"id": "choices__desktop-padding-topbottom",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Top and Bottom",
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "choices__desktop-padding-sides",
+			"min": 0,
+			"max": 50,
+			"step": 1,
+			"unit": "px",
+			"label": "Section Padding Sides",
+			"default": 0
+		}
+		
+	],
+	"blocks": [
+		{
+			"name":"Story",
+			"type":"story",
+			"limit":4,
+			"settings":[
+				{
+					"type":"header",
+					"content": "Hairstylists Choice"
+				},				
+				{
+					"type":"text",
+					"id":"choices__choice-title",
+					"label":"Story Title"
+				},
+				{
+					"type": "url",
+					"id": "choices__video-url",
+					"label": "Video URL"
+				},
+				{
+					"type": "image_picker",
+					"id": "choices__placeholder-image",
+					"label": "Placeholder Image",
+					"info": "Image size 471px x 705px"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name":"Hairstylists Choice"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
