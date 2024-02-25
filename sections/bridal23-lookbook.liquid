@@ -208,7 +208,7 @@
               <div class='video-container carrousel-item'>
                 <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
                 <div class='play-btn-container'>
-                  <span data-url="{{ block.settings.video-url }}" class='play_button play_button_{{ randomNumber }}'><i class="icon icon-play"></i></span>
+                  <span data-url="{{ block.settings.video-url }}" class='play_button play_button_{{ randomNumber }}'>{% render 'icon-play' %}</span>
                 </div>
               </div>
           {% endcase %}
