@@ -257,33 +257,38 @@
   }
 </style>
 
-<!-- <script>
+<script>
   
-    let btsPlayBtns = $('.bts__paly-btn');
+    let btsPlayBtns = document.querySelectorAll('.bts__paly-btn');
+    for (let button of buttons){
+      button.addEventListener('click', function(){
+        btsVideoTag(button.dataset.url)
+      })
+    }
     btsPlayBtns.click(function(){
      btsVideoTag(this.dataset.url)
     });
     
-    function btsVideoTag(videoUrl){
-    	let video = `
-  		<div id='bts__video-container' class='video__bg'>
-  			<div class='video__container'>
-  			  <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
-                <video class='bts__video' autoplay muted controls>
-                    <source src="${videoUrl}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-  			</div>
-  		</div>
-  	`;
-      jQuery('body').prepend(video)
+   //  function btsVideoTag(videoUrl){
+   //  	let video = `
+  	// 	<div id='bts__video-container' class='video__bg'>
+  	// 		<div class='video__container'>
+  	// 		  <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
+   //              <video class='bts__video' autoplay muted controls>
+   //                  <source src="${videoUrl}" type="video/mp4">
+   //                  Your browser does not support the video tag.
+   //              </video>
+  	// 		</div>
+  	// 	</div>
+  	// `;
+   //    jQuery('body').prepend(video)
   
-    }
+   //  }
     
-    function btsCloseBtn(){
-    	$("#bts__video-container").remove();
-    } 
-</script> -->
+   //  function btsCloseBtn(){
+   //  	$("#bts__video-container").remove();
+   //  } 
+</script>
 
 {% schema %}
   {
