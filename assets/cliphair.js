@@ -91,16 +91,16 @@ function read_more(button){
     let target = button.dataset.target;
   	let container= document.getElementsByClassName(target)[0];
 
-    container.classList.toggle('closed');
-    button.classList.toggle('closed');
+    container.classList.toggle('hidden');
+    button.classList.toggle('hidden');
 }
   
 function read_less(clicked_button){
     let target = clicked_button.dataset.target;
   	let container= document.getElementsByClassName(target)[0];
     let readMoreButton = document.getElementById(target);
-    container.classList.toggle('closed');
-    readMoreButton.classList.toggle('closed');
+    container.classList.toggle('hidden');
+    readMoreButton.classList.toggle('hidden');
 }
 
 // SCROLL ARROW AND DOTS SNIPPETS
