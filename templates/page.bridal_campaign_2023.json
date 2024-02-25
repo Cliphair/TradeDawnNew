@@ -207,7 +207,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/bride-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8aee634a113f4e25831ed336f184a39c.mp4",
-            "video_title": "<p><strong>EXPLORE BRIDE<\/strong><\/p>"
+            "video_title": "<p><strong>EXPLORE BRIDE<\/strong><\/p>",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "8f9b5f9f-b72e-48ef-be92-af04af2a64ba": {
@@ -215,7 +218,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/guest-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d092c7a19c9d41fa96040cca94a20e48.mp4",
-            "video_title": "<p><strong>EXPLORE BRIDESMAID<\/strong><\/p>"
+            "video_title": "<p><strong>EXPLORE BRIDESMAID<\/strong><\/p>",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "145755f4-4d91-4e80-8bb6-52a475d8285a": {
@@ -223,7 +229,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mother-of-bride-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9543975daaa547a1842e5253c927076b.mp4",
-            "video_title": "<p><strong>EXPLORE MOTHER OF BRIDE<\/strong><\/p>"
+            "video_title": "<p><strong>EXPLORE MOTHER OF BRIDE<\/strong><\/p>",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "bdc998d1-815a-46f8-9f36-e62f96eb4b3d": {
@@ -231,7 +240,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/bridesmaid-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/db96f743efee4c34a35313dd68e53e6d.mp4",
-            "video_title": "<p><strong>EXPLORE GUEST<\/strong><\/p>"
+            "video_title": "<p><strong>EXPLORE GUEST<\/strong><\/p>",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         }
       },
@@ -245,9 +257,11 @@
         "header": "<h2><strong>ONE WEDDING, MANY LOOKS<\/strong><\/h2>",
         "intro": "<p><strong>Find the perfect style for a blushing bride, her proud mother, a cheerful squad of bridesmaids, or a stylish wedding guest!<\/strong><\/p>",
         "image_orientation": "portrait",
+        "title-position": "bottom",
         "text_color": "#000000",
         "bg_color": "#ffffff",
         "max_width": "1440",
+        "social-media": false,
         "header-mobile-font_size": 16,
         "text-mobile-font_size": 12,
         "mobile-p_top": 18,
@@ -797,7 +811,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/stylist_1.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/716c960fdc454fb0ad6081f49f1c605b.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "1ffde32e-4121-40f2-8925-d0563a55cec4": {
@@ -805,7 +822,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/stylist_4.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/596a8b2fd62c4f13bb0e03a9042b4a84.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "60b7f9aa-90e2-4a46-8b76-71ad94e1e054": {
@@ -813,7 +833,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/stylist_3.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c5dead28eb0b49749c8e06e96cd842f0.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "df207e16-0887-4bd4-a50c-b1ad422143f2": {
@@ -821,7 +844,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/stylist_2.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6366e2bab674cd691eefe67ebc2e63f.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         }
       },
@@ -835,9 +861,11 @@
         "header": "<p>STYLIST SPOTLIGHT<\/p>",
         "intro": "<p>See how hairstylists and professionals everywhere are using our premium products for their wedding creations<\/p>",
         "image_orientation": "portrait",
+        "title-position": "bottom",
         "text_color": "#000000",
         "bg_color": "#edeae7",
         "max_width": "1440",
+        "social-media": false,
         "header-mobile-font_size": 16,
         "text-mobile-font_size": 12,
         "mobile-p_top": 20,
@@ -876,8 +904,17 @@
     },
     "6c9b1c46-fc59-48a0-aba8-8644d4d86ee6": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div{padding:0;}"
+      ],
       "settings": {
-        "url": "shopify:\/\/pages\/2023-bridal-hairstylist-award"
+        "max-width": "1440",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/competition-desktop-banner.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/competition-mobile-banner.jpg",
+        "url": "shopify:\/\/pages\/2023-bridal-hairstylist-award",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "bridal23-reviews": {
@@ -1171,7 +1208,11 @@
     "0633b861-fa70-4e85-9192-1fab3592021f": {
       "type": "custom-banner",
       "settings": {
-        "url": "https:\/\/www.cliphair.co.uk\/pages\/2022-cliphair-bridal-hair-extensions"
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "https:\/\/www.cliphair.co.uk\/pages\/2022-cliphair-bridal-hair-extensions",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
