@@ -140,7 +140,7 @@
               {{ block.settings.title }}
               <div class='info-container'>
                 {% for i in (1..block.settings.review-stars) %}
-                  <i class="fa-solid fa-star"></i>
+                  {% render 'icon-star' %}
                 {% endfor %}
                 <span class='author'>{{ block.settings.author }}</span>
               </div>
