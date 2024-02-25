@@ -279,6 +279,7 @@
   let yearPlayBtns = document.querySelectorAll('.year__paly-btn');
   for (let button of yearPlayBtns){
     button.addEventListener('click', function(){
+      console.log('test')
       yearVideoTag(button.dataset.url)
     });
   }
