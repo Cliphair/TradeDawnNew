@@ -191,7 +191,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/red_hair_thumbnail.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5a9c4fe7699f428ca2336c2677d5babe.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "3f100ab2-e2e5-4b0a-ba14-9f81be03f237": {
@@ -199,7 +202,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_1_96aa6405-115c-43f0-8964-b74dd7dada7c.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e059dc4c21dc474b859ef8aca67af7ee.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "f136dd82-10ff-461d-8c06-e0ebf2c0565d": {
@@ -207,7 +213,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_8_d97f4a7d-57f0-4aec-90b6-bbb2f0b1d06c.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9e6ec0e899cc471e877071d46854fbbf.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "7033f690-4013-4b3a-a7d9-931f50224649": {
@@ -215,7 +224,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_7.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/53b850b2891946faa61c3097d422d8f1.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "9044efb2-d4e6-4a93-973c-01f644910929": {
@@ -223,7 +235,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_6.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/27b5f54361b44c25a5481a7b10710f2a.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "38f2a608-7e1c-4a64-83d3-4466487cb30b": {
@@ -231,7 +246,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_5_d956e0be-b39f-4c57-93f2-cdc6160e2384.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e1a51063a0a44bf09c0ce5fec1e3adc5.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "df42cf72-1239-4dda-83ab-d51df5bba471": {
@@ -239,7 +257,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_4_791ab290-e86b-4208-a64d-c5979d0dd04a.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ab4f8325caaf4bde931d66b49637d8b5.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "448e401b-452f-4eed-95a6-233e03b85e2a": {
@@ -247,7 +268,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_3_e84cfadb-1796-4e0a-8788-9565d4eba706.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/cabb3c3579884c00a3a3b79aa6ca3e08.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         },
         "8c9499de-647d-4e66-a28a-3701334628ad": {
@@ -255,7 +279,10 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/video_2_5654aaf9-fade-4e9d-9fdb-dd2492e78a24.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5a676bec32bb41b6aee81c4ccde8544d.mp4",
-            "video_title": ""
+            "video_title": "",
+            "description": "",
+            "button-text": "",
+            "button-link": ""
           }
         }
       },
@@ -277,9 +304,11 @@
         "header": "<p>BECOME A TRUE WEDDING A-LISTER<\/p>",
         "intro": "",
         "image_orientation": "portrait",
+        "title-position": "bottom",
         "text_color": "#000000",
         "bg_color": "#ffffff",
         "max_width": "1440",
+        "social-media": false,
         "header-mobile-font_size": 16,
         "text-mobile-font_size": 12,
         "mobile-p_top": 10,
@@ -496,8 +525,12 @@
     },
     "c40d35d5-1ed0-4861-90e6-3cbeff9d1e0c": {
       "type": "article-trending-tag-bridal23",
+      "custom_css": [
+        "a{text-decoration:none;}"
+      ],
       "settings": {
         "header": "NEED SOME MORE INSPIRATION?",
+        "intro": "",
         "tag": "guest-blogs",
         "header_colour": "#000000",
         "text_colour": "#000000",
