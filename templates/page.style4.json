@@ -35,6 +35,21 @@
         "desktop_sides_padding": 20
       }
     },
+    "custom_banner_zKRLpj": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/hair-down-banner.jpg",
+        "mobile-image": "shopify:\/\/shop_images\/hair-down-mobile.jpg",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "165062557218170705": {
       "type": "page_description",
       "settings": {
@@ -45,6 +60,8 @@
         "text_colour": "#000000",
         "bg_colour": "#ffffff",
         "max-width": "",
+        "custom_description": false,
+        "description": "",
         "description__mobile-font-size": 15,
         "description__mobile-padding-topbottom": 10,
         "description__mobile-padding-sides": 15,
@@ -232,6 +249,7 @@
   "order": [
     "fd8ff921-b711-4fd4-9f70-af330438d6f8",
     "165107295841752000",
+    "custom_banner_zKRLpj",
     "165062557218170705",
     "1650634438a19ebea7",
     "1650638469fa6fbeaf",
