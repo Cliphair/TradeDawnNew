@@ -224,14 +224,14 @@
         
           <div class='images-container images-container-{{ section.id }} {{ containerAlign }}'>
             {% for block in section.blocks %}
-              <img data-src='{{ block.settings.image | image_url }}' class='lazyload' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>         
+              <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>         
             {% endfor %}
           </div>
         
         
         {% if section.settings.shade-image %}
           <div class='shade-container '>
-            <img data-src='{{ section.settings.shade-image | image_url }}' class='lazyload' height='{{ section.settings.shade-image.height }}' width='{{ section.settings.shade-image.width }}' alt='{{ section.settings.shade-image.alt }}'>
+            <img loading='lazy' src='{{ section.settings.shade-image | image_url }}' class='lazyload' height='{{ section.settings.shade-image.height }}' width='{{ section.settings.shade-image.width }}' alt='{{ section.settings.shade-image.alt }}'>
           </div>
         {% endif %}
 
