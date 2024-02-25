@@ -69,7 +69,16 @@
 
   #section-{{ section.id }} .carrousel > .carrousel-item.video-container > .play-btn-container > .play_button{
     color:{{ section.settings.play-color }};
-    font-size: {{section.settings.play-mobile-size }}px;;
+    line-height:1;
+  }
+
+  #section-{{ section.id }} .carrousel > .carrousel-item.video-container > .play-btn-container > .play_button svg{
+    width: {{section.settings.play-mobile-size }}px;
+    height: {{section.settings.play-mobile-size }}px;
+    padding:10px;
+    box-sizing:content-box;
+    border:3px solid;
+    border-radius:50%;
   }
 
   /* section text */
@@ -104,6 +113,10 @@
     width:{{ section.settings.arrow-size-mobile }}px;
     height:{{ section.settings.arrow-size-mobile }}px;
     top:{{ section.settings.arrow-position-mobile }}%;
+  }
+
+  #section-{{ section.id }} .scroll-arrow svg{
+    width:{{ section.settings.arrow-size-mobile }}px;
   }
 
   @media screen and (min-width:768px){

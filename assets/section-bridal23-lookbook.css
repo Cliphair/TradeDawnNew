@@ -173,11 +173,13 @@
 .section-bridal23-lookbook .scroll-arrow.right{
   right:15px;
   text-align:right;
+  transform:rotate(270deg);
 }
 
 .section-bridal23-lookbook .scroll-arrow.left{
   left:15px;
   text-align:left;
+  transform:rotate(90deg);
 }
 
 .section-bridal23-lookbook .scroll-arrow.mobile-hidden{
