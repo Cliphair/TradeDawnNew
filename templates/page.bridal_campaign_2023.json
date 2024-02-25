@@ -210,7 +210,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/bride-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/8aee634a113f4e25831ed336f184a39c.mp4",
-            "video_title": "<p><strong>EXPLORE BRIDE<\/strong><\/p>",
+            "video_title": "<p><a href=\"\/pages\/bride-lookbook-bridal-23\" title=\"Bride Lookbook\"><strong>EXPLORE BRIDE<\/strong><\/a><\/p>",
             "description": "",
             "button-text": "",
             "button-link": ""
@@ -221,7 +221,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/guest-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d092c7a19c9d41fa96040cca94a20e48.mp4",
-            "video_title": "<p><strong>EXPLORE BRIDESMAID<\/strong><\/p>",
+            "video_title": "<p><a href=\"\/pages\/bridesmaid-lookbook-bridal-23\" title=\"Bridesmaid Lookbook\"><strong>EXPLORE BRIDESMAID<\/strong><\/a><\/p>",
             "description": "",
             "button-text": "",
             "button-link": ""
@@ -232,7 +232,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mother-of-bride-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9543975daaa547a1842e5253c927076b.mp4",
-            "video_title": "<p><strong>EXPLORE MOTHER OF BRIDE<\/strong><\/p>",
+            "video_title": "<p><a href=\"\/pages\/mother-of-bride-lookbook-bridal-23\" title=\"Mother Of Bride Lookbook\"><strong>EXPLORE MOTHER OF BRIDE<\/strong><\/a><\/p>",
             "description": "",
             "button-text": "",
             "button-link": ""
@@ -243,7 +243,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/bridesmaid-lookbook.jpg",
             "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/db96f743efee4c34a35313dd68e53e6d.mp4",
-            "video_title": "<p><strong>EXPLORE GUEST<\/strong><\/p>",
+            "video_title": "<p><a href=\"\/pages\/guest-lookbook-bridal-23\" title=\"Guest Lookbook\"><strong>EXPLORE GUEST<\/strong><\/a><\/p>",
             "description": "",
             "button-text": "",
             "button-link": ""
@@ -255,6 +255,9 @@
         "8f9b5f9f-b72e-48ef-be92-af04af2a64ba",
         "145755f4-4d91-4e80-8bb6-52a475d8285a",
         "bdc998d1-815a-46f8-9f36-e62f96eb4b3d"
+      ],
+      "custom_css": [
+        "a{color:inherit;}"
       ],
       "settings": {
         "header": "<h2><strong>ONE WEDDING, MANY LOOKS<\/strong><\/h2>",
@@ -918,7 +921,7 @@
       ],
       "settings": {
         "max-width": "1440",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/competition-desktop-banner.jpg",
         "mobile-image": "shopify:\/\/shop_images\/competition-mobile-banner.jpg",
         "url": "shopify:\/\/pages\/2023-bridal-hairstylist-award",
@@ -1221,7 +1224,7 @@
       "type": "custom-banner",
       "settings": {
         "max-width": "",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "url": "https:\/\/www.cliphair.co.uk\/pages\/2022-cliphair-bridal-hair-extensions",
         "padding_top": 36,
         "padding_bottom": 36
