@@ -2,7 +2,7 @@ var answers = {
   "style_1":{
     "type_1":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height'705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
+			<img class='answer__image lazyload' width='471' height'705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
 		</div>
 		<div class='answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/seamless-clip-in-hair-extensions-double-drawn-hair' title='Seamless collection'>Seamless Hair Extensions</a></h3>
@@ -11,7 +11,7 @@ var answers = {
 		</div>`,
     "type_2":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/seamless-clip-in-hair-extensions-double-drawn-hair' title='Seamless collection'>Seamless Hair Extensions</a></h3>
@@ -20,7 +20,7 @@ var answers = {
 		</div>`,
     "type_3":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/double_wefted_3f175c11-b98f-4604-b61a-25fb4b571bdf.jpg?v=1650902477'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/double_wefted_3f175c11-b98f-4604-b61a-25fb4b571bdf.jpg?v=1650902477'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/double-wefted-clip-in-hair-extensions' title='Double Weft collection'>Double Weft Hair Extensions</a></h3>
@@ -32,7 +32,7 @@ var answers = {
   "style_2":{
     "type_1":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/seamless-clip-in-hair-extensions-double-drawn-hair' title='Seamless collection'>Seamless Hair Extensions</a></h3>
@@ -41,7 +41,7 @@ var answers = {
 		</div>`,
     "type_2":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/one_piece_clip_in_human_hair_extensions.jpg?v=1650895494'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/one_piece_clip_in_human_hair_extensions.jpg?v=1650895494'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/supreme-quad-weft' title='Supreme collection'>Supreme Quad Weft Hair Extensions</a></h3>
@@ -50,7 +50,7 @@ var answers = {
 		</div>`,
     "type_3":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/ultra-clip-in-hair-extensions' title='Ultra collection'>Ultra-Volume Hair Extensions</a></h3>
@@ -62,7 +62,7 @@ var answers = {
   "style_3":{
     "type_1":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/seamless-clip-in-hair-extensions-double-drawn-hair' title='Seamless collection'>Seamless Hair Extensions</a></h3>
@@ -71,7 +71,7 @@ var answers = {
 		</div>`,
     "type_2":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/seamless-clip-in-hair-extensions-double-drawn-hair' title='Seamless collection'>Seamless Hair Extensions</a></h3>
@@ -80,7 +80,7 @@ var answers = {
 		</div>`,
     "type_3":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/ultra-clip-in-hair-extensions' title='Ultra collection'>Ultra-Volume Hair Extensions</a></h3>
@@ -92,7 +92,7 @@ var answers = {
   "style_4":{
     "type_1":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/8_e0ceb6d1-ecc9-4b33-8093-98600f3b2a76.jpg?v=1650542009'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/seamless-clip-in-hair-extensions-double-drawn-hair' title='Seamless collection'>Seamless Hair Extensions</a></h3>
@@ -101,7 +101,7 @@ var answers = {
 		</div>`,
     "type_2":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/ultra-clip-in-hair-extensions' title='Ultra collection'>Ultra-Volume Hair Extensions</a></h3>
@@ -110,7 +110,7 @@ var answers = {
 		</div>`,
     "type_3":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/9_f80c6b7d-48bf-447e-b2a5-0ea01477f49e.jpg?v=1650542148'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/ultra-clip-in-hair-extensions' title='Ultra collection'>Ultra-Volume Hair Extensions</a></h3>
@@ -122,7 +122,7 @@ var answers = {
   "style_5":{
     "type_1":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/6_db3d9e87-da37-4630-b88c-a7415e65d630.jpg?v=1650541898'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/6_db3d9e87-da37-4630-b88c-a7415e65d630.jpg?v=1650541898'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/products/14-inch-mini-ponytail-extensions' title='Mini straight up wrap around ponytail'>Mini Straight Up Wrap Around Ponytail Hair Extension</a></h3>
@@ -131,7 +131,7 @@ var answers = {
 		</div>`,
     "type_2":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/6_db3d9e87-da37-4630-b88c-a7415e65d630.jpg?v=1650541898'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/6_db3d9e87-da37-4630-b88c-a7415e65d630.jpg?v=1650541898'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/products/20-inch-classic-ponytail-extensions' title='Classic straight up wrap around ponytail'>Classic Straight Up Wrap Around Ponytail Hair Extension</a></h3>
@@ -140,7 +140,7 @@ var answers = {
 		</div>`,
     "type_3":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/6_db3d9e87-da37-4630-b88c-a7415e65d630.jpg?v=1650541898'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/6_db3d9e87-da37-4630-b88c-a7415e65d630.jpg?v=1650541898'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/products/24-inch-mega-ponytail-extensions' title='Mega straight up wrap around ponytail'>Mega Straight Up Wrap Around Ponytail Hair Extension</a></h3>
@@ -152,7 +152,7 @@ var answers = {
   "style_6":{
     "type_1":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/full-head.jpg?v=1683651543'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/full-head.jpg?v=1683651543'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/full-head-clip-in-hair-extensions' title='Classic Full Head Collection Page'>Classic Full Head Hair Extensions</a></h3>
@@ -161,7 +161,7 @@ var answers = {
 		</div>`,
     "type_2":`
 		<div class=' answer__image-container'>
-			<img class='answer__image lazyload' width='471' height='705' data-src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/curly_1.jpg?v=1683651532'>
+			<img class='answer__image lazyload' width='471' height='705' loading='lazy' src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/curly_1.jpg?v=1683651532'>
 		</div>
 		<div class=' answer__text-container'>
 			<h3><a class='' href='https://www.cliphair.co.uk/collections/curly-clip-in-hair-extensions' title='Curly Full Head Collection Page'>Curly Full Head Hair Extensions</a></h3>
