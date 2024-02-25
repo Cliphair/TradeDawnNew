@@ -36,11 +36,11 @@
               {% assign missign_hearts = review_total | minus: hearts %}	
 
               {% for i in (1..hearts) %}
-                <span class='reviews__reviews-review'><i class="fa-solid fa-heart pink"></i></span>
+                <span class='reviews__reviews-review pink'>{% render 'icon-heart-filled' %}</span>
               {% endfor %}
 
               {% for i in (1..missign_hearts) %}
-                <span class='reviews__reviews-review'><i class="fa-solid fa-heart grey"></i></span>
+                <span class='reviews__reviews-review grey'>{% render 'icon-heart-filled' %}</span>
               {% endfor %}
 
             </div>
@@ -191,12 +191,12 @@
     margin-top:10px;
   }
   
-  .reviews__section-container .reviews__reviews-review > .pink{
-  	color:#ff8ea2 !important;
+  .reviews__section-container .reviews__reviews-review.pink svg{
+  	fill:#ff8ea2 !important;
   }
   
-  .reviews__section-container .reviews__reviews-review > .grey{
-  	color:#80808040 !important;
+  .reviews__section-container .reviews__reviews-review.grey{
+  	fill:#80808040 !important;
   }
   
   .reviews__reviews-content span.btn__read-more{
@@ -267,7 +267,7 @@
   }
 </style>
 
-<script>
+<!-- <script>
 
   function read_more(button){
     let target = button.dataset.target;
@@ -286,7 +286,7 @@
     readMoreButton.classList.toggle('closed');
   }
   
-</script>
+</script> -->
 
 {% schema %}
    {
