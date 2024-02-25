@@ -87,6 +87,22 @@ function readLess(clicked_id) {
     textContainer.classList.toggle('closed');
 }
 
+function read_more(button){
+    let target = button.dataset.target;
+  	let container= document.getElementsByClassName(target)[0];
+
+    container.classList.toggle('closed');
+    button.classList.toggle('closed');
+}
+  
+function read_less(clicked_button){
+    let target = clicked_button.dataset.target;
+  	let container= document.getElementsByClassName(target)[0];
+    let readMoreButton = document.getElementById(target);
+    container.classList.toggle('closed');
+    readMoreButton.classList.toggle('closed');
+}
+
 // SCROLL ARROW AND DOTS SNIPPETS
 // Functions to scroll an element into view based on a button click
 function addButtonClick(btnClass){
