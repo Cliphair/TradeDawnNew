@@ -123,30 +123,6 @@
         "padding_bottom": 12
       }
     },
-    "video_list_metafields_rWpTia": {
-      "type": "video-list-metafields",
-      "custom_css": [
-        ".deferred-media__poster-button {color: white;}"
-      ],
-      "settings": {
-        "title": "SEE IT IN REAL LIFE",
-        "heading_size": "h1",
-        "introduction": "",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "text_allignment": "center",
-        "image_ratio": "portrait",
-        "hide_card_arrow": false,
-        "columns_desktop": 4,
-        "swipe_on_desktop": true,
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -204,22 +180,6 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "product_faq_NBzNDV": {
-      "type": "product-faq",
-      "settings": {
-        "caption": "",
-        "heading": "FAQ's",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "arrow_style": "half-arrow",
-        "color_scheme": "accent-4",
-        "container_color_scheme": "accent-4",
-        "open_first_collapsible_row": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -391,12 +351,10 @@
   },
   "order": [
     "main",
-    "video_list_metafields_rWpTia",
     "related-products",
     "506f6558-7efd-4e91-a56a-75b4a46d81cc",
     "cb0bf916-3e7b-44a5-bee5-ef9302e54a26",
     "2ba62760-f7d7-46c5-ae93-8ade6e208816",
-    "product_faq_NBzNDV",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
