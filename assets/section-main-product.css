@@ -1750,6 +1750,10 @@ klarna-placement,
 }
 
 /* order deadline */
+#order-deadline{
+  min-height:48px;
+}
+
 #order-deadline *{
   font-size:12px;
 }
