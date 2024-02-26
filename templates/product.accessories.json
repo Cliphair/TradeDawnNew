@@ -73,6 +73,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "type": "custom",
             "heading": "Ingredients",
@@ -83,6 +84,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "type": "custom",
             "heading": "How to Use",
