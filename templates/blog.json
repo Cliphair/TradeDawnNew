@@ -17,7 +17,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "background-faded-blue",
+        "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -188,6 +188,74 @@
         "padding_bottom": 36
       }
     },
+    "7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff": {
+      "type": "image-list",
+      "blocks": {
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White.svg",
+            "text_label": "Ethically Sourced",
+            "link": ""
+          }
+        },
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
+            "text_label": "Outstanding Reviews",
+            "link": ""
+          }
+        },
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
+            "text_label": "Cliphair Rewards",
+            "link": ""
+          }
+        },
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
+            "text_label": "Free Delivery and returns",
+            "link": ""
+          }
+        },
+        "ea6084bd-36ec-4a2c-acd9-7d65cb55a504": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "Buy now pay later",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-1",
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-2",
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-3",
+        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-4",
+        "ea6084bd-36ec-4a2c-acd9-7d65cb55a504"
+      ],
+      "custom_css": [
+        "img {max-height: 70px;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 5,
+        "swipe_on_desktop": false,
+        "color_scheme": "background-collection-titles",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "bf4f5954-262b-4b6a-a921-1f55e8f01267": {
       "type": "rich-text",
       "blocks": {
@@ -209,6 +277,7 @@
         "template--15283893993533__bf4f5954-262b-4b6a-a921-1f55e8f01267-heading-1",
         "template--15283893993533__bf4f5954-262b-4b6a-a921-1f55e8f01267-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -331,74 +400,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff": {
-      "type": "image-list",
-      "blocks": {
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White.svg",
-            "text_label": "Ethically Sourced",
-            "link": ""
-          }
-        },
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "Outstanding Reviews",
-            "link": ""
-          }
-        },
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "Cliphair Rewards",
-            "link": ""
-          }
-        },
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "Free Delivery and returns",
-            "link": ""
-          }
-        },
-        "ea6084bd-36ec-4a2c-acd9-7d65cb55a504": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "Buy now pay later",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-1",
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-2",
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-3",
-        "template--15283893993533__7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff-image-4",
-        "ea6084bd-36ec-4a2c-acd9-7d65cb55a504"
-      ],
-      "custom_css": [
-        "img {max-height: 70px;}"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "introduction": "",
-        "text_allignment": "left",
-        "columns_desktop": 5,
-        "swipe_on_desktop": false,
-        "color_scheme": "background-collection-titles",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -406,9 +407,9 @@
     "article-trending",
     "article-categories",
     "main",
+    "7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff",
     "bf4f5954-262b-4b6a-a921-1f55e8f01267",
     "f93e99ae-9f84-4441-8d01-a204676778a4",
-    "cfb39603-0eaf-46b4-b9dc-0144a0e61a32",
-    "7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff"
+    "cfb39603-0eaf-46b4-b9dc-0144a0e61a32"
   ]
 }
