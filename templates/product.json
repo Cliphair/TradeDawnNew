@@ -125,6 +125,9 @@
     },
     "video_list_metafields_UqTJAJ": {
       "type": "video-list-metafields",
+      "custom_css": [
+        ".deferred-media__poster-button {color: white;}"
+      ],
       "settings": {
         "title": "SEE IT IN REAL LIFE",
         "heading_size": "h1",
