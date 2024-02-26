@@ -918,6 +918,7 @@
         "image_dgTyrR",
         "image_hBphpA"
       ],
+      "disabled": true,
       "custom_css": [
         "img {max-height: 70px;}"
       ],
@@ -951,7 +952,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
             "text_label": "Outstanding<br>Reviews",
-            "link": ""
+            "link": "shopify:\/\/pages\/testimonials"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
@@ -959,7 +960,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
             "text_label": "Cliphair<br>Rewards",
-            "link": ""
+            "link": "shopify:\/\/pages\/rewards"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
@@ -987,7 +988,8 @@
         "cbdbff03-f013-487f-8288-6c9a46426bc6"
       ],
       "custom_css": [
-        "img {max-height: 70px;}"
+        "img {max-height: 70px;}",
+        "a{text-decoration:none;}"
       ],
       "settings": {
         "title": "",
