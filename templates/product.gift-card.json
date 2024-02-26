@@ -68,6 +68,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "type": "specification",
             "heading": "Details",
@@ -78,6 +79,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "type": "instructions",
             "heading": "How to Style",

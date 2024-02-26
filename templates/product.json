@@ -162,6 +162,7 @@
       "settings": {
         "heading": "Blog posts",
         "heading_size": "h1",
+        "tags_size": "h3",
         "heading_alignment": "center",
         "blog": "hair-blog",
         "post_limit": 3,
@@ -255,6 +256,7 @@
         "image_dgTyrR",
         "image_hBphpA"
       ],
+      "disabled": true,
       "custom_css": [
         "img {max-height: 70px;}"
       ],
