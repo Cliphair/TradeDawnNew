@@ -27,6 +27,7 @@
         "5c39b4ef-b204-4a4a-8a10-eebe8e8bd649",
         "37334cfe-2d73-48a6-8e55-1f85db600a25"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "padding_top": 20,
@@ -54,7 +55,7 @@
         "low_inventory": 5,
         "enable_filtering": true,
         "filter_type": "horizontal",
-        "remove_filters": "Length",
+        "remove_filters": "Colour Group,Colour",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
