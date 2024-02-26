@@ -103,6 +103,7 @@
   align-items:center;
   justify-content:center;
   border-radius:50%;
+  line-height:1;
 }
 
 .reviews-modal .review > .body{
