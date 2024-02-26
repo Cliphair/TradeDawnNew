@@ -1,5 +1,20 @@
 {
   "sections": {
+    "custom_banner_Lgrbw4": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div{padding:0;}"
+      ],
+      "settings": {
+        "max-width": "2560",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/deep-moisture-hair-care-range-desktop.webp",
+        "mobile-image": "shopify:\/\/shop_images\/deep-moisture-hair-care-range-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -465,6 +480,7 @@
     }
   },
   "order": [
+    "custom_banner_Lgrbw4",
     "banner",
     "6db3206b-59ea-491c-ac8c-e47b80ac9838",
     "product-grid",
