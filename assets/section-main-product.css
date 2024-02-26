@@ -1760,7 +1760,10 @@ klarna-placement,
 
 #order-deadline .trustblox-1-timer-wrap > div{
   display: inline-block;
-  margin-left: 10px;
+}
+
+#order-deadline .trustblox-1-timer-wrap > div:first-of-type{
+  margin-right: 10px;
 }
 
 #order-deadline .trustblox-1-timer-locations-toggle-icon{
