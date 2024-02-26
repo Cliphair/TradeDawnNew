@@ -479,6 +479,12 @@
             "tag": "Hair Care & Tips"
           }
         },
+        "tag_cXg8U8": {
+          "type": "tag",
+          "settings": {
+            "tag": "Top Trends"
+          }
+        },
         "tag_b7A6Jb": {
           "type": "tag",
           "settings": {
@@ -491,23 +497,25 @@
             "tag": "Lifestyle & Pop Culture"
           }
         },
-        "tag_cXg8U8": {
+        "tag_fjUGYX": {
           "type": "tag",
           "settings": {
-            "tag": "PRODUCTS"
+            "tag": "Wedding & Occasion Hair"
           }
         }
       },
       "block_order": [
         "tag_gTQgAc",
         "tag_MKYQKA",
+        "tag_cXg8U8",
         "tag_b7A6Jb",
         "tag_UJwHJw",
-        "tag_cXg8U8"
+        "tag_fjUGYX"
       ],
       "settings": {
         "heading": "<strong>BLOG SPOT<\/strong>",
         "heading_size": "h1",
+        "tags_size": "h4",
         "heading_alignment": "center",
         "blog": "hair-blog",
         "post_limit": 3,
