@@ -74,8 +74,8 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "type": "specification",
-            "heading": "Details",
+            "type": "custom",
+            "heading": "Ingredients",
             "icon": "none",
             "content": "",
             "page": ""
@@ -84,8 +84,8 @@
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "type": "instructions",
-            "heading": "How to Style",
+            "type": "custom",
+            "heading": "How to Use",
             "icon": "none",
             "content": "",
             "page": ""
