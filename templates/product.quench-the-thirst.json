@@ -363,6 +363,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "reviews-modal": {
+      "type": "quench-the-thirst-reviews-modal",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -373,6 +378,7 @@
     "2ba62760-f7d7-46c5-ae93-8ade6e208816",
     "product_faq_NBzNDV",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
-    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
+    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b",
+    "reviews-modal"
   ]
 }
