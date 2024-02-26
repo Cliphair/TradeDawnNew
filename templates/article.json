@@ -58,6 +58,7 @@
         "template--15283893927997__12bc967e-f184-4f62-b448-da40706e950b-heading-1",
         "template--15283893927997__12bc967e-f184-4f62-b448-da40706e950b-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -109,7 +110,19 @@
         "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-image-3",
         "template--15283893927997__a436dc5a-33a8-40dd-a9aa-c3fc4c9d991e-image-4"
       ],
+      "disabled": true,
       "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "e429f763-5eb8-4348-b4cd-a17bb30b9f6e": {
@@ -154,7 +167,19 @@
         "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-image-3",
         "template--15283893927997__e429f763-5eb8-4348-b4cd-a17bb30b9f6e-image-4"
       ],
+      "disabled": true,
       "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "2e1934dd-28b9-4bbb-b01e-0576cbadc4b2": {
@@ -208,7 +233,21 @@
         "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-4",
         "da9d00ec-2d22-4240-a002-8b910ec693e4"
       ],
+      "custom_css": [
+        "img {max-height: 70px;}"
+      ],
       "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 5,
+        "swipe_on_desktop": false,
+        "color_scheme": "background-collection-titles",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
