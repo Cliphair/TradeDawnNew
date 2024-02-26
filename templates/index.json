@@ -139,7 +139,7 @@
           "type": "collections",
           "settings": {
             "block-title": "<strong>CHOOSE BY HAIR COLOUR…<\/strong>",
-            "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit, euismod dolore magna erat.<\/p>",
+            "block-introduction": "<p>A stunning collection of over 70 shades, including mixed colours, stunning balayages, and solid shades to match everyone.<\/p>",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
             "link": "shopify:\/\/pages\/colour-matching-service",
@@ -151,7 +151,7 @@
           "type": "collections",
           "settings": {
             "block-title": "<strong>CHOOSE BY HAIR EXTENSION TYPE…<\/strong>",
-            "block-introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat.<br\/><\/p>",
+            "block-introduction": "<p>Thickness, bounce, length: what do you want to add to your hair? Find the right type of hair extensions for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
             "collection-list": "choose-by-hair-extensions-type",
             "button_label": "",
             "link": "",
@@ -191,7 +191,7 @@
         "text_wgJyct": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat.<\/p>"
+            "text": "<p>Still unsure? Find out which type of hair extensions fits you best with this quiz.<\/p>"
           }
         }
       },
@@ -430,7 +430,7 @@
           "type": "promise",
           "settings": {
             "block-title": "ADD VOLUME",
-            "block-introduction": "<p>Lorem ipsum dolor sit amet.<\/p>",
+            "block-introduction": "<p>More thickness, more bounce, more dimension.<\/p>",
             "block-image": "shopify:\/\/shop_images\/placeholder_image.webp",
             "circle-images": true
           }
@@ -439,7 +439,7 @@
           "type": "promise",
           "settings": {
             "block-title": "ADD LENGTH",
-            "block-introduction": "<p>Lorem ipsum dolor sit amet.<\/p>",
+            "block-introduction": "<p>Precious inches for your hair.<\/p>",
             "block-image": "shopify:\/\/shop_images\/placeholder_image.webp",
             "circle-images": true
           }
@@ -451,7 +451,7 @@
       ],
       "settings": {
         "title": "<strong>THE CLIPHAIR QUALITY PROMISE<\/strong>",
-        "introduction": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat.<br\/> <br\/>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat. Dolor sit amet, consectetuer adipiscing elit, euismod dolore magna erat  aliquam volutpat. <\/p>",
+        "introduction": "<p>100% Remy Human Hair, no nonsense. We give you exactly what you see: luscious tresses, fast-responsive customer service, and daily inspiration on our channels – for you to purchase with confidence and recreate your favourite looks with our hair extensions.<\/p>",
         "heading_size": "h1",
         "text_allignment": "left",
         "image_ratio": "adapt",
@@ -989,7 +989,7 @@
       ],
       "custom_css": [
         "img {max-height: 70px;}",
-        "a{text-decoration:none;}"
+        "a {text-decoration: none;}"
       ],
       "settings": {
         "title": "",
