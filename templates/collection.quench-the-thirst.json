@@ -3,11 +3,11 @@
     "custom_banner_Lgrbw4": {
       "type": "custom-banner",
       "custom_css": [
-        "div > div{padding:0;}"
+        "div > div {padding: 0;}"
       ],
       "settings": {
         "max-width": "2560",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/deep-moisture-hair-care-range-desktop.webp",
         "mobile-image": "shopify:\/\/shop_images\/deep-moisture-hair-care-range-mobile.webp",
         "url": "",
@@ -75,6 +75,17 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_banner_TtwjFn": {
+      "type": "custom-banner",
+      "settings": {
+        "max-width": "768",
+        "bg-color": "#fffafc",
+        "desktop-image": "shopify:\/\/shop_images\/why-cliphair-shade-4.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "db22f337-3a12-4ced-9dd2-bf58688d855a": {
@@ -484,6 +495,7 @@
     "banner",
     "6db3206b-59ea-491c-ac8c-e47b80ac9838",
     "product-grid",
+    "custom_banner_TtwjFn",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
     "b400924f-2211-460e-841c-e909605faf8f",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
