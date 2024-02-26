@@ -96,6 +96,7 @@
 {% endstyle %}
 
 {% liquid
+  assign empty_list = true
   case request.page_type
     when 'collection'
       if collection.metafields.custom.videos_list != blank
