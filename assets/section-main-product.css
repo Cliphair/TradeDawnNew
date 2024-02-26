@@ -1748,3 +1748,8 @@ klarna-placement,
 .product__media-contain .media>img {
   object-fit: contain;
 }
+
+/* order deadline */
+#order-deadline .trustblox-1-timer-locations-toggle-icon{
+  display:inline-block!important;s
+}
