@@ -387,102 +387,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "reviews-modal": {
-      "type": "quench-the-thirst-reviews-modal",
-      "blocks": {
-        "review_wfgLE3": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Kelly Fletcher",
-            "content": "<p>I am pleased to say they were amazing, the conditioner left the extension soft, revived and extremely enhanced, highly recommended and must have product in your hair care routine, I am extremely happy with all the new products of Cliphair in hair care range, as an old customer, I feel honoured that Cliphair selected me for product review.<br\/><\/p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_xbHz9r": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Zoe Webbe",
-            "content": "<p>Lovely smell to these products with a great lather despite being sulphate-free. My hair felt really silkyeven after just using these 2 products. I couldn't wait to try the treatment too!<br\/><\/p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_mwrKTh": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Charlie Upton",
-            "content": "<p>I've Only Got One Word - WOW. The most incredible mask I've ever used! This is a MUST have! To pair with the quench the thirst shampoo & conditioner - this is a staple! I honestly have no idea how I've never used this before - it's incredible! I will NOT live without the mask!<\/p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_3JUaj7": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Alex Gratrick",
-            "content": "<p>The conditioner is lovely and thick and even on my hair having so much I only use around a 50p piece size which also makes this incredible value for money. The only thing I will say - and this is completely personal preference I do wish the Scent in these products was stronger it's got a beautiful coconut \/ shea type Scent to it but unfortunately after blow drying the Scent is gone from my hair (though it's clean so I can't complain!) That being said as that is my only criticism, I would repurchase this!<\/p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_gzjqrn": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Zoe Webbe",
-            "content": "<p>Lovely smell again. My hair felt lush afterwards and even when coming to blow-dry it, it seemed to dry smoother than ever, Overall, generous sized products and love how on brand the packaging is. <\/p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_TDT8PX": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Charlie Upton",
-            "content": "<p>Honestly AMAZING! Smell's incredible also! Lavers Beautifully which I massively struggle with due to wearing extensions and no products leave my hair feeling clean. So this is a must have for me for anyone wearing extensions!<br\/><\/p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_hqYfLg": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Kelly Fletcher",
-            "content": "<p>Thank you for the complimentary products it was a pleasure to trail them for you. I am pleased to say they were amazing; The hair mask was extremely silky and must recommend product, I am truly in love with this product and its packaging. <\/p>",
-            "date": "",
-            "review-stars": 5
-          }
-        }
-      },
-      "block_order": [
-        "review_wfgLE3",
-        "review_xbHz9r",
-        "review_mwrKTh",
-        "review_3JUaj7",
-        "review_gzjqrn",
-        "review_TDT8PX",
-        "review_hqYfLg"
-      ],
-      "settings": {
-        "modal-id": "quench-the-thirst-reviews-modal",
-        "title": "<h3>Reviews From Our Trade Customers<\/h3>",
-        "intro": "",
-        "header-color": "#6a6a6a",
-        "text-color": "#6a6a6a",
-        "bg-color": "#FFFFFF",
-        "header_mobile_font_size": 20,
-        "text_mobile_font_size": 12,
-        "header_desktop_font_size": 30,
-        "text_desktop_font_size": 20
-      }
     }
   },
   "order": [
@@ -494,7 +398,6 @@
     "2ba62760-f7d7-46c5-ae93-8ade6e208816",
     "product_faq_NBzNDV",
     "67a94c71-0b44-4f05-aa2f-594b1239edd9",
-    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b",
-    "reviews-modal"
+    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
 }
