@@ -55,7 +55,7 @@
     {% if section.blocks.size > 0 and section.settings.blog != blank %}
       <ul class="tag-wrapper">
         {% for block in section.blocks %}
-          <li class="tag h2">
+          <li class="tag {{  section.settings.tags_size }}">
             <a
               href="{{ section.settings.blog.url }}/tagged/{{ block.settings.tag | handleize }}"
               title="{{ section.settings.blog.title }} - {{ block.settings.tag | capitalize }}"
@@ -139,6 +139,26 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "tags_size",
+      "options": [
+        {
+          "value": "h4",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h3",
+      "label": "Tags size"
     },
     {
       "type": "select",
@@ -272,7 +292,7 @@
     {
       "type": "tag",
       "name": "Tag",
-      "limit": 5,
+      "limit": 6,
       "settings": [
         {
           "type": "inline_richtext",

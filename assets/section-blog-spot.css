@@ -16,6 +16,7 @@
 .tag {
 	font-weight: 300;
 	cursor: pointer;
+	color: rgb(var(--color-main-headers));
 }
 
 .tag>a {
