@@ -34,7 +34,7 @@
   }
 
   #section-{{ section.id }}  .review > .body .stars > *{
-    font-size:{{ section.settings.text_mobile_font_size }}px;
+    width:{{ section.settings.text_mobile_font_size }}px;
   }
 
   @media screen and (min-width:992px){
@@ -43,7 +43,7 @@
     }
   
     #section-{{ section.id }} .review > .body  .stars > *{
-      font-size:{{ section.settings.text_desktop_font_size  }}px;
+      width:{{ section.settings.text_desktop_font_size  }}px;
     }
   }
 </style>
