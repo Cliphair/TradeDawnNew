@@ -107,6 +107,7 @@
         "image_dgTyrR",
         "image_hBphpA"
       ],
+      "disabled": true,
       "custom_css": [
         "img {max-height: 70px;}"
       ],
