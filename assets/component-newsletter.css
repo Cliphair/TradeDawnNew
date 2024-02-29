@@ -21,13 +21,13 @@
   align-items: center;
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:749px){
   .newsletter-form__field-wrapper {
     flex-direction: column;
     gap:1.5rem;
   }
 
-  .newsletter-form__button{
+  button.newsletter-form__button{
     max-width:unset;
   }
 }
