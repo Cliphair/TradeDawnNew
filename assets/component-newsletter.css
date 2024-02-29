@@ -21,6 +21,13 @@
   align-items: center;
 }
 
+@media screen and (max-width:750px){
+  .newsletter-form__field-wrapper {
+    flex-direction: column;
+    gap:1.5rem;
+  }
+}
+
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
 }
