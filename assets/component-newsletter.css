@@ -26,10 +26,15 @@
     flex-direction: column;
     gap:1.5rem;
   }
+
+  .newsletter-form__button{
+    max-width:unset;
+  }
 }
 
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
+  background:white;
 }
 
 .newsletter-form__field-wrapper .field {
