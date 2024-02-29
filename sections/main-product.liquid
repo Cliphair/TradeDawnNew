@@ -297,6 +297,7 @@
                         {% if page_content.content != blank %}
                           {{ page_content.content }}
                         {% else %}
+                          {{ path }}
                           <p>Update is in progress</p>
                         {% endif %}
                       {% when 'instructions' %}
@@ -307,6 +308,7 @@
                         {% if page_content.content != blank %}
                           {{ page_content.content }}
                         {% else %}
+                          {{ path }}
                           <p>Update is in progress</p>
                         {% endif %}
                       {% when 'custom' %}
