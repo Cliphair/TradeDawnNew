@@ -5,8 +5,15 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "brand_information_QUWgFB": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
         "footer-0": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Cliphair",
             "subtext": "<p>0345 211 311<\/p><p>customerservice@cliphair.com<\/p><p>9:30AM - 4:30PM - (Mon - Fri)<\/p><p><\/p><p>Unit 1 Watermill House, Restmor Way,<\/p><p>Wallington SM6 7AH<\/p><p>United Kingdom<\/p><p><\/p>"
@@ -35,6 +42,7 @@
         }
       },
       "block_order": [
+        "brand_information_QUWgFB",
         "footer-0",
         "d08a5cf4-367a-4ccd-8b21-13be0c3a942b",
         "footer-1",
@@ -45,7 +53,7 @@
         "newsletter_enable": true,
         "newsletter_heading": "Get a discount on your first order + hair tips in your inbox!",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
