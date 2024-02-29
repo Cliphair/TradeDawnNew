@@ -303,7 +303,7 @@
                       {% when 'instructions' %}
                         {% liquid
                           assign path = product.type | handle | append: '-instructions'
-                          assign page_content = pages[path].content
+                          assign page_content = pages[path]
                         %}
                         {% if page_content.content != blank %}
                           {{ page_content.content }}
