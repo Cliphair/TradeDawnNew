@@ -1769,3 +1769,22 @@ klarna-placement,
 #order-deadline .trustblox-1-timer-locations-toggle-icon{
   display:inline-block!important;s
 }
+
+/* Specification */
+.specification p{
+  border-top: 1px solid #ddd;
+  padding: 10px 5px;
+}
+
+.specification p span{
+  font-weight: 700;
+}
+
+.specification table{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.specification table tr:nth-child(2n) {
+    background: #eee;
+}
