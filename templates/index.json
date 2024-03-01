@@ -1,63 +1,5 @@
 {
   "sections": {
-    "slideshow_image_link_WcQ9XG": {
-      "type": "slideshow-image-link",
-      "blocks": {
-        "slide_UAXhxj": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-mobile.webp",
-            "image_desktop": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-desktop-v3.webp",
-            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_rCbf9a": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/quench-the-thirst-mobile-banner.webp",
-            "image_desktop": "shopify:\/\/shop_images\/quench-the-thirst-desktop-banner.webp",
-            "image_url": "shopify:\/\/collections\/quench-the-thirst",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_UAXhxj",
-        "slide_rCbf9a"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -121,7 +63,6 @@
         "slide2",
         "08bc8425-10fb-4207-ad18-65f5aa4d087d"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -129,6 +70,65 @@
         "auto_rotate": true,
         "change_slides_speed": 5,
         "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "slideshow_image_link_WcQ9XG": {
+      "type": "slideshow-image-link",
+      "blocks": {
+        "slide_UAXhxj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-mobile.webp",
+            "image_desktop": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-desktop-v3.webp",
+            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_rCbf9a": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/quench-the-thirst-mobile-banner.webp",
+            "image_desktop": "shopify:\/\/shop_images\/quench-the-thirst-desktop-banner.webp",
+            "image_url": "shopify:\/\/collections\/quench-the-thirst",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_UAXhxj",
+        "slide_rCbf9a"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
@@ -1067,8 +1067,8 @@
     }
   },
   "order": [
-    "slideshow_image_link_WcQ9XG",
     "slideshow",
+    "slideshow_image_link_WcQ9XG",
     "horizontal_list",
     "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
