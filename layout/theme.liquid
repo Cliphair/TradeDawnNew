@@ -28,6 +28,8 @@
 
     {% render 'meta-tags' %}
 
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -444,6 +446,10 @@
     <!-- Start custom scripts -->
     <script src="{{ 'cliphair.js' | asset_url }}" defer="defer"></script>
     <!-- End custom scripts -->
+
+    <!-- Klarna -->
+    <script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
+    <!-- End Klarna -->
   </body>
 </html>
 
