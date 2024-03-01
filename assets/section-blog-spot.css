@@ -11,6 +11,9 @@
 	list-style: none;
 	margin-bottom: 5rem;
 	display: none;
+	padding: 0;
+	column-gap: var(--grid-mobile-vertical-spacing);
+	row-gap: var(--grid-mobile-horizontal-spacing);
 }
 
 .tag {
@@ -34,7 +37,8 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 6rem 15px;
+	column-gap: var(--grid-mobile-vertical-spacing);
+	row-gap: var(--grid-mobile-horizontal-spacing);
 }
 
 .blog-posts-wrapper,
@@ -101,13 +105,13 @@
 @media screen and (min-width:990px) {
 	.tag-wrapper {
 		display: flex;
-		gap: 6rem;
+		column-gap: var(--grid-desktop-vertical-spacing);
 		justify-content: center;
 		flex-wrap: wrap;
 	}
 
 	.blog-posts-wrapper {
-		gap: 6rem;
+		column-gap: var(--grid-desktop-vertical-spacing);
 	}
 
 	.blogs-per-row-desktop-1>.blog-post {
