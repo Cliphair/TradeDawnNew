@@ -1,11 +1,4 @@
-<script type="text/javascript">
-  (function e(){var e=document.createElement("script");
-  e.type="text/javascript",e.async=true,
-  e.src="//staticw2.yotpo.com/
-  aMREVTSJZfbqjVqxLsKxYMHAmpb94LftONho8TDm/widget.js";
-  var t=document.getElementsByTagName("script")[0];
-  t.parentNode.insertBefore(e,t)})();
-</script>
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -22,20 +15,18 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding">
-    <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      {%- if section.settings.page.title != blank -%}
-        {{ section.settings.page.title | escape }}
-      {%- else -%}
-        {{ 'sections.page.title' | t }}
-      {%- endif -%}
-    </h2>
-    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      <div
-        class="yotpo yotpo-pictures-widget"
-        data-gallery-id="65df02096728cb003248d9d1"
-      ></div>
-    </div>
+  <div class="page-width section-{{ section.id }}-padding {{ section.settings.text_alignment }}">
+    <h1 class="main-page-title page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% unless section.settings.show_title %} visually-hidden{% endunless %}">
+      {{ page.title | escape }}
+    </h1>
+    {% if section.settings.show_content %}
+      <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <div
+          class="yotpo yotpo-pictures-widget"
+          data-gallery-id="65df02096728cb003248d9d1"
+        ></div>
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -44,14 +35,12 @@
   "name": "Yotpo lookbook",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
   "settings": [
     {
-      "type": "page",
-      "id": "page",
-      "label": "t:sections.page.settings.page.label"
+      "type": "checkbox",
+      "id": "show_title",
+      "default": true,
+      "label": "Show title"
     },
     {
       "type": "select",
@@ -70,8 +59,34 @@
           "label": "t:sections.all.heading_size.options__3.label"
         }
       ],
-      "default": "h1",
+      "default": "h2",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_content",
+      "default": true,
+      "label": "Show content"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "color_scheme",
@@ -104,10 +119,6 @@
       "default": 36
     }
   ],
-  "presets": [
-    {
-      "name": "Yotpo lookbook"
-    }
-  ]
+  "presets": [{ "name": "Yotpo lookbook" }]
 }
 {% endschema %}
