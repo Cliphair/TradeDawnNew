@@ -63,7 +63,6 @@
         "slide2",
         "08bc8425-10fb-4207-ad18-65f5aa4d087d"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -123,6 +122,7 @@
         "slide_UAXhxj",
         "slide_rCbf9a"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
