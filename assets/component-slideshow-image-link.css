@@ -4,10 +4,15 @@
   object-fit: cover;
 }
 
+.slideshow__text-wrapper.banner__content {
+  z-index: 1;
+}
+
 .section-slideshow-image-link .slideshow__controls {
   top: calc(50% - 22px);
   justify-content: space-between;
   bottom: unset;
+  z-index: 2;
 }
 
 .section-slideshow-image-link .slider-counter {
