@@ -13,6 +13,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .collage-bg-wrapper .rich-text{
+    background-color: rgba(var(--color-background), {{ section.settings.bg_opacity }});
+  }
 {%- endstyle -%}
 
 <style>
@@ -242,6 +246,15 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "bg_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Background opacity",
+      "default": 0.2
     },
     {
       "type": "checkbox",

@@ -31,7 +31,7 @@
 }
 
 .collage-bg-wrapper .rich-text {
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   display: flex;
   align-items: center;
 }
