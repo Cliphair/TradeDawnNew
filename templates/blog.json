@@ -7,7 +7,8 @@
           "type": "heading",
           "settings": {
             "heading": "{{ blog.title }}",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "h1": false
           }
         }
       },
@@ -26,77 +27,75 @@
     "article-trending": {
       "type": "article-trending",
       "blocks": {
-        "5716e86e-a1dd-45bc-8e47-c88945d86ade": {
-          "type": "article",
+        "image_WhXAwQ": {
+          "type": "image",
           "settings": {
-            "article": "hair-blog\/which-hair-extensions-types-are-best-for-thin-fine-hair",
-            "tag": ""
+            "image": "shopify:\/\/shop_images\/iceblonde-tw-1.webp"
           }
         },
-        "5402d0d3-1bdc-4861-a143-fe7531c705d9": {
-          "type": "article",
+        "image_LRefiD": {
+          "type": "image",
           "settings": {
-            "article": "hair-blog\/everything-about-seamless-hair-extensions",
-            "tag": "",
-            "image": "shopify:\/\/shop_images\/everything_about_seamless_hair_banner_f4269923-2d91-46b3-9432-5363b9e0b0ea.jpg"
+            "image": "shopify:\/\/shop_images\/6-qwp-1.webp"
           }
         },
-        "dff1892d-f087-4429-bd33-d574d379456c": {
-          "type": "article",
+        "image_mTUfwa": {
+          "type": "image",
           "settings": {
-            "article": "hair-blog\/how-many-grams-of-hair-extensions-do-i-need",
-            "tag": ""
+            "image": "shopify:\/\/shop_images\/3-dw-2.webp"
           }
         },
-        "77301814-c4d1-420f-a28f-ec9558776a06": {
-          "type": "article",
+        "image_aCrzVp": {
+          "type": "image",
           "settings": {
-            "article": "hair-blog\/how-to-choose-the-perfect-length-of-hair-extensions-for-you",
-            "tag": ""
+            "image": "shopify:\/\/shop_images\/60-fhs-2.webp"
           }
         },
-        "6096bc59-0a89-4e4c-b229-2c53ef1c0848": {
-          "type": "article",
+        "image_rJjbLb": {
+          "type": "image",
           "settings": {
-            "article": "hair-blog\/everything-you-need-to-know-about-tape-hair-extensions",
-            "tag": ""
+            "image": "shopify:\/\/shop_images\/iceblonde-tw-1.webp"
+          }
+        },
+        "image_f8LEVG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3-dw-2.webp"
+          }
+        },
+        "image_bEmzXb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1b-cw-2.webp"
           }
         }
       },
       "block_order": [
-        "5716e86e-a1dd-45bc-8e47-c88945d86ade",
-        "5402d0d3-1bdc-4861-a143-fe7531c705d9",
-        "dff1892d-f087-4429-bd33-d574d379456c",
-        "77301814-c4d1-420f-a28f-ec9558776a06",
-        "6096bc59-0a89-4e4c-b229-2c53ef1c0848"
+        "image_WhXAwQ",
+        "image_LRefiD",
+        "image_mTUfwa",
+        "image_aCrzVp",
+        "image_rJjbLb",
+        "image_f8LEVG",
+        "image_bEmzXb"
       ],
       "settings": {
-        "header": "Trending On Cliphair",
-        "background_image": "shopify:\/\/shop_images\/MicrosoftTeams-image_19_f8c53a86-a79a-40f0-b46e-9bcb4af961a5.jpg",
-        "header_colour": "#ffffff",
-        "text_colour": "#752e89",
-        "bg_colour": "#ffffff",
-        "max-width": "1250",
-        "is-largest-contet": true,
-        "header-mobile-font-size": 24,
-        "text-mobile-font-size": 16,
-        "arrow-mobile-size": 40,
-        "mobile-top-padding": 20,
-        "mobile-bottom-padding": 0,
-        "mobile-right-padding": 10,
-        "mobile-left-padding": 10,
-        "header-desktop-font-size": 28,
-        "text-desktop-font-size": 18,
-        "arrow-desktop-size": 50,
-        "desktop-top-padding": 30,
-        "desktop-bottom-padding": 30,
-        "desktop-right-padding": 20,
-        "desktop-left-padding": 20,
-        "enable_arrows": true,
-        "colour-arrow": "#e8e8e8",
-        "mobile-arrow": 35,
-        "tablet-arrow": 35,
-        "desktop-arrow": 40
+        "heading": "TRENDING ON CLIPHAIR",
+        "trending-list": "red-head-blogs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "color_scheme": "accent-3",
+        "show_image": true,
+        "image_ratio": "landscape",
+        "show_date": false,
+        "show_author": true,
+        "bg_opacity": 0.6,
+        "mobile-row": 3,
+        "mobile-column": 2,
+        "desktop-row": 2,
+        "desktop-column": 5,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "article-categories": {
@@ -263,7 +262,8 @@
           "type": "heading",
           "settings": {
             "heading": "Our Commitment to Sustainability",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "h1": false
           }
         },
         "template--15283893993533__bf4f5954-262b-4b6a-a921-1f55e8f01267-text-1": {
