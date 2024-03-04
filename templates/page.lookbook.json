@@ -16,8 +16,10 @@
     "yotpo_lookbook_zBq3kU": {
       "type": "yotpo-lookbook",
       "settings": {
-        "page": "",
+        "show_title": true,
         "heading_size": "h1",
+        "show_content": false,
+        "text_alignment": "center",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
