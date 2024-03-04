@@ -6,9 +6,9 @@
         "template--15283893993533__b6c51df6-b6e1-4084-867c-38313ffac6d0-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "{{ blog.title }}",
-            "heading_size": "h1",
-            "h1": false
+            "heading": "<strong>THE CLIPHAIR BLOG<\/strong>",
+            "heading_size": "h2",
+            "h1": true
           }
         }
       },
@@ -18,10 +18,10 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "background-grey",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "article-trending": {
@@ -89,7 +89,7 @@
         "image_ratio": "landscape",
         "show_date": false,
         "show_author": true,
-        "bg_opacity": 0.6,
+        "bg_opacity": 0.5,
         "mobile-row": 3,
         "mobile-column": 2,
         "desktop-row": 2,
