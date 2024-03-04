@@ -11,6 +11,8 @@
   - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
   - show_badge: {String} The setting either show the blog badge or not.
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+  -custom_style: {String} Style to be used, different from settings (optional). Options: standard or card
+  - image_src: {String} What image to use when display card (optional). Options: metafields, featured
 
   Usage:
   {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
@@ -28,11 +30,11 @@
     <div
       class="
         card article-card
-        card--{{ settings.blog_card_style }}
+        {% if custom_style %}card--{{ custom_style }}{% else %}card--{{ settings.blog_card_style }}{% endif %}
         {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
         {% if article.image and show_image %} card--media{% else %} card--text{% endif %}
-        {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
-        {% if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
+        {% if settings.blog_card_style == 'card' or custom_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
+        {% if settings.blog_card_style == 'card' or custom_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
@@ -49,25 +51,32 @@
               {% endif %}
             >
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+              {% liquid
+                if article.metafields.custom.banner and image_src == 'metafields'
+                  assign image = article.metafields.custom.banner.value
+                else
+                  assign image = article.image
+                endif
+              %}
               <img
                 srcset="
-                  {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-                  {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                  {%- if image.src.width >= 165 -%}{{ image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if image.src.width >= 360 -%}{{ image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if image.src.width >= 533 -%}{{ image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if image.src.width >= 720 -%}{{ image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if image.src.width >= 1000 -%}{{ image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if image.src.width >= 1500 -%}{{ image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {{ image.src | image_url }} {{ image.src.width }}w
                 "
-                src="{{ article.image.src | image_url: width: 533 }}"
+                src="{{ image.src | image_url: width: 533 }}"
                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                alt="{{ article.image.src.alt | escape }}"
+                alt="{{ image.src.alt | escape }}"
                 class="motion-reduce"
                 {% unless lazy_load == false %}
                   loading="lazy"
                 {% endunless %}
-                width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
             </div>
@@ -137,11 +146,13 @@
                 {%- endif -%}
               </p>
             {%- endif -%}
-            <div class="article-card__footer">
-              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
-                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
-              {%- endif -%}
-            </div>
+            {% comment %}
+              <div class="article-card__footer">
+                {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                  <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+                {%- endif -%}
+              </div>
+            {% endcomment %}
           {%- endif -%}
         </div>
         {%- if show_badge -%}

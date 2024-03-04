@@ -1,479 +1,407 @@
-{{ 'section-article-trending.css' | asset_url | stylesheet_tag: preload: boolean }}
+{{ 'section-article-trending.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'section-collage-bg.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .collage-bg-wrapper .content-bg{
+    background-color: rgba(var(--color-background), {{ section.settings.bg_opacity }});
+  }
+{%- endstyle -%}
+
 <style>
-  #shopify-section-{{ section.id }} {
-    position: relative;
-  }
-  #shopify-section-{{ section.id }}:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    background-image: url('{{ section.settings.background_image | image_url }}');
-  }
-  #section-{{ section.id }}{
-    padding-top:{{ section.settings.mobile-top-padding }}px;
-    padding-bottom:{{ section.settings.mobile-bottom-padding }}px;
-    padding-right:{{ section.settings.mobile-right-padding }}px;
-    padding-left:{{ section.settings.mobile-left-padding }}px;
-    {% if section.settings.max-width != empty %}max-width:{{ section.settings.max-width }}px;{% endif %}
+  .bg-holder > .row{
+    height:calc(100% / {{ section.settings.mobile-row }})
   }
 
-  #section-{{ section.id }} .trending-section-header{
-    font-size:{{ section.settings.header-mobile-font-size }}px;
-    color:{{ section.settings.header_colour }};
-    text-align:center;
+  .bg-holder > .row > .column{
+    width:calc(100% / {{ section.settings.mobile-column }})
   }
 
-  #section-{{ section.id }} .trending-articles-inner-container > .trending-article:hover{
-    color:{{section.settings.text_colour}};
-  }
-
-  #section-{{ section.id }} .trending-text-container > *{
-    font-size:{{ section.settings.text-mobile-font-size }}px;
-    color:{{ section.settings.text_colour }};
-  }
-
-  #section-{{ section.id }} .trending-text-container > .trending-article-info > .trending-tag{
-    {%if section.settings.text-mobile-font-size < 14 %}
-      font-size:11px;
-    {% else %}
-      font-size:calc({{ section.settings.text-mobile-font-size }}px - 4px);
-    {% endif %}
-  }
-
-  #section-{{ section.id }} .trending-text-container > .trending-article-info > * {
-    {% if section.settings.text-mobile-font-size < 16 %}
-      font-size:10px;
-    {% else %}
-      font-size:calc({{ section.settings.text-mobile-font-size }}px - 6px);
-    {% endif %}
-  }
-
-  #section-{{ section.id }} .arrow-container{
-    top:{{ section.settings.mobile-arrow }}%;
-  }
-
-  #section-{{ section.id }} .arrow-container > span{
-    color:{{ section.settings.colour-arrow }};
-    font-size:{{ section.settings.arrow-mobile-size }}px;
-  }
-
-  #section-{{ section.id }} .trending-dot-container > .trending-dot{
-    background-color:{{ section.settings.text_colour }};
-  }
-
-  @media only screen and (min-width:768px){
-    #section-{{ section.id }} .arrow-container{
-      top:{{ section.settings.tablet-arrow }}%;
-    }
-  }
-
-  @media only screen and (min-width:992px){
-    #section-{{ section.id }}{
-      padding-top:{{ section.settings.desktop-top-padding }}px;
-      padding-bottom:{{ section.settings.desktop-bottom-padding }}px;
-      padding-right:{{ section.settings.desktop-right-padding }}px;
-      padding-left:{{ section.settings.desktop-left-padding }}px;
+  @media screen and (min-width:990px){
+    .bg-holder > .row{
+      height:calc(100% / {{ section.settings.desktop-row }})
     }
 
-    #section-{{ section.id }} .trending-section-header{
-      font-size:{{ section.settings.header-desktop-font-size }}px;
-    }
-
-    #section-{{ section.id }} .trending-text-container > *{
-      font-size:{{ section.settings.text-desktop-font-size }}px;
-    }
-
-    {% if section.settings.text-desktop-font-size >= 15 %}
-    #section-{{ section.id }} .trending-text-container > .trending-article-info > .trending-tag{
-      font-size:calc({{ section.settings.text-desktop-font-size }}px - 4px);
-    }
-    {% endif %}
-
-    {% if section.settings.text-desktop-font-size >= 16 %}
-    #section-{{ section.id }} .trending-text-container > .trending-article-info > * {
-      font-size:calc({{ section.settings.text-desktop-font-size }}px - 6px);
-    }
-    {% endif %}
-
-    #section-{{ section.id }} .arrow-container{
-      top:{{ section.settings.desktop-arrow }}%;
-    }
-
-    #section-{{ section.id }} .arrow-container > span{
-      font-size:{{ section.settings.arrow-desktop-size }}px;
+    .bg-holder > .row > .column{
+      width:calc(100% / {{ section.settings.desktop-column }})
     }
   }
 </style>
 
-<div id="section-{{ section.id }}" class="trending-articles-container">
-  {% if section.settings.header != empty %}
-    <h2 class="trending-section-header">{{ section.settings.header }}</h2>
-  {% endif %}
+{% liquid
+  assign images_array = section.blocks | where: 'type', 'image'
+  assign total_images = images_array.size | minus: 1
+  assign current_image_index = 0
+%}
 
-  <div class="trending-articles-inner-container container-{{ section.id }}">
-    {% for block in section.blocks %}
-      {% liquid
-        assign loading = 'lazy'
-        if section.settings['is-largest-contet']
-          if forloop.index == 1
-            assign loading = 'eager'
-          endif
-        endif
-      %}
-      {% if block.settings.article != blank %}
-        {% include 'trending-article-card',
-          article: block.settings.article,
-          image: block.settings.image,
-          loading: loading
-        %}
-      {% endif %}
+{% liquid
+  assign image_ratio = 0
+  if section.settings.image_ratio == 'square'
+    assign image_ratio = 1
+  elsif section.settings.image_ratio == 'portrait'
+    assign image_ratio = 0.6667
+  else
+    assign image_ratio = 1.7778
+  endif
+%}
+
+{%- liquid
+  assign list_size = section.settings['trending-list'].links.size
+
+  assign columns_mobile_int = 1
+  assign show_mobile_slider = false
+  if list_size > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+
+  assign columns_desktop_int = 2
+  assign show_desktop_slider = false
+  if list_size > columns_desktop_int
+    assign show_desktop_slider = true
+  endif
+-%}
+
+<div class="collage-bg-wrapper">
+  <div class="mobile-bg-holder bg-holder">
+    {% for row in (1..section.settings['mobile-row']) %}
+      <div class="row">
+        {% for column in (1..section.settings['mobile-column']) %}
+          <div class="column">
+            {% assign image = images_array[current_image_index].settings.image %}
+            <img
+              src="{{ image | image_url }}"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              alt="{{ image.alt }}"
+              loading="lazy"
+            >
+            {% liquid
+              if current_image_index == total_images
+                assign current_image_index = 0
+              else
+                assign current_image_index = current_image_index | plus: 1
+              endif
+            %}
+          </div>
+        {% endfor %}
+      </div>
     {% endfor %}
   </div>
-
-  {% if section.settings.enable_arrows %}
-    <div class="arrow-container">
-      <span
-        class="scroll-arrow left"
-        onclick="scrollArrow(this)"
-        data-target="container-{{ section.id }}"
-        data-direction="left"
-        data-speed="50"
-        data-distance="350"
-        data-step="50"
-        ><i class="fa-solid fa-angle-left"></i
-      ></span>
-      <span
-        class="scroll-arrow right"
-        onclick="scrollArrow(this)"
-        data-target="container-{{ section.id }}"
-        data-direction="right"
-        data-speed="50"
-        data-distance="350"
-        data-step="50"
-        ><i class="fa-solid fa-angle-right"></i
-      ></span>
-    </div>
-
-    <script>
-      //Arrow functions
-      function scrollArrow(button) {
-        let target = button.getAttribute('data-target');
-        let direction = button.getAttribute('data-direction');
-        let speed = parseInt(button.getAttribute('data-speed'));
-        let distance = document.getElementsByClassName('trending-article')[0].clientWidth;
-        let step = distance / 10;
-        let container = document.getElementsByClassName(target)[0];
-
-        sideScroll(container, direction, speed, distance, step);
-      }
-
-      function sideScroll(element, direction, speed, distance, step) {
-        scrollAmount = 0;
-        var slideTimer = setInterval(function () {
-          if (direction == 'left') {
-            element.scrollLeft -= step;
-          } else {
-            element.scrollLeft += step;
-          }
-          scrollAmount += step;
-          if (scrollAmount >= distance) {
-            window.clearInterval(slideTimer);
-          }
-        }, speed);
-      }
-    </script>
-  {% endif %}
-
-  <div class="trending-dot-container">
-    {% for block in section.blocks %}
-      {% if block.settings.article != blank %}
-        <span
-          class="trending-dot dot-icon {% if forloop.first %}active{% endif %}"
-          data-target="trending_{{ forloop.index }}"
-        ></span>
-      {% endif %}
+  <div class="desktop-bg-holder bg-holder">
+    {% for row in (1..section.settings['desktop-row']) %}
+      <div class="row">
+        {% for column in (1..section.settings['desktop-column']) %}
+          <div class="column">
+            {% assign image = images_array[current_image_index].settings.image %}
+            <img
+              src="{{ image | image_url }}"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              alt="{{ image.alt }}"
+              loading="lazy"
+            >
+            {% liquid
+              if current_image_index == total_images
+                assign current_image_index = 0
+              else
+                assign current_image_index = current_image_index | plus: 1
+              endif
+            %}
+          </div>
+        {% endfor %}
+      </div>
     {% endfor %}
+  </div>
+  <div class="content-bg color-{{ section.settings.color_scheme }} gradient ">
+    <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+      {%- unless section.settings.heading == blank -%}
+        <div class="title-wrapper title-wrapper--self-padded-mobile title-wrapper--no-top-margin {{ section.settings.heading_alignment }}">
+          <h2
+            id="SectionHeading-{{ section.id }}"
+            class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+            {% endif %}
+          >
+            {{ section.settings.heading }}
+          </h2>
+        </div>
+      {%- endunless -%}
+
+      <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <ul
+          class="articles-list grid grid--2-col-desktop grid--2-col-tablet-down slider grid--peek slider--tablet slider--desktop articles-list--{{ list_size }}-items"
+          id="Slider-{{ section.id }}"
+          role="list"
+        >
+          {%- liquid
+            assign columns = list_size
+            if columns > 3
+              assign columns = 3
+            endif
+          -%}
+
+          {% for link in section.settings['trending-list'].links %}
+            {% if link.type == 'article_link' %}
+              <li
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                class="articles-list__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {% render 'article-card',
+                  blog: blog,
+                  article: link.object,
+                  media_aspect_ratio: image_ratio,
+                  show_image: section.settings.show_image,
+                  show_date: section.settings.show_date,
+                  show_author: section.settings.show_author,
+                  show_excerpt: false,
+                  custom_style: 'card',
+                  image_src: 'metafields'
+                %}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {%- if show_mobile_slider or show_desktop_slider -%}
+          <div class="slider-buttons no-js-hidden slider--2-col-desktop slider--1-col-tablet-down">
+            <button
+              type="button"
+              class="slider-button slider-button--prev"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
+            <div class="slider-counter caption visually-hidden">
+              <span class="slider-counter--current">1</span>
+              <span aria-hidden="true"> / </span>
+              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+              <span class="slider-counter--total">{{ list_size }}</span>
+            </div>
+            <button
+              type="button"
+              class="slider-button slider-button--next"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
+          </div>
+        {%- endif -%}
+      </slider-component>
+    </div>
   </div>
 </div>
 
-<script>
-  $(document).ready(addButtonClick('trending-dot'));
-</script>
-
 {% schema %}
 {
-  "name": "Block Trending Articles",
+  "name": "Block trending articles",
+  "tag": "section",
+  "class": "section section-trending-articles",
   "settings": [
     {
-      "type": "text",
-      "id": "header",
-      "label": "Section Header"
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Blog posts",
+      "label": "t:sections.featured-blog.settings.heading.label"
     },
     {
-      "type": "header",
-      "content": "Universal Settings"
+      "type": "link_list",
+      "id": "trending-list",
+      "label": "Tranding articles list"
     },
     {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image"
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
     },
     {
-      "type": "color",
-      "id": "header_colour",
-      "label": "Header Colour",
-      "default": "#000000"
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Heading alignment"
     },
     {
-      "type": "color",
-      "id": "text_colour",
-      "label": "Text Colour",
-      "default": "#000000"
-    },
-    {
-      "type": "color",
-      "id": "bg_colour",
-      "label": "Background Colour",
-      "default": "#ffffff"
-    },
-    {
-      "type": "text",
-      "id": "max-width",
-      "label": "Max Width",
-      "info": "Please enter max-width value in pixels, ex: 1250, 1440."
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "background-1"
     },
     {
       "type": "checkbox",
-      "id": "is-largest-contet",
-      "label": "Is Largest Content",
+      "id": "show_image",
+      "default": true,
+      "label": "t:sections.featured-blog.settings.show_image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        {
+          "value": "square",
+          "label": "Square"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "landscape",
+          "label": "Landscape"
+        }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.featured-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
       "default": false,
-      "info": "If enabled, first image from this section will not be lazyload, so it doesn't impact Speed Performance. Enable if this section is on the top of the page, and the images are the bisggest element on the page when it first load."
+      "label": "t:sections.featured-blog.settings.show_author.label"
     },
     {
       "type": "header",
-      "content": "Mobile Settings"
+      "content": "Background settings"
     },
     {
       "type": "range",
-      "id": "header-mobile-font-size",
+      "id": "bg_opacity",
       "min": 0,
-      "max": 50,
+      "max": 1,
+      "step": 0.1,
+      "label": "Background opacity",
+      "default": 0.2
+    },
+    {
+      "type": "range",
+      "id": "mobile-row",
+      "min": 1,
+      "max": 5,
       "step": 1,
-      "unit": "px",
-      "label": "Header Mobile Font Size",
-      "default": 14
+      "unit": "un",
+      "label": "Mobile rows",
+      "default": 1
     },
     {
       "type": "range",
-      "id": "text-mobile-font-size",
-      "min": 0,
-      "max": 50,
+      "id": "mobile-column",
+      "min": 1,
+      "max": 10,
       "step": 1,
-      "unit": "px",
-      "label": "Text Mobile Font Size",
-      "default": 14
+      "unit": "un",
+      "label": "Mobile columns",
+      "default": 1
     },
     {
       "type": "range",
-      "id": "arrow-mobile-size",
-      "min": 0,
-      "max": 50,
+      "id": "desktop-row",
+      "min": 1,
+      "max": 5,
       "step": 1,
-      "unit": "px",
-      "label": "Arrow Mobile Size",
-      "default": 20
+      "unit": "un",
+      "label": "Desktop rows",
+      "default": 1
     },
     {
       "type": "range",
-      "id": "mobile-top-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Top Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "mobile-bottom-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Bottom Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "mobile-right-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Right Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "mobile-left-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Left Padding",
-      "default": 0
+      "id": "desktop-column",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "un",
+      "label": "Desktop columns",
+      "default": 1
     },
     {
       "type": "header",
-      "content": "Desktop Settings"
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
       "type": "range",
-      "id": "header-desktop-font-size",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Header Desktop Font Size",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "text-desktop-font-size",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Text Desktop Font Size",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "arrow-desktop-size",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Arrow Desktop Size",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "desktop-top-padding",
+      "id": "padding_top",
       "min": 0,
       "max": 100,
-      "step": 2,
+      "step": 4,
       "unit": "px",
-      "label": "Desktop Top Padding",
-      "default": 0
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
     },
     {
       "type": "range",
-      "id": "desktop-bottom-padding",
+      "id": "padding_bottom",
       "min": 0,
       "max": 100,
-      "step": 2,
+      "step": 4,
       "unit": "px",
-      "label": "Desktop Bottom Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "desktop-right-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Desktop Right Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "desktop-left-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Desktop Left Padding",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "Arrow settings"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_arrows",
-      "label": "Enable Arrow",
-      "default": false
-    },
-    {
-      "type": "color",
-      "id": "colour-arrow",
-      "label": "Arrow Colour",
-      "default": "#000000"
-    },
-    {
-      "type": "range",
-      "id": "mobile-arrow",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "label": "Arrow Position Mobile",
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "tablet-arrow",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "label": "Arrow Position Tablet",
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "desktop-arrow",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "label": "Arrow Position Desktop",
-      "default": 40
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [
     {
-      "type": "article",
-      "name": "Article",
-      "limit": 10,
+      "type": "image",
+      "name": "Background image",
       "settings": [
         {
-          "type": "article",
-          "id": "article",
-          "label": "Article"
-        },
-        {
-          "type": "text",
-          "id": "tag",
-          "label": "Article Tag"
-        },
-        {
-          "type": "header",
-          "content": "Custom Image",
-          "info": "Just use this section if you want to use a custom image."
-        },
-        {
           "type": "image_picker",
-          "id": "image",
-          "label": "Custom Image"
+          "label": "Background image",
+          "id": "image"
         }
       ]
     }
