@@ -1,5 +1,73 @@
 {
   "sections": {
+    "slideshow_image_link_WcQ9XG": {
+      "type": "slideshow-image-link",
+      "blocks": {
+        "slide_UAXhxj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-mobile.webp",
+            "image_desktop": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-desktop-v3.webp",
+            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour"
+          }
+        },
+        "slide_rCbf9a": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/quench-the-thirst-mobile-banner.webp",
+            "image_desktop": "shopify:\/\/shop_images\/quench-the-thirst-desktop-banner.webp",
+            "image_url": "shopify:\/\/collections\/quench-the-thirst"
+          }
+        }
+      },
+      "block_order": [
+        "slide_UAXhxj",
+        "slide_rCbf9a"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "slideshow_image_link_pmHWWp": {
+      "type": "slideshow-image-link",
+      "blocks": {
+        "slide_JNY3Dy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-desktop-v4.webp",
+            "image_desktop": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-mobile-v4.webp",
+            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour"
+          }
+        },
+        "slide_nW74tF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/quench-the-thirst-banner-v2-mobile.webp",
+            "image_desktop": "shopify:\/\/shop_images\/quench-the-thirst-banner-v2.webp",
+            "image_url": "shopify:\/\/collections\/quench-the-thirst"
+          }
+        }
+      },
+      "block_order": [
+        "slide_JNY3Dy",
+        "slide_nW74tF"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -75,40 +143,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "slideshow_image_link_WcQ9XG": {
-      "type": "slideshow-image-link",
-      "blocks": {
-        "slide_UAXhxj": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-mobile.webp",
-            "image_desktop": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-desktop-v3.webp",
-            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour"
-          }
-        },
-        "slide_rCbf9a": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/quench-the-thirst-mobile-banner.webp",
-            "image_desktop": "shopify:\/\/shop_images\/quench-the-thirst-desktop-banner.webp",
-            "image_url": "shopify:\/\/collections\/quench-the-thirst"
-          }
-        }
-      },
-      "block_order": [
-        "slide_UAXhxj",
-        "slide_rCbf9a"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "horizontal_list": {
       "type": "horizontal-list",
       "blocks": {
@@ -148,7 +182,8 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>HOW TO CHOOSE THE RIGHT HAIR EXTENSIONS FOR YOU<\/strong>",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "h1": false
           }
         }
       },
@@ -220,7 +255,8 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>…OR TAKE OUR QUICK QUIZ<\/strong>",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "h1": false
           }
         },
         "text_wgJyct": {
@@ -638,14 +674,16 @@
           "type": "heading",
           "settings": {
             "heading": "Real Remy Human Hair Extensions",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "h1": false
           }
         },
         "463035d2-6446-4ab7-a2d4-03a24ee0cd4f": {
           "type": "heading",
           "settings": {
             "heading": "Remy Human Hair Extensions Online",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "h1": false
           }
         },
         "47ed8938-167c-4f51-a079-56b352d27b43": {
@@ -852,7 +890,8 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>OUR COMMITMENT TO SUSTAINABILITY<\/strong>",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "h1": false
           }
         },
         "template--15283894157373__44fe0295-ee52-40ce-ba52-57d93a1e8f28-text-1": {
@@ -1043,8 +1082,9 @@
     }
   },
   "order": [
-    "slideshow",
     "slideshow_image_link_WcQ9XG",
+    "slideshow_image_link_pmHWWp",
+    "slideshow",
     "horizontal_list",
     "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
