@@ -77,56 +77,58 @@
 -%}
 
 <div class="collage-bg-wrapper">
-  <div class="mobile-bg-holder bg-holder">
-    {% for row in (1..section.settings['mobile-row']) %}
-      <div class="row">
-        {% for column in (1..section.settings['mobile-column']) %}
-          <div class="column">
-            {% assign image = images_array[current_image_index].settings.image %}
-            <img
-              src="{{ image | image_url }}"
-              width="{{ image.width }}"
-              height="{{ image.height }}"
-              alt="{{ image.alt }}"
-              loading="lazy"
-            >
-            {% liquid
-              if current_image_index == total_images
-                assign current_image_index = 0
-              else
-                assign current_image_index = current_image_index | plus: 1
-              endif
-            %}
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
-  <div class="desktop-bg-holder bg-holder">
-    {% for row in (1..section.settings['desktop-row']) %}
-      <div class="row">
-        {% for column in (1..section.settings['desktop-column']) %}
-          <div class="column">
-            {% assign image = images_array[current_image_index].settings.image %}
-            <img
-              src="{{ image | image_url }}"
-              width="{{ image.width }}"
-              height="{{ image.height }}"
-              alt="{{ image.alt }}"
-              loading="lazy"
-            >
-            {% liquid
-              if current_image_index == total_images
-                assign current_image_index = 0
-              else
-                assign current_image_index = current_image_index | plus: 1
-              endif
-            %}
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
+  {% if section.blocks.size != 0 %}
+    <div class="mobile-bg-holder bg-holder">
+      {% for row in (1..section.settings['mobile-row']) %}
+        <div class="row">
+          {% for column in (1..section.settings['mobile-column']) %}
+            <div class="column">
+              {% assign image = images_array[current_image_index].settings.image %}
+              <img
+                src="{{ image | image_url }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                alt="{{ image.alt }}"
+                loading="lazy"
+              >
+              {% liquid
+                if current_image_index == total_images
+                  assign current_image_index = 0
+                else
+                  assign current_image_index = current_image_index | plus: 1
+                endif
+              %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="desktop-bg-holder bg-holder">
+      {% for row in (1..section.settings['desktop-row']) %}
+        <div class="row">
+          {% for column in (1..section.settings['desktop-column']) %}
+            <div class="column">
+              {% assign image = images_array[current_image_index].settings.image %}
+              <img
+                src="{{ image | image_url }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                alt="{{ image.alt }}"
+                loading="lazy"
+              >
+              {% liquid
+                if current_image_index == total_images
+                  assign current_image_index = 0
+                else
+                  assign current_image_index = current_image_index | plus: 1
+                endif
+              %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
   <div class="content-bg color-{{ section.settings.color_scheme }} gradient ">
     <div class="page-width page-width--narrow section-{{ section.id }}-padding">
       {%- unless section.settings.heading == blank -%}

@@ -69,13 +69,23 @@
 }
 
 .section-trending-articles .slider-buttons .slider-button--prev {
-  left: 0;
+  left: -1.5rem;
 }
 
 .section-trending-articles .slider-buttons .slider-button--next {
-  right: 0;
+  right: -1.5rem;
 }
 
 .section-trending-articles .slider-buttons .slider-button .icon {
   height: 44px;
+}
+
+@media screen and (min-width:750px) {
+  .section-trending-articles .slider-buttons .slider-button--prev {
+    left: -5rem;
+  }
+
+  .section-trending-articles .slider-buttons .slider-button--next {
+    right: -5rem;
+  }
 }
