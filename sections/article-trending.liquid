@@ -1,5 +1,4 @@
 {{ 'section-article-trending.css' | asset_url | stylesheet_tag }}
-{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
@@ -217,7 +216,7 @@
 
 {% schema %}
 {
-  "name": "Block trending articles",
+  "name": "Trending articles",
   "tag": "section",
   "class": "section section-trending-articles",
   "settings": [
@@ -408,7 +407,7 @@
       ]
     }
   ],
-  "presets": [{ "name": "Block Trending Articles" }]
+  "presets": [{ "name": "Trending articles" }]
 }
 {% endschema %}
 

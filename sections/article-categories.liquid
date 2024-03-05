@@ -1,345 +1,298 @@
-{% assign categories = section.blocks.size %}
-{% liquid
-  if categories > 7
-    assign arrowClass = 'mobile tablet laptop desktop'
-    assign containerClass = 'mobile-left-align tablet-left-align laptop-left-align desktop-left-align'
-  elsif categories > 6
-    assign arrowClass = 'mobile tablet laptop'
-    assign containerClass = 'mobile-left-align tablet-left-align laptop-left-align'
-  elsif categories > 5
-    assign arrowClass = 'mobile tablet'
-    assign containerClass = 'mobile-left-align tablet-left-align'
-  elsif categories > 2
-    assign arrowClass = 'mobile'
-    assign containerClass = 'mobile-left-align'
+{{ 'section-article-categories.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+    assign show_mobile_slider = true
   endif
-%}
 
-{{ 'section-article-categories.css' | asset_url | stylesheet_tag: preload: boolean }}
-<style>
-  #{{section.id}}{
-    padding-top:{{section.settings.mobile-top-padding}}px;
-    padding-bottom:{{section.settings.mobile-bottom-padding}}px;
-    padding-right:{{section.settings.mobile-right-padding}}px;
-    padding-left:{{section.settings.mobile-left-padding}}px;
-    {% if section.settings.max-width != empty %}max-width:{{section.settings.max-width}}px;{% endif %}
-  }
+  assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+  assign show_desktop_slider = false
+  if section.settings.swipe_on_desktop and section.blocks.size > columns_desktop_int
+    assign show_desktop_slider = true
+  endif
+-%}
 
-  #{{section.id}} .article-categories-inner-container > .category{
-    color:{{section.settings.text_colour}};
-  }
-
-  #{{section.id}} .article-categories-inner-container > .category:hover{
-    color:{{section.settings.text_colour}};
-    text-decoration-color: {{section.settings.text_colour}};
-  }
-
-  #{{section.id}} .article-categories-inner-container > .category > .category-title{
-    font-size:{{section.settings.mobile-font-size}}px;
-    color:{{section.settings.text_colour}};
-  }
-
-  #{{section.id}} .arrow-container{
-    top:43%;
-    display:none;
-  }
-
-  #{{section.id}} .arrow-container.mobile{
-    display:block;
-  }
-
-  @media only screen and (min-width:768px){
-    #{{section.id}} .arrow-container.mobile{
-      display:none;
-    }
-
-    #{{section.id}} .arrow-container.tablet{
-      display:block;
-    }
-  }
-
-  @media only screen and (min-width:992px){
-    #{{section.id}}{
-      padding-top:{{section.settings.desktop-top-padding}}px;
-      padding-bottom:{{section.settings.desktop-bottom-padding}}px;
-      padding-right:{{section.settings.desktop-right-padding}}px;
-      padding-left:{{section.settings.desktop-left-padding}}px;
-    }
-
-    #{{section.id}} .article-categories-inner-container > .category > .category-title{
-      font-size:{{section.settings.desktop-font-size}}px;
-    }
-  }
-
-  @media only screen and (min-width:1024px){
-    #{{section.id}} .arrow-container.tablet{
-      display:none;
-    }
-
-    #{{section.id}} .arrow-container.laptop{
-      display:block;
-    }
-  }
-
-  @media only screen and (min-width:1250px){
-    #{{section.id}} .arrow-container.laptop{
-      display:none;
-    }
-
-    #{{section.id}} .arrow-container.desktop{
-      display:block;
-    }
-  }
-</style>
-
-<div id="{{ section.id }}" class="article-categories-container">
-  <div class="article-categories-inner-container {{ containerClass }}">
-    {% for block in section.blocks %}
-      <a
-        class="category{% if current_tags and current_tags.first != block.settings.tag %} opacity{% endif %}{% if forloop.last %} last{% endif %}"
-        href="{{ blog.url }}{% if block.settings.tag != empty %}/tagged/{{ block.settings.tag | handle }}{% endif %}"
-        title="{{ block.settings.title }} Posts"
-      >
-        <img
-          src="{{ block.settings.image | image_url }}"
-          width="{{ block.settings.image.width }}"
-          height="{{ block.settings.image.height }}"
-          alt="{{ block.settings.image.alt }}"
-          loading="lazy"
-          class="category-image{% if section.settings.circle %} category-image-circle{% endif %}"
+<div class="color-{{ section.settings.color_scheme }} gradient ">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- unless section.settings.heading == blank -%}
+      <div class="title-wrapper title-wrapper--self-padded-mobile title-wrapper--no-top-margin {{ section.settings.heading_alignment }}">
+        <h2
+          id="SectionHeading-{{ section.id }}"
+          class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+          {% endif %}
         >
-        <p class="category-title">{{ block.settings.title }}</p>
-      </a>
-    {% endfor %}
-  </div>
-  <div class="arrow-container {{ arrowClass }}">
-    <span
-      class="scroll-arrow left"
-      onclick="scrollArrow(this)"
-      data-target="article-categories-inner-container"
-      data-direction="left"
-      data-speed="30"
-      data-distance="300"
-      data-step="30"
-      ><i class="fa-solid fa-angle-left"></i
-    ></span>
-    <span
-      class="scroll-arrow right"
-      onclick="scrollArrow(this)"
-      data-target="article-categories-inner-container"
-      data-direction="right"
-      data-speed="30"
-      data-distance="300"
-      data-step="30"
-      ><i class="fa-solid fa-angle-right"></i
-    ></span>
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    {%- endunless -%}
+
+    <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <ul
+        class="articles-categories grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ section.blocks.size }}-items"
+        id="Slider-{{ section.id }}"
+        role="list"
+      >
+        {%- liquid
+          assign columns = section.blocks.size
+          if columns > 3
+            assign columns = 3
+          endif
+        -%}
+
+        {% for block in section.blocks %}
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="articles-list__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <div class="category {% if current_tags and current_tags.first == block.settings.tag %} selected{% endif %}">
+              {% if block.settings.tag != empty %}
+                <a
+                  href="{{ blog.url }}{% if block.settings.tag != empty %}/tagged/{{ block.settings.tag | handle }}{% endif %}{% if section.settings.scroll_to_grid %}#main-blog-section{% endif %}"
+                  title="{{ block.settings.title }} blog posts"
+                >
+                  <img
+                    srcset="
+                      {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if block.settings.image.width >= 330 -%}{{ block.settings.image | image_url: width: 330 }} 330w,{%- endif -%}
+                      {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                      {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                      {%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                      {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                      {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                      {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                    "
+                    src="{{ block.settings.image | image_url: width: 1500 }}"
+                    sizes="
+                      (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                      (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                      calc(100vw - 3rem)
+                    "
+                    alt=""
+                    height="{{ block.settings.image.height }}"
+                    width="{{ block.settings.image.width }}"
+                    loading="lazy"
+                  >
+                  <p>
+                    {{ block.settings.title | default: block.settings.tag }}
+                  </p>
+                </a>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      {%- if show_mobile_slider or show_desktop_slider -%}
+        <div class="slider-buttons no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+          <div class="slider-counter caption visually-hidden">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          </div>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+        </div>
+      {%- endif -%}
+    </slider-component>
   </div>
 </div>
 
-<script>
-  //Arrow functions
-  function scrollArrow(button) {
-    let target = button.getAttribute('data-target');
-    let direction = button.getAttribute('data-direction');
-    let speed = parseInt(button.getAttribute('data-speed'));
-    let distance = parseInt(button.getAttribute('data-distance'));
-    let step = parseInt(button.getAttribute('data-step'));
-    let container = document.getElementsByClassName(target)[0];
-
-    sideScroll(container, direction, speed, distance, step);
-  }
-
-  function sideScroll(element, direction, speed, distance, step) {
-    scrollAmount = 0;
-    var slideTimer = setInterval(function () {
-      if (direction == 'left') {
-        element.scrollLeft -= step;
-      } else {
-        element.scrollLeft += step;
-      }
-      scrollAmount += step;
-      if (scrollAmount >= distance) {
-        window.clearInterval(slideTimer);
-      }
-    }, speed);
-  }
-</script>
-
 {% schema %}
 {
-  "name": "Article Categories",
+  "name": "Article categories",
+  "tag": "section",
+  "class": "section section-article-categories",
   "settings": [
     {
-      "type": "header",
-      "content": "Universal Settings"
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:sections.featured-blog.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Heading alignment"
     },
     {
       "type": "checkbox",
-      "id": "circle",
-      "label": "Circle Images?",
-      "default": false
+      "id": "scroll_to_grid",
+      "default": false,
+      "label": "Scroll to grid",
+      "info": "Scroll to articles grid after click."
     },
     {
-      "type": "color",
-      "id": "text_colour",
-      "label": "Text Colour",
-      "default": "#000000"
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns on desktop"
     },
     {
-      "type": "color",
-      "id": "bg_colour",
-      "label": "Background Colour",
-      "default": "#ffffff"
+      "type": "checkbox",
+      "id": "swipe_on_desktop",
+      "default": false,
+      "label": "Enable swipe on desktop"
     },
     {
-      "type": "text",
-      "id": "max-width",
-      "label": "Max Width",
-      "info": "Please enter max-width value in pixels, ex: 1250, 1440."
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "background-1"
     },
     {
       "type": "header",
-      "content": "Mobile Settings"
+      "content": "Mobile Layout"
     },
     {
-      "type": "range",
-      "id": "mobile-font-size",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Mobile Font Size",
-      "default": 14
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ],
+      "default": "1",
+      "label": "Number of columns on mobile"
     },
     {
-      "type": "range",
-      "id": "mobile-top-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Top Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "mobile-bottom-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Bottom Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "mobile-right-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Right Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "mobile-left-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Mobile Left Padding",
-      "default": 0
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "Enable swipe on mobile"
     },
     {
       "type": "header",
-      "content": "Desktop Settings"
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
       "type": "range",
-      "id": "desktop-font-size",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "label": "Desktop Font Size",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "desktop-top-padding",
+      "id": "padding_top",
       "min": 0,
       "max": 100,
-      "step": 2,
+      "step": 4,
       "unit": "px",
-      "label": "Desktop Top Padding",
-      "default": 0
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
     },
     {
       "type": "range",
-      "id": "desktop-bottom-padding",
+      "id": "padding_bottom",
       "min": 0,
       "max": 100,
-      "step": 2,
+      "step": 4,
       "unit": "px",
-      "label": "Desktop Bottom Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "desktop-right-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Desktop Right Padding",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "desktop-left-padding",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Desktop Left Padding",
-      "default": 0
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [
     {
       "type": "category",
-      "name": "Category",
-      "limit": 9,
+      "name": "Article category",
       "settings": [
         {
           "type": "text",
-          "id": "tag",
-          "label": "Category Tag"
+          "label": "Category tag",
+          "id": "tag"
         },
         {
-          "type": "text",
-          "id": "title",
-          "label": "Category Title"
+          "type": "inline_richtext",
+          "label": "Category custom title",
+          "id": "title"
         },
         {
           "type": "image_picker",
-          "id": "image",
-          "label": "Category Image"
+          "label": "Category image",
+          "id": "image"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Article Categories"
+      "name": "Article categories"
     }
   ]
 }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

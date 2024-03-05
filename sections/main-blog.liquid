@@ -16,7 +16,7 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div id="main-blog-section" class="color-{{ section.settings.color_scheme }} gradient">
   {%- paginate blog.articles by 6 -%}
     <div class="main-blog page-width section-{{ section.id }}-padding">
       {% if section.settings.show_page_title %}

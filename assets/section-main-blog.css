@@ -88,6 +88,12 @@
   margin: 3rem 0;
 }
 
+@media screen and (min-width:750px) and (max-width:990px) {
+  .section-main-blog .blog-articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (min-width:990px) {
   .section-main-blog .blog-tag {
     margin: 4rem 0;
