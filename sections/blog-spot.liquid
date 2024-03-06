@@ -57,7 +57,7 @@
         {% for block in section.blocks %}
           <li class="tag {{  section.settings.tags_size }}">
             <a
-              href="{{ section.settings.blog.url }}/tagged/{{ block.settings.tag | handleize }}"
+              href="{{ section.settings.blog.url }}/tagged/{{ block.settings.tag | handleize }}{% if section.settings.scroll_to_grid %}#main-blog-section{% endif %}"
               title="{{ section.settings.blog.title }} - {{ block.settings.tag | capitalize }}"
             >
               {{- block.settings.tag | upcase -}}
@@ -262,6 +262,13 @@
       "id": "show_view_all",
       "default": true,
       "label": "t:sections.featured-blog.settings.show_view_all.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "scroll_to_grid",
+      "default": false,
+      "label": "Tag scroll to grid",
+      "info": "Scroll to articles grid after click."
     },
     {
       "type": "header",
