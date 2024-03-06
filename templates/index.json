@@ -600,6 +600,7 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
+        "scroll_to_grid": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -676,7 +677,7 @@
           "settings": {
             "heading": "Real Remy Human Hair Extensions",
             "heading_size": "h1",
-            "h1": false
+            "h1": true
           }
         },
         "463035d2-6446-4ab7-a2d4-03a24ee0cd4f": {
