@@ -55,11 +55,11 @@
 }
 
 .blogs-per-row-mobile-2>.blog-post {
-	width: calc((100% - 15px) / 2)
+	width: calc((100% - var(--grid-mobile-vertical-spacing)) / 2)
 }
 
 .blogs-per-row-mobile-3>.blog-post {
-	width: calc((100% - (15px * 2)) / 3)
+	width: calc((100% - (var(--grid-mobile-vertical-spacing) * 2)) / 3)
 }
 
 .blog-post .card--standard>.card__content .card__information {
@@ -89,11 +89,11 @@
 	}
 
 	.blogs-per-row-mobile-2>.blog-post {
-		width: calc((100% - (15px)) / 2)
+		width: calc((100% - var(--grid-desktop-vertical-spacing)) / 2)
 	}
 
 	.blogs-per-row-mobile-3>.blog-post {
-		width: calc((100% - (15px * 2)) / 3)
+		width: calc((100% - (var(--grid-desktop-vertical-spacing) * 2)) / 3)
 	}
 
 	.blog-post .card--standard>.card__content .card__information {
@@ -119,22 +119,22 @@
 	}
 
 	.blogs-per-row-desktop-2>.blog-post {
-		width: calc((100% - (6rem)) / 2)
+		width: calc((100% - var(--grid-desktop-vertical-spacing)) / 2)
 	}
 
 	.blogs-per-row-desktop-3>.blog-post {
-		width: calc((100% - (6rem * 2)) / 3)
+		width: calc((100% - (var(--grid-desktop-vertical-spacing) * 2)) / 3)
 	}
 
 	.blogs-per-row-desktop-4>.blog-post {
-		width: calc((100% - (6rem * 3)) / 4)
+		width: calc((100% - (var(--grid-desktop-vertical-spacing) * 3)) / 4)
 	}
 
 	.blogs-per-row-desktop-5>.blog-post {
-		width: calc((100% - (6rem * 4)) / 5)
+		width: calc((100% - (var(--grid-desktop-vertical-spacing) * 4)) / 5)
 	}
 
 	.blogs-per-row-desktop-6>.blog-post {
-		width: calc((100% - (6rem * 5)) / 6)
+		width: calc((100% - (var(--grid-desktop-vertical-spacing) * 5)) / 6)
 	}
 }
