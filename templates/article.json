@@ -6,35 +6,64 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "image_height": "medium"
+            "image_src": "metafield",
+            "image_height": "landscape"
+          }
+        },
+        "extra_iKiWex": {
+          "type": "extra",
+          "settings": {
+            "enable_share": true,
+            "share_label": "Share",
+            "enable_reading-time": true,
+            "reading-time_label": "Article Read Time -"
           }
         },
         "title": {
           "type": "title",
           "settings": {
             "blog_show_date": true,
-            "blog_show_author": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "blog_show_author": true,
+            "heading_size": "h1",
+            "font_weight": "bold"
           }
         },
         "content": {
           "type": "content",
           "settings": {
           }
+        },
+        "faq_4pTbgj": {
+          "type": "faq",
+          "settings": {
+            "heading": "FAQs"
+          }
+        },
+        "footer_LgHUFf": {
+          "type": "footer",
+          "settings": {
+            "text": "<h2>INTERESTED IN HAIR EXTENSIONS? SHOP THE BEST SELLERS…<\/h2><p>For our full range of Hair Extensions including <a href=\"\/collections\/clip-in-hair-extensions\" title=\"Clip In Hair Extensions\">Clip-Ins<\/a>, <a href=\"\/collections\/clip-in-ponytail-extensions\" title=\"Clip In Ponytail Extensions\">Ponytails<\/a>, <a href=\"\/pages\/permanent-extensions\" title=\"Permanent Hair Extensions\">Permanent<\/a> and<br\/>many more with over 60 shades to choose from head to our <a href=\"\/\" title=\"\/\">Main Page<\/a>. Including<br\/>our best selling <a href=\"\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair\" title=\"Seamless Clip In Hair Extensions: Double Drawn\">Seamless<\/a>, Tape In Hair Extensions, and One Piece Hair Extensions.<\/p>"
+          }
         }
       },
       "block_order": [
         "featured_image",
+        "extra_iKiWex",
         "title",
-        "share",
-        "content"
+        "content",
+        "faq_4pTbgj",
+        "footer_LgHUFf"
       ],
       "settings": {
+        "max-width": "1000",
+        "color_scheme": "accent-4",
+        "enable_sidebar": true,
+        "sidebar_position": "right",
+        "enable_categories": true,
+        "enable_articles": true,
+        "limit": 4,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "12bc967e-f184-4f62-b448-da40706e950b": {
@@ -44,7 +73,8 @@
           "type": "heading",
           "settings": {
             "heading": "Our Commitment To Sustainability",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "h1": false
           }
         },
         "template--15283893927997__12bc967e-f184-4f62-b448-da40706e950b-text-1": {
