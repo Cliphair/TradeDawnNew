@@ -1,4 +1,5 @@
 {{ 'section-article-categories.css' | asset_url | stylesheet_tag }}
+{{ 'component-category-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
@@ -15,16 +16,25 @@
   }
 {%- endstyle -%}
 
+{% liquid
+  assign categories = blog.metafields.custom.main_categories.value
+
+  assign size = 0
+  for category in categories
+    assign size = size | plus: 1
+  endfor
+%}
+
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
-  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+  if section.settings.swipe_on_mobile and size > columns_mobile_int
     assign show_mobile_slider = true
   endif
 
   assign columns_desktop_int = section.settings.columns_desktop | plus: 0
   assign show_desktop_slider = false
-  if section.settings.swipe_on_desktop and section.blocks.size > columns_desktop_int
+  if section.settings.swipe_on_desktop and size > columns_desktop_int
     assign show_desktop_slider = true
   endif
 -%}
@@ -45,93 +55,63 @@
       </div>
     {%- endunless -%}
 
-    <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      <ul
-        class="articles-categories grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ section.blocks.size }}-items"
-        id="Slider-{{ section.id }}"
-        role="list"
-      >
-        {%- liquid
-          assign columns = section.blocks.size
-          if columns > 3
-            assign columns = 3
-          endif
-        -%}
+    {% if categories %}
+      <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <ul
+          class="articles-categories grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ size }}-items"
+          id="Slider-{{ section.id }}"
+          role="list"
+        >
+          {%- liquid
+            assign columns = size
+            if columns > 3
+              assign columns = 3
+            endif
+          -%}
 
-        {% for block in section.blocks %}
-          <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="articles-list__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            <div class="category {% if current_tags and current_tags.first == block.settings.tag %} selected{% endif %}">
-              {% if block.settings.tag != empty %}
-                <a
-                  href="{{ blog.url }}{% if block.settings.tag != empty %}/tagged/{{ block.settings.tag | handle }}{% endif %}{% if section.settings.scroll_to_grid %}#main-blog-section{% endif %}"
-                  title="{{ block.settings.title }} blog posts"
-                >
-                  <img
-                    srcset="
-                      {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-                      {%- if block.settings.image.width >= 330 -%}{{ block.settings.image | image_url: width: 330 }} 330w,{%- endif -%}
-                      {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-                      {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-                      {%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}
-                      {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                      {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
-                      {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
-                    "
-                    src="{{ block.settings.image | image_url: width: 1500 }}"
-                    sizes="
-                      (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
-                      (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
-                      calc(100vw - 3rem)
-                    "
-                    alt=""
-                    height="{{ block.settings.image.height }}"
-                    width="{{ block.settings.image.width }}"
-                    loading="lazy"
-                  >
-                  <p>
-                    {{ block.settings.title | default: block.settings.tag }}
-                  </p>
-                </a>
+          {% for category in categories %}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="articles-list__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
               {% endif %}
+            >
+              <div class="category circle{% if current_tags and current_tags.first == category.category_tag %} selected{% endif %}">
+                {% render 'category-card', category_object: category %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+        {%- if show_mobile_slider or show_desktop_slider -%}
+          <div class="slider-buttons no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+            <button
+              type="button"
+              class="slider-button slider-button--prev"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
+            <div class="slider-counter caption visually-hidden">
+              <span class="slider-counter--current">1</span>
+              <span aria-hidden="true"> / </span>
+              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+              <span class="slider-counter--total">{{ size }}</span>
             </div>
-          </li>
-        {% endfor %}
-      </ul>
-      {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="slider-buttons no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-          <div class="slider-counter caption visually-hidden">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+            <button
+              type="button"
+              class="slider-button slider-button--next"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
           </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-        </div>
-      {%- endif -%}
-    </slider-component>
+        {%- endif -%}
+      </slider-component>
+    {% endif %}
   </div>
 </div>
 
@@ -141,6 +121,10 @@
   "tag": "section",
   "class": "section section-article-categories",
   "settings": [
+    {
+      "type": "paragraph",
+      "content": "This section uses the a metafield defined on the blog."
+    },
     {
       "type": "inline_richtext",
       "id": "heading",
@@ -264,29 +248,6 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
-  ],
-  "blocks": [
-    {
-      "type": "category",
-      "name": "Article category",
-      "settings": [
-        {
-          "type": "text",
-          "label": "Category tag",
-          "id": "tag"
-        },
-        {
-          "type": "inline_richtext",
-          "label": "Category custom title",
-          "id": "title"
-        },
-        {
-          "type": "image_picker",
-          "label": "Category image",
-          "id": "image"
-        }
-      ]
     }
   ],
   "presets": [

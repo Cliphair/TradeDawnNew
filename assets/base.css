@@ -559,7 +559,13 @@ a:not([href]) {
   margin: 0 1.3rem 0 1.5rem;
 }
 
-.circle-divider:last-of-type::after {
+.pipe-divider::after {
+  content: '|';
+  margin: 0 1.2rem 0 1rem;
+}
+
+.circle-divider:last-of-type::after,
+.pipe-divider:last-of-type::after {
   display: none;
 }
 

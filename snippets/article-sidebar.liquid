@@ -1,0 +1,74 @@
+{% liquid
+  assign categories = blog.metafields.custom.main_categories.value
+
+  assign tags = ''
+  for category in categories
+    assign tags = tags | append: category.category_tag
+    unless forloop.last
+      assign tags = tags | append: '...'
+    endunless
+  endfor
+  assign tags = tags | split: '...'
+
+  assign related_tag = ''
+  for tag in article.tags
+    if tags contains tag
+      assign related_tag = tag
+      break
+    endif
+  endfor
+
+  assign limit = limit
+  assign counter = 1
+%}
+
+{% if enable_categories and categories %}
+  <div class="sidebar-categories">
+    {% for category in categories %}
+      {% render 'category-card', category_object: category %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if enable_articles %}
+  <div class="sidebar-articles">
+    {% if related_tag != empty %}
+      <p class="h2 sidebar-title">Related Articles</p>
+
+      <div class="articles-wrapper">
+        {% paginate blog.articles by blog.articles_count %}
+          {% for blog in blog.articles %}
+            {% if blog.tags contains related_tag and counter <= limit and request.path != blog.url %}
+              {%- render 'article-card',
+                article: blog,
+                media_aspect_ratio: 1,
+                show_image: true,
+                show_date: false,
+                show_author: true,
+                show_excerpt: false,
+                custom_style: 'card'
+              -%}
+              {% assign counter = counter | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        {% endpaginate %}
+      </div>
+    {% else %}
+      <p class="h2">Latest Articles</p>
+
+      <div class="articles-wrapper">
+        {% for blog in blog.articles limit: limit %}
+          {%- render 'article-card',
+            article: blog,
+            media_aspect_ratio: 1,
+            show_image: true,
+            show_date: false,
+            show_author: true,
+            show_excerpt: false,
+            custom_style: 'card'
+          -%}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

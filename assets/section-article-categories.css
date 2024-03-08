@@ -2,34 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.section-article-categories .category a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: rgba(var(--color-link), var(--alpha-link));
-}
-
-.section-article-categories .category a:hover,
-.section-article-categories .category.selected a {
-  color: rgba(var(--color-shadow), var(--alpha-link));
-}
-
-.section-article-categories .category a img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  display: block;
-  margin: 0;
-  padding: 0;
-  border-radius: 50%;
-}
-
-.section-article-categories .category a p {
-  text-align: center;
-  margin-bottom: 0;
-  line-height: 1.2em;
-}
-
 /* overrides */
 @media screen and (max-width: 749px) {
   .section-article-categories .grid--peek.slider .grid__item:first-of-type {
