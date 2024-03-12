@@ -843,11 +843,11 @@
 
     function viewItemEvent() {
       const productForm = document.querySelector(`#{{ product_form_id }}`);
-      const itemName = productForm.querySelector('input[name="product-title"]');
-      const itemBrand = productForm.querySelector('input[name="vendor"]');
-      const itemCategory = productForm.querySelector('input[name="type"]');
-      const itemCategory2 = productForm.querySelector('input[name="colour-group"]');
-      const itemCategory3 = productForm.querySelector('input[name="colour-name"]');
+      const itemName = productForm.querySelector('input[name="product-title"]').value;
+      const itemBrand = productForm.querySelector('input[name="vendor"]').value;
+      const itemCategory = productForm.querySelector('input[name="type"]').value;
+      const itemCategory2 = productForm.querySelector('input[name="colour-group"]').value;
+      const itemCategory3 = productForm.querySelector('input[name="colour-name"]').value;
       
       console.log(productForm);
       console.log(itemName);
