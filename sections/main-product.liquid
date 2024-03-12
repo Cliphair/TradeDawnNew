@@ -848,29 +848,22 @@
       const itemCategory = productForm.querySelector('input[name="type"]').value;
       const itemCategory2 = productForm.querySelector('input[name="colour-group"]').value;
       const itemCategory3 = productForm.querySelector('input[name="colour-name"]').value;
-      
-      console.log(productForm);
-      console.log(itemName);
-      console.log(itemBrand);
-      console.log(itemCategory);
-      console.log(itemCategory2);
-      console.log(itemCategory3);
 
-      // dataLayer.push({ "ecommerce": null });
-      // dataLayer.push({
-      //   "event": 'view_item',
-      //   "ecommerce": {
-      //     "items": [
-      //       {
-      //         "item_name": productForm.querySelector('input[name="product-title"]'),
-      //         "item_brand": productForm.querySelector('input[name="vendor"]'),
-      //         "item_category": productForm.querySelector('input[name="type"]'),
-      //         "item_category2": productForm.querySelector('input[name="colour-group"]'),
-      //         "item_category3": productForm.querySelector('input[name="colour-name"]')
-      //       },
-      //     ],
-      //   },
-      // });
+      dataLayer.push({ "ecommerce": null });
+      dataLayer.push({
+        "event": 'view_item',
+        "ecommerce": {
+          "items": [
+            {
+              "item_name": itemName,
+              "item_brand": itemBrand,
+              "item_category": itemCategory,
+              "item_category2": itemCategory2,
+              "item_category3": itemCategory3
+            },
+          ],
+        },
+      });
     }
   </script>
 
