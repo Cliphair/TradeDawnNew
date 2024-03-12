@@ -842,7 +842,7 @@
     });
 
     function viewItemEvent() {
-      const productForm = document.querySelector(`#product-form-${this.dataset.section}`);
+      const productForm = document.querySelector(`#{{ product_form_id }}`);
       const itemName = productForm.querySelector('input[name="product-title"]');
       const itemBrand = productForm.querySelector('input[name="vendor"]');
       const itemCategory = productForm.querySelector('input[name="type"]');
