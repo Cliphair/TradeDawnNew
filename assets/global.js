@@ -1103,6 +1103,7 @@ class VariantSelects extends HTMLElement {
       this.updateMedia();
       this.updateURL();
       this.updateVariantInput();
+      this.updateVariantEventsInput();
       this.renderProductInfo();
       this.updateShareUrl();
       this.updateKlarnaMessage();
@@ -1173,6 +1174,16 @@ class VariantSelects extends HTMLElement {
       input.value = this.currentVariant.id;
       input.dispatchEvent(new Event('change', { bubbles: true }));
     });
+  }
+
+  updateVariantEventsInput() {
+    const productForm = document.querySelector(`#product-form-${this.dataset.section}`);
+    const optionTitle = productForm.querySelector('input[name="option-title"]');
+    if (optionTitle) optionTitle.value = this.currentVariant.title;
+    const sku = productForm.querySelector('input[name="sku"]');
+    if (sku) sku.value = this.currentVariant.sku.replaceAll("(D)", "").replaceAll("(D1)", "");
+    const price = productForm.querySelector('input[name="price"]');
+    if (price) price.value = this.currentVariant.price / 100;
   }
 
   updateVariantStatuses() {

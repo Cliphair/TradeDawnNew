@@ -60,6 +60,40 @@
           disabled
           class="product-variant-id"
         >
+        <input type="hidden" disabled name="product-title" value="{{ product.title | strip | escape }}">
+        <input
+          type="hidden"
+          disabled
+          name="option-title"
+          value="{{ product.selected_or_first_available_variant.title | strip | escape }}"
+        >
+        <input
+          type="hidden"
+          disabled
+          name="sku"
+          value="{{ product.selected_or_first_available_variant.sku | replace: '(D)', '' | replace: '(D1)', '' }}"
+        >
+        <input type="hidden" disabled name="type" value="{{ product.type | strip | escape }}">
+        <input
+          type="hidden"
+          disabled
+          name="colour-group"
+          value="{{ product.metafields.custom.colour_group | strip | escape }}"
+        >
+        <input
+          type="hidden"
+          disabled
+          name="colour-name"
+          value="{{ product.metafields.custom.colour_name | strip | escape}}"
+        >
+        <input type="hidden" disabled name="vendor" value="{{ product.vendor | strip | escape }}">
+        <input type="hidden" disabled name="currency" value="{{ shop.currency }}">
+        <input
+          type="hidden"
+          disabled
+          name="price"
+          value="{{ product.selected_or_first_available_variant.price | divided_by: 100 }}"
+        >
 
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
