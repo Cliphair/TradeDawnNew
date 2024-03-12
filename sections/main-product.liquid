@@ -835,6 +835,32 @@
       });
     });
   </script>
+                      
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      viewItemEvent();
+    });
+
+    function viewItemEvent() {
+      const productForm = document.querySelector(`#product-form-${this.dataset.section}`);
+
+      dataLayer.push({ "ecommerce": null });
+      dataLayer.push({
+        "event": 'view_item',
+        "ecommerce": {
+          "items": [
+            {
+              "item_name": productForm.querySelector('input[name="product-title"]'),
+              "item_brand": productForm.querySelector('input[name="vendor"]'),
+              "item_category": productForm.querySelector('input[name="type"]'),
+              "item_category2": productForm.querySelector('input[name="colour-group"]'),
+              "item_category3": productForm.querySelector('input[name="colour-name"]')
+            },
+          ],
+        },
+      });
+    }
+  </script>
 
   {%- liquid
     if product.selected_or_first_available_variant.featured_media
