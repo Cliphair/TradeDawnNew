@@ -843,6 +843,18 @@
 
     function viewItemEvent() {
       const productForm = document.querySelector(`#product-form-${this.dataset.section}`);
+      const itemName = productForm.querySelector('input[name="product-title"]');
+      const itemBrand = productForm.querySelector('input[name="vendor"]');
+      const itemCategory = productForm.querySelector('input[name="type"]');
+      const itemCategory2 = productForm.querySelector('input[name="colour-group"]');
+      const itemCategory3 = productForm.querySelector('input[name="colour-name"]');
+      
+      console.log(productForm);
+      console.log(itemName);
+      console.log(itemBrand);
+      console.log(itemCategory);
+      console.log(itemCategory2);
+      console.log(itemCategory3);
 
       // dataLayer.push({ "ecommerce": null });
       // dataLayer.push({
