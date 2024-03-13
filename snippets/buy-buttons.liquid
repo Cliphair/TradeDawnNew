@@ -60,6 +60,7 @@
           disabled
           class="product-variant-id"
         >
+        <input type="hidden" disabled name="product-id" value="{{ product.id }}">
         <input type="hidden" disabled name="product-title" value="{{ product.title | strip | escape }}">
         <input
           type="hidden"

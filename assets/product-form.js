@@ -92,6 +92,7 @@ if (!customElements.get('product-form')) {
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading-overlay__spinner').classList.add('hidden');
+            this.addToCartEvent();
           });
       }
 
@@ -109,6 +110,74 @@ if (!customElements.get('product-form')) {
           this.errorMessage.textContent = errorMessage;
         }
       }
+
+      addToCartEvent() {
+        this.googleAnalyticsEvent()
+        this.pinterestEvent()
+      }
+
+      googleAnalyticsEvent() {
+        console.log("Google Analytics add to cart event")
+        const productForm = this.form;
+
+        const itemSku = productForm.querySelector('input[name="sku"]').value;                  // product variant sku
+        const itemName = productForm.querySelector('input[name="product-title"]').value;       // product title
+        const itemVariant = productForm.querySelector('input[name="option-title"]').value;    // product variant title
+        const itemPrice = parseInt(productForm.querySelector('input[name="price"]').value);      // product variant price
+        const itemBrand = productForm.querySelector('input[name="vendor"]').value;      // product vendor
+        const itemCategory = productForm.querySelector('input[name="type"]').value;   // product type
+        const itemCategory2 = productForm.querySelector('input[name="colour-group"]').value;  // product colour group
+        const itemCategory3 = productForm.querySelector('input[name="colour-name"]').value;  // product colour name
+        const storeCurrency = productForm.querySelector('input[name="currency"]').value;
+
+        const quantityInput = document.querySelector(`.quantity__input[form="${productForm.getAttribute("id")}"]`);
+        const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+
+        const value = quantity * itemPrice;
+
+        dataLayer.push({ 'ecommerce': null });
+        dataLayer.push({
+          'event': 'add_to_cart',
+          'ecommerce': {
+            'currency': storeCurrency,
+            'value': value,
+            'items': [{
+              'item_id': itemSku,
+              'item_name': itemName,
+              'item_brand': itemBrand,
+              'item_category': itemCategory,
+              'item_category2': itemCategory2,
+              'item_category3': itemCategory3,
+              'item_variant': itemVariant,
+              'price': itemPrice,
+              'quantity': quantity
+            }]
+          }
+        });
+      }
+
+      pinterestEvent() {
+        console.log("Pinterest add to cart event")
+        const productForm = this.form;
+
+        const productId = productForm.querySelector('input[name="product-id"]').value;
+        const variantId = productForm.querySelector('input[name="id"]').value;
+        const id = "shopify_GB_" + productId + "_" + variantId;
+        const price = parseInt(productForm.querySelector('input[name="price"]').value);
+        const currency = productForm.querySelector('input[name="currency"]').value;
+
+        const quantityInput = document.querySelector(`.quantity__input[form="${productForm.getAttribute("id")}"]`);
+        const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+        const value = quantity * price;
+
+        pintrk('track', 'AddToCart', {
+          value: value,
+          order_quantity: quantity,
+          currency: currency,
+          product_ids: [id,]
+        });
+      }
+
     }
   );
 }

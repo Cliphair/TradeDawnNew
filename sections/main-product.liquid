@@ -835,7 +835,7 @@
       });
     });
   </script>
-                      
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       viewItemEvent();
@@ -849,17 +849,17 @@
       const itemCategory2 = productForm.querySelector('input[name="colour-group"]').value;
       const itemCategory3 = productForm.querySelector('input[name="colour-name"]').value;
 
-      dataLayer.push({ "ecommerce": null });
+      dataLayer.push({ ecommerce: null });
       dataLayer.push({
-        "event": 'view_item',
-        "ecommerce": {
-          "items": [
+        event: 'view_item',
+        ecommerce: {
+          items: [
             {
-              "item_name": itemName,
-              "item_brand": itemBrand,
-              "item_category": itemCategory,
-              "item_category2": itemCategory2,
-              "item_category3": itemCategory3
+              item_name: itemName,
+              item_brand: itemBrand,
+              item_category: itemCategory,
+              item_category2: itemCategory2,
+              item_category3: itemCategory3,
             },
           ],
         },
