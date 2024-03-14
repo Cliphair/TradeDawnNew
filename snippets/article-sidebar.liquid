@@ -57,16 +57,19 @@
       <p class="h2">Latest Articles</p>
 
       <div class="articles-wrapper">
-        {% for blog in blog.articles limit: limit %}
-          {%- render 'article-card',
-            article: blog,
-            media_aspect_ratio: 1,
-            show_image: true,
-            show_date: false,
-            show_author: true,
-            show_excerpt: false,
-            custom_style: 'card'
-          -%}
+        {% for blog in blog.articles %}
+          {% if request.path != blog.url %}
+            {%- render 'article-card',
+              article: blog,
+              media_aspect_ratio: 1,
+              show_image: true,
+              show_date: false,
+              show_author: true,
+              show_excerpt: false,
+              custom_style: 'card'
+            -%}
+            {% assign counter = counter | plus: 1 %}
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
