@@ -28,6 +28,16 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
+  .header-wrapper{
+    margin-bottom:-80px;
+  }
+
+  @media screen and (min-width:990px){
+    .header-wrapper{
+      margin-bottom:-120px;
+    }
+  }
+  
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -143,7 +153,7 @@
   endfor
 -%}
 
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}" style='margin-bottom:-120px;'>
   {%- liquid
     assign social_links = false
     assign localization_forms = false
