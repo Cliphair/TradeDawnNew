@@ -11,9 +11,86 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collapsible_content_hyegpe": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_WhpxFb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Return Policy",
+            "icon": "none",
+            "row_content": "<p>You have 60 days to organise a return. In order to do so, you can visit our <a href=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\" title=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\">Return & Exchange page<\/a> and follow the simple instructions. Keep in mind that our Customer Service team will need to have photographic evidence of the product <strong>in the exact conditions it is before shipping it out<\/strong>. <\/p><p>Our Customer Service team will review your request (along with provided images), and process it. This entire process can take up to 3 to 5 working days, for both exchange and refund return requests.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4fTcAV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How To Request A Return Or Exchange",
+            "icon": "none",
+            "row_content": "<p>Returning an item to get a refund or swapping it over with something else is easy. Follow these steps for a seamless return experience!<\/p><h3>Step 1: Request Return<\/h3><p>Go on our <a href=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\" title=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\">Return & Exchange page<\/a> and fill in the form.<\/p><p><\/p><h3>Step 2: Take A Picture<\/h3><p>Take 2-3 photographs of your items in the exact conditions they are being returned in.<\/p><p><\/p><h3>Step 3: Wait For Our Team To Contact You<\/h3><p>You will receive an email when your request has been sent, and another one when it’s been approved or rejected. This can take up to 2-3 working days.<\/p><p><\/p><h3>Step 4: Print Your Shipping Label<\/h3><p>If your request has been approved, you will receive a QR code from our team. This code will lead you to a unique shipping label that you <strong>must<\/strong> print and attach to your parcel. <\/p><p><\/p><h3>Step 5: Return Approved: You’re All Set!<\/h3><p>Once your request has been approved and your parcel has been scanned and in our system, your refund process will be automatically initiated. You can sit back, and relax! <\/p><p><\/p><h3>Step 5b: Exchanged Approved: Let Us Know About Your Choice…<\/h3><p>If you have sent an exchange request and it’s been approved, don’t forget to get in touch with our team to arrange a payment or refund in case there is a difference in price between your selected product and your returned item.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aiawyi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why Has My Return Or Exchange Request Been Denied?",
+            "icon": "none",
+            "row_content": "<p>The reason why our team might reject your return or exchange request is usually down to the conditions of one or more of your items. This can be because of broken hygiene seals, visible signs of usage, alterations, product build-up, etc.<\/p><p>Visible signs of usage, alterations, and product build-up include:<\/p><ul><li>Hair dye<\/li><li>Hair that has been worn, brushed, or styled<\/li><li>Hair extensions set that are incomplete<\/li><li>Hair that smells as a result of using products or improper storage<\/li><\/ul><p>Other reasons why we can reject a return are:<\/p><ul><li>The wrong item has been sent<\/li><li>The return has been requested after 60 days<\/li><\/ul><p>Polite note: <strong>curly clip in hair extensions <\/strong>won’t be able to be returned without their silver\/gold hygiene bands.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_t9KwHA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Are Good Conditions To Return My Item(s)?",
+            "icon": "none",
+            "row_content": "<p>In order to expect a solid <em>yes<\/em> from our team, your item should be in the following conditions:<\/p><ul><li>Unused<\/li><li>Have the hygiene seals intact<\/li><li>Not show any product build-up or alteration of any sort<\/li><\/ul><p>Hair extensions that have been used, styled, or sprayed with products won’t be able to be returned. Hair care products without the foil seal on the bottle\/tub or that have been used won’t be able to be returned. Hair accessories that come in damaged packaging won’t be able to be returned.<\/p><p>Sending us pictures that accurately depicts the state of your items at the time of returning them saves you and our team precious time!<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4Jb4VG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Happens Next?",
+            "icon": "none",
+            "row_content": "<p>Once your request has been received and reviewed by our team, you will be notified about it being accepted or rejected. If it’s accepted, then you will receive a QR code to get to the next step and print your shipping label.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_WhpxFb",
+        "collapsible_row_4fTcAV",
+        "collapsible_row_aiawyi",
+        "collapsible_row_t9KwHA",
+        "collapsible_row_4Jb4VG"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "faq_schema": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collapsible_content_hyegpe"
   ]
 }
