@@ -2653,6 +2653,10 @@ menu-drawer+.header__search {
   line-height: 0;
 }
 
+.search-modal__content{
+  display: inline-flex;
+}
+
 .header--top-center>.header__search {
   display: none;
 }
