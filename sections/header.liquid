@@ -28,14 +28,18 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
-  header.header{
+  .home header.header{
     margin-bottom:-80px;
   }
 
   @media screen and (min-width:990px){
-    header.header{
+    .home header.header{
       margin-bottom:-120px;
     }
+  }
+
+  .home .scrolled-past-header header.header{
+    margin-bottom:0;
   }
   
   header-drawer {
