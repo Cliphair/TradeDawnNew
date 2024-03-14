@@ -58,7 +58,7 @@
 
       <div class="articles-wrapper">
         {% for blog in blog.articles %}
-          {% if request.path != blog.url %}
+          {% if counter <= limit and request.path != blog.url %}
             {%- render 'article-card',
               article: blog,
               media_aspect_ratio: 1,
