@@ -294,6 +294,51 @@
                           >
                             {% render 'icon-remove' %}
                           </a>
+                          <input
+                            type="hidden"
+                            disabled
+                            name="product-title"
+                            value="{{ item.product.title | strip | escape }}"
+                          >
+                          <input
+                            type="hidden"
+                            disabled
+                            name="option-title"
+                            value="{{ item.variant.title | strip | escape }}"
+                          >
+                          <input
+                            type="hidden"
+                            disabled
+                            name="sku"
+                            value="{{ item.sku | replace: '(D)', '' | replace: '(D1)', '' }}"
+                          >
+                          <input type="hidden" disabled name="type" value="{{ item.product.type | strip | escape }}">
+                          <input
+                            type="hidden"
+                            disabled
+                            name="colour-group"
+                            value="{{ item.product.metafields.custom.colour_group | strip | escape }}"
+                          >
+                          <input
+                            type="hidden"
+                            disabled
+                            name="colour-name"
+                            value="{{ item.product.metafields.custom.colour_name | strip | escape}}"
+                          >
+                          <input
+                            type="hidden"
+                            disabled
+                            name="vendor"
+                            value="{{ item.product.vendor | strip | escape }}"
+                          >
+                          <input type="hidden" disabled name="currency" value="{{ shop.currency }}">
+                          <input type="hidden" disabled name="quantity" value="{{ item.quantity }}">
+                          <input
+                            type="hidden"
+                            disabled
+                            name="price"
+                            value="{{ item.variant.price | divided_by: 100 }}"
+                          >
                         </cart-remove-button>
                       </div>
                       {%- if has_qty_rules or has_vol_pricing -%}
@@ -481,18 +526,6 @@
         items: [
         {% if cart.items.size > 0 %}
           {% for item in cart.items %}
-            {% liquid
-              assign coupons = ""
-              for discount in item.line_level_discount_allocations
-                assign coupons = coupons | append: discount.discount_application.title
-                unless forloop.last
-                  assign coupons = coupons | append: ", "
-                endunless
-              endfor
-              if item.original_line_price != item.final_line_price
-                assign discount = item.original_line_price | minus: item.final_line_price | times: 0.01
-              endif
-            %}
             {
               item_id: `{{ item.sku | remove: "(D)" | remove: "(D1)" }}`,
               item_name: `{{ item.product.title | strip }}`,
@@ -501,8 +534,6 @@
               item_category2: `{{ item.product.metafields.custom.colour_group | strip }}`,
               item_category3: `{{ item.product.metafields.custom.colour_name | strip }}`,
               item_variant: `{{ item.variant.title | strip }}`,
-              {% if coupons != empty %}coupon: `{{ coupons | strip }}`{% endif %},
-              {% if discount %}discount: {{ discount }},{% endif %}
               price: {{ item.final_price | times: 0.01 }},
               quantity: {{ item.quantity }},
             },

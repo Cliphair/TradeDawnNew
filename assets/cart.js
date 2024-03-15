@@ -4,8 +4,48 @@ class CartRemoveButton extends HTMLElement {
 
     this.addEventListener('click', (event) => {
       event.preventDefault();
+      this.removeFromCartEvent();
       const cartItems = this.closest('cart-items') || this.closest('cart-drawer-items');
       cartItems.updateQuantity(this.dataset.index, 0);
+    });
+  }
+
+  removeFromCartEvent() {
+    console.log("Google Analytics remove from cart event");
+
+    const itemSku = this.querySelector('input[name="sku"]').value;                  // product variant sku
+    const itemName = this.querySelector('input[name="product-title"]').value;       // product title
+    const itemVariant = this.querySelector('input[name="option-title"]').value;    // product variant title
+    const itemPrice = parseInt(this.querySelector('input[name="price"]').value);      // product variant price
+    const itemBrand = this.querySelector('input[name="vendor"]').value;      // product vendor
+    const itemCategory = this.querySelector('input[name="type"]').value;   // product type
+    const itemCategory2 = this.querySelector('input[name="colour-group"]').value;  // product colour group
+    const itemCategory3 = this.querySelector('input[name="colour-name"]').value;  // product colour name
+    const storeCurrency = this.querySelector('input[name="currency"]').value;
+    const quantity = parseInt(this.querySelector('input[name="quantity"]').value);
+
+    const value = quantity * itemPrice;
+
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+      event: "remove_from_cart",
+      ecommerce: {
+        currency: storeCurrency,
+        value: value,
+        items: [
+          {
+            item_id: itemSku,
+            item_name: itemName,
+            item_brand: itemBrand,
+            item_category: itemCategory,
+            item_category2: itemCategory2,
+            item_category3: itemCategory3,
+            item_variant: itemVariant,
+            price: itemPrice,
+            quantity: quantity
+          }
+        ]
+      }
     });
   }
 }
