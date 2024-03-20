@@ -94,8 +94,7 @@ if (!customElements.get('quiz-question')) {
         if (this.nextQuestionNumber == 'final') {
           nextQuestionElement = document
             .querySelector(`quiz-answer[data-quiz-id="${this.quizId}"]`);
-          console.log(nextQuestionElement)
-          // nextQuestionElement.updateFinalElement();
+          this.updateFinalElement(nextQuestionElement)
         } else {
           nextQuestionElement = document
             .querySelector(`quiz-question[data-quiz-id="${this.quizId}"][data-question-number="${this.nextQuestionNumber}"]`);
@@ -155,6 +154,66 @@ if (!customElements.get('quiz-question')) {
         });
 
         return lastQuestionResponded;
+      }
+
+      getUserAnswers() {
+        const answers = JSON.parse(sessionStorage.getItem(`${this.quizId}-answers`));
+        return answers
+      }
+
+      getQuizAnswer(answerElement) {
+        const answers = this.getUserAnswers();
+        if (!answers) return;
+
+        let answer = JSON.parse(answerElement.querySelector('script[type="application/json"]').textContent);;
+        for (let i in answers) {
+          try {
+            answer = answer[answers[i]];
+          } catch (e) {
+            console.log(e)
+            return
+          }
+        }
+
+        return answer
+      }
+
+      updateFinalElement(answerElement) {
+        const image = answerElement.querySelector(".answer-wrapper .answer-image");
+        const header = answerElement.querySelector(".answer-wrapper .answer-title a");
+        const content = answerElement.querySelector(".answer-wrapper .answer-content");
+        const button = answerElement.querySelector(".answer-wrapper .button-wrapper .button");
+        const accordion = answerElement.querySelector(".answer-wrapper .answer-accordion");
+        const quizAnswer = this.getQuizAnswer(answerElement);
+        const count = quizAnswer ? Object.keys(quizAnswer).length : 0;
+
+        if (count > 0) {
+          image.setAttribute('srcset', quizAnswer.image);
+          image.parentElement.classList.remove('visually-hidden')
+
+          header.href = quizAnswer.url;
+          header.innerText = quizAnswer.product;
+          if (header.disabled) header.disabled = false;
+
+          content.innerHTML = quizAnswer.message;
+
+          button.href = quizAnswer.url;
+          if (button.disabled) button.disabled = false;
+
+          if (quizAnswer.accordion) {
+            accordion.innerHTML = quizAnswer.accordion;
+            accordion.closest('.collapsible-content__grid').classList.remove('visually-hidden');
+          } else {
+            accordion.closest('.collapsible-content__grid').classList.add('visually-hidden');
+          }
+        } else {
+          image.parentElement.classList.add('visually-hidden');
+          header.innerText = "Sorry"
+          header.disabled = true
+          content.innerHTML = `<p>For the given answers we don't have a perfect match at the moment, if possible, try to change the application type.</p>`
+          button.disabled = true
+          accordion.closest('.collapsible-content__grid').classList.add('visually-hidden');
+        }
       }
     }
   )

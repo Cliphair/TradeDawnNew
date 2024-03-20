@@ -57,7 +57,7 @@
           >
             {% assign image = images['Rectangle_74.png'] %}
             <img
-              class="{{ section.settings.image_ratio }}"
+              class="{{ section.settings.image_ratio }} answer-image"
               srcset="
                 {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
                 {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -77,8 +77,10 @@
           </div>
 
           <div class="text-wrapper">
-            <h3 class="h2"><a href="#">Placeholder</a></h3>
-            <p>Placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder</p>
+            <h3 class="h2 answer-title"><a href="#">Placeholder</a></h3>
+            <p class="answer-content">
+              Placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder
+            </p>
             <div class="button-wrapper">
               <a
                 href="#"
@@ -100,11 +102,11 @@
                     id="Details-{{ section.id }}"
                   >
                     <summary id="Summary-1-{{ section.id }}">
-                      <h4 class="accordion__title inline-richtext h4">You could also use:</h4>
+                      <h4 class="accordion__title inline-richtext h4">{{ section.settings.accordion_header }}</h4>
                       {% render 'icon-caret' %}
                     </summary>
                     <div
-                      class="accordion__content rte"
+                      class="accordion__content rte answer-accordion"
                       id="CollapsibleAccordion-1-{{ section.id }}"
                       role="region"
                       aria-labelledby="Summary-1-{{ section.id }}"
@@ -118,14 +120,12 @@
           </div>
         </div>
       </div>
+      <script type="application/json" id="{{ section.settings.id }}-answers" defer>
+        {{ page.metafields.quiz.quiz_answers }}
+      </script>
     </quiz-answer>
   </div>
 
-  {% liquid
-    assign fileName = section.settings.id | handle | append: '.js'
-  %}
-
-  <script src="{{ fileName | asset_url}}" type="application/json" id="{{ section.settings.id }}-answers" defer></script>
   <script src="{{ 'quiz-answer.js' | asset_url }}" defer></script>
 {% endif %}
 
@@ -165,6 +165,12 @@
       "id": "message",
       "label": "Commom message",
       "info": "This message will be used for all the answers"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "accordion_header",
+      "label": "Accordion header",
+      "default": "You could also use:"
     },
     {
       "type": "select",

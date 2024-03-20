@@ -7,6 +7,7 @@ if (!customElements.get('quiz-answer')) {
         this.quizId = this.dataset.quizId;
         this.backButtonElement = this.querySelector('.information-wrapper > button[name="back"]');
         this.resetQuizElement = this.querySelector('.information-wrapper > button[name="reset"]');
+        this.quizAnswers = JSON.parse(this.querySelector('script[type="application/json"]').textContent);
 
         if (this.backButtonElement) {
           this.backButtonElement.addEventListener('click', this.backButton.bind(this));
@@ -15,11 +16,6 @@ if (!customElements.get('quiz-answer')) {
         if (this.resetQuizElement) {
           this.resetQuizElement.addEventListener('click', this.resetQuizButton.bind(this));
         }
-      }
-
-      getUserAnswers() {
-        const answers = JSON.parse(sessionStorage.getItem(`${this.quizId}-answers`));
-        return answers
       }
 
       clearUserAnswers() {
@@ -38,20 +34,6 @@ if (!customElements.get('quiz-answer')) {
           this.hideContainer(parent.closest('.quiz'))
           this.showContainer(previousQuestionElement.closest('.quiz'))
         }
-      }
-
-      updateFinalElement() {
-        const answers = this.getUserAnswers();
-        if (!answers) return;
-
-        Object.entries(answers).forEach(([key, value]) => {
-          console.log(`${key}: ${value}`);
-        });
-
-      }
-
-      getAnswersData() {
-
       }
 
       hideContainer(container) {
