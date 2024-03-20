@@ -100,64 +100,6 @@
     },
     "article-categories": {
       "type": "article-categories",
-      "blocks": {
-        "a287a2fc-3fd6-46ef-8e0e-83c3ce182285": {
-          "type": "category",
-          "settings": {
-            "tag": "The Hair Extensions Bible",
-            "title": "EXTENSIONS BIBLE",
-            "image": "shopify:\/\/shop_images\/The_Hair_Extensions_Bible.png"
-          }
-        },
-        "bd2f8056-113b-48d8-9cca-75aef60bf58f": {
-          "type": "category",
-          "settings": {
-            "tag": "Hair Care & Tips",
-            "title": "HAIR CARE & TIPS",
-            "image": "shopify:\/\/shop_images\/Haircare_Advise.png"
-          }
-        },
-        "c2287495-3a9e-4641-9e8f-482ed2f23dbb": {
-          "type": "category",
-          "settings": {
-            "tag": "Top Trends",
-            "title": "OUR TOP TRENDS",
-            "image": "shopify:\/\/shop_images\/Top_Trends.png"
-          }
-        },
-        "d7a1ed68-bad2-4d3b-904d-b4a378f8d9d4": {
-          "type": "category",
-          "settings": {
-            "tag": "Styling Guides & Tutorials",
-            "title": "STYLING GUIDES & TUTORIALS",
-            "image": "shopify:\/\/shop_images\/Guides_and_Tutorials.png"
-          }
-        },
-        "381dcb5a-6cbc-4644-86ec-6f1f40c6ca8e": {
-          "type": "category",
-          "settings": {
-            "tag": "Wedding & Occasion Hair",
-            "title": "WEDDING & OCCASION HAIR",
-            "image": "shopify:\/\/shop_images\/Wedding.png"
-          }
-        },
-        "91bb1e68-7f77-439e-a0d3-1382fa883ec1": {
-          "type": "category",
-          "settings": {
-            "tag": "Lifestyle & Pop Culture",
-            "title": "LIFESTYLE & POP CULTURE",
-            "image": "shopify:\/\/shop_images\/Lifestyle.png"
-          }
-        }
-      },
-      "block_order": [
-        "a287a2fc-3fd6-46ef-8e0e-83c3ce182285",
-        "bd2f8056-113b-48d8-9cca-75aef60bf58f",
-        "c2287495-3a9e-4641-9e8f-482ed2f23dbb",
-        "d7a1ed68-bad2-4d3b-904d-b4a378f8d9d4",
-        "381dcb5a-6cbc-4644-86ec-6f1f40c6ca8e",
-        "91bb1e68-7f77-439e-a0d3-1382fa883ec1"
-      ],
       "settings": {
         "heading": "",
         "heading_size": "h1",
