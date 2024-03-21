@@ -67,8 +67,9 @@
 	padding-left: 1.3rem;
 }
 
+.blog-post .card .card__inner .card__media,
 .blog-post .article-card__image {
-	border: 1px solid;
+	border: 0;
 }
 
 .blog-spot-section .blog__view-all .button {
