@@ -18,7 +18,8 @@
 }
 
 .main-blog .blog-articles .card__inner .article-card__image-wrapper {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
+  border:0;
 }
 
 .main-blog .blog-articles .card__information {
