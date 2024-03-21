@@ -405,7 +405,7 @@
         "color_scheme": "accent-3",
         "bg_opacity": 0.2,
         "full_width": true,
-        "mobile-row": 3,
+        "mobile-row": 2,
         "mobile-column": 2,
         "desktop-row": 2,
         "desktop-column": 6,
