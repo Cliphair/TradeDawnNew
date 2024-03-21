@@ -75,7 +75,7 @@
         "answer_hCExC3": {
           "type": "answer",
           "settings": {
-            "id": "medium",
+            "id": "mid",
             "answer": "Mid-Length (top of bra)",
             "answer_image": "shopify:\/\/shop_images\/Avarage.jpg"
           }
@@ -103,7 +103,7 @@
         "question": "What is your hair length?",
         "heading_size": "h1",
         "text_allignment": "center",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "color_scheme": "accent-2",
         "button_style_secondary": false,
         "show_information": true,
@@ -121,21 +121,21 @@
         "answer_jwdXWJ": {
           "type": "answer",
           "settings": {
-            "id": "length",
+            "id": "longer",
             "answer": "Add Length"
           }
         },
         "answer_BgKN9A": {
           "type": "answer",
           "settings": {
-            "id": "volume",
+            "id": "thicker",
             "answer": "Add Volume"
           }
         },
         "answer_pKrFXz": {
           "type": "answer",
           "settings": {
-            "id": "length-volume",
+            "id": "l&t",
             "answer": "Add Length & Volume"
           }
         }
@@ -169,7 +169,7 @@
         "answer_Nacie8": {
           "type": "answer",
           "settings": {
-            "id": "clip-in",
+            "id": "clipin",
             "answer": "Clip-Ins (DIY product)",
             "answer_image": "shopify:\/\/shop_images\/Clip_In_af2b4728-f605-44a7-83a7-543c895d4e9d.jpg"
           }
@@ -215,6 +215,7 @@
         "id": "journey",
         "title": "Your perfect match is...",
         "message": "If you need help choosing the correct shade, let us help you with our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service\" title=\"colour match\">free colour match<\/a> service.",
+        "accordion_header": "You could also use:",
         "heading_size": "h1",
         "text_allignment": "center",
         "image_ratio": "portrait",
