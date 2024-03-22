@@ -9,8 +9,8 @@
             "heading_size": "h2"
           }
         },
-        "b7b87992-8206-4a9f-83f6-2f9ec8cfe139": {
-          "type": "product-subtitle",
+        "a0b50969-ea33-4844-941d-db5577728e55": {
+          "type": "rating",
           "settings": {
           }
         },
@@ -22,11 +22,6 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
-        },
-        "a0b50969-ea33-4844-941d-db5577728e55": {
-          "type": "rating",
           "settings": {
           }
         },
@@ -94,10 +89,9 @@
       },
       "block_order": [
         "title",
-        "b7b87992-8206-4a9f-83f6-2f9ec8cfe139",
+        "a0b50969-ea33-4844-941d-db5577728e55",
         "3efc918c-8182-4ef3-bc33-60a83ed7ef86",
         "price",
-        "a0b50969-ea33-4844-941d-db5577728e55",
         "variant_picker",
         "buy_buttons",
         "share",
@@ -204,6 +198,7 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
+        "scroll_to_grid": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
