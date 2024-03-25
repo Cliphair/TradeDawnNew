@@ -118,10 +118,6 @@ if (!customElements.get('quiz-question')) {
         }
       }
 
-      updateFinalElement() {
-        console.log('update final element')
-      }
-
       hideContainer(container) {
         container.classList.remove('visible');
         container.classList.add('hidden');

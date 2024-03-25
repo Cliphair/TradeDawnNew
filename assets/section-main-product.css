@@ -1698,6 +1698,11 @@ klarna-placement,
   margin-top: -1.5rem;
 }
 
+/* product reviews block */
+.product__title+.yotpo-widget-instance {
+  margin-top: -0.5rem;
+}
+
 /* product short description */
 .short-description h3 {
   color: var(--colour-cliphair-purple-dark);
@@ -1750,41 +1755,42 @@ klarna-placement,
 }
 
 /* order deadline */
-#order-deadline{
-  min-height:48px;
+#order-deadline {
+  min-height: 48px;
 }
 
-#order-deadline *{
-  font-size:12px;
+#order-deadline * {
+  font-size: 12px;
 }
 
-#order-deadline .trustblox-1-timer-wrap > div{
+#order-deadline .trustblox-1-timer-wrap>div {
   display: inline-block;
 }
 
-#order-deadline .trustblox-1-timer-wrap > div:first-of-type{
+#order-deadline .trustblox-1-timer-wrap>div:first-of-type {
   margin-right: 10px;
 }
 
-#order-deadline .trustblox-1-timer-locations-toggle-icon{
-  display:inline-block!important;s
+#order-deadline .trustblox-1-timer-locations-toggle-icon {
+  display: inline-block !important;
+  s
 }
 
 /* Specification */
-.specification p{
+.specification p {
   border-top: 1px solid #ddd;
   padding: 10px 5px;
 }
 
-.specification p span{
+.specification p span {
   font-weight: 700;
 }
 
-.specification table{
+.specification table {
   width: 100%;
   margin-bottom: 10px;
 }
 
 .specification table tr:nth-child(2n) {
-    background: #eee;
+  background: #eee;
 }

@@ -90,6 +90,10 @@
 	margin: 0;
 }
 
+.section-videos-list .videos-list-title.capitalize {
+	text-transform: capitalize;
+}
+
 .section-videos-list .intro-wrapper p {
 	margin: 0;
 	line-height: 1.2em;

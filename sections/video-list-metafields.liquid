@@ -149,16 +149,23 @@
     -%}
 
     <div class="videos-list-wrapper page-width isolate no-heading no-mobile-link {{ section.settings.text_allignment }}">
-      {%- unless section.settings.title == blank -%}
-        <div class="title-wrapper title-wrapper--no-top-margin">
-          <h2
-            id="SectionHeading-{{ block.id }}"
-            class="videos-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          >
+      <div class="title-wrapper title-wrapper--no-top-margin">
+        <h2
+          id="SectionHeading-{{ block.id }}"
+          class="videos-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if section.settings.title == blank %} capitalize{% endif %}"
+        >
+          {%- if section.settings.title != blank -%}
             {{ section.settings.title }}
-          </h2>
-        </div>
-      {%- endunless -%}
+          {% else %}
+            {% case request.page_type %}
+              {% when 'collection' %}
+                See The {{ collection.title }} In Real Life
+              {% when 'product' %}
+                See The {{ product.type }} In Real Life
+            {% endcase %}
+          {% endif %}
+        </h2>
+      </div>
 
       <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {%- if show_mobile_slider or show_desktop_slider -%}

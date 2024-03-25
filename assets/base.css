@@ -2653,7 +2653,7 @@ menu-drawer+.header__search {
   line-height: 0;
 }
 
-.search-modal__content{
+.search-modal__content {
   display: inline-flex;
 }
 
@@ -3649,3 +3649,16 @@ details-disclosure>details {
   color: rgb(var(--color-link));
   text-decoration-thickness: 0.2rem;
 }
+
+/* navbar change test
+@media screen and (min-width:990px) {
+
+  .header__inline-menu,
+  .header--top-center .header__inline-menu>.list-menu--inline {
+    width: 100%;
+  }
+
+  .header--top-center .header__inline-menu>.list-menu--inline {
+    justify-content: space-between;
+  }
+} */
