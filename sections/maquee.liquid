@@ -1,0 +1,74 @@
+<style>
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-text {
+    display: inline-block;
+    padding-right: 20px; /* Adjust as needed */
+  }
+</style>
+
+<div class="marquee-container" id="marquee-container">
+  <div class="marquee-text">Text 1</div>
+  <div class="marquee-text">Text 2</div>
+  <div class="marquee-text">Text 3</div>
+</div>
+
+<script>
+  class Marquee {
+    constructor(container, speed) {
+      this.container = container;
+      this.speed = speed || 2;
+      this.animationId = null;
+
+      this.init();
+    }
+
+    init() {
+      // Start the animation loop
+      this.animate();
+    }
+
+    animate() {
+      const children = this.container.children;
+      const containerWidth = this.container.offsetWidth;
+      let offset = 0;
+
+      // Move each child element
+      for (let i = 0; i < children.length; i++) {
+        const child = children[i];
+        offset -= this.speed;
+        if (offset < -child.offsetWidth) {
+          offset += containerWidth;
+        }
+        child.style.transform = `translateX(${offset}px)`;
+      }
+
+      // Request next frame for continuous animation
+      this.animationId = requestAnimationFrame(() => this.animate());
+    }
+
+    stop() {
+      // Stop the animation loop
+      cancelAnimationFrame(this.animationId);
+    }
+  }
+
+  // Usage example:
+  const marqueeContainer = document.getElementById('marquee-container');
+  const marquee = new Marquee(marqueeContainer, 2);
+</script>
+{% schema %}
+{
+  "name": "Marquee",
+  "settings": [],
+  "blocks": [],
+  "settings": [],
+  "presets": [
+    {
+      "name": "Marquee"
+    }
+  ]
+}
+{% endschema %}
