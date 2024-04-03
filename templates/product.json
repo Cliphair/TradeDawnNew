@@ -193,7 +193,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "columns_desktop": 3,
-        "swipe_on_desktop": false,
+        "swipe_on_desktop": true,
         "color_scheme": "background-2",
         "show_image": true,
         "image_ratio": "square",
