@@ -56,7 +56,7 @@
           "settings": {
             "heading": "What Happens Next?",
             "icon": "none",
-            "row_content": "<p>Once your request has been received and reviewed by our team, you will be notified about it being accepted or rejected. If it’s accepted, then you will receive a QR code to get to the next step and print your shipping label.<\/p>",
+            "row_content": "<p>Once your request has been received and reviewed by our team, you will be notified about it being accepted or rejected. If it’s accepted, then you will receive a link to generate your unique shipping label.<\/p>",
             "page": ""
           }
         },
