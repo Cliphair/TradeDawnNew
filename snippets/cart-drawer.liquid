@@ -342,6 +342,56 @@
                                 >
                                   {% render 'icon-remove' %}
                                 </button>
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="product-title"
+                                  value="{{ item.product.title | strip | escape }}"
+                                >
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="option-title"
+                                  value="{{ item.variant.title | strip | escape }}"
+                                >
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="sku"
+                                  value="{{ item.sku | replace: '(D)', '' | replace: '(D1)', '' }}"
+                                >
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="type"
+                                  value="{{ item.product.type | strip | escape }}"
+                                >
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="colour-group"
+                                  value="{{ item.product.metafields.custom.colour_group | strip | escape }}"
+                                >
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="colour-name"
+                                  value="{{ item.product.metafields.custom.colour_name | strip | escape}}"
+                                >
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="vendor"
+                                  value="{{ item.product.vendor | strip | escape }}"
+                                >
+                                <input type="hidden" disabled name="currency" value="{{ shop.currency }}">
+                                <input type="hidden" disabled name="quantity" value="{{ item.quantity }}">
+                                <input
+                                  type="hidden"
+                                  disabled
+                                  name="price"
+                                  value="{{ item.variant.price | divided_by: 100 }}"
+                                >
                               </cart-remove-button>
                             </div>
                             {%- if has_qty_rules or has_vol_pricing -%}

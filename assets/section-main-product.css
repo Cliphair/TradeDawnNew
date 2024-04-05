@@ -1737,6 +1737,7 @@ klarna-placement,
 /* but buttons block */
 .buy-buttons>.product-form {
   margin-bottom: 0;
+  max-width: 44rem;
 }
 
 /* share button block */
