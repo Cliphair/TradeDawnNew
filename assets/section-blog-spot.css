@@ -99,12 +99,12 @@
 		margin-left: 0;
 	}
 
-	.blog-spot-section .slider--tablet.grid--peek.grid--1-col-tablet-down .grid__item {
+	.blog-spot-section .grid--peek.grid--1-col-tablet-down .grid__item {
 		width: 100%;
 		min-width: 100%;
 	}
 
-	.blog-spot-section .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
+	.blog-spot-section .grid--peek.grid--2-col-tablet-down .grid__item {
 		width: calc((100% - var(--grid-mobile-horizontal-spacing)) / 2);
 		min-width: calc((100% - var(--grid-mobile-horizontal-spacing)) / 2);
 	}
@@ -115,12 +115,12 @@
 		margin-left: 0;
 	}
 
-	.blog-spot-section .slider--tablet.grid--peek.grid--1-col-tablet-down .grid__item {
+	.blog-spot-section .grid--peek.grid--1-col-tablet-down .grid__item {
 		width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2);
 		min-width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2);
 	}
 
-	.blog-spot-section .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
+	.blog-spot-section .grid--peek.grid--2-col-tablet-down .grid__item {
 		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 2)) / 3);
 		min-width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 2)) / 3);
 	}
@@ -149,32 +149,32 @@
 		margin-left: 0;
 	}
 
-	.blog-spot-section .slider--desktop.grid--1-col-desktop .grid__item {
+	.blog-spot-section .grid--1-col-desktop .grid__item {
 		width: 100%;
 		min-width: 100%;
 	}
 
-	.blog-spot-section .slider--desktop.grid--2-col-desktop .grid__item {
+	.blog-spot-section .grid--2-col-desktop .grid__item {
 		width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2);
 		min-width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2);
 	}
 
-	.blog-spot-section .slider--desktop.grid--3-col-desktop .grid__item {
+	.blog-spot-section .grid--3-col-desktop .grid__item {
 		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 2)) / 3);
 		min-width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 2)) / 3);
 	}
 
-	.blog-spot-section .slider--desktop.grid--4-col-desktop .grid__item {
+	.blog-spot-section .grid--4-col-desktop .grid__item {
 		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 3)) / 4);
 		min-width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 3)) / 4);
 	}
 
-	.blog-spot-section .slider--desktop.grid--5-col-desktop .grid__item {
+	.blog-spot-section .grid--5-col-desktop .grid__item {
 		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 4)) / 5);
 		min-width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 4)) / 5);
 	}
 
-	.blog-spot-section .slider--desktop.grid--6-col-desktop .grid__item {
+	.blog-spot-section .grid--6-col-desktop .grid__item {
 		width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 5)) / 6);
 		min-width: calc((100% - (var(--grid-desktop-horizontal-spacing) * 5)) / 6);
 	}

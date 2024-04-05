@@ -1,70 +1,170 @@
 <style>
-  .marquee-container {
+  .marquee {
+    display: flex;
     overflow: hidden;
-    white-space: nowrap;
+    gap: 1rem;
+    position: relative;
+    user-select: none;
   }
-  .marquee-text {
-    display: inline-block;
-    padding-right: 20px; /* Adjust as needed */
+
+  .marquee:hover > .scroll {
+    animation-play-state: paused;
+  }
+
+  .marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 1rem;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 1rem));
+    }
+  }
+
+  .scroll {
+    animation: scroll 10s linear infinite;
   }
 </style>
 
-<div class="marquee-container" id="marquee-container">
-  <div class="marquee-text">Text 1</div>
-  <div class="marquee-text">Text 2</div>
-  <div class="marquee-text">Text 3</div>
+<div
+  class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+  id="{{ section.id }}"
+>
+  <div class="marquee">
+    {% for i in (0..1) %}
+      <div class="marquee-content scroll">
+        {% for block in section.blocks %}
+          <div>
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}">
+            {%- endif -%}
+            {%- if block.settings.image != blank and block.settings.image.src != blank -%}
+              <img
+                srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}"
+                src="{{ block.settings.image | image_url: width: 190 }}"
+                alt="{{ block.settings.image.alt | escape }}"
+                loading="eager"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+              >
+            {%- endif -%}
+            {% if block.settings.text_label != null %}
+              <p class="{{ section.settings.text_size }}">{{ block.settings.text_label }}</p>
+            {%- endif -%}
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- endif -%}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
-<script>
-  class Marquee {
-    constructor(container, speed) {
-      this.container = container;
-      this.speed = speed || 2;
-      this.animationId = null;
-
-      this.init();
-    }
-
-    init() {
-      // Start the animation loop
-      this.animate();
-    }
-
-    animate() {
-      const children = this.container.children;
-      const containerWidth = this.container.offsetWidth;
-      let offset = 0;
-
-      // Move each child element
-      for (let i = 0; i < children.length; i++) {
-        const child = children[i];
-        offset -= this.speed;
-        if (offset < -child.offsetWidth) {
-          offset += containerWidth;
-        }
-        child.style.transform = `translateX(${offset}px)`;
-      }
-
-      // Request next frame for continuous animation
-      this.animationId = requestAnimationFrame(() => this.animate());
-    }
-
-    stop() {
-      // Stop the animation loop
-      cancelAnimationFrame(this.animationId);
-    }
-  }
-
-  // Usage example:
-  const marqueeContainer = document.getElementById('marquee-container');
-  const marquee = new Marquee(marqueeContainer, 2);
-</script>
 {% schema %}
 {
   "name": "Marquee",
-  "settings": [],
-  "blocks": [],
-  "settings": [],
+  "tag": "section",
+  "class": "section section-marquee",
+  "max_blocks": 10,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_size",
+      "options": [
+        {
+          "value": "p",
+          "label": "Small"
+        },
+        {
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        }
+      ],
+      "default": "p",
+      "label": "Text size"
+    },
+    {
+      "type": "checkbox",
+      "id": "scroll_mobile",
+      "default": false,
+      "label": "Infinite scroll on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "scroll_desktop",
+      "default": false,
+      "label": "infinite scroll on desktop"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "element",
+      "name": "Element",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_label",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Optional"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Marquee"
@@ -72,3 +172,65 @@
   ]
 }
 {% endschema %}
+
+{% comment %}
+  <style>
+    .marquee {
+      display: flex;
+      overflow: hidden;
+      gap: 1rem;
+      position: relative;
+      user-select: none;
+    }
+
+    .marquee:hover > .scroll {
+      animation-play-state: paused;
+    }
+
+    .marquee-contetn {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-around;
+      min-width: 100%;
+      gap: 1rem;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - 1rem));
+      }
+    }
+
+    .scroll {
+      animation: scroll 10s linear infinite;
+    }
+  </style>
+  <div class="marquee">
+    <div class="marquee-contetn scroll">
+      <p>This is my first test</p>
+      <p>This is my first test</p>
+      <p>This is my first test</p>
+    </div>
+    <div class="marquee-contetn scroll">
+      <p>This is my first test</p>
+      <p>This is my first test</p>
+      <p>This is my first test</p>
+    </div>
+  </div>
+
+  {% schema %}
+  {
+    "name": "Marquee",
+    "blocks": [],
+    "settings": [],
+    "presets": [
+      {
+        "name": "Marquee"
+      }
+    ]
+  }
+  {% endschema %}
+{% endcomment %}

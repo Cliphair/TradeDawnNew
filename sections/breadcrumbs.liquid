@@ -1,0 +1,208 @@
+{% unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' %}
+  {{ 'section-breadcrumbs.css' | asset_url | stylesheet_tag }}
+
+  {% assign t = template | split: '.' | first %}
+  <section id="section-{{ section.id }}" class="page-width">
+    <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li>
+          <a href="/" title="Homepage" class="link--text">Home</a>
+        </li>
+        {% case t %}
+          {% when 'page' %}
+            <li>
+              <a href="{{ page.url }}" title="{{ page.title }}" aria-current="page" class="link--text">
+                {{- page.title -}}
+              </a>
+            </li>
+
+          {% when 'product' %}
+            {% unless collection %}
+              {% assign baseCollections = 'Accessories:accessories,
+                Bundle:hair-extensions-bundle,
+                Clip In Fringe Extensions:fringe-clip-in-hair-extensions,
+                Clip in Ponytail:clip-in-ponytail-extensions,
+                Curly Clip In Hair Extensions:curly-clip-in-hair-extensions,
+                DIY Clip In Hair Extensions:diy-clip-in-hair-extensions,
+                Double wefted full head:double-wefted-clip-in-hair-extensions,
+                Euro Straight Hair Weft / Weave:euro-straight-hair-weft-weave,
+                Full Head Set:full-head-clip-in-hair-extensions,
+                Hair Care:hair-care,
+                Highlighted Clip In Hair Extensions:highlighted-clip-in-hair-extensions,
+                I-TIP Straight Pre-bonded Hair Extensions:i-tip-straight-pre-bonded-hair-extensions,
+                Micro Ring Hair Extensions:micro-ring-loop-hair-extensions,
+                Nano Ring Hair Extensions:nano-rings-hair-extensions,
+                One Piece Clip In Hair Extensions:one-piece-top-up-hair-extensions,
+                Quad Weft Pieces:quad-weft-hair-extensions,
+                Remy Royale Flat Tip:flat-tip-hair-extensions,
+                Remy Royale Flat Weft Hair Extensions:flat-weft-hair-extensions,
+                Remy Royale I-Tips:remy-royale-i-tips-pre-bonded-hair-extensions,
+                Remy Royale Invisible Tape:remy-royale-invisible-tape-in-hair-extensions,
+                Remy Royale Nano Bonds:nano-rings-hair-extensions,
+                Remy Royale Seamless Clip ins:seamless-clip-in-hair-extensions-double-drawn-hair,
+                Remy Royale Tape ins:remy-royale-tape-in-extensions,
+                Remy Royale Weave Weft Hair Extensions:remy-royale-double-drawn-hair-weft-extensions,
+                Supreme Quad Weft Pieces:supreme-quad-weft,
+                Tape in Hair Extensions:tape-in-hair-extensions,
+                U-TIP Straight Pre-bonded Hair Extensions:u-tip-straight-pre-bonded-hair-extensions,
+                Ultra-Volume Full Head:ultra-clip-in-hair-extensions,
+                Wavy Clip In Hair Extensions:wavy-clip-in-human-hair-extensions,
+                Wrap Ponytail:straight-up-wrap-around-ponytail-hair-extensions'
+                | split: ','
+              %}
+              {% for entry in baseCollections %}
+                {% assign productType = entry | split: ':' | first | strip %}
+                {% assign collectionHandle = entry | split: ':' | last | strip %}
+                {% if productType == product.type %}
+                  {% assign collection = collections[collectionHandle] %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% endunless %}
+
+            {% if collection.handle == 'double-wefted-clip-in-hair-extensions'
+              or collection.handle == 'ultra-clip-in-hair-extensions'
+              or collection.handle == 'full-head-clip-in-hair-extensions'
+              or collection.handle == 'curly-clip-in-hair-extensions'
+              or collection.handle == 'wavy-clip-in-human-hair-extensions'
+              or collection.handle == 'seamless-clip-in-hair-extensions-double-drawn-hair'
+              or collection.handle == 'supreme-quad-weft'
+              or collection.handle == 'quad-weft-hair-extensions'
+              or collection.handle == 'one-piece-clip-in-hair-extensions'
+            %}
+              <li>
+                <a href="/collections/clip-in-hair-extensions" title="Clip in hair extensions" class="link--text">
+                  Clip Ins</a
+                >
+              </li>
+            {% elsif collection.handle == 'euro-straight-hair-weft-weave'
+              or collection.handle == 'i-tip-straight-pre-bonded-hair-extensions'
+              or collection.handle == 'micro-ring-loop-hair-extensions'
+              or collection.handle == 'nano-rings-hair-extensions'
+              or collection.handle == 'remy-royale-i-tips-pre-bonded-hair-extensions'
+              or collection.handle == 'remy-royale-double-drawn-hair-weft-extensions'
+              or collection.handle == 'tape-in-hair-extensions'
+              or collection.handle == 'u-tip-straight-pre-bonded-hair-extensions'
+              or collection.handle == 'flat-tip-hair-extensions'
+              or collection.handle == 'flat-weft-hair-extensions'
+              or collection.handle == 'remy-royale-invisible-tape-in-hair-extensions'
+              or collection.handle == 'remy-royale-tape-in-extensions'
+            %}
+              <li>
+                <a href="/collections/permanent-extensions" title="Professional hair extensions" class="link--text">
+                  Professional</a
+                >
+              </li>
+            {% endif %}
+            {% if collection %}
+              <li>
+                {{
+                  collection.title
+                  | truncatewords: 3, '...'
+                  | link_to: collection.url, title: collection.title, class: 'link--text'
+                }}
+              </li>
+            {% endif %}
+            {% unless collection %}
+              <li>
+                <a href="{{ product.url }}" title="{{ product.title }}" aria-current="page" class="link--text">
+                  {{- product.title | truncatewords: 3, '...' -}}
+                </a>
+              </li>
+            {% endunless %}
+
+          {% when "collection" and collection.handle %}
+            {% if collection.handle == 'double-wefted-clip-in-hair-extensions'
+              or collection.handle == 'ultra-clip-in-hair-extensions'
+              or collection.handle == 'full-head-clip-in-hair-extensions'
+              or collection.handle == 'curly-clip-in-hair-extensions'
+              or collection.handle == 'wavy-clip-in-human-hair-extensions'
+              or collection.handle == 'seamless-clip-in-hair-extensions-double-drawn-hair'
+              or collection.handle == 'supreme-quad-weft'
+              or collection.handle == 'quad-weft-hair-extensions'
+              or collection.handle == 'one-piece-clip-in-hair-extensions'
+            %}
+              <li>
+                <a href="/collections/clip-in-hair-extensions" title="Clip in hair extensions" class="link--text">
+                  Clip Ins</a
+                >
+              </li>
+            {% elsif collection.handle == 'euro-straight-hair-weft-weave'
+              or collection.handle == 'i-tip-straight-pre-bonded-hair-extensions'
+              or collection.handle == 'micro-ring-loop-hair-extensions'
+              or collection.handle == 'nano-rings-hair-extensions'
+              or collection.handle == 'remy-royale-i-tips-pre-bonded-hair-extensions'
+              or collection.handle == 'remy-royale-double-drawn-hair-weft-extensions'
+              or collection.handle == 'tape-in-hair-extensions'
+              or collection.handle == 'u-tip-straight-pre-bonded-hair-extensions'
+              or collection.handle == 'flat-tip-hair-extensions'
+              or collection.handle == 'flat-weft-hair-extensions'
+              or collection.handle == 'remy-royale-invisible-tape-in-hair-extensions'
+              or collection.handle == 'remy-royale-tape-in-extensions'
+            %}
+              <li>
+                <a href="/collections/permanent-extensions" title="Professional hair extensions" class="link--text">
+                  Professional
+                </a>
+              </li>
+            {% endif %}
+            {% if current_tags %}
+              <li>
+                {{
+                  collection.title
+                  | truncatewords: 2, '...'
+                  | link_to: collection.url, title: collection.title, class: 'link--text'
+                }}
+              </li>
+              <li>
+                <a href="{{ request.path }}" aria-current="page" class="link--text">
+                  {{ current_tags | join: ' + ' }} ({{ collection.products_count }}
+                  {{ paginate.items | pluralize: 'item', 'items' }})</a
+                >
+              </li>
+            {% else %}
+              <li>
+                <a href="{{ collection.url }}" title="{{ collection.title }}" aria-current="page" class="link--text">
+                  {{- collection.title | truncatewords: 2, '...' | append: ' ' -}}
+                  ({{ collection.products_count }}
+                  {{ paginate.items | pluralize: 'item', 'items' }})
+                </a>
+              </li>
+            {% endif %}
+
+          {% when 'blog' %}
+            {% if current_tags %}
+              <li>
+                {{ blog.title | link_to: blog.url, title: blog.title, class: 'link--text' }}
+              </li>
+              <li>
+                <a href="{{ request.path }}" aria-current="page" class="link--text">{{ current_tags | join: ' + ' }}</a>
+              </li>
+            {% else %}
+              <li>
+                <a href="{{ blog.url }}" title="{{ blog.title }}" aria-current="page" class="link--text">
+                  {{ blog.title -}}
+                </a>
+              </li>
+            {% endif %}
+          {% when 'article' %}
+            <li>
+              {{ blog.title | link_to: blog.url, title: blog.title, class: 'link--text' }}
+            </li>
+            <li>
+              <a href="{{ article.url }}" title="{{ article.title }}" aria-current="page" class="link--text">
+                {{- article.title -}}
+              </a>
+            </li>
+
+          {% else %}
+            <li>
+              <a href="{{ request.path }}" title="{{ page_title }}" aria-current="page" class="link--text">
+                {{- page_title -}}
+              </a>
+            </li>
+        {% endcase %}
+      </ul>
+    </nav>
+  </section>
+{% endunless %}

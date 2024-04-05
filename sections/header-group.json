@@ -69,10 +69,14 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "breadcrumbs":{
+      "type":"breadcrumbs"
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "breadcrumbs"
   ]
 }
