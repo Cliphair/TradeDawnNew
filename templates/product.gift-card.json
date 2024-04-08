@@ -31,6 +31,11 @@
             "picker_type": "dropdown"
           }
         },
+        "quantity_selector_jRL7p9": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -90,6 +95,7 @@
         "3efc918c-8182-4ef3-bc33-60a83ed7ef86",
         "price",
         "variant_picker",
+        "quantity_selector_jRL7p9",
         "buy_buttons",
         "share",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
@@ -161,9 +167,11 @@
         "tags_size": "h3",
         "heading_alignment": "center",
         "blog": "hair-blog",
-        "post_limit": 3,
-        "columns_mobile": 1,
+        "post_limit": 6,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "columns_desktop": 3,
+        "swipe_on_desktop": true,
         "color_scheme": "background-2",
         "show_image": true,
         "image_ratio": "square",
