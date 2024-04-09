@@ -318,8 +318,8 @@
       "settings": {
         "id": "journey",
         "page": "journey",
-        "question": "What is your hair type?",
-        "heading_size": "h1",
+        "question": "What is <em>your hair<\/em> type?",
+        "heading_size": "h2",
         "text_allignment": "left",
         "image_ratio": "portrait",
         "color_scheme": "accent-2",
