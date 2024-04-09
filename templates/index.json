@@ -211,7 +211,7 @@
           "type": "collections",
           "settings": {
             "block-title": "CHOOSE BY HAIR COLOUR…",
-            "block-introduction": "<p>A stunning collection of <strong>over 70 shades<\/strong>, including mixed colours, stunning balayages, and solid shades to match everyone.<\/p>",
+            "block-introduction": "<p>A stunning collection of <strong>over 70 shades<\/strong>, including mixed colours, stunning balayages, and solid <br>shades to match everyone.<\/p>",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
             "link": "shopify:\/\/pages\/colour-matching-service",
