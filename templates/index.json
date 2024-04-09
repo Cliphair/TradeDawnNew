@@ -193,7 +193,9 @@
       ],
       "custom_css": [
         "h2 {line-height: 1.1em;}",
-        ".rich-text__wrapper {width: 100% !important;}"
+        ".rich-text__wrapper {width: 100% !important;}",
+        "@media screen and (max-width: 750px) {.h0 {font-size: 3rem; }}",
+        "@media screen and (min-width:750px) and (max-width: 950px) {.h0 {font-size: 4rem; }}"
       ],
       "settings": {
         "desktop_content_position": "left",
