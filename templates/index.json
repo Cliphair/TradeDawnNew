@@ -599,7 +599,7 @@
         "tag_fjUGYX"
       ],
       "custom_css": [
-        ".tag{color:#414141;}"
+        ".tag {color: #414141;}"
       ],
       "settings": {
         "heading": "BLOG SPOT",
@@ -669,7 +669,7 @@
         ".deferred-media__poster-button {color: white;}"
       ],
       "settings": {
-        "title": "<strong>HOW TO ... VIDEO GUIDES<\/strong>",
+        "title": "HOW TO ... VIDEO GUIDES",
         "heading_size": "h1",
         "introduction": "<p>Search our video archives<br\/>for the best guides for application,<br\/>styling and much more.<\/p>",
         "button_label": "VIEW VIDEO GALLERY",
@@ -680,7 +680,7 @@
         "hide_card_arrow": false,
         "columns_desktop": 3,
         "swipe_on_desktop": true,
-        "color_scheme": "accent-1",
+        "color_scheme": "inverse",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
