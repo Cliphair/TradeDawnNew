@@ -209,7 +209,7 @@
         "a7031854-9bd7-41fe-b425-7e6f75e38807": {
           "type": "collections",
           "settings": {
-            "block-title": "<strong>CHOOSE BY HAIR COLOUR…<\/strong>",
+            "block-title": "CHOOSE BY HAIR COLOUR…",
             "block-introduction": "<p>A stunning collection of over 70 shades, including mixed colours, stunning balayages, and solid shades to match everyone.<\/p>",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
@@ -221,7 +221,7 @@
         "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf": {
           "type": "collections",
           "settings": {
-            "block-title": "<strong>CHOOSE BY HAIR EXTENSION TYPE…<\/strong>",
+            "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
             "block-introduction": "<p>Thickness, bounce, length: what do you want to add to your hair? Find the right type of hair extensions for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
             "collection-list": "choose-by-hair-extensions-type",
             "button_label": "",
