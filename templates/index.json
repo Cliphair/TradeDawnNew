@@ -598,6 +598,9 @@
         "tag_UJwHJw",
         "tag_fjUGYX"
       ],
+      "custom_css": [
+        ".tag{color:#414141;}"
+      ],
       "settings": {
         "heading": "BLOG SPOT",
         "heading_size": "h1",
