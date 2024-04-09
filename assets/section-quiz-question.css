@@ -100,6 +100,7 @@
 .section-quiz-question .answer-card .card__content {
   padding-right: 0;
   padding-left: 0;
+  padding-top:0;
 }
 
 .section-quiz-question .button-wrapper {
