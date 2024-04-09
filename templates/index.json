@@ -746,6 +746,7 @@
         },
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-2": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What does Remy Hair Extensions Mean?",
             "icon": "none",
@@ -755,6 +756,7 @@
         },
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-3": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Are Your Hair Extensions Double Drawn?",
             "icon": "none",
@@ -764,6 +766,7 @@
         },
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-4": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What Are Cliphair Hair Clips Made From?",
             "icon": "none",
@@ -773,6 +776,7 @@
         },
         "94d4cb2a-8bda-495f-a9d7-7689b8ff3b58": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What is the difference between Temporary Extensions and Permanent Extensions?",
             "icon": "none",
@@ -782,6 +786,7 @@
         },
         "b34d6a48-42bf-413e-a91d-f8c4363e08e3": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What Hair Extension types are classed as Permanent and what a classed a Temporary?",
             "icon": "none",
@@ -791,6 +796,7 @@
         },
         "f52ec162-cd3d-4e12-844f-6101a3206020": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "How are Permanent Extensions Attached to the Hair?",
             "icon": "none",
@@ -800,6 +806,7 @@
         },
         "263f16db-ba74-460a-800d-15e84a09501e": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "How long do Permanent Human Hair Extensions take to put it?",
             "icon": "none",
@@ -809,6 +816,7 @@
         },
         "f7e7e56e-3c3e-4dac-a8e6-2025e956d271": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "How long do Clip In Extensions take to put in?",
             "icon": "none",
@@ -818,6 +826,7 @@
         },
         "0394d474-e0db-48d3-a259-bbfdf9e7c37e": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "How do I know which Real Hair Extension is best for my hair type?",
             "icon": "none",
@@ -827,6 +836,7 @@
         },
         "9535a889-2c12-4d0e-9813-01a7e8bb8050": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Do you have samples of your shades?",
             "icon": "none",
@@ -836,6 +846,7 @@
         },
         "283f9a6c-3560-424b-a851-66ad3e9be1aa": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Will I need special shampoo and conditioner for my Hair Extensions?",
             "icon": "none",
@@ -895,7 +906,7 @@
         "heading_alignment": "center",
         "layout": "none",
         "arrow_style": "full-arrow",
-        "color_scheme": "inverse",
+        "color_scheme": "accent-2",
         "container_color_scheme": "inverse",
         "open_first_collapsible_row": false,
         "faq_schema": true,
