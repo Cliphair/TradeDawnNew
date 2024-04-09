@@ -223,7 +223,7 @@
           "type": "collections",
           "settings": {
             "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
-            "block-introduction": "<p>Thickness, bounce, length: what do you want to add to your hair? Find the right type of hair extensions for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
+            "block-introduction": "<p>Thickness, bounce, length: what do you want to add to your hair? Find the right type of hair extensions <br>for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
             "collection-list": "choose-by-hair-extensions-type",
             "button_label": "",
             "link": "",
