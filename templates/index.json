@@ -213,7 +213,7 @@
             "block-title": "CHOOSE BY HAIR COLOUR…",
             "block-introduction": "<p>A stunning collection of <strong>over 70 shades<\/strong>, including mixed colours, stunning balayages, and solid <br\/>shades to match everyone.<\/p>",
             "collection-list": "choose-by-hair-colour",
-            "button_label": "FREE COLOUR MATCH",
+            "button_label": "<p>FREE COLOUR MATCH<\/p>",
             "link": "shopify:\/\/pages\/colour-matching-service",
             "button_style_secondary": false,
             "circle_images": true
@@ -237,6 +237,7 @@
         "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf"
       ],
       "custom_css": [
+        ".button-wrapper a{font-weight:500;}",
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
