@@ -195,8 +195,8 @@
         "h2 {color: #bda6c2;}"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,

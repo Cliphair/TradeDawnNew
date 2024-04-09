@@ -172,12 +172,12 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "headers": "#bda6c2",
-          "text": "#121212",
-          "button": "#ba69a1",
+          "headers": "#833c91",
+          "text": "#414141",
+          "button": "#ac90c1",
           "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#ba69a1"
+          "secondary_button_label": "#414141",
+          "shadow": "#ac90c1"
         }
       },
       "accent-1": {
