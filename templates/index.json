@@ -192,7 +192,7 @@
         "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1"
       ],
       "custom_css": [
-        "h2 {line-height: 1.1em; font-weight:400;}",
+        "h2 {line-height: 1.1em; font-weight: 400;}",
         ".rich-text__wrapper {width: 100% !important;}",
         "@media screen and (max-width: 750px) {.h0 {font-size: 3rem; }}",
         "@media screen and (min-width: 750px) and (max-width: 950px) {.h0 {font-size: 4rem; }}"
@@ -900,6 +900,9 @@
         "136d6ee3-1387-4e8d-95ae-22fabd566e6c",
         "bd8078ec-ab43-41e6-93c8-2ba90617a437",
         "90c2bf7a-ad88-4fcc-a36e-1e6d60c48754"
+      ],
+      "custom_css": [
+        "h3{font-weight:400;}"
       ],
       "settings": {
         "caption": "",
