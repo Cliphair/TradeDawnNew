@@ -182,7 +182,7 @@
         "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "HOW TO CHOOSE THE RIGHT HAIR EXTENSIONS FOR YOU",
+            "heading": "HOW TO CHOOSE <em>THE RIGHT<\/em> HAIR EXTENSIONS FOR YOU",
             "heading_size": "h0",
             "h1": false
           }
@@ -223,7 +223,7 @@
           "type": "collections",
           "settings": {
             "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
-            "block-introduction": "<p>Thickness, bounce, length: what do you want to add to your hair? Find the right type of hair extensions <br>for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
+            "block-introduction": "<p><strong>Thickness, bounce, length<\/strong>: what do you want to add to your hair? Find the right type of hair extensions <br\/>for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
             "collection-list": "choose-by-hair-extensions-type",
             "button_label": "",
             "link": "",
@@ -237,7 +237,7 @@
         "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf"
       ],
       "custom_css": [
-        "@media screen and (max-width:950px){br{display:none; }}"
+        "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
         "heading_size": "h1",
