@@ -84,13 +84,20 @@
   z-index: 1;
 }
 
+@media screen and (min-width:950px){
+  .deferred-media__poster-button {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+
 .deferred-media__poster-button:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
 .deferred-media__poster-button .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .deferred-media__poster-button .icon-play {
