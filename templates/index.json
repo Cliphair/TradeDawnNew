@@ -237,7 +237,7 @@
         "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf"
       ],
       "custom_css": [
-        ".button-wrapper a{font-weight:500;}",
+        ".button-wrapper a {font-weight: 500;}",
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
@@ -277,8 +277,8 @@
         "text_wgJyct"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "color_scheme": "accent-2",
         "full_width": true,
         "padding_top": 40,
@@ -320,7 +320,7 @@
         "page": "journey",
         "question": "What is your hair type?",
         "heading_size": "h1",
-        "text_allignment": "center",
+        "text_allignment": "left",
         "image_ratio": "portrait",
         "color_scheme": "accent-2",
         "button_style_secondary": false,
