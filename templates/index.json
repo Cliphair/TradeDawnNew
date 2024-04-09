@@ -278,7 +278,7 @@
       ],
       "custom_css": [
         ".rich-text__wrapper {width: 100% !important;}",
-        ".rich-text__blocks>*+*{margin-top:1rem;}"
+        ".rich-text__blocks > * + * {margin-top: 1rem;}"
       ],
       "settings": {
         "desktop_content_position": "left",
@@ -332,7 +332,7 @@
         "columns_desktop": 3,
         "swipe_on_desktop": false,
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
