@@ -666,8 +666,8 @@
         "0f48a489-5a6b-4e92-a7cc-34317e32f05d"
       ],
       "custom_css": [
-        ".deferred-media__poster-button {color: white;}",
-        "img{border-radius:10px}"
+        ".deferred-media__poster-button {color: rgba(255, 255, 255, 0.75);}",
+        "img {border-radius: 10px;}"
       ],
       "settings": {
         "title": "HOW TO ... VIDEO GUIDES",
@@ -718,6 +718,10 @@
         "template--15283894157373__fef9cc49-05dc-468b-82e4-1520264647b6-heading-1",
         "463035d2-6446-4ab7-a2d4-03a24ee0cd4f",
         "47ed8938-167c-4f51-a079-56b352d27b43"
+      ],
+      "custom_css": [
+        ".rich-text__blocks > * + h2 {margin-top: 1rem;}",
+        ".rich-text__wrapper {width: 100% !important;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -891,8 +895,8 @@
         "heading_alignment": "center",
         "layout": "none",
         "arrow_style": "full-arrow",
-        "color_scheme": "accent-4",
-        "container_color_scheme": "accent-4",
+        "color_scheme": "inverse",
+        "container_color_scheme": "inverse",
         "open_first_collapsible_row": false,
         "faq_schema": true,
         "image_ratio": "adapt",
