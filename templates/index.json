@@ -237,7 +237,7 @@
         "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf"
       ],
       "custom_css": [
-        "h3{color:#414141;}",
+        "h3 {color: #414141;}",
         ".button-wrapper a {font-weight: 500;}",
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
@@ -536,12 +536,12 @@
         "05518ad7-790e-4c49-a31a-55d095aa2786"
       ],
       "settings": {
-        "title": "<strong>THE CLIPHAIR QUALITY PROMISE<\/strong>",
+        "title": "THE CLIPHAIR QUALITY PROMISE",
         "introduction": "<p>100% Remy Human Hair, no nonsense. We give you exactly what you see: luscious tresses, fast-responsive customer service, and daily inspiration on our channels – for you to purchase with confidence and recreate your favourite looks with our hair extensions.<\/p>",
         "heading_size": "h1",
         "text_allignment": "left",
         "image_ratio": "adapt",
-        "color_scheme": "accent-4",
+        "color_scheme": "inverse",
         "slider_visual": "dots",
         "button_label": "FIND OUT MORE",
         "link": "#",
