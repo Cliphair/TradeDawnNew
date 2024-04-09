@@ -276,6 +276,10 @@
         "heading_Bzfc9T",
         "text_wgJyct"
       ],
+      "custom_css": [
+        ".rich-text__wrapper {width: 100% !important;}",
+        ".rich-text__blocks>*+*{margin-top:1rem;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
