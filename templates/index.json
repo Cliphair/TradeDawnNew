@@ -902,7 +902,7 @@
         "90c2bf7a-ad88-4fcc-a36e-1e6d60c48754"
       ],
       "custom_css": [
-        "h3{font-weight:400;}"
+        "h3 {font-weight: 400;}"
       ],
       "settings": {
         "caption": "",
@@ -920,134 +920,6 @@
         "button_label": "VIEW MORE FAQ'S",
         "link": "shopify:\/\/pages\/clip-in-hair-extensions-information-1",
         "button_style_secondary": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "44fe0295-ee52-40ce-ba52-57d93a1e8f28": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15283894157373__44fe0295-ee52-40ce-ba52-57d93a1e8f28-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>OUR COMMITMENT TO SUSTAINABILITY<\/strong>",
-            "heading_size": "h1",
-            "h1": false
-          }
-        },
-        "template--15283894157373__44fe0295-ee52-40ce-ba52-57d93a1e8f28-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Your good hair days shouldn't hurt the planet! Our sustainable practices don't just stop at our super cute recyclable packaging. We're always looking for ways to decrease our environmental impact through material sourcing, manufacturing and partnering with eco-conscious organisations that are leading the way.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--15283894157373__44fe0295-ee52-40ce-ba52-57d93a1e8f28-heading-1",
-        "template--15283894157373__44fe0295-ee52-40ce-ba52-57d93a1e8f28-text-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-grey",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "67a94c71-0b44-4f05-aa2f-594b1239edd9": {
-      "type": "image-list",
-      "blocks": {
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
-            "text_label": "FSC Certified",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
-            "text_label": "Biodegradable",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
-            "text_label": "Vegan",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
-            "text_label": "Sustainable",
-            "link": ""
-          }
-        },
-        "image_eXtqEV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
-            "text_label": "Soy Ink",
-            "link": ""
-          }
-        },
-        "image_Rwj6VQ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
-            "text_label": "Organic",
-            "link": ""
-          }
-        },
-        "image_dgTyrR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
-            "text_label": "100% Recyclable",
-            "link": ""
-          }
-        },
-        "image_hBphpA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
-            "text_label": "Vegan Certified",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4",
-        "image_eXtqEV",
-        "image_Rwj6VQ",
-        "image_dgTyrR",
-        "image_hBphpA"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "img {max-height: 70px;}"
-      ],
-      "settings": {
-        "title": "<strong>OUR COMMITMENT TO SUSTAINABILITY<\/strong>",
-        "heading_size": "h1",
-        "introduction": "<p>Your good hair days shouldn't hurt the planet! Our sustainable practices don't just stop at our super cute recyclable packaging. We're always looking for ways to decrease our environmental impact through material sourcing, manufacturing and partnering with eco-conscious organisations that are leading the way.<\/p>",
-        "text_allignment": "center",
-        "columns_desktop": 4,
-        "swipe_on_desktop": false,
-        "color_scheme": "background-grey",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1138,8 +1010,6 @@
     "b19c81a2-f86e-4e52-9a50-dca37f731b16",
     "fef9cc49-05dc-468b-82e4-1520264647b6",
     "f41c0e3b-b362-4900-8b02-4a5cc75bd290",
-    "44fe0295-ee52-40ce-ba52-57d93a1e8f28",
-    "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
 }
