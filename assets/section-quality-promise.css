@@ -63,12 +63,14 @@
 
     .quality-promise-wrapper>.text-wrapper {
         grid-column: 1;
-        grid-row: 1 / 3;
+        grid-row: 1 / 2;
+        /* grid-row: 1 / 3; */
     }
 
     .quality-promise-wrapper>.button-wrapper {
         grid-column: 1;
-        grid-row: 3 / 4;
+        grid-row: 2 / 3;
+        /* grid-row: 3 / 4; */
     }
 
     .quality-promise-wrapper>.cards-wrapper {
@@ -79,11 +81,16 @@
 
 /* quality-promise style */
 .quality-promise-wrapper .text-wrapper {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .quality-promise-wrapper .button-wrapper {
-    margin-top: 3rem;
+    margin-top: 0;
+    /* margin-top: 3rem; */
 }
 
 .quality-promise-wrapper .cards-wrapper {
