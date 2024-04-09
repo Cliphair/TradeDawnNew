@@ -666,7 +666,8 @@
         "0f48a489-5a6b-4e92-a7cc-34317e32f05d"
       ],
       "custom_css": [
-        ".deferred-media__poster-button {color: white;}"
+        ".deferred-media__poster-button {color: white;}",
+        "img{border-radius:10px}"
       ],
       "settings": {
         "title": "HOW TO ... VIDEO GUIDES",
