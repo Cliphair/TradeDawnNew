@@ -192,7 +192,8 @@
         "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1"
       ],
       "custom_css": [
-        "h2 {line-height: 1.1em;}"
+        "h2 {line-height: 1.1em;}",
+        ".rich-text__wrapper{width:100%!important;}"
       ],
       "settings": {
         "desktop_content_position": "left",
