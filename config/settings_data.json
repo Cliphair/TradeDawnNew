@@ -198,10 +198,10 @@
           "background_gradient": "",
           "headers": "#833c91",
           "text": "#414141",
-          "button": "#ba69a1",
+          "button": "#ac90c1",
           "button_label": "#ffffff",
           "secondary_button_label": "#414141",
-          "shadow": "#ba69a1"
+          "shadow": "#ac90c1"
         }
       },
       "accent-3": {
