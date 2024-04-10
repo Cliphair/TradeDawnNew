@@ -219,13 +219,13 @@
       "accent-4": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "linear-gradient(165deg, #fff 30%, #fbcfe830 50%, #fff 70%)",
-          "headers": "#2d2f76",
-          "text": "#121212",
-          "button": "#ba69a1",
+          "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1) 62%, rgba(253, 248, 255, 1) 70%)",
+          "headers": "#833c91",
+          "text": "#414141",
+          "button": "#a590c1",
           "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#ba69a1"
+          "secondary_button_label": "#414141",
+          "shadow": "#414141"
         }
       },
       "background-grey": {

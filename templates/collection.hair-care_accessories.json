@@ -6,7 +6,7 @@
         "show_collection_description": true,
         "text_alignment": "center",
         "show_collection_image": false,
-        "color_scheme": "inverse"
+        "color_scheme": "accent-4"
       }
     },
     "product-grid": {
