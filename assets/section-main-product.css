@@ -350,7 +350,7 @@ a.product__text {
 }
 
 .product__title h1 {
-  color: #833C91;
+  color: var(--colour-cliphair-purple-dark);
 }
 
 .product__title>* {
