@@ -190,7 +190,7 @@
         "columns_desktop": 5,
         "swipe_on_desktop": false,
         "color_scheme": "background-collection-titles",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
