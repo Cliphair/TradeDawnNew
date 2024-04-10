@@ -6,7 +6,7 @@
         "show_collection_description": true,
         "text_alignment": "center",
         "show_collection_image": false,
-        "color_scheme": "background-grey"
+        "color_scheme": "inverse"
       }
     },
     "6db3206b-59ea-491c-ac8c-e47b80ac9838": {
@@ -28,7 +28,7 @@
         "length_YQGWqK"
       ],
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -38,7 +38,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
-        "color_scheme": "accent-1",
+        "color_scheme": "inverse",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -80,105 +80,9 @@
         "heading_alignment": "center",
         "layout": "none",
         "arrow_style": "half-arrow",
-        "color_scheme": "accent-4",
+        "color_scheme": "inverse",
         "container_color_scheme": "accent-4",
         "open_first_collapsible_row": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "67a94c71-0b44-4f05-aa2f-594b1239edd9": {
-      "type": "image-list",
-      "blocks": {
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
-            "text_label": "FSC Certified",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
-            "text_label": "Biodegradable",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
-            "text_label": "Vegan",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
-            "text_label": "Sustainable",
-            "link": ""
-          }
-        },
-        "image_eXtqEV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
-            "text_label": "Soy Ink",
-            "link": ""
-          }
-        },
-        "image_Rwj6VQ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
-            "text_label": "Organic",
-            "link": ""
-          }
-        },
-        "image_dgTyrR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
-            "text_label": "100% Recyclable",
-            "link": ""
-          }
-        },
-        "image_hBphpA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
-            "text_label": "Vegan Certified",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4",
-        "image_eXtqEV",
-        "image_Rwj6VQ",
-        "image_dgTyrR",
-        "image_hBphpA"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "img {max-height: 70px;}"
-      ],
-      "settings": {
-        "title": "<strong>OUR COMMITMENT TO SUSTAINABILITY<\/strong>",
-        "heading_size": "h1",
-        "introduction": "<p>Your good hair days shouldn't hurt the planet! Our sustainable practices don't just stop at our super cute recyclable packaging. We're always looking for ways to decrease our environmental impact through material sourcing, manufacturing and partnering with eco-conscious organisations that are leading the way.<\/p>",
-        "text_allignment": "center",
-        "columns_desktop": 4,
-        "swipe_on_desktop": false,
-        "color_scheme": "accent-4",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -245,8 +149,8 @@
         "columns_desktop": 5,
         "swipe_on_desktop": false,
         "color_scheme": "background-collection-titles",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -258,7 +162,6 @@
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
     "b400924f-2211-460e-841c-e909605faf8f",
-    "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
 }
