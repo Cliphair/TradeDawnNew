@@ -204,7 +204,7 @@
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
               >
                 <!-- {{- 'products.product.on_sale' | t -}} -->
-                {{ product.selected_or_first_available_variant.price | minus: product.selected_or_first_available_variant.compare_at_price | times: 100.0 | divided_by:product.selected_or_first_available_variant.compare_at_price | times: 100 | divided_by: 100 | floor }}%
+                {{ card_product.selected_or_first_available_variant.price | minus: card_product.selected_or_first_available_variant.compare_at_price | times: 100.0 | divided_by:card_product.selected_or_first_available_variant.compare_at_price | times: 100 | divided_by: 100 | floor }}%
               </span>
             {%- endif -%}
           </div>
