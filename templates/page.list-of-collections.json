@@ -15,8 +15,6 @@
     "collection_carrousel_by_url_wipWMw": {
       "type": "collection-carrousel-by-url",
       "settings": {
-        "heading_size": "h1",
-        "text_allignment": "left",
         "image_ratio": "portrait",
         "hide_card_arrow": true,
         "columns_desktop": 4,
@@ -47,7 +45,7 @@
         "heading_alignment": "center",
         "layout": "none",
         "arrow_style": "half-arrow",
-        "color_scheme": "accent-4",
+        "color_scheme": "inverse",
         "container_color_scheme": "accent-4",
         "open_first_collapsible_row": false,
         "padding_top": 36,
