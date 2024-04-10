@@ -1726,6 +1726,7 @@ klarna-placement,
 .product__info-wrapper .price.price--large {
   font-size: 2rem;
   color: var(--colour-cliphair-purple-dark);
+  font-weight:500;
 }
 
 @media screen and (min-width:750px) {
