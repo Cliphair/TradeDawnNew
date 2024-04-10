@@ -103,7 +103,7 @@
     </div>
     {% if template.name == "product" %}
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
-          <span class='flex'>
+          <span>
             <s class="price-item price-item--regular save-price">
               SAVE
               {% if settings.currency_code_enabled %}
