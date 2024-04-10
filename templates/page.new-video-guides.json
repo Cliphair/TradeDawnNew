@@ -7,7 +7,7 @@
         "heading_size": "h1",
         "show_content": false,
         "text_alignment": "center",
-        "color_scheme": "background-grey",
+        "color_scheme": "inverse",
         "padding_top": 28,
         "padding_bottom": 0
       }
@@ -59,7 +59,7 @@
         "link_EK7VjP"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "padding_top": 36,
         "padding_bottom": 0
       }
@@ -658,7 +658,7 @@
         "text_allignment": "center",
         "image_ratio": "landscape",
         "columns_desktop": 3,
-        "color_scheme": "accent-1",
+        "color_scheme": "accent-4",
         "button_style_secondary": false,
         "columns_mobile": "2",
         "padding_top": 0,
@@ -827,7 +827,7 @@
         "text_allignment": "center",
         "image_ratio": "portrait",
         "columns_desktop": 3,
-        "color_scheme": "accent-1",
+        "color_scheme": "accent-4",
         "button_style_secondary": false,
         "columns_mobile": "2",
         "padding_top": 0,
@@ -923,7 +923,7 @@
         "text_allignment": "center",
         "image_ratio": "portrait",
         "columns_desktop": 3,
-        "color_scheme": "accent-1",
+        "color_scheme": "accent-4",
         "button_style_secondary": false,
         "columns_mobile": "2",
         "padding_top": 0,
@@ -1092,7 +1092,7 @@
         "text_allignment": "center",
         "image_ratio": "portrait",
         "columns_desktop": 3,
-        "color_scheme": "accent-1",
+        "color_scheme": "accent-4",
         "button_style_secondary": false,
         "columns_mobile": "2",
         "padding_top": 0,
@@ -1189,106 +1189,10 @@
         "text_allignment": "center",
         "image_ratio": "portrait",
         "columns_desktop": 3,
-        "color_scheme": "accent-1",
+        "color_scheme": "accent-4",
         "button_style_secondary": false,
         "columns_mobile": "2",
         "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "67a94c71-0b44-4f05-aa2f-594b1239edd9": {
-      "type": "image-list",
-      "blocks": {
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/FSC-Icon.svg",
-            "text_label": "FSC Certified",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Biodegradable-Icon.svg",
-            "text_label": "Biodegradable",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
-            "text_label": "Vegan",
-            "link": ""
-          }
-        },
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Sustainable-Icon.svg",
-            "text_label": "Sustainable",
-            "link": ""
-          }
-        },
-        "image_eXtqEV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Soy-Ink-Icon.svg",
-            "text_label": "Soy Ink",
-            "link": ""
-          }
-        },
-        "image_Rwj6VQ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Organic-Icon.svg",
-            "text_label": "Organic",
-            "link": ""
-          }
-        },
-        "image_dgTyrR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Recycleable-Icon.svg",
-            "text_label": "100% Recyclable",
-            "link": ""
-          }
-        },
-        "image_hBphpA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Vegan-Icon.svg",
-            "text_label": "Vegan Certified",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-1",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-2",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-3",
-        "template--15283894157373__67a94c71-0b44-4f05-aa2f-594b1239edd9-logo_image-4",
-        "image_eXtqEV",
-        "image_Rwj6VQ",
-        "image_dgTyrR",
-        "image_hBphpA"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "img {max-height: 70px;}"
-      ],
-      "settings": {
-        "title": "<strong>OUR COMMITMENT TO SUSTAINABILITY<\/strong>",
-        "heading_size": "h1",
-        "introduction": "<p>Your good hair days shouldn't hurt the planet! Our sustainable practices don't just stop at our super cute recyclable packaging. We're always looking for ways to decrease our environmental impact through material sourcing, manufacturing and partnering with eco-conscious organisations that are leading the way.<\/p>",
-        "text_allignment": "center",
-        "columns_desktop": 4,
-        "swipe_on_desktop": false,
-        "color_scheme": "accent-4",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -1354,8 +1258,8 @@
         "columns_desktop": 5,
         "swipe_on_desktop": false,
         "color_scheme": "background-collection-titles",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1369,7 +1273,6 @@
     "tutorials_hDm6EF",
     "tutorials_p4iifm",
     "tutorials_iwjnLk",
-    "67a94c71-0b44-4f05-aa2f-594b1239edd9",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
 }
