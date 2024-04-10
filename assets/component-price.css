@@ -90,6 +90,10 @@
   font-size: 1.3rem;
 }
 
+.price--on-sale .price-item--regular.save-price {
+  text-decoration: none;
+}
+
 .unit-price {
   display: block;
   font-size: 1.1rem;

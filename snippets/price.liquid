@@ -103,7 +103,7 @@
       {% if template.name == "product" %}
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span>
-            <s class="price-item price-item--regular sale">
+            <s class="price-item price-item--regular save-price">
               SAVE
               {% if settings.currency_code_enabled %}
                 {{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | money_with_currency }}
