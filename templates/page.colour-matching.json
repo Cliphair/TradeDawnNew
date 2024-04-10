@@ -7,7 +7,7 @@
         "heading_size": "h2",
         "show_content": false,
         "text_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "padding_top": 28,
         "padding_bottom": 0
       }
@@ -16,12 +16,12 @@
       "type": "custom-banner",
       "settings": {
         "max-width": "768",
-        "bg-color": "#FFF",
+        "bg-color": "#f9f2ff",
         "desktop-image": "shopify:\/\/shop_images\/colour-matching-whatsapp-banner-desktop.webp",
         "mobile-image": "shopify:\/\/shop_images\/colour-matching-whatsapp-banner-mobile.webp",
         "url": "https:\/\/wa.me\/message\/6QDHMKVKM5HWC1",
-        "padding_top": 0,
-        "padding_bottom": 28
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "form_builder_KN33jz": {
@@ -30,7 +30,7 @@
         "id": "sqVgFr82Jys_VTYq5ta3MA",
         "max-width": "768",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     }
