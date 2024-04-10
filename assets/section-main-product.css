@@ -395,7 +395,7 @@ a.product__text {
     max-width: 60rem;
   }
 
-  .product__info-container .price--on-sale .price-item--regular {
+  .product__info-container .price--on-sale .price-item--regular:not(.sale) {
     font-size: 1.6rem;
   }
 
