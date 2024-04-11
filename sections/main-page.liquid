@@ -17,14 +17,13 @@
 {% liquid
   assign content = page.content | split: '<!-- FAQ section -->' | first
 
-  if content contains "<!-- split -->"
-    assign content = content | split: "<!-- split -->" | first
+  if content contains '<!-- split -->'
+    assign content = content | split: '<!-- split -->' | first
   endif
-  
 %}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width page-width--narrow section-{{ section.id }}-padding {{ section.settings.text_alignment }}">
+  <div class="page-width {% comment %}page-width--narrow{% endcomment %} section-{{ section.id }}-padding {{ section.settings.text_alignment }}">
     <h1 class="main-page-title page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}{% unless section.settings.show_title %} visually-hidden{% endunless %}">
       {{ page.title | escape }}
     </h1>
