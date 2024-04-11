@@ -28,7 +28,7 @@
 
     {% render 'meta-tags' %}
 
-    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="referrer" content="no-referrer-when-downgrade">
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -307,38 +307,127 @@
     <script>
       window.dataLayer = window.dataLayer || [];
     </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M2K9MPB');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-M2K9MPB');
+    </script>
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google AdWords: 1042639650 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1042639650"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
-      gtag('config', 'AW-1042639650', { ' allow_enhanced_conversions':true } ) ;
+      gtag('config', 'AW-1042639650', { ' allow_enhanced_conversions': true });
     </script>
 
     <!-- TriplePixel :: start -->
-    <script>     
-      window.TriplePixelData={TripleName:"cliphair-uk.myshopify.com",ver:"2.12",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","text/plain")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);  
+    <script>
+      (window.TriplePixelData = {
+        TripleName: 'cliphair-uk.myshopify.com',
+        ver: '2.12',
+        plat: 'SHOPIFY',
+        isHeadless: false,
+      }),
+        (function (W, H, A, L, E, _, B, N) {
+          function O(U, T, P, H, R) {
+            void 0 === R && (R = !1),
+              (H = new XMLHttpRequest()),
+              P ? (H.open('POST', U, !0), H.setRequestHeader('Content-Type', 'text/plain')) : H.open('GET', U, !0),
+              H.send(JSON.stringify(P || {})),
+              (H.onreadystatechange = function () {
+                4 === H.readyState && 200 === H.status
+                  ? ((R = H.responseText), U.includes('.txt') ? eval(R) : P || (N[B] = R))
+                  : (299 < H.status || H.status < 200) && T && !R && ((R = !0), O(U, T - 1, P));
+              });
+          }
+          if (((N = window), !N[H + 'sn'])) {
+            (N[H + 'sn'] = 1),
+              (L = function () {
+                return Date.now().toString(36) + '_' + Math.random().toString(36);
+              });
+            try {
+              A.setItem(H, 1 + (0 | A.getItem(H) || 0)),
+                (E = JSON.parse(A.getItem(H + 'U') || '[]')).push({
+                  u: location.href,
+                  r: document.referrer,
+                  t: Date.now(),
+                  id: L(),
+                }),
+                A.setItem(H + 'U', JSON.stringify(E));
+            } catch (e) {}
+            var i, m, p;
+            A.getItem('"!nC`') ||
+              ((_ = A),
+              (A = N),
+              A[H] ||
+                ((E = A[H] =
+                  function (t, e, a) {
+                    return (
+                      void 0 === a && (a = []),
+                      'State' == t ? E.s : ((W = L()), (E._q = E._q || []).push([W, t, e].concat(a)), W)
+                    );
+                  }),
+                (E.s = 'Installed'),
+                (E._q = []),
+                (E.ch = W),
+                (B = 'configSecurityConfModel'),
+                (N[B] = 1),
+                O('https://conf.config-security.com/model', 5),
+                (i = L()),
+                (m = A[atob('c2NyZWVu')]),
+                _.setItem('di_pmt_wt', i),
+                (p = {
+                  id: i,
+                  action: 'profile',
+                  avatar: _.getItem('auth-security_rand_salt_'),
+                  time: m[atob('d2lkdGg=')] + ':' + m[atob('aGVpZ2h0')],
+                  host: A.TriplePixelData.TripleName,
+                  plat: A.TriplePixelData.plat,
+                  url: window.location.href,
+                  ref: document.referrer,
+                  ver: A.TriplePixelData.ver,
+                }),
+                O('https://api.config-security.com/event', 5, p),
+                O('https://whale.camera/live/dot.txt', 5)));
+          }
+        })('', 'TriplePixel', localStorage);
     </script>
     <!-- TriplePixel :: end -->
 
     <!-- Tradedoubler tracking code -->
-    <!-- Sales Script --> 
+    <!-- Sales Script -->
     <script language="JavaScript">
-      (function(i,s,o,g,r,a,m){i['TDConversionObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script', 'https://svht.tradedoubler.com/tr_sdk.js', 'tdconv');
+      (function (i, s, o, g, r, a, m) {
+        i['TDConversionObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', 'https://svht.tradedoubler.com/tr_sdk.js', 'tdconv');
     </script>
     <script type="text/javascript" src="https://wrap.tradedoubler.com/wrap?id=26269"></script>
-    <!-- End Tradedoubler tag-->
+    <!-- End Tradedoubler tag -->
 
-    <!-- Start Pinterest Verification -->  
-      <meta name="p:domain_verify" content="7b7b3e0692bc917536cfa7850940d593"/>  
+    <!-- Start Pinterest Verification -->
+    <meta name="p:domain_verify" content="7b7b3e0692bc917536cfa7850940d593">
     <!-- End Pinterest Verification -->
 
     <!-- Yotpo -->
@@ -349,12 +438,20 @@
     ></script>
     <!-- End Yotpo -->
 
-    <!-- Klear influencer form --> 
-    <script async src="https://klear.com/dist/external.bundle.js?form=7b8e7f282e50817e0d385ee78dfd50f95f75f524"></script>
+    <!-- Klear influencer form -->
+    <script
+      async
+      src="https://klear.com/dist/external.bundle.js?form=7b8e7f282e50817e0d385ee78dfd50f95f75f524"
+    ></script>
 
     <script>
-    	if (window.location.pathname == "https://www.cliphair.co.uk/hair-extensions-news/wp-content/uploads/"){
-        location.replace(window.location.pathname.replace("https://www.cliphair.co.uk/hair-extensions-news/wp-content/uploads/", "https://cdn.shopify.com/s/files/1/0069/6470/7389/files/"));
+      if (window.location.pathname == 'https://www.cliphair.co.uk/hair-extensions-news/wp-content/uploads/') {
+        location.replace(
+          window.location.pathname.replace(
+            'https://www.cliphair.co.uk/hair-extensions-news/wp-content/uploads/',
+            'https://cdn.shopify.com/s/files/1/0069/6470/7389/files/'
+          )
+        );
       }
     </script>
   </head>
@@ -448,7 +545,9 @@
     <!-- End custom scripts -->
 
     <!-- Klarna -->
-    <script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
+    <script>
+      window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}
+    </script>
     <!-- End Klarna -->
   </body>
 </html>
@@ -468,7 +567,7 @@
     //var clearpay_product_integration_enabled = false;
     var clearpay_product_selector = '#clearpay';
     // var clearpay_variable_price_fallback = false;
-    var clearpay_variable_price_fallback_selector = '.money';
+    var clearpay_variable_price_fallback_selector = '.final-price .money';
     // var clearpay_variable_price_fallback_method = 'mutation';  // Can be 'mutation' or 'interval'.
 
     var clearpay_cart_integration_enabled = false;

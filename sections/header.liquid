@@ -28,7 +28,7 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
-  .home header.header{
+  {% comment %} .home header.header{
     margin-bottom:-80px;
   }
 
@@ -36,7 +36,7 @@
     .home header.header{
       margin-bottom:-120px;
     }
-  }
+  } {% endcomment %}
 
   .home .scrolled-past-header header.header{
     margin-bottom:0;
