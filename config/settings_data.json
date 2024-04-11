@@ -219,7 +219,7 @@
       "accent-4": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 60%, rgba(253, 248, 255, 1) 80%)",
+          "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 48%, rgba(253, 248, 255, 1) 70%)",
           "headers": "#833c91",
           "text": "#414141",
           "button": "#a590c1",
