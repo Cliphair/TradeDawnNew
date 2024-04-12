@@ -62,13 +62,6 @@
             "page": "rewards-pop-up"
           }
         },
-        "popup_cbmwDf": {
-          "type": "popup",
-          "settings": {
-            "text": "",
-            "page": "rewards-pop-up"
-          }
-        },
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
           "type": "payment_services",
           "settings": {
@@ -116,7 +109,6 @@
         "share",
         "order_deadline_67UiV7",
         "reward_points_B9N8X4",
-        "popup_cbmwDf",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "collapsible-row-0",
         "collapsible-row-1",
