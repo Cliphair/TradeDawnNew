@@ -56,6 +56,12 @@
           "settings": {
           }
         },
+        "reward_points_B9N8X4": {
+          "type": "reward-points",
+          "settings": {
+            "page": "rewards-pop-up"
+          }
+        },
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
           "type": "payment_services",
           "settings": {
@@ -102,6 +108,7 @@
         "buy_buttons",
         "share",
         "order_deadline_67UiV7",
+        "reward_points_B9N8X4",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "collapsible-row-0",
         "collapsible-row-1",
@@ -110,7 +117,7 @@
       "settings": {
         "enable_sticky_info": true,
         "image_ratio": "square",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
