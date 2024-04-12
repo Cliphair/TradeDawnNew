@@ -1777,7 +1777,6 @@ klarna-placement,
 
 #order-deadline .trustblox-1-timer-locations-toggle-icon {
   display: inline-block !important;
-  s
 }
 
 /* Specification */
@@ -1797,4 +1796,20 @@ klarna-placement,
 
 .specification table tr:nth-child(2n) {
   background: #eee;
+}
+
+/* Reward points */
+.product-reward_points {
+  display: block;
+}
+
+.product-reward_points,
+.product-reward_points * {
+  font-size: 1.3rem !important;
+  line-height: 1;
+}
+
+.product-reward_points button {
+  height: fit-content;
+  min-height: unset;
 }

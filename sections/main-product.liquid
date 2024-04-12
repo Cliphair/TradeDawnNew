@@ -550,6 +550,40 @@
               <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">
                 {{- block.settings.text -}}
               </a>
+            {%- when 'reward-points' -%}
+              {% assign points = product.selected_or_first_available_variant.price | divided_by: 100 | round: 0 %}
+              <modal-opener
+                id="rewards"
+                class="product-reward_points product-popup-modal__opener no-js-hidden quick-add-hidden center {% if points < 1 %}visually-hidden{% endif %}"
+                data-modal="#PopupModal-{{ block.id }}"
+                {{ block.shopify_attributes }}
+              >
+                <span>
+                  Collect
+                  <b
+                    ><span id="points">
+                      {{- points }}
+                      {% if points > 1 %}points{% else %}point{% endif -%}
+                    </span></b
+                  >
+                  with this purchase.</span
+                >
+                <button
+                  id="ProductPopup-{{ block.id }}"
+                  class="product-popup-modal__button link"
+                  type="button"
+                  aria-haspopup="dialog"
+                >
+                  Learn More
+                </button>
+              </modal-opener>
+              <a
+                href="{{ block.settings.page.url }}"
+                class="product-reward_points product-popup-modal__button link no-js"
+                target="_blank"
+              >
+                Collect points with this purchase. Learn More
+              </a>
             {%- when 'share' -%}
               {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
               {% render 'share-button', block: block, share_link: share_url %}
@@ -1446,6 +1480,18 @@
           "default": "Pop-up link text",
           "label": "t:sections.main-product.blocks.popup.settings.link_label.label"
         },
+        {
+          "id": "page",
+          "type": "page",
+          "label": "t:sections.main-product.blocks.popup.settings.page.label"
+        }
+      ]
+    },
+    {
+      "type": "reward-points",
+      "name": "Reward points",
+      "limit": 1,
+      "settings": [
         {
           "id": "page",
           "type": "page",

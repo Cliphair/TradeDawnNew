@@ -1258,17 +1258,16 @@ class VariantSelects extends HTMLElement {
           `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
-
         const volumePricingSource = html.getElementById(
           `Volume-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
-
         const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
         const pricePerItemSource = html.getElementById(`Price-Per-Item-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-
         const volumePricingDestination = document.getElementById(`Volume-${this.dataset.section}`);
         const qtyRules = document.getElementById(`Quantity-Rules-${this.dataset.section}`);
         const volumeNote = document.getElementById(`Volume-Note-${this.dataset.section}`);
+        const poinstSource = html.querySelector('#points');
+        const poinstDestination = document.querySelector('#points');
 
         if (volumeNote) volumeNote.classList.remove('hidden');
         if (volumePricingDestination) volumePricingDestination.classList.remove('hidden');
@@ -1279,6 +1278,11 @@ class VariantSelects extends HTMLElement {
         if (skuSource && skuDestination) {
           skuDestination.innerHTML = skuSource.innerHTML;
           skuDestination.classList.toggle('hidden', skuSource.classList.contains('hidden'));
+        }
+
+        if (poinstSource && poinstDestination) {
+          poinstDestination.innerHTML = poinstSource.innerHTML;
+          document.querySelector('#rewards').classList.toggle('hidden', html.querySelector('#rewards').classList.contains('hidden'));
         }
 
         if (volumePricingSource && volumePricingDestination) {
