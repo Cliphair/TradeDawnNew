@@ -144,6 +144,45 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "maquee_bdNYHF": {
+      "type": "maquee",
+      "blocks": {
+        "element_zx3LNE": {
+          "type": "element",
+          "settings": {
+            "text_label": "Free Virtual Hair Colour Matching",
+            "link": ""
+          }
+        },
+        "element_PzXtwm": {
+          "type": "element",
+          "settings": {
+            "text_label": "Pay Your Way with Clearpay & Klarna",
+            "link": ""
+          }
+        },
+        "element_h6YLkb": {
+          "type": "element",
+          "settings": {
+            "text_label": "Free UK Express delivery over £75",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "element_zx3LNE",
+        "element_PzXtwm",
+        "element_h6YLkb"
+      ],
+      "settings": {
+        "text_size": "p",
+        "scroll_mobile": false,
+        "scroll_desktop": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "horizontal_list": {
       "type": "horizontal-list",
       "blocks": {
@@ -1001,6 +1040,7 @@
     "slideshow_image_link_WcQ9XG",
     "slideshow_image_link_pmHWWp",
     "slideshow",
+    "maquee_bdNYHF",
     "horizontal_list",
     "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
