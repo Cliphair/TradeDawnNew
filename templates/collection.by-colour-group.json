@@ -4,7 +4,7 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "text_alignment": "center",
+        "text_alignment": "left",
         "show_collection_image": false,
         "color_scheme": "inverse"
       }
@@ -27,6 +27,7 @@
         "5c39b4ef-b204-4a4a-8a10-eebe8e8bd649",
         "37334cfe-2d73-48a6-8e55-1f85db600a25"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "inverse",
         "padding_top": 20,
@@ -65,7 +66,7 @@
       "type": "main-collection-more-info",
       "settings": {
         "show_collection_description": true,
-        "text_alignment": "center",
+        "text_alignment": "left",
         "color_scheme": "accent-2",
         "padding_top": 16,
         "padding_bottom": 28
