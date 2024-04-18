@@ -6,7 +6,7 @@
         "show_collection_description": true,
         "text_alignment": "left",
         "show_collection_image": false,
-        "color_scheme": "inverse"
+        "color_scheme": "accent-4"
       }
     },
     "6db3206b-59ea-491c-ac8c-e47b80ac9838": {
@@ -27,6 +27,7 @@
         "5c39b4ef-b204-4a4a-8a10-eebe8e8bd649",
         "37334cfe-2d73-48a6-8e55-1f85db600a25"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "inverse",
         "padding_top": 20,
@@ -38,7 +39,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
-        "color_scheme": "inverse",
+        "color_scheme": "accent-4",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
