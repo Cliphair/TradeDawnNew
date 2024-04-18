@@ -726,11 +726,11 @@
       "custom_css": [
         ".rich-text__blocks > * + h2 {margin-top: 1rem;}",
         ".rich-text__wrapper {width: 100% !important;}",
-        "@media screen and (min-width:990px){.rich-text__blocks {max-width: unset; }}"
+        "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: unset; }}"
       ],
       "settings": {
         "desktop_content_position": "center",
-        "content_alignment": "center",
+        "content_alignment": "left",
         "color_scheme": "inverse",
         "full_width": true,
         "padding_top": 40,
