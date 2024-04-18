@@ -538,6 +538,7 @@
         "2f773af5-523f-4df7-a94c-b8678aedb67f",
         "05518ad7-790e-4c49-a31a-55d095aa2786"
       ],
+      "disabled": true,
       "settings": {
         "title": "THE CLIPHAIR QUALITY PROMISE",
         "introduction": "<p>100% Remy Human Hair, no nonsense. We give you exactly what you see: luscious tresses, fast-responsive customer service, and daily inspiration on our channels – for you to purchase with confidence and recreate your favourite looks with our hair extensions.<\/p>",
@@ -549,79 +550,6 @@
         "button_label": "FIND OUT MORE",
         "link": "#",
         "button_style_secondary": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "342029b3-5620-4e2e-864b-55edf0aa9b0d": {
-      "type": "blog-spot",
-      "blocks": {
-        "tag_gTQgAc": {
-          "type": "tag",
-          "settings": {
-            "tag": "The Hair Extensions Bible"
-          }
-        },
-        "tag_MKYQKA": {
-          "type": "tag",
-          "settings": {
-            "tag": "Hair Care & Tips"
-          }
-        },
-        "tag_cXg8U8": {
-          "type": "tag",
-          "settings": {
-            "tag": "Top Trends"
-          }
-        },
-        "tag_b7A6Jb": {
-          "type": "tag",
-          "settings": {
-            "tag": "Styling Guides & Tutorials"
-          }
-        },
-        "tag_UJwHJw": {
-          "type": "tag",
-          "settings": {
-            "tag": "Lifestyle & Pop Culture"
-          }
-        },
-        "tag_fjUGYX": {
-          "type": "tag",
-          "settings": {
-            "tag": "Wedding & Occasion Hair"
-          }
-        }
-      },
-      "block_order": [
-        "tag_gTQgAc",
-        "tag_MKYQKA",
-        "tag_cXg8U8",
-        "tag_b7A6Jb",
-        "tag_UJwHJw",
-        "tag_fjUGYX"
-      ],
-      "custom_css": [
-        ".tag {color: #414141;}"
-      ],
-      "settings": {
-        "heading": "BLOG SPOT",
-        "heading_size": "h1",
-        "tags_size": "h4",
-        "heading_alignment": "center",
-        "blog": "hair-blog",
-        "post_limit": 3,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "columns_desktop": 3,
-        "swipe_on_desktop": false,
-        "color_scheme": "accent-2",
-        "show_image": true,
-        "image_ratio": "square",
-        "show_date": false,
-        "show_author": false,
-        "show_view_all": true,
-        "scroll_to_grid": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -687,6 +615,79 @@
         "color_scheme": "inverse",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "342029b3-5620-4e2e-864b-55edf0aa9b0d": {
+      "type": "blog-spot",
+      "blocks": {
+        "tag_gTQgAc": {
+          "type": "tag",
+          "settings": {
+            "tag": "The Hair Extensions Bible"
+          }
+        },
+        "tag_MKYQKA": {
+          "type": "tag",
+          "settings": {
+            "tag": "Hair Care & Tips"
+          }
+        },
+        "tag_cXg8U8": {
+          "type": "tag",
+          "settings": {
+            "tag": "Top Trends"
+          }
+        },
+        "tag_b7A6Jb": {
+          "type": "tag",
+          "settings": {
+            "tag": "Styling Guides & Tutorials"
+          }
+        },
+        "tag_UJwHJw": {
+          "type": "tag",
+          "settings": {
+            "tag": "Lifestyle & Pop Culture"
+          }
+        },
+        "tag_fjUGYX": {
+          "type": "tag",
+          "settings": {
+            "tag": "Wedding & Occasion Hair"
+          }
+        }
+      },
+      "block_order": [
+        "tag_gTQgAc",
+        "tag_MKYQKA",
+        "tag_cXg8U8",
+        "tag_b7A6Jb",
+        "tag_UJwHJw",
+        "tag_fjUGYX"
+      ],
+      "custom_css": [
+        ".tag {color: #414141;}"
+      ],
+      "settings": {
+        "heading": "OUR LATEST BLOGS",
+        "heading_size": "h1",
+        "tags_size": "h4",
+        "heading_alignment": "center",
+        "blog": "hair-blog",
+        "post_limit": 3,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "accent-2",
+        "show_image": true,
+        "image_ratio": "square",
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "scroll_to_grid": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1007,8 +1008,8 @@
     "rich_text_collage_bg_qibWaW",
     "f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2",
     "60c353fa-c484-4da2-b7b1-75781aa41474",
-    "342029b3-5620-4e2e-864b-55edf0aa9b0d",
     "b19c81a2-f86e-4e52-9a50-dca37f731b16",
+    "342029b3-5620-4e2e-864b-55edf0aa9b0d",
     "fef9cc49-05dc-468b-82e4-1520264647b6",
     "f41c0e3b-b362-4900-8b02-4a5cc75bd290",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
