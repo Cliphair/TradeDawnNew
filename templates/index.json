@@ -984,14 +984,16 @@
         "90c2bf7a-ad88-4fcc-a36e-1e6d60c48754"
       ],
       "custom_css": [
-        "h3 {font-weight: 400;}"
+        "h3 {font-weight: 400;}",
+        ".collapsible-section-layout {padding-top: 0 !important; padding-bottom: 0 !important;}",
+        ".collapsible-content-wrapper-narrow{max-width:unset;}"
       ],
       "settings": {
         "caption": "",
         "heading": "FAQ's",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "layout": "none",
+        "layout": "section",
         "arrow_style": "half-arrow",
         "color_scheme": "inverse",
         "container_color_scheme": "inverse",
