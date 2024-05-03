@@ -352,6 +352,14 @@ h4,
   font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
 
+@media only screen and (min-width: 750px) {
+
+  h4,
+  .h4 {
+    font-size: calc(var(--font-heading-scale) * 1.6rem);
+  }
+}
+
 h5,
 .h5 {
   color: rgb(var(--color-foreground));

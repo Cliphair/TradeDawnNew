@@ -114,14 +114,13 @@
                 {% endif %}
               >
                 {% assign collectionObject = link.object %}
-                {%
-                  render 'card-collection',
+                {% render 'card-collection',
                   card_collection: collectionObject,
                   media_aspect_ratio: section.settings.image_ratio,
                   columns: columns,
                   custom_title: link.title,
                   circle_image: block.settings.circle_images,
-                  hide_arrow: section.settings.hide_card_arrow,
+                  hide_arrow: section.settings.hide_card_arrow
                 %}
               </li>
             {% endif %}
@@ -278,6 +277,10 @@
         {
           "value": "2",
           "label": "2 columns"
+        },
+        {
+          "value": "3",
+          "label": "3 columns"
         }
       ],
       "default": "1",
