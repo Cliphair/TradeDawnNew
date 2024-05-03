@@ -821,6 +821,7 @@
       "blocks": {
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-1": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Which Hair Extensions Are Best?",
             "icon": "none",
@@ -830,11 +831,10 @@
         },
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-2": {
           "type": "collapsible_row",
-          "disabled": true,
           "settings": {
             "heading": "What does Remy Hair Extensions Mean?",
             "icon": "none",
-            "row_content": "<p>Remy Hair Extensions are the best quality Human Hair Extensions available. All the hair is from one donor and it is guaranteed to have intact cuticles that are all aligned in one direction. Insist on Remy hair if you want to look your best.<\/p>",
+            "row_content": "<p>Remy Hair Extensions are the best quality Real Human Hair Extensions available. All the hair is guaranteed to have intact cuticles that are all aligned in one direction. Insist on Remy hair if you want to look your best.<\/p>",
             "page": ""
           }
         },
@@ -910,11 +910,10 @@
         },
         "0394d474-e0db-48d3-a259-bbfdf9e7c37e": {
           "type": "collapsible_row",
-          "disabled": true,
           "settings": {
             "heading": "How do I know which Real Hair Extension is best for my hair type?",
             "icon": "none",
-            "row_content": "<p>This will depend of what you wish to achieve, try not to go for anything to heavy in weight if you have fine hair as you may you have difficulty in keep extensions to stay in place. If in doubt talk to our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/contact-us\" target=\"_blank\">customer service team<\/a> who can help you make the right hair extension choice for you and find out why we have a 4.4 rating on Trust Pilot.<\/p>",
+            "row_content": "<p>This will depend on what you wish to achieve with real human hair extensions. Try not to go for anything too heavy or thick if you have very fine hair as you may have difficulty hiding the extensions. If in doubt talk to our <a href=\"\/pages\/contact-us\" title=\"Contact Us\">customer service team<\/a> who can help you make the right hair extension choice for your hair type, whether that’s thin, thick, curly or straight<\/p>",
             "page": ""
           }
         },
@@ -940,6 +939,7 @@
         },
         "136d6ee3-1387-4e8d-95ae-22fabd566e6c": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Can I add a different colour to my hair?",
             "icon": "none",
@@ -950,18 +950,18 @@
         "bd8078ec-ab43-41e6-93c8-2ba90617a437": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Can you curl\/tong\/straighten Cliphair Hair Extensions?",
+            "heading": "Can you curl or straighten Cliphair Real Human Hair Extensions?",
             "icon": "none",
-            "row_content": "<p>Yes you can do all of the above, our hair is 100% Remy human hair, so you can style your extensions how you wish, just remember to use heat protection.<\/p>",
+            "row_content": "<p>Yes you can do all of the above, our hair is 100% Remy human hair, so you can style your extensions how you wish. Just remember to protect your hair with <a href=\"\/products\/cliphair-heat-spray\" title=\"Hair Extension Heat Protection Spray\">Cliphair’s Heat Protection Spray<\/a>. <\/p>",
             "page": ""
           }
         },
         "90c2bf7a-ad88-4fcc-a36e-1e6d60c48754": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How long do hair extensions usually last?",
+            "heading": "How long do real human hair extensions usually last? ",
             "icon": "none",
-            "row_content": "<p>Hair extensions typically last anywhere from 2 to 6 months, depending on several factors. The longevity of hair extensions is influenced by factors such as the quality of the hair, the method of installation, how well they are cared for, and the individual's hair growth rate.<\/p>",
+            "row_content": "<p>The longevity of hair extensions is influenced by factors such as the quality of the hair, the method of installation, how well they are cared for, and how often they are used. Clip-ins tend to last 12-18 months with good care, permanent extensions should be removed and reinstalled every 6-8 weeks but the hair can last up to a year if looked after properly. <\/p>",
             "page": ""
           }
         }
