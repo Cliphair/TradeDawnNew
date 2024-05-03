@@ -264,6 +264,7 @@
         },
         "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf": {
           "type": "collections",
+          "disabled": true,
           "settings": {
             "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
             "block-introduction": "<p><strong>Thickness, bounce, length<\/strong>: what do you want to add to your hair? Find the right type of hair extensions <br\/>for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
@@ -292,9 +293,47 @@
         "columns_desktop": 5,
         "swipe_on_desktop": true,
         "color_scheme": "inverse",
-        "columns_mobile": "2",
+        "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 68,
+        "padding_bottom": 0
+      }
+    },
+    "collection_carrousel_fb6cDE": {
+      "type": "collection-carrousel",
+      "blocks": {
+        "collections_6ibEMM": {
+          "type": "collections",
+          "settings": {
+            "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
+            "block-introduction": "<p><strong>Thickness, bounce, length<\/strong>: what do you want to add to your hair? Find the right type of hair extensions <br\/>for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
+            "collection-list": "choose-by-hair-extensions-type",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "circle_images": false
+          }
+        }
+      },
+      "block_order": [
+        "collections_6ibEMM"
+      ],
+      "custom_css": [
+        "h3 {color: #414141;}",
+        ".button-wrapper a {font-weight: 500;}",
+        "@media screen and (max-width: 950px) {br {display: none; }}"
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "text_allignment": "left",
+        "image_ratio": "square",
+        "hide_card_arrow": true,
+        "columns_desktop": 5,
+        "swipe_on_desktop": true,
+        "color_scheme": "inverse",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -1045,6 +1084,7 @@
     "horizontal_list",
     "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
+    "collection_carrousel_fb6cDE",
     "rich_text_ez6FdW",
     "quiz_question_G3AdFU",
     "rich_text_collage_bg_qibWaW",
