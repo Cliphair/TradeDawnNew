@@ -986,7 +986,7 @@
       "custom_css": [
         "h3 {font-weight: 400;}",
         ".collapsible-section-layout {padding-top: 0 !important; padding-bottom: 0 !important;}",
-        ".collapsible-content-wrapper-narrow{max-width:unset;}"
+        ".collapsible-content-wrapper-narrow {max-width: unset;}"
       ],
       "settings": {
         "caption": "",
@@ -1002,7 +1002,7 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "button_label": "VIEW MORE FAQ'S",
-        "link": "shopify:\/\/pages\/clip-in-hair-extensions-information-1",
+        "link": "shopify:\/\/pages\/faqs",
         "button_style_secondary": false,
         "padding_top": 36,
         "padding_bottom": 36
