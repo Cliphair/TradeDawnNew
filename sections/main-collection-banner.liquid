@@ -23,7 +23,7 @@
 <div class="collection-hero color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %}">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
+      <h1 class="collection-hero__title {{ section.settings.heading_size }}">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
@@ -94,6 +94,26 @@
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
   "settings": [
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"
