@@ -3031,11 +3031,6 @@ details-disclosure>details {
   background: #fff;
 }
 
-.top-of-page .header-wrapper {
-  background: transparent;
-  border: none;
-}
-
 @media screen and (forced-colors: active) {
   .icon {
     color: CanvasText;
@@ -3656,6 +3651,11 @@ details-disclosure>details {
 .read_more_btn:hover {
   color: rgb(var(--color-link));
   text-decoration-thickness: 0.2rem;
+}
+
+/* Privy app */
+#privy-container {
+  z-index: 2;
 }
 
 /* navbar change test
