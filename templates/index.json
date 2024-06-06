@@ -6,17 +6,17 @@
         "slide_UAXhxj": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-mobile.webp",
-            "image_desktop": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-desktop-v3.webp",
+            "image": "shopify:\/\/shop_images\/homepage-banner-2024-mobile.webp",
+            "image_desktop": "shopify:\/\/shop_images\/homepage-banner-2024-desktop.webp",
             "image_url": "shopify:\/\/pages\/hair-extensions-by-colour"
           }
         },
         "slide_rCbf9a": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/quench-the-thirst-mobile-banner.webp",
-            "image_desktop": "shopify:\/\/shop_images\/quench-the-thirst-desktop-banner.webp",
-            "image_url": "shopify:\/\/collections\/quench-the-thirst"
+            "image": "shopify:\/\/shop_images\/bridal-campaign-mobile-banner.webp",
+            "image_desktop": "shopify:\/\/shop_images\/bridal-campaign-desktop-banner.webp",
+            "image_url": "shopify:\/\/pages\/cliphair-bridal-hair-extensions"
           }
         }
       },
