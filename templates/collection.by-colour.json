@@ -25,7 +25,7 @@
         "show_rating": true,
         "enable_quick_add": false,
         "display_type_image": true,
-        "type_image_src": "type",
+        "type_image_src": "shade",
         "badge_style": "fixed",
         "display_low_inventory": true,
         "low_inventory": 5,
