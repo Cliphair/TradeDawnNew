@@ -1163,6 +1163,10 @@ summary::-webkit-details-marker {
   background-color: transparent;
 }
 
+.media--white {
+  background-color: white;
+}
+
 .media>*:not(.zoom):not(.deferred-media__poster-button),
 .media model-viewer {
   display: block;

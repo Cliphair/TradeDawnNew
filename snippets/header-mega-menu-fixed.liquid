@@ -1,0 +1,2260 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    <!-- Clip Ins -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-1" class="mega-menu">
+          <summary
+            id="HeaderMenu-clip-ins"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-clip-ins"
+              href="/collections/clip-in-hair-extensions"
+              class=""
+              {% if request.path == '/collections/clip-in-hair-extensions' %}
+                aria-current="page"
+              {% endif %}
+            >
+              <span
+                {%- if request.path == '/collections/clip-in-hair-extensions' %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                CLIP INS
+              </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-1"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width"
+              role="list"
+            >
+              <li>
+                <a
+                  id="HeaderMenu-clip-ins-clip-in"
+                  href="/collections/clip-in-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/collections/clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/clip-in-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  CLIP IN HAIR EXTENSIONS
+                </a>
+                <ul
+                  class="mega-menu__list page-width no-padding"
+                  role="list"
+                >
+                  <li style="{%- if childlink.links != blank -%}width:calc(100% / 3);{% endif %}">
+                    <a
+                      id="HeaderMenu-clip-ins-clip-in-multi"
+                      href="#"
+                      class="mega-menu__link mega-menu__link--level-3 link"
+                    >
+                      MULTI PIECE CLIP INS
+                    </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-multi-seamless"
+                          href="/collections/seamless-clip-in-hair-extensions-double-drawn-hair"
+                          class="mega-menu__link link{% if request.path == '/collections/seamless-clip-in-hair-extensions-double-drawn-hair' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/seamless-clip-in-hair-extensions-double-drawn-hair' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Seamless Full Head (150-190g)
+                        </a>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-multi-full-head"
+                          href="/collections/full-head-clip-in-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/full-head-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/full-head-clip-in-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Classic Full Head (130g)
+                        </a>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-multi-double-weft"
+                          href="/collections/double-wefted-clip-in-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/double-wefted-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/double-wefted-clip-in-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Double Weft Full Head (180-220g)
+                        </a>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-multi-ultra"
+                          href="/collections/ultra-clip-in-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/ultra-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/ultra-clip-in-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Ultra-Volume Full Head (240-300g)
+                        </a>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-multi-curly"
+                          href="/collections/curly-clip-in-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/curly-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/curly-clip-in-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Curly Full Head (115-160g)
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li style="{%- if childlink.links != blank -%}width:calc(100% / 3);{% endif %}">
+                    <a
+                      id="HeaderMenu-clip-ins-clip-in-one-piece"
+                      href="/collections/one-piece-clip-in-hair-extensions"
+                      class="mega-menu__link mega-menu__link--level-3 link {% if request.path == '/collections/one-piece-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/one-piece-clip-in-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      ONE PIECE HAIR EXTENSIONS
+                    </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-one-piece-top-up"
+                          href="/collections/one-piece-top-up-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/one-piece-top-up-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/one-piece-top-up-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Top Up Piece (40g)
+                        </a>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-one-piece-quad-weft"
+                          href="/collections/quad-weft-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/quad-weft-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/quad-weft-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Quad Weft Piece (80g)
+                        </a>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-one-piece-supreme"
+                          href="/collections/supreme-quad-weft-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/supreme-quad-weft-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/supreme-quad-weft-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Supreme Quad Piece (120g)
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li style="{%- if childlink.links != blank -%}width:calc(100% / 3);{% endif %}">
+                    <a
+                      id="HeaderMenu-clip-ins-clip-in"
+                      href="/collections/clip-in-ponytail-extensions"
+                      class="mega-menu__link mega-menu__link--level-3 link{% if request.path == '/collections/clip-in-ponytail-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/clip-in-ponytail-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      CLIP IN PONYTAIL HAIR EXTENSIONS
+                    </a>
+                    <a
+                      id="HeaderMenu-clip-ins-clip-in"
+                      href="/collections/fringe-clip-in-hair-extensions"
+                      class="mega-menu__link mega-menu__link--level-3 link{% if request.path == '/collections/fringe-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/fringe-clip-in-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      CLIP IN FRINGE HAIR EXTENSIONS
+                    </a>
+                    <a
+                      id="HeaderMenu-clip-ins-clip-in"
+                      href="/collections/hair-extensions-bundle"
+                      class="mega-menu__link mega-menu__link--level-3 link{% if request.path == '/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/hair-extensions-bundle' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      CLIP IN HAIR EXTENSION BUNDLES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+
+    <!-- Professional -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-2" class="mega-menu">
+          <summary
+            id="HeaderMenu-professional"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-professional"
+              href="/collections/permanent-extensions"
+              class=""
+              {% if request.path == '/collections/permanent-extensions' %}
+                aria-current="page"
+              {% endif %}
+            >
+              <span
+                {%- if request.path == '/collections/permanent-extensions' %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                PROFESSIONAL
+              </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-2"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+              role="list"
+            >
+              <li style="width:calc(100% / 3);">
+                <a
+                  id="HeaderMenu-professional-weave"
+                  href="/collections/human-hair-weave-wefts-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  WEAVE HAIR EXTENSIONS
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-weave-classic-weft"
+                      href="/collections/human-hair-weave-wefts-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Classic Weft (120g)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-weave-flat-track"
+                      href="/collections/flat-weft-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/flat-weft-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/flat-weft-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Flat Track Weft (120g)
+                    </a>
+                  </li>
+                </ul>
+
+                <a
+                  id="HeaderMenu-professional-tapes"
+                  href="/collections/tape-in-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/tape-in-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  TAPE HAIR EXTENSIONS
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tapes-classic-tape"
+                      href="/collections/tape-in-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/tape-in-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Tape In Hair Extensions (100g)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tapes-remy-tapes"
+                      href="/collections/remy-royale-tape-in-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/remy-royale-tape-in-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/remy-royale-tape-in-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Tape Ins (50g)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tapes-invisible-tape"
+                      href="/collections/remy-royale-invisible-tape-in-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Invisible Tape Ins (50g)
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  id="HeaderMenu-professional-bundles"
+                  href="/collections/hair-extensions-bundle"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/hair-extensions-bundle' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  HAIR EXTENSION BUNDLES & COMBOS
+                </a>
+              </li>
+
+              <li style="width:calc(100% / 3);">
+                <a
+                  id="HeaderMenu-professional-micro-ring"
+                  href="/collections/micro-ring-loop-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/micro-ring-loop-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/micro-ring-loop-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  MICRO RING HAIR EXTENSIONS
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-micro-ring-i-tip"
+                      href="/collections/i-tip-straight-pre-bonded-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale I-Tips (50g)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-micro-ring-nano-ring"
+                      href="/collections/nano-rings-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/nano-rings-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Nano Rings (50g)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-micro-ring-nano-bonds"
+                      href="/collections/nano-rings-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/nano-rings-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Nano Bonds (50g)
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  id="HeaderMenu-professional-pre-bonded"
+                  href="/collections/pre-bonded-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/pre-bonded-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/pre-bonded-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  PRE BONDED HAIR EXTENSIONS
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-pre-bonded-flat-tip"
+                      href="/collections/flat-tip-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/flat-tip-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/flat-tip-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Flat Tips (50g)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-micro-ring-nano-ring"
+                      href="/collections/nano-rings-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/nano-rings-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Remy Royale Nano Rings (50g)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:calc(100% / 3);">
+                <a
+                  id="HeaderMenu-professional-tools"
+                  href="#"
+                  class="mega-menu__link mega-menu__link--level-2 link"
+                >
+                  PROFESSIONAL TOOLS & MAINTENANCE
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tools-colour-ring"
+                      href="/products/hair-extensions-colour-ring"
+                      class="mega-menu__link link{% if request.path == '/products/hair-extensions-colour-ring' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/hair-extensions-colour-ring' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Colour Rings
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tools-nano-beads"
+                      href="/products/silicone-lined-nano-rings-beads-200-pack"
+                      class="mega-menu__link link{% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Nano Beads
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tools-tape-remover"
+                      href="/products/tape-in-hair-extensions-remover"
+                      class="mega-menu__link link{% if request.path == '/products/tape-in-hair-extensions-remover' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/tape-in-hair-extensions-remover' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Tape Remover
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tools-tape-tabs"
+                      href="/products/spare-tape-pack-for-tape-in-extensions"
+                      class="mega-menu__link link{% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Tape Tabs
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tools-wig-glue"
+                      href="/products/cliphair-wig-glue"
+                      class="mega-menu__link link{% if request.path == '/products/cliphair-wig-glue' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-wig-glue' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Wig Glue
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tools-glue-remover"
+                      href="/products/cliphair-glue-remover"
+                      class="mega-menu__link link{% if request.path == '/products/cliphair-glue-remover' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-glue-remover' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Wig Glue Remover
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-professional-tools-bundle"
+                      href="/collections/hair-extensions-bundle"
+                      class="mega-menu__link link{% if request.path == '/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/hair-extensions-bundle' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Bundles
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  id="HeaderMenu-professional-trade"
+                  href="/pages/trade-enquiries"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/trade-enquiries' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/trade-enquiries' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  APPLY FOR TRADE ACCOUNT HERE
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+
+    <!-- Shop By Shade -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-3" class="mega-menu">
+          <summary
+            id="HeaderMenu-shop-by-shade"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-shop-by-shade"
+              href="/pages/hair-extensions-by-colour"
+              class=""
+              {% if request.path == '/pages/hair-extensions-by-colour' %}
+                aria-current="page"
+              {% endif %}
+            >
+              <span
+                {%- if request.path == '/pages/hair-extensions-by-colour' %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                SHOP BY SHADE
+              </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-3"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width"
+              role="list"
+            >
+              <li style="width:calc(100% / 7);">
+                <a
+                  id="HeaderMenu-shop-by-shade-blacks"
+                  href="/collections/black-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/black-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/black-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BLACK SHADES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blacks-1"
+                      href="/collections/jet-black-hair-extensions-1"
+                      class="mega-menu__link link{% if request.path == '/collections/jet-black-hair-extensions-1' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/jet-black-hair-extensions-1' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Jet Black (#1)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blacks-1b"
+                      href="/collections/off-natural-black-hair-extensions-1b"
+                      class="mega-menu__link link{% if request.path == '/collections/off-natural-black-hair-extensions-1b' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/off-natural-black-hair-extensions-1b' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Off/Natural Black (#1B)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li style="width:calc(100% / 7);">
+                <a
+                  id="HeaderMenu-shop-by-shade-browns"
+                  href="/collections/brown-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/brown-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/brown-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BROWN SHADES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-2"
+                      href="/collections/darkest-brown-hair-extensions-2"
+                      class="mega-menu__link link{% if request.path == '/collections/darkest-brown-hair-extensions-2' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/darkest-brown-hair-extensions-2' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Darkest Brown (#2)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-3"
+                      href="/collections/dark-brown-hair-extensions-3"
+                      class="mega-menu__link link{% if request.path == '/collections/dark-brown-hair-extensions-3' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/dark-brown-hair-extensions-3' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Dark Brown (#3)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-4"
+                      href="/collections/medium-brown-hair-extensions-4"
+                      class="mega-menu__link link{% if request.path == '/collections/medium-brown-hair-extensions-4' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/medium-brown-hair-extensions-4' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Medium Brown (#4)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-5"
+                      href="/collections/toffee-brown-hair-extensions-5"
+                      class="mega-menu__link link{% if request.path == '/collections/toffee-brown-hair-extensions-5' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/toffee-brown-hair-extensions-5' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Toffee Brown (#5)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-6"
+                      href="/collections/light-chestnut-brown-hair-extensions-6"
+                      class="mega-menu__link link{% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Light Brown (#6)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-6b"
+                      href="/collections/mousey-brown-hair-extensions-6b"
+                      class="mega-menu__link link{% if request.path == '/collections/mousey-brown-hair-extensions-6b' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/mousey-brown-hair-extensions-6b' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Mousey Brown (#6B)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-8"
+                      href="/collections/medium-ash-brown-hair-extensions-8"
+                      class="mega-menu__link link{% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Medium Ash Brown (#8)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-9"
+                      href="/collections/ash-brown-hair-extensions-9"
+                      class="mega-menu__link link{% if request.path == '/collections/ash-brown-hair-extensions-9' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ash-brown-hair-extensions-9' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Ash Brown (#9)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li style="width:calc(100% / 7);">
+                <a
+                  id="HeaderMenu-shop-by-shade-blondes"
+                  href="/collections/blonde-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/blonde-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/blonde-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BLONDE SHADES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-ss"
+                      href="/collections/sandy-blonde-hair-extensions-ss"
+                      class="mega-menu__link link{% if request.path == '/collections/sandy-blonde-hair-extensions-ss' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/sandy-blonde-hair-extensions-ss' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Silver Sand (#SS)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-iceblonde"
+                      href="/collections/ice-blonde-platinum-blonde-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ice-blonde-platinum-blonde-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ice-blonde-platinum-blonde-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Ice Blonde
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-60"
+                      href="/collections/lightest-blonde-hair-extensions-60"
+                      class="mega-menu__link link{% if request.path == '/collections/lightest-blonde-hair-extensions-60' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/lightest-blonde-hair-extensions-60' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Lightest Blonde (#60)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-613"
+                      href="/collections/bleach-blonde-hair-extensions-613"
+                      class="mega-menu__link link{% if request.path == '/collections/bleach-blonde-hair-extensions-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/bleach-blonde-hair-extensions-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Bleach Blonde (#613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-16"
+                      href="/collections/light-golden-blonde-hair-extensions-16"
+                      class="mega-menu__link link{% if request.path == '/collections/light-golden-blonde-hair-extensions-16' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/light-golden-blonde-hair-extensions-16' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Light Golden Blonde (#16)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-18"
+                      href="/collections/lightest-brown-hair-extensions-18"
+                      class="mega-menu__link link{% if request.path == '/collections/lightest-brown-hair-extensions-18' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/lightest-brown-hair-extensions-18' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Lightest Brown (#18)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-14"
+                      href="/collections/dark-blonde-hair-extensions-14"
+                      class="mega-menu__link link{% if request.path == '/collections/dark-blonde-hair-extensions-14' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/dark-blonde-hair-extensions-14' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Dark Blonde (#14)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-22"
+                      href="/collections/light-ash-blonde-hair-extensions-22"
+                      class="mega-menu__link link{% if request.path == '/collections/light-ash-blonde-hair-extensions-22' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/light-ash-blonde-hair-extensions-22' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Light Ash Blonde (#22)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-blondes-27"
+                      href="/collections/strawberry-ginger-blonde-hair-extensions-27"
+                      class="mega-menu__link link{% if request.path == '/collections/strawberry-ginger-blonde-hair-extensions-27' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/strawberry-ginger-blonde-hair-extensions-27' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Strawberry Blonde (#27)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li style="width:calc(100% / 7);">
+                <a
+                  id="HeaderMenu-shop-by-shade-balayages"
+                  href="/collections/balayage-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/balayage-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BALAYAGE SHADES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-ash-black"
+                      href="/collections/ash-black-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ash-black-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ash-black-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Ash Black Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-silver-shadow"
+                      href="/collections/silver-shadow-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/silver-shadow-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/silver-shadow-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Silver Shadow Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-espresso-melt"
+                      href="/collections/dark-espresso-melt-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/dark-espresso-melt-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/dark-espresso-melt-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Espresso Melt Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-soft-bronze"
+                      href="/collections/soft-bronze-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/soft-bronze-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/soft-bronze-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Soft Bronze Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-biscuit-blondey"
+                      href="/collections/biscuit-blondey-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/biscuit-blondey-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/biscuit-blondey-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Biscuit Blondey Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-chestnut-bronde"
+                      href="/collections/chestnut-bronde-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/chestnut-bronde-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/chestnut-bronde-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chestnut Bronde Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-cinnamon-swirl"
+                      href="/collections/cinnamon-swirl-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/cinnamon-swirl-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/cinnamon-swirl-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Cinnamon Swirl Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-chestnut-honey"
+                      href="/collections/chestnut-honey-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/chestnut-honey-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/chestnut-honey-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chestnut Honey Balayage
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  id="HeaderMenu-shop-by-shade-ombres"
+                  href="/collections/ombre-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/ombre-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/ombre-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  OMBRE SHADES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t1b-sg"
+                      href="/collections/ombre-t1b-sg-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t1b-sg-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t1b-sg-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Silver Black Ombre (#T1B/SG)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t2-27"
+                      href="/collections/ombre-t2-27-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t2-27-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t2-27-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Espresso Honey Ombre (#T2/27)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t4-27"
+                      href="/collections/ombre-t4-27-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t4-27-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t4-27-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chocolate Honey Ombre (#T4/27)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t6-27"
+                      href="/collections/ombre-t6-27-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t6-27-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t6-27-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Toffee Honey Ombre (#T6/27)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li style="width:calc(100% / 7);">
+                <a
+                  id="HeaderMenu-shop-by-shade-mixed"
+                  href="/collections/mixed-coloured-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/mixed-coloured-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/mixed-coloured-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  MIXED SHADES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-14-22"
+                      href="/collections/blonde-mix-hair-extensions-14-22"
+                      class="mega-menu__link link{% if request.path == '/collections/blonde-mix-hair-extensions-14-22' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/blonde-mix-hair-extensions-14-22' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Iced Cappuccino (#14/22)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-oak-brondie"
+                      href="/collections/oak-brondie-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/oak-brondie-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/oak-brondie-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Oak Brondie
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-18-613"
+                      href="/collections/brown-blonde-mix-hair-extensions-18-613"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-blonde-mix-hair-extensions-18-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-blonde-mix-hair-extensions-18-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Biscuit Blondey (#18/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-22-613"
+                      href="/collections/blonde-mix-hair-extensions-22-613"
+                      class="mega-menu__link link{% if request.path == '/collections/blonde-mix-hair-extensions-22-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/blonde-mix-hair-extensions-22-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Creamy BLonde (#22/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-60-ss"
+                      href="/collections/blondeme-60-ss-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/blondeme-60-ss-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/blondeme-60-ss-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      BlondeMe (#60/SS)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-platinum-blondeme"
+                      href="/collections/platinum-blondeme-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/platinum-blondeme-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/platinum-blondeme-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Platinum BlondeMe
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-27-613"
+                      href="/collections/blonde-mix-hair-extensions-27-613"
+                      class="mega-menu__link link{% if request.path == '/collections/blonde-mix-hair-extensions-27-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/blonde-mix-hair-extensions-27-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Peaches & Cream (#27/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-16-613"
+                      href="/collections/blonde-mix-hair-extensions-16-613"
+                      class="mega-menu__link link{% if request.path == '/collections/blonde-mix-hair-extensions-16-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/blonde-mix-hair-extensions-16-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Goldilocks (#16/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-16-60"
+                      href="/collections/blonde-mix-16-60-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/blonde-mix-16-60-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/blonde-mix-16-60-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Barbie Blonde (#16/60)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-10-16"
+                      href="/collections/brown-blonde-mix-hair-extensions-10-16"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-blonde-mix-hair-extensions-10-16' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-blonde-mix-hair-extensions-10-16' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Butterscotch Blonde (#10/16)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-12-16-613"
+                      href="/collections/brown-blonde-mix-hair-extensions-12-16-613"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-blonde-mix-hair-extensions-12-16-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-blonde-mix-hair-extensions-12-16-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Natural Sandy Blonde (#12/16/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-27-30"
+                      href="/collections/cinnamon-blonde-27-30-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Cinnamon Swirl (#27/30)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-2-4-6"
+                      href="/collections/brown-mix-hair-extensions-2-4-6"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-mix-hair-extensions-2-4-6' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-mix-hair-extensions-2-4-6' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Espresso Melt (#2/4/6)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-4-613"
+                      href="/collections/brown-blonde-mix-hair-extensions-4-613"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-blonde-mix-hair-extensions-4-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-blonde-mix-hair-extensions-4-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Cookies & Cream (#4/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-6-613"
+                      href="/collections/brown-blonde-mix-hair-extensions-6-613"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-blonde-mix-hair-extensions-6-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-blonde-mix-hair-extensions-6-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chestnut Bronde (#6/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-9-613"
+                      href="/collections/brown-blonde-mix-hair-extensions-9-613"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-blonde-mix-hair-extensions-9-613' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-blonde-mix-hair-extensions-9-613' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Dirty Blonde (#9/613)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-4-27"
+                      href="/collections/brown-blonde-mix-hair-extensions-4-27"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-blonde-mix-hair-extensions-4-27' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-blonde-mix-hair-extensions-4-27' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chocolate Honey (#4/27)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-6-27"
+                      href="/collections/brown-ginger-blonde-mix-hair-extensions-6-27"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-ginger-blonde-mix-hair-extensions-6-27' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-ginger-blonde-mix-hair-extensions-6-27' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Hazelnut Brondie (#6/27)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-mixed-4-30"
+                      href="/collections/brown-auburn-mix-hair-extensions-4-30"
+                      class="mega-menu__link link{% if request.path == '/collections/brown-auburn-mix-hair-extensions-4-30' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/brown-auburn-mix-hair-extensions-4-30' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Cinnamon Brownie (#4/30)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li style="width:calc(100% / 7);">
+                <a
+                  id="HeaderMenu-shop-by-shade-reds"
+                  href="/collections/red-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/red-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/red-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  RED & AUBURN
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-27"
+                      href="/collections/strawberry-ginger-blonde-hair-extensions-27"
+                      class="mega-menu__link link{% if request.path == '/collections/strawberry-ginger-blonde-hair-extensions-27' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/strawberry-ginger-blonde-hair-extensions-27' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Strawberry Blonde (#27)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-27-30"
+                      href="/collections/cinnamon-blonde-27-30-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Cinnamon Swirl (#27/30)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-30"
+                      href="/collections/light-auburn-hair-extensions-30"
+                      class="mega-menu__link link{% if request.path == '/collections/light-auburn-hair-extensions-30' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/light-auburn-hair-extensions-30' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Light Auburn (#30)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-30b"
+                      href="/collections/autumn-spice-hair-extensions-30b"
+                      class="mega-menu__link link{% if request.path == '/collections/autumn-spice-hair-extensions-30b' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/autumn-spice-hair-extensions-30b' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Autumn Spice (#30B)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-33"
+                      href="/collections/dark-auburn-copper-red-hair-extensions-33"
+                      class="mega-menu__link link{% if request.path == '/collections/dark-auburn-copper-red-hair-extensions-33' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/dark-auburn-copper-red-hair-extensions-33' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Dark Auburn/Copper Red (#33)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-350-33"
+                      href="/collections/cowgirl-copper-350-33-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/cowgirl-copper-350-33-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/cowgirl-copper-350-33-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Cowgirl Copper (#350/33)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-350"
+                      href="/collections/ginger-natural-red-hair-extensions-350"
+                      class="mega-menu__link link{% if request.path == '/collections/ginger-natural-red-hair-extensions-350' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ginger-natural-red-hair-extensions-350' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Flaming Ginger (#350)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-530"
+                      href="/collections/plum-cherry-red-hair-extensions-530"
+                      class="mega-menu__link link{% if request.path == '/collections/plum-cherry-red-hair-extensions-530' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/plum-cherry-red-hair-extensions-530' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Plum/Cherry Red (#530)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-deep-red"
+                      href="/collections/deep-red-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/deep-red-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/deep-red-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Deep Red
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-99j"
+                      href="/collections/mahogany-red-hair-extensions-99j"
+                      class="mega-menu__link link{% if request.path == '/collections/mahogany-red-hair-extensions-99j' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/mahogany-red-hair-extensions-99j' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Mahogany Red (#99J)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-reds-bright-red"
+                      href="/collections/bright-red-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/bright-red-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/bright-red-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Bright Red
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li style="width:calc(100% / 7);">
+                <a
+                  id="HeaderMenu-shop-by-shade-funky"
+                  href="/collections/funky-coloured-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/funky-coloured-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/funky-coloured-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  FUNKY SHADES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-funky-sg"
+                      href="/collections/silver-hair-extensions-sg"
+                      class="mega-menu__link link{% if request.path == '/collections/silver-hair-extensions-sg' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/silver-hair-extensions-sg' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Silver/Grey
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-funky-pastel-pink"
+                      href="/collections/pastel-pink-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/pastel-pink-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/pastel-pink-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Pastel Pink
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-funky-turquoise"
+                      href="/collections/turquoise-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/turquoise-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/turquoise-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Turquoise
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-funky-blue"
+                      href="/collections/blue-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/blue-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/blue-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Blue
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-funky-purple"
+                      href="/collections/purple-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/purple-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/purple-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Purple
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-funky-bright-red"
+                      href="/collections/bright-red-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/bright-red-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/bright-red-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Bright Red
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+
+    <!-- Help Me Choose -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-4" class="mega-menu">
+          <summary
+            id="HeaderMenu-help-me-choose"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-help-me-choose"
+              href="#"
+              class=""
+            >
+              <span> HELP ME CHOOSE </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-4"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width mega-menu__list--condensed"
+              role="list"
+            >
+              <li style="width:calc(100% / 1);">
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose"
+                  href="#"
+                  class="mega-menu__link mega-menu__link--level-2 link"
+                >
+                  HELP ME CHOOSE
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-help-me-choose-hlep-me-choose-colour-match"
+                      href="/pages/colour-matching-service"
+                      class="mega-menu__link link{% if request.path == '/pages/colour-matching-service' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/pages/colour-matching-service' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Express Colour Match
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-help-me-choose-hlep-me-choose-journey"
+                      href="/pages/journey"
+                      class="mega-menu__link link{% if request.path == '/pages/journey' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/pages/journey' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Hair Quiz
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-help-me-choose-hlep-me-choose-video-guide"
+                      href="/pages/video-guides"
+                      class="mega-menu__link link{% if request.path == '/pages/video-guides' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/pages/video-guides' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Video Guide
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
+                      href="#"
+                      class="mega-menu__link link{% if request.path == '#' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '#' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Length Guide (missign URL)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-help-me-choose-hlep-me-choose-contact"
+                      href="/pages/contact-us"
+                      class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/pages/contact-us' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Contact US
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-help-me-choose-hlep-me-choose-buying-guide"
+                      href="/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary"
+                      class="mega-menu__link link{% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Ultimate Hair Extensions Buying Guide
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+
+    <!-- Haircare & Accessories -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-5" class="mega-menu">
+          <summary
+            id="HeaderMenu-haircare-accessories"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-haircare-accessories"
+              href="#"
+              class=""
+            >
+              <span> HAIRCARE & ACCESSORIES </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-5"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width"
+              role="list"
+            >
+              <li style="width:calc(100% / 3);">
+                <a
+                  id="HeaderMenu-haircare-accessories-haircare"
+                  href="/collections/hair-care"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/collections/hair-care' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/hair-care' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  HAIRCARE
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-haircare-shampoo"
+                      href="/products/quench-the-thirst-deep-moisture-shampoo"
+                      class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-moisture-shampoo' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/quench-the-thirst-deep-moisture-shampoo' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Deep Moisture Shampoo
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-haircare-conditioner"
+                      href="/products/quench-the-thirst-deep-moisture-conditioner"
+                      class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-moisture-conditioner' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/quench-the-thirst-deep-moisture-conditioner' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Deep Moisture Conditioner
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-haircare-mask"
+                      href="/products/quench-the-thirst-deep-conditioning-hair-mask"
+                      class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-conditioning-hair-mask' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/quench-the-thirst-deep-conditioning-hair-mask' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Deep Moisture Hair Mask
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-haircare-purple-shampoo"
+                      href="/products/silver-lining-purple-toning-shampoo"
+                      class="mega-menu__link link{% if request.path == '/products/silver-lining-purple-toning-shampoo' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/silver-lining-purple-toning-shampoo' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Purple Toning Shampoo
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-haircare-moisture-spray"
+                      href="/products/cliphair-silky-hair-spray"
+                      class="mega-menu__link link{% if request.path == '/products/cliphair-silky-hair-spray' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-silky-hair-spray' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Silky Moisture Spray
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-haircare-heat-spray"
+                      href="/products/cliphair-heat-spray"
+                      class="mega-menu__link link{% if request.path == '/products/cliphair-heat-spray' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-heat-spray' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Heat Protection Spray
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:calc(100% / 3);">
+                <a
+                  id="HeaderMenu-haircare-accessories-accessories"
+                  href="/collections/accessories"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/collections/accessories' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/accessories' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  ACCESSORIES & TOOLS
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-accessories-pintail"
+                      href="/products/pintail-comb"
+                      class="mega-menu__link link{% if request.path == '/products/pintail-comb' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/pintail-comb' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Pintail Comb
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-accessories-brush"
+                      href="/products/detangling-hair-brush"
+                      class="mega-menu__link link{% if request.path == '/products/detangling-hair-brush' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/detangling-hair-brush' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Hair Extensions Brush
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-accessories-alligator"
+                      href="/products/pintail-comb"
+                      class="mega-menu__link link{% if request.path == '/products/pintail-comb' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/pintail-comb' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Alligator Clips
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-accessories-wave"
+                      href="/products/wave-comb-and-pouch"
+                      class="mega-menu__link link{% if request.path == '/products/wave-comb-and-pouch' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/wave-comb-and-pouch' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Wave Comb
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-accessories-snap-clips"
+                      href="/products/snap-clips-loose-5-clips"
+                      class="mega-menu__link link{% if request.path == '/products/snap-clips-loose-5-clips' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/snap-clips-loose-5-clips' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Snap Clips
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li style="width:calc(100% / 3);">
+                <a
+                  id="HeaderMenu-haircare-accessories-professional"
+                  href="#"
+                  class="mega-menu__link mega-menu__link--level-2 link"
+                >
+                  PROFESSIONAL MAINTENANCE
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-professional-tape-remover"
+                      href="/products/tape-in-hair-extensions-remover"
+                      class="mega-menu__link link{% if request.path == '/products/tape-in-hair-extensions-remover' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/tape-in-hair-extensions-remover' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Tape Remover Spray
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-professional-spare-tape"
+                      href="/products/spare-tape-pack-for-tape-in-extensions"
+                      class="mega-menu__link link{% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Spare Tape Tabs
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-professional-nano-beads"
+                      href="/products/silicone-lined-nano-rings-beads-200-pack"
+                      class="mega-menu__link link{% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Nano Beads
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-professional-colour-ring"
+                      href="/products/hair-extensions-colour-ring"
+                      class="mega-menu__link link{% if request.path == '/products/hair-extensions-colour-ring' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/hair-extensions-colour-ring' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Colour Rings
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-professional-wig-glue"
+                      href="/products/cliphair-wig-glue"
+                      class="mega-menu__link link{% if request.path == '/products/cliphair-wig-glue' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-wig-glue' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Wig Glue
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-professional-glue-remover"
+                      href="/products/cliphair-glue-remover"
+                      class="mega-menu__link link{% if request.path == '/products/cliphair-glue-remover' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-glue-remover' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Glue Remover
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="HeaderMenu-haircare-accessories-professional-bundles"
+                      href="/collections/hair-extensions-bundle"
+                      class="mega-menu__link link{% if request.path == '/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/hair-extensions-bundle' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Bundles
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+
+    <!-- Blog -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-6" class="mega-menu">
+          <summary
+            id="HeaderMenu-blog"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-blog"
+              href="/blogs/hair-blog"
+              class=""
+              {% if request.path == '/blogs/hair-blog' %}
+                aria-current="page"
+              {% endif %}
+            >
+              <span
+                {%- if request.path == '/blogs/hair-blog' %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                BLOG
+              </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-6"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width mega-menu__list--condensed"
+              role="list"
+            >
+              <li style="width:calc(100% / 1);">
+                <a
+                  id="HeaderMenu-blog-homepage"
+                  href="/blogs/hair-blog"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BLOG HOMEPAGE
+                </a>
+                <a
+                  id="HeaderMenu-blog-latest"
+                  href="#"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='#' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '#' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  LATEST BLOGS (missign link)
+                </a>
+                <a
+                  id="HeaderMenu-blog-extension-bible"
+                  href="/blogs/hair-blog/tagged/the-hair-extensions-bible"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/the-hair-extensions-bible' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/tagged/the-hair-extensions-bible' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  HAIR EXTENSION BIBLE
+                </a>
+                <a
+                  id="HeaderMenu-blog-top-trends"
+                  href="/blogs/hair-blog/tagged/top-trends"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/top-trends' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/tagged/top-trends' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  TOP TRENDS
+                </a>
+                <a
+                  id="HeaderMenu-blog-styling-guides"
+                  href="/blogs/hair-blog/tagged/styling-guides-tutorials"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/styling-guides-tutorials' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/tagged/styling-guides-tutorials' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  STYLING GUIDES & TUTORIALS
+                </a>
+                <a
+                  id="HeaderMenu-blog-haircare-tips"
+                  href="/blogs/hair-blog/tagged/hair-care-tips"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/hair-care-tips' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/tagged/hair-care-tips' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  HAIRCARE & TIPS
+                </a>
+                <a
+                  id="HeaderMenu-blog-wedding"
+                  href="/blogs/hair-blog/tagged/wedding-occasion-hair"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/wedding-occasion-hair' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/tagged/wedding-occasion-hair' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  WEDDING & OCCASION HAIR
+                </a>
+                <a
+                  id="HeaderMenu-blog-lifestyle"
+                  href="/blogs/hair-blog/tagged/lifestyle-pop-culture"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/lifestyle-pop-culture' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/tagged/lifestyle-pop-culture' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  CELEBRITY & LIFESTYLE
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+
+    <!-- Info Hub -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-7" class="mega-menu">
+          <summary
+            id="HeaderMenu-info-hub"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-info-hub"
+              href="#"
+              class=""
+            >
+              <span> INFO HUB </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-7"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width mega-menu__list--condensed"
+              role="list"
+            >
+              <li style="width:calc(100% / 1);">
+                <a
+                  id="HeaderMenu-info-hub-story"
+                  href="/pages/about-us"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/about-us' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/about-us' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  OUR STORY
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-blog"
+                  href="/blogs/hair-blog"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BLOG
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-faqs"
+                  href="/pages/faqs"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/faqs' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/faqs' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  FAQS
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-care-instructions"
+                  href="/pages/care-instructions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/care-instructions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/care-instructions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  CARE INSTRUCTIONS
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-shipping"
+                  href="/pages/shipping-information"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/shipping-information' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/shipping-information' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  SHIPPING INFORMATION
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-returns"
+                  href="/pages/returns-information"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/returns-information' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/returns-information' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  RETURNS
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-rewards"
+                  href="/pages/rewards"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/rewards' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/rewards' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  REWARDS
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-contact-us"
+                  href="/pages/contact-us"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/contact-us' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  CONTACT US
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-ambassador"
+                  href="#"
+                  class="mega-menu__link mega-menu__link--level-2 link"
+                >
+                  BECOME AN AMBASSADOR (missign click)
+                </a>
+
+                <a
+                  id="HeaderMenu-info-hub-trade"
+                  href="/pages/trade-enquiries"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/trade-enquiries' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/trade-enquiries' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  TRADE APPLICATION
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+
+    <!-- Discounts -->
+    <li>
+      <header-menu>
+        <details id="Details-HeaderMenu-8" class="mega-menu">
+          <summary
+            id="HeaderMenu-discounts"
+            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
+          >
+            <a
+              id="HeaderMenu-discounts"
+              href="/pages/discounts-and-voucher-codes"
+              class=""
+              {% if request.path == '/pages/discounts-and-voucher-codes' %}
+                aria-current="page"
+              {% endif %}
+            >
+              <span
+                {%- if request.path == '/pages/discounts-and-voucher-codes' %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                DISCOUNTS
+              </span>
+            </a>
+            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+          </summary>
+          <div
+            id="MegaMenu-Content-8"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            tabindex="-1"
+          >
+            <ul
+              class="mega-menu__list page-width mega-menu__list--condensed"
+              role="list"
+            >
+              <li style="width:calc(100% / 1);">
+                <a
+                  id="HeaderMenu-discounts-rewards"
+                  href="/pages/rewards"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='/pages/rewards' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/rewards' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  MY REWARDS
+                </a>
+
+                <a
+                  id="HeaderMenu-discounts-new-customer"
+                  href="/pages/rewards"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='/pages/rewards' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/rewards' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  NEW CUSTOMER DISCOUNT
+                </a>
+
+                <a
+                  id="HeaderMenu-discounts-blue-light"
+                  href="/pages/blue-light-card"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='/pages/blue-light-card' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/blue-light-card' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BLUE LIGHT CARD DISCOUNT
+                </a>
+
+                <a
+                  id="HeaderMenu-discounts-student"
+                  href="#"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='#' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '#' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  STUDENT DISCOUNT (missign link)
+                </a>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </header-menu>
+    </li>
+  </ul>
+</nav>

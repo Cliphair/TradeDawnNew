@@ -78,7 +78,7 @@
   z-index: 0;
   border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
   /* border: 1px solid var(--colour-cliphair-grey-light); */
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 .card--card .card__inner .card__media {
@@ -127,7 +127,7 @@
   display: grid;
   grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
   padding: 1rem;
-  padding-top:2rem;
+  padding-top: 2rem;
   width: 100%;
   flex-grow: 1;
 }
@@ -192,6 +192,7 @@
 .card__media .media img {
   height: 100%;
   object-fit: cover;
+  /* object-fit: contain; */
   object-position: center center;
   width: 100%;
 }
