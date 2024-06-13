@@ -34,116 +34,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "slideshow_image_link_pmHWWp": {
-      "type": "slideshow-image-link",
-      "blocks": {
-        "slide_JNY3Dy": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-desktop-v4.webp",
-            "image_desktop": "shopify:\/\/shop_images\/this-is-where-your-hair-gets-new-life-mobile-v4.webp",
-            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour"
-          }
-        },
-        "slide_nW74tF": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/quench-the-thirst-banner-v2-mobile.webp",
-            "image_desktop": "shopify:\/\/shop_images\/quench-the-thirst-banner-v3.webp",
-            "image_url": "shopify:\/\/collections\/quench-the-thirst"
-          }
-        }
-      },
-      "block_order": [
-        "slide_JNY3Dy",
-        "slide_nW74tF"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/averie-woodard-4nulm-JUYFo-unsplash_1_2.webp",
-            "heading": "FIND YOUR PERFECT MATCH",
-            "heading_size": "h1",
-            "subheading": "WITH OUR HAIR EXPERTS",
-            "button_label": "LEARN MORE",
-            "link": "\/pages\/colour-matching-service",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-faded-blue",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide2": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/averie-woodard-4nulm-JUYFo-unsplash.png",
-            "heading": "Easy Clip in Extensions",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-faded-blue",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "08bc8425-10fb-4207-ad18-65f5aa4d087d": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/averie-woodard-4nulm-JUYFo-unsplash.png",
-            "heading": "100% Human Remy Hair",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-right",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-faded-blue",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide1",
-        "slide2",
-        "08bc8425-10fb-4207-ad18-65f5aa4d087d"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "maquee_bdNYHF": {
       "type": "maquee",
       "blocks": {
@@ -216,37 +106,6 @@
         "text_color": "#121212"
       }
     },
-    "fa403c60-2db5-49a7-86e9-d40d37498baa": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "HOW TO CHOOSE <em>THE RIGHT<\/em> HAIR EXTENSIONS FOR YOU",
-            "heading_size": "h0",
-            "h1": false
-          }
-        }
-      },
-      "block_order": [
-        "template--15283894157373__fa403c60-2db5-49a7-86e9-d40d37498baa-heading-1"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h2 {line-height: 1.1em; font-weight: 400;}",
-        ".rich-text__wrapper {width: 100% !important;}",
-        "@media screen and (max-width: 750px) {.h0 {font-size: 3rem; }}",
-        "@media screen and (min-width: 750px) and (max-width: 950px) {.h0 {font-size: 4rem; }}"
-      ],
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 68,
-        "padding_bottom": 40
-      }
-    },
     "753975ec-3602-477e-b65e-6d089a9053cb": {
       "type": "collection-carrousel",
       "blocks": {
@@ -261,24 +120,10 @@
             "button_style_secondary": false,
             "circle_images": true
           }
-        },
-        "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf": {
-          "type": "collections",
-          "disabled": true,
-          "settings": {
-            "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
-            "block-introduction": "<p><strong>Thickness, bounce, length<\/strong>: what do you want to add to your hair? Find the right type of hair extensions <br\/>for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
-            "collection-list": "choose-by-hair-extensions-type",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "circle_images": false
-          }
         }
       },
       "block_order": [
-        "a7031854-9bd7-41fe-b425-7e6f75e38807",
-        "d3ff85dc-3dba-4d7f-a50f-1280454d4ebf"
+        "a7031854-9bd7-41fe-b425-7e6f75e38807"
       ],
       "custom_css": [
         "h3 {color: #414141;}",
@@ -352,7 +197,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Still unsure? Find out which type of hair extensions fits you best with this quiz.<\/p>",
-            "read-more_text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "read-more_text": ""
           }
         }
       },
@@ -821,16 +666,6 @@
     "f41c0e3b-b362-4900-8b02-4a5cc75bd290": {
       "type": "collapsible-content",
       "blocks": {
-        "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-1": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Which Hair Extensions Are Best?",
-            "icon": "none",
-            "row_content": "<p>The best Hair Extensions for you will be the ones that fit your needs and lifestyle perfectly. If you want to be able to change your hairstyle often, <a href=\"https:\/\/www.cliphair.co.uk\/collections\/clip-in-hair-extensions\" target=\"_blank\">Clip In Hair<\/a> is the best option. Tape In and other Permanent Extensions types are better for hairstyles you want to keep longer.<\/p>",
-            "page": ""
-          }
-        },
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
@@ -840,112 +675,12 @@
             "page": ""
           }
         },
-        "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-3": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Are Your Hair Extensions Double Drawn?",
-            "icon": "none",
-            "row_content": "<p>All the hair in our “Remy Royale” collection is Double Drawn. The rest of our hair is Single Drawn but still a very good thickness. For more guidance on which is type of real hair extension is right for you feel free to contact our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/contact-us\" target=\"_blank\">customer service team<\/a>.<\/p>",
-            "page": ""
-          }
-        },
-        "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-4": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "What Are Cliphair Hair Clips Made From?",
-            "icon": "none",
-            "row_content": "<p>We use small metal clips with silicone lining for extra comfort and secure grip. The silicone tubing is also much better for the hair as it prevents rubbing and breakage. They weigh less than 1g each and are just 1inch wide meaning they are very easy to hide even in the finest of hair.<\/p>",
-            "page": ""
-          }
-        },
-        "94d4cb2a-8bda-495f-a9d7-7689b8ff3b58": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "What is the difference between Temporary Extensions and Permanent Extensions?",
-            "icon": "none",
-            "row_content": "<p>A Temporary Hair Extension can be placed in and taken out very quickly, and usually are fixed into place with clip, hence they are mostly known as <a href=\"https:\/\/www.cliphair.co.uk\/collections\/clip-in-hair-extensions\" target=\"_blank\">Clip In Hair Extensions<\/a>. A Permanent Extension is attached by a few different methods and are usually in place for 6\/12 weeks.<\/p>",
-            "page": ""
-          }
-        },
-        "b34d6a48-42bf-413e-a91d-f8c4363e08e3": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "What Hair Extension types are classed as Permanent and what a classed a Temporary?",
-            "icon": "none",
-            "row_content": "<p>Types of Permanent Hair Extensions can include Weave, Nanos, I Tips, Micro Rings and Tapes, once attached by these methods the extensions can be in for anything up to 12 weeks. Types of Temporary Hair Extensions are usually called Clip in’s which are only placed for up to 8 hour at a time, and should last you 6 months.<\/p>",
-            "page": ""
-          }
-        },
-        "f52ec162-cd3d-4e12-844f-6101a3206020": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "How are Permanent Extensions Attached to the Hair?",
-            "icon": "none",
-            "row_content": "<p>Weaves are sewn into your natural hair. Nano or Micro Eings; applied with a small ring to hold your hair and the small piece of extension in place. <a href=\"https:\/\/www.cliphair.co.uk\/collections\/tape-in-hair-extensions\" target=\"_blank\">Tape ins<\/a> are pre glued pieces of hair that are placed between your natural hair.<\/p>",
-            "page": ""
-          }
-        },
-        "263f16db-ba74-460a-800d-15e84a09501e": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "How long do Permanent Human Hair Extensions take to put it?",
-            "icon": "none",
-            "row_content": "<p>This really depends on the method chosen, the longest method is Nano Rings which can take anything up to 4\/5 hours depending on the length of hair. The quickest Permanent Real Hair Extension is Tapes, these can take anything from 1\/2 hours to apply. We recommend that any permanent hair extension be applied by a salon professional.<\/p>",
-            "page": ""
-          }
-        },
-        "f7e7e56e-3c3e-4dac-a8e6-2025e956d271": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "How long do Clip In Extensions take to put in?",
-            "icon": "none",
-            "row_content": "<p>This really does depend on how many pieces or sets you are placing in your hair, this can be a quick as 10 minutes to 30 minutes. This can take some practice but can be learnt fairly quickly and carried out at home.<\/p>",
-            "page": ""
-          }
-        },
         "0394d474-e0db-48d3-a259-bbfdf9e7c37e": {
           "type": "collapsible_row",
           "settings": {
             "heading": "How do I know which Real Hair Extension is best for my hair type?",
             "icon": "none",
             "row_content": "<p>This will depend on what you wish to achieve with real human hair extensions. Try not to go for anything too heavy or thick if you have very fine hair as you may have difficulty hiding the extensions. If in doubt talk to our <a href=\"\/pages\/contact-us\" title=\"Contact Us\">customer service team<\/a> who can help you make the right hair extension choice for your hair type, whether that’s thin, thick, curly or straight<\/p>",
-            "page": ""
-          }
-        },
-        "9535a889-2c12-4d0e-9813-01a7e8bb8050": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Do you have samples of your shades?",
-            "icon": "none",
-            "row_content": "<p>We don’t have samples of our shades that we can send out, but we do offer a colour match service to help you get the correct shade, just click here.<\/p>",
-            "page": ""
-          }
-        },
-        "283f9a6c-3560-424b-a851-66ad3e9be1aa": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Will I need special shampoo and conditioner for my Hair Extensions?",
-            "icon": "none",
-            "row_content": "<p>Yes you will need Sulphate free products, this is because normal shampoo contains sulphate which is the cleaning agent this can break down the adhesive that attaches some hair extensions.<\/p>",
-            "page": ""
-          }
-        },
-        "136d6ee3-1387-4e8d-95ae-22fabd566e6c": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Can I add a different colour to my hair?",
-            "icon": "none",
-            "row_content": "<p>Yes you can add a tone to lighten your hair or a tone to darken or maybe you want to add a Balayage shade adding colour, extensions is a good way of changing or adding colour and not having to colour your own hair.<\/p>",
             "page": ""
           }
         },
@@ -969,19 +704,8 @@
         }
       },
       "block_order": [
-        "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-1",
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-2",
-        "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-3",
-        "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-4",
-        "94d4cb2a-8bda-495f-a9d7-7689b8ff3b58",
-        "b34d6a48-42bf-413e-a91d-f8c4363e08e3",
-        "f52ec162-cd3d-4e12-844f-6101a3206020",
-        "263f16db-ba74-460a-800d-15e84a09501e",
-        "f7e7e56e-3c3e-4dac-a8e6-2025e956d271",
         "0394d474-e0db-48d3-a259-bbfdf9e7c37e",
-        "9535a889-2c12-4d0e-9813-01a7e8bb8050",
-        "283f9a6c-3560-424b-a851-66ad3e9be1aa",
-        "136d6ee3-1387-4e8d-95ae-22fabd566e6c",
         "bd8078ec-ab43-41e6-93c8-2ba90617a437",
         "90c2bf7a-ad88-4fcc-a36e-1e6d60c48754"
       ],
@@ -1082,11 +806,8 @@
   },
   "order": [
     "slideshow_image_link_WcQ9XG",
-    "slideshow_image_link_pmHWWp",
-    "slideshow",
     "maquee_bdNYHF",
     "horizontal_list",
-    "fa403c60-2db5-49a7-86e9-d40d37498baa",
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "collection_carrousel_fb6cDE",
     "rich_text_ez6FdW",
