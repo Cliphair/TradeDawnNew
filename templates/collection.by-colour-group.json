@@ -10,6 +10,22 @@
         "color_scheme": "accent-4"
       }
     },
+    "collection_filter_circle_Giyhbq": {
+      "type": "collection-filter-circle",
+      "settings": {
+        "filter_type": "colour",
+        "heading": "",
+        "heading_size": "h1",
+        "text_allignment": "left",
+        "columns_desktop": 6,
+        "swipe_on_desktop": true,
+        "color_scheme": "accent-4",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -135,6 +151,7 @@
   },
   "order": [
     "banner",
+    "collection_filter_circle_Giyhbq",
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
     "b400924f-2211-460e-841c-e909605faf8f",
