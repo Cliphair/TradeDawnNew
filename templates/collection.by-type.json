@@ -50,7 +50,7 @@
         "remove_filters": "",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
