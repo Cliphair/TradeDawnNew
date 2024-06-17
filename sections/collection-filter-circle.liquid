@@ -66,8 +66,15 @@
             {%- liquid
               assign columns_mobile_int = section.settings.columns_mobile | plus: 0
               assign show_mobile_slider = false
-              if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
-                assign show_mobile_slider = true
+              if columns_mobile_int == 3
+                assign columns_mobile_int = columns_mobile_int | minus: 1
+                if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
+                  assign show_mobile_slider = true
+                endif
+              else
+                if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
+                  assign show_mobile_slider = true
+                endif
               endif
 
               assign columns_desktop_int = section.settings.columns_desktop | plus: 0
