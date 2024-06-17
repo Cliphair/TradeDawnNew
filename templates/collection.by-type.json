@@ -46,7 +46,7 @@
         "display_low_inventory": true,
         "low_inventory": 5,
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "drawer",
         "remove_filters": "",
         "enable_sorting": true,
         "columns_mobile": "2",
