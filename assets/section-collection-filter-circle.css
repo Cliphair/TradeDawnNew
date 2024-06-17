@@ -129,6 +129,10 @@
   /* margin-top: 4rem; */
 }
 
+.section-collection-filter-circle .filter-circle{
+  align-items:flex-start;
+}
+
 .section-collection-filter-circle .facet-checkbox {
   padding: 0;
 }
