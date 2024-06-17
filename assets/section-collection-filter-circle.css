@@ -133,6 +133,10 @@
   align-items:flex-start;
 }
 
+.section-collection-filter-circle .filter-circle.center-mobile-true{
+  justify-content:center;
+}
+
 .section-collection-filter-circle .facet-checkbox {
   padding: 0;
 }
@@ -159,12 +163,12 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-} */
+}
 
 .filter-circle__item:only-child {
   max-width: 100%;
   width: 100%;
-}
+} */
 
 @media screen and (max-width: 749px) {
   .slider.filter-circle--1-items {
@@ -185,6 +189,10 @@
 @media screen and (min-width: 750px) {
   .filter-circle__item a:hover {
     box-shadow: none;
+  }
+
+  .section-collection-filter-circle .filter-circle.center-desktop-true{
+    justify-content:center;
   }
 }
 
