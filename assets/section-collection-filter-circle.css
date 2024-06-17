@@ -70,7 +70,7 @@
   }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:425px) {
   .section-collection-filter-circle .grid--3-col-tablet-down .grid__item {
     min-width: calc((100% - var(--grid-mobile-horizontal-spacing)) / 2);
   }
@@ -290,7 +290,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 425px) {
   .section-collection-filter-circle .slider-buttons.slider--3-col-tablet-down {
     top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 2) / 2 - 22px)
   }
