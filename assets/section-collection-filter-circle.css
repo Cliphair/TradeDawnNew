@@ -133,7 +133,7 @@
   align-items:flex-start;
 }
 
-.section-collection-filter-circle .filter-circle.center-mobile-true{
+.section-collection-filter-circle .filter-circle.slide-mobile-false{
   justify-content:center;
 }
 
@@ -191,7 +191,7 @@
     box-shadow: none;
   }
 
-  .section-collection-filter-circle .filter-circle.center-desktop-true{
+  .section-collection-filter-circle .filter-circle.slide-desktop-false{
     justify-content:center;
   }
 }
