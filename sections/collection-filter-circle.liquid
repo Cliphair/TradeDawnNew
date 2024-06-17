@@ -1,0 +1,350 @@
+{{ 'section-collection-filter-circle.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-facets.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width:{{ settings.page_width }}px) {
+    .section-collection-filter-circle .slider-buttons.slider--1-col-desktop {
+      top: calc(({{ settings.page_width }}px - 10rem) / 2 - 22px)
+    }
+
+    .section-collection-filter-circle .slider-buttons.slider--2-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing)) / 2) / 2 - 22px)
+    }
+
+    .section-collection-filter-circle .slider-buttons.slider--3-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 3) / 2 - 22px)
+    }
+
+    .section-collection-filter-circle .slider-buttons.slider--4-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 3) / 4) / 2 - 22px)
+    }
+
+    .section-collection-filter-circle .slider-buttons.slider--5-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 4) / 5) / 2 - 22px)
+    }
+
+    .section-collection-filter-circle .slider-buttons.slider--6-col-desktop {
+      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 6) / 2 - 22px)
+    }
+  }
+{%- endstyle -%}
+
+<div class="filter-circle-wrapper color-{{ section.settings.color_scheme }} no-js-hidden gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- unless section.settings.heading == blank -%}
+      <div class="title-wrapper title-wrapper--no-top-margin {{ section.settings.text_allignment }}">
+        <h2
+          id="SectionHeading-{{ section.id }}"
+          class="videos-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        >
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    {%- endunless -%}
+
+    <facet-filters-form class="facets facets-vertical-sort no-js-hidden">
+      <form
+        id="FacetFiltersFormDropdown"
+      >
+        {% for filter in collection.filters %}
+          {% assign filter_label = filter.label | handleize %}
+          {% if filter_label == section.settings.filter_type %}
+            {%- liquid
+              assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+              assign show_mobile_slider = false
+              if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
+                assign show_mobile_slider = true
+              endif
+
+              assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+              assign show_desktop_slider = false
+              if section.settings.swipe_on_desktop and filter.values.size > columns_desktop_int
+                assign show_desktop_slider = true
+              endif
+            -%}
+
+            <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+              {%- if show_mobile_slider or show_desktop_slider -%}
+                <div class="slider-buttons left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+                  <button
+                    type="button"
+                    class="slider-button slider-button--prev"
+                    name="previous"
+                    aria-label="{{ 'general.slider.previous_slide' | t }}"
+                  >
+                    {% render 'icon-caret' %}
+                  </button>
+                </div>
+              {%- endif -%}
+
+              <ul
+                class="filter-circle contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size | plus: 1 }}-items"
+                id="Slider-{{ section.id }}"
+                role="list"
+              >
+                {%- liquid
+                  assign columns = filter.values.size
+                  if columns > 3
+                    assign columns = 3
+                  endif
+                -%}
+
+                {%- for value in filter.values -%}
+                  <li
+                    id="Slide-{{ section.id }}-{{ forloop.index }}"
+                    class="filter-circle__item facets__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <label
+                      for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                      class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
+                    >
+                      <input
+                        type="checkbox"
+                        name="{{ value.param_name }}"
+                        value="{{ value.value }}"
+                        id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                        {% if value.active %}
+                          checked
+                        {% endif %}
+                        {% if value.count == 0 and value.active == false %}
+                          disabled
+                        {% endif %}
+                      >
+
+                      {% liquid
+                        assign card_title = value.label | escape
+                        assign image_handle = card_title | handle | append: '-image-snippet.webp'
+                        assign card_image = images[image_handle]
+                      %}
+                      {% render 'card-filter-circle', card_title: card_title, card_image: card_image %}
+                      {% comment %} <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span> {% endcomment %}
+                      <span class="visually-hidden">
+                        {{- value.label | escape }} (
+                        {%- if value.count == 1 -%}
+                          {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+                        {%- else -%}
+                          {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+                        {%- endif -%}
+                        )</span
+                      >
+                    </label>
+                  </li>
+                {% endfor %}
+              </ul>
+
+              {%- if show_mobile_slider or show_desktop_slider -%}
+                <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+                  <div class="slider-counter caption visually-hidden">
+                    <span class="slider-counter--current">1</span>
+                    <span aria-hidden="true"> / </span>
+                    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                    <span class="slider-counter--total">{{ filter.values.size | plus: 1 }}</span>
+                  </div>
+                  <button
+                    type="button"
+                    class="slider-button slider-button--next"
+                    name="next"
+                    aria-label="{{ 'general.slider.next_slide' | t }}"
+                  >
+                    {% render 'icon-caret' %}
+                  </button>
+                </div>
+              {%- endif -%}
+            </slider-component>
+          {% endif %}
+        {% endfor %}
+      </form>
+    </facet-filters-form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let buttons = document.querySelectorAll('.facet-checkbox input');
+    for (let button of buttons) {
+      button.addEventListener('click', uncheck);
+    }
+  });
+
+  function uncheck() {
+    setTimeout(() => {
+      let button = document.querySelector('.facet-checkbox input:checked');
+      if (button.checked == true) {
+        button.checked = false;
+      }
+    }, 1000);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Filter circle",
+  "class": "section section-collection-filter-circle",
+  "settings": [
+    {
+      "type": "select",
+      "id": "filter_type",
+      "options": [
+        {
+          "value": "product-type",
+          "label": "Product type"
+        },
+        {
+          "value": "colour",
+          "label": "Product colour"
+        },
+        {
+          "value": "colour-group",
+          "label": "Producr colour group"
+        }
+      ],
+      "default": "product-type",
+      "label": "Filter type"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "text_allignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Text allignment"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_desktop",
+      "default": false,
+      "label": "Enable swipe on desktop"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        },
+        {
+          "value": "3",
+          "label": "3 columns"
+        }
+      ],
+      "default": "1",
+      "label": "Number of columns on mobile",
+      "info": "3 columns will apply only for screens bigger than 450px"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "Filter circle"
+    }
+  ]
+}
+{% endschema %}

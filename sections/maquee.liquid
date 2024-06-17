@@ -1,8 +1,22 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
 <style>
   .marquee {
     display: flex;
     overflow: hidden;
-    gap: 1rem;
+    gap: var(--grid-mobile-horizontal-spacing);
     position: relative;
     user-select: none;
   }
@@ -12,24 +26,74 @@
   }
 
   .marquee-content {
-    flex-shrink: 0;
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-around;
     min-width: 100%;
-    gap: 1rem;
+    gap: var(--grid-mobile-horizontal-spacing);
   }
 
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
+  .marquee-content ~ .marquee-content {
+    display: none;
+  }
+
+  @media screen and (max-width: 990px) {
+    .marquee-content.scroll-mobile {
+      flex-shrink: 0;
+      animation: scroll 10s linear infinite;
+      flex-wrap:nowrap;
     }
-    to {
-      transform: translateX(calc(-100% - 1rem));
+
+    .marquee-content ~ .marquee-content.show-mobile {
+      display: flex;
+    }
+
+    .marquee-content .marquee__item{
+      width:calc((100% - (var(--grid-mobile-horizontal-spacing) * {{ section.blocks.size | minus: 1 }})) / {{ section.settings.columns_mobile }});
+      text-align:center;
+      {% comment %} min-width:calc((100% - (var(--grid-mobile-horizontal-spacing) * {{ section.blocks.size | minus: 1 }})) / {{ section.settings.columns_mobile }}); {% endcomment %}
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - var(--grid-mobile-horizontal-spacing)));
+      }
     }
   }
 
-  .scroll {
-    animation: scroll 10s linear infinite;
+  @media screen and (min-width: 990px) {
+    .marquee,
+    .marquee-content {
+      gap: var(--grid-desktop-horizontal-spacing);
+    }
+
+    .marquee-content.scroll-desktop {
+      flex-shrink: 0;
+      animation: scroll 20s linear infinite;
+      flex-wrap:nowrap;
+    }
+
+    .marquee-content ~ .marquee-content.show-desktop {
+      display: flex;
+    }
+
+    .marquee-content .marquee__item{
+      width:calc((100% - (var(--grid-desktop-horizontal-spacing) * {{ section.blocks.size | minus: 1 }})) / {{ section.settings.columns_desktop }});
+      text-align:center;
+      min-width:calc((100% - (var(--grid-desktop-horizontal-spacing) * {{ section.blocks.size | minus: 1 }})) / {{ section.settings.columns_desktop }});
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - var(--grid-desktop-horizontal-spacing)));
+      }
+    }
   }
 </style>
 
@@ -37,11 +101,37 @@
   class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
   id="{{ section.id }}"
 >
-  <div class="marquee">
-    {% for i in (0..1) %}
-      <div class="marquee-content scroll">
+  <div class="marquee page-width">
+    <div class="marquee-content scroll {% if section.settings.scroll_mobile %} scroll-mobile{% endif %}{% if section.settings.scroll_desktop %} scroll-desktop{% endif %}">
+      {% for block in section.blocks %}
+        <div class="marquee__item">
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}">
+          {%- endif -%}
+          {%- if block.settings.image != blank and block.settings.image.src != blank -%}
+            <img
+              srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}"
+              src="{{ block.settings.image | image_url: width: 190 }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="eager"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+            >
+          {%- endif -%}
+          {% if block.settings.text_label != null %}
+            <p class="{{ section.settings.text_size }}">{{ block.settings.text_label }}</p>
+          {%- endif -%}
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.scroll_mobile or section.settings.scroll_desktop %}
+      <div class="marquee-content scroll {% if section.settings.scroll_mobile %} scroll-mobile show-mobile{% endif %}{% if section.settings.scroll_desktop %} scroll-desktop show-desktop{% endif %}">
         {% for block in section.blocks %}
-          <div>
+          <div class="marquee__item">
             {%- if block.settings.link != blank -%}
               <a href="{{ block.settings.link }}">
             {%- endif -%}
@@ -64,7 +154,7 @@
           </div>
         {% endfor %}
       </div>
-    {% endfor %}
+    {% endif %}
   </div>
 </div>
 
@@ -99,22 +189,55 @@
       "label": "Text size"
     },
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ],
+      "default": "1",
+      "label": "Number of columns on mobile"
+    },
+    {
       "type": "checkbox",
       "id": "scroll_mobile",
       "default": false,
       "label": "Infinite scroll on mobile"
     },
     {
+      "type": "header",
+      "content": "Desktop Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns on desktop"
+    },
+    {
       "type": "checkbox",
       "id": "scroll_desktop",
       "default": false,
-      "label": "infinite scroll on desktop"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "background-1"
+      "label": "Infinite scroll on desktop"
     },
     {
       "type": "header",
@@ -172,65 +295,3 @@
   ]
 }
 {% endschema %}
-
-{% comment %}
-  <style>
-    .marquee {
-      display: flex;
-      overflow: hidden;
-      gap: 1rem;
-      position: relative;
-      user-select: none;
-    }
-
-    .marquee:hover > .scroll {
-      animation-play-state: paused;
-    }
-
-    .marquee-contetn {
-      flex-shrink: 0;
-      display: flex;
-      justify-content: space-around;
-      min-width: 100%;
-      gap: 1rem;
-    }
-
-    @keyframes scroll {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(calc(-100% - 1rem));
-      }
-    }
-
-    .scroll {
-      animation: scroll 10s linear infinite;
-    }
-  </style>
-  <div class="marquee">
-    <div class="marquee-contetn scroll">
-      <p>This is my first test</p>
-      <p>This is my first test</p>
-      <p>This is my first test</p>
-    </div>
-    <div class="marquee-contetn scroll">
-      <p>This is my first test</p>
-      <p>This is my first test</p>
-      <p>This is my first test</p>
-    </div>
-  </div>
-
-  {% schema %}
-  {
-    "name": "Marquee",
-    "blocks": [],
-    "settings": [],
-    "presets": [
-      {
-        "name": "Marquee"
-      }
-    ]
-  }
-  {% endschema %}
-{% endcomment %}
