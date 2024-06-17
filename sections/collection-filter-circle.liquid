@@ -92,7 +92,7 @@
               {%- endif -%}
 
               <ul
-                class="filter-circle contains-card contains-card--collection center-mobile-{{ show_mobile_slider }} center-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size | plus: 1 }}-items"
+                class="filter-circle contains-card contains-card--collection slide-mobile-{{ show_mobile_slider }} slide-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size | plus: 1 }}-items"
                 id="Slider-{{ section.id }}"
                 role="list"
               >
