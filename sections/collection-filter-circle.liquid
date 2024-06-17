@@ -67,6 +67,10 @@
               assign columns_mobile_int = section.settings.columns_mobile | plus: 0
               assign show_mobile_slider = false
               if columns_mobile_int == 3
+                if filter.values.size > columns_mobile_int
+                  assign show_tablet_slider = true
+                endif
+              
                 assign columns_mobile_int = columns_mobile_int | minus: 1
                 if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
                   assign show_mobile_slider = true
@@ -76,7 +80,8 @@
                   assign show_mobile_slider = true
                 endif
               endif
-
+          
+              
               assign columns_desktop_int = section.settings.columns_desktop | plus: 0
               assign show_desktop_slider = false
               if section.settings.swipe_on_desktop and filter.values.size > columns_desktop_int
@@ -99,7 +104,7 @@
               {%- endif -%}
 
               <ul
-                class="filter-circle contains-card contains-card--collection slide-mobile-{{ show_mobile_slider }} slide-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size | plus: 1 }}-items"
+                class="filter-circle contains-card contains-card--collection slide-mobile-{{ show_mobile_slider }} slide-tablet-{{ show_tablet_slider }} slide-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size | plus: 1 }}-items"
                 id="Slider-{{ section.id }}"
                 role="list"
               >
