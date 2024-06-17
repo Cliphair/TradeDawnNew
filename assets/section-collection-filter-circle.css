@@ -184,6 +184,10 @@
   .slider.filter-circle--4-items {
     padding-bottom: 0;
   }
+
+  .section-collection-filter-circle .filter-circle.slide-tablet-false{
+    justify-content:center;
+  }
 }
 
 @media screen and (min-width: 750px) {
