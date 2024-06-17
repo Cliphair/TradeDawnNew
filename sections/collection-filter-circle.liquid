@@ -131,7 +131,7 @@
 
                       {% liquid
                         assign card_title = value.label | escape
-                        assign image_handle = card_title | handle | append: '-image-snippet.webp'
+                        assign image_handle = card_title | handle | append: '-snippet.webp'
                         assign card_image = images[image_handle]
                       %}
                       {% render 'card-filter-circle', card_title: card_title, card_image: card_image %}

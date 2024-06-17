@@ -123,13 +123,14 @@
                   when 'second'
                     assign type_image = card_product.media[1]
                   when 'type'
-                    assign image_handle = card_product.type | handle | append: '-type-image.webp'
+                    assign colour_handle = card_product.metafields.custom.colour_name | handle
+                    assign image_handle = card_product.type | handle | append: colour_handle | append: '-snippet.webp'
                     assign try_image = images[image_handle]
                     unless try_image == empty
                       assign type_image = try_image
                     endunless
                   when 'shade'
-                    assign image_handle = card_product.metafields.custom.colour_name | handle | append: '-type-image.webp'
+                    assign image_handle = card_product.metafields.custom.colour_name | handle | append: '-snippet.webp'
                     assign try_image = images[image_handle]
                     unless try_image == empty
                       assign type_image = try_image
