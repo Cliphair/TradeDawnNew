@@ -113,7 +113,7 @@
 }
 
 
-.section-collection-carrousel slider-component {
+.section-collection-carrousel .block-container {
 	position: relative;
 	margin-top: 4rem;
 }
@@ -292,7 +292,7 @@
 	font-weight: bold;
 	color: rgba(var(--color-button), var(--alpha-button-background));
 	cursor: pointer;
-	margin: 0 0 0 auto;
+	margin: 2rem 0 2rem auto;
 }
 
 .toggleContainer::before {
@@ -304,6 +304,10 @@
 	border-radius: 20px;
 	background: white;
 	transition: all 0.3s;
+}
+
+.toggleContainer ~ .block-container {
+	margin-top: 0;
 }
 
 .toggleContainer.left::before {
