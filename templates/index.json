@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "slideshow_image_link_WcQ9XG": {
@@ -67,9 +76,11 @@
       "disabled": true,
       "settings": {
         "text_size": "p",
-        "scroll_mobile": false,
-        "scroll_desktop": false,
         "color_scheme": "",
+        "columns_mobile": "1",
+        "scroll_mobile": false,
+        "columns_desktop": 3,
+        "scroll_desktop": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -113,7 +124,7 @@
           "type": "collections",
           "settings": {
             "block-title": "CHOOSE BY HAIR COLOUR…",
-            "block-introduction": "<p>A stunning collection of <strong>over 70 shades<\/strong>, including mixed colours, stunning balayages, and solid <br\/>shades to match everyone.<\/p>",
+            "block-introduction": "<p>Browse over <strong>70+ stunning shades<\/strong>, including a wide range of block colours, highlights, balayage and ombre, and our funky shade collection.<\/p>",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
             "link": "shopify:\/\/pages\/colour-matching-service",
