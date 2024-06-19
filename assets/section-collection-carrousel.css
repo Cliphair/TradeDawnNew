@@ -279,3 +279,60 @@
 		top: calc(((100vw - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 6) / 2 - 22px)
 	}
 }
+
+/* toggle bar and buttons */
+.toggleContainer {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: fit-content;
+	border: 3px solid rgba(var(--color-button), var(--alpha-button-background));
+	border-radius: 20px;
+	background: rgba(var(--color-button), var(--alpha-button-background));
+	font-weight: bold;
+	color: rgba(var(--color-button), var(--alpha-button-background));
+	cursor: pointer;
+	margin: 0 0 0 auto;
+}
+
+.toggleContainer::before {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 0%;
+	border-radius: 20px;
+	background: white;
+	transition: all 0.3s;
+}
+
+.toggleContainer.left::before {
+	left: 50%;
+}
+
+.toggleContainer p {
+	padding: 6px;
+	text-align: center;
+	z-index: 1;
+	margin: 0;
+}
+
+.toggleContainer.left p:first-child {
+	color: white;
+	transition: color 0.3s;
+}
+
+.toggleContainer.left p:last-child {
+	color: rgba(var(--color-button), var(--alpha-button-background));
+	transition: color 0.3s;
+}
+
+.toggleContainer p:first-child {
+	color: rgba(var(--color-button), var(--alpha-button-background));
+	transition: color 0.3s;
+}
+
+.toggleContainer p:last-child {
+	color: white;
+	transition: color 0.3s;
+}

@@ -43,126 +43,165 @@
 {% endstyle %}
 
 <div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  {%- for block in section.blocks -%}
-    {%- liquid
-      assign columns_mobile_int = section.settings.columns_mobile | plus: 0
-      assign show_mobile_slider = false
-      if section.settings.swipe_on_mobile and block.settings['collection-list'].links.size > columns_mobile_int
-        assign show_mobile_slider = true
-      endif
-
-      assign columns_desktop_int = section.settings.columns_desktop | plus: 0
-      assign show_desktop_slider = false
-      if section.settings.swipe_on_desktop and block.settings['collection-list'].links.size > columns_desktop_int
-        assign show_desktop_slider = true
-      endif
-    -%}
-
-    <div class="collection-carrousel-wrapper page-width isolate no-heading no-mobile-link {{ section.settings.text_allignment }}">
-      {%- unless block.settings['block-title'] == blank -%}
-        <div class="title-wrapper title-wrapper--no-top-margin">
-          <h2
-            id="SectionHeading-{{ block.id }}"
-            class="collection-carrousel-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          >
-            {{ block.settings['block-title'] }}
-          </h2>
-        </div>
-      {%- endunless -%}
-
-      {% unless block.settings['block-introduction'] == blank %}
-        <div class="intro-wrapper">
-          {{ block.settings['block-introduction'] }}
-        </div>
-      {% endunless %}
-
-      <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        {%- if show_mobile_slider or show_desktop_slider -%}
-          <div class="slider-buttons left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-            <button
-              type="button"
-              class="slider-button slider-button--prev"
-              name="previous"
-              aria-label="{{ 'general.slider.previous_slide' | t }}"
-            >
-              {% render 'icon-caret' %}
-            </button>
-          </div>
-        {%- endif -%}
-
-        <ul
-          class="collection-carrousel contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} collection-carrousel--{{ block.settings['collection-list'].links.size }}-items"
-          id="Slider-{{ section.id }}"
-          role="list"
+  <div class="collection-carrousel-wrapper page-width isolate no-heading no-mobile-link {{ section.settings.text_allignment }}">
+    {%- unless section.settings.title == blank -%}
+      <div class="title-wrapper title-wrapper--no-top-margin">
+        <h2
+          id="SectionHeading-{{ section.id }}"
+          class="collection-carrousel-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         >
-          {%- liquid
-            assign columns = block.settings['collection-list'].links.size
-            if columns > 3
-              assign columns = 3
-            endif
-          -%}
+          {{ section.settings.title }}
+        </h2>
+      </div>
+    {%- endunless -%}
 
-          {% for link in block.settings['collection-list'].links %}
-            {% if link.type == 'collection_link' %}
-              <li
-                id="Slide-{{ section.id }}-{{ forloop.index }}"
-                class="collection-carrousel__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
+    {% unless section.settings.introduction == blank %}
+      <div class="intro-wrapper">
+        {{ section.settings.introduction }}
+      </div>
+    {% endunless %}
+
+    {% if section.blocks.size > 1 %}
+      <div id="Toggle-buttons-{{ section.id }}" class="toggleContainer right">
+        <p class="h5">
+          {{ section.blocks.first.settings.label }}
+        </p>
+        <p class="h5">
+          {{ section.blocks.last.settings.label }}
+        </p>
+      </div>
+
+      <script>
+        let toggleBar = document.querySelectorAll('.toggleContainer');
+        for (let element of toggleBar) {
+          element.addEventListener('click', () => {
+            toggleCollection(element);
+          });
+        }
+
+        function toggleCollection(toggleBar) {
+          toggleClass(toggleBar, 'right');
+          toggleClass(toggleBar, 'left');
+          toggleClass(toggleBar.parentNode.querySelectorAll('.block-container')[0], 'visually-hidden');
+          toggleClass(toggleBar.parentNode.querySelectorAll('.block-container')[1], 'visually-hidden');
+        }
+
+        function toggleClass(element, className) {
+          if (element.classList.contains(className)) {
+            element.classList.remove(className);
+          } else {
+            element.classList.add(className);
+          }
+        }
+      </script>
+    {% endif %}
+
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+        assign show_mobile_slider = false
+        if section.settings.swipe_on_mobile and block.settings['collection-list'].links.size > columns_mobile_int
+          assign show_mobile_slider = true
+        endif
+
+        assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+        assign show_desktop_slider = false
+        if section.settings.swipe_on_desktop and block.settings['collection-list'].links.size > columns_desktop_int
+          assign show_desktop_slider = true
+        endif
+      -%}
+      <div
+        id="Toggle-container-{{ block.id }}"
+        class="block-container{% if forloop.index != 1 %} visually-hidden{% endif %}"
+      >
+        <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {%- if show_mobile_slider or show_desktop_slider -%}
+            <div class="slider-buttons left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+              <button
+                type="button"
+                class="slider-button slider-button--prev"
+                name="previous"
+                aria-label="{{ 'general.slider.previous_slide' | t }}"
               >
-                {% assign collectionObject = link.object %}
-                {% render 'card-collection',
-                  card_collection: collectionObject,
-                  media_aspect_ratio: section.settings.image_ratio,
-                  columns: columns,
-                  custom_title: link.title,
-                  circle_image: block.settings.circle_images,
-                  hide_arrow: section.settings.hide_card_arrow
-                %}
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-
-        {%- if show_mobile_slider or show_desktop_slider -%}
-          <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-            <div class="slider-counter caption visually-hidden">
-              <span class="slider-counter--current">1</span>
-              <span aria-hidden="true"> / </span>
-              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-              <span class="slider-counter--total">{{ block.settings['collection-list'].links.size }}</span>
+                {% render 'icon-caret' %}
+              </button>
             </div>
-            <button
-              type="button"
-              class="slider-button slider-button--next"
-              name="next"
-              aria-label="{{ 'general.slider.next_slide' | t }}"
+          {%- endif -%}
+
+          <ul
+            class="collection-carrousel contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} collection-carrousel--{{ block.settings['collection-list'].links.size }}-items"
+            id="Slider-{{ section.id }}"
+            role="list"
+          >
+            {%- liquid
+              assign columns = block.settings['collection-list'].links.size
+              if columns > 3
+                assign columns = 3
+              endif
+            -%}
+
+            {% for link in block.settings['collection-list'].links %}
+              {% if link.type == 'collection_link' %}
+                <li
+                  id="Slide-{{ section.id }}-{{ forloop.index }}"
+                  class="collection-carrousel__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {% assign collectionObject = link.object %}
+                  {% render 'card-collection',
+                    card_collection: collectionObject,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    columns: columns,
+                    custom_title: link.title,
+                    circle_image: block.settings.circle_images,
+                    hide_arrow: section.settings.hide_card_arrow
+                  %}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+
+          {%- if show_mobile_slider or show_desktop_slider -%}
+            <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+              <div class="slider-counter caption visually-hidden">
+                <span class="slider-counter--current">1</span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                <span class="slider-counter--total">{{ block.settings['collection-list'].links.size }}</span>
+              </div>
+              <button
+                type="button"
+                class="slider-button slider-button--next"
+                name="next"
+                aria-label="{{ 'general.slider.next_slide' | t }}"
+              >
+                {% render 'icon-caret' %}
+              </button>
+            </div>
+          {%- endif -%}
+        </slider-component>
+
+        {%- if block.settings.button_label != blank -%}
+          <div class="button-wrapper">
+            <a
+              {% if block.settings.link %}
+                href="{{ block.settings.link }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+              class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
             >
-              {% render 'icon-caret' %}
-            </button>
+              {{- block.settings.button_label | escape -}}
+            </a>
           </div>
         {%- endif -%}
-      </slider-component>
-
-      {%- if block.settings.button_label != blank -%}
-        <div class="button-wrapper">
-          <a
-            {% if block.settings.link %}
-              href="{{ block.settings.link }}"
-            {% else %}
-              role="link" aria-disabled="true"
-            {% endif %}
-            class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
-          >
-            {{- block.settings.button_label | escape -}}
-          </a>
-        </div>
-      {%- endif -%}
-    </div>
-  {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
 </div>
 
 {% schema %}
@@ -170,11 +209,16 @@
   "name": "Collection carrousel",
   "tag": "section",
   "class": "section section-collection-carrousel",
-  "max_blocks": 15,
+  "max_blocks": 2,
   "disabled_on": {
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": " Heading"
+    },
     {
       "type": "select",
       "id": "heading_size",
@@ -194,6 +238,11 @@
       ],
       "default": "h1",
       "label": "Heading size"
+    },
+    {
+      "type": "richtext",
+      "id": "introduction",
+      "label": "Introduction"
     },
     {
       "type": "select",
@@ -323,14 +372,10 @@
       "name": "Collections",
       "settings": [
         {
-          "type": "inline_richtext",
-          "id": "block-title",
-          "label": " Block heading"
-        },
-        {
-          "type": "richtext",
-          "id": "block-introduction",
-          "label": " Block introduction"
+          "type": "text",
+          "id": "label",
+          "label": "Block label",
+          "info": "Used on the toggle bar."
         },
         {
           "type": "link_list",
