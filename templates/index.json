@@ -123,6 +123,7 @@
         "a7031854-9bd7-41fe-b425-7e6f75e38807": {
           "type": "collections",
           "settings": {
+            "label": "",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
             "link": "shopify:\/\/pages\/colour-matching-service",
@@ -140,7 +141,9 @@
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
+        "title": "CHOOSE BY HAIR COLOUR…",
         "heading_size": "h1",
+        "introduction": "<p>Browse over <strong>70+ stunning shades<\/strong>, including a wide range of block colours, highlights, balayage and ombre, and our funky shade collection.<\/p>",
         "text_allignment": "left",
         "image_ratio": "square",
         "hide_card_arrow": true,
@@ -159,7 +162,19 @@
         "collections_6ibEMM": {
           "type": "collections",
           "settings": {
+            "label": "Clip Ins",
             "collection-list": "choose-by-hair-extensions-type-clip-ins",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "circle_images": false
+          }
+        },
+        "collections_Wkh4rx": {
+          "type": "collections",
+          "settings": {
+            "label": "Professionals",
+            "collection-list": "choose-by-hair-extensions-type-professional",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -168,7 +183,8 @@
         }
       },
       "block_order": [
-        "collections_6ibEMM"
+        "collections_6ibEMM",
+        "collections_Wkh4rx"
       ],
       "custom_css": [
         "h3 {color: #414141;}",
@@ -176,7 +192,9 @@
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
+        "title": "CHOOSE BY HAIR EXTENSION TYPE…",
         "heading_size": "h1",
+        "introduction": "<p>Are you looking for a temporary or permanent option?<\/p>",
         "text_allignment": "left",
         "image_ratio": "square",
         "hide_card_arrow": true,
