@@ -123,8 +123,6 @@
         "a7031854-9bd7-41fe-b425-7e6f75e38807": {
           "type": "collections",
           "settings": {
-            "block-title": "CHOOSE BY HAIR COLOUR…",
-            "block-introduction": "<p>Browse over <strong>70+ stunning shades<\/strong>, including a wide range of block colours, highlights, balayage and ombre, and our funky shade collection.<\/p>",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
             "link": "shopify:\/\/pages\/colour-matching-service",
@@ -161,9 +159,7 @@
         "collections_6ibEMM": {
           "type": "collections",
           "settings": {
-            "block-title": "CHOOSE BY HAIR EXTENSION TYPE…",
-            "block-introduction": "<p><strong>Thickness, bounce, length<\/strong>: what do you want to add to your hair? Find the right type of hair extensions <br\/>for your hair type, density, and haircut – and achieve a flawless blend.<\/p>",
-            "collection-list": "choose-by-hair-extensions-type",
+            "collection-list": "choose-by-hair-extensions-type-clip-ins",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
