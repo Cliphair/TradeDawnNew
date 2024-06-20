@@ -4,6 +4,20 @@
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 {{ 'section-blog-spot.css' | asset_url | stylesheet_tag }}
 
+{% if section.settings.enable_tags %}
+  {{ 'section-article-categories.css' | asset_url | stylesheet_tag }}
+  {{ 'component-category-card.css' | asset_url | stylesheet_tag }}
+
+  {% liquid
+    assign categories = section.settings.blog.metafields.custom.main_categories.value
+
+    assign tags_size = 0
+    for category in categories
+      assign tags_size = tags_size | plus: 1
+    endfor
+  %}
+{% endif %}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -54,7 +68,7 @@
 
   <div class="page-width isolate section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
-      <div class="title-wrapper {% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin {{ section.settings.heading_alignment }}">
+      <div class="title-wrapper {% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin {{ section.settings.text_alignment }}">
         <h2
           id="SectionHeading-{{ section.id }}"
           class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -67,19 +81,84 @@
       </div>
     {%- endunless -%}
 
-    {% if section.blocks.size > 0 and section.settings.blog != blank %}
-      <ul class="tag-wrapper">
-        {% for block in section.blocks %}
-          <li class="tag {{  section.settings.tags_size }}">
-            <a
-              href="{{ section.settings.blog.url }}/tagged/{{ block.settings.tag | handleize }}{% if section.settings.scroll_to_grid %}#main-blog-section{% endif %}"
-              title="{{ section.settings.blog.title }} - {{ block.settings.tag | capitalize }}"
-            >
-              {{- block.settings.tag | upcase -}}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+    {% unless section.settings.introduction == blank %}
+      <div class="intro-wrapper {{ section.settings.text_alignment }}">
+        {{ section.settings.introduction }}
+      </div>
+    {% endunless %}
+
+    {% if section.settings.enable_tags and tags_size > 0 %}
+      {%- liquid
+        assign tags_columns_mobile_int = section.settings.tags_columns_mobile | plus: 0
+        assign tags_show_mobile_slider = false
+        if section.settings.tags_swipe_on_mobile and tags_size > tags_columns_mobile_int
+          assign tags_show_mobile_slider = true
+        endif
+
+        assign tags_columns_desktop_int = section.settings.tags_columns_desktop | plus: 0
+        assign tags_show_desktop_slider = false
+        if section.settings.tags_swipe_on_desktop and tags_size > tags_columns_desktop_int
+          assign tags_show_desktop_slider = true
+        endif
+      -%}
+
+      <div class="tag-wrapper section-article-categories">
+        <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          <ul
+            class="articles-categories grid grid--{{ section.settings.tags_columns_desktop }}-col-desktop grid--{{ section.settings.tags_columns_mobile }}-col-tablet-down{% if section.settings.tags_swipe_on_mobile or section.settings.tags_swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.tags_swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.tags_swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ tags_size }}-items"
+            id="Slider-{{ section.id }}"
+            role="list"
+          >
+            {%- liquid
+              assign columns = tags_size
+              if columns > 3
+                assign columns = 3
+              endif
+            -%}
+
+            {% for category in categories %}
+              <li
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                class="articles-list__item grid__item{% if tags_show_mobile_slider or tags_show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <div class="category circle">
+                  {% render 'category-card', category_object: category %}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+          {%- if tags_show_mobile_slider or tags_show_desktop_slider -%}
+            <div class="slider-buttons no-js-hidden slider--{{ section.settings.tags_columns_desktop }}-col-desktop slider--{{ section.settings.tags_columns_mobile }}-col-tablet-down">
+              <button
+                type="button"
+                class="slider-button slider-button--prev"
+                name="previous"
+                aria-label="{{ 'general.slider.previous_slide' | t }}"
+              >
+                {% render 'icon-caret' %}
+              </button>
+              <div class="slider-counter caption visually-hidden">
+                <span class="slider-counter--current">1</span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                <span class="slider-counter--total">{{ tags_size }}</span>
+              </div>
+              <button
+                type="button"
+                class="slider-button slider-button--next"
+                name="next"
+                aria-label="{{ 'general.slider.next_slide' | t }}"
+              >
+                {% render 'icon-caret' %}
+              </button>
+            </div>
+          {%- endif -%}
+        </slider-component>
+      </div>
     {% endif %}
 
     {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
@@ -204,6 +283,11 @@
       "label": "t:sections.all.heading_size.label"
     },
     {
+      "type": "richtext",
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
       "type": "select",
       "id": "tags_size",
       "options": [
@@ -225,7 +309,7 @@
     },
     {
       "type": "select",
-      "id": "heading_alignment",
+      "id": "text_alignment",
       "options": [
         {
           "value": "left",
@@ -241,7 +325,7 @@
         }
       ],
       "default": "left",
-      "label": "Heading alignment"
+      "label": "Text alignment"
     },
     {
       "type": "blog",
@@ -346,11 +430,59 @@
       "label": "t:sections.featured-blog.settings.show_view_all.label"
     },
     {
+      "type": "header",
+      "content": "Tags settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_tags",
+      "default": false,
+      "label": "Enable tags",
+      "info": "This section uses the a metafield defined on the blog."
+    },
+    {
       "type": "checkbox",
       "id": "scroll_to_grid",
       "default": false,
       "label": "Tag scroll to grid",
       "info": "Scroll to articles grid after click."
+    },
+    {
+      "type": "range",
+      "id": "tags_columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "tags_swipe_on_desktop",
+      "default": false,
+      "label": "Enable swipe on desktop"
+    },
+    {
+      "type": "select",
+      "id": "tags_columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ],
+      "default": "1",
+      "label": "Number of columns on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "tags_swipe_on_mobile",
+      "default": false,
+      "label": "Enable swipe on mobile"
     },
     {
       "type": "header",
@@ -375,20 +507,6 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
-  ],
-  "blocks": [
-    {
-      "type": "tag",
-      "name": "Tag",
-      "limit": 6,
-      "settings": [
-        {
-          "type": "inline_richtext",
-          "id": "tag",
-          "label": "Tag"
-        }
-      ]
     }
   ],
   "presets": [
