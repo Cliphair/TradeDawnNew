@@ -9,6 +9,7 @@
    	- description: {String} Video description
    	- cover_image: {Object} Image Liquid object
    	- image_ratio: {Float} Image aspect ratio
+    - title: {String} Video title
   Usage:
    	{% render 'video-card' %}
 {% endcomment %}
@@ -114,3 +115,6 @@
     {%- endif -%}
   </template>
 </deferred-media-popup>
+{% if title and title != blank %}
+  <h3 class="h4">{{ title | escape }}</h3>
+{% endif %}

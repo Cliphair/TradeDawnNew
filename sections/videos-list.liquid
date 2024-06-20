@@ -129,6 +129,12 @@
       </div>
     {%- endunless -%}
 
+    {% unless section.settings.introduction == blank %}
+      <div class="intro-wrapper">
+        {{ section.settings.introduction }}
+      </div>
+    {% endunless %}
+
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {%- if show_mobile_slider or show_desktop_slider -%}
         <div class="slider-buttons slider-buttons-{{ section.settings.image_ratio }} left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
@@ -172,7 +178,8 @@
               video_url_type: block.settings.video_url.type,
               description: block.settings.description,
               cover_image: block.settings.cover_image,
-              image_ratio: image_ratio
+              image_ratio: image_ratio,
+              title: block.settings.title
             %}
           </li>
         {% endfor %}
@@ -197,12 +204,6 @@
         </div>
       {%- endif -%}
     </slider-component>
-
-    {% unless section.settings.introduction == blank %}
-      <div class="intro-wrapper">
-        {{ section.settings.introduction }}
-      </div>
-    {% endunless %}
 
     {%- if section.settings.button_label != blank -%}
       <div class="button-wrapper">
@@ -433,6 +434,11 @@
           "type": "image_picker",
           "id": "cover_image",
           "label": "t:sections.video.settings.cover_image.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Video title"
         },
         {
           "type": "text",
