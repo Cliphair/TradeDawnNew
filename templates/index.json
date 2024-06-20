@@ -298,7 +298,7 @@
         "heading_3EjH4p": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>SEE IT IN REAL LIFE<\/strong>",
+            "heading": "SEE IT IN REAL LIFE",
             "heading_size": "h1"
           }
         },
@@ -513,6 +513,7 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/3. LOOK 3 (DRAFT 1).mp4",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "",
             "description": ""
           }
         },
@@ -521,6 +522,7 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/4. LOOK 4 (DRAFT 1).mp4",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "",
             "description": ""
           }
         },
@@ -529,6 +531,7 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/2. LOOK 2 (DRAFT 1).mp4",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "",
             "description": ""
           }
         },
@@ -538,6 +541,7 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/1. LOOK 1 (Draft 1)-.mp4",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "",
             "description": ""
           }
         }
@@ -553,7 +557,7 @@
         "img {border-radius: 10px;}"
       ],
       "settings": {
-        "title": "Hair Tutorial Videos",
+        "title": "HAIR TUTORIAL VIDEOS",
         "heading_size": "h1",
         "introduction": "<p>Dive into our hair extension tutorial videos for endless styling ideas, step-by-step application guides, and expert extension advice! <\/p>",
         "button_label": "VIEW VIDEO GALLERY",
@@ -573,60 +577,15 @@
     },
     "342029b3-5620-4e2e-864b-55edf0aa9b0d": {
       "type": "blog-spot",
-      "blocks": {
-        "tag_gTQgAc": {
-          "type": "tag",
-          "settings": {
-            "tag": "The Hair Extensions Bible"
-          }
-        },
-        "tag_MKYQKA": {
-          "type": "tag",
-          "settings": {
-            "tag": "Hair Care & Tips"
-          }
-        },
-        "tag_cXg8U8": {
-          "type": "tag",
-          "settings": {
-            "tag": "Top Trends"
-          }
-        },
-        "tag_b7A6Jb": {
-          "type": "tag",
-          "settings": {
-            "tag": "Styling Guides & Tutorials"
-          }
-        },
-        "tag_UJwHJw": {
-          "type": "tag",
-          "settings": {
-            "tag": "Lifestyle & Pop Culture"
-          }
-        },
-        "tag_fjUGYX": {
-          "type": "tag",
-          "settings": {
-            "tag": "Wedding & Occasion Hair"
-          }
-        }
-      },
-      "block_order": [
-        "tag_gTQgAc",
-        "tag_MKYQKA",
-        "tag_cXg8U8",
-        "tag_b7A6Jb",
-        "tag_UJwHJw",
-        "tag_fjUGYX"
-      ],
       "custom_css": [
         ".tag {color: #414141;}"
       ],
       "settings": {
-        "heading": "<strong>The Blog Spot <\/strong>",
+        "heading": "THE BLOG SPOT",
         "heading_size": "h1",
+        "introduction": "<p>For the latest haircare tips, top trends and more, browse our blog categories and Hair Extensions Bible for everything you need to know about hair and extensions! <\/p>",
         "tags_size": "h4",
-        "heading_alignment": "center",
+        "text_alignment": "center",
         "blog": "hair-blog",
         "post_limit": 3,
         "columns_mobile": "1",
@@ -639,7 +598,12 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
+        "enable_tags": true,
         "scroll_to_grid": true,
+        "tags_columns_desktop": 6,
+        "tags_swipe_on_desktop": true,
+        "tags_columns_mobile": "2",
+        "tags_swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
