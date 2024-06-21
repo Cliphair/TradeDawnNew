@@ -192,9 +192,12 @@
 .card__media .media img {
   height: 100%;
   object-fit: cover;
-  /* object-fit: contain; */
   object-position: center center;
   width: 100%;
+}
+
+.product-card-wrapper .card__media .media img {
+  object-fit: contain;
 }
 
 .card__inner:not(.ratio)>.card__content {

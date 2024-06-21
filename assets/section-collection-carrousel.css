@@ -16,6 +16,11 @@
 		scroll-padding-left: 0;
 	}
 
+	.section-collection-carrousel .slider--tablet:after {
+		content: none;
+		margin-left: 0;
+	}
+
 	.section-collection-carrousel .grid--1-col-tablet-down .grid__item {
 		width: 100%;
 	}
@@ -128,7 +133,7 @@
 }
 
 .section-collection-carrousel .card__information {
-	padding: 0 1rem 1.3rem;
+	padding: 0 1rem;
 }
 
 .section-collection-carrousel .button-wrapper {
@@ -306,7 +311,7 @@
 	transition: all 0.3s;
 }
 
-.toggleContainer ~ .block-container {
+.toggleContainer~.block-container {
 	margin-top: 0;
 }
 
