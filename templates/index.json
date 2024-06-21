@@ -25,6 +25,25 @@
         "padding_bottom": 0
       }
     },
+    "visual_menu_dQaXWU": {
+      "type": "visual-menu",
+      "custom_css": [
+        ".collection-carrousel-wrapper{max-width:unset;}"
+      ],
+      "settings": {
+        "collection-list": "under-nav-menu",
+        "image_ratio": "square",
+        "circle_images": true,
+        "hide_card_arrow": true,
+        "columns_desktop": 5,
+        "swipe_on_desktop": true,
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "slideshow_image_link_WcQ9XG": {
       "type": "slideshow-image-link",
       "blocks": {
@@ -813,6 +832,7 @@
   },
   "order": [
     "visual_menu_66DUPM",
+    "visual_menu_dQaXWU",
     "slideshow_image_link_WcQ9XG",
     "maquee_bdNYHF",
     "horizontal_list",
