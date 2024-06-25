@@ -1,10 +1,16 @@
-{% comment %}Homepage always need the hreflang{% endcomment %}
+{% comment %}Same for all the pages{% endcomment %}
+<link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}" />
+<link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB" />
+
+{% comment %}Hreflang homepage{% endcomment %}
 {% if request.page_type == "index" %}
-  <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
-  <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB" />
-  <link rel="alternate" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}" hreflang="en-US" />
+  <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}" />
+  <link rel="alternate" hreflang="de-DE" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de' }}" />
+  <link rel="alternate" hreflang="en-CA" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca' }}" />
+  <link rel="alternate" hreflang="en-AU" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' }}" />
 {% endif %}
 
+{% comment %}Hreflang remaining pages{% endcomment %}
 {% liquid
   assign excluded_pages = "/pages/flash-sale-upto-15-off;/pages/clearpay-hair-extensions;/pages/hair-extensions;/pages/discounts-and-voucher-codes;/pages/blue-light-card;/pages/lookbook;/pages/clearpay-sales-offers;/pages/salon-international;/pages/festive-season-timings-2020" | split: ";"
   for excluded_page in excluded_pages
@@ -16,13 +22,15 @@
 
 {% unless request.page_type == "index" %}
   {% unless is_excluded %}
-    <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
-    <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB" />
-    <link rel="alternate" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}" hreflang="en-US" />
+    <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}" />
+    <link rel="alternate" hreflang="de-DE" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}" />
+    <link rel="alternate" hreflang="en-CA" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}" />
+    <link rel="alternate" hreflang="en-AU" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}" />
   {% else %}
-    <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
-    <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB" />
-    <link rel="alternate" href="{{ 'https://www.cliphair.com/' }}" hreflang="en-US" />
+    <link rel="alternate" hreflang="en-US" href="{{ 'https://www.cliphair.com/' }}" />
+    <link rel="alternate" hreflang="de-DE" href="{{ 'https://www.cliphair.com/de-de' }}" />
+    <link rel="alternate" hreflang="en-CA" href="{{ 'https://www.cliphair.com/en-ca' }}" />
+    <link rel="alternate" hreflang="en-AU" href="{{ 'https://www.cliphair.com/en-au' }}" />
   {% endunless %}
 {% endunless %}
 
