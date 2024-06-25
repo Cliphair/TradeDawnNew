@@ -41,7 +41,7 @@
 
     {% unless template.name == 'article' %}
       <!-- Manual hreflang between UK and US sites -->
-      <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
+      <!-- <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
       <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}">
       <link
         rel="alternate"
@@ -58,7 +58,8 @@
         hreflang="en-AU"
         href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' }}"
       >
-      <link rel="alternate" hreflang="en-GB" href="{{ canonical_url  }}">
+      <link rel="alternate" hreflang="en-GB" href="{{ canonical_url  }}"> -->
+      {% render 'hreflang' %}
       <!-- End manual hreflang between UK and US sites -->
     {% endunless %}
 
