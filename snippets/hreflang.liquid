@@ -1,0 +1,28 @@
+{% comment %}Homepage always need the hreflang{% endcomment %}
+{% if request.page_type == "index" %}
+  <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
+  <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB" />
+  <link rel="alternate" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}" hreflang="en-US" />
+{% endif %}
+
+{% liquid
+  assign excluded_pages = "/pages/flash-sale-upto-15-off;/pages/clearpay-hair-extensions;/pages/hair-extensions;/pages/discounts-and-voucher-codes;/pages/blue-light-card;/pages/lookbook;/pages/clearpay-sales-offers;/pages/salon-international;/pages/festive-season-timings-2020" | split: ";"
+  for excluded_page in excluded_pages
+    if request.path contains excluded_page
+      assign is_excluded = true
+    endif
+  endfor
+%}
+
+{% unless request.page_type == "index" %}
+  {% unless is_excluded %}
+    <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
+    <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB" />
+    <link rel="alternate" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}" hreflang="en-US" />
+  {% else %}
+    <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
+    <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB" />
+    <link rel="alternate" href="{{ 'https://www.cliphair.com/' }}" hreflang="en-US" />
+  {% endunless %}
+{% endunless %}
+
