@@ -2575,7 +2575,7 @@ product-info .loading-overlay:not(.hidden)~*,
   display: flex;
   grid-area: icons;
   justify-self: end;
-  padding-right: 0.8rem;
+  margin-right: -1.2rem;
 }
 
 .header__icons .shopify-app-block {
@@ -2624,7 +2624,6 @@ product-info .loading-overlay:not(.hidden)~*,
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
 }
 
 .header__icon--menu[aria-expanded='true']::before {

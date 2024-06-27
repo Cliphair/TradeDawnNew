@@ -169,25 +169,43 @@
 
                   <li style="{%- if childlink.links != blank -%}width:calc(100% / 3);{% endif %}">
                     <a
-                      id="HeaderMenu-clip-ins-clip-in"
-                      href="/collections/clip-in-ponytail-extensions"
-                      class="mega-menu__link mega-menu__link--level-3 link{% if request.path == '/collections/clip-in-ponytail-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/clip-in-ponytail-extensions' %}
+                      id="HeaderMenu-clip-ins-clip-in-hairpieces-ponytail"
+                      href="/collections/hair-pieces"
+                      class="mega-menu__link mega-menu__link--level-3 link {% if request.path == '/collections/hair-pieces' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/hair-pieces' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      CLIP IN PONYTAIL HAIR EXTENSIONS
+                      HAIRPIECES & PONYTAIL
                     </a>
-                    <a
-                      id="HeaderMenu-clip-ins-clip-in"
-                      href="/collections/fringe-clip-in-hair-extensions"
-                      class="mega-menu__link mega-menu__link--level-3 link{% if request.path == '/collections/fringe-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/fringe-clip-in-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      CLIP IN FRINGE HAIR EXTENSIONS
-                    </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-hairpieces-ponytail-ponytail"
+                          href="/collections/clip-in-ponytail-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/clip-in-ponytail-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/clip-in-ponytail-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Clip In Ponytail
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-clip-ins-clip-in-hairpieces-ponytail-fringe"
+                          href="/collections/fringe-clip-in-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/fringe-clip-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/fringe-clip-in-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Clip In Fringe
+                        </a>
+                      </li>
+                    </ul>
+
                     <a
                       id="HeaderMenu-clip-ins-clip-in"
                       href="/collections/hair-extensions-bundle"
@@ -327,16 +345,6 @@
                     </a>
                   </li>
                 </ul>
-                <a
-                  id="HeaderMenu-professional-bundles"
-                  href="/collections/hair-extensions-bundle"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/hair-extensions-bundle' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  HAIR EXTENSION BUNDLES & COMBOS
-                </a>
               </li>
 
               <li style="width:calc(100% / 3);">
@@ -409,18 +417,6 @@
                       {% endif %}
                     >
                       Remy Royale Flat Tips (50g)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-micro-ring-nano-ring"
-                      href="/collections/nano-rings-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/nano-rings-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Remy Royale Nano Rings (50g)
                     </a>
                   </li>
                 </ul>
@@ -521,6 +517,16 @@
                   </li>
                 </ul>
                 <a
+                  id="HeaderMenu-professional-bundles"
+                  href="/collections/hair-extensions-bundle"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/hair-extensions-bundle' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  HAIR EXTENSION BUNDLES & COMBOS
+                </a>
+                <a
                   id="HeaderMenu-professional-trade"
                   href="/pages/trade-enquiries"
                   class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/trade-enquiries' %} mega-menu__link--active{% endif %}"
@@ -608,6 +614,116 @@
                     </a>
                   </li>
                 </ul>
+                <!--
+                  <a
+                    id="HeaderMenu-shop-by-shade-browns"
+                    href="/collections/brown-hair-extensions"
+                    class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/brown-hair-extensions' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/brown-hair-extensions' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    BROWN SHADES
+                  </a>
+                  <ul class="list-unstyled" role="list">
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-2"
+                        href="/collections/darkest-brown-hair-extensions-2"
+                        class="mega-menu__link link{% if request.path == '/collections/darkest-brown-hair-extensions-2' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/darkest-brown-hair-extensions-2' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Darkest Brown (#2)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-3"
+                        href="/collections/dark-brown-hair-extensions-3"
+                        class="mega-menu__link link{% if request.path == '/collections/dark-brown-hair-extensions-3' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/dark-brown-hair-extensions-3' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Dark Brown (#3)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-4"
+                        href="/collections/medium-brown-hair-extensions-4"
+                        class="mega-menu__link link{% if request.path == '/collections/medium-brown-hair-extensions-4' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/medium-brown-hair-extensions-4' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Medium Brown (#4)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-5"
+                        href="/collections/toffee-brown-hair-extensions-5"
+                        class="mega-menu__link link{% if request.path == '/collections/toffee-brown-hair-extensions-5' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/toffee-brown-hair-extensions-5' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Toffee Brown (#5)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-6"
+                        href="/collections/light-chestnut-brown-hair-extensions-6"
+                        class="mega-menu__link link{% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Light Brown (#6)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-6b"
+                        href="/collections/mousey-brown-hair-extensions-6b"
+                        class="mega-menu__link link{% if request.path == '/collections/mousey-brown-hair-extensions-6b' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/mousey-brown-hair-extensions-6b' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Mousey Brown (#6B)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-8"
+                        href="/collections/medium-ash-brown-hair-extensions-8"
+                        class="mega-menu__link link{% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Medium Ash Brown (#8)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-shop-by-shade-browns-9"
+                        href="/collections/ash-brown-hair-extensions-9"
+                        class="mega-menu__link link{% if request.path == '/collections/ash-brown-hair-extensions-9' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/collections/ash-brown-hair-extensions-9' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Ash Brown (#9)
+                      </a>
+                    </li>
+                  </ul>
+                -->
               </li>
               <li style="width:calc(100% / 7);">
                 <a
@@ -1516,89 +1632,152 @@
               class="mega-menu__list page-width mega-menu__list--condensed"
               role="list"
             >
-              <li style="width:calc(100% / 1);">
-                <a
-                  id="HeaderMenu-help-me-choose-hlep-me-choose"
-                  href="#"
-                  class="mega-menu__link mega-menu__link--level-2 link"
-                >
-                  HELP ME CHOOSE
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-help-me-choose-hlep-me-choose-colour-match"
-                      href="/pages/colour-matching-service"
-                      class="mega-menu__link link{% if request.path == '/pages/colour-matching-service' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/pages/colour-matching-service' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Express Colour Match
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-help-me-choose-hlep-me-choose-journey"
-                      href="/pages/journey"
-                      class="mega-menu__link link{% if request.path == '/pages/journey' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/pages/journey' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Hair Quiz
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-help-me-choose-hlep-me-choose-video-guide"
-                      href="/pages/video-guides"
-                      class="mega-menu__link link{% if request.path == '/pages/video-guides' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/pages/video-guides' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Video Guide
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
-                      href="#"
-                      class="mega-menu__link link{% if request.path == '#' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '#' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Length Guide (missign URL)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-help-me-choose-hlep-me-choose-contact"
-                      href="/pages/contact-us"
-                      class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/pages/contact-us' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Contact US
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-help-me-choose-hlep-me-choose-buying-guide"
-                      href="/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary"
-                      class="mega-menu__link link{% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Ultimate Hair Extensions Buying Guide
-                    </a>
-                  </li>
-                </ul>
-              </li>
+              <a
+                id="HeaderMenu-help-me-choose-hlep-me-choose-colour-match"
+                href="/pages/colour-matching-service"
+                class="mega-menu__link link{% if request.path == '/pages/colour-matching-service' %} mega-menu__link--active{% endif %}"
+                {% if request.path == '/pages/colour-matching-service' %}
+                  aria-current="page"
+                {% endif %}
+              >
+                Express Colour Match
+              </a>
+              <a
+                id="HeaderMenu-help-me-choose-hlep-me-choose-journey"
+                href="/pages/journey"
+                class="mega-menu__link link{% if request.path == '/pages/journey' %} mega-menu__link--active{% endif %}"
+                {% if request.path == '/pages/journey' %}
+                  aria-current="page"
+                {% endif %}
+              >
+                Hair Quiz
+              </a>
+              <a
+                id="HeaderMenu-help-me-choose-hlep-me-choose-video-guide"
+                href="/pages/video-guides"
+                class="mega-menu__link link{% if request.path == '/pages/video-guides' %} mega-menu__link--active{% endif %}"
+                {% if request.path == '/pages/video-guides' %}
+                  aria-current="page"
+                {% endif %}
+              >
+                Video Guide
+              </a>
+              <a
+                id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
+                href="/blogs/hair-blog/the-ultimate-hair-extension-length-guide"
+                class="mega-menu__link link{% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %} mega-menu__link--active{% endif %}"
+                {% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %}
+                  aria-current="page"
+                {% endif %}
+              >
+                Length Guide
+              </a>
+              <a
+                id="HeaderMenu-help-me-choose-hlep-me-choose-contact"
+                href="/pages/contact-us"
+                class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
+                {% if request.path == '/pages/contact-us' %}
+                  aria-current="page"
+                {% endif %}
+              >
+                Contact Us
+              </a>
+              <a
+                id="HeaderMenu-help-me-choose-hlep-me-choose-buying-guide"
+                href="/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary"
+                class="mega-menu__link link{% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %} mega-menu__link--active{% endif %}"
+                {% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
+                  aria-current="page"
+                {% endif %}
+              >
+                Ultimate Hair Extensions Buying Guide
+              </a>
+
+              {% comment %}
+                <li style="width:calc(100% / 1);">
+                  <a
+                    id="HeaderMenu-help-me-choose-hlep-me-choose"
+                    href="#"
+                    class="mega-menu__link mega-menu__link--level-2 link"
+                  >
+                    HELP ME CHOOSE
+                  </a>
+                  <ul class="list-unstyled" role="list">
+                    <li>
+                      <a
+                        id="HeaderMenu-help-me-choose-hlep-me-choose-colour-match"
+                        href="/pages/colour-matching-service"
+                        class="mega-menu__link link{% if request.path == '/pages/colour-matching-service' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/pages/colour-matching-service' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Express Colour Match
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-help-me-choose-hlep-me-choose-journey"
+                        href="/pages/journey"
+                        class="mega-menu__link link{% if request.path == '/pages/journey' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/pages/journey' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Hair Quiz
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-help-me-choose-hlep-me-choose-video-guide"
+                        href="/pages/video-guides"
+                        class="mega-menu__link link{% if request.path == '/pages/video-guides' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/pages/video-guides' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Video Guide
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
+                        href="#"
+                        class="mega-menu__link link{% if request.path == '#' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '#' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Length Guide (missign URL)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-help-me-choose-hlep-me-choose-contact"
+                        href="/pages/contact-us"
+                        class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/pages/contact-us' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Contact US
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        id="HeaderMenu-help-me-choose-hlep-me-choose-buying-guide"
+                        href="/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary"
+                        class="mega-menu__link link{% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %} mega-menu__link--active{% endif %}"
+                        {% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        Ultimate Hair Extensions Buying Guide
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              {% endcomment %}
             </ul>
           </div>
         </details>
@@ -1941,82 +2120,82 @@
                 <a
                   id="HeaderMenu-blog-homepage"
                   href="/blogs/hair-blog"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  BLOG HOMEPAGE
+                  Blog Homepage
                 </a>
                 <a
                   id="HeaderMenu-blog-latest"
-                  href="#"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='#' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '#' %}
+                  href="/blogs/hair-blog#main-blog-section"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog#main-blog-section' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog#main-blog-section' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  LATEST BLOGS (missign link)
+                  Latest Blogs
                 </a>
                 <a
                   id="HeaderMenu-blog-extension-bible"
                   href="/blogs/hair-blog/tagged/the-hair-extensions-bible"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/the-hair-extensions-bible' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog/tagged/the-hair-extensions-bible' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog/tagged/the-hair-extensions-bible' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  HAIR EXTENSION BIBLE
+                  Hair Extension Bible
                 </a>
                 <a
                   id="HeaderMenu-blog-top-trends"
                   href="/blogs/hair-blog/tagged/top-trends"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/top-trends' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog/tagged/top-trends' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog/tagged/top-trends' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  TOP TRENDS
+                  Top Trends
                 </a>
                 <a
                   id="HeaderMenu-blog-styling-guides"
                   href="/blogs/hair-blog/tagged/styling-guides-tutorials"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/styling-guides-tutorials' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog/tagged/styling-guides-tutorials' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog/tagged/styling-guides-tutorials' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  STYLING GUIDES & TUTORIALS
+                  Styling Guides & Tutorials
                 </a>
                 <a
                   id="HeaderMenu-blog-haircare-tips"
                   href="/blogs/hair-blog/tagged/hair-care-tips"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/hair-care-tips' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog/tagged/hair-care-tips' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog/tagged/hair-care-tips' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  HAIRCARE & TIPS
+                  Haircare & Tips
                 </a>
                 <a
                   id="HeaderMenu-blog-wedding"
                   href="/blogs/hair-blog/tagged/wedding-occasion-hair"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/wedding-occasion-hair' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog/tagged/wedding-occasion-hair' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog/tagged/wedding-occasion-hair' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  WEDDING & OCCASION HAIR
+                  Wedding & Occasion Hair
                 </a>
                 <a
                   id="HeaderMenu-blog-lifestyle"
                   href="/blogs/hair-blog/tagged/lifestyle-pop-culture"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/blogs/hair-blog/tagged/lifestyle-pop-culture' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path =='/blogs/hair-blog/tagged/lifestyle-pop-culture' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog/tagged/lifestyle-pop-culture' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  CELEBRITY & LIFESTYLE
+                  Celebrity & Lifestyle
                 </a>
               </li>
             </ul>
@@ -2054,108 +2233,108 @@
                 <a
                   id="HeaderMenu-info-hub-story"
                   href="/pages/about-us"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/about-us' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/about-us' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/about-us' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  OUR STORY
+                  Our Story
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-blog"
                   href="/blogs/hair-blog"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/blogs/hair-blog' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  BLOG
+                  Blog
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-faqs"
                   href="/pages/faqs"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/faqs' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/faqs' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/faqs' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  FAQS
+                  Faqs
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-care-instructions"
                   href="/pages/care-instructions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/care-instructions' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/care-instructions' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/care-instructions' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  CARE INSTRUCTIONS
+                  Care Instructions
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-shipping"
                   href="/pages/shipping-information"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/shipping-information' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/shipping-information' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/shipping-information' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  SHIPPING INFORMATION
+                  Shipping Information
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-returns"
                   href="/pages/returns-information"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/returns-information' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/returns-information' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/returns-information' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  RETURNS
+                  Returns
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-rewards"
                   href="/pages/rewards"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/rewards' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/rewards' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/rewards' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  REWARDS
+                  Rewards
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-contact-us"
                   href="/pages/contact-us"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/contact-us' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  CONTACT US
+                  Contact Us
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-ambassador"
                   href="#"
-                  class="mega-menu__link mega-menu__link--level-2 link"
+                  class="mega-menu__link link"
                 >
-                  BECOME AN AMBASSADOR (missign click)
+                  <span onclick="klrRecruit.openRecruit()">Become An Ambassador</span>
                 </a>
 
                 <a
                   id="HeaderMenu-info-hub-trade"
                   href="/pages/trade-enquiries"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/pages/trade-enquiries' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path == '/pages/trade-enquiries' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/trade-enquiries' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  TRADE APPLICATION
+                  Trade Application
                 </a>
               </li>
             </ul>
@@ -2202,45 +2381,42 @@
                 <a
                   id="HeaderMenu-discounts-rewards"
                   href="/pages/rewards"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='/pages/rewards' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path=='/pages/rewards' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/rewards' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  MY REWARDS
+                  My Rewards
                 </a>
 
                 <a
                   id="HeaderMenu-discounts-new-customer"
                   href="/pages/rewards"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='/pages/rewards' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path=='/pages/rewards' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/rewards' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  NEW CUSTOMER DISCOUNT
+                  New Customer Discount
                 </a>
 
                 <a
                   id="HeaderMenu-discounts-blue-light"
                   href="/pages/blue-light-card"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='/pages/blue-light-card' %} mega-menu__link--active{% endif %}"
+                  class="mega-menu__link link{% if request.path=='/pages/blue-light-card' %} mega-menu__link--active{% endif %}"
                   {% if request.path == '/pages/blue-light-card' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  BLUE LIGHT CARD DISCOUNT
+                  Blue Light Card Discount
                 </a>
 
                 <a
                   id="HeaderMenu-discounts-student"
-                  href="#"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path=='#' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '#' %}
-                    aria-current="page"
-                  {% endif %}
+                  href="https://www.studentbeans.com/student-discount/uk/cliphair"
+                  class="mega-menu__link link"
                 >
-                  STUDENT DISCOUNT (missign link)
+                  Student Discount
                 </a>
               </li>
             </ul>

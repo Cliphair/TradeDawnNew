@@ -209,29 +209,58 @@
                         </li>
 
                         <li>
-                          <a
-                            id="HeaderDrawer-clip-ins-ponytail"
-                            href="/collections/clip-in-ponytail-extensions"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/clip-in-ponytail-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/collections/clip-in-ponytail-extensions' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            CLIP IN PONYTAIL HAIR EXTENSIONS
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-clip-ins-fringe"
-                            href="/collections/fringe-clip-in-hair-extensions"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/fringe-clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/collections/fringe-clip-in-hair-extensions' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            CLIP IN FRINGE HAIR EXTENSIONS
-                          </a>
+                          <details id="Details-menu-drawer-clip-ins-hairpieces-ponytail">
+                            <summary
+                              id="HeaderDrawer-clip-ins-hairpieces-ponytail"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                            >
+                              HAIRPIECES & PONYTAILS
+                              {% render 'icon-arrow' %}
+                              {% render 'icon-caret' %}
+                            </summary>
+                            <div
+                              id="childlink-hairpieces-ponytail"
+                              class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                            >
+                              <button
+                                class="menu-drawer__close-button link link--text focus-inset"
+                                aria-expanded="true"
+                              >
+                                {% render 'icon-arrow' %}
+                                HAIRPIECES & PONYTAILS
+                              </button>
+                              <ul
+                                class="menu-drawer__menu list-menu"
+                                role="list"
+                                tabindex="-1"
+                              >
+                                <li>
+                                  <a
+                                    id="HeaderDrawer-clip-ins-hairpieces-ponytail-ponytail"
+                                    href="/collections/clip-in-ponytail-extensions"
+                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/clip-in-ponytail-extensions' %} menu-drawer__menu-item--active{% endif %}"
+                                    {% if request.path == '/collections/clip-in-ponytail-extensions' %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    Clip In Ponytail
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    id="HeaderDrawer-clip-ins-hairpieces-ponytail-fringe"
+                                    href="/collections/fringe-clip-in-hair-extensions"
+                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/fringe-clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
+                                    {% if request.path == '/collections/fringe-clip-in-hair-extensions' %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    Clip In Fringe
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </details>
                         </li>
 
                         <li>
@@ -512,19 +541,6 @@
                         </li>
 
                         <li>
-                          <a
-                            id="HeaderDrawer-professional-bundle"
-                            href="/collections/hair-extensions-bundle"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-bundle' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/collections/hair-extensions-bundle' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            HAIR EXTENSION BUNDLES & COMBOS
-                          </a>
-                        </li>
-
-                        <li>
                           <details id="Details-menu-drawer-professional-tools-maintenance">
                             <summary
                               id="HeaderDrawer-professional-tools-maintenance"
@@ -643,6 +659,19 @@
                               </ul>
                             </div>
                           </details>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-professional-bundle"
+                            href="/collections/hair-extensions-bundle"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-bundle' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/hair-extensions-bundle' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            HAIR EXTENSION BUNDLES & COMBOS
+                          </a>
                         </li>
 
                         <li>
@@ -1840,13 +1869,13 @@
                         <li>
                           <a
                             id="HeaderDrawer-help-me-choose-length-guide"
-                            href="#"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '#' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '#' %}
+                            href="/blogs/hair-blog/the-ultimate-hair-extension-length-guide"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %}
                               aria-current="page"
                             {% endif %}
                           >
-                            Length Guide (missign link)
+                            Length Guide
                           </a>
                         </li>
 
@@ -2268,13 +2297,13 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-latest-blogs"
-                            href="#"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '#' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '#' %}
+                            href="/blogs/hair-blog#main-blog-section"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog#main-blog-section' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/hair-blog#main-blog-section' %}
                               aria-current="page"
                             {% endif %}
                           >
-                            Latest Blogs (missign link)
+                            Latest Blogs
                           </a>
                         </li>
 
@@ -2495,7 +2524,7 @@
                               aria-current="page"
                             {% endif %}
                           >
-                            Become and Ambassador (missign link)
+                            <span onclick="klrRecruit.openRecruit()">Become and Ambassador</span>
                           </a>
                         </li>
 
@@ -2580,13 +2609,10 @@
                         <li>
                           <a
                             id="HeaderDrawer-discounts-student-discount"
-                            href="#"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '#' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '#' %}
-                              aria-current="page"
-                            {% endif %}
+                            href="https://www.studentbeans.com/student-discount/uk/cliphair"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
                           >
-                            Student Discount (missign link)
+                            Student Discount
                           </a>
                         </li>
                       </ul>
