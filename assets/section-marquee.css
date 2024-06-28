@@ -2,18 +2,15 @@
   position: relative;
   overflow: hidden;
   user-select: none;
-}
-
-.marquee.scroll-mobile {
   display: flex;
-  gap: calc(var(--grid-mobile-horizontal-spacing) * 2);
+  gap: var(--marquee-mobile-gap);
 }
 
 .marquee__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--grid-mobile-horizontal-spacing);
+  gap: var(--marquee-mobile-gap);
   min-width: 100%;
   padding: 0;
   margin: 0;
@@ -23,7 +20,6 @@
 }
 
 .marquee.scroll-mobile .marquee__content {
-  gap: calc(var(--grid-mobile-horizontal-spacing) * 2);
   overflow: hidden;
 }
 
@@ -54,22 +50,19 @@
     }
 
     to {
-      transform: translateX(calc(-100% - var(--grid-mobile-horizontal-spacing) * 2));
+      transform: translateX(calc(-100% - var(--marquee-mobile-gap)));
     }
   }
 }
 
 @media screen and (min-width:990px) {
-  .marquee.scroll-dekstop {
-    gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
-  }
 
+  .marquee,
   .marquee__content {
-    gap: var(--grid-desktop-horizontal-spacing);
+    gap: var(--marquee-desktop-gap);
   }
 
   .marquee.scroll-desktop .marquee__content {
-    gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
     overflow: hidden;
   }
 
@@ -79,19 +72,95 @@
     }
 
     to {
-      transform: translateX(calc(-100% - (var(--grid-desktop-horizontal-spacing) *2)));
+      transform: translateX(calc(-100% - var(--marquee-desktop-gap)));
     }
   }
 }
 
 /* Pause animation when reduced-motion is set */
 @media (prefers-reduced-motion: reduce) {
-  .marquee__content {
+  .section-marquee .marquee .marquee__content {
     animation-play-state: paused !important;
   }
 }
 
 /* Pause on hover */
-.marquee.scroll:hover .marquee__content {
+.section-marquee .marquee:hover .marquee__content {
   animation-play-state: paused !important;
+}
+
+.marquee_content-1-items-tablet-down .marquee__item {
+  width: 100vw;
+}
+
+.page-width-mobile .marquee_content-1-items-tablet-down .marquee__item {
+  width: calc(100vw - 3rem);
+}
+
+.marquee_content-2-items-tablet-down .marquee__item {
+  width: calc((100vw - var(--marquee-mobile-gap)) / 2);
+}
+
+.page-width-mobile .marquee_content-2-items-tablet-down .marquee__item {
+  width: calc((100vw - 3rem - var(--marquee-mobile-gap)) / 2);
+}
+
+@media screen and (min-width:750px) and (max-width:989px) {
+  .page-width-mobile .marquee_content-1-items-tablet-down .marquee__item {
+    width: calc(100vw - 10rem);
+  }
+
+  .page-width-mobile .marquee_content-2-items-tablet-down .marquee__item {
+    width: calc((100vw - 10rem - var(--marquee-mobile-gap)) / 2);
+  }
+}
+
+@media screen and (min-width:990px) {
+  .marquee_content-1-items-desktop .marquee__item {
+    width: 100vw;
+  }
+
+  .page-width-desktop .marquee_content-1-items-desktop .marquee__item {
+    width: calc(100vw - 10rem);
+  }
+
+  .marquee_content-2-items-desktop .marquee__item {
+    width: calc((100vw - var(--marquee-desktop-gap)) / 2);
+  }
+
+  .page-width-desktop .marquee_content-2-items-desktop .marquee__item {
+    width: calc((100vw - 10rem - var(--marquee-desktop-gap)) / 2);
+  }
+
+  .marquee_content-3-items-desktop .marquee__item {
+    width: calc((100vw - (var(--marquee-desktop-gap) * 2)) / 3);
+  }
+
+  .page-width-desktop .marquee_content-3-items-desktop .marquee__item {
+    width: calc((100vw - 10rem - (var(--marquee-desktop-gap) * 2)) / 3);
+  }
+
+  .marquee_content-4-items-desktop .marquee__item {
+    width: calc((100vw - (var(--marquee-desktop-gap) * 3)) / 4);
+  }
+
+  .page-width-desktop .marquee_content-4-items-desktop .marquee__item {
+    width: calc((100vw - 10rem - (var(--marquee-desktop-gap) * 3)) / 4);
+  }
+
+  .marquee_content-5-items-desktop .marquee__item {
+    width: calc((100vw - (var(--marquee-desktop-gap) * 4)) / 5);
+  }
+
+  .page-width-desktop .marquee_content-5-items-desktop .marquee__item {
+    width: calc((100vw - 10rem - (var(--marquee-desktop-gap) * 4)) / 5);
+  }
+
+  .marquee_content-6-items-desktop .marquee__item {
+    width: calc((100vw - (var(--marquee-desktop-gap) * 5)) / 6);
+  }
+
+  .page-width-desktop .marquee_content-6-items-desktop .marquee__item {
+    width: calc((100vw - 10rem - (var(--marquee-desktop-gap) * 5)) / 6);
+  }
 }
