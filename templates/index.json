@@ -105,21 +105,21 @@
         "element_zx3LNE": {
           "type": "element",
           "settings": {
-            "text_label": "Free Virtual Hair Colour Matching",
+            "text_label": "FREE VIRTUAL HAIR COLOUR MATCHING",
             "link": ""
           }
         },
         "element_PzXtwm": {
           "type": "element",
           "settings": {
-            "text_label": "Pay Your Way with Clearpay & Klarna",
+            "text_label": "PAY YOUR WAY WITH CLEARPAY & KLARNA",
             "link": ""
           }
         },
         "element_h6YLkb": {
           "type": "element",
           "settings": {
-            "text_label": "Free UK Express delivery over £75",
+            "text_label": "FREE UK EXPRESS DELIVERY OVER £75",
             "link": ""
           }
         }
@@ -129,16 +129,17 @@
         "element_PzXtwm",
         "element_h6YLkb"
       ],
-      "disabled": true,
       "settings": {
         "text_size": "p",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "columns_mobile": "1",
-        "scroll_mobile": false,
+        "scroll_mobile": true,
+        "duration_mobile": 20,
         "columns_desktop": 3,
         "scroll_desktop": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "duration_desktop": 10,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "horizontal_list": {
@@ -168,6 +169,7 @@
         "div2",
         "div3"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#ededed",
         "text_color": "#121212"
