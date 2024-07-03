@@ -26,6 +26,9 @@
 .marquee__item {
   text-align: center;
   flex: 0 0 auto;
+}
+
+.marquee__item:has(img) {
   max-width:200px;
 }
 
