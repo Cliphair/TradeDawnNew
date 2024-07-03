@@ -28,7 +28,7 @@
   flex: 0 0 auto;
 }
 
-.marquee__item:has(> * img) {
+!.marquee__item img {
   max-width:200px;
 }
 
