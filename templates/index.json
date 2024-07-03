@@ -677,12 +677,12 @@
         "color_scheme": "accent-2",
         "columns_mobile": "2",
         "scroll_mobile": true,
-        "duration_mobile": 20,
+        "duration_mobile": 40,
         "columns_desktop": 6,
         "scroll_desktop": true,
-        "duration_desktop": 30,
+        "duration_desktop": 40,
         "padding_top": 20,
-        "padding_bottom": 36
+        "padding_bottom": 20
       }
     },
     "60c353fa-c484-4da2-b7b1-75781aa41474": {
@@ -925,7 +925,7 @@
       "custom_css": [
         "h3 {font-weight: 400;}",
         ".collapsible-section-layout {padding-top: 0 !important; padding-bottom: 0 !important;}",
-        ".collapsible-content-wrapper-narrow {max-width: unset;}"
+        ".collapsible-content-wrapper-narrow {max-width: unset; padding: 0;}"
       ],
       "settings": {
         "caption": "",
@@ -1010,7 +1010,7 @@
         "columns_desktop": 5,
         "swipe_on_desktop": false,
         "color_scheme": "background-collection-titles",
-        "columns_mobile": "2",
+        "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
