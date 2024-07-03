@@ -672,6 +672,9 @@
         "element_NaLGwh",
         "element_hBXMTc"
       ],
+      "custom_css": [
+        ".marquee__item {max-width:200px;}"
+      ],
       "settings": {
         "text_size": "p",
         "color_scheme": "accent-2",
