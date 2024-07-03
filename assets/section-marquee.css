@@ -26,6 +26,7 @@
 .marquee__item {
   text-align: center;
   flex: 0 0 auto;
+  max-width:200px;
 }
 
 .marquee__item img {
