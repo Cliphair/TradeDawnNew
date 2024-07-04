@@ -34,6 +34,12 @@
   margin-bottom: 0;
 }
 
+.videos-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .section-tutorials .video-title {
   margin: 0.5em 0;
 }
