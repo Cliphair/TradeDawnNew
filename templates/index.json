@@ -11,6 +11,7 @@
   "sections": {
     "visual_menu_66DUPM": {
       "type": "visual-menu",
+      "disabled": true,
       "settings": {
         "collection-list": "under-nav-menu",
         "image_ratio": "square",
@@ -41,13 +42,12 @@
         "color_scheme": "",
         "columns_mobile": "3",
         "swipe_on_mobile": true,
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 0
       }
     },
     "visual_menu_gFLQd6": {
       "type": "visual-menu",
-      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 990px) {div {display: none; }}"
       ],
@@ -61,7 +61,7 @@
         "color_scheme": "",
         "columns_mobile": "3",
         "swipe_on_mobile": true,
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 0
       }
     },
