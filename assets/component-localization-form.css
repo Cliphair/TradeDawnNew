@@ -301,3 +301,9 @@ noscript .localization-selector.link {
 .menu-drawer__localization noscript .localization-form__select {
   padding: initial;
 }
+
+@media screen and (min-width:990px) {
+  .desktop-localization-wrapper {
+    display: flex !important;
+  }
+}
