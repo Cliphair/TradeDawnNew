@@ -276,7 +276,7 @@
         "heading_Bzfc9T": {
           "type": "heading",
           "settings": {
-            "heading": "TAKE OUR QUIZ...",
+            "heading": "NEED A HAND?",
             "heading_size": "h1",
             "h1": false
           }
@@ -284,19 +284,32 @@
         "text_wgJyct": {
           "type": "text",
           "settings": {
-            "text": "<p>Need a hand? Find out which hair extensions suit you best with our hair extension quiz tailored to you.<\/p>",
+            "text": "<p>Find out which hair extensions are right for you with our virtual hair extension quiz tailored to you…<\/p>",
             "read-more_text": ""
+          }
+        },
+        "button_czJX6E": {
+          "type": "button",
+          "settings": {
+            "button_label": "TAKE QUIZ NOW",
+            "button_link": "shopify:\/\/pages\/journey",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
         "heading_Bzfc9T",
-        "text_wgJyct"
+        "text_wgJyct",
+        "button_czJX6E"
       ],
       "custom_css": [
         ".rich-text__wrapper {width: 100% !important;}",
         ".rich-text__blocks > * + * {margin-top: 1rem;}",
-        ".rich-text__blocks {max-width: unset;}"
+        ".rich-text__blocks {max-width: unset;}",
+        ".button {margin-top: 2rem;}"
       ],
       "settings": {
         "desktop_content_position": "left",
@@ -304,7 +317,7 @@
         "color_scheme": "accent-2",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "quiz_question_G3AdFU": {
@@ -337,6 +350,7 @@
         "answer_fHiVMK",
         "answer_WGKJxB"
       ],
+      "disabled": true,
       "settings": {
         "id": "journey",
         "page": "journey",
