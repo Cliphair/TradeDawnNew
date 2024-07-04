@@ -11,6 +11,9 @@
   "sections": {
     "visual_menu_66DUPM": {
       "type": "visual-menu",
+      "custom_css": [
+        ".slider-button {margin-top: -26px;}"
+      ],
       "settings": {
         "collection-list": "under-nav-menu",
         "image_ratio": "square",
@@ -29,7 +32,8 @@
       "type": "visual-menu",
       "disabled": true,
       "custom_css": [
-        ".collection-carrousel-wrapper {max-width: unset;}"
+        ".collection-carrousel-wrapper {max-width: unset;}",
+        ".slider-button {margin-top: -26px;}"
       ],
       "settings": {
         "collection-list": "under-nav-menu",
@@ -49,6 +53,7 @@
       "type": "visual-menu",
       "disabled": true,
       "custom_css": [
+        ".slider-button {margin-top: -26px;}",
         "@media screen and (min-width: 990px) {div {display: none; }}"
       ],
       "settings": {
