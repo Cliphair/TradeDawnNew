@@ -399,19 +399,19 @@
         "image_CXggPb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iceblonde-tw-1.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image1.webp"
           }
         },
         "image_wE8M3e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/6-qwp-1.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image2.webp"
           }
         },
         "image_XmkpVj": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/60-fhs-2.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image3.webp"
           }
         },
         "image_jLnG3R": {
@@ -425,6 +425,41 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/1b-cw-2.webp"
           }
+        },
+        "image_p4EX93": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_8zwzqh": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_ibPek8": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_Gyx3yL": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_EkrNPy": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_QJdHcj": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "image_piJ8Qx": {
+          "type": "image",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -435,7 +470,14 @@
         "image_wE8M3e",
         "image_XmkpVj",
         "image_jLnG3R",
-        "image_MDRm6y"
+        "image_MDRm6y",
+        "image_p4EX93",
+        "image_8zwzqh",
+        "image_ibPek8",
+        "image_Gyx3yL",
+        "image_EkrNPy",
+        "image_QJdHcj",
+        "image_piJ8Qx"
       ],
       "custom_css": [
         ".button {margin-top: 5rem;}"
@@ -888,6 +930,7 @@
         "image_XVckgU",
         "image_LDcWRQ"
       ],
+      "disabled": true,
       "settings": {
         "title": "As Seen On",
         "heading_size": "h1",
