@@ -810,6 +810,98 @@
         "padding_bottom": 36
       }
     },
+    "image_list_nPnYgL": {
+      "type": "image-list",
+      "blocks": {
+        "image_4bXD9L": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-1.webp",
+            "text_label": "Courtney Love styled by @peteburkill",
+            "link": ""
+          }
+        },
+        "image_bRzTFF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-2.webp",
+            "text_label": "@danielle_harold styled by @hairbyjaayyy",
+            "link": ""
+          }
+        },
+        "image_eLKDPX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-3.webp",
+            "text_label": "@chloegshore",
+            "link": ""
+          }
+        },
+        "image_hdRCk8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-4.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_E7dnRR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-5.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_UQLB3b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-6.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_XVckgU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-7.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_LDcWRQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-8.webp",
+            "text_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4bXD9L",
+        "image_bRzTFF",
+        "image_eLKDPX",
+        "image_hdRCk8",
+        "image_E7dnRR",
+        "image_UQLB3b",
+        "image_XVckgU",
+        "image_LDcWRQ"
+      ],
+      "settings": {
+        "title": "As Seen On",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "center",
+        "columns_desktop": 4,
+        "swipe_on_desktop": true,
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "342029b3-5620-4e2e-864b-55edf0aa9b0d": {
       "type": "blog-spot",
       "custom_css": [
@@ -1047,6 +1139,7 @@
     "maquee_mnMgq6",
     "60c353fa-c484-4da2-b7b1-75781aa41474",
     "b19c81a2-f86e-4e52-9a50-dca37f731b16",
+    "image_list_nPnYgL",
     "342029b3-5620-4e2e-864b-55edf0aa9b0d",
     "fef9cc49-05dc-468b-82e4-1520264647b6",
     "f41c0e3b-b362-4900-8b02-4a5cc75bd290",
