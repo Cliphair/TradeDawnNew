@@ -756,45 +756,36 @@
           "type": "video",
           "settings": {
             "video": "shopify:\/\/files\/videos\/3. LOOK 3 (DRAFT 1).mp4",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "title": "",
-            "description": ""
+            "video_url": "",
+            "title": "Clip In Extension Tutorials",
+            "description": "Clip In Extension Tutorials"
           }
         },
         "c75280b4-0487-4063-9610-064863363d62": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/4. LOOK 4 (DRAFT 1).mp4",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "title": "",
-            "description": ""
+            "video": "shopify:\/\/files\/videos\/Best of Permanent.mp4",
+            "video_url": "",
+            "cover_image": "shopify:\/\/shop_images\/Best_of_Permanent_Thumbnail.webp",
+            "title": "Permanent Extension Tutorials ",
+            "description": "Permanent Extensions Tutorials"
           }
         },
-        "0c26f44b-0807-408a-819c-233863a5016e": {
+        "video_EWWLYJ": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/2. LOOK 2 (DRAFT 1).mp4",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "title": "",
-            "description": ""
-          }
-        },
-        "0f48a489-5a6b-4e92-a7cc-34317e32f05d": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video": "shopify:\/\/files\/videos\/1. LOOK 1 (Draft 1)-.mp4",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "title": "",
-            "description": ""
+            "video": "shopify:\/\/files\/videos\/Best of Bridal.mp4",
+            "video_url": "",
+            "cover_image": "shopify:\/\/shop_images\/Best_of_Bridal_Thumbnail.webp",
+            "title": "Bridal Tutorials",
+            "description": "Bridal Tutorials"
           }
         }
       },
       "block_order": [
         "d97a452e-2464-483e-bcd5-f1846fb61062",
         "c75280b4-0487-4063-9610-064863363d62",
-        "0c26f44b-0807-408a-819c-233863a5016e",
-        "0f48a489-5a6b-4e92-a7cc-34317e32f05d"
+        "video_EWWLYJ"
       ],
       "custom_css": [
         ".deferred-media__poster-button {color: rgba(255, 255, 255, 0.75);}",
