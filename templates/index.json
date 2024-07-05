@@ -396,30 +396,6 @@
             "button_style_secondary_2": false
           }
         },
-        "image_Gyx3yL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image9.webp"
-          }
-        },
-        "image_EkrNPy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image10.webp"
-          }
-        },
-        "image_QJdHcj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image11.webp"
-          }
-        },
-        "image_piJ8Qx": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image12.webp"
-          }
-        },
         "image_CXggPb": {
           "type": "image",
           "settings": {
@@ -467,16 +443,36 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/lookbook-section-bg-image8.webp"
           }
+        },
+        "image_Gyx3yL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image9.webp"
+          }
+        },
+        "image_EkrNPy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image10.webp"
+          }
+        },
+        "image_QJdHcj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image11.webp"
+          }
+        },
+        "image_piJ8Qx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image12.webp"
+          }
         }
       },
       "block_order": [
         "heading_3EjH4p",
         "text_Dn3thJ",
         "button_DMUj9Q",
-        "image_Gyx3yL",
-        "image_EkrNPy",
-        "image_QJdHcj",
-        "image_piJ8Qx",
         "image_CXggPb",
         "image_wE8M3e",
         "image_XmkpVj",
@@ -484,7 +480,11 @@
         "image_MDRm6y",
         "image_p4EX93",
         "image_8zwzqh",
-        "image_ibPek8"
+        "image_ibPek8",
+        "image_Gyx3yL",
+        "image_EkrNPy",
+        "image_QJdHcj",
+        "image_piJ8Qx"
       ],
       "custom_css": [
         ".button {margin-top: 5rem;}"
