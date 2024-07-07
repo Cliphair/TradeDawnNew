@@ -69,53 +69,53 @@
     "2e1934dd-28b9-4bbb-b01e-0576cbadc4b2": {
       "type": "image-list",
       "blocks": {
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-1": {
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White.svg",
-            "text_label": "Ethically Sourced",
+            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced<\/p>",
             "link": ""
           }
         },
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-2": {
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "Outstanding Reviews",
-            "link": ""
+            "text_label": "<p>Outstanding<br>Reviews<\/p>",
+            "link": "shopify:\/\/pages\/testimonials"
           }
         },
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-3": {
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "Cliphair Rewards",
-            "link": ""
+            "text_label": "<p>Cliphair<br>Rewards<\/p>",
+            "link": "shopify:\/\/pages\/rewards"
           }
         },
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-4": {
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "Free Delivery & Returns",
+            "text_label": "<p>Free Delivery<br>& Returns<\/p>",
             "link": ""
           }
         },
-        "da9d00ec-2d22-4240-a002-8b910ec693e4": {
+        "cbdbff03-f013-487f-8288-6c9a46426bc6": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "Buy Now Pay Later",
+            "text_label": "<p>Buy Now<br>Pay Later<\/p>",
             "link": ""
           }
         }
       },
       "block_order": [
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-1",
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-2",
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-3",
-        "template--15283893927997__2e1934dd-28b9-4bbb-b01e-0576cbadc4b2-image-4",
-        "da9d00ec-2d22-4240-a002-8b910ec693e4"
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3",
+        "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4",
+        "cbdbff03-f013-487f-8288-6c9a46426bc6"
       ],
       "custom_css": [
         "img {max-height: 70px;}"
