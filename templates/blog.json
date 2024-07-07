@@ -39,43 +39,73 @@
         "image_WhXAwQ": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iceblonde-tw-1.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image1.webp"
           }
         },
         "image_LRefiD": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/6-qwp-1.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image2.webp"
           }
         },
         "image_mTUfwa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3-dw-2.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image3.webp"
           }
         },
         "image_aCrzVp": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/60-fhs-2.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image4.webp"
           }
         },
         "image_rJjbLb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iceblonde-tw-1.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image5.webp"
           }
         },
         "image_f8LEVG": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3-dw-2.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image6.webp"
           }
         },
         "image_bEmzXb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1b-cw-2.webp"
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image7.webp"
+          }
+        },
+        "image_TVnmEx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image8.webp"
+          }
+        },
+        "image_Qqw4kL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image9.webp"
+          }
+        },
+        "image_YhyKHW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image10.webp"
+          }
+        },
+        "image_ewke6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image11.webp"
+          }
+        },
+        "image_wG4Ti8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image12.webp"
           }
         }
       },
@@ -86,7 +116,12 @@
         "image_aCrzVp",
         "image_rJjbLb",
         "image_f8LEVG",
-        "image_bEmzXb"
+        "image_bEmzXb",
+        "image_TVnmEx",
+        "image_Qqw4kL",
+        "image_YhyKHW",
+        "image_ewke6R",
+        "image_wG4Ti8"
       ],
       "settings": {
         "heading": "TRENDING ON CLIPHAIR",
@@ -102,7 +137,7 @@
         "mobile-row": 3,
         "mobile-column": 2,
         "desktop-row": 2,
-        "desktop-column": 5,
+        "desktop-column": 6,
         "padding_top": 36,
         "padding_bottom": 36
       }
