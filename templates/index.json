@@ -939,7 +939,8 @@
       ],
       "custom_css": [
         ".section-images-list .grid {align-items: flex-start;}",
-        ".text-container {text-align: left;}"
+        ".text-container {text-align: left;}",
+        "@media screen and (max-width:749px) {.section-images-list .grid--3-col-tablet-down .grid__item {width: calc((100% - (var(--grid-mobile-horizontal-spacing) * 1)) \/ 2);}}"
       ],
       "settings": {
         "title": "As Seen On",
