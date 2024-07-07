@@ -16,7 +16,7 @@
           "type": "featured_image",
           "settings": {
             "image_src": "metafield",
-            "image_height": "landscape"
+            "image_height": "squared"
           }
         },
         "extra_iKiWex": {
