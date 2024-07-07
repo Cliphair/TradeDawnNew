@@ -15,20 +15,6 @@
   }
 {% endstyle %}
 
-{% comment %}
-  {%- style -%}
-    .logo-list {
-      padding: 15px 0;
-    }
-    #{{ section.id }} {
-      background-color: {{ section.settings.background_color }};
-    }
-    #{{ section.id }} .logoList--item_text {
-      color: {{ section.settings.text_color }};
-    }
-  {%- endstyle -%}
-{% endcomment %}
-
 <div
   class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
   id="{{ section.id }}"
@@ -101,7 +87,7 @@
                 height="{{ block.settings.image.height }}"
               >
               {% if block.settings.text_label != null %}
-                <p class="">{{ block.settings.text_label }}</p>
+                <div class="text-container h5">{{ block.settings.text_label }}</div>
               {%- endif -%}
             {%- endif -%}
             {%- if block.settings.link != blank -%}
@@ -285,7 +271,7 @@
           "label": "Image"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "text_label",
           "label": "Text"
         },
@@ -300,22 +286,7 @@
   ],
   "presets": [
     {
-      "name": "Logo list",
-      "category": "Image",
-      "blocks": [
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        },
-        {
-          "type": "image"
-        }
-      ]
+      "name": "Logo list"
     }
   ]
 }

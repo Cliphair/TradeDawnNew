@@ -866,7 +866,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/as-seen-on-image-1.webp",
-            "text_label": "Courtney Love styled by @peteburkill",
+            "text_label": "<p>Courtney Love styled by @peteburkill</p>",
             "link": ""
           }
         },
@@ -874,7 +874,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/as-seen-on-image-2.webp",
-            "text_label": "@danielle_harold styled by @hairbyjaayyy",
+            "text_label": "<p>@danielle_harold styled by @hairbyjaayyy</p>",
             "link": ""
           }
         },
@@ -882,7 +882,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/as-seen-on-image-3.webp",
-            "text_label": "@chloegshore",
+            "text_label": "<p>@chloegshore</p>",
             "link": ""
           }
         },
@@ -1109,7 +1109,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
-            "text_label": "Ethically<br>Sourced",
+            "text_label": "<p>Ethically<br>Sourced</p>",
             "link": ""
           }
         },
@@ -1117,7 +1117,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "Outstanding<br>Reviews",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
             "link": "shopify:\/\/pages\/testimonials"
           }
         },
@@ -1125,7 +1125,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "Cliphair<br>Rewards",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
             "link": "shopify:\/\/pages\/rewards"
           }
         },
@@ -1133,7 +1133,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "Free Delivery<br>& Returns",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
             "link": ""
           }
         },
@@ -1141,7 +1141,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "Buy Now<br>Pay Later",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
             "link": ""
           }
         }
