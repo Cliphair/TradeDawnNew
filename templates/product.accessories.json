@@ -147,7 +147,7 @@
         "link": "",
         "button_style_secondary": false,
         "text_allignment": "left",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "hide_card_arrow": false,
         "columns_desktop": 4,
         "swipe_on_desktop": true,
@@ -203,7 +203,9 @@
       "settings": {
         "heading": "Blog posts",
         "heading_size": "h1",
+        "introduction": "",
         "tags_size": "h3",
+        "text_alignment": "left",
         "blog": "hair-blog",
         "post_limit": 6,
         "columns_mobile": "1",
@@ -216,7 +218,12 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
+        "enable_tags": false,
         "scroll_to_grid": false,
+        "tags_columns_desktop": 3,
+        "tags_swipe_on_desktop": false,
+        "tags_columns_mobile": "1",
+        "tags_swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
