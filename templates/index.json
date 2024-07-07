@@ -866,7 +866,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/as-seen-on-image-1.webp",
-            "text_label": "<p>Courtney Love styled by @peteburkill<br\/><br\/><a href=\"\/products\/double-wefted-set-clip-in-hair-extensions-bleach-blonde-613\" title=\"Double Wefted Full Head Remy Clip in Human Hair Extensions - Bleach Blonde (#613)\">20\" Double Wefted Clip Ins in shade Bleach Blonde<\/a><\/p>",
+            "text_label": "<p>Courtney Love styled by @peteburkill<\/p><p><a href=\"\/products\/double-wefted-set-clip-in-hair-extensions-bleach-blonde-613\" title=\"Double Wefted Full Head Remy Clip in Human Hair Extensions - Bleach Blonde (#613)\">20\" Double Wefted Clip Ins in shade Bleach Blonde<\/a><\/p>",
             "link": ""
           }
         },
@@ -874,7 +874,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/as-seen-on-image-2.webp",
-            "text_label": "<p>@danielle_harold styled by @hairbyjaayyy<\/p>",
+            "text_label": "<p>@danielle_harold styled by @hairbyjaayyy<\/p><p><a href=\"\/products\/ice-blonde-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Ice Blonde Ultra-Volume Clip In Full Head Set (240-300G)\">26” Ultra Volume Clip Ins in shade Ice Blonde<\/a><\/p>",
             "link": ""
           }
         },
