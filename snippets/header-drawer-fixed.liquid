@@ -5,7 +5,8 @@
   {% render 'header-drawer' %}
 {% endcomment %}
 
-<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+{% comment %}change breakpoit to be always desktop as I move the menu breakpoint to 1400px. Old rule {% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}{% endcomment %}
+<header-drawer data-breakpoint="desktop">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
       class="header__icon header__icon--menu header__icon--summary link focus-inset"

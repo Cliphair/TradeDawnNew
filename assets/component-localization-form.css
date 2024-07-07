@@ -270,7 +270,7 @@ noscript .localization-selector.link {
 }
 
 /* Menu drawer */
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1400px) {
   .menu-drawer__localization {
     display: none;
   }
@@ -302,7 +302,7 @@ noscript .localization-selector.link {
   padding: initial;
 }
 
-@media screen and (min-width:990px) {
+@media screen and (min-width:1400px) {
   .desktop-localization-wrapper {
     display: flex !important;
   }
