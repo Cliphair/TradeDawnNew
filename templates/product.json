@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -199,8 +208,9 @@
       "settings": {
         "heading": "Blog Posts",
         "heading_size": "h1",
+        "introduction": "",
         "tags_size": "h3",
-        "heading_alignment": "center",
+        "text_alignment": "left",
         "blog": "hair-blog",
         "post_limit": 6,
         "columns_mobile": "1",
@@ -213,7 +223,12 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
+        "enable_tags": false,
         "scroll_to_grid": false,
+        "tags_columns_desktop": 3,
+        "tags_swipe_on_desktop": false,
+        "tags_columns_mobile": "1",
+        "tags_swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -270,7 +285,8 @@
         "cbdbff03-f013-487f-8288-6c9a46426bc6"
       ],
       "custom_css": [
-        "img {max-height: 70px;}"
+        "img {max-height: 70px;}",
+        "a {text-decoration: none;}"
       ],
       "settings": {
         "title": "",
@@ -280,8 +296,8 @@
         "columns_desktop": 5,
         "swipe_on_desktop": false,
         "color_scheme": "background-collection-titles",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
