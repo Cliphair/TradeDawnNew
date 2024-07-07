@@ -265,7 +265,8 @@
         "cbdbff03-f013-487f-8288-6c9a46426bc6"
       ],
       "custom_css": [
-        "img {max-height: 70px;}"
+        "img {max-height: 70px;}",
+        "a {text-decoration: none;}"
       ],
       "settings": {
         "title": "",
@@ -275,10 +276,10 @@
         "columns_desktop": 5,
         "swipe_on_desktop": false,
         "color_scheme": "background-collection-titles",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 52
       }
     }
   },
