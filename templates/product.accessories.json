@@ -146,7 +146,7 @@
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
-        "text_allignment": "left",
+        "text_allignment": "center",
         "image_ratio": "portrait",
         "hide_card_arrow": false,
         "columns_desktop": 4,
