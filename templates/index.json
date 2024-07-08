@@ -470,120 +470,6 @@
         "padding_bottom": 52
       }
     },
-    "f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2": {
-      "type": "image-list",
-      "blocks": {
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Grazia_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/graziadaily.co.uk\/beauty-hair\/hair\/clip-in-ponytail-extensions-uk\/"
-          }
-        },
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Marie_Claire_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/www.marieclaire.co.uk\/promotional-feature\/kate-middleton-ponytail-tips-cliphair-760263"
-          }
-        },
-        "image_raHDUn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Cosmopolitan_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/www.cosmopolitan.com\/uk\/beauty-hair\/hair\/a44710529\/best-clip-in-hair-extensions\/"
-          }
-        },
-        "image_QeR9nM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/The_Sun_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/www.thesun.co.uk\/fabulous\/18696203\/hairstyle-according-to-star-sign\/"
-          }
-        },
-        "image_7qHd4N": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Daily_Mail_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/www.dailymail.co.uk\/femail\/article-7553741\/The-10-beauty-fashion-brands-NEED-know.html"
-          }
-        },
-        "image_kK37Gr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Hair_Dresser_Journal_Logo_V3.png",
-            "text_label": "",
-            "link": ""
-          }
-        },
-        "image_TV8aDn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Salon_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/thesalonmagazine.co.uk\/cliphair-more-than-hair-extensions\/"
-          }
-        },
-        "image_MwfzQ6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Reader_s_Digest_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/www.readersdigest.co.uk\/lifestyle\/fashion-beauty\/top-5-celebrity-ponytails-and-how-to-create-them"
-          }
-        },
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Independent_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/www.independent.co.uk\/extras\/indybest\/fashion-beauty\/best-clip-in-hair-extensions-b1891280.html"
-          }
-        },
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Metro_Logo.webp",
-            "text_label": "",
-            "link": "https:\/\/metro.co.uk\/2022\/02\/07\/this-is-how-often-you-should-wash-your-hair-depending-on-hair-type-16061705\/"
-          }
-        }
-      },
-      "block_order": [
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-3",
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-2",
-        "image_raHDUn",
-        "image_QeR9nM",
-        "image_7qHd4N",
-        "image_kK37Gr",
-        "image_TV8aDn",
-        "image_MwfzQ6",
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-4",
-        "template--15283894157373__f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2-logo_image-1"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h2 {color: #414141;}"
-      ],
-      "settings": {
-        "title": "FEATURED IN",
-        "heading_size": "h2",
-        "introduction": "",
-        "text_allignment": "center",
-        "columns_desktop": 6,
-        "swipe_on_desktop": true,
-        "color_scheme": "accent-2",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_XgpBnz": {
       "type": "rich-text",
       "blocks": {
@@ -910,7 +796,7 @@
         "@media screen and (max-width: 749px) {.section-images-list .grid--3-col-tablet-down .grid__item {width: calc((100% - (var(--grid-mobile-horizontal-spacing) * 1)) \/ 2); }}"
       ],
       "settings": {
-        "title": "As Seen On",
+        "title": "AS SEEN ON",
         "heading_size": "h1",
         "introduction": "",
         "text_allignment": "center",
@@ -1154,7 +1040,6 @@
     "rich_text_ez6FdW",
     "quiz_question_G3AdFU",
     "rich_text_collage_bg_qibWaW",
-    "f4dd65a9-b05a-4f4b-8412-ea945c7bf9c2",
     "rich_text_XgpBnz",
     "maquee_mnMgq6",
     "60c353fa-c484-4da2-b7b1-75781aa41474",
