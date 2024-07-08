@@ -147,39 +147,6 @@
         "padding_bottom": 20
       }
     },
-    "horizontal_list": {
-      "type": "horizontal-list",
-      "blocks": {
-        "div1": {
-          "type": "div",
-          "settings": {
-            "text": "Free Virtual Hair Colour Matching"
-          }
-        },
-        "div2": {
-          "type": "div",
-          "settings": {
-            "text": "Pay Your Way with Clearpay & Klarna"
-          }
-        },
-        "div3": {
-          "type": "div",
-          "settings": {
-            "text": "Free UK Express delivery over £75"
-          }
-        }
-      },
-      "block_order": [
-        "div1",
-        "div2",
-        "div3"
-      ],
-      "disabled": true,
-      "settings": {
-        "background_color": "#ededed",
-        "text_color": "#121212"
-      }
-    },
     "753975ec-3602-477e-b65e-6d089a9053cb": {
       "type": "collection-carrousel",
       "blocks": {
@@ -284,7 +251,7 @@
         "text_wgJyct": {
           "type": "text",
           "settings": {
-            "text": "<p>Find out which hair extensions are right for you with our virtual hair extension quiz tailored to you…<\/p>",
+            "text": "<p>Find out which hair extensions are right for you with our virtual <strong>hair extension quiz <\/strong>tailored to you…<\/p>",
             "read-more_text": ""
           }
         },
@@ -313,7 +280,7 @@
       ],
       "settings": {
         "desktop_content_position": "left",
-        "content_alignment": "left",
+        "content_alignment": "center",
         "color_scheme": "accent-2",
         "full_width": true,
         "padding_top": 40,
@@ -940,7 +907,7 @@
       "custom_css": [
         ".section-images-list .grid {align-items: flex-start;}",
         ".text-container {text-align: left;}",
-        "@media screen and (max-width:749px) {.section-images-list .grid--3-col-tablet-down .grid__item {width: calc((100% - (var(--grid-mobile-horizontal-spacing) * 1)) \/ 2);}}"
+        "@media screen and (max-width: 749px) {.section-images-list .grid--3-col-tablet-down .grid__item {width: calc((100% - (var(--grid-mobile-horizontal-spacing) * 1)) \/ 2); }}"
       ],
       "settings": {
         "title": "As Seen On",
@@ -968,16 +935,16 @@
         "tags_size": "h4",
         "text_alignment": "center",
         "blog": "hair-blog",
-        "post_limit": 3,
-        "columns_mobile": "1",
+        "post_limit": 4,
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "columns_desktop": 3,
-        "swipe_on_desktop": false,
+        "swipe_on_desktop": true,
         "color_scheme": "accent-2",
         "show_image": true,
         "image_ratio": "square",
-        "show_date": false,
-        "show_author": false,
+        "show_date": true,
+        "show_author": true,
         "show_view_all": true,
         "enable_tags": true,
         "scroll_to_grid": true,
@@ -1182,7 +1149,6 @@
     "visual_menu_gFLQd6",
     "slideshow_image_link_WcQ9XG",
     "maquee_bdNYHF",
-    "horizontal_list",
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "collection_carrousel_fb6cDE",
     "rich_text_ez6FdW",

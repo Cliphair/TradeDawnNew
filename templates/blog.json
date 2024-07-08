@@ -130,7 +130,7 @@
         "heading_alignment": "center",
         "color_scheme": "accent-3",
         "show_image": true,
-        "image_ratio": "landscape",
+        "image_ratio": "square",
         "show_date": false,
         "show_author": true,
         "bg_opacity": 0.5,
