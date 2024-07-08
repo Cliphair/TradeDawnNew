@@ -24,10 +24,10 @@
 	width: calc((100% - var(--grid-mobile-vertical-spacing)) / 2)
 }
 
-.blog-post .card--standard>.card__content .card__information {
+/* .blog-post .card--standard>.card__content .card__information {
 	padding-right: 1.3rem;
 	padding-left: 1.3rem;
-}
+} */
 
 .blog-post .card .card__inner .card__media,
 .blog-post .article-card__image {
@@ -51,10 +51,10 @@
 		padding: 0 6rem;
 	}
 
-	.blog-post .card--standard>.card__content .card__information {
+	/* .blog-post .card--standard>.card__content .card__information {
 		padding-right: 1.7rem;
 		padding-left: 1.7rem;
-	}
+	} */
 }
 
 /* styles override */
