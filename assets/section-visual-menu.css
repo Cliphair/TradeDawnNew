@@ -80,6 +80,10 @@
   .section-visual-menu .slider.slider--tablet {
     scroll-padding-left: 0;
   }
+
+  .section-visual-menu .slider--tablet::after{
+    content:none;
+  }
 }
 
 @media screen and (min-width:990px) {
