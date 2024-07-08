@@ -657,8 +657,9 @@
         "d97a452e-2464-483e-bcd5-f1846fb61062": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/3. LOOK 3 (DRAFT 1).mp4",
+            "video": "shopify:\/\/files\/videos\/Best of Clip Ins.mp4",
             "video_url": "",
+            "cover_image": "shopify:\/\/shop_images\/Best_of_Clip_Ins_Thumbnail.webp",
             "title": "Clip In Extension Tutorials",
             "description": "Clip In Extension Tutorials"
           }
@@ -813,7 +814,7 @@
       "type": "blog-spot",
       "custom_css": [
         ".tag {color: #414141;}",
-        ".card__heading {color: #833C91;}",
+        ".card__heading {color: #833c91;}",
         "@media screen and (max-width: 989px) {.article-card__excerpt {display: none; }}"
       ],
       "settings": {
