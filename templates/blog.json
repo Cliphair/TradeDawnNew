@@ -161,8 +161,7 @@
     "main": {
       "type": "main-blog",
       "custom_css": [
-        ".card__heading {color: #833c91;}",
-        "@media screen and (max-width: 989px) {.article-card__excerpt {display: none; }}"
+        ".card__heading {color: #833c91;}"
       ],
       "settings": {
         "show_page_title": false,
