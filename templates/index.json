@@ -813,6 +813,7 @@
       "type": "blog-spot",
       "custom_css": [
         ".tag {color: #414141;}",
+        ".card__heading {color: #833C91;}",
         "@media screen and (max-width: 989px) {.article-card__excerpt {display: none; }}"
       ],
       "settings": {
