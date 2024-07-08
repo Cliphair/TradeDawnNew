@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "8ef15549-887d-43b3-b5a9-adb613c708a7": {
@@ -35,7 +44,7 @@
       ],
       "settings": {
         "max-width": "2560",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/discount-page-banner-desktop.webp",
         "mobile-image": "shopify:\/\/shop_images\/discount-page-banner-mobile.webp",
         "url": "",
@@ -64,7 +73,7 @@
         "enable_text": true,
         "custom_text": true,
         "header": "<h2>Cliphair’s <em>Discounts <\/em>& <em>Voucher Codes<\/em><\/h2>",
-        "sub_header": "<p>Get your favourites for less, with Cliphair’s exclusive discounts and voucher codes! Discover the newest offers and discounts, find out about our freebies and save on on Clip In Hair Extensions, Professional Hair Extensions, Hair Care and Accessories. Discover the latest discount and voucher codes at Beauty Works to receive the best deals on all of your hair essentials.<\/p>",
+        "sub_header": "<p>Get your favourites for less, with Cliphair’s exclusive discounts and voucher codes! Discover the newest offers and discounts, find out about our freebies and save on on Clip In Hair Extensions, Professional Hair Extensions, Hair Care and Accessories. Discover the latest discount and voucher codes at Cliphair to receive the best deals on all of your hair essentials.<\/p>",
         "description": "Are you a Student, or a Blue Light Card holder? Don’t miss out on our exclusive deals for you!",
         "read_more": "",
         "text_width": 100,
@@ -578,7 +587,7 @@
       ],
       "settings": {
         "max-width": "2560",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/discount-page-banner-2.webp",
         "url": "shopify:\/\/pages\/journey",
         "padding_top": 0,
