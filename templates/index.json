@@ -812,7 +812,8 @@
     "342029b3-5620-4e2e-864b-55edf0aa9b0d": {
       "type": "blog-spot",
       "custom_css": [
-        ".tag {color: #414141;}"
+        ".tag {color: #414141;}",
+        "@media screen and (max-width: 989px) {.article-card__excerpt {display: none; }}"
       ],
       "settings": {
         "heading": "THE BLOG SPOT",
@@ -824,12 +825,12 @@
         "post_limit": 4,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "swipe_on_desktop": true,
         "color_scheme": "accent-2",
         "show_image": true,
         "image_ratio": "square",
-        "show_date": true,
+        "show_date": false,
         "show_author": true,
         "show_view_all": true,
         "enable_tags": true,
