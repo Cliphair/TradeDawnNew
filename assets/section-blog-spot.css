@@ -40,11 +40,11 @@
 	min-width: fit-content;
 }
 
-@media screen and (min-width:750px) and (max-width:989px) {
+/* @media screen and (min-width:750px) and (max-width:989px) {
 	.blog-posts-wrapper {
 		padding: 0 6rem;
 	}
-}
+} */
 
 @media screen and (min-width:750px) {
 	.blog-spot-section .blog__view-all {
