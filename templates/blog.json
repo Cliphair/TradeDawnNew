@@ -160,13 +160,17 @@
     },
     "main": {
       "type": "main-blog",
+      "custom_css": [
+        ".card__heading {color: #833c91;}",
+        "@media screen and (max-width: 989px) {.article-card__excerpt {display: none; }}"
+      ],
       "settings": {
         "show_page_title": false,
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
         "show_date": false,
-        "show_author": false,
+        "show_author": true,
         "color_scheme": "inverse",
         "padding_top": 0,
         "padding_bottom": 36
