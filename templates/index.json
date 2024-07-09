@@ -151,7 +151,7 @@
           "type": "collections",
           "settings": {
             "label": "Clip Ins",
-            "collection-list": "under-nav-menu",
+            "collection-list": "main-categories",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
