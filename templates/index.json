@@ -758,7 +758,7 @@
       "settings": {
         "title": "As Seen On",
         "heading_size": "h1",
-        "introduction": "",
+        "introduction": "<p>Loved by people you love<\/p>",
         "text_allignment": "center",
         "columns_desktop": 4,
         "swipe_on_desktop": true,
