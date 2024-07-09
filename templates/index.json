@@ -15,49 +15,7 @@
         ".slider-button {margin-top: -26px;}"
       ],
       "settings": {
-        "collection-list": "under-nav-menu",
-        "image_ratio": "square",
-        "circle_images": true,
-        "hide_card_arrow": true,
-        "columns_desktop": 5,
-        "swipe_on_desktop": true,
-        "color_scheme": "",
-        "columns_mobile": "3",
-        "swipe_on_mobile": true,
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
-    "visual_menu_dQaXWU": {
-      "type": "visual-menu",
-      "disabled": true,
-      "custom_css": [
-        ".collection-carrousel-wrapper {max-width: unset;}",
-        ".slider-button {margin-top: -26px;}"
-      ],
-      "settings": {
-        "collection-list": "under-nav-menu",
-        "image_ratio": "square",
-        "circle_images": true,
-        "hide_card_arrow": true,
-        "columns_desktop": 5,
-        "swipe_on_desktop": true,
-        "color_scheme": "",
-        "columns_mobile": "3",
-        "swipe_on_mobile": true,
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
-    "visual_menu_gFLQd6": {
-      "type": "visual-menu",
-      "disabled": true,
-      "custom_css": [
-        ".slider-button {margin-top: -26px;}",
-        "@media screen and (min-width: 990px) {div {display: none; }}"
-      ],
-      "settings": {
-        "collection-list": "under-nav-menu",
+        "collection-list": "visual-menu",
         "image_ratio": "square",
         "circle_images": true,
         "hide_card_arrow": true,
@@ -193,7 +151,7 @@
           "type": "collections",
           "settings": {
             "label": "Clip Ins",
-            "collection-list": "choose-by-hair-extensions-type-clip-ins",
+            "collection-list": "under-nav-menu",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -202,6 +160,7 @@
         },
         "collections_Wkh4rx": {
           "type": "collections",
+          "disabled": true,
           "settings": {
             "label": "Professionals",
             "collection-list": "choose-by-hair-extensions-type-professional",
@@ -1034,8 +993,6 @@
   },
   "order": [
     "visual_menu_66DUPM",
-    "visual_menu_dQaXWU",
-    "visual_menu_gFLQd6",
     "slideshow_image_link_WcQ9XG",
     "maquee_bdNYHF",
     "753975ec-3602-477e-b65e-6d089a9053cb",
