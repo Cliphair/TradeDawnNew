@@ -129,7 +129,7 @@
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
-        "title": "CHOOSE BY HAIR COLOUR…",
+        "title": "Choose By Hair Colour…",
         "heading_size": "h1",
         "introduction": "<p>Browse over <strong>70+ stunning shades<\/strong>, including a wide range of block colours, highlights, balayage and ombre, and our funky shade collection.<\/p>",
         "text_allignment": "left",
@@ -151,7 +151,7 @@
           "type": "collections",
           "settings": {
             "label": "Clip Ins",
-            "collection-list": "under-nav-menu",
+            "collection-list": "main-categories",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -181,9 +181,9 @@
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
-        "title": "CHOOSE BY HAIR EXTENSION TYPE…",
+        "title": "Choose By Hair Extension Type…",
         "heading_size": "h1",
-        "introduction": "<p>Are you looking for temporary clip-ins or a professional permanent option?<\/p>",
+        "introduction": "<p>Choose from temporary clip-Ins or professional permanent extensions.<\/p>",
         "text_allignment": "left",
         "image_ratio": "square",
         "hide_card_arrow": true,
@@ -202,7 +202,7 @@
         "heading_Bzfc9T": {
           "type": "heading",
           "settings": {
-            "heading": "NEED A HAND?",
+            "heading": "Need A Hand?",
             "heading_size": "h1",
             "h1": false
           }
@@ -301,7 +301,7 @@
         "heading_3EjH4p": {
           "type": "heading",
           "settings": {
-            "heading": "SEE IT IN REAL LIFE",
+            "heading": "See It In Real Life",
             "heading_size": "h1"
           }
         },
@@ -435,7 +435,7 @@
         "heading_jitWDL": {
           "type": "heading",
           "settings": {
-            "heading": "FEATURED IN",
+            "heading": "Featured In",
             "heading_size": "h2",
             "h1": false
           }
@@ -654,7 +654,7 @@
         "img {border-radius: 10px;}"
       ],
       "settings": {
-        "title": "HAIR TUTORIAL VIDEOS",
+        "title": "Hair Tutorial Videos",
         "heading_size": "h1",
         "introduction": "<p>Dive into our hair extension tutorial videos for endless styling ideas, step-by-step application guides, and expert extension advice! <\/p>",
         "button_label": "VIEW VIDEO GALLERY",
@@ -756,9 +756,9 @@
         "@media screen and (max-width: 749px) {.section-images-list .grid--3-col-tablet-down .grid__item {width: calc((100% - (var(--grid-mobile-horizontal-spacing) * 1)) \/ 2); }}"
       ],
       "settings": {
-        "title": "AS SEEN ON",
+        "title": "As Seen On",
         "heading_size": "h1",
-        "introduction": "",
+        "introduction": "<p>Loved by people you love<\/p>",
         "text_allignment": "center",
         "columns_desktop": 4,
         "swipe_on_desktop": true,
@@ -777,7 +777,7 @@
         "@media screen and (max-width: 989px) {.article-card__excerpt {display: none; }}"
       ],
       "settings": {
-        "heading": "THE BLOG SPOT",
+        "heading": "The Blog Spot",
         "heading_size": "h1",
         "introduction": "<p>For the latest haircare tips, top trends and more, browse our blog categories and Hair Extensions Bible for everything you need to know about hair and extensions! <\/p>",
         "tags_size": "h4",
