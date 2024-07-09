@@ -34,11 +34,11 @@
           </summary>
           <div
             id="MegaMenu-Content-1"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width"
+              class="mega-menu__list"
               role="list"
             >
               <li>
@@ -188,7 +188,7 @@
                             aria-current="page"
                           {% endif %}
                         >
-                          Clip In Ponytail
+                          Clip In Ponytail (100-140g)
                         </a>
                       </li>
 
@@ -201,7 +201,7 @@
                             aria-current="page"
                           {% endif %}
                         >
-                          Clip In Fringe
+                          Clip In Fringe (30g)
                         </a>
                       </li>
                     </ul>
@@ -252,11 +252,11 @@
           </summary>
           <div
             id="MegaMenu-Content-2"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+              class="mega-menu__list"
               role="list"
             >
               <li style="width:calc(100% / 3);">
@@ -570,14 +570,14 @@
           </summary>
           <div
             id="MegaMenu-Content-3"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width"
+              class="mega-menu__list"
               role="list"
             >
-              <li style="width:calc(100% / 7);">
+              <li style="width:calc(100% / 6);">
                 <a
                   id="HeaderMenu-shop-by-shade-blacks"
                   href="/collections/black-hair-extensions"
@@ -586,7 +586,7 @@
                     aria-current="page"
                   {% endif %}
                 >
-                  BLACK SHADES
+                  BLACKS
                 </a>
                 <ul class="list-unstyled" role="list">
                   <li>
@@ -614,7 +614,118 @@
                     </a>
                   </li>
                 </ul>
-                <!--
+
+                <a
+                  id="HeaderMenu-shop-by-shade-browns"
+                  href="/collections/brown-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/brown-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/brown-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BROWNS
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-2"
+                      href="/collections/darkest-brown-hair-extensions-2"
+                      class="mega-menu__link link{% if request.path == '/collections/darkest-brown-hair-extensions-2' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/darkest-brown-hair-extensions-2' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Darkest Brown (#2)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-3"
+                      href="/collections/dark-brown-hair-extensions-3"
+                      class="mega-menu__link link{% if request.path == '/collections/dark-brown-hair-extensions-3' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/dark-brown-hair-extensions-3' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Dark Brown (#3)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-4"
+                      href="/collections/medium-brown-hair-extensions-4"
+                      class="mega-menu__link link{% if request.path == '/collections/medium-brown-hair-extensions-4' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/medium-brown-hair-extensions-4' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Medium Brown (#4)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-5"
+                      href="/collections/toffee-brown-hair-extensions-5"
+                      class="mega-menu__link link{% if request.path == '/collections/toffee-brown-hair-extensions-5' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/toffee-brown-hair-extensions-5' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Toffee Brown (#5)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-6"
+                      href="/collections/light-chestnut-brown-hair-extensions-6"
+                      class="mega-menu__link link{% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Light Brown (#6)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-6b"
+                      href="/collections/mousey-brown-hair-extensions-6b"
+                      class="mega-menu__link link{% if request.path == '/collections/mousey-brown-hair-extensions-6b' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/mousey-brown-hair-extensions-6b' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Mousey Brown (#6B)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-8"
+                      href="/collections/medium-ash-brown-hair-extensions-8"
+                      class="mega-menu__link link{% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Medium Ash Brown (#8)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-browns-9"
+                      href="/collections/ash-brown-hair-extensions-9"
+                      class="mega-menu__link link{% if request.path == '/collections/ash-brown-hair-extensions-9' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ash-brown-hair-extensions-9' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Ash Brown (#9)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              {% comment %}
+                <li style="width:calc(100% / 7);">
                   <a
                     id="HeaderMenu-shop-by-shade-browns"
                     href="/collections/brown-hair-extensions"
@@ -723,119 +834,9 @@
                       </a>
                     </li>
                   </ul>
-                -->
-              </li>
-              <li style="width:calc(100% / 7);">
-                <a
-                  id="HeaderMenu-shop-by-shade-browns"
-                  href="/collections/brown-hair-extensions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/brown-hair-extensions' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/brown-hair-extensions' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  BROWN SHADES
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-2"
-                      href="/collections/darkest-brown-hair-extensions-2"
-                      class="mega-menu__link link{% if request.path == '/collections/darkest-brown-hair-extensions-2' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/darkest-brown-hair-extensions-2' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Darkest Brown (#2)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-3"
-                      href="/collections/dark-brown-hair-extensions-3"
-                      class="mega-menu__link link{% if request.path == '/collections/dark-brown-hair-extensions-3' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/dark-brown-hair-extensions-3' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Dark Brown (#3)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-4"
-                      href="/collections/medium-brown-hair-extensions-4"
-                      class="mega-menu__link link{% if request.path == '/collections/medium-brown-hair-extensions-4' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/medium-brown-hair-extensions-4' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Medium Brown (#4)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-5"
-                      href="/collections/toffee-brown-hair-extensions-5"
-                      class="mega-menu__link link{% if request.path == '/collections/toffee-brown-hair-extensions-5' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/toffee-brown-hair-extensions-5' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Toffee Brown (#5)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-6"
-                      href="/collections/light-chestnut-brown-hair-extensions-6"
-                      class="mega-menu__link link{% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/light-chestnut-brown-hair-extensions-6' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Light Brown (#6)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-6b"
-                      href="/collections/mousey-brown-hair-extensions-6b"
-                      class="mega-menu__link link{% if request.path == '/collections/mousey-brown-hair-extensions-6b' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/mousey-brown-hair-extensions-6b' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Mousey Brown (#6B)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-8"
-                      href="/collections/medium-ash-brown-hair-extensions-8"
-                      class="mega-menu__link link{% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/medium-ash-brown-hair-extensions-8' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Medium Ash Brown (#8)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-browns-9"
-                      href="/collections/ash-brown-hair-extensions-9"
-                      class="mega-menu__link link{% if request.path == '/collections/ash-brown-hair-extensions-9' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/ash-brown-hair-extensions-9' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Ash Brown (#9)
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li style="width:calc(100% / 7);">
+                </li>
+              {% endcomment %}
+              <li style="width:calc(100% / 6);">
                 <a
                   id="HeaderMenu-shop-by-shade-blondes"
                   href="/collections/blonde-hair-extensions"
@@ -844,7 +845,7 @@
                     aria-current="page"
                   {% endif %}
                 >
-                  BLONDE SHADES
+                  BLONDES
                 </a>
                 <ul class="list-unstyled" role="list">
                   <li>
@@ -957,177 +958,7 @@
                   </li>
                 </ul>
               </li>
-              <li style="width:calc(100% / 7);">
-                <a
-                  id="HeaderMenu-shop-by-shade-balayages"
-                  href="/collections/balayage-hair-extensions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/balayage-hair-extensions' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  BALAYAGE SHADES
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-ash-black"
-                      href="/collections/ash-black-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/ash-black-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/ash-black-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Ash Black Balayage
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-silver-shadow"
-                      href="/collections/silver-shadow-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/silver-shadow-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/silver-shadow-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Silver Shadow Balayage
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-espresso-melt"
-                      href="/collections/dark-espresso-melt-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/dark-espresso-melt-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/dark-espresso-melt-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Espresso Melt Balayage
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-soft-bronze"
-                      href="/collections/soft-bronze-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/soft-bronze-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/soft-bronze-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Soft Bronze Balayage
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-biscuit-blondey"
-                      href="/collections/biscuit-blondey-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/biscuit-blondey-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/biscuit-blondey-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Biscuit Blondey Balayage
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-chestnut-bronde"
-                      href="/collections/chestnut-bronde-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/chestnut-bronde-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/chestnut-bronde-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Chestnut Bronde Balayage
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-cinnamon-swirl"
-                      href="/collections/cinnamon-swirl-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/cinnamon-swirl-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/cinnamon-swirl-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Cinnamon Swirl Balayage
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-balayages-chestnut-honey"
-                      href="/collections/chestnut-honey-balayage-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/chestnut-honey-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/chestnut-honey-balayage-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Chestnut Honey Balayage
-                    </a>
-                  </li>
-                </ul>
-                <a
-                  id="HeaderMenu-shop-by-shade-ombres"
-                  href="/collections/ombre-hair-extensions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/ombre-hair-extensions' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/ombre-hair-extensions' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  OMBRE SHADES
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-ombres-t1b-sg"
-                      href="/collections/ombre-t1b-sg-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/ombre-t1b-sg-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/ombre-t1b-sg-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Silver Black Ombre (#T1B/SG)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-ombres-t2-27"
-                      href="/collections/ombre-t2-27-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/ombre-t2-27-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/ombre-t2-27-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Espresso Honey Ombre (#T2/27)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-ombres-t4-27"
-                      href="/collections/ombre-t4-27-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/ombre-t4-27-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/ombre-t4-27-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Chocolate Honey Ombre (#T4/27)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-shop-by-shade-ombres-t6-27"
-                      href="/collections/ombre-t6-27-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/ombre-t6-27-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/ombre-t6-27-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Toffee Honey Ombre (#T6/27)
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li style="width:calc(100% / 7);">
+              <li style="width:calc(100% / 6);">
                 <a
                   id="HeaderMenu-shop-by-shade-mixed"
                   href="/collections/mixed-coloured-hair-extensions"
@@ -1136,7 +967,7 @@
                     aria-current="page"
                   {% endif %}
                 >
-                  MIXED SHADES
+                  HIGHLIGHTS
                 </a>
                 <ul class="list-unstyled" role="list">
                   <li>
@@ -1369,7 +1200,177 @@
                   </li>
                 </ul>
               </li>
-              <li style="width:calc(100% / 7);">
+              <li style="width:calc(100% / 6);">
+                <a
+                  id="HeaderMenu-shop-by-shade-balayages"
+                  href="/collections/balayage-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/balayage-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BALAYAGES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-ash-black"
+                      href="/collections/ash-black-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ash-black-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ash-black-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Ash Black Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-silver-shadow"
+                      href="/collections/silver-shadow-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/silver-shadow-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/silver-shadow-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Silver Shadow Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-espresso-melt"
+                      href="/collections/dark-espresso-melt-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/dark-espresso-melt-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/dark-espresso-melt-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Espresso Melt Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-soft-bronze"
+                      href="/collections/soft-bronze-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/soft-bronze-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/soft-bronze-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Soft Bronze Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-biscuit-blondey"
+                      href="/collections/biscuit-blondey-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/biscuit-blondey-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/biscuit-blondey-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Biscuit Blondey Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-chestnut-bronde"
+                      href="/collections/chestnut-bronde-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/chestnut-bronde-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/chestnut-bronde-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chestnut Bronde Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-cinnamon-swirl"
+                      href="/collections/cinnamon-swirl-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/cinnamon-swirl-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/cinnamon-swirl-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Cinnamon Swirl Balayage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-balayages-chestnut-honey"
+                      href="/collections/chestnut-honey-balayage-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/chestnut-honey-balayage-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/chestnut-honey-balayage-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chestnut Honey Balayage
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  id="HeaderMenu-shop-by-shade-ombres"
+                  href="/collections/ombre-hair-extensions"
+                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/ombre-hair-extensions' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/ombre-hair-extensions' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  OMBRES
+                </a>
+                <ul class="list-unstyled" role="list">
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t1b-sg"
+                      href="/collections/ombre-t1b-sg-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t1b-sg-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t1b-sg-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Silver Black Ombre (#T1B/SG)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t2-27"
+                      href="/collections/ombre-t2-27-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t2-27-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t2-27-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Espresso Honey Ombre (#T2/27)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t4-27"
+                      href="/collections/ombre-t4-27-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t4-27-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t4-27-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Chocolate Honey Ombre (#T4/27)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="HeaderMenu-shop-by-shade-ombres-t6-27"
+                      href="/collections/ombre-t6-27-hair-extensions"
+                      class="mega-menu__link link{% if request.path == '/collections/ombre-t6-27-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/ombre-t6-27-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      Toffee Honey Ombre (#T6/27)
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li style="width:calc(100% / 6);">
                 <a
                   id="HeaderMenu-shop-by-shade-reds"
                   href="/collections/red-hair-extensions"
@@ -1378,7 +1379,7 @@
                     aria-current="page"
                   {% endif %}
                 >
-                  RED & AUBURN
+                  REDS & AUBURNS
                 </a>
                 <ul class="list-unstyled" role="list">
                   <li>
@@ -1515,7 +1516,7 @@
                   </li>
                 </ul>
               </li>
-              <li style="width:calc(100% / 7);">
+              <li style="width:calc(100% / 6);">
                 <a
                   id="HeaderMenu-shop-by-shade-funky"
                   href="/collections/funky-coloured-hair-extensions"
@@ -1524,7 +1525,7 @@
                     aria-current="page"
                   {% endif %}
                 >
-                  FUNKY SHADES
+                  FUNKIES
                 </a>
                 <ul class="list-unstyled" role="list">
                   <li>
@@ -1625,11 +1626,11 @@
           </summary>
           <div
             id="MegaMenu-Content-4"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width mega-menu__list--condensed"
+              class="mega-menu__list mega-menu__list--condensed"
               role="list"
             >
               <a
@@ -1802,11 +1803,11 @@
           </summary>
           <div
             id="MegaMenu-Content-5"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width"
+              class="mega-menu__list"
               role="list"
             >
               <li style="width:calc(100% / 3);">
@@ -2109,11 +2110,11 @@
           </summary>
           <div
             id="MegaMenu-Content-6"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width mega-menu__list--condensed"
+              class="mega-menu__list mega-menu__list--condensed"
               role="list"
             >
               <li style="width:calc(100% / 1);">
@@ -2222,11 +2223,11 @@
           </summary>
           <div
             id="MegaMenu-Content-7"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width mega-menu__list--condensed"
+              class="mega-menu__list mega-menu__list--condensed"
               role="list"
             >
               <li style="width:calc(100% / 1);">
@@ -2242,25 +2243,14 @@
                 </a>
 
                 <a
-                  id="HeaderMenu-info-hub-blog"
-                  href="/blogs/hair-blog"
-                  class="mega-menu__link link{% if request.path == '/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/hair-blog' %}
+                  id="HeaderMenu-info-hub-rewards"
+                  href="/pages/rewards"
+                  class="mega-menu__link link{% if request.path == '/pages/rewards' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/rewards' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  Blog
-                </a>
-
-                <a
-                  id="HeaderMenu-info-hub-faqs"
-                  href="/pages/faqs"
-                  class="mega-menu__link link{% if request.path == '/pages/faqs' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/pages/faqs' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Faqs
+                  Rewards
                 </a>
 
                 <a
@@ -2297,26 +2287,39 @@
                 </a>
 
                 <a
-                  id="HeaderMenu-info-hub-rewards"
-                  href="/pages/rewards"
-                  class="mega-menu__link link{% if request.path == '/pages/rewards' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/pages/rewards' %}
+                  id="HeaderMenu-info-hub-faqs"
+                  href="/pages/faqs"
+                  class="mega-menu__link link{% if request.path == '/pages/faqs' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/faqs' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  Rewards
+                  Faqs
                 </a>
 
                 <a
-                  id="HeaderMenu-info-hub-contact-us"
-                  href="/pages/contact-us"
-                  class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/pages/contact-us' %}
+                  id="HeaderMenu-info-hub-blog"
+                  href="/blogs/hair-blog"
+                  class="mega-menu__link link{% if request.path == '/blogs/hair-blog' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog' %}
                     aria-current="page"
                   {% endif %}
                 >
-                  Contact Us
+                  Blog
                 </a>
+
+                {% comment %}
+                  <a
+                    id="HeaderMenu-info-hub-contact-us"
+                    href="/pages/contact-us"
+                    class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/pages/contact-us' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Contact Us
+                  </a>
+                {% endcomment %}
 
                 <a
                   id="HeaderMenu-info-hub-ambassador"
@@ -2363,18 +2366,18 @@
                   class="header__active-menu-item"
                 {% endif %}
               >
-                DISCOUNTS
+                OFFERS & SAVINGS
               </span>
             </a>
             {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
           </summary>
           <div
             id="MegaMenu-Content-8"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list page-width mega-menu__list--condensed"
+              class="mega-menu__list mega-menu__list--condensed"
               role="list"
             >
               <li style="width:calc(100% / 1);">
