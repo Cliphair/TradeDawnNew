@@ -137,23 +137,23 @@
     column-gap: var(--grid-desktop-horizontal-spacing-large);
   }
 
-  .section-visual-menu .grid--2-col-desktop .grid__item {
+  .section-visual-menu .slider--desktop.grid--2-col-desktop .grid__item {
     width: calc((100% - var(--grid-desktop-horizontal-spacing-large)) / 2);
   }
 
-  .section-visual-menu .grid--3-col-desktop .grid__item {
+  .section-visual-menu .slider--desktop.grid--3-col-desktop .grid__item {
     width: calc((100% - (var(--grid-desktop-horizontal-spacing-large) * 2)) / 3);
   }
 
-  .section-visual-menu .grid--4-col-desktop .grid__item {
+  .section-visual-menu .slider--desktop.grid--4-col-desktop .grid__item {
     width: calc((100% - (var(--grid-desktop-horizontal-spacing-large) * 3)) / 4);
   }
 
-  .section-visual-menu .grid--5-col-desktop .grid__item {
+  .section-visual-menu .slider--desktop.grid--5-col-desktop .grid__item {
     width: calc((100% - (var(--grid-desktop-horizontal-spacing-large) * 4)) / 5);
   }
 
-  .section-visual-menu .grid--6-col-desktop .grid__item {
+  .section-visual-menu .slider--desktop.grid--6-col-desktop .grid__item {
     width: calc((100% - (var(--grid-desktop-horizontal-spacing-large) * 5)) / 6);
   }
 
