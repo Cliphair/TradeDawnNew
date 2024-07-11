@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.article-card__image-wrapper > a {
+.article-card__image-wrapper>a {
   display: block;
 }
 
@@ -49,7 +49,6 @@
 
 .article-card .card__heading {
   margin-bottom: 0.6rem;
-  text-transform: uppercase;
 }
 
 .blog-articles .article-card .card__information,
