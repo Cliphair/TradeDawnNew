@@ -774,7 +774,7 @@
       "custom_css": [
         ".tag {color: #414141;}",
         ".card__heading {color: #833c91;}",
-        "@media screen and (max-width: 989px) {.article-card__excerpt {display: none; }}"
+        " .article-card__excerpt {display: none; }"
       ],
       "settings": {
         "heading": "The Blog Spot",
