@@ -51,7 +51,7 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true,
             "enable_sc-out-of-stock_app": true,
-            "color_scheme": "background-2"
+            "color_scheme": "inverse"
           }
         },
         "share": {
