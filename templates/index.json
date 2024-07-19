@@ -181,9 +181,9 @@
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
-        "title": "Choose By Hair Extension Type…",
+        "title": "Choose By Collection...",
         "heading_size": "h1",
-        "introduction": "<p>Choose from temporary clip-Ins or professional permanent extensions.<\/p>",
+        "introduction": "<p>Explore our wide range of hair extensions, hair care goodies, professional tools, and styling must haves —all waiting for you here at Cliphair!<\/p>",
         "text_allignment": "left",
         "image_ratio": "square",
         "hide_card_arrow": true,
@@ -774,7 +774,7 @@
       "custom_css": [
         ".tag {color: #414141;}",
         ".card__heading {color: #833c91;}",
-        " .article-card__excerpt {display: none; }"
+        ".article-card__excerpt {display: none;}"
       ],
       "settings": {
         "heading": "The Blog Spot",
