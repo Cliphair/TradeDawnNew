@@ -16,18 +16,21 @@
 {%- endstyle -%}
 
 {% liquid
-  if collection.description contains '<!-- split -->'
-    assign more_info = collection.description | split: '<!-- split -->' | last | split: '<!-- FAQ section -->' | first
+  assign description = collection.description | split: '<!-- FAQ section -->' | first
+  if section.settings.remove_introduction
+    if collection.description contains '<!-- split -->'
+      assign description = collection.description | split: '<!-- split -->' | last
+    endif
   endif
 %}
 
-{% if more_info %}
+{% if description %}
   <div class="collection-hero color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
     <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       <div class="collection-hero__text-wrapper">
         {%- if section.settings.show_collection_description -%}
           <div class="collection-hero__description rte {{ section.settings.text_alignment }}">
-            {{ more_info }}
+            {{ description }}
           </div>
         {%- endif -%}
       </div>
@@ -49,6 +52,12 @@
       "id": "show_collection_description",
       "default": true,
       "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_introduction",
+      "default": true,
+      "label": "Remove introduction"
     },
     {
       "type": "text_alignment",
@@ -85,11 +94,6 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 52
-    }
-  ],
-  "presets": [
-    {
-      "name": "Collection more info"
     }
   ]
 }
