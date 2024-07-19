@@ -1909,6 +1909,19 @@
 
                         <li>
                           <a
+                            id="HeaderDrawer-help-me-choose-lookbook"
+                            href="/pages/lookbook"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/lookbook' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/pages/lookbook' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Lookbook
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
                             id="HeaderDrawer-help-me-choose-contact-us"
                             href="/pages/contact-us"
                             class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/contact-us' %} menu-drawer__menu-item--active{% endif %}"

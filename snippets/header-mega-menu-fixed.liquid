@@ -230,6 +230,32 @@
                   </li>
                 </ul>
               </li>
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
+              >
+                {% liquid
+                  assign menu_image = images['clip-in-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
+              </li>
             </ul>
           </div>
         </details>
@@ -270,290 +296,325 @@
               class="mega-menu__list"
               role="list"
             >
-              <li style="width:calc(100% / 3);">
-                <a
-                  id="HeaderMenu-professional-weave"
-                  href="/collections/human-hair-weave-wefts-hair-extensions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
-                    aria-current="page"
-                  {% endif %}
+              <li>
+                <ul
+                  class="mega-menu__list page-width no-padding"
+                  role="list"
                 >
-                  WEAVE HAIR EXTENSIONS
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
+                  <li style="width:calc(100% / 3);">
                     <a
-                      id="HeaderMenu-professional-weave-classic-weft"
+                      id="HeaderMenu-professional-weave"
                       href="/collections/human-hair-weave-wefts-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
                       {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      Remy Royale Classic Weft (120g)
+                      WEAVE HAIR EXTENSIONS
                     </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-weave-flat-track"
-                      href="/collections/flat-weft-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/flat-weft-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/flat-weft-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Remy Royale Flat Track Weft (120g)
-                    </a>
-                  </li>
-                </ul>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-weave-classic-weft"
+                          href="/collections/human-hair-weave-wefts-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Classic Weft (120g)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-weave-flat-track"
+                          href="/collections/flat-weft-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/flat-weft-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/flat-weft-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Flat Track Weft (120g)
+                        </a>
+                      </li>
+                    </ul>
 
-                <a
-                  id="HeaderMenu-professional-tapes"
-                  href="/collections/tape-in-hair-extensions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/tape-in-hair-extensions' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  TAPE HAIR EXTENSIONS
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
                     <a
-                      id="HeaderMenu-professional-tapes-classic-tape"
+                      id="HeaderMenu-professional-tapes"
                       href="/collections/tape-in-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
                       {% if request.path == '/collections/tape-in-hair-extensions' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      Tape In Hair Extensions (100g)
+                      TAPE HAIR EXTENSIONS
                     </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tapes-classic-tape"
+                          href="/collections/tape-in-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/tape-in-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Tape In Hair Extensions (100g)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tapes-remy-tapes"
+                          href="/collections/remy-royale-tape-in-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/remy-royale-tape-in-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/remy-royale-tape-in-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Tape Ins (50g)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tapes-invisible-tape"
+                          href="/collections/remy-royale-invisible-tape-in-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Invisible Tape Ins (50g)
+                        </a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
+
+                  <li style="width:calc(100% / 3);">
                     <a
-                      id="HeaderMenu-professional-tapes-remy-tapes"
-                      href="/collections/remy-royale-tape-in-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/remy-royale-tape-in-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/remy-royale-tape-in-extensions' %}
+                      id="HeaderMenu-professional-nano-ring"
+                      href="/collections/nano-rings-hair-extensions"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/nano-rings-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/nano-rings-hair-extensions' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      Remy Royale Tape Ins (50g)
+                      NANO RING HAIR EXTENSIONS
                     </a>
-                  </li>
-                  <li>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-nano-ring-nano-ring"
+                          href="/collections/nano-rings-hair-extensions/nano-ring"
+                          class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions/nano-ring' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/nano-rings-hair-extensions/nano-ring' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Nano Rings (50g)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-nano-ring-nano-bonds"
+                          href="/collections/nano-rings-hair-extensions/remy-royale-nano-bonds"
+                          class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions/remy-royale-nano-bonds' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/nano-rings-hair-extensions/remy-royale-nano-bonds' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Nano Bonds (50g)
+                        </a>
+                      </li>
+                    </ul>
                     <a
-                      id="HeaderMenu-professional-tapes-invisible-tape"
-                      href="/collections/remy-royale-invisible-tape-in-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions' %}
+                      id="HeaderMenu-professional-pre-bonded"
+                      href="/collections/pre-bonded-hair-extensions"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/pre-bonded-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/pre-bonded-hair-extensions' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      Remy Royale Invisible Tape Ins (50g)
+                      PRE BONDED HAIR EXTENSIONS
+                    </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-pre-bonded-i-tip"
+                          href="/collections/i-tip-straight-pre-bonded-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale I-Tips (50g)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-pre-bonded-flat-tip"
+                          href="/collections/flat-tip-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/flat-tip-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/flat-tip-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Flat Tips (50g)
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li style="width:calc(100% / 3);">
+                    <a
+                      id="HeaderMenu-professional-tools"
+                      href="#"
+                      class="mega-menu__link mega-menu__link--level-2 link"
+                    >
+                      PROFESSIONAL TOOLS & MAINTENANCE
+                    </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tools-colour-ring"
+                          href="/products/hair-extensions-colour-ring"
+                          class="mega-menu__link link{% if request.path == '/products/hair-extensions-colour-ring' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/hair-extensions-colour-ring' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Colour Rings
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tools-nano-beads"
+                          href="/products/silicone-lined-nano-rings-beads-200-pack"
+                          class="mega-menu__link link{% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Nano Beads
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tools-tape-remover"
+                          href="/products/tape-in-hair-extensions-remover"
+                          class="mega-menu__link link{% if request.path == '/products/tape-in-hair-extensions-remover' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/tape-in-hair-extensions-remover' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Tape Remover
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tools-tape-tabs"
+                          href="/products/spare-tape-pack-for-tape-in-extensions"
+                          class="mega-menu__link link{% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Tape Tabs
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tools-wig-glue"
+                          href="/products/cliphair-wig-glue"
+                          class="mega-menu__link link{% if request.path == '/products/cliphair-wig-glue' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/cliphair-wig-glue' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Wig Glue
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tools-glue-remover"
+                          href="/products/cliphair-glue-remover"
+                          class="mega-menu__link link{% if request.path == '/products/cliphair-glue-remover' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/cliphair-glue-remover' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Wig Glue Remover
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-tools-bundle"
+                          href="/collections/hair-extensions-bundle/hair-care-accessories-bundle"
+                          class="mega-menu__link link{% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Maintenance Value Bundles
+                        </a>
+                      </li>
+                    </ul>
+                    <a
+                      id="HeaderMenu-professional-bundles"
+                      href="/collections/hair-extensions-bundle/professional-bundle"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/hair-extensions-bundle/professional-bundle' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/hair-extensions-bundle/professional-bundle' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      PERMANENT EXTENSIONS VALUE BUNDLES
+                    </a>
+
+                    <a
+                      id="HeaderMenu-professional-gift-card"
+                      href="/products/cliphair-e-gift-card"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/products/cliphair-e-gift-card' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-e-gift-card' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      E-GIFT CARD
+                    </a>
+                    <a
+                      id="HeaderMenu-professional-trade"
+                      href="https://cliphairtrade.com/pages/trade-account"
+                      class="mega-menu__link mega-menu__link--level-2 link"
+                    >
+                      APPLY FOR TRADE ACCOUNT HERE
                     </a>
                   </li>
                 </ul>
               </li>
 
-              <li style="width:calc(100% / 3);">
-                <a
-                  id="HeaderMenu-professional-nano-ring"
-                  href="/collections/nano-rings-hair-extensions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/nano-rings-hair-extensions' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/nano-rings-hair-extensions' %}
-                    aria-current="page"
-                  {% endif %}
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
+              >
+                {% liquid
+                  assign menu_image = images['professional-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
                 >
-                  NANO RING HAIR EXTENSIONS
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-nano-ring-nano-ring"
-                      href="/collections/nano-rings-hair-extensions/nano-ring"
-                      class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions/nano-ring' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/nano-rings-hair-extensions/nano-ring' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Remy Royale Nano Rings (50g)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-nano-ring-nano-bonds"
-                      href="/collections/nano-rings-hair-extensions/remy-royale-nano-bonds"
-                      class="mega-menu__link link{% if request.path == '/collections/nano-rings-hair-extensions/remy-royale-nano-bonds' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/nano-rings-hair-extensions/remy-royale-nano-bonds' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Remy Royale Nano Bonds (50g)
-                    </a>
-                  </li>
-                </ul>
-                <a
-                  id="HeaderMenu-professional-pre-bonded"
-                  href="/collections/pre-bonded-hair-extensions"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/pre-bonded-hair-extensions' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/pre-bonded-hair-extensions' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  PRE BONDED HAIR EXTENSIONS
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-pre-bonded-i-tip"
-                      href="/collections/i-tip-straight-pre-bonded-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Remy Royale I-Tips (50g)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-pre-bonded-flat-tip"
-                      href="/collections/flat-tip-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/flat-tip-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/flat-tip-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Remy Royale Flat Tips (50g)
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li style="width:calc(100% / 3);">
-                <a
-                  id="HeaderMenu-professional-tools"
-                  href="#"
-                  class="mega-menu__link mega-menu__link--level-2 link"
-                >
-                  PROFESSIONAL TOOLS & MAINTENANCE
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-tools-colour-ring"
-                      href="/products/hair-extensions-colour-ring"
-                      class="mega-menu__link link{% if request.path == '/products/hair-extensions-colour-ring' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/hair-extensions-colour-ring' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Colour Rings
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-tools-nano-beads"
-                      href="/products/silicone-lined-nano-rings-beads-200-pack"
-                      class="mega-menu__link link{% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Nano Beads
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-tools-tape-remover"
-                      href="/products/tape-in-hair-extensions-remover"
-                      class="mega-menu__link link{% if request.path == '/products/tape-in-hair-extensions-remover' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/tape-in-hair-extensions-remover' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Tape Remover
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-tools-tape-tabs"
-                      href="/products/spare-tape-pack-for-tape-in-extensions"
-                      class="mega-menu__link link{% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Tape Tabs
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-tools-wig-glue"
-                      href="/products/cliphair-wig-glue"
-                      class="mega-menu__link link{% if request.path == '/products/cliphair-wig-glue' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/cliphair-wig-glue' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Wig Glue
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-tools-glue-remover"
-                      href="/products/cliphair-glue-remover"
-                      class="mega-menu__link link{% if request.path == '/products/cliphair-glue-remover' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/cliphair-glue-remover' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Wig Glue Remover
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-professional-tools-bundle"
-                      href="/collections/hair-extensions-bundle/hair-care-accessories-bundle"
-                      class="mega-menu__link link{% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Maintenance Value Bundles
-                    </a>
-                  </li>
-                </ul>
-                <a
-                  id="HeaderMenu-professional-bundles"
-                  href="/collections/hair-extensions-bundle/professional-bundle"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/hair-extensions-bundle/professional-bundle' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/hair-extensions-bundle/professional-bundle' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  PERMANENT EXTENSIONS VALUE BUNDLES
-                </a>
-                <a
-                  id="HeaderMenu-professional-gift-card"
-                  href="/products/cliphair-e-gift-card"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/products/cliphair-e-gift-card' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/products/cliphair-e-gift-card' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  E-GIFT CARD
-                </a>
-                <a
-                  id="HeaderMenu-professional-trade"
-                  href="https://cliphairtrade.com/pages/trade-account"
-                  class="mega-menu__link mega-menu__link--level-2 link"
-                >
-                  APPLY FOR TRADE ACCOUNT HERE
-                </a>
               </li>
             </ul>
           </div>
@@ -1648,69 +1709,108 @@
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list mega-menu__list--condensed"
+              class="mega-menu__list"
               role="list"
             >
-              <a
-                id="HeaderMenu-help-me-choose-hlep-me-choose-colour-match"
-                href="/pages/colour-matching-service"
-                class="mega-menu__link link{% if request.path == '/pages/colour-matching-service' %} mega-menu__link--active{% endif %}"
-                {% if request.path == '/pages/colour-matching-service' %}
-                  aria-current="page"
-                {% endif %}
+              <li style="width:calc(100% / 1);">
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-colour-match"
+                  href="/pages/colour-matching-service"
+                  class="mega-menu__link link{% if request.path == '/pages/colour-matching-service' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/colour-matching-service' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Express Colour Match
+                </a>
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-journey"
+                  href="/pages/journey"
+                  class="mega-menu__link link{% if request.path == '/pages/journey' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/journey' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Hair Quiz
+                </a>
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-video-guide"
+                  href="/pages/video-guides"
+                  class="mega-menu__link link{% if request.path == '/pages/video-guides' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/video-guides' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Video Guide
+                </a>
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
+                  href="/blogs/hair-blog/the-ultimate-hair-extension-length-guide"
+                  class="mega-menu__link link{% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Length Guide
+                </a>
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-lookbook"
+                  href="/pages/lookbook"
+                  class="mega-menu__link link{% if request.path == '/pages/lookbook' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/lookbook' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Lookbook
+                </a>
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-contact"
+                  href="/pages/contact-us"
+                  class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/contact-us' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Contact Us
+                </a>
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-buying-guide"
+                  href="/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary"
+                  class="mega-menu__link link{% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Ultimate Hair Extensions Buying Guide
+                </a>
+              </li>
+
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
               >
-                Express Colour Match
-              </a>
-              <a
-                id="HeaderMenu-help-me-choose-hlep-me-choose-journey"
-                href="/pages/journey"
-                class="mega-menu__link link{% if request.path == '/pages/journey' %} mega-menu__link--active{% endif %}"
-                {% if request.path == '/pages/journey' %}
-                  aria-current="page"
-                {% endif %}
-              >
-                Hair Quiz
-              </a>
-              <a
-                id="HeaderMenu-help-me-choose-hlep-me-choose-video-guide"
-                href="/pages/video-guides"
-                class="mega-menu__link link{% if request.path == '/pages/video-guides' %} mega-menu__link--active{% endif %}"
-                {% if request.path == '/pages/video-guides' %}
-                  aria-current="page"
-                {% endif %}
-              >
-                Video Guide
-              </a>
-              <a
-                id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
-                href="/blogs/hair-blog/the-ultimate-hair-extension-length-guide"
-                class="mega-menu__link link{% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %} mega-menu__link--active{% endif %}"
-                {% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %}
-                  aria-current="page"
-                {% endif %}
-              >
-                Length Guide
-              </a>
-              <a
-                id="HeaderMenu-help-me-choose-hlep-me-choose-contact"
-                href="/pages/contact-us"
-                class="mega-menu__link link{% if request.path == '/pages/contact-us' %} mega-menu__link--active{% endif %}"
-                {% if request.path == '/pages/contact-us' %}
-                  aria-current="page"
-                {% endif %}
-              >
-                Contact Us
-              </a>
-              <a
-                id="HeaderMenu-help-me-choose-hlep-me-choose-buying-guide"
-                href="/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary"
-                class="mega-menu__link link{% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %} mega-menu__link--active{% endif %}"
-                {% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
-                  aria-current="page"
-                {% endif %}
-              >
-                Ultimate Hair Extensions Buying Guide
-              </a>
+                {% liquid
+                  assign menu_image = images['help-me-choose-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
+              </li>
 
               {% comment %}
                 <li style="width:calc(100% / 1);">
@@ -1828,282 +1928,316 @@
               class="mega-menu__list"
               role="list"
             >
-              <li style="width:calc(100% / 3);">
-                <a
-                  id="HeaderMenu-haircare-accessories-haircare"
-                  href="/collections/hair-care"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/collections/hair-care' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/hair-care' %}
-                    aria-current="page"
-                  {% endif %}
+              <li>
+                <ul
+                  class="mega-menu__list"
+                  role="list"
                 >
-                  HAIRCARE
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
+                  <li style="width:calc(100% / 3);">
                     <a
-                      id="HeaderMenu-haircare-accessories-haircare-shampoo"
-                      href="/products/quench-the-thirst-deep-moisture-shampoo"
-                      class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-moisture-shampoo' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/quench-the-thirst-deep-moisture-shampoo' %}
+                      id="HeaderMenu-haircare-accessories-haircare"
+                      href="/collections/hair-care"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/collections/hair-care' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/hair-care' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      Deep Moisture Shampoo
+                      HAIRCARE
                     </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-haircare-shampoo"
+                          href="/products/quench-the-thirst-deep-moisture-shampoo"
+                          class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-moisture-shampoo' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/quench-the-thirst-deep-moisture-shampoo' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Deep Moisture Shampoo
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-haircare-conditioner"
+                          href="/products/quench-the-thirst-deep-moisture-conditioner"
+                          class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-moisture-conditioner' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/quench-the-thirst-deep-moisture-conditioner' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Deep Moisture Conditioner
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-haircare-mask"
+                          href="/products/quench-the-thirst-deep-conditioning-hair-mask"
+                          class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-conditioning-hair-mask' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/quench-the-thirst-deep-conditioning-hair-mask' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Deep Moisture Hair Mask
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-haircare-purple-shampoo"
+                          href="/products/silver-lining-purple-toning-shampoo"
+                          class="mega-menu__link link{% if request.path == '/products/silver-lining-purple-toning-shampoo' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/silver-lining-purple-toning-shampoo' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Purple Toning Shampoo
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-haircare-moisture-spray"
+                          href="/products/cliphair-silky-hair-spray"
+                          class="mega-menu__link link{% if request.path == '/products/cliphair-silky-hair-spray' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/cliphair-silky-hair-spray' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Silky Moisture Spray
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-haircare-heat-spray"
+                          href="/products/cliphair-heat-spray"
+                          class="mega-menu__link link{% if request.path == '/products/cliphair-heat-spray' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/cliphair-heat-spray' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Heat Protection Spray
+                        </a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
+
+                  <li style="width:calc(100% / 3);">
                     <a
-                      id="HeaderMenu-haircare-accessories-haircare-conditioner"
-                      href="/products/quench-the-thirst-deep-moisture-conditioner"
-                      class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-moisture-conditioner' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/quench-the-thirst-deep-moisture-conditioner' %}
+                      id="HeaderMenu-haircare-accessories-accessories"
+                      href="/collections/accessories"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/collections/accessories' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/accessories' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      Deep Moisture Conditioner
+                      ACCESSORIES & TOOLS
                     </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-accessories-pintail"
+                          href="/products/pintail-comb"
+                          class="mega-menu__link link{% if request.path == '/products/pintail-comb' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/pintail-comb' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Pintail Comb
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-accessories-brush"
+                          href="/products/detangling-hair-brush"
+                          class="mega-menu__link link{% if request.path == '/products/detangling-hair-brush' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/detangling-hair-brush' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Hair Extensions Brush
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-accessories-alligator"
+                          href="/products/pintail-comb"
+                          class="mega-menu__link link{% if request.path == '/products/pintail-comb' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/pintail-comb' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Alligator Clips
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-accessories-wave"
+                          href="/products/wave-comb-and-pouch"
+                          class="mega-menu__link link{% if request.path == '/products/wave-comb-and-pouch' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/wave-comb-and-pouch' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Wave Comb
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-accessories-snap-clips"
+                          href="/products/snap-clips-loose-5-clips"
+                          class="mega-menu__link link{% if request.path == '/products/snap-clips-loose-5-clips' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/snap-clips-loose-5-clips' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Snap Clips
+                        </a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
+
+                  <li style="width:calc(100% / 3);">
                     <a
-                      id="HeaderMenu-haircare-accessories-haircare-mask"
-                      href="/products/quench-the-thirst-deep-conditioning-hair-mask"
-                      class="mega-menu__link link{% if request.path == '/products/quench-the-thirst-deep-conditioning-hair-mask' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/quench-the-thirst-deep-conditioning-hair-mask' %}
-                        aria-current="page"
-                      {% endif %}
+                      id="HeaderMenu-haircare-accessories-professional"
+                      href="#"
+                      class="mega-menu__link mega-menu__link--level-2 link"
                     >
-                      Deep Moisture Hair Mask
+                      PROFESSIONAL MAINTENANCE
                     </a>
-                  </li>
-                  <li>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-professional-tape-remover"
+                          href="/products/tape-in-hair-extensions-remover"
+                          class="mega-menu__link link{% if request.path == '/products/tape-in-hair-extensions-remover' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/tape-in-hair-extensions-remover' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Tape Remover Spray
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-professional-spare-tape"
+                          href="/products/spare-tape-pack-for-tape-in-extensions"
+                          class="mega-menu__link link{% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Spare Tape Tabs
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-professional-nano-beads"
+                          href="/products/silicone-lined-nano-rings-beads-200-pack"
+                          class="mega-menu__link link{% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Nano Beads
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-professional-colour-ring"
+                          href="/products/hair-extensions-colour-ring"
+                          class="mega-menu__link link{% if request.path == '/products/hair-extensions-colour-ring' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/hair-extensions-colour-ring' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Colour Rings
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-professional-wig-glue"
+                          href="/products/cliphair-wig-glue"
+                          class="mega-menu__link link{% if request.path == '/products/cliphair-wig-glue' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/cliphair-wig-glue' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Wig Glue
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-professional-glue-remover"
+                          href="/products/cliphair-glue-remover"
+                          class="mega-menu__link link{% if request.path == '/products/cliphair-glue-remover' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/cliphair-glue-remover' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Glue Remover
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-professional-bundles"
+                          href="/collections/hair-extensions-bundle/hair-care-accessories-bundle"
+                          class="mega-menu__link link{% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Maintenance Value Bundles
+                        </a>
+                      </li>
+                    </ul>
                     <a
-                      id="HeaderMenu-haircare-accessories-haircare-purple-shampoo"
-                      href="/products/silver-lining-purple-toning-shampoo"
-                      class="mega-menu__link link{% if request.path == '/products/silver-lining-purple-toning-shampoo' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/silver-lining-purple-toning-shampoo' %}
+                      id="HeaderMenu-haircare-accessories-gift-card"
+                      href="/products/cliphair-e-gift-card"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/products/cliphair-e-gift-card' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/products/cliphair-e-gift-card' %}
                         aria-current="page"
                       {% endif %}
                     >
-                      Purple Toning Shampoo
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-haircare-moisture-spray"
-                      href="/products/cliphair-silky-hair-spray"
-                      class="mega-menu__link link{% if request.path == '/products/cliphair-silky-hair-spray' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/cliphair-silky-hair-spray' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Silky Moisture Spray
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-haircare-heat-spray"
-                      href="/products/cliphair-heat-spray"
-                      class="mega-menu__link link{% if request.path == '/products/cliphair-heat-spray' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/cliphair-heat-spray' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Heat Protection Spray
+                      E-GIFT CARD
                     </a>
                   </li>
                 </ul>
               </li>
 
-              <li style="width:calc(100% / 3);">
-                <a
-                  id="HeaderMenu-haircare-accessories-accessories"
-                  href="/collections/accessories"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path =='/collections/accessories' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/accessories' %}
-                    aria-current="page"
-                  {% endif %}
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
+              >
+                {% liquid
+                  assign menu_image = images['hair-care-accessories-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
                 >
-                  ACCESSORIES & TOOLS
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-accessories-pintail"
-                      href="/products/pintail-comb"
-                      class="mega-menu__link link{% if request.path == '/products/pintail-comb' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/pintail-comb' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Pintail Comb
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-accessories-brush"
-                      href="/products/detangling-hair-brush"
-                      class="mega-menu__link link{% if request.path == '/products/detangling-hair-brush' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/detangling-hair-brush' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Hair Extensions Brush
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-accessories-alligator"
-                      href="/products/pintail-comb"
-                      class="mega-menu__link link{% if request.path == '/products/pintail-comb' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/pintail-comb' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Alligator Clips
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-accessories-wave"
-                      href="/products/wave-comb-and-pouch"
-                      class="mega-menu__link link{% if request.path == '/products/wave-comb-and-pouch' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/wave-comb-and-pouch' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Wave Comb
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-accessories-snap-clips"
-                      href="/products/snap-clips-loose-5-clips"
-                      class="mega-menu__link link{% if request.path == '/products/snap-clips-loose-5-clips' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/snap-clips-loose-5-clips' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Snap Clips
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <li style="width:calc(100% / 3);">
-                <a
-                  id="HeaderMenu-haircare-accessories-professional"
-                  href="#"
-                  class="mega-menu__link mega-menu__link--level-2 link"
-                >
-                  PROFESSIONAL MAINTENANCE
-                </a>
-                <ul class="list-unstyled" role="list">
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-professional-tape-remover"
-                      href="/products/tape-in-hair-extensions-remover"
-                      class="mega-menu__link link{% if request.path == '/products/tape-in-hair-extensions-remover' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/tape-in-hair-extensions-remover' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Tape Remover Spray
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-professional-spare-tape"
-                      href="/products/spare-tape-pack-for-tape-in-extensions"
-                      class="mega-menu__link link{% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Spare Tape Tabs
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-professional-nano-beads"
-                      href="/products/silicone-lined-nano-rings-beads-200-pack"
-                      class="mega-menu__link link{% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Nano Beads
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-professional-colour-ring"
-                      href="/products/hair-extensions-colour-ring"
-                      class="mega-menu__link link{% if request.path == '/products/hair-extensions-colour-ring' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/hair-extensions-colour-ring' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Colour Rings
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-professional-wig-glue"
-                      href="/products/cliphair-wig-glue"
-                      class="mega-menu__link link{% if request.path == '/products/cliphair-wig-glue' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/cliphair-wig-glue' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Wig Glue
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-professional-glue-remover"
-                      href="/products/cliphair-glue-remover"
-                      class="mega-menu__link link{% if request.path == '/products/cliphair-glue-remover' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/products/cliphair-glue-remover' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Glue Remover
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      id="HeaderMenu-haircare-accessories-professional-bundles"
-                      href="/collections/hair-extensions-bundle/hair-care-accessories-bundle"
-                      class="mega-menu__link link{% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      Maintenance Value Bundles
-                    </a>
-                  </li>
-                </ul>
-                <a
-                  id="HeaderMenu-haircare-accessories-gift-card"
-                  href="/products/cliphair-e-gift-card"
-                  class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/products/cliphair-e-gift-card' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/products/cliphair-e-gift-card' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  E-GIFT CARD
-                </a>
               </li>
             </ul>
           </div>
@@ -2142,7 +2276,7 @@
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list mega-menu__list--condensed"
+              class="mega-menu__list"
               role="list"
             >
               <li style="width:calc(100% / 1);">
@@ -2227,6 +2361,33 @@
                   Celebrity & Lifestyle
                 </a>
               </li>
+
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
+              >
+                {% liquid
+                  assign menu_image = images['blog-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
+              </li>
             </ul>
           </div>
         </details>
@@ -2255,7 +2416,7 @@
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list mega-menu__list--condensed"
+              class="mega-menu__list "
               role="list"
             >
               <li style="width:calc(100% / 1);">
@@ -2365,6 +2526,33 @@
                   Trade Application
                 </a>
               </li>
+
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
+              >
+                {% liquid
+                  assign menu_image = images['info-hub-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
+              </li>
             </ul>
           </div>
         </details>
@@ -2402,7 +2590,7 @@
             tabindex="-1"
           >
             <ul
-              class="mega-menu__list mega-menu__list--condensed"
+              class="mega-menu__list"
               role="list"
             >
               <li style="width:calc(100% / 1);">
@@ -2457,6 +2645,33 @@
                 >
                   Value Bundles
                 </a>
+              </li>
+
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
+              >
+                {% liquid
+                  assign menu_image = images['offers-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
+                >
               </li>
             </ul>
           </div>
