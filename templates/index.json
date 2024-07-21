@@ -787,7 +787,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "columns_desktop": 4,
-        "swipe_on_desktop": true,
+        "swipe_on_desktop": false,
         "color_scheme": "accent-2",
         "show_image": true,
         "image_ratio": "square",

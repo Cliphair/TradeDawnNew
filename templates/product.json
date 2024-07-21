@@ -205,6 +205,10 @@
     },
     "2ba62760-f7d7-46c5-ae93-8ade6e208816": {
       "type": "blog-spot",
+      "custom_css": [
+        ".card__heading {color: #833c91;}",
+        ".article-card__excerpt {display: none;}"
+      ],
       "settings": {
         "heading": "Blog Posts",
         "heading_size": "h1",
@@ -212,16 +216,16 @@
         "tags_size": "h3",
         "text_alignment": "left",
         "blog": "hair-blog",
-        "post_limit": 6,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "columns_desktop": 3,
-        "swipe_on_desktop": true,
+        "post_limit": 4,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
         "color_scheme": "accent-2",
         "show_image": true,
         "image_ratio": "square",
         "show_date": false,
-        "show_author": false,
+        "show_author": true,
         "show_view_all": true,
         "enable_tags": false,
         "scroll_to_grid": false,
