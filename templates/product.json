@@ -214,7 +214,7 @@
         "heading_size": "h1",
         "introduction": "",
         "tags_size": "h3",
-        "text_alignment": "left",
+        "text_alignment": "center",
         "blog": "hair-blog",
         "post_limit": 4,
         "columns_mobile": "2",
