@@ -312,3 +312,41 @@
     top: calc(((100vw - 3rem - var(--grid-mobile-horizontal-spacing)) / 2) / 2 - 22px)
   }
 }
+
+.section-collection-filter-circle .card__content,
+.section-collection-filter-circle .card__information {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* .section-collection-filter-circle .type-features {
+  margin-top: 1rem;
+}
+
+.section-collection-filter-circle .type-features>ul {
+  list-style-position: inside;
+  padding: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+input[value='Remy Royale Seamless Clip ins']~.card-wrapper .type-features ul[data-type='Remy Royale Seamless Clip ins'],
+input[value='Double wefted full head']~.card-wrapper .type-features ul[data-type='Double wefted full head'],
+input[value='Ultra-Volume Full Head']~.card-wrapper .type-features ul[data-type='Ultra-Volume Full Head'],
+input[value='Full Head Set']~.card-wrapper .type-features ul[data-type='Full Head Set'],
+input[value='Curly Clip In Hair Extensions']~.card-wrapper .type-features ul[data-type='Curly Clip In Hair Extensions'],
+input[value='One Piece Clip In Hair Extensions']~.card-wrapper .type-features ul[data-type='One Piece Clip In Hair Extensions'],
+input[value='Quad Weft Pieces']~.card-wrapper .type-features ul[data-type='Quad Weft Pieces'],
+input[value='Clip In Fringe Extensions']~.card-wrapper .type-features ul[data-type='Clip In Fringe Extensions'],
+input[value='Wrap Ponytail']~.card-wrapper .type-features ul[data-type='Wrap Ponytail'],
+input[value='Nano Ring Hair Extensions']~.card-wrapper .type-features ul[data-type='Nano Ring Hair Extensions'],
+input[value='Remy Royale Weave Weft Hair Extensions']~.card-wrapper .type-features ul[data-type='Remy Royale Weave Weft Hair Extensions'],
+input[value='Remy Royale Tape ins']~.card-wrapper .type-features ul[data-type='Remy Royale Tape ins'],
+input[value='Remy Royale I-Tips']~.card-wrapper .type-features ul[data-type='Remy Royale I-Tips'],
+input[value='Remy Royale Flat Tip']~.card-wrapper .type-features ul[data-type='Remy Royale Flat Tip'],
+input[value='Remy Royale Invisible Tape']~.card-wrapper .type-features ul[data-type='Remy Royale Invisible Tape'],
+input[value='Remy Royale Nano Bonds']~.card-wrapper .type-features ul[data-type='Remy Royale Nano Bonds'],
+input[value='Remy Royale Flat Weft Hair Extensions']~.card-wrapper .type-features ul[data-type='Remy Royale Flat Weft Hair Extensions'],
+input[value='Tape in Hair Extensions']~.card-wrapper .type-features ul[data-type='Tape in Hair Extensions'] {
+  display: block;
+} */

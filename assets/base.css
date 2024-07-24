@@ -3637,6 +3637,10 @@ details-disclosure>details {
   }
 }
 
+.type-features>ul {
+  display: none;
+}
+
 /* read more and less button */
 .read-more__btn,
 .read-less__btn {
