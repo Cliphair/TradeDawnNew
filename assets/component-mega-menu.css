@@ -64,6 +64,10 @@
   padding: 0 1.5rem;
 }
 
+.header--top-center .mega-menu__list.mega-menu__centered {
+  justify-content: center;
+}
+
 .header--top-center .mega-menu__list.no-padding {
   padding: 0;
 }
@@ -79,7 +83,7 @@
 .header--top-center .mega-menu__list>li {
   max-width: fit-content;
   width: 100%;
-  padding-right: 2.4rem;
+  padding-right: 3.4rem;
   flex-grow: 1;
   flex-shrink: 0;
   position: relative;
