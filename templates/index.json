@@ -21,6 +21,7 @@
         "color_scheme": "",
         "columns_mobile": "3",
         "swipe_on_mobile": true,
+        "slider_visual": "dots",
         "padding_top": 12,
         "padding_bottom": 0
       }
