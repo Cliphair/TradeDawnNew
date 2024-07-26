@@ -98,7 +98,7 @@
         "duration_mobile": 20,
         "columns_desktop": 3,
         "scroll_desktop": false,
-        "duration_desktop": 1,
+        "duration_desktop": 20,
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -673,6 +673,22 @@
     "image_list_nPnYgL": {
       "type": "image-list",
       "blocks": {
+        "image_fDTmfe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-9.webp",
+            "text_label": "<p>@nicolacoughlan styled by @halleybrisker for SKIMS<\/p>",
+            "link": ""
+          }
+        },
+        "image_FNDhT7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-10.webp",
+            "text_label": "<p>@juliannemoore styled by @halleybrisker<\/p>",
+            "link": ""
+          }
+        },
         "image_4bXD9L": {
           "type": "image",
           "settings": {
@@ -739,6 +755,8 @@
         }
       },
       "block_order": [
+        "image_fDTmfe",
+        "image_FNDhT7",
         "image_4bXD9L",
         "image_bRzTFF",
         "image_eLKDPX",
