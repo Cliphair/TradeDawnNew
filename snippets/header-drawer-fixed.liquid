@@ -44,6 +44,18 @@
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                         <li>
+                          <a
+                            id="HeaderDrawer-clip-ins-all"
+                            href="/collections/clip-in-hair-extensions"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/clip-in-hair-extensions' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            All Clip In Hair Extensions
+                          </a>
+                        </li>
+                        <li>
                           <details id="Details-menu-drawer-clip-ins-multipiece">
                             <summary
                               id="HeaderDrawer-clip-ins-multipiece"
