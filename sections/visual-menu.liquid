@@ -17,7 +17,10 @@
 {% endstyle %}
 
 <div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  <div class="collection-carrousel-wrapper page-width isolate no-heading no-mobile-link {{ section.settings.text_allignment }}">
+  <div
+    class="collection-carrousel-wrapper page-width isolate no-heading no-mobile-link {{ section.settings.text_allignment }}"
+    style="padding:0!important;"
+  >
     {%- if section.settings['collection-list'] -%}
       {%- liquid
         assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -31,24 +34,16 @@
         if section.settings.swipe_on_desktop and section.settings['collection-list'].links.size > columns_desktop_int
           assign show_desktop_slider = true
         endif
+
+        assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
       -%}
 
-      <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        {%- if show_mobile_slider or show_desktop_slider -%}
-          <div class="slider-buttons left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-            <button
-              type="button"
-              class="slider-button slider-button--prev"
-              name="previous"
-              aria-label="{{ 'general.slider.previous_slide' | t }}"
-            >
-              {% render 'icon-caret' %}
-            </button>
-          </div>
-        {%- endif -%}
-
+      <slider-component-custom
+        class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        data-visual="{{ section.settings.slider_visual }}"
+      >
         <ul
-          class="grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down visual-menu contains-card contains-card--collection {% if settings.card_style == 'standard' %} contains-card--standard{% endif %}{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} collection-carrousel--{{ section.settings['collection-list'].links.size }}-items"
+          class="grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet grid--{{ section.settings.columns_mobile }}-col-tablet-down visual-menu contains-card contains-card--collection {% if settings.card_style == 'standard' %} contains-card--standard{% endif %}{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} collection-carrousel--{{ section.settings['collection-list'].links.size }}-items"
           id="Slider-{{ section.id }}"
           role="list"
         >
@@ -63,8 +58,7 @@
             {% if link.type == 'collection_link' %}
               <li
                 id="Slide-{{ section.id }}-{{ forloop.index }}"
-                class="collection-carrousel__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if section.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
+                class="collection-carrousel__item grid__item custom__slide{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if section.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
                   style="--animation-order: {{ forloop.index }};"
@@ -85,13 +79,55 @@
         </ul>
 
         {%- if show_mobile_slider or show_desktop_slider -%}
-          <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-            <div class="slider-counter caption visually-hidden">
-              <span class="slider-counter--current">1</span>
-              <span aria-hidden="true"> / </span>
-              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-              <span class="slider-counter--total">{{ section.settings['collection-list'].links.size }}</span>
+          <div
+            class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down"
+          >
+            <button
+              type="button"
+              class="slider-button slider-button--prev"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+            >
+              {% render 'icon-caret' %}
+            </button>
+
+            {% comment %}
+              <div class="slider-counter caption">
+                <span class="slider-counter--current">1</span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                <span class="slider-counter--total">{{ section.settings['collection-list'].links.size }}</span>
+              </div>
+            {% endcomment %}
+
+            <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+              <div class="{% if section.settings.slider_visual != 'counter' %}medium-hide large-up-hide{% endif %}">
+                <span class="slider-counter--current">1</span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                <span class="slider-counter--total">{{ section.settings['collection-list'].links.size }}</span>
+              </div>
+              {%- if section.settings.slider_visual != 'counter' -%}
+                <div class="slideshow__control-wrapper small-hide">
+                  {% for link in section.settings['collection-list'].links %}
+                    {% if link.type == 'collection_link' %}
+                      <button
+                        class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                        aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                        aria-controls="Slider-{{ section.id }}"
+                      >
+                        {%- if section.settings.slider_visual == 'numbers' -%}
+                          {{ forloop.index -}}
+                        {%- else -%}
+                          <span class="dot"></span>
+                        {%- endif -%}
+                      </button>
+                    {% endif %}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
             </div>
+
             <button
               type="button"
               class="slider-button slider-button--next"
@@ -102,7 +138,7 @@
             </button>
           </div>
         {%- endif -%}
-      </slider-component>
+      </slider-component-custom>
     {%- endif -%}
   </div>
 </div>
@@ -203,6 +239,26 @@
       "id": "swipe_on_mobile",
       "default": false,
       "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "select",
+      "id": "slider_visual",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.slideshow.settings.slider_visual.options__2.label"
+        },
+        {
+          "value": "counter",
+          "label": "t:sections.slideshow.settings.slider_visual.options__1.label"
+        },
+        {
+          "value": "numbers",
+          "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
+        }
+      ],
+      "default": "counter",
+      "label": "t:sections.slideshow.settings.slider_visual.label"
     },
     {
       "type": "header",

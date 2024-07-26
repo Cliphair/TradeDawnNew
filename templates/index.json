@@ -11,9 +11,6 @@
   "sections": {
     "visual_menu_66DUPM": {
       "type": "visual-menu",
-      "custom_css": [
-        ".slider-button {margin-top: -26px;}"
-      ],
       "settings": {
         "collection-list": "visual-menu",
         "image_ratio": "square",

@@ -750,17 +750,14 @@ customElements.define('slider-component', SliderComponent);
 class SliderComponentCustom extends SliderComponent {
   constructor() {
     super();
+    this.sliderVisual = this.dataset.visual;
     this.sliderControlWrapper = this.querySelector('.slider-buttons');
+    this.direction = 'right';
 
     if (!this.sliderControlWrapper) return;
 
     this.sliderFirstItemNode = this.slider.querySelector('.custom__slide');
     if (this.sliderItemsToShow.length > 0) this.currentPage = 1;
-
-    this.sliderControlLinksArray = Array.from(this.sliderControlWrapper.querySelectorAll('.slider-counter__link'));
-    this.sliderControlLinksArray.forEach((link) => link.addEventListener('click', this.linkToSlide.bind(this)));
-    this.slider.addEventListener('scroll', this.setSlideVisibility.bind(this));
-    this.setSlideVisibility();
   }
 
   onButtonClick(event) {
@@ -768,7 +765,7 @@ class SliderComponentCustom extends SliderComponent {
     this.wasClicked = true;
 
     const isFirstSlide = this.currentPage === 1;
-    const isLastSlide = this.currentPage === this.sliderItemsToShow.length;
+    const isLastSlide = this.currentPage === this.totalPages;
 
     if (isFirstSlide && event.currentTarget.name === 'previous') {
       this.slideScrollPosition =
@@ -780,19 +777,12 @@ class SliderComponentCustom extends SliderComponent {
     this.setSlidePosition(this.slideScrollPosition);
   }
 
-  setSlidePosition(position) {
-    if (this.setPositionTimeout) clearTimeout(this.setPositionTimeout);
-    this.setPositionTimeout = setTimeout(() => {
-      this.slider.scrollTo({
-        left: position,
-      });
-    }, this.announcerBarAnimationDelay);
-  }
-
   update() {
     super.update();
+    this.renderVisualSlider();
     this.sliderControlButtons = this.querySelectorAll('.slider-counter__link');
     this.prevButton.removeAttribute('disabled');
+    this.nextButton.removeAttribute('disabled');
 
     if (!this.sliderControlButtons.length) return;
 
@@ -802,39 +792,44 @@ class SliderComponentCustom extends SliderComponent {
     });
     this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
     this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);
-  }
 
-  setSlideVisibility(event) {
-    this.sliderItemsToShow.forEach((item, index) => {
-      const linkElements = item.querySelectorAll('a');
-      if (index === this.currentPage - 1) {
-        if (linkElements.length)
-          linkElements.forEach((button) => {
-            button.removeAttribute('tabindex');
-          });
-        item.setAttribute('aria-hidden', 'false');
-        item.removeAttribute('tabindex');
-      } else {
-        if (linkElements.length)
-          linkElements.forEach((button) => {
-            button.setAttribute('tabindex', '-1');
-          });
-        item.setAttribute('aria-hidden', 'true');
-        item.setAttribute('tabindex', '-1');
-      }
-    });
-    this.wasClicked = false;
+    this.sliderControlLinksArray = Array.from(this.sliderControlButtons);
+    this.sliderControlLinksArray.forEach((link) => link.addEventListener('click', this.linkToSlide.bind(this)));
   }
 
   linkToSlide(event) {
     event.preventDefault();
-    const slideScrollPosition =
-      this.slider.scrollLeft +
-      this.sliderFirstItemNode.clientWidth *
-      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
-    this.slider.scrollTo({
-      left: slideScrollPosition,
-    });
+    const clickedIndex = this.sliderControlLinksArray.indexOf(event.currentTarget) + 1
+    this.direction = this.currentPage < clickedIndex ? 'right' : 'left';
+
+    const slideScrollPosition = this.direction === 'right' ? this.slider.scrollLeft + (clickedIndex - this.currentPage) * this.sliderItemOffset
+      : this.slider.scrollLeft - (this.currentPage - clickedIndex) * this.sliderItemOffset;
+
+    this.setSlidePosition(slideScrollPosition);
+
+    this.currentPage = this.sliderControlLinksArray.indexOf(event.currentTarget) + 1;
+  }
+
+  renderVisualSlider() {
+    const sliderContainer = this.querySelector('.slideshow__control-wrapper');
+
+    if (!sliderContainer) return;
+
+    sliderContainer.innerHTML = '';
+    for (let i = 0; i < this.totalPages; i++) {
+      const button = document.createElement('button');
+      button.classList.add("slider-counter__link", `slider-counter__link--${this.sliderVisual}`, "link");
+      button.ariaLabel = `Load page ${i + 1} of ${this.totalPages}`;
+      button.ariaControls = this.firstChild.id;
+
+      if (this.sliderVisual === 'dots') {
+        button.innerHTML = '<span class="dot"></span>';
+      } else if (this.sliderVisual === 'numbers') {
+        button.innerText = i + 1;
+      }
+
+      sliderContainer.append(button);
+    }
   }
 }
 
