@@ -689,6 +689,30 @@
             "link": ""
           }
         },
+        "image_C8JtLM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-11.webp",
+            "text_label": "<p>@ekinsuofficial styled by @leahsmithhair<\/p>",
+            "link": ""
+          }
+        },
+        "image_gkxjfU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-12.webp",
+            "text_label": "<p>@poppydelevingne styled by @kjfowles<\/p>",
+            "link": ""
+          }
+        },
+        "image_fGPUME": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/as-seen-on-image-13.webp",
+            "text_label": "<p>@ameliamarni styled by @leahsmithhair<\/p>",
+            "link": ""
+          }
+        },
         "image_4bXD9L": {
           "type": "image",
           "settings": {
@@ -757,6 +781,9 @@
       "block_order": [
         "image_fDTmfe",
         "image_FNDhT7",
+        "image_C8JtLM",
+        "image_gkxjfU",
+        "image_fGPUME",
         "image_4bXD9L",
         "image_bRzTFF",
         "image_eLKDPX",
