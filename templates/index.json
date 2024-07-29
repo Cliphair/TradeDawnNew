@@ -138,6 +138,7 @@
         "color_scheme": "inverse",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "slider_visual": "dots",
         "padding_top": 68,
         "padding_bottom": 0
       }
@@ -190,6 +191,7 @@
         "color_scheme": "inverse",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "slider_visual": "dots",
         "padding_top": 68,
         "padding_bottom": 36
       }
