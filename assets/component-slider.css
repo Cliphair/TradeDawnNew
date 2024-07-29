@@ -150,27 +150,27 @@ slider-component-custom.slider-component-full-width {
 }
 
 @media screen and (min-width: 750px) and (max-width:989px) {
-  .slider--tablet.grid--6-col-tablet .grid__item {
+  .slider--tablet.grid--peek.grid--6-col-tablet .grid__item {
     width: calc((100% - 1.5rem - var(--grid-desktop-horizontal-spacing) * 7) / 6);
   }
 
-  .slider--tablet.grid--5-col-tablet .grid__item {
+  .slider--tablet.grid--peek.grid--5-col-tablet .grid__item {
     width: calc((100% - 1.5rem - var(--grid-desktop-horizontal-spacing) * 6) / 5);
   }
 
-  .slider--tablet.grid--4-col-tablet .grid__item {
+  .slider--tablet.grid--peek.grid--4-col-tablet .grid__item {
     width: calc((100% - 1.5rem - var(--grid-desktop-horizontal-spacing) * 5) / 4);
   }
 
-  .slider--tablet.grid--3-col-tablet .grid__item {
+  .slider--tablet.grid--peek.grid--3-col-tablet .grid__item {
     width: calc((100% - 1.5rem - var(--grid-desktop-horizontal-spacing) * 4) / 3);
   }
 
-  .slider--tablet.grid--2-col-tablet .grid__item {
+  .slider--tablet.grid--peek.grid--2-col-tablet .grid__item {
     width: calc((100% - 1.5rem - var(--grid-desktop-horizontal-spacing) * 3) / 2);
   }
 
-  .slider--tablet.grid--1-col-tablet .grid__item {
+  .slider--tablet.grid--peek.grid--1-col-tablet .grid__item {
     width: calc((100% - 1.5rem - var(--grid-desktop-horizontal-spacing) * 2) / 1);
   }
 }
