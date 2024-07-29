@@ -336,7 +336,7 @@ slider-component-custom.slider-component-full-width {
 
 .slider-counter__link--active.slider-counter__link--dots .dot {
   background-color: rgb(var(--color-foreground));
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 @media screen and (forced-colors: active) {
@@ -441,7 +441,7 @@ slider-component-custom.slider-component-full-width {
 
 .slideshow__controls {
   position: absolute;
-  bottom: 5rem;
+  bottom: 0;
   z-index: 9999;
   left: 0;
   right: 0;

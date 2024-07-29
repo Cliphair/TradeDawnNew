@@ -25,7 +25,23 @@ slideshow-component .slideshow.banner {
   visibility: visible;
 }
 
+.slideshow .banner:after,
+.slideshow .banner__media:after {
+  z-index: 0;
+}
+
+.slideshow picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow__text-wrapper.banner__content {
+  z-index: 1;
+}
+
 @media screen and (max-width: 749px) {
+
   .slideshow--placeholder.banner--mobile-bottom.banner--adapt_image .slideshow__media,
   .slideshow--placeholder.banner--adapt_image:not(.banner--mobile-bottom) {
     height: 28rem;
@@ -45,7 +61,7 @@ slideshow-component .slideshow.banner {
   max-width: 54.5rem;
 }
 
-.slideshow__text > * {
+.slideshow__text>* {
   max-width: 100%;
 }
 
@@ -188,6 +204,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 }
 
 @media screen and (forced-colors: active) {
+
   .slideshow__autoplay path,
   .slideshow__autoplay:hover path {
     fill: CanvasText;

@@ -22,6 +22,15 @@
         display: block;
       }
     }
+
+    {% if section.blocks.first.settings.image_desktop %}
+    @media screen and (min-width: 769px) {
+      #Slider-{{ section.id }}::before,
+      #Slider-{{ section.id }} .media::before {
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image_desktop.aspect_ratio | times: 100 }}%;
+      }
+    }
+    {% endif %}
   {%- endstyle -%}
 {%- endif -%}
 
@@ -35,7 +44,7 @@
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
         type="button"
-        class="slider-button slider-button--prev hidden"
+        class="slider-button slider-button--prev"
         name="previous"
         aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}"
@@ -59,7 +68,7 @@
                 {%- if section.settings.slider_visual == 'numbers' -%}
                   {{ forloop.index -}}
                 {%- else -%}
-                  <h4 class="slideshow_controls_heading">{{ block.settings.heading }}</h4>
+                  <span class="dot"></span>
                 {%- endif -%}
               </button>
             {%- endfor -%}
@@ -69,7 +78,7 @@
 
       <button
         type="button"
-        class="slider-button slider-button--next hidden"
+        class="slider-button slider-button--next"
         name="next"
         aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}"
@@ -80,7 +89,7 @@
       {%- if section.settings.auto_rotate -%}
         <button
           type="button"
-          class="slideshow__autoplay hidden slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+          class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
           aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
         >
           {%- render 'icon-pause' -%}
@@ -119,70 +128,96 @@
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
       </style>
-      <div
-        class="slideshow__slide grid__item grid--1-col slider__slide"
-        id="Slide-{{ section.id }}-{{ forloop.index }}"
-        {{ block.shopify_attributes }}
-        role="group"
-        aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
-        aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-        tabindex="-1"
-      >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-          {%- if block.settings.image -%}
-            {%- liquid
-              assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
-              if section.settings.image_behavior == 'ambient'
-                assign sizes = '120vw'
-                assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
-              else
-                assign sizes = '100vw'
-                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-              endif
-            -%}
-            {{
-              block.settings.image
-              | image_url: width: 3840
-              | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-            }}
+      {% if block.settings.iamge_url %}
+        <a
+          href="{{ block.settings.image_url }}"
+          class="slideshow__slide grid__item grid--1-col slider__slide"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+        >
+      {% else %}
+        <div
+          class="slideshow__slide grid__item grid--1-col slider__slide"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+        >
+      {% endif %}
+      <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
+        {%- if block.settings.image -%}
+          {%- liquid
+            assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+            if section.settings.image_behavior == 'ambient'
+              assign sizes = '120vw'
+              assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+            else
+              assign sizes = '100vw'
+              assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            endif
+          -%}
+          <picture>
+            <source media="(max-width:768px)" srcset="{{ block.settings.image | image_url: width: 768 }}">
+            {% if block.settings.image_desktop %}
+              <source media="(min-width:769px)" srcset="{{ block.settings.image_desktop | image_url: width: 3840 }}">
+            {% endif %}
+            <img
+              src="{{ block.settings.image | image_url: width: 768 }}"
+              loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+              alt="{{ section.settings.image.alt }}"
+              width="{{ widths }}"
+              height="{{ height }}"
+              sizes="{{ sizes }}"
+            >
+          </picture>
+        {%- else -%}
+          {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+          {%- if placeholder_slide == 1 -%}
+            {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- else -%}
-            {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
-            {%- if placeholder_slide == 1 -%}
-              {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- else -%}
-              {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- endif -%}
+            {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+      <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+          {%- if block.settings.heading != blank -%}
+            <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
+              {{ block.settings.heading }}
+            </h2>
+          {%- endif -%}
+          {%- if block.settings.subheading != blank -%}
+            <div class="banner__text rte" {{ block.shopify_attributes }}>
+              <p>{{ block.settings.subheading }}</p>
+            </div>
+          {%- endif -%}
+          {%- if block.settings.button_label != blank -%}
+            <div class="banner__buttons">
+              <a
+                {% if block.settings.link %}
+                  href="{{ block.settings.link }}"
+                {% else %}
+                  role="link" aria-disabled="true"
+                {% endif %}
+                class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+              >
+                {{- block.settings.button_label | escape -}}
+              </a>
+            </div>
           {%- endif -%}
         </div>
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
-            {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
-                {{ block.settings.heading }}
-              </h2>
-            {%- endif -%}
-            {%- if block.settings.subheading != blank -%}
-              <div class="banner__text rte" {{ block.shopify_attributes }}>
-                <p class="banner_subheading">{{ block.settings.subheading }}</p>
-              </div>
-            {%- endif -%}
-            {%- if block.settings.button_label != blank -%}
-              <div class="banner__buttons">
-                <a
-                  {% if block.settings.link %}
-                    href="{{ block.settings.link }}"
-                  {% else %}
-                    role="link" aria-disabled="true"
-                  {% endif %}
-                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
-                >
-                  {{- block.settings.button_label | escape -}}
-                </a>
-              </div>
-            {%- endif -%}
-          </div>
-        </div>
       </div>
+      {% if block.settings.iamge_url %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
     {%- endfor -%}
   </div>
 
@@ -400,7 +435,19 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "Mobile image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Dekstop image",
+          "info": "Not required."
+        },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "Image url",
+          "info": "Not required."
         },
         {
           "type": "inline_richtext",
