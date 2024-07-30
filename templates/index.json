@@ -693,6 +693,7 @@
         "color_scheme": "inverse",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "slider_visual": "dots",
         "padding_top": 36,
         "padding_bottom": 36
       }
