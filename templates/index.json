@@ -85,41 +85,6 @@
         "accessibility_info": "Cliphair slideshow banners"
       }
     },
-    "slideshow_image_link_WcQ9XG": {
-      "type": "slideshow-image-link",
-      "blocks": {
-        "slide_UAXhxj": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/homepage-banner-2024-mobile.webp",
-            "image_desktop": "shopify:\/\/shop_images\/homepage-banner-2024-desktop.webp",
-            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour"
-          }
-        },
-        "slide_rCbf9a": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bridal-campaign-mobile-banner.webp",
-            "image_desktop": "shopify:\/\/shop_images\/bridal-campaign-desktop-banner.webp",
-            "image_url": "shopify:\/\/pages\/cliphair-bridal-hair-extensions"
-          }
-        }
-      },
-      "block_order": [
-        "slide_UAXhxj",
-        "slide_rCbf9a"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "maquee_bdNYHF": {
       "type": "maquee",
       "blocks": {
@@ -1099,7 +1064,6 @@
   "order": [
     "visual_menu_66DUPM",
     "slideshow_3tCMjU",
-    "slideshow_image_link_WcQ9XG",
     "maquee_bdNYHF",
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "collection_carrousel_fb6cDE",
