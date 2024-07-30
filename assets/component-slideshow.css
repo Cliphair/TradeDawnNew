@@ -154,6 +154,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 .slideshow__control-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 .slideshow__autoplay {
