@@ -1650,8 +1650,8 @@ klarna-placement::part(osm-badge-container) {
   background: rgb(255, 179, 199);
 }
 
-klarna-placement,
-.clearpay-placement {
+.payment_services klarna-placement,
+.payment_services .clearpay-placement {
   border: 1px solid #eae7e4;
   padding: 10px;
   min-height: 70px;
@@ -1659,7 +1659,7 @@ klarna-placement,
   align-items: center;
 }
 
-.clearpay-placement {
+.payment_services .clearpay-placement {
   margin-top: 10px;
 }
 

@@ -3689,15 +3689,12 @@ details-disclosure>details {
   z-index: 2;
 }
 
-/* navbar change test
-@media screen and (min-width:990px) {
+/* DCart app */
+.sc_simple-info__tag,
+.sc_simple-info__tag .sc-tag {
+  margin-bottom: 0 !important;
+}
 
-  .header__inline-menu,
-  .header--top-center .header__inline-menu>.list-menu--inline {
-    width: 100%;
-  }
-
-  .header--top-center .header__inline-menu>.list-menu--inline {
-    justify-content: space-between;
-  }
-} */
+.sc_simple-info__row {
+  display: none !important;
+}

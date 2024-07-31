@@ -17,8 +17,8 @@
 {% liquid
   assign description = collection.description | split: '<!-- FAQ section -->' | first
   if section.settings.remove_introduction
-    if collection.description contains '<!-- split -->'
-      assign description = collection.description | split: '<!-- split -->' | last
+    if description contains '<!-- split -->'
+      assign description = description | split: '<!-- split -->' | last
     endif
   endif
 %}
