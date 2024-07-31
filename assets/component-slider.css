@@ -442,7 +442,7 @@ slider-component-custom.slider-component-full-width {
 .slideshow__controls {
   position: absolute;
   bottom: 0;
-  z-index: 9999;
+  z-index: 2;
   left: 0;
   right: 0;
   margin: 0 auto;

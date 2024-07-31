@@ -128,7 +128,7 @@
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
       </style>
-      {% if block.settings.iamge_url %}
+      {% if block.settings.image_url %}
         <a
           href="{{ block.settings.image_url }}"
           class="slideshow__slide grid__item grid--1-col slider__slide"
@@ -213,7 +213,7 @@
           {%- endif -%}
         </div>
       </div>
-      {% if block.settings.iamge_url %}
+      {% if block.settings.image_url %}
         </a>
       {% else %}
         </div>

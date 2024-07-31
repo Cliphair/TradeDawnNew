@@ -23,6 +23,7 @@ slideshow-component .slideshow.banner {
   display: flex;
   flex-direction: column;
   visibility: visible;
+  z-index: 1;
 }
 
 .slideshow .banner:after,
