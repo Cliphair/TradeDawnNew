@@ -2599,7 +2599,7 @@ product-info .loading-overlay:not(.hidden)~*,
   display: flex;
   grid-area: icons;
   justify-self: end;
-  margin-right: -1.2rem;
+  /* margin-right: -1.2rem; */
 }
 
 .header__icons .shopify-app-block {
@@ -2661,6 +2661,10 @@ product-info .loading-overlay:not(.hidden)~*,
   background: rgba(var(--color-foreground), 0.5);
 }
 
+.header__right-menu {
+  display: flex;
+}
+
 /* Search */
 menu-drawer+.header__search {
   display: none;
@@ -2690,6 +2694,11 @@ menu-drawer+.header__search {
 
 .search-modal__content {
   display: inline-flex;
+  width: 100%;
+}
+
+.search-modal__form {
+  flex-grow: 1;
 }
 
 .header--top-center>.header__search {
