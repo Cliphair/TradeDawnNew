@@ -25,7 +25,7 @@ cart-items.is-empty .title-wrapper-with-link,
   margin: 4.5rem 0 2rem;
 }
 
-.cart__contents > * + * {
+.cart__contents>*+* {
   margin-top: 2.5rem;
 }
 
@@ -69,12 +69,12 @@ cart-items {
   padding-bottom: 5rem;
 }
 
-.cart__footer > div:only-child {
+.cart__footer>div:only-child {
   margin-left: auto;
 }
 
-.cart__footer > * + * {
-  margin-top: 6.5rem;
+.cart__footer>*+* {
+  margin-bottom: 6.5rem;
 }
 
 .cart__footer .discounts {
@@ -84,9 +84,8 @@ cart-items {
 .cart__note {
   height: fit-content;
   top: 2.5rem;
+  margin-bottom: 5rem;
 }
-
-
 
 .cart__note label {
   display: flex;
@@ -118,6 +117,13 @@ cart-items {
   border-bottom-right-radius: 0;
 }
 
+@media screen and (max-width:749px) {
+  .cart__footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .cart__items {
     grid-column-start: 1;
@@ -125,11 +131,11 @@ cart-items {
     padding-bottom: 4rem;
   }
 
-  .cart__contents > * + * {
+  .cart__contents>*+* {
     margin-top: 0;
   }
 
-  .cart__items + .cart__footer {
+  .cart__items+.cart__footer {
     grid-column: 2;
   }
 
@@ -143,11 +149,11 @@ cart-items {
     padding-top: 0;
   }
 
-  .cart__footer > * {
+  .cart__footer>* {
     width: 35rem;
   }
 
-  .cart__footer > * + * {
+  .cart__footer>*+* {
     margin-left: 4rem;
     margin-top: 0;
   }
@@ -157,7 +163,7 @@ cart-items {
   width: 100%;
 }
 
-.cart__ctas > *:not(noscript:first-child) + * {
+.cart__ctas>*:not(noscript:first-child)+* {
   margin-top: 1rem;
 }
 
@@ -174,7 +180,20 @@ cart-items {
   border-radius: var(--buttons-radius-outset) !important;
 }
 
-.cart__blocks > * + * {
+#dynamic-checkout-cart ul {
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  margin: .5rem -.5rem 0 0 !important;
+  gap: .5rem;
+  justify-content: flex-start;
+}
+
+#dynamic-checkout-cart ul>li {
+  flex-basis: calc(50% - .5rem) !important;
+  margin: 0 !important;
+}
+
+.cart__blocks>*+* {
   margin-top: 1rem;
 }
 
@@ -198,10 +217,23 @@ cart-items {
   text-align: center;
 }
 
+.cart__faqs-title {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.cart__faqs .accordion {
+  margin-top: 0;
+}
+
 @media screen and (min-width: 750px) {
-  .cart-note {
-    max-width: 35rem;
+  .cart__additional-info {
+    width: 100%;
   }
+
+  /* .cart-note {
+    max-width: 35rem;
+  } */
 
   .cart__update-button {
     margin-bottom: 0;
