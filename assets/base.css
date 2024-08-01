@@ -1142,6 +1142,10 @@ summary::-webkit-details-marker {
     width: calc(100% - var(--grid-mobile-horizontal-spacing) - 3rem);
   }
 
+  .grid--3-col-tablet-down .grid__item {
+    width: calc((100% - var(--grid-mobile-horizontal-spacing) * 2) / 3);
+  }
+
   .slider--mobile.grid--peek.grid--3-col-tablet-down .grid__item,
   .slider--tablet.grid--peek.grid--3-col-tablet-down .grid__item {
     width: calc((100% - 1.5rem - var(--grid-mobile-horizontal-spacing) * 4) / 3);
