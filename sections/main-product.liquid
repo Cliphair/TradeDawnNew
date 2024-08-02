@@ -272,13 +272,27 @@
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
+              {% liquid
+                if block.settings.type == 'instructions'
+                  for collection in product.collections
+                    if collection.metafields.products.custom_information.value
+                      assign custom_information_object = collection.metafields.products.custom_information.value
+                      break
+                    endif
+                  endfor
+                endif
+              %}
               <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
                   <summary>
                     <div class="summary__title">
                       {% render 'icon-accordion', icon: block.settings.icon %}
                       <h2 class="h4 accordion__title inline-richtext">
-                        {{ block.settings.heading | default: block.settings.page.title }}
+                        {% if custom_information_object %}
+                          {{ custom_information_object.title | metafield_tag }}
+                        {% else %}
+                          {{ block.settings.heading | default: block.settings.page.title }}
+                        {% endif %}
                       </h2>
                     </div>
                     {% render 'icon-caret' %}
@@ -302,15 +316,19 @@
                           <p>Update is in progress</p>
                         {% endif %}
                       {% when 'instructions' %}
-                        {% liquid
-                          assign path = product.type | handle | append: '-instructions'
-                          assign page_content = pages[path]
-                        %}
-                        {% if page_content.content != blank %}
-                          {{ page_content.content }}
+                        {% if custom_information_object %}
+                          {{ custom_information_object.description | metafield_tag }}
                         {% else %}
-                          {{ path }}
-                          <p>Update is in progress</p>
+                          {% liquid
+                            assign path = product.type | handle | append: '-instructions'
+                            assign page_content = pages[path]
+                          %}
+                          {% if page_content.content != blank %}
+                            {{ page_content.content }}
+                          {% else %}
+                            {{ path }}
+                            <p>Update is in progress</p>
+                          {% endif %}
                         {% endif %}
                       {% when 'custom' %}
                         {{ block.settings.content }}
@@ -1281,6 +1299,10 @@
             {
               "value": "instructions",
               "label": "Instructions"
+            },
+            {
+              "value": "object",
+              "label": "Metaobject"
             },
             {
               "value": "custom",
