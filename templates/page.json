@@ -35,8 +35,11 @@
       "block_order": [
         "yotpo_loyalty_rewards_rewards_module_app_block_J7d6Cp"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     }
   },
