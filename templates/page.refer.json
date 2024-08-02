@@ -11,12 +11,15 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "custom_css": [
+
+      ],
       "settings": {
-        "show_title": true,
+        "show_title": false,
         "heading_size": "h1",
         "show_content": true,
         "text_alignment": "left",
-        "color_scheme": "accent-4",
+        "color_scheme": "background-1",
         "padding_top": 28,
         "padding_bottom": 28
       }
