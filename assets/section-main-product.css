@@ -1671,7 +1671,6 @@ klarna-placement::part(osm-badge-container) {
 .payment-methods-flags ul {
   padding: 0;
   list-style: none;
-  gap: 5px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
