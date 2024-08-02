@@ -20,30 +20,9 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "17225938647d9bece6": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_loyalty_rewards_rewards_module_app_block_J7d6Cp": {
-          "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/rewards-module-app-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-          "settings": {
-            "instance_placeholder_id": "639527"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_loyalty_rewards_rewards_module_app_block_J7d6Cp"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "include_margins": false
-      }
     }
   },
   "order": [
-    "main",
-    "17225938647d9bece6"
+    "main"
   ]
 }
