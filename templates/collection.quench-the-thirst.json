@@ -64,6 +64,7 @@
     },
     "custom_banner_TtwjFn": {
       "type": "custom-banner",
+      "disabled": true,
       "settings": {
         "max-width": "768",
         "bg-color": "#fffafc",
