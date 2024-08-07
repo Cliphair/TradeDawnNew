@@ -15,38 +15,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
-  @media screen and (min-width:{{ settings.page_width }}px) {
-    .section-collection-filter-circle .slider-buttons.slider--1-col-desktop {
-      top: calc(({{ settings.page_width }}px - 10rem) / 2 - 22px)
-    }
-
-    .section-collection-filter-circle .slider-buttons.slider--2-col-desktop {
-      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing)) / 2) / 2 - 22px)
-    }
-
-    .section-collection-filter-circle .slider-buttons.slider--3-col-desktop {
-      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 2) / 3) / 2 - 22px)
-    }
-
-    .section-collection-filter-circle .slider-buttons.slider--4-col-desktop {
-      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 3) / 4) / 2 - 22px)
-    }
-
-    .section-collection-filter-circle .slider-buttons.slider--5-col-desktop {
-      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 4) / 5) / 2 - 22px)
-    }
-
-    .section-collection-filter-circle .slider-buttons.slider--6-col-desktop {
-      top: calc((({{ settings.page_width }}px - 10rem - var(--grid-desktop-horizontal-spacing) * 5) / 6) / 2 - 22px)
-    }
-  }
 {%- endstyle -%}
 
 <div class="filter-circle-wrapper color-{{ section.settings.color_scheme }} no-js-hidden gradient section-{{ section.id }}-padding">
-  <div class="page-width">
+  <div class="page-width" style="padding:0!important;">
     {%- unless section.settings.heading == blank -%}
-      <div class="title-wrapper title-wrapper--no-top-margin {{ section.settings.text_allignment }}">
+      <div class="title-wrapper title-wrapper--no-top-margin {{ section.settings.text_allignment }} page-width">
         <h2
           id="SectionHeading-{{ section.id }}"
           class="videos-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -70,7 +44,7 @@
                 if filter.values.size > columns_mobile_int
                   assign show_tablet_slider = true
                 endif
-              
+
                 assign columns_mobile_int = columns_mobile_int | minus: 1
                 if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
                   assign show_mobile_slider = true
@@ -80,31 +54,22 @@
                   assign show_mobile_slider = true
                 endif
               endif
-          
-              
+
               assign columns_desktop_int = section.settings.columns_desktop | plus: 0
               assign show_desktop_slider = false
               if section.settings.swipe_on_desktop and filter.values.size > columns_desktop_int
                 assign show_desktop_slider = true
               endif
+
+              assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
             -%}
 
-            <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-              {%- if show_mobile_slider or show_desktop_slider -%}
-                <div class="slider-buttons left-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-                  <button
-                    type="button"
-                    class="slider-button slider-button--prev"
-                    name="previous"
-                    aria-label="{{ 'general.slider.previous_slide' | t }}"
-                  >
-                    {% render 'icon-caret' %}
-                  </button>
-                </div>
-              {%- endif -%}
-
+            <slider-component-custom
+              class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              data-visual="{{ section.settings.slider_visual }}"
+            >
               <ul
-                class="filter-circle contains-card contains-card--collection slide-mobile-{{ show_mobile_slider }} slide-tablet-{{ show_tablet_slider }} slide-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size | plus: 1 }}-items"
+                class="filter-circle contains-card contains-card--collection slide-mobile-{{ show_mobile_slider }} slide-tablet-{{ show_tablet_slider }} slide-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size }}-items"
                 id="Slider-{{ section.id }}"
                 role="list"
               >
@@ -118,7 +83,7 @@
                 {%- for value in filter.values -%}
                   <li
                     id="Slide-{{ section.id }}-{{ forloop.index }}"
-                    class="filter-circle__item facets__item grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    class="filter-circle__item facets__item grid__item custom__slide{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                     {% if settings.animations_reveal_on_scroll %}
                       data-cascade
                       style="--animation-order: {{ forloop.index }};"
@@ -146,8 +111,14 @@
                         assign image_handle = card_title | handle | append: '-snippet.webp'
                         assign card_image = images[image_handle]
                       %}
-                      <p style='display:none'>{{ image_handle }}</p>
-                      {% render 'card-filter-circle', card_title: card_title, card_image: card_image %}
+                      <p style="display:none">{{ image_handle }}</p>
+                      {% render 'card-filter',
+                        card_title: card_title,
+                        card_image: card_image,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        circle_image: section.settings.circle_image,
+                        show_title: section.settings.show_title
+                      %}
                       {% comment %} <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span> {% endcomment %}
                       <span class="visually-hidden">
                         {{- value.label | escape }} (
@@ -164,13 +135,56 @@
               </ul>
 
               {%- if show_mobile_slider or show_desktop_slider -%}
-                <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-                  <div class="slider-counter caption visually-hidden">
-                    <span class="slider-counter--current">1</span>
-                    <span aria-hidden="true"> / </span>
-                    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                    <span class="slider-counter--total">{{ filter.values.size | plus: 1 }}</span>
+                <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+                  <button
+                    type="button"
+                    class="slider-button slider-button--prev"
+                    name="previous"
+                    aria-label="{{ 'general.slider.previous_slide' | t }}"
+                  >
+                    {% render 'icon-caret' %}
+                  </button>
+
+                  {% comment %}
+                    <div class="slider-counter caption visually-hidden">
+                      <span class="slider-counter--current">1</span>
+                      <span aria-hidden="true"> / </span>
+                      <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                      <span class="slider-counter--total">{{ filter.values.size | plus: 1 }}</span>
+                    </div>
+                  {% endcomment %}
+                  <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+                    {% for filter in collection.filters %}
+                      {% assign filter_label = filter.label | handleize %}
+                      {% if filter_label == section.settings.filter_type %}
+                        {%- if section.settings.slider_visual == 'counter' -%}
+                          <div>
+                            <span class="slider-counter--current">1</span>
+                            <span aria-hidden="true"> / </span>
+                            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                            <span class="slider-counter--total">{{ filter.values.size }}</span>
+                          </div>
+                        {%- else -%}
+                          <div class="slideshow__control-wrapper">
+                            {%- for value in filter.values -%}
+                              <button
+                                class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                aria-controls="Slider-{{ section.id }}"
+                              >
+                                {%- if section.settings.slider_visual == 'numbers' -%}
+                                  {{ forloop.index -}}
+                                {%- else -%}
+                                  <span class="dot"></span>
+                                {%- endif -%}
+                              </button>
+                            {% endfor %}
+                          </div>
+                        {%- endif -%}
+                      {% endif %}
+                    {%- endfor -%}
                   </div>
+
                   <button
                     type="button"
                     class="slider-button slider-button--next"
@@ -181,7 +195,7 @@
                   </button>
                 </div>
               {%- endif -%}
-            </slider-component>
+            </slider-component-custom>
           {% endif %}
         {% endfor %}
       </form>
@@ -278,6 +292,39 @@
       "label": "Text allignment"
     },
     {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "circle_image",
+      "default": true,
+      "label": "Circle image",
+      "info": "If selected, image ratio is set to square."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "default": true,
+      "label": "Show title"
+    },
+    {
       "type": "range",
       "id": "columns_desktop",
       "min": 1,
@@ -328,6 +375,26 @@
       "id": "swipe_on_mobile",
       "default": false,
       "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "select",
+      "id": "slider_visual",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.slideshow.settings.slider_visual.options__2.label"
+        },
+        {
+          "value": "counter",
+          "label": "t:sections.slideshow.settings.slider_visual.options__1.label"
+        },
+        {
+          "value": "numbers",
+          "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
+        }
+      ],
+      "default": "counter",
+      "label": "t:sections.slideshow.settings.slider_visual.label"
     },
     {
       "type": "header",

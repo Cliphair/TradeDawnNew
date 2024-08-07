@@ -132,6 +132,14 @@ slider-component-custom.slider-component-full-width {
   .slider.slider--tablet.contains-content-container .slider__slide {
     --focus-outline-padding: 0rem;
   }
+
+  .slider.slide-mobile-false {
+    justify-content: center;
+  }
+
+  .slider.slide-mobile-false~.slider-buttons {
+    display: none;
+  }
 }
 
 .slider--everywhere {
@@ -172,6 +180,14 @@ slider-component-custom.slider-component-full-width {
 
   .slider--tablet.grid--peek.grid--1-col-tablet .grid__item {
     width: calc((100% - 1.5rem - var(--grid-desktop-horizontal-spacing) * 2) / 1);
+  }
+
+  .slider.slide-tablet-false {
+    justify-content: center;
+  }
+
+  .slider.slide-tablet-false~.slider-buttons {
+    display: none;
   }
 }
 
@@ -260,6 +276,14 @@ slider-component-custom.slider-component-full-width {
 
   .slider.slider--desktop.contains-content-container .slider__slide {
     --focus-outline-padding: 0rem;
+  }
+
+  .slider.slide-desktop-false {
+    justify-content: center;
+  }
+
+  .slider.slide-desktop-false~.slider-buttons {
+    display: none;
   }
 }
 

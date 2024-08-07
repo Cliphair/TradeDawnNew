@@ -9,7 +9,8 @@
   - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
   - wrapper_class: {String} Wrapper class for card (optional)
   - placeholder_image: {String} Placeholder image when collection is empty (optional)
-  - circle_image: {Boolean} Apply circle class to images. Default: true (optional)
+  - circle_image: {Boolean} Apply circle class to images. Default: false (optional)
+  - show_title: {Boolean} Display title on the card. Default: false (optional)
 
   Usage:
   {% render 'card-filter-circle' %}
@@ -17,7 +18,7 @@
 
 {%- liquid
   unless circle_image
-    assign circle_image = true
+    assign circle_image = false
   endunless
   assign ratio = 1
   if media_aspect_ratio == 'portrait'
@@ -97,18 +98,20 @@
       </div>
     </div>
     {%- if card_style == 'card' or card_image -%}
-      <div class="card__content">
-        <div class="card__information">
-          <h3 class="card__heading h5">
-            <span
-              class="full-unstyled-link"
-            >
-              {{ card_title }}
-            </span>
-          </h3>
-          {% comment %} {% render 'features-by-type' %} {% endcomment %}
+      {% if show_title %}
+        <div class="card__content">
+          <div class="card__information">
+            <h3 class="card__heading h5">
+              <span
+                class="full-unstyled-link"
+              >
+                {{ card_title }}
+              </span>
+            </h3>
+            {% comment %} {% render 'features-by-type' %} {% endcomment %}
+          </div>
         </div>
-      </div>
+      {% endif %}
     {%- endif -%}
   </div>
 </div>
