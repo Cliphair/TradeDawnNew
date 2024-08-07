@@ -5,7 +5,6 @@
 {{ 'section-blog-spot.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.enable_tags %}
-  {{ 'section-article-categories.css' | asset_url | stylesheet_tag }}
   {{ 'component-category-card.css' | asset_url | stylesheet_tag }}
 
   {% liquid
@@ -51,7 +50,7 @@
   endif
 %}
 
-<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
+<div class="blog color-{{ section.settings.color_scheme }} gradient  section-{{ section.id }}-padding{% if section.settings.heading == blank %} no-heading{% endif %}">
   {%- liquid
     assign columns_mobile_int = section.settings.columns_mobile | plus: 0
     assign show_mobile_slider = false
@@ -66,9 +65,9 @@
     endif
   -%}
 
-  <div class="page-width isolate section-{{ section.id }}-padding">
+  <div class="page-width isolate" style="padding:0!important;">
     {%- unless section.settings.heading == blank -%}
-      <div class="title-wrapper {% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin {{ section.settings.text_alignment }}">
+      <div class="page-width title-wrapper {% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin {{ section.settings.text_alignment }}">
         <h2
           id="SectionHeading-{{ section.id }}"
           class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -82,7 +81,7 @@
     {%- endunless -%}
 
     {% unless section.settings.introduction == blank %}
-      <div class="intro-wrapper {{ section.settings.text_alignment }}">
+      <div class="page-width intro-wrapper {{ section.settings.text_alignment }}">
         {{ section.settings.introduction }}
       </div>
     {% endunless %}
@@ -100,12 +99,17 @@
         if section.settings.tags_swipe_on_desktop and tags_size > tags_columns_desktop_int
           assign tags_show_desktop_slider = true
         endif
+
+        assign tags_columns_tablet = tags_columns_desktop_int | plus: tags_columns_mobile_int | divided_by: 2 | ceil
       -%}
 
       <div class="tag-wrapper section-article-categories">
-        <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <slider-component-custom
+          class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          data-visual="{{ section.settings.slider_visual }}"
+        >
           <ul
-            class="articles-categories grid grid--{{ section.settings.tags_columns_desktop }}-col-desktop grid--{{ section.settings.tags_columns_mobile }}-col-tablet-down{% if section.settings.tags_swipe_on_mobile or section.settings.tags_swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.tags_swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.tags_swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ tags_size }}-items"
+            class="articles-categories grid grid--{{ section.settings.tags_columns_desktop }}-col-desktop grid--{{ tags_columns_tablet }}-col-tablet grid--{{ section.settings.tags_columns_mobile }}-col-tablet-down{% if section.settings.tags_swipe_on_mobile or section.settings.tags_swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.tags_swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.tags_swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ tags_size }}-items"
             id="Slider-{{ section.id }}"
             role="list"
           >
@@ -119,7 +123,7 @@
             {% for category in categories %}
               <li
                 id="Slide-{{ section.id }}-{{ forloop.index }}"
-                class="articles-list__item grid__item{% if tags_show_mobile_slider or tags_show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="articles-list__item grid__item custom__slide{% if tags_show_mobile_slider or tags_show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
                   style="--animation-order: {{ forloop.index }};"
@@ -141,11 +145,39 @@
               >
                 {% render 'icon-caret' %}
               </button>
-              <div class="slider-counter caption visually-hidden">
-                <span class="slider-counter--current">1</span>
-                <span aria-hidden="true"> / </span>
-                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                <span class="slider-counter--total">{{ tags_size }}</span>
+              {% comment %}
+                <div class="slider-counter caption visually-hidden">
+                  <span class="slider-counter--current">1</span>
+                  <span aria-hidden="true"> / </span>
+                  <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                  <span class="slider-counter--total">{{ tags_size }}</span>
+                </div>
+              {% endcomment %}
+              <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+                {%- if section.settings.slider_visual == 'counter' -%}
+                  <div class="{% if section.settings.slider_visual != 'counter' %}medium-hide large-up-hide{% endif %}">
+                    <span class="slider-counter--current">1</span>
+                    <span aria-hidden="true"> / </span>
+                    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                    <span class="slider-counter--total">{{ tags_size }}</span>
+                  </div>
+                {%- else -%}
+                  <div class="slideshow__control-wrapper small-hide">
+                    {% for category in categories %}
+                      <button
+                        class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                        aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                        aria-controls="Slider-{{ section.id }}"
+                      >
+                        {%- if section.settings.slider_visual == 'numbers' -%}
+                          {{ forloop.index -}}
+                        {%- else -%}
+                          <span class="dot"></span>
+                        {%- endif -%}
+                      </button>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
               </div>
               <button
                 type="button"
@@ -157,12 +189,12 @@
               </button>
             </div>
           {%- endif -%}
-        </slider-component>
+        </slider-component-custom>
       </div>
     {% endif %}
 
     {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
-      <slider-component class="blog-posts-wrapper slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <slider-component class="page-width blog-posts-wrapper slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <ul
           class="grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} blog-posts--{{ section.settings.limit }}-items"
           id="Slider-{{ section.id }}"
@@ -483,6 +515,26 @@
       "id": "tags_swipe_on_mobile",
       "default": false,
       "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "select",
+      "id": "slider_visual",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.slideshow.settings.slider_visual.options__2.label"
+        },
+        {
+          "value": "counter",
+          "label": "t:sections.slideshow.settings.slider_visual.options__1.label"
+        },
+        {
+          "value": "numbers",
+          "label": "t:sections.slideshow.settings.slider_visual.options__3.label"
+        }
+      ],
+      "default": "counter",
+      "label": "t:sections.slideshow.settings.slider_visual.label"
     },
     {
       "type": "header",
