@@ -165,7 +165,7 @@
       }
     },
     "related-products": {
-      "type": "related-products",
+      "type": "related-products-by-colour",
       "settings": {
         "heading": "YOU MIGHT ALSO LIKE",
         "heading_size": "h1",
