@@ -155,14 +155,14 @@
               {% endcomment %}
               <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
                 {%- if section.settings.slider_visual == 'counter' -%}
-                  <div class="{% if section.settings.slider_visual != 'counter' %}medium-hide large-up-hide{% endif %}">
+                  <div>
                     <span class="slider-counter--current">1</span>
                     <span aria-hidden="true"> / </span>
                     <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
                     <span class="slider-counter--total">{{ tags_size }}</span>
                   </div>
                 {%- else -%}
-                  <div class="slideshow__control-wrapper small-hide">
+                  <div class="slideshow__control-wrapper">
                     {% for category in categories %}
                       <button
                         class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
