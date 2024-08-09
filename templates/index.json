@@ -870,7 +870,7 @@
         "tags_swipe_on_desktop": true,
         "tags_columns_mobile": "2",
         "tags_swipe_on_mobile": true,
-        "slider_visual": "counter",
+        "slider_visual": "dots",
         "padding_top": 40,
         "padding_bottom": 40
       }
