@@ -280,11 +280,13 @@
 </section>
 
 <script>
-  var playBtns{{randomNumber}} = $('.play_button_{{randomNumber}}');
+  var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
 
-  playBtns{{randomNumber}}.click(function(){
-  	btsVideoTag(this.dataset.url)
-  });  
+  for (let button of playBtns{{randomNumber}}){
+    button.addEventListener('click', function(){
+      btsVideoTag(button.dataset.url)
+    });
+  }
 </script>
 
 {% schema %}
