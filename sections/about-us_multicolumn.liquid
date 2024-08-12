@@ -110,12 +110,16 @@
     padding:0;
   }
   
-  #{{ section.id }} .description_container *{
+  #{{ section.id }} .description_container p{
     font-size: {{ section.settings.text_mobile_font }}px;
     margin: 0;
     padding: 0;
     line-height: 1.2em;
     margin-bottom: 10px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .description_container a{
     color: {{ section.settings.text_color }};
   }
 
