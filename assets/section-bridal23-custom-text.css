@@ -24,6 +24,10 @@
   margin-bottom:15px;
 }
 
+.bridal23-hair-quiz-section > .inner-container > .text-container a{
+  color:inherit;
+}
+
 .bridal23-hair-quiz-section > .inner-container > .text-container span.number{
     display: inline-flex;
     box-sizing: content-box;
