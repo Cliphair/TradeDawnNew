@@ -58,7 +58,7 @@
       ],
       "settings": {
         "max-width": "",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify:\/\/shop_images\/retro-updo-desktop-banner.webp",
         "mobile-image": "shopify:\/\/shop_images\/retro-updo-mobile-banner.webp",
         "url": "",
@@ -128,7 +128,7 @@
       ],
       "settings": {
         "max-width": "",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "mobile-image": "shopify:\/\/shop_images\/retro-updo-collage.webp",
         "url": "",
         "padding_top": 0,
@@ -490,7 +490,7 @@
         "section {background: rgba(208, 184, 164, 0.2) !important;}",
         ".inner-container {background: white; padding: 20px 30px;}",
         ".bridal23-hair-quiz-section > .inner-container > .title-container > * {margin-bottom: 20px;}",
-        ".bridal23-hair-quiz-section > .inner-container > a {box-shadow: none; padding: 0; text-decoration: underline; text-underline-offset: 0.3rem; cursor: pointer; text-decoration-thickness: 1px;}",
+        ".bridal23-hair-quiz-section > .inner-container > a {box-shadow: none; padding: 0; text-decoration: underline; text-underline-offset: 0.3rem; cursor: pointer; text-decoration-thickness: 1px; color:inherit;}",
         ".inner-container > a:hover {text-decoration-thickness: 2px !important;}",
         "@media screen and (max-width: 991px) {section {display: none; }}"
       ],
