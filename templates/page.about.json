@@ -18,6 +18,9 @@
     },
     "6368dc69-0f53-4509-a1fe-d8783409b1a1": {
       "type": "page-header",
+      "custom_css": [
+
+      ],
       "settings": {
         "custom-title": false,
         "first-line": "",
@@ -51,7 +54,8 @@
         "title_j3ekfW"
       ],
       "custom_css": [
-        "section {background: rgba(253, 248, 255, 0.7);}"
+        "section {background: rgba(253, 248, 255, 0.7);}",
+        "h2 {margin-top: 0;}"
       ],
       "settings": {
         "max-width": "1500",
@@ -138,7 +142,7 @@
         "title_qEFTwE"
       ],
       "custom_css": [
-
+        "h2 {margin-top: 0;}"
       ],
       "settings": {
         "max-width": "1500",
@@ -249,7 +253,7 @@
       ],
       "custom_css": [
         ".bridal23-hair-quiz-section {background: rgba(253, 248, 255, 0.6);}",
-        "h2 {margin-bottom: 20px;}",
+        "h2 {margin-bottom: 20px; margin-top: 0;}",
         ".text-container {margin-bottom: 0;}",
         ".text-container p {margin: 0; line-height: 1.4em;}",
         "@media screen and (min-width: 992px) {h2 {margin-bottom: 40px; }}"
@@ -338,7 +342,8 @@
       "custom_css": [
         ".carrousel-items {padding-left: 30px; scroll-padding-left: 30px;}",
         ".item {padding-right: 30px;}",
-        "@media screen and (min-width: 768px) {.carrousel-items {padding-left: 50px; scroll-padding-left: 50px; } .item {padding-right: 50px; }}",
+        ".item-title{text-decoration:none;}",
+        " @media screen and (min-width: 768px) {.carrousel-items {padding-left: 50px; scroll-padding-left: 50px; } .item {padding-right: 50px; }}",
         "@media screen and (min-width: 768px) {.carrousel-items {padding-left: 70px; scroll-padding-left: 70px; } .item {padding-right: 70px; }}"
       ],
       "settings": {
@@ -544,7 +549,11 @@
         "section {background: rgba(253, 248, 255, 0.6);}"
       ],
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "url": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "break_line_QRLaGD": {
