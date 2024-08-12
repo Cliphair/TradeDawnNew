@@ -1,6 +1,731 @@
+{% liquid 
+  assign min = 1
+  assign max = 100
+  assign diff = max | minus: min
+  assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min 
+%}
+
+{% if section.settings.enable_text %}
+  {% if section.settings.custom_text %}
+      {% assign custom_text = true %}
+      {% assign header = section.settings.header %}
+      {% assign sub_header = section.settings.sub_header %}
+      {% assign description = section.settings.description %}
+      {% if section.settings.read_more != empty %}
+        {% assign read_more = true %}
+        {% assign read_more_content = section.settings.read_more %}
+      {% endif %}
+  {% endif %}
+{% endif %}
+
+{% capture containerClass %}carrousel-{{ section.id }}{% endcapture %}
+{% liquid
+  assign limit = 0
+  for block in section.blocks
+    if block.type == section.settings.column_type
+      assign limit = limit | plus: 1
+    endif
+  endfor
+  
+  assign limit = limit | minus:1
+
+  assign arrowClass = ""
+  if limit < 1
+    assign arrowClass = arrowClass | append: " hidden"
+  endif
+%}
+
+{% if section.settings.max_width != empty %}
+<style>
+  #{{ section.id }} > .custom-multicolumn-container{
+    max-width: {{section.settings.max_width}}px;
+  }
+</style>
+{% endif %}
+
+<style>
+  #{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    background: {{ section.settings.bg_color }};
+    width: 100%;
+    margin:0;
+  }
+
+  #{{ section.id }} > .custom-multicolumn-container{
+    margin: 0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:space-evenly;
+    flex-wrap:nowrap;
+    gap:30px;
+  }
+
+  #{{ section.id }} .text_container,
+  #{{ section.id }} .second-column{
+    width:100%;
+    padding:0;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} > .custom-multicolumn-container{
+      flex-direction:row;
+      flex-wrap:wrap;
+      gap:50px;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+    }
+  }
+  
+  /* Text Section */
+  #{{ section.id }} .text_container{
+    display: flex;
+    align-items: center;
+  }
+  
+  #{{ section.id }} .section_header > *{
+    font-size:{{ section.settings.header_mobile_font}}px;
+    margin:0;
+    padding:0;
+    line-height:1.2em;
+    margin-bottom:10px;
+    color: {{ section.settings.header_color }};
+    opacity: calc({{section.settings.header_opacity }} / 100);
+    font-weight:400;
+  }
+  
+  #{{ section.id }} .description_container{
+    width:100%;
+    padding:0;
+  }
+  
+  #{{ section.id }} .description_container p{
+    font-size: {{ section.settings.text_mobile_font }}px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .text_container span.btn__read-more{
+  	color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.text_mobile_font }}px;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    cursor:pointer;
+    text-transform:uppercase;
+  }
+
+  #{{ section.id }} .text_container span.btn__read-more:hover{
+  	/* text-decoration-thickness: 0.2rem */
+    text-decoration:none;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} .text_container{
+      width:calc({{ section.settings.text_width }}% - 25px);
+      min-width:calc({{ section.settings.text_width }}% - 25px);
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }} .section_header > *{
+      font-size:{{ section.settings.header_desktop_font}}px;
+      margin-bottom: 20px;
+    }
+
+    #{{ section.id }} .description_container p{
+      font-size: {{ section.settings.text_desktop_font }}px;
+      margin-bottom:15px;
+    }
+
+    #{{ section.id }} .text_container span.btn__read-more{
+      font-size: {{ section.settings.text_desktop_font }}px;
+    }
+  }
+
+  /* Custom column */
+  #{{ section.id }} .second-column{
+    position:relative;
+  }
+
+  @media screen and (min-width:768px){
+    #{{ section.id }} .second-column{
+      width:calc({{ section.settings.column_width }}% - 25px);
+      min-width:calc({{ section.settings.column_width }}% - 25px);
+    }
+  }
+
+  #{{ section.id }} .second-column .carrousel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x:auto;
+    height: 100%;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #{{ section.id }} .second-column .carrousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #{{ section.id }} .second-column .carrousel{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  #{{ section.id }} .second-column .carrousel > div{
+    width:100%;
+    flex-shrink:0;
+  }
+
+  #{{ section.id }} .second-column .carrousel img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    aspect-ratio:initial;
+  }
+
+  /* videos */
+  #{{ section.id }} .second-column .video-entry{
+    position:relative;
+  }
+
+  #{{ section.id }} .button_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .button_container span{
+    cursor:pointer;    
+  }
+
+  #{{ section.id }} .button_container span:hover{
+    opacity:0.7;   
+  }
+
+  #{{ section.id }} .button_container i{
+    font-size:50px;
+    color: {{ section.settings.icon-color }};
+    
+  }
+
+  /*reviews*/
+  #{{ section.id }} .review-entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #{{ section.id }} .second-column .carrousel .review-entry img{
+    height:auto;
+    max-width:200px;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  #{{ section.id }} .review-entry p{
+    font-size: {{ section.settings.text_mobile_font }}px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    color: {{ section.settings.text_color }};
+    text-align:center;
+    padding: 0 3rem;
+  }
+
+  @media screen and (min-width:992px){
+    #{{ section.id }} .second-column .carrousel .review-entry img{
+      max-width:250px;
+    }
+    
+    #{{ section.id }} .review-entry p{
+      font-size: {{ section.settings.text_desktop_font }}px;
+    }
+  }
+
+  /* scroll arrows */
+  #{{ section.id }} .second-column .scroll-arrow {
+    position: absolute;
+    top: calc(50% - 25px);
+  }
+
+  #{{ section.id }} .second-column .scroll-arrow.hidden {
+    display:none;
+  }
+
+  #{{ section.id }} .second-column .scroll-arrow.left {
+    left:15px;
+  }
+
+  #{{ section.id }} .second-column .scroll-arrow.right {
+    right:15px;
+  }
+
+  #{{ section.id }} .second-column .scroll-arrow i {
+    font-size:50px;
+    color: {{ section.settings.icon-color }}
+  }
+
+  #bts__video-container .video__container{
+    max-width:unset;
+  }
+</style>
+
+<section id='{{ section.id }}'>
+  <div class='custom-multicolumn-container'>
+    {% if section.settings.enable_text %}
+      <!-- Text Section -->
+      <div class='text_container'>
+        {% liquid
+          unless custom_text
+            assign description = page.content
+            assign read_more = false
+            if description contains '<!-- read more -->'
+              assign read_more = true
+              assign array = description | split: '<!-- read more -->'
+              assign description = array[0]
+              assign read_more_content = array[1]
+            endif
+          endunless
+        %}
+
+        {% if custom_text %}
+          <div class='section_header'>
+            {{ header }}
+          </div>
+        {% endif %}
+      
+        <div class='description_container'>
+          {{ description }}
+          {% if read_more %}
+            <span id='read-more-{{ section.id }}' class='btn__read-more read-more__btn read-more' data-target='read-more-{{ section.id }}'>Read More...</span>
+            <div class='closed read-more-{{ section.id }}'>
+              {{ read_more_content }}
+              <span class='btn__read-more read-less__btn' data-target='read-more-{{ section.id }}' >Read Less</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.enable_second_column %}
+      <div class='second-column'>
+        <div class='{{ section.settings.column_type }}_container carrousel-{{ section.id }} carrousel'>
+          {% for block in section.blocks %}
+            {% if block.type == section.settings.column_type %}
+              {% case block.type %}
+                {% when "video" %}
+                  <div class='video-entry'>
+                    <img src='{{ block.settings.image | image_url }}' loading='lazy' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                    <div class='button_container'>
+                      <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }}'><i class="icon icon-play"></i></span>
+                    </div>
+                  </div>
+                {% when "image" %}
+                  <div class='image-entry'>
+                    <img src='{{ block.settings.image | image_url }}' loading='lazy' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                  </div>
+                {% when "review" %}
+                  <div class='review-entry'>
+                    <img src='{{ block.settings.image | image_url }}' loading='lazy' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
+                    <p>{{ block.settings.review_text }}</p>
+                  </div>
+              {% endcase %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% render "arrows", containerClass: containerClass, limit: limit, customClass: arrowClass %}
+      </div>  
+    {% endif %}
+    
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      let readMoreBtns = document.querySelectorAll('#{{ section.id }} .read-more__btn');
+      let readLessBtns = document.querySelectorAll('#{{ section.id }} .read-less__btn');
+  
+      for (let btn of readMoreBtns) {
+          btn.addEventListener('click', () => {
+              readMoreCustom(btn);
+          })
+      }
+  
+      for (let btn of readLessBtns) {
+          btn.addEventListener('click', () => {
+              readLessCustom(btn);
+          })
+      }
+  })
+
+  function openReadMore(btn) {
+      btn.classList.add('closed');
+      btn.parentElement.nextElementSibling.classList.remove('closed')
+  }
+  
+  function closeReadLess(btn) {
+      btn.parentElement.previousElementSibling.querySelector('a.closed').classList.remove('closed');
+      btn.parentElement.classList.add('closed');
+  }
+</script>
+
+
+<script>
+  var playBtns{{randomNumber}} = $('.play_button_{{randomNumber}}');
+
+  playBtns{{randomNumber}}.click(function(){
+      btsVideoTag(this.dataset.url)
+  });  
+</script>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "About us multicolumn",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Settings"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Devices"
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Devices"
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Text Column"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_text",
+        "label": "Enable Text Column?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "custom_text",
+        "label": "Use custom text",
+        "info": "Select this box if you don't want to use the page title and description. Instead, you want to use the custom fields below.",
+        "default": false
+      },
+      {
+        "type": "inline_richtext",
+        "id": "header",
+        "label": "Header"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "richtext",
+        "id": "read_more",
+        "label": "Read More Content"
+      },
+      {
+        "type": "header",
+        "content": "Text Column Settings"
+      },
+      {
+        "type": "range",
+        "id": "text_width",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Text Section Width",
+        "default": 50,
+        "info": "This width will be used for desktop devices."
+      },
+      {
+        "type": "header",
+        "content": "Font Size"
+      },
+      {
+        "type": "range",
+        "id": "header_mobile_font",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "header_desktop_font",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "text_mobile_font",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "text_desktop_font",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "header",
+        "content": "Colours"
+      },
+      {
+        "type": "color",
+        "id": "header_color",
+        "label": "Header Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id": "header_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Header Opacity",
+        "default": 100
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Second column"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_second_column",
+        "label": "Enable Second Column",
+        "default": false,
+        "info": "If checked, use blocks field to add videos."
+      },
+      {
+        "type": "select",
+        "id": "column_type",
+        "label": "Column type",
+        "options": [
+          {
+            "value": "video",
+            "label": "Videos"
+          },
+          {
+            "value": "image",
+            "label": "Images"
+          },
+          {
+            "value": "review",
+            "label": "Reviews"
+          }
+        ],
+        "default": "image"
+      },
+      {
+        "type": "header",
+        "content": "Column Settings"
+      },
+      {
+        "type": "range",
+        "id": "column_width",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Column Width",
+        "default": 50,
+        "info": "This width will be used for desktop devices."
+      },
+      {
+        "type": "color",
+        "id": "icon-color",
+        "label": "Icons colour",
+        "default": "#000000"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "video",
+        "name": "Video",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Placeholder Image"
+          },
+          {
+            "type": "url",
+            "id": "video_link",
+            "label": "Video Link"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image file"
+          }
+        ]
+      },
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Review image"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "review_text",
+            "label": "Review content"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
