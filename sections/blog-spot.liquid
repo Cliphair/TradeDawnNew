@@ -130,7 +130,7 @@
                 {% endif %}
               >
                 <div class="category circle">
-                  {% render 'category-card', category_object: category %}
+                  {% render 'category-card', category_object: category, blog: section.settings.blog  %}
                 </div>
               </li>
             {% endfor %}
