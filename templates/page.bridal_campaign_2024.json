@@ -39,17 +39,8 @@
     },
     "custom_banner_qhrEjP": {
       "type": "custom-banner",
-      "custom_css": [
-        "div > div {max-width:unset; padding-right:0; padding-left:0;}"
-      ],
       "settings": {
-        "max-width": "",
-        "bg-color": "#FFF",
-        "desktop-image": "shopify:\/\/shop_images\/bridal_campaign_desktop_banner.webp",
-        "mobile-image": "shopify:\/\/shop_images\/bridal_campaign_mobile_banner.webp",
-        "url": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "url": ""
       }
     },
     "57c89bc1-e173-4782-bfe1-7229f34f91ab": {
@@ -262,7 +253,7 @@
       }
     },
     "1d34c519-ab19-4ca8-8ddf-5dcd4b9fab26": {
-      "type": "custom-carrousel-3-bridal24",
+      "type": "custom-carrousel-3",
       "blocks": {
         "74c3f2d7-404f-4a64-983c-c9964a5b2871": {
           "type": "item",
@@ -398,8 +389,6 @@
         "mobile-col": 2.5,
         "tablet-col": 4,
         "desktop-col": 4,
-        "gap_mobile": 20,
-        "gap_desktop": 30,
         "include-arrows": true,
         "mobile-arrow-size": 30,
         "tablet-arrow-size": 30,
@@ -413,11 +402,7 @@
     "custom_banner_j6XPmV": {
       "type": "custom-banner",
       "settings": {
-        "max-width": "",
-        "bg-color": "#FFF",
-        "url": "shopify:\/\/pages\/bridal-hair-extension-quiz",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "url": "shopify:\/\/pages\/bridal-hair-extension-quiz"
       }
     },
     "column_carrousel_cHtXiR": {
@@ -520,11 +505,7 @@
     "custom_banner_d9rTna": {
       "type": "custom-banner",
       "settings": {
-        "max-width": "",
-        "bg-color": "#FFF",
-        "url": "shopify:\/\/pages\/2024-hairstylist-award",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "url": "shopify:\/\/pages\/2024-hairstylist-award"
       }
     },
     "bridal23_custom_text_iPzVXq": {
