@@ -243,7 +243,7 @@
         {% assign mobileStep = section.settings.mobile-col | times: 1 | floor %}
         {% assign tabletStep = section.settings.tablet-col | times: 1 | floor %}
         {% assign desktopStep = section.settings.desktop-col | times: 1 | floor %}
-        {% render "arrows-bridal24", containerClass: containerClass, limit: limit, stepMobile: mobileStep, stepTablet: tabletStep, stepDesktop: desktopStep, customClass: arrowClass %}
+        {% render "arrows", containerClass: containerClass, limit: limit, stepMobile: mobileStep, stepTablet: tabletStep, stepDesktop: desktopStep, customClass: arrowClass %}
       {% endif %}
     </div>
 
