@@ -239,7 +239,7 @@
                   <div class='video-entry'>
                     <img src='{{ block.settings.image | image_url }}' loading='lazy' alt='{{ block.settings.image.alt }}' width='{{ block.settings.image.width }}' height='{{ block.settings.image.height }}'>
                     <div class='button_container'>
-                      <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }}'><i class="fa-solid fa-circle-play"></i></span>
+                      <span data-url='{{ block.settings.video_link }}' class='play_button play_button_{{ randomNumber }}'>{% render 'icon-play' %}</span>
                     </div>
                   </div>
               {% endcase %}
