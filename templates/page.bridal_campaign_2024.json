@@ -40,7 +40,7 @@
     "custom_banner_qhrEjP": {
       "type": "custom-banner",
       "settings": {
-        "max-width": "",
+        "max-width": "unset",
         "bg-color": "#FFF",
         "desktop-image": "shopify:\/\/shop_images\/bridal_campaign_desktop_banner.webp",
         "mobile-image": "shopify:\/\/shop_images\/bridal_campaign_mobile_banner.webp",
