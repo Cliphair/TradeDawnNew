@@ -118,8 +118,8 @@
 
 .section-video-carrousel-bridal24 .placeholder_image_container .button_container > .play_button{
   opacity:1;
-  font-size:4rem;
   cursor:pointer;
+  width:3rem;
 }
 
 .section-video-carrousel-bridal24 .placeholder_image_container .button_container > .play_button:hover{
@@ -285,7 +285,7 @@
   }
 
   .section-video-carrousel-bridal24 .placeholder_image_container .button_container > .play_button{
-    font-size:5rem;
+    width:3rem;
   }
   
   .section-video-carrousel-bridal24 .scroll-arrow.arrow-tablet{
