@@ -53,8 +53,17 @@
     },
     "custom_banner_qhrEjP": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {max-width: unset; padding: 0;}"
+      ],
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/retro-updo-desktop-banner.webp",
+        "mobile-image": "shopify:\/\/shop_images\/retro-updo-mobile-banner.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "57c89bc1-e173-4782-bfe1-7229f34f91ab": {
@@ -118,7 +127,12 @@
         "@media screen and (min-width: 992px) {section {display: none; }}"
       ],
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "mobile-image": "shopify:\/\/shop_images\/retro-updo-collage.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "1d34c519-ab19-4ca8-8ddf-5dcd4b9fab29": {
@@ -397,7 +411,7 @@
         "h2 {margin-bottom: 45px;}",
         "h2 em {font-size: 35px;}",
         "@media screen and (min-width: 992px) {h2 em {font-size: 60px; } section {display: none; }}",
-        ".section-video-carrousel-bridal24 .images_container .images{overflow:initial;}"
+        ".section-video-carrousel-bridal24 .images_container .images {overflow: initial;}"
       ],
       "settings": {
         "header": "",
