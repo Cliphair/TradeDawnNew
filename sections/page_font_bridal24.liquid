@@ -1,0 +1,90 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Pinyon+Script&display=swap');
+  
+  main.page-main h1,
+  main.page-main h2,
+  main.page-main h3,
+  main.page-main h4,
+  main.page-main h5,
+  main.page-main h6,
+  main.page-main p,
+  main.page-main a,
+  main.page-main ul,
+  main.page-main li,
+  main.page-main label,
+  main.page-main select{
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  main.page-main h1 em,
+  main.page-main h2 em,
+  main.page-main h3 em,
+  main.page-main h4 em,
+  main.page-main h5 em,
+  main.page-main h6 em,
+  main.page-main .custom-font{
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  {% assign text1 = section.settings.font-text-1 %}
+  {{ text1 | font_face }}
+  main.page-main p,
+  main.page-main a,
+  main.page-main li,
+  main.page-main ul,
+  main.page-main label,
+  main.page-main select{
+    font-family: {{ text1.family }}, {{ text1.fallback_families }};
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  main.page-main p em,
+  main.page-main a em,
+  main.page-main label em,
+  main.page-main select em{
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  {% assign btns = section.settings.font-btns %}
+  {{ btns | font_face }}
+  main.page-main a{
+    font-family: {{ btns.family }}, {{ btns.fallback_families }};
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
+{% schema %}
+  {
+    "name": "Page Font",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font-text-1",
+        "label": "Page Text (primary)",
+        "default": "libre_baskerville_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "font-btns",
+        "label": "Page Buttons",
+        "default": "libre_baskerville_n4"
+      }
+    ],
+    "presets": [
+      {"name": "Page Font"}
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
