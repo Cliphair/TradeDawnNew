@@ -342,8 +342,8 @@
       "custom_css": [
         ".carrousel-items {padding-left: 30px; scroll-padding-left: 30px;}",
         ".item {padding-right: 30px;}",
-        ".item-title{text-decoration:none;}",
-        " @media screen and (min-width: 768px) {.carrousel-items {padding-left: 50px; scroll-padding-left: 50px; } .item {padding-right: 50px; }}",
+        ".item-title {text-decoration: none;}",
+        "@media screen and (min-width: 768px) {.carrousel-items {padding-left: 50px; scroll-padding-left: 50px; } .item {padding-right: 50px; }}",
         "@media screen and (min-width: 768px) {.carrousel-items {padding-left: 70px; scroll-padding-left: 70px; } .item {padding-right: 70px; }}"
       ],
       "settings": {
@@ -467,7 +467,7 @@
       ],
       "custom_css": [
         ".bridal23-hair-quiz-section {background: rgba(253, 248, 255, 0.6);}",
-        "h2 {margin-bottom: 20px;}",
+        "h2 {margin-bottom: 20px; margin-top: 0;}",
         ".text-container {margin-bottom: 0; text-align: left;}",
         ".text-container p {line-height: 1.4em;}",
         "@media screen and (min-width: 992px) {h2 {margin-bottom: 40px; }}"
@@ -551,9 +551,11 @@
       "settings": {
         "max-width": "",
         "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/about-us_icons-banner.webp",
+        "mobile-image": "shopify:\/\/shop_images\/about-us_icons-banner-mobile.webp",
         "url": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "break_line_QRLaGD": {
