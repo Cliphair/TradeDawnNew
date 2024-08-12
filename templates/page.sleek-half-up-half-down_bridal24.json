@@ -53,8 +53,17 @@
     },
     "custom_banner_qhrEjP": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {max-width: unset; padding: 0;}"
+      ],
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify:\/\/shop_images\/Group_14676.webp",
+        "mobile-image": "shopify:\/\/shop_images\/Diana_Sleek_Lookbook_Banner_mobile_2.webp",
+        "url": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "57c89bc1-e173-4782-bfe1-7229f34f91ab": {
@@ -118,7 +127,12 @@
         "@media screen and (min-width: 992px) {section {display: none; }}"
       ],
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "mobile-image": "shopify:\/\/shop_images\/Group_14659.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "1d34c519-ab19-4ca8-8ddf-5dcd4b9fab29": {
@@ -397,7 +411,7 @@
         "h2 {margin-bottom: 45px;}",
         "h2 em {font-size: 35px;}",
         "@media screen and (min-width: 992px) {h2 em {font-size: 60px; } section {display: none; }}",
-        ".section-video-carrousel-bridal24 .images_container .images{overflow:initial;}"
+        ".section-video-carrousel-bridal24 .images_container .images {overflow: initial;}"
       ],
       "settings": {
         "header": "",
@@ -476,7 +490,7 @@
         "section {background: rgba(208, 184, 164, 0.2) !important;}",
         ".inner-container {background: white; padding: 20px 30px;}",
         ".bridal23-hair-quiz-section > .inner-container > .title-container > * {margin-bottom: 20px;}",
-        ".bridal23-hair-quiz-section > .inner-container > a {box-shadow: none; padding: 0; text-decoration: underline; text-underline-offset: 0.3rem; cursor: pointer; text-decoration-thickness: 1px;}",
+        ".bridal23-hair-quiz-section > .inner-container > a {box-shadow: none; padding: 0; text-decoration: underline; text-underline-offset: 0.3rem; color:inherit; cursor: pointer; text-decoration-thickness: 1px;}",
         ".inner-container > a:hover {text-decoration-thickness: 2px !important;}",
         "@media screen and (max-width: 991px) {section {display: none; }}"
       ],
@@ -1134,8 +1148,8 @@
         ".scroll-arrow.left {left: 5px;}",
         ".carrousel-items > .item .block-subtitle * {font-size: 12px !important; text-align: left;}",
         ".carrousel-container .carrousel-items > .item img {margin: 0;}",
-        ".carrousel-items > .item .block-subtitle * a {color:inherit;}",
-        ".carrousel-items > .item .block-subtitle * a:hover {color:inherit; text-underline-offset:0.25rem;}"
+        ".carrousel-items > .item .block-subtitle * a {color: inherit;}",
+        ".carrousel-items > .item .block-subtitle * a:hover {color: inherit; text-underline-offset: 0.25rem;}"
       ],
       "settings": {
         "header": "<h2>OUR BRIDES ON INSTA<\/h2>",
