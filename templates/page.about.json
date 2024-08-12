@@ -546,7 +546,7 @@
     "custom_banner_pDfeKc": {
       "type": "custom-banner",
       "custom_css": [
-        "section {background: rgba(253, 248, 255, 0.6);}"
+        ".background-color {background: rgba(253, 248, 255, 0.6);}"
       ],
       "settings": {
         "max-width": "",
