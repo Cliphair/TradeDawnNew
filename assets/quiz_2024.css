@@ -440,6 +440,7 @@ img + .quiz__txt-container{
 .answer__text-container > h3 > a{
   color:inherit;
   text-decoration-thickness:2px;
+  text-decoration:none;
 }
 
 .answer__text-container > h3 > a:hover{
