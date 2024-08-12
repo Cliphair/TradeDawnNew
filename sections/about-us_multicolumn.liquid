@@ -329,6 +329,12 @@
             </div>
           {% endif %}
         </div>
+        {% if read_more %}
+          <div class='hidden description_container read-more-{{ section.id }}'>
+            {{ read_more_content }}
+            <span class='btn__read-more read-less__btn' data-target='read-more-{{ section.id }}' >Read Less</span>
+          </div>
+      {% endif %}
       </div>
     {% endif %}
 
