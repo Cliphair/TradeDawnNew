@@ -364,7 +364,7 @@
     
   </div>
 </section>
-
+<!-- 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
       let readMoreBtns = document.querySelectorAll('#{{ section.id }} .read-more__btn');
@@ -392,15 +392,17 @@
       btn.parentElement.previousElementSibling.querySelector('a.closed').classList.remove('closed');
       btn.parentElement.classList.add('closed');
   }
-</script>
+</script> -->
 
 
 <script>
-  var playBtns{{randomNumber}} = $('.play_button_{{randomNumber}}');
+  var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
 
-  playBtns{{randomNumber}}.click(function(){
+  for (let button of playBtns{{randomNumber}}){
+    button.addEventListener('click', () => {
       btsVideoTag(this.dataset.url)
-  });  
+    })
+  }  
 </script>
 
 
