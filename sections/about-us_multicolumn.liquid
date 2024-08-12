@@ -323,7 +323,7 @@
           {{ description }}
           {% if read_more %}
             <span id='read-more-{{ section.id }}' class='btn__read-more read-more__btn read-more' data-target='read-more-{{ section.id }}'>Read More...</span>
-            <div class='closed read-more-{{ section.id }}'>
+            <div class='hidden read-more-{{ section.id }}'>
               {{ read_more_content }}
               <span class='btn__read-more read-less__btn' data-target='read-more-{{ section.id }}' >Read Less</span>
             </div>
