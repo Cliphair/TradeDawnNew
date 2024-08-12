@@ -123,7 +123,8 @@ function nextScreen(nextScreen){
     let screen = document.getElementById(nextId);
     screen.style.left = '0px';
   	
-  	$('body').animate({ scrollTop: 150 }, 1000);
+  	document.body.scrollTop = 150; // For Safari
+    document.documentElement.scrollTop = 150; // For Chrome, Firefox, IE and Opera
 }
 
 function backScreen(currentScreen){
@@ -131,7 +132,8 @@ function backScreen(currentScreen){
   	let screen = document.getElementById(currentId);
     screen.style.left = '-9999px';
   	
-  	$('body').animate({ scrollTop: 150 }, 1000);
+  	document.body.scrollTop = 150; // For Safari
+    document.documentElement.scrollTop = 150; // For Chrome, Firefox, IE and Opera
 }
 
 function answerScreen(){
