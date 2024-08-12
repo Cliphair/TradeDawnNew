@@ -39,8 +39,11 @@
     },
     "custom_banner_qhrEjP": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {max-width:unset; padding-right:0; padding-left:0;}"
+      ],
       "settings": {
-        "max-width": "unset",
+        "max-width": "",
         "bg-color": "#FFF",
         "desktop-image": "shopify:\/\/shop_images\/bridal_campaign_desktop_banner.webp",
         "mobile-image": "shopify:\/\/shop_images\/bridal_campaign_mobile_banner.webp",
