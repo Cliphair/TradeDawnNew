@@ -9,20 +9,647 @@
 */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "166445343207c9fec0": {
+      "type": "page_font_hc-pre-launch",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "accent-4",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "font-text-1": "inter_n3",
+        "font-btns": "inter_n6"
+      }
+    },
+    "6368dc69-0f53-4509-a1fe-d8783409b1a1": {
+      "type": "page-header",
+      "settings": {
+        "custom-title": false,
+        "first-line": "",
+        "second-line": "",
+        "hide": true,
+        "text_colour": "#000000",
+        "bg_colour": "#ffffff",
+        "mobile-font-size": 14,
+        "mobile-top-padding": 0,
+        "mobile-bottom-padding": 0,
+        "mobile-right-padding": 0,
+        "mobile-left-padding": 0,
+        "desktop-font-size": 20,
+        "desktop-top-padding": 0,
+        "desktop-bottom-padding": 0,
+        "desktop-right-padding": 0,
+        "desktop-left-padding": 0
+      }
+    },
+    "bridal23_custom_text_UdV4ge": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "title_j3ekfW": {
+          "type": "title",
+          "settings": {
+            "title": "<h2><em>Our <\/em>Story<\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "title_j3ekfW"
+      ],
+      "custom_css": [
+        "section {background: rgba(253, 248, 255, 0.7);}"
+      ],
+      "settings": {
+        "max-width": "1500",
+        "bg-colour": "#ffffff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 20,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 30,
+        "desktop-p_right": 50,
+        "desktop-p_left": 50,
+        "title-mobile-f_size": 30,
+        "title-desktop-f_size": 50,
+        "title-color": "#515151",
+        "text-mobile-f_size": 12,
+        "text-desktop-f_size": 12,
+        "text-color": "#000000",
+        "btn-mobile-f_size": 12,
+        "btn-desktop-f_size": 12,
+        "btn-color": "#000000",
+        "btn-bg-color": "#ffffff"
+      }
+    },
+    "custom_multicolumn_yFAJT4": {
+      "type": "about-us_multicolumn",
+      "blocks": {
+        "image_m9H9zD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_m9H9zD"
+      ],
+      "custom_css": [
+        "section {background: rgba(253, 248, 255, 0.7);}",
+        ".description_container p {line-height: 1.4em;}",
+        "@media screen and (min-width: 768px) {.second-column .carrousel img {object-fit: contain; }}"
+      ],
+      "settings": {
+        "bg_color": "#fdf8ff",
+        "max_width": "1500",
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 0,
+        "desktop-p_left": 50,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "",
+        "description": "<p>Cliphair has come a long way from our humble beginnings back in 2007. Our journey began from a small family-run shop, before gradually expanding into <strong>an internationally successful e-commerce hair extension brand<\/strong>, with customer satisfaction at the heart of everything we do. Our South London HQ is where all the magic happens thanks to our fantastic team of employees who each bring unique talents to their role.<\/p><p>After <strong>over a decade<\/strong> of serving thousands of retail and professional customers alike, we’re still as passionate as ever about delivering the finest human hair extensions and providing expert education to give you the <strong>very best experience<\/strong> possible with our products and services. <\/p>",
+        "read_more": "<p>It’s a privilege to witness the confidence and empowerment our hair extensions bring to women all over the world, allowing them to embrace their beauty and achieve the hair of their dreams!<\/p>",
+        "text_width": 60,
+        "header_mobile_font": 22,
+        "header_desktop_font": 30,
+        "text_mobile_font": 14,
+        "text_desktop_font": 20,
+        "header_color": "#515151",
+        "header_opacity": 100,
+        "text_color": "#515151",
+        "enable_second_column": true,
+        "column_type": "image",
+        "column_width": 30,
+        "icon-color": "#515151"
+      }
+    },
+    "bridal23_custom_text_G7rpLM": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "title_qEFTwE": {
+          "type": "title",
+          "settings": {
+            "title": "<h2><em>Our<\/em> Customers<\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "title_qEFTwE"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "max-width": "1500",
+        "bg-colour": "#ffffff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 20,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 30,
+        "desktop-p_right": 50,
+        "desktop-p_left": 50,
+        "title-mobile-f_size": 22,
+        "title-desktop-f_size": 36,
+        "title-color": "#515151",
+        "text-mobile-f_size": 14,
+        "text-desktop-f_size": 20,
+        "text-color": "#000000",
+        "btn-mobile-f_size": 12,
+        "btn-desktop-f_size": 12,
+        "btn-color": "#000000",
+        "btn-bg-color": "#ffffff"
+      }
+    },
+    "about_us_multicolumn_ztYJTU": {
+      "type": "about-us_multicolumn",
+      "blocks": {
+        "review_zNDL7x": {
+          "type": "review",
+          "settings": {
+            "review_text": "\"I have actually been purchasing hair extentions from Cliphair for probably the last 10 years. Fancied a complete colour change so ive just gone and bought the #33 and the colour is exactly how it looked on their website. They are so vibrant and shiny, i love my new hair! Always fast delivery and packaged so well. Hair is slaaaying 👑👩🏼‍🦰\""
+          }
+        },
+        "review_XDQUNh": {
+          "type": "review",
+          "settings": {
+            "review_text": "\"Always a 5 star experience with clip hair. The products are amazing , good quality and last a long time . The customer service is fantastic too, quick responses , great communication and always happy to help.Thank you clip hair , will always use your products .\""
+          }
+        },
+        "review_ctkAiA": {
+          "type": "review",
+          "settings": {
+            "review_text": "\"Dee from Warrington, Ordered clip hair for several years now and never been disappointed fabulous quality colour always true to picture easily to put in and they look great and natural, my own hair is thin and lifeless , clip hair gives me my confidence back and make me feel and look great nobody can tell it’s not my real hair and have had many compliments can’t thank Clip hair enough as it changed my life Thanks\""
+          }
+        }
+      },
+      "block_order": [
+        "review_zNDL7x",
+        "review_XDQUNh",
+        "review_ctkAiA"
+      ],
+      "custom_css": [
+        ".review-entry p {font-size: 12px;}",
+        ".description_container p {line-height: 1.4em;}",
+        "@media screen and (min-width: 768px) {.custom-multicolumn-container {flex-direction: row-reverse; }}",
+        "@media screen and (min-width: 992px) {.review-entry p {font-size: 14px; }}",
+        "img {display: none !important;}"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_width": "1500",
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 50,
+        "desktop-p_left": 50,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "",
+        "description": "<p>Here at Cliphair, we pride ourselves on having strong, personal relationships with our customers. Whether you’re a retail buyer or a hair professional, you'll have full access to our remarkable <span style=\"text-decoration:underline\">customer service<\/span> team right around the clock.<\/p><p>We understand hair extensions can be tricky to use, our team of extension experts who run the <span style=\"text-decoration:underline\">advice service<\/span> are always on hand to help with anything from colour matching, product recommendations, application guidance and maintenance instructions. We pride ourselves on super-fast response times and excellent real life customer service, you won’t find any bots here! <\/p>",
+        "read_more": "<p>We offer regular opportunities for our customers to give us their valuable feedback on anything from products to content to help us improve wherever we can to deliver the very best experience. Look out for our survey emails and social polls to share your thoughts and receive a discount code in return! <\/p>",
+        "text_width": 50,
+        "header_mobile_font": 22,
+        "header_desktop_font": 30,
+        "text_mobile_font": 14,
+        "text_desktop_font": 20,
+        "header_color": "#515151",
+        "header_opacity": 100,
+        "text_color": "#515151",
+        "enable_second_column": true,
+        "column_type": "review",
+        "column_width": 50,
+        "icon-color": "#515151"
+      }
+    },
+    "bridal23_custom-text": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "b2e25af8-50df-4002-b665-35e07beb662c": {
+          "type": "title",
+          "settings": {
+            "title": "<h2><em>Our<\/em> Products<\/h2>"
+          }
+        },
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
+          "type": "intro",
+          "settings": {
+            "intro": "<p>At Cliphair, we're committed to providing you with the highest quality hair extensions crafted from 100% Remy Human hair. Our standard collection boasts AAA grade, single drawn hair, while our premium <a href=\"\/collections\/double-drawn-hair-extensions\" title=\"Double Drawn Hair Extensions\"><span style=\"text-decoration:underline\"><strong>Remy Royale collection<\/strong><\/span><\/a> features double drawn, AAAAA grade luxury quality hair. With the widest range of colours in the hair extension market, including highlights, balayage, ombres, blacks, brunettes, blondes, reds, and funky shades, you're sure to find the perfect match. Our extensions are available in lengths ranging from 12” to a cascading 26”.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b2e25af8-50df-4002-b665-35e07beb662c",
+        "57dcfd0d-8c7b-47d1-96c0-5452beba5988"
+      ],
+      "custom_css": [
+        ".bridal23-hair-quiz-section {background: rgba(253, 248, 255, 0.6);}",
+        "h2 {margin-bottom: 20px;}",
+        ".text-container {margin-bottom: 0;}",
+        ".text-container p {margin: 0; line-height: 1.4em;}",
+        "@media screen and (min-width: 992px) {h2 {margin-bottom: 40px; }}"
+      ],
+      "settings": {
+        "max-width": "1626",
+        "bg-colour": "#fdf8ff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 50,
+        "desktop-p_left": 50,
+        "title-mobile-f_size": 22,
+        "title-desktop-f_size": 36,
+        "title-color": "#515151",
+        "text-mobile-f_size": 14,
+        "text-desktop-f_size": 20,
+        "text-color": "#515151",
+        "btn-mobile-f_size": 14,
+        "btn-desktop-f_size": 20,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#000000"
+      }
+    },
+    "custom_carrousel_2_qAKfE8": {
+      "type": "custom-carrousel-2",
+      "blocks": {
+        "item_VFbdia": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_clip-in.webp",
+            "circle_image": true,
+            "border": false,
+            "text": "CLIP INS",
+            "subtitle": "",
+            "url": "shopify:\/\/collections\/clip-in-hair-extensions",
+            "image-url": ""
+          }
+        },
+        "item_8KATWH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_professional.webp",
+            "circle_image": true,
+            "border": false,
+            "text": "PROFESSIONAL",
+            "subtitle": "",
+            "url": "shopify:\/\/collections\/permanent-extensions",
+            "image-url": ""
+          }
+        },
+        "item_bbg8Wa": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_hair-care.webp",
+            "circle_image": true,
+            "border": false,
+            "text": "HAIR CARE",
+            "subtitle": "",
+            "url": "shopify:\/\/collections\/hair-care",
+            "image-url": ""
+          }
+        },
+        "item_tQ9Ej9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_accessories.webp",
+            "circle_image": true,
+            "border": false,
+            "text": "ACCESSORIES",
+            "subtitle": "",
+            "url": "shopify:\/\/collections\/accessories",
+            "image-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_VFbdia",
+        "item_8KATWH",
+        "item_bbg8Wa",
+        "item_tQ9Ej9"
+      ],
+      "custom_css": [
+        ".carrousel-items {padding-left: 30px; scroll-padding-left: 30px;}",
+        ".item {padding-right: 30px;}",
+        "@media screen and (min-width: 768px) {.carrousel-items {padding-left: 50px; scroll-padding-left: 50px; } .item {padding-right: 50px; }}",
+        "@media screen and (min-width: 768px) {.carrousel-items {padding-left: 70px; scroll-padding-left: 70px; } .item {padding-right: 70px; }}"
+      ],
+      "settings": {
+        "header": "",
+        "intro": "",
+        "main-button-text": "",
+        "main-button-url": "",
+        "max_width": "1500",
+        "bg_color": "#ffffff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 50,
+        "desktop-p_left": 50,
+        "mobile-header-font_size": 22,
+        "desktop-header-font_size": 30,
+        "header_color": "#000000",
+        "mobile-text-font_size": 12,
+        "desktop-text-font_size": 14,
+        "text_color": "#833c90",
+        "include-button": false,
+        "button-text": "",
+        "mobile-button-font_size": 12,
+        "desktop-button-font_size": 18,
+        "button_color": "#000000",
+        "btn-bg_color": "#ffffff",
+        "mobile-col": 2,
+        "tablet-col": 3,
+        "desktop-col": 4,
+        "include-arrows": true,
+        "mobile-arrow-size": 50,
+        "tablet-arrow-size": 50,
+        "desktop-arrow-size": 50,
+        "mobile-arrow": 30,
+        "tablet-arrow": 35,
+        "desktop-arrow": 35,
+        "arrow_color": "#515151"
+      }
+    },
+    "about_us_multicolumn_XCBaA7": {
+      "type": "about-us_multicolumn",
+      "blocks": {
+        "image_HgEAEk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_quench-the-thirst.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_HgEAEk"
+      ],
+      "custom_css": [
+        ".description_container p {line-height: 1.4em;}"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_width": "1500",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 30,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 50,
+        "desktop-p_right": 0,
+        "desktop-p_left": 50,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "",
+        "description": "<p>But we're more than just extensions! We offer an extensive selection of <a href=\"\/collections\/accessories\" title=\"Hair Extensions Accessories\"><span style=\"text-decoration:underline\"><strong>hair extension tools<\/strong><\/span>, <span style=\"text-decoration:underline\"><strong>accessories<\/strong><\/span><\/a>, and <a href=\"\/collections\/hair-care\" title=\"Hair Extensions Care & Maintenance Products\"><span style=\"text-decoration:underline\"><strong>care products<\/strong><\/span><\/a> designed to simplify the process of using and maintaining your extensions. Protecting the quality and longevity of your extensions is paramount to us, so we've created a range of professional grade products to help you achieve just that.<\/p>",
+        "read_more": "<p>Innovation is at the core of what we do. Our product team is always hard at work, staying ahead of the curve to bring you the latest trends and innovations in the hair extension industry. We're constantly expanding our product portfolio to ensure you have access to the most cutting-edge solutions in the world of hair extensions.<\/p>",
+        "text_width": 60,
+        "header_mobile_font": 22,
+        "header_desktop_font": 30,
+        "text_mobile_font": 14,
+        "text_desktop_font": 20,
+        "header_color": "#515151",
+        "header_opacity": 100,
+        "text_color": "#515151",
+        "enable_second_column": true,
+        "column_type": "image",
+        "column_width": 40,
+        "icon-color": "#515151"
+      }
+    },
+    "break_line_XdAhMB": {
+      "type": "break-line",
+      "settings": {
+        "bg_color": "#515151",
+        "max_width": "1400",
+        "height": 1,
+        "mobile-p_top-bottom": 0,
+        "mobile-p_sides": 50,
+        "desktop-p_top-bottom": 0,
+        "desktop-p_sides": 0
+      }
+    },
+    "bridal23_custom-text-2": {
+      "type": "bridal23_custom-text",
+      "blocks": {
+        "849d3c45-f0e1-4532-ac91-89cf1d237e48": {
+          "type": "title",
+          "settings": {
+            "title": "<h2>OUR PLANET, OUR PROMISE<\/h2>"
+          }
+        },
+        "intro_kVbh6n": {
+          "type": "intro",
+          "disabled": true,
+          "settings": {
+            "intro": "<p>We ethically source the purest human hair where hair is voluntarily donated, and we work closely with our hair processing factory to ensure adherence to strict and fair ethical principles. We visit our suppliers and factories regularly, so we mean what we say when we say we know exactly where our human hair extensions have come from and how they have been processed. We go beyond the norm so we can deliver <strong>100% human hair that is 100% ethically sourced<\/strong>. <\/p><p><strong>We are constantly working on new ways to be more sustainable and kinder to our planet.<br\/>Here’s some changes we’ve already made: <\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "849d3c45-f0e1-4532-ac91-89cf1d237e48",
+        "intro_kVbh6n"
+      ],
+      "custom_css": [
+        ".bridal23-hair-quiz-section {background: rgba(253, 248, 255, 0.6);}",
+        "h2 {margin-bottom: 20px;}",
+        ".text-container {margin-bottom: 0; text-align: left;}",
+        ".text-container p {line-height: 1.4em;}",
+        "@media screen and (min-width: 992px) {h2 {margin-bottom: 40px; }}"
+      ],
+      "settings": {
+        "max-width": "1500",
+        "bg-colour": "#ffffff",
+        "mobile-p_top": 30,
+        "mobile-p_bottom": 10,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 50,
+        "desktop-p_bottom": 10,
+        "desktop-p_right": 50,
+        "desktop-p_left": 50,
+        "title-mobile-f_size": 26,
+        "title-desktop-f_size": 50,
+        "title-color": "#515151",
+        "text-mobile-f_size": 14,
+        "text-desktop-f_size": 20,
+        "text-color": "#515151",
+        "btn-mobile-f_size": 14,
+        "btn-desktop-f_size": 20,
+        "btn-color": "#ffffff",
+        "btn-bg-color": "#000000"
+      }
+    },
+    "about_us_multicolumn_PFtpBb": {
+      "type": "about-us_multicolumn",
+      "blocks": {
+        "image_Ck8aDT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_quality_94dd2059-365d-43fc-bab6-9beb91f69514.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_Ck8aDT"
+      ],
+      "custom_css": [
+        "section {background: rgba(253, 248, 255, 0.6);}",
+        ".description_container p {line-height: 1.4em;}",
+        "@media screen and (min-width: 768px) {.custom-multicolumn-container {justify-content: center; } .text_container {min-height: 300px; } .image-entry {position: relative; } .second-column .carrousel img {position: absolute; object-fit: contain; }}"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "max_width": "1500",
+        "mobile-p_top": 0,
+        "mobile-p_bottom": 0,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "desktop-p_top": 0,
+        "desktop-p_bottom": 0,
+        "desktop-p_right": 0,
+        "desktop-p_left": 50,
+        "enable_text": true,
+        "custom_text": true,
+        "header": "",
+        "description": "<p>We ethically source the purest human hair where hair is voluntarily donated, and we work closely with our hair processing factory to ensure adherence to strict and fair ethical principles. We visit our suppliers and factories regularly, so we mean what we say when we say we know exactly where our human hair extensions have come from and how they have been processed. We go beyond the norm so we can deliver <strong>100% human hair that is 100% ethically sourced<\/strong>.<\/p><p><strong>We are constantly working on new ways to be more sustainable and kinder to our planet. Here’s some changes we’ve already made: <\/strong><\/p>",
+        "read_more": "",
+        "text_width": 60,
+        "header_mobile_font": 12,
+        "header_desktop_font": 18,
+        "text_mobile_font": 14,
+        "text_desktop_font": 20,
+        "header_color": "#515151",
+        "header_opacity": 100,
+        "text_color": "#515151",
+        "enable_second_column": true,
+        "column_type": "image",
+        "column_width": 40,
+        "icon-color": "#000000"
+      }
+    },
+    "custom_banner_pDfeKc": {
+      "type": "custom-banner",
+      "custom_css": [
+        "section {background: rgba(253, 248, 255, 0.6);}"
+      ],
+      "settings": {
+        "url": ""
+      }
+    },
+    "break_line_QRLaGD": {
+      "type": "break-line",
+      "settings": {
+        "bg_color": "#515151",
+        "max_width": "1400",
+        "height": 1,
+        "mobile-p_top-bottom": 0,
+        "mobile-p_sides": 50,
+        "desktop-p_top-bottom": 0,
+        "desktop-p_sides": 0
+      }
+    },
+    "column_carrousel_gLBJE7": {
+      "type": "column-carrousel",
+      "blocks": {
+        "image_qbU9de": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_bridal.webp",
+            "description": "<p>From prestigious trade shows to lifestylepress appearances, we’re not afraid to shine the spotlight on our successes throughout the years. Whether it’s high-profile endorsements or major features in the media, you can cast your eyes over some of our biggest achievements to date below. With Cliphair, you’ll always be making the right choice.  <\/p>",
+            "url": "",
+            "button_text": ""
+          }
+        },
+        "image_Ba8ei6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-us_salon-international.webp",
+            "description": "<p>❤ Salon International <\/p><p>❤ Top Rated Products On Amazon <\/p><p>❤ Annual Cliphair Bridal Awards  <\/p><p>❤ Featured in Salon Magazine, Hairdressers Journal, The Sun, Grazia, Marie Claire & many more  <\/p>",
+            "url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_qbU9de",
+        "image_Ba8ei6"
+      ],
+      "custom_css": [
+        ".column {padding: 0 15px;}",
+        ".column > img {margin: 25px 0;}",
+        ".column > p {line-height: 1.4em; text-align: left;}",
+        "@media screen and (min-width: 768px) {.column {padding: 0 20px; }}",
+        "@media screen and (min-width: 768px) {.header_container > * {margin-bottom: 40px; }}"
+      ],
+      "settings": {
+        "max_width": "1000",
+        "bg_color": "#ffffff",
+        "display": "column",
+        "item_per_row_mobile": 1,
+        "item_per_row_tablet": 2,
+        "item_per_row_desktop": 2,
+        "circle_images": false,
+        "include-arrows": true,
+        "arrow-position-mobile": 40,
+        "arrow-position-desktop": 12,
+        "arrow-size": 50,
+        "arrow-colour": "#515151",
+        "include-dots": false,
+        "dot_icon_size": 16,
+        "dot_icon_colour": "#000000",
+        "header": "<h2><em>Our <\/em>Highlights<\/h2>",
+        "header_color": "#515151",
+        "header_bg_color": "#ffffff",
+        "sub_header": "",
+        "sub_header_color": "#515151",
+        "have_buttons": true,
+        "buttons_color": "#515151",
+        "buttons_bg_color": "#ffffff",
+        "intro": "",
+        "show_collection": false,
+        "collection-text": "",
+        "url": "",
+        "header-mobile-font_size": 22,
+        "mobile-font_size": 14,
+        "mobile-p_top": 20,
+        "mobile-p_bottom": 20,
+        "mobile-p_right": 10,
+        "mobile-p_left": 10,
+        "header-desktop-font_size": 36,
+        "desktop-font_size": 20,
+        "desktop-p_top": 30,
+        "desktop-p_bottom": 30,
+        "desktop-p_right": 50,
+        "desktop-p_left": 50
       }
     }
   },
   "order": [
-    "main"
+    "166445343207c9fec0",
+    "6368dc69-0f53-4509-a1fe-d8783409b1a1",
+    "bridal23_custom_text_UdV4ge",
+    "custom_multicolumn_yFAJT4",
+    "bridal23_custom_text_G7rpLM",
+    "about_us_multicolumn_ztYJTU",
+    "bridal23_custom-text",
+    "custom_carrousel_2_qAKfE8",
+    "about_us_multicolumn_XCBaA7",
+    "break_line_XdAhMB",
+    "bridal23_custom-text-2",
+    "about_us_multicolumn_PFtpBb",
+    "custom_banner_pDfeKc",
+    "break_line_QRLaGD",
+    "column_carrousel_gLBJE7"
   ]
 }
