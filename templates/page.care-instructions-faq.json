@@ -30,7 +30,8 @@
         "text_zLP6MX": {
           "type": "text",
           "settings": {
-            "text": "<p>If you want long lasting, healthy looking, beautiful hair extensions it is essential that you care for them well and use the correct products. Neglected hair extensions can look dry, unnatural and become difficult to manage, follow our care guide to keep your hair looking and feeling gorgeous!<\/p>"
+            "text": "<p>If you want long lasting, healthy looking, beautiful hair extensions it is essential that you care for them well and use the correct products. Neglected hair extensions can look dry, unnatural and become difficult to manage, follow our care guide to keep your hair looking and feeling gorgeous!<\/p>",
+            "read-more_text": ""
           }
         }
       },
@@ -43,7 +44,7 @@
         "color_scheme": "accent-4",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 52
+        "padding_bottom": 40
       }
     },
     "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c": {
@@ -110,8 +111,8 @@
         "color_scheme": "accent-4",
         "open_first_collapsible_row": false,
         "faq_schema": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     },
     "00bf3b8c-d18a-4fb4-b587-03b6c69ac620": {
@@ -188,7 +189,8 @@
         "text_YaPGEg": {
           "type": "text",
           "settings": {
-            "text": "<p>Still need help? No Problem! Check out our <a href=\"https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/how-to-look-after-hair-extensions-ultimate-care-guide\" target=\"_blank\" title=\"Ultimate Care Guide\">Ultimate Care Guide<\/a>for even more in depth advice on how to look after your hair extensions.<\/p>"
+            "text": "<p>Still need help? No Problem! Check out our <a href=\"https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/how-to-look-after-hair-extensions-ultimate-care-guide\" target=\"_blank\" title=\"Ultimate Care Guide\">Ultimate Care Guide<\/a>for even more in depth advice on how to look after your hair extensions.<\/p>",
+            "read-more_text": ""
           }
         }
       },
@@ -269,6 +271,7 @@
         "color_scheme": "background-collection-titles",
         "columns_mobile": "3",
         "swipe_on_mobile": false,
+        "slider_visual": "counter",
         "padding_top": 36,
         "padding_bottom": 52
       }
