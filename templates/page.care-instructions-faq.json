@@ -179,8 +179,8 @@
         "color_scheme": "accent-4",
         "open_first_collapsible_row": false,
         "faq_schema": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "rich_text_RyeahX": {
@@ -189,7 +189,7 @@
         "text_YaPGEg": {
           "type": "text",
           "settings": {
-            "text": "<p>Still need help? No Problem! Check out our <a href=\"https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/how-to-look-after-hair-extensions-ultimate-care-guide\" target=\"_blank\" title=\"Ultimate Care Guide\">Ultimate Care Guide<\/a>for even more in depth advice on how to look after your hair extensions.<\/p>",
+            "text": "<p>Still need help? No Problem! Check out our <a href=\"https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/how-to-look-after-hair-extensions-ultimate-care-guide\" target=\"_blank\" title=\"Ultimate Care Guide\">Ultimate Care Guide<\/a> for even more in depth advice on how to look after your hair extensions.<\/p>",
             "read-more_text": ""
           }
         }
