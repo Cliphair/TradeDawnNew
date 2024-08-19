@@ -1426,3 +1426,84 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+class Countdown extends HTMLElement {
+  constructor() {
+    super();
+    this.second = 1000;
+    this.minute = this.second * 60;
+    this.hour = this.minute * 60;
+    this.day = this.hour * 24;
+
+    this.init();
+  }
+
+  init() {
+    let endDay = this.dataset.endDay;
+    endDay = endDay <= 9 ? `0${endDay}` : endDay;
+    let endMonth = this.dataset.endMonth;
+    endMonth = endMonth <= 9 ? `0${endMonth}` : endMonth;
+    let endYear = this.dataset.endYear;
+    let endHour = this.dataset.endHour;
+    endHour = endHour <= 9 ? `0${endHour}` : endHour;
+    let endMinute = this.dataset.endMinute;
+    endMinute = endMinute <= 9 ? `0${endMinute}` : endMinute;
+
+    const endTimestamp = `${endYear}-${endMonth}-${endDay}T${endHour}:${endMinute}:00`;
+    this.endDate = new Date(endTimestamp).getTime();
+
+    this.counter = setInterval(() => {
+      this.updateCountdown();
+    }, this.second);
+  }
+
+  updateCountdown() {
+    const currentTime = this.getCurrentDateTimeInLondon();
+    const diff = this.endDate - currentTime;
+
+    if (diff > 0) {
+      const days = Math.floor(diff / this.day);
+      const hours = Math.floor((diff % this.day) / this.hour);
+      const minutes = Math.floor((diff % this.hour) / this.minute);
+      const seconds = Math.floor((diff % this.minute) / this.second);
+
+      this.querySelector('.countdown__days').innerText = days <= 9 ? `0${days}` : days;
+      this.querySelector('.countdown__hours').innerText = hours <= 9 ? `0${hours}` : hours;
+      this.querySelector('.countdown__minutes').innerText = minutes <= 9 ? `0${minutes}` : minutes;
+      this.querySelector('.countdown__seconds').innerText = seconds <= 9 ? `0${seconds}` : seconds;
+    } else {
+      this.querySelector('.countdown__days').innerText = '00';
+      this.querySelector('.countdown__hours').innerText = '00';
+      this.querySelector('.countdown__minutes').innerText = '00';
+      this.querySelector('.countdown__seconds').innerText = '00';
+      clearInterval(this.counter);
+    }
+  }
+
+  getCurrentDateTimeInLondon() {
+    // Create a new Date object for the current time
+    const date = new Date();
+
+    // Convert the date to London time string
+    const londonTimeString = date.toLocaleString('en-GB', {
+      timeZone: 'Europe/London',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false, // 24-hour format
+    });
+
+    // Parse the London time string back to a Date object
+    const [day, month, year, hour, minute, second] = londonTimeString.split(/\/|, |:/);
+    const londonTime = new Date(`${year}-${month}-${day}T${hour}:${minute}:${second}`);
+
+    // Now you can use getTime() on the londonTime Date object
+    const londonTimestamp = londonTime.getTime();
+    return londonTime;
+  }
+}
+
+customElements.define('custom-countdown', Countdown);
