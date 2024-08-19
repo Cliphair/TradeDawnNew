@@ -44,7 +44,64 @@
         "color_scheme": "accent-4",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 40
+        "padding_bottom": 0
+      }
+    },
+    "image_list_mxhx3h": {
+      "type": "image-list",
+      "blocks": {
+        "image_h7ykcA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instruction-banner-styling-hair.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_Af3nyU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instruction-banner-washing-hair.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_FdnLjk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instruction-banner-dying-hair.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_tPcYgV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/instruction-banner-storing-hair.webp",
+            "text_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_h7ykcA",
+        "image_Af3nyU",
+        "image_FdnLjk",
+        "image_tPcYgV"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
+        "color_scheme": "accent-4",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c": {
@@ -280,6 +337,7 @@
   "order": [
     "page-content",
     "rich_text_N8hV3E",
+    "image_list_mxhx3h",
     "bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c",
     "00bf3b8c-d18a-4fb4-b587-03b6c69ac620",
     "rich_text_RyeahX",
