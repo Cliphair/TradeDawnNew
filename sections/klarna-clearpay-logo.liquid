@@ -93,6 +93,8 @@
           </li>
         {% when 'clearpay' %}
           <li class='clearpay logo'><img src='https://cdn.shopify.com/s/files/1/0069/6470/7389/files/cp-logo.png?v=1705663936' loading='lazy' width="1000" height='340' alt='clearpay logo'></li>
+        {% when 'paypal' %}
+          <li class='paypal logo'>{{ "paypal" | payment_type_svg_tag: class: 'icon icon--full-color' }}</li>
         {% when 'text' %}
           <li class='text'>{{ block.settings.text }}</li>
       {% endcase %}
@@ -240,6 +242,11 @@
       {
         "type": "clearpay",
         "name": "Clearpay logo",
+        "limit": 1
+      },
+      {
+        "type": "paypal",
+        "name": "Paypal logo",
         "limit": 1
       },
       {
