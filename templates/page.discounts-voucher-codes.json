@@ -225,8 +225,14 @@
           "settings": {
           }
         },
+        "paypal_Dr3fdm": {
+          "type": "paypal",
+          "settings": {
+          }
+        },
         "text_mbNPmd": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>PAYMENT OPTIONS AVAILABLE<\/strong><\/p>"
           }
@@ -235,7 +241,11 @@
       "block_order": [
         "klarna_yaPL7H",
         "clearpay_9rP9F8",
+        "paypal_Dr3fdm",
         "text_mbNPmd"
+      ],
+      "custom_css": [
+        ".inner-container {justify-content: center;}"
       ],
       "settings": {
         "text_color": "#6a6a6a",
