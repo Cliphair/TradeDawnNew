@@ -138,6 +138,20 @@
       top: {{ section.settings.arrow-position-desktop }}%;
     }
   }
+
+  #section-{{ section.id }} .column p:last-of-type a {
+    height: auto;
+    width: 20px;
+    margin: 0 10px;
+  }
+  
+  #section-{{ section.id }} .column p:last-of-type svg {
+    margin: 0;
+  }
+
+  #section-{{ section.id }} .column p:last-of-type svg *{
+    color:white;
+  }
 {%- endstyle -%}
 
 <section id="section-{{ section.id }}" class="column-carrousel-section">
