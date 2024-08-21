@@ -62,6 +62,7 @@
     },
     "countdown_DwXXJA": {
       "type": "countdown",
+      "disabled": true,
       "settings": {
         "text": "Time to go live:",
         "color_scheme": "inverse",
