@@ -108,66 +108,85 @@
     "5f607072-65c7-4026-956b-4ed2b272c97c": {
       "type": "column-carrousel",
       "blocks": {
-        "image_zkRi3q": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page.webp",
-            "description": "<p><strong>Copy here for Riz<\/strong><\/p><p>Lorem ipsum dolor sit amet, consectetur <\/p>",
-            "url": "",
-            "button_text": "Shop Discount"
-          }
-        },
-        "c4ec7fce-508f-4603-9ba8-3e3a54ab7aa9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-blue-light.webp",
-            "description": "<p><strong>Bluelight Card<\/strong><\/p><p>Save on your favourites, with 10% off orders over £100.<\/p>",
-            "url": "shopify:\/\/pages\/blue-light-card",
-            "button_text": "Shop Discount"
-          }
-        },
         "53a04cb1-e2fe-4228-b6a3-03a7169951f0": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/discout-page-new-customer.webp",
-            "description": "<p><strong>10% OFF<\/strong> for first time Buyers<\/p><p>New to Cliphair? Get shopping, & save on your first order!<\/p>",
-            "url": "\/pages\/hair-extensions-by-colour",
-            "button_text": "Shop Discount"
+            "description": "<p><strong>Sign Up & Save<\/strong><\/p><p>New to Cliphair? Get 10% off your first order when you subscribe. <\/p>",
+            "url": "https:\/\/manage.kmail-lists.com\/subscriptions\/subscribe?a=R8anrR&g=QQ6Dw6",
+            "button_text": "Sign Up Now"
+          }
+        },
+        "image_zkRi3q": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/discount-page-rewards.webp",
+            "description": "<p><strong>Rewards<\/strong><\/p><p>Earn Cliphair rewards when you spend to save next time<\/p>",
+            "url": "shopify:\/\/pages\/rewards",
+            "button_text": "Sign Up Now"
           }
         },
         "3441d4ac-6d8e-4b5f-9527-6ba29d88885b": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/discount-page-free-delivery.webp",
-            "description": "<p><strong>Free delivery & returns<\/strong><\/p><p>Find out about FREE deliveries and return options. <\/p>",
+            "description": "<p><strong>Free Delivery & Returns<\/strong><\/p><p>Free delivery and returns inside the UK for orders over £30. <\/p>",
             "url": "shopify:\/\/pages\/shipping-information",
+            "button_text": "Find Out More"
+          }
+        },
+        "c4ec7fce-508f-4603-9ba8-3e3a54ab7aa9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/discount-page-blue-light.webp",
+            "description": "<p><strong>Blue Light Card<\/strong><\/p><p>Work for the NHS? Recieve 10% off your order.<\/p>",
+            "url": "shopify:\/\/pages\/blue-light-card",
             "button_text": "Shop Discount"
+          }
+        },
+        "image_7YNag7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/discount-page-trade.webp",
+            "description": "<p><strong>Trade Account<\/strong><\/p><p>Professional Hair Technician? Sign up for an account for exclusive trade discounts. <\/p>",
+            "url": "https:\/\/cliphairtrade.com\/pages\/trade-account",
+            "button_text": "Sign Up Now"
           }
         },
         "image_6THmFq": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-colour-match.webp",
-            "description": "<p><strong>Free Colour Match<\/strong><\/p><p>Get matched to your perfect shade, for FREE.<\/p>",
-            "url": "shopify:\/\/pages\/colour-matching-service",
-            "button_text": "Shop Discount"
+            "image": "shopify:\/\/shop_images\/discount-page-bundle.webp",
+            "description": "<p><strong>Bundles<\/strong><\/p><p>Exclusive bundle deals, save up to 15%! <\/p>",
+            "url": "shopify:\/\/collections\/hair-extensions-bundle",
+            "button_text": "Shop Bundles"
+          }
+        },
+        "image_cbm7bJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/discount-page-social-sale.webp",
+            "description": "<p><strong>Social Media Sales<\/strong><\/p><p>Follow our Socials to stay in the loop and access exclusive codes!<\/p>",
+            "url": "",
+            "button_text": ""
           }
         }
       },
       "block_order": [
-        "image_zkRi3q",
-        "c4ec7fce-508f-4603-9ba8-3e3a54ab7aa9",
         "53a04cb1-e2fe-4228-b6a3-03a7169951f0",
+        "image_zkRi3q",
         "3441d4ac-6d8e-4b5f-9527-6ba29d88885b",
-        "image_6THmFq"
+        "c4ec7fce-508f-4603-9ba8-3e3a54ab7aa9",
+        "image_7YNag7",
+        "image_6THmFq",
+        "image_cbm7bJ"
       ],
       "custom_css": [
-        ".column_container {justify-content: center;}",
         ".column {padding: 0 5px; margin-top: 15px;}",
         ".column *:not(img) {line-height: 1em; margin-top: 5px;}",
         ".column p:not(:first-of-type):not(:last-of-type) {font-size: 10px;}",
         ".column p:last-of-type {width: fit-content; margin: 5px auto 0; padding: 7px 20px; border-radius: 100vw;}",
+        ".column p:last-of-type i {margin: 0 10px; color: white;}",
         "@media screen and (min-width: 992px) {.column {padding: 0 10px; margin-top: 30px; } .column *:not(img) {margin-top: 10px; } .column p:not(:first-of-type):not(:last-of-type) {font-size: 15px; }}"
       ],
       "settings": {
