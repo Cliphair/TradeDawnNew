@@ -106,7 +106,7 @@
       }
     },
     "5f607072-65c7-4026-956b-4ed2b272c97c": {
-      "type": "column-carrousel",
+      "type": "discount-page-column-carrousel",
       "blocks": {
         "53a04cb1-e2fe-4228-b6a3-03a7169951f0": {
           "type": "image",
