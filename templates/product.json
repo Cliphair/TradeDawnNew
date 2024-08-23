@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "information_videos_8BXc9p": {
+          "type": "information-videos",
+          "settings": {
+            "color_scheme": "accent-4"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -27,6 +33,12 @@
           "type": "short-description",
           "settings": {
             "title": "Features"
+          }
+        },
+        "information_videos_MKNiNH": {
+          "type": "information-videos",
+          "settings": {
+            "color_scheme": "inverse"
           }
         },
         "price": {
@@ -108,9 +120,11 @@
         }
       },
       "block_order": [
+        "information_videos_8BXc9p",
         "title",
         "a0b50969-ea33-4844-941d-db5577728e55",
         "3efc918c-8182-4ef3-bc33-60a83ed7ef86",
+        "information_videos_MKNiNH",
         "price",
         "variant_picker",
         "quantity_selector_RERRjV",
@@ -122,6 +136,10 @@
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.information-videos:nth-of-type(2) {display: none; }}",
+        "@media screen and (min-width: 750px) {.information-videos:first-of-type {display: none; }}"
       ],
       "settings": {
         "enable_sticky_info": true,
