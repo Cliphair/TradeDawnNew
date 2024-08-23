@@ -4,9 +4,9 @@
 
 .type-media {
   position: absolute;
-  width: 40%;
-  top: calc(var(--grid-mobile-vertical-spacing) * -1 + 5px);
-  left: calc(var(--grid-mobile-horizontal-spacing) * -1 + 5px);
+  width: 35%;
+  top: calc(var(--grid-mobile-vertical-spacing) * -1 + 10px);
+  left: calc(var(--grid-mobile-horizontal-spacing) * -1 + 10px);
 }
 
 .type-media>img {
@@ -24,8 +24,8 @@
   }
 
   .type-media {
-    top: calc(var(--grid-desktop-vertical-spacing) * -1 + 10px);
-    left: calc(var(--grid-desktop-horizontal-spacing) * -1 + 10px);
+    top: calc(var(--grid-desktop-vertical-spacing) * -1 + 20px);
+    left: calc(var(--grid-desktop-horizontal-spacing) * -1 + 20px);
   }
 }
 

@@ -1619,6 +1619,7 @@ a.product__text {
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .information-videos>* {
@@ -1639,6 +1640,17 @@ a.product__text {
   width: 100%;
 }
 
+@media screen and (max-width:749px) {
+  .information-videos~.information-videos {
+    display: none;
+  }
+}
+
+@media screen and (min-width:750px) {
+  .information-videos:has(~ .information-videos) {
+    display: none;
+  }
+}
 
 /* Style Overrides */
 
