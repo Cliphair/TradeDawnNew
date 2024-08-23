@@ -10,6 +10,7 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'video-section.css' | asset_url | stylesheet_tag }}
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
@@ -799,6 +800,91 @@
               </product-recommendations>
             {%- when 'icon-with-text' -%}
               {% render 'icon-with-text', block: block %}
+            {%- when 'information-videos' -%}
+              {% liquid
+                assign length_guide_url = 'https://www.youtube.com/watch?v=I2J7XG1tXvQ'
+                assign length_guide_id = 'I2J7XG1tXvQ'
+
+                if product.metafields.c_f.video != 'Update in process'
+                  assign appl_video_url = product.metafields.c_f.video | replace: 'shorts/', 'watch?v='
+                  assign appl_video_id = appl_video_url | split: 'watch?v=' | last
+                  assign appl_video_text = 'Fitting Video'
+                  if product.type == 'Hair Care' or product.type == 'Accessories'
+                    assign appl_video_text = 'Application'
+                  endif
+                endif
+              %}
+
+              <div class="information-videos color-{{ block.settings.color_scheme }}">
+                {% unless product.type == 'Hair Care' or product.type == 'Accessories' or product.type == 'Gift Card' %}
+                  <noscript>
+                    <a
+                      class="button"
+                      href="{{ length_guide_url }}"
+                      title="Length Guide"
+                      aria-label="Length Guide opens on Youtube"
+                      >Length Guide</a
+                    >
+                  </noscript>
+                  <deferred-media-popup
+                    data-media-id="{{ length_guide_id }}"
+                  >
+                    <button
+                      id="Deferred-Poster-Modal-{{ length_guide_id }}"
+                      class="button"
+                      type="button"
+                      aria-label="Ultimate Length Guide"
+                    >
+                      Length Guide
+                    </button>
+                    <template>
+                      <iframe
+                        src="https://www.youtube.com/embed/{{ length_guide_id }}?enablejsapi=1&autoplay=1"
+                        class="js-youtube"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        title="Ultimate Length Guide"
+                      ></iframe>
+                    </template>
+                  </deferred-media-popup>
+                {% endunless %}
+
+                <a class="button" href="/pages/colour-matching-service" title="Colour Matching Service">Colour Match</a>
+
+                {% if appl_video_url != null and appl_video_url != blank %}
+                  <noscript>
+                    <a
+                      class="button"
+                      href="{{ appl_video_url }}"
+                      title="Length Guide"
+                      aria-label="Length Guide opens on Youtube"
+                    >
+                      {{- appl_video_text -}}
+                    </a>
+                  </noscript>
+                  <deferred-media-popup
+                    data-media-id="{{ appl_video_id }}"
+                  >
+                    <button
+                      id="Deferred-Poster-Modal-{{ appl_video_id }}"
+                      class="button"
+                      type="button"
+                      aria-label="Ultimate Length Guide"
+                    >
+                      {{ appl_video_text }}
+                    </button>
+                    <template>
+                      <iframe
+                        src="https://www.youtube.com/embed/{{ appl_video_id }}?enablejsapi=1&autoplay=1"
+                        class="js-youtube"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        title="Ultimate Length Guide"
+                      ></iframe>
+                    </template>
+                  </deferred-media-popup>
+                {% endif %}
+              </div>
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -1108,6 +1194,18 @@
       "type": "sc-out-of-stock_placement",
       "name": "SC Out Of Stock placement",
       "limit": 1
+    },
+    {
+      "type": "information-videos",
+      "name": "Information videos",
+      "settings": [
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "background-1"
+        }
+      ]
     },
     {
       "type": "sku",

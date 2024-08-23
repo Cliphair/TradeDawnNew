@@ -629,6 +629,7 @@ class DeferredMediaPopUp extends DeferredMedia {
       content.addEventListener("click", this.closeContent)
 
       document.querySelector("body").insertAdjacentElement('beforeend', content)
+      document.querySelector("body").classList.add('overflow-hidden-desktop')
 
       const deferredElement = content.querySelector('video, model-viewer, iframe');
       if (focus) deferredElement.focus();
@@ -640,6 +641,7 @@ class DeferredMediaPopUp extends DeferredMedia {
   }
 
   closeContent() {
+    document.querySelector("body").classList.remove('overflow-hidden-desktop')
     document.querySelector(".deferred-media-popup-container").remove();
   }
 }

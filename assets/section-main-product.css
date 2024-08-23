@@ -1614,6 +1614,32 @@ a.product__text {
   }
 }
 
+/* information videos */
+.information-videos {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.information-videos>* {
+  width: calc((100% - 20px) / 3);
+  flex-grow: 0;
+}
+
+.information-videos .button {
+  font-size: 10px;
+  text-align: center;
+  min-width: unset;
+  padding: 1rem;
+  min-height: unset;
+}
+
+.information-videos deferred-media-popup .button {
+  height: 100%;
+  width: 100%;
+}
+
+
 /* Style Overrides */
 
 .price-block+.payment_services,
@@ -1732,7 +1758,7 @@ klarna-placement::part(osm-badge-container) {
   }
 }
 
-/* but buttons block */
+/* buy buttons block */
 .buy-buttons>.product-form {
   margin-bottom: 0;
   max-width: 44rem;
