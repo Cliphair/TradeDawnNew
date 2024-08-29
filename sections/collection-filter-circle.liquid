@@ -64,7 +64,7 @@
               assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
             -%}
 
-            <slider-component-custom
+            <slider-component
               class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               data-visual="{{ section.settings.slider_visual }}"
             >
@@ -135,7 +135,7 @@
               </ul>
 
               {%- if show_mobile_slider or show_desktop_slider -%}
-                <div class="slider-buttons right-slider no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+                <div class="slider-buttons small-hide no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet slider--{{ section.settings.columns_mobile }}-col-tablet-down">
                   <button
                     type="button"
                     class="slider-button slider-button--prev"
@@ -145,45 +145,46 @@
                     {% render 'icon-caret' %}
                   </button>
 
+                  <div class="slider-counter caption visually-hidden">
+                    <span class="slider-counter--current">1</span>
+                    <span aria-hidden="true"> / </span>
+                    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                    <span class="slider-counter--total">{{ filter.values.size | plus: 1 }}</span>
+                  </div>
+
                   {% comment %}
-                    <div class="slider-counter caption visually-hidden">
-                      <span class="slider-counter--current">1</span>
-                      <span aria-hidden="true"> / </span>
-                      <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                      <span class="slider-counter--total">{{ filter.values.size | plus: 1 }}</span>
+                    <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+                      {% for filter in collection.filters %}
+                        {% assign filter_label = filter.label | handleize %}
+                        {% if filter_label == section.settings.filter_type %}
+                          {%- if section.settings.slider_visual == 'counter' -%}
+                            <div>
+                              <span class="slider-counter--current">1</span>
+                              <span aria-hidden="true"> / </span>
+                              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                              <span class="slider-counter--total">{{ filter.values.size }}</span>
+                            </div>
+                          {%- else -%}
+                            <div class="slideshow__control-wrapper">
+                              {%- for value in filter.values -%}
+                                <button
+                                  class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                  aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                  aria-controls="Slider-{{ section.id }}"
+                                >
+                                  {%- if section.settings.slider_visual == 'numbers' -%}
+                                    {{ forloop.index -}}
+                                  {%- else -%}
+                                    <span class="dot"></span>
+                                  {%- endif -%}
+                                </button>
+                              {% endfor %}
+                            </div>
+                          {%- endif -%}
+                        {% endif %}
+                      {%- endfor -%}
                     </div>
                   {% endcomment %}
-                  <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
-                    {% for filter in collection.filters %}
-                      {% assign filter_label = filter.label | handleize %}
-                      {% if filter_label == section.settings.filter_type %}
-                        {%- if section.settings.slider_visual == 'counter' -%}
-                          <div>
-                            <span class="slider-counter--current">1</span>
-                            <span aria-hidden="true"> / </span>
-                            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                            <span class="slider-counter--total">{{ filter.values.size }}</span>
-                          </div>
-                        {%- else -%}
-                          <div class="slideshow__control-wrapper">
-                            {%- for value in filter.values -%}
-                              <button
-                                class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                                aria-controls="Slider-{{ section.id }}"
-                              >
-                                {%- if section.settings.slider_visual == 'numbers' -%}
-                                  {{ forloop.index -}}
-                                {%- else -%}
-                                  <span class="dot"></span>
-                                {%- endif -%}
-                              </button>
-                            {% endfor %}
-                          </div>
-                        {%- endif -%}
-                      {% endif %}
-                    {%- endfor -%}
-                  </div>
 
                   <button
                     type="button"
@@ -195,7 +196,7 @@
                   </button>
                 </div>
               {%- endif -%}
-            </slider-component-custom>
+            </slider-component>
           {% endif %}
         {% endfor %}
       </form>

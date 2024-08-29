@@ -44,3 +44,25 @@
 .section-images-list .images-list__item .text-container p {
 	margin: 1rem 0;
 }
+
+/* slider */
+.section-images-list .slider-buttons>.slider-button {
+	background: var(--gradient-background);
+	border-radius: 50%;
+	position: absolute;
+	top: calc(50% - 22px);
+	right: 1.5rem;
+	border: 1px solid rgba(var(--color-foreground), .1)
+}
+
+.section-images-list .slider-buttons>.slider-button--prev {
+	left: 1.5rem;
+}
+
+.section-images-list .slider-buttons>.slider-button--next {
+	right: 1.5rem;
+}
+
+.section-images-list .slider-buttons>.slider-button .icon {
+	height: 1.2rem;
+}

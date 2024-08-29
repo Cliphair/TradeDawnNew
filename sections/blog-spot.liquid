@@ -101,15 +101,18 @@
         endif
 
         assign tags_columns_tablet = tags_columns_desktop_int | plus: tags_columns_mobile_int | divided_by: 2 | ceil
+        if tags_size > tags_columns_tablet and section.settings.tags_swipe_on_desktop
+          assign tags_show_tablet_slider = true
+        endif
       -%}
 
       <div class="tag-wrapper section-article-categories">
-        <slider-component-custom
+        <slider-component
           class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           data-visual="{{ section.settings.slider_visual }}"
         >
           <ul
-            class="articles-categories grid grid--{{ section.settings.tags_columns_desktop }}-col-desktop grid--{{ tags_columns_tablet }}-col-tablet grid--{{ section.settings.tags_columns_mobile }}-col-tablet-down{% if section.settings.tags_swipe_on_mobile or section.settings.tags_swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.tags_swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.tags_swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ tags_size }}-items"
+            class="articles-categories grid grid--{{ section.settings.tags_columns_desktop }}-col-desktop grid--{{ tags_columns_tablet }}-col-tablet grid--{{ section.settings.tags_columns_mobile }}-col-tablet-down{% if section.settings.tags_swipe_on_mobile or section.settings.tags_swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.tags_swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.tags_swipe_on_desktop %} slider--desktop{% endif %} articles-categories--{{ tags_size }}-items slide-mobile-{{ tags_show_mobile_slider }} slide-tablet-{{ tags_show_tablet_slider }} slide-desktop-{{ tags_show_desktop_slider }}"
             id="Slider-{{ section.id }}"
             role="list"
           >
@@ -123,20 +126,20 @@
             {% for category in categories %}
               <li
                 id="Slide-{{ section.id }}-{{ forloop.index }}"
-                class="articles-list__item grid__item custom__slide{% if tags_show_mobile_slider or tags_show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="articles-list__item grid__item custom__slide{% if tags_show_mobile_slider or tags_show_tablet_slider or tags_show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
                 <div class="category circle">
-                  {% render 'category-card', category_object: category, blog: section.settings.blog  %}
+                  {% render 'category-card', category_object: category, blog: section.settings.blog %}
                 </div>
               </li>
             {% endfor %}
           </ul>
-          {%- if tags_show_mobile_slider or tags_show_desktop_slider -%}
-            <div class="slider-buttons no-js-hidden slider--{{ section.settings.tags_columns_desktop }}-col-desktop slider--{{ section.settings.tags_columns_mobile }}-col-tablet-down">
+          {%- if tags_show_mobile_slider or tags_show_tablet_slider or tags_show_desktop_slider -%}
+            <div class="slider-buttons no-js-hidden small-hide slider--{{ section.settings.tags_columns_desktop }}-col-desktop slider--{{ section.settings.tags_columns_mobile }}-col-tablet-down">
               <button
                 type="button"
                 class="slider-button slider-button--prev"
@@ -145,40 +148,43 @@
               >
                 {% render 'icon-caret' %}
               </button>
+
+              <div class="slider-counter caption visually-hidden">
+                <span class="slider-counter--current">1</span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                <span class="slider-counter--total">{{ tags_size }}</span>
+              </div>
+
               {% comment %}
-                <div class="slider-counter caption visually-hidden">
-                  <span class="slider-counter--current">1</span>
-                  <span aria-hidden="true"> / </span>
-                  <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                  <span class="slider-counter--total">{{ tags_size }}</span>
+                <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+                  {%- if section.settings.slider_visual == 'counter' -%}
+                    <div>
+                      <span class="slider-counter--current">1</span>
+                      <span aria-hidden="true"> / </span>
+                      <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                      <span class="slider-counter--total">{{ tags_size }}</span>
+                    </div>
+                  {%- else -%}
+                    <div class="slideshow__control-wrapper">
+                      {% for category in categories %}
+                        <button
+                          class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                          aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                          aria-controls="Slider-{{ section.id }}"
+                        >
+                          {%- if section.settings.slider_visual == 'numbers' -%}
+                            {{ forloop.index -}}
+                          {%- else -%}
+                            <span class="dot"></span>
+                          {%- endif -%}
+                        </button>
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
                 </div>
               {% endcomment %}
-              <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
-                {%- if section.settings.slider_visual == 'counter' -%}
-                  <div>
-                    <span class="slider-counter--current">1</span>
-                    <span aria-hidden="true"> / </span>
-                    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                    <span class="slider-counter--total">{{ tags_size }}</span>
-                  </div>
-                {%- else -%}
-                  <div class="slideshow__control-wrapper">
-                    {% for category in categories %}
-                      <button
-                        class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                        aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                        aria-controls="Slider-{{ section.id }}"
-                      >
-                        {%- if section.settings.slider_visual == 'numbers' -%}
-                          {{ forloop.index -}}
-                        {%- else -%}
-                          <span class="dot"></span>
-                        {%- endif -%}
-                      </button>
-                    {%- endfor -%}
-                  </div>
-                {%- endif -%}
-              </div>
+
               <button
                 type="button"
                 class="slider-button slider-button--next"
@@ -189,7 +195,7 @@
               </button>
             </div>
           {%- endif -%}
-        </slider-component-custom>
+        </slider-component>
       </div>
     {% endif %}
 

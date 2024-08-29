@@ -28,3 +28,29 @@
   margin-bottom: 0;
   line-height: 1.2em;
 }
+
+/* slider */
+.tag-wrapper .slider-buttons>.slider-button,
+.section-article-categories .slider-buttons>.slider-button {
+  background: var(--gradient-background);
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 22px);
+  right: 1.5rem;
+  border: 1px solid rgba(var(--color-foreground), .1)
+}
+
+.tag-wrapper .slider-buttons>.slider-button--prev,
+.section-article-categories .slider-buttons>.slider-button--prev {
+  left: 1.5rem;
+}
+
+.tag-wrapper .slider-buttons>.slider-button--next,
+.section-article-categories .slider-buttons>.slider-button--next {
+  right: 1.5rem;
+}
+
+.tag-wrapper .slider-buttons>.slider-button .icon,
+.section-article-categories .slider-buttons>.slider-button .icon {
+  height: 1.2rem;
+}
