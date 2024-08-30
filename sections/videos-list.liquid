@@ -33,7 +33,7 @@
     endif
 
     assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
-    if section.blocks.size > columns_tablet
+    if section.blocks.size > columns_tablet and section.settings.swipe_on_desktop
       assign show_tablet_slider = true
     endif
 
