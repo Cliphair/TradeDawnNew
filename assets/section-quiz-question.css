@@ -1,6 +1,6 @@
 /* Override styles */
 @media screen and (min-width:990px) {
-  .section-quiz-question .slider--desktop {
+  /* .section-quiz-question .slider--desktop {
     scroll-padding-left: 0;
   }
 
@@ -35,7 +35,7 @@
 
   .section-quiz-question .slider--desktop.grid--6-col-desktop .grid__item {
     width: calc((100% - var(--grid-desktop-horizontal-spacing) * 5) / 6);
-  }
+  } */
 }
 
 /* Section styles */
@@ -100,7 +100,7 @@
 .section-quiz-question .answer-card .card__content {
   padding-right: 0;
   padding-left: 0;
-  padding-top:0;
+  padding-top: 0;
 }
 
 .section-quiz-question .button-wrapper {
@@ -139,7 +139,28 @@
   padding: 0;
 }
 
-.section-quiz-question .slider-button {
+.section-quiz-question .slider-buttons>.slider-button {
+  background: var(--gradient-background);
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 22px);
+  right: 1.5rem;
+  border: 1px solid rgba(var(--color-foreground), .1)
+}
+
+.section-quiz-question .slider-buttons>.slider-button--prev {
+  left: 1.5rem;
+}
+
+.section-quiz-question .slider-buttons>.slider-button--next {
+  right: 1.5rem;
+}
+
+.section-quiz-question .slider-buttons>.slider-button .icon {
+  height: 1.2rem;
+}
+
+/* .section-quiz-question .slider-button {
   position: absolute;
   top: calc(50% - 22px);
 }
@@ -164,7 +185,7 @@
   .section-quiz-question .slider-button.slider-button--next {
     right: -5rem;
   }
-}
+} */
 
 /* Answer */
 .quiz .answer-wrapper {
