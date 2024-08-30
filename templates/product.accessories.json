@@ -210,6 +210,22 @@
         "padding_bottom": 40
       }
     },
+    "product_faq_NBzNDV": {
+      "type": "product-faq",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ's",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "inverse",
+        "container_color_scheme": "inverse",
+        "open_first_collapsible_row": false,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    },
     "related-products": {
       "type": "related-products-by-colour",
       "settings": {
@@ -312,6 +328,7 @@
     "506f6558-7efd-4e91-a56a-75b4a46d81cc",
     "cb0bf916-3e7b-44a5-bee5-ef9302e54a26",
     "2ba62760-f7d7-46c5-ae93-8ade6e208816",
+    "product_faq_NBzNDV",
     "related-products",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
