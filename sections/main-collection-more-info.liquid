@@ -20,6 +20,8 @@
       assign description = collection.description | split: '<!-- FAQ section -->' | first
       assign description = description | split: '<!-- split -->' | last
     endif
+  else
+    assign description = collection.description | split: '<!-- FAQ section -->' | first
   endif
 %}
 
