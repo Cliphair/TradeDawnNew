@@ -934,8 +934,8 @@
     </modal-dialog>
   {%- endfor -%}
 
-  {% assign reward-points = section.blocks | where: 'type', 'reward-points' %}
-  {%- for block in reward-points -%}
+  {% assign reward_points = section.blocks | where: 'type', 'reward-points' %}
+  {%- for block in reward_points -%}
     <modal-dialog id="PopupModal-{{ block.id }}" class="product-popup-modal" {{ block.shopify_attributes }}>
       <div
         role="dialog"

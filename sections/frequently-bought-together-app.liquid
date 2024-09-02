@@ -13,12 +13,23 @@
 {%- endstyle -%}
 
 <style>
+  .cbb-frequently-bought-container{
+    margin: 0 auto!important;
+  }
+
   .section-frequently-bought-app .cbb-frequently-bought-title {
     text-align: center !important;
     font-weight: 500 !important;
-    font-size: revert !important;
+    font-size: 3rem!important;
     text-transform: uppercase;
     margin-bottom: revert !important;
+    margin-top:0;
+  }
+
+  @media screen and (min-width:750px){
+    .section-frequently-bought-app .cbb-frequently-bought-title {
+      font-size: 4rem!important;
+    }
   }
 
   .cbb-frequently-bought-recommendations-container {
@@ -133,12 +144,16 @@
   .cbb-frequently-bought-selector-link:hover {
     text-decoration: underline;
   }
+
+  .cbb-frequently-bought-selector-list{
+    margin-bottom:0;
+  }
 </style>
 
 <div class="section-{{ section.id }}-padding color-{{ section.settings.container_color_scheme }} gradient">
   <div class="page-width">
     <!-- to be removed once app updated -->
-    <div class='prod-tabs-sec'></div>
+    <div class="prod-tabs-sec"></div>
   </div>
 </div>
 
