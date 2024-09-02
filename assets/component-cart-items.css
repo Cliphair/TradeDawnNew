@@ -101,6 +101,10 @@
   opacity: 0.7;
 }
 
+.cart-item__discounted-prices .cart-item__old-price>.money {
+  text-decoration: line-through;
+}
+
 .cart-item__final-price {
   font-weight: 400;
 }
