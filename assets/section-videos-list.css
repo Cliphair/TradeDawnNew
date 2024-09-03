@@ -7,6 +7,12 @@
 	margin: 0 0 1.5rem;
 }
 
+@media screen and (min-width: 750px) {
+	.section-videos-list .videos-list-title {
+		margin: 0 0 3rem;
+	}
+}
+
 .section-videos-list .videos-list-title.capitalize {
 	text-transform: capitalize;
 }

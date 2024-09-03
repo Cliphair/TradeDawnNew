@@ -1,0 +1,15 @@
+.section-yotpo-review-app .yotpo-main-widget-tabs:not(.pp-embedded-displayed) {
+  margin-top: 0;
+}
+
+.section-yotpo-review-app .yotpo-main-layout {
+  flex-direction: column-reverse;
+}
+
+.section-yotpo-review-app .yotpo-main-layout .yotpo-head {
+  margin: 0;
+}
+
+.section-yotpo-review-app .yotpo-reviews-pagination-container {
+  margin: 3rem 0;
+}

@@ -67,7 +67,7 @@
 
   <div class="page-width isolate" style="padding:0!important;">
     {%- unless section.settings.heading == blank -%}
-      <div class="page-width title-wrapper {% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin {{ section.settings.text_alignment }}">
+      <div class="page-width {% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin {{ section.settings.text_alignment }}">
         <h2
           id="SectionHeading-{{ section.id }}"
           class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"

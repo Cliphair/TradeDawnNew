@@ -1,3 +1,13 @@
+.blog__title {
+	margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width:750px) {
+	.blog__title {
+		margin-bottom: 3rem;
+	}
+}
+
 .tag-wrapper {
 	margin: 4rem 0;
 	padding: 0;
