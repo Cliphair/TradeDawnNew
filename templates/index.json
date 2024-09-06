@@ -51,6 +51,7 @@
         },
         "slide_nzbVKg": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/bridal-campaign-mobile-banner.webp",
             "image_desktop": "shopify:\/\/shop_images\/bridal-campaign-desktop-banner.webp",
