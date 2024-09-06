@@ -43,8 +43,8 @@
         "remove_filters": "Colour Group,Colour",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 0,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 0
       }
     },
     "db22f337-3a12-4ced-9dd2-bf58688d855a": {
@@ -54,8 +54,8 @@
         "remove_introduction": true,
         "text_alignment": "left",
         "color_scheme": "accent-2",
-        "padding_top": 16,
-        "padding_bottom": 28
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "b400924f-2211-460e-841c-e909605faf8f": {
@@ -70,8 +70,8 @@
         "color_scheme": "inverse",
         "container_color_scheme": "inverse",
         "open_first_collapsible_row": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b": {
