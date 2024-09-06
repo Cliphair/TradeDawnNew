@@ -10,7 +10,8 @@
 }
 
 .section-custom-page .main-content {
-  width: 100%
+  width: 100%;
+  flex-grow: 1;
 }
 
 .section-custom-page .main-content h2 {
@@ -29,7 +30,7 @@
   display: none;
   flex-direction: column;
   gap: 2rem;
-
+  max-width: 200px;
 }
 
 .section-custom-page .sidebar-links ul {
