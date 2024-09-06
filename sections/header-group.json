@@ -62,9 +62,10 @@
     },
     "countdown_DwXXJA": {
       "type": "countdown",
+      "disabled": true,
       "settings": {
         "text": "Time to go live:",
-        "color_scheme": "inverse",
+        "color_scheme": "accent-2",
         "year": 2024,
         "month": "9",
         "day": 15,
