@@ -193,17 +193,29 @@
             </ul>
 
             {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
+              <div class="product-grid__footer">
+                <button
+                  id="load-more"
+                  class="button load-more__button no-js-hidden"
+                  data-next-url="{{ paginate.next.url }}"
+                >
+                  Load More
+                </button>
+                {% render 'pagination', paginate: paginate, anchor: '' %}
+              </div>
             {%- endif -%}
           </div>
         {%- endif -%}
       </div>
     </div>
   {%- endpaginate -%}
+
   {% if section.settings.image_shape == 'arch' %}
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
+
+<script src="{{ 'collection-product-grid-load-more.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {

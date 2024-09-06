@@ -29,6 +29,27 @@
   }
 }
 
+.product-grid__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.product-grid__footer .button {
+  margin: 0 auto;
+}
+
+.product-grid__footer .pagination-wrapper {
+  margin-top: 0;
+}
+
+@media screen and (min-width:990px) {
+  .product-grid__footer {
+    margin-top: 5rem;
+  }
+}
+
 /* override styles */
 .product-grid-container.with-type-image .media {
   overflow: visible;
