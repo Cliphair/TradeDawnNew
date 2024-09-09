@@ -329,6 +329,18 @@
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                         <li>
+                          <a
+                            id="HeaderDrawer-professional-all"
+                            href="/collections/permanent-extensions"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/permanent-extensions' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/permanent-extensions' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            All Professional Extensions
+                          </a>
+                        </li>
+                        <li>
                           <details id="Details-menu-drawer-professional-nano-ring">
                             <summary
                               id="HeaderDrawer-professional-nano-ring"
@@ -780,6 +792,18 @@
                         BACK
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                        <li>
+                          <a
+                            id="HeaderDrawer-shop-by-shade-all"
+                            href="/pages/hair-extensions-by-colour"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/hair-extensions-by-colour' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/pages/hair-extensions-by-colour' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            All Shades
+                          </a>
+                        </li>
                         <li>
                           <details id="Details-menu-drawer-shop-by-shade-black">
                             <summary
