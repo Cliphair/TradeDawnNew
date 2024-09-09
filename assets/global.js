@@ -1478,6 +1478,7 @@ class Countdown extends HTMLElement {
       this.querySelector('.countdown__hours').innerText = '00';
       this.querySelector('.countdown__minutes').innerText = '00';
       this.querySelector('.countdown__seconds').innerText = '00';
+      this.closest(".section-countdown-container").classList.add('hidden');
       clearInterval(this.counter);
     }
   }
