@@ -111,6 +111,26 @@
             "content": "",
             "page": ""
           }
+        },
+        "collapsible_tab_L8wRzX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "type": "custom",
+            "heading": "Delivery Info",
+            "icon": "none",
+            "content": "<p><span style=\"text-decoration:underline\"><strong>UK<\/strong><\/span><\/p><ul><li>Economy Tracked: 3-5 Working Days - FREE on Orders over £30<\/li><li>Express Tracked: 1-2 Working Days - £3.99<\/li><li>Next Day Guaranteed (Order Before 4pm Mon-Thu) - £7.99<\/li><li>Saturday Guaranteed (Order Before 4pm Friday) - £8.99<\/li><\/ul><p><span style=\"text-decoration:underline\"><strong>USA\/IRELAND\/EU<\/strong><\/span><\/p><ul><li>DHL Express Tracked: (1-2 Working Days) – FREE<br\/>(Min. Order £100, Otherwise £9.99)<\/li><li>Please note you might have to pay duties which are not included in carriage.<\/li><\/ul><p><span style=\"text-decoration:underline\"><strong>REST OF THE WORLD<\/strong><\/span><\/p><ul><li>DHL Express Tracked: (2-4 Working Days) – FREE<br\/>(Min. Order £150, Otherwise £14.99)<\/li><li>Please note you might have to pay duties which are not included in carriage.<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_NUa6HR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "type": "custom",
+            "heading": "Return Policy",
+            "icon": "none",
+            "content": "<p><strong>60 DAYS REFUND OR EXCHANGE<\/strong><\/p><p>At Cliphair, our goal is to ensure complete satisfaction with your purchase. We strive to provide expert guidance to help you choose the best possible products for your needs. However, if for whatever reason you are dissatisfied with your purchase on arrival or have a change of heart before opening, you can return the product for a refund or exchange within 60 days of delivery.<\/p><p>Please note that returns will only be accepted if the seal is still intact on the product. If the seal is removed and the product has been used, we will not be able to authorise the return. Toning or dying our hair extensions, even with our own products, voids the return policy. Therefore, please carefully follow all instructions provided to ensure correct use of products.<\/p><p>View full returns policy and instructions <a href=\"\/pages\/returns-information\" title=\"Returns Information\">here<\/a>.<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -128,7 +148,9 @@
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "collapsible-row-0",
         "collapsible-row-1",
-        "collapsible-row-2"
+        "collapsible-row-2",
+        "collapsible_tab_L8wRzX",
+        "collapsible_tab_NUa6HR"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.information-videos ~ .information-videos {display: none; }}",
