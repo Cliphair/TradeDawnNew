@@ -318,6 +318,7 @@
                       {% when 'instructions' %}
                         {% if custom_information_object %}
                           {{ custom_information_object.description | metafield_tag }}
+                          {% assign custom_information_object = null %}
                         {% else %}
                           {% liquid
                             assign path = product.type | handle | append: '-instructions'
@@ -326,7 +327,6 @@
                           {% if page_content.content != blank %}
                             {{ page_content.content }}
                           {% else %}
-                            {{ path }}
                             <p>Update is in progress</p>
                           {% endif %}
                         {% endif %}
