@@ -1758,16 +1758,55 @@
                 >
                   Video Guide
                 </a>
-                <a
-                  id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
-                  href="/blogs/hair-blog/the-ultimate-hair-extension-length-guide"
-                  class="mega-menu__link link{% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %}
-                    aria-current="page"
-                  {% endif %}
+
+                {% comment %}
+                  <a
+                    id="HeaderMenu-help-me-choose-hlep-me-choose-length-guide"
+                    href="/blogs/hair-blog/the-ultimate-hair-extension-length-guide"
+                    class="mega-menu__link link{% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Length Guide
+                  </a>
+                {% endcomment %}
+                {% liquid
+                  assign length_guide_url = 'https://www.youtube.com/watch?v=I2J7XG1tXvQ'
+                  assign length_guide_id = 'I2J7XG1tXvQ'
+                %}
+                <noscript>
+                  <a
+                    class="mega-menu__link link"
+                    href="{{ length_guide_url }}"
+                    title="Length Guide"
+                    aria-label="Length Guide opens on Youtube"
+                    >Length Guide</a
+                  >
+                </noscript>
+                <deferred-media-popup
+                  data-media-id="{{ length_guide_id }}"
+                  class="no-js-hidden"
                 >
-                  Length Guide
-                </a>
+                  <a
+                    id="Deferred-Poster-Modal-{{ length_guide_id }}"
+                    class="mega-menu__link link menu-video"
+                    type="button"
+                    aria-label="Ultimate Length Guide"
+                  >
+                    Length Guide
+                  </a>
+                  <template>
+                    <iframe
+                      src="https://www.youtube.com/embed/{{ length_guide_id }}?enablejsapi=1&autoplay=1"
+                      class="js-youtube"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen
+                      title="Ultimate Length Guide"
+                    ></iframe>
+                  </template>
+                </deferred-media-popup>
+
                 <a
                   id="HeaderMenu-help-me-choose-hlep-me-choose-lookbook"
                   href="/pages/lookbook"

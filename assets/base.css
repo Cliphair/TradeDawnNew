@@ -581,6 +581,10 @@ a:not([href]) {
   cursor: not-allowed;
 }
 
+a.menu-video {
+  cursor: pointer;
+}
+
 .circle-divider::after {
   content: '\2022';
   margin: 0 1.3rem 0 1.5rem;
@@ -3698,7 +3702,8 @@ details-disclosure>details {
 }
 
 /* Privy app */
-#privy-container {
+#privy-container,
+#attentive_overlay {
   z-index: 2;
 }
 

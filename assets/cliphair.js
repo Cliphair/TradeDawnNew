@@ -26,22 +26,22 @@ function closeReadLess(btn) {
     btn.parentElement.classList.add('hidden');
 }
 
-function btsVideoTag(videoUrl){
-  let videoBgContainer = document.createElement("div");
-  videoBgContainer.id = 'bts__video-container';
-  videoBgContainer.classList.add('video__bg');
-  
-  let video=``;
-    if (videoUrl.includes("youtube")){
-      let videoId = videoUrl.includes("shorts") ? videoUrl.split("/shorts/")[1] : videoUrl.split("/watch?v=")[1];
-      video = `
+function btsVideoTag(videoUrl) {
+    let videoBgContainer = document.createElement("div");
+    videoBgContainer.id = 'bts__video-container';
+    videoBgContainer.classList.add('video__bg');
+
+    let video = ``;
+    if (videoUrl.includes("youtube")) {
+        let videoId = videoUrl.includes("shorts") ? videoUrl.split("/shorts/")[1] : videoUrl.split("/watch?v=")[1];
+        video = `
           <div class='video__container'>
             <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}?si=uhRBra05BAOkACcF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
     	`;
-    } else{
-      	video = `
+    } else {
+        video = `
           <div class='video__container'>
             <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
             <video class='bts__video' autoplay muted controls>
@@ -54,11 +54,11 @@ function btsVideoTag(videoUrl){
     videoBgContainer.innerHTML = video;
     document.querySelector('body').prepend(videoBgContainer)
     document.querySelector("#bts__video-container").addEventListener('click', btsCloseBtn);
-  
+
 }
-  
-function btsCloseBtn(){
-  	document.querySelector("#bts__video-container").remove();
+
+function btsCloseBtn() {
+    document.querySelector("#bts__video-container").remove();
 }
 
 // OLD FUNCTIONS THAT WILL BE REMOVED WHEN COLLECTIONS UPDATED
@@ -87,17 +87,17 @@ function readLess(clicked_id) {
     textContainer.classList.toggle('closed');
 }
 
-function read_more(button){
+function read_more(button) {
     let target = button.dataset.target;
-  	let container= document.getElementsByClassName(target)[0];
+    let container = document.getElementsByClassName(target)[0];
 
     container.classList.toggle('hidden');
     button.classList.toggle('hidden');
 }
-  
-function read_less(clicked_button){
+
+function read_less(clicked_button) {
     let target = clicked_button.dataset.target;
-  	let container= document.getElementsByClassName(target)[0];
+    let container = document.getElementsByClassName(target)[0];
     let readMoreButton = document.getElementById(target);
     container.classList.toggle('hidden');
     readMoreButton.classList.toggle('hidden');
@@ -105,39 +105,39 @@ function read_less(clicked_button){
 
 // SCROLL ARROW AND DOTS SNIPPETS
 // Functions to scroll an element into view based on a button click
-function addButtonClick(btnClass){
-  let buttons = document.querySelectorAll(`.${btnClass}`);
+function addButtonClick(btnClass) {
+    let buttons = document.querySelectorAll(`.${btnClass}`);
 
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
 
-      let target = button.dataset.target;
-      let element = document.querySelector(`[data-index="${target}"]`);
+            let target = button.dataset.target;
+            let element = document.querySelector(`[data-index="${target}"]`);
 
-      scrollToElement(element);
-      removeActiveClass(btnClass);
-      addActiveClass(target);
+            scrollToElement(element);
+            removeActiveClass(btnClass);
+            addActiveClass(target);
+        })
     })
-  })
 }
 
-function addActiveClass(target){
-  let button = document.querySelector(`[data-target="${target}"]`);
-  button.classList.add("active");
+function addActiveClass(target) {
+    let button = document.querySelector(`[data-target="${target}"]`);
+    button.classList.add("active");
 }
 
-function removeActiveClass(elementClass){
-  let button = document.querySelector(`.${elementClass}.active`);
-  button.classList.remove("active");
+function removeActiveClass(elementClass) {
+    let button = document.querySelector(`.${elementClass}.active`);
+    button.classList.remove("active");
 }
 
-function scrollToElement(element){
-  element.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+function scrollToElement(element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 // Scroll Function
 function scrollTo(containerClass, elementIndex) {
-  if(!containerClass)  return;
+    if (!containerClass) return;
     let container = document.querySelector(`.${containerClass}`);
     if (!container) {
         return;
