@@ -2754,6 +2754,19 @@
 
                         <li>
                           <a
+                            id="HeaderDrawer-info-hub-our-contact-us"
+                            href="/pages/contact-us"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/contact-us' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/pages/contact-us' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Contact Us
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
                             id="HeaderDrawer-info-hub-care-instructions"
                             href="/pages/care-instructions"
                             class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/care-instructions' %} menu-drawer__menu-item--active{% endif %}"
@@ -2817,21 +2830,6 @@
                           </a>
                         </li>
 
-                        {% comment %}
-                          <li>
-                            <a
-                              id="HeaderDrawer-info-hub-our-contact-us"
-                              href="/pages/contact-us"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/contact-us' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/pages/contact-us' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Contact Us
-                            </a>
-                          </li>
-                        {% endcomment %}
-
                         <li>
                           <a
                             id="HeaderDrawer-info-hub-our-ambassador"
@@ -2858,12 +2856,14 @@
                       </ul>
                     </div>
                     <div class="menu-drawer__utility-links">
-                      <a
-                        href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                        class="menu-drawer__account link focus-inset h5 large-up-hide"
-                      >
-                        Contact Us
-                      </a>
+                      <div class="menu-drawer__contact">
+                        <a
+                          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                          class="link focus-inset h5 large-up-hide"
+                        >
+                          Contact Us
+                        </a>
+                      </div>
                       <ul class="list list-social list-unstyled" role="list">
                         {%- if settings.social_twitter_link != blank -%}
                           <li class="list-social__item">
@@ -3050,96 +3050,107 @@
                 -%}
               </a>
             {%- endif -%}
-            {%- if localization.available_countries or localization.available_languages -%}
-              <div class="menu-drawer__localization header-localization">
-                {%- if localization.available_countries and localization.available_countries.size > 1 -%}
-                  <noscript>
-                    {%- form 'localization', id: 'HeaderCountryMobileFormNoScriptDrawer', class: 'localization-form' -%}
-                      <div class="localization-form__select">
-                        <h2 class="visually-hidden" id="HeaderCountryMobileLabelNoScriptDrawer">
-                          {{ 'localization.country_label' | t }}
-                        </h2>
-                        <select
-                          class="localization-selector link"
-                          name="country_code"
-                          aria-labelledby="HeaderCountryMobileLabelNoScriptDrawer"
-                        >
-                          {%- for country in localization.available_countries -%}
-                            <option
-                              value="{{ country.iso_code }}"
-                              {%- if country.iso_code == localization.country.iso_code %}
-                                selected
-                              {% endif %}
-                            >
-                              {{ country.name }} ({{ country.currency.iso_code }}
-                              {{ country.currency.symbol }})
-                            </option>
-                          {%- endfor -%}
-                        </select>
-                        {% render 'icon-caret' %}
-                      </div>
-                      <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
-                    {%- endform -%}
-                  </noscript>
+            <div class="menu-drawer__contact">
+              <a
+                href="/pages/contact-us"
+                class="link focus-inset h5"
+              >
+                Contact Us
+              </a>
+            </div>
+            {% comment %}
+              {%- if localization.available_countries or localization.available_languages -%}
+                <div class="menu-drawer__localization header-localization">
+                  {%- if localization.available_countries and localization.available_countries.size > 1 -%}
+                    <noscript>
+                      {%- form 'localization', id: 'HeaderCountryMobileFormNoScriptDrawer', class: 'localization-form' -%}
+                        <div class="localization-form__select">
+                          <h2 class="visually-hidden" id="HeaderCountryMobileLabelNoScriptDrawer">
+                            {{ 'localization.country_label' | t }}
+                          </h2>
+                          <select
+                            class="localization-selector link"
+                            name="country_code"
+                            aria-labelledby="HeaderCountryMobileLabelNoScriptDrawer"
+                          >
+                            {%- for country in localization.available_countries -%}
+                              <option
+                                value="{{ country.iso_code }}"
+                                {%- if country.iso_code == localization.country.iso_code %}
+                                  selected
+                                {% endif %}
+                              >
+                                {{ country.name }} ({{ country.currency.iso_code }}
+                                {{ country.currency.symbol }})
+                              </option>
+                            {%- endfor -%}
+                          </select>
+                          {% render 'icon-caret' %}
+                        </div>
+                        <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
+                      {%- endform -%}
+                    </noscript>
 
-                  <localization-form class="no-js-hidden">
-                    {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
-                          {{ 'localization.country_label' | t }}
-                        </h2>
-                        {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {% endif %}
+                    <localization-form class="no-js-hidden">
+                      {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
+                        <div>
+                          <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
+                            {{ 'localization.country_label' | t }}
+                          </h2>
+                          {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
+                        </div>
+                      {%- endform -%}
+                    </localization-form>
+                  {% endif %}
 
-                {%- if localization.available_languages and localization.available_languages.size > 1 -%}
-                  <noscript>
-                    {%- form 'localization',
-                      id: 'HeaderLanguageMobileFormNoScriptDrawer',
-                      class: 'localization-form'
-                    -%}
-                      <div class="localization-form__select">
-                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabelNoScriptDrawer">
-                          {{ 'localization.language_label' | t }}
-                        </h2>
-                        <select
-                          class="localization-selector link"
-                          name="locale_code"
-                          aria-labelledby="HeaderLanguageMobileLabelNoScriptDrawer"
-                        >
-                          {%- for language in localization.available_languages -%}
-                            <option
-                              value="{{ language.iso_code }}"
-                              lang="{{ language.iso_code }}"
-                              {%- if language.iso_code == localization.language.iso_code %}
-                                selected
-                              {% endif %}
-                            >
-                              {{ language.endonym_name | capitalize }}
-                            </option>
-                          {%- endfor -%}
-                        </select>
-                        {% render 'icon-caret' %}
-                      </div>
-                      <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
-                    {%- endform -%}
-                  </noscript>
+                  {%- if localization.available_languages and localization.available_languages.size > 1 -%}
+                    <noscript>
+                      {%- form 'localization',
+                        id: 'HeaderLanguageMobileFormNoScriptDrawer',
+                        class: 'localization-form'
+                      -%}
+                        <div class="localization-form__select">
+                          <h2 class="visually-hidden" id="HeaderLanguageMobileLabelNoScriptDrawer">
+                            {{ 'localization.language_label' | t }}
+                          </h2>
+                          <select
+                            class="localization-selector link"
+                            name="locale_code"
+                            aria-labelledby="HeaderLanguageMobileLabelNoScriptDrawer"
+                          >
+                            {%- for language in localization.available_languages -%}
+                              <option
+                                value="{{ language.iso_code }}"
+                                lang="{{ language.iso_code }}"
+                                {%- if language.iso_code == localization.language.iso_code %}
+                                  selected
+                                {% endif %}
+                              >
+                                {{ language.endonym_name | capitalize }}
+                              </option>
+                            {%- endfor -%}
+                          </select>
+                          {% render 'icon-caret' %}
+                        </div>
+                        <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
+                      {%- endform -%}
+                    </noscript>
 
-                  <localization-form class="no-js-hidden">
-                    {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
-                      <div>
-                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
-                          {{ 'localization.language_label' | t }}
-                        </h2>
-                        {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
-                      </div>
-                    {%- endform -%}
-                  </localization-form>
-                {%- endif -%}
-              </div>
-            {%- endif -%}
+                    <localization-form class="no-js-hidden">
+                      {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
+                        <div>
+                          <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
+                            {{ 'localization.language_label' | t }}
+                          </h2>
+                          {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
+                        </div>
+                      {%- endform -%}
+                    </localization-form>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {% endcomment %}
+
             <ul class="list list-social list-unstyled" role="list">
               {%- if settings.social_twitter_link != blank -%}
                 <li class="list-social__item">

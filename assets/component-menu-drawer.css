@@ -257,6 +257,18 @@ details[open].menu-opening>.menu-drawer__submenu {
   transform: scale(1.07);
 }
 
+.menu-drawer__contact .link {
+  text-decoration: none;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: rgb(var(--color-foreground));
+  margin-bottom: 0;
+}
+
+.menu-drawer__contact .link:hover {
+  text-decoration: underline;
+}
+
 .menu-drawer .list-social {
   justify-content: flex-start;
   margin-left: -1.25rem
