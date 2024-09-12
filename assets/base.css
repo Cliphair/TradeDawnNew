@@ -3704,7 +3704,7 @@ details-disclosure>details {
 /* Privy app */
 #privy-container,
 #attentive_overlay {
-  z-index: 2;
+  z-index: 2 !important;
 }
 
 /* DCart app */

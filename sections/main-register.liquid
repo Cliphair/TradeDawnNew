@@ -79,6 +79,7 @@
         {{ 'customer.register.last_name' | t }}
       </label>
     </div>
+
     <div class="field">
       <input
         type="email"
@@ -110,6 +111,26 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
+
+    {% comment %}
+      <div class="field">
+        <input
+          type="tel"
+          name="customer[note][phone]"
+          id="RegisterForm-Phone"
+          {% if form.phone %}
+            value="{{ form.phone }}"
+          {% endif %}
+          autocomplete="tel"
+          placeholder="{{ 'templates.contact.form.phone' | t }}"
+          requeired
+        >
+        <label for="RegisterForm-Phone">
+          {{ 'templates.contact.form.phone' | t }}
+        </label>
+      </div>
+    {% endcomment %}
+
     <div class="field">
       <input
         type="password"
