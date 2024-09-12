@@ -16,7 +16,7 @@
         "image_ratio": "square",
         "circle_images": true,
         "hide_card_arrow": true,
-        "columns_desktop": 5,
+        "columns_desktop": 6,
         "swipe_on_desktop": true,
         "color_scheme": "",
         "columns_mobile": "3",

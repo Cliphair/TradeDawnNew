@@ -169,7 +169,7 @@
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
-        "show_date": false,
+        "show_date": true,
         "show_author": true,
         "color_scheme": "inverse",
         "padding_top": 0,
