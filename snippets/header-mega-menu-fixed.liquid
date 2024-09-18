@@ -2653,6 +2653,17 @@
                 >
                   Value Bundles
                 </a>
+
+                <a
+                  id="HeaderMenu-discounts-outlet"
+                  href="/collections/outlet"
+                  class="mega-menu__link link{% if request.path=='/collections/outlet' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/collections/outlet' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Outlet
+                </a>
               </li>
 
               <li
