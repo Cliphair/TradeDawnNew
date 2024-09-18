@@ -44,6 +44,7 @@
   color: rgb(var(--color-foreground));
   display: block;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
+  padding: 0;
   padding-bottom: 0.6rem;
   padding-top: 0.6rem;
   text-decoration: none;

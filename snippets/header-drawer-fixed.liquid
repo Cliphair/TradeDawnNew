@@ -4,8 +4,6 @@
   Usage:
   {% render 'header-drawer' %}
 {% endcomment %}
-
-{% comment %}change breakpoit to be always desktop as I move the menu breakpoint to 1400px. Old rule {% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}{% endcomment %}
 <header-drawer data-breakpoint="desktop">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
@@ -756,11 +754,24 @@
                         </li>
 
                         <li>
-                          <a
+                          <modal-opener
                             id="HeaderDrawer-professional-trade-account"
+                            class="no-js-hidden"
+                            data-modal="#PopupModal-Trade-Account"
+                          >
+                            <button
+                              id="HeaderDrawer-Popup-Trade-Account-professional"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                              type="button"
+                              aria-haspopup="dialog"
+                            >
+                              Apply For Trade Account Here
+                            </button>
+                          </modal-opener>
+                          <a
                             href="https://cliphairtrade.com/pages/trade-account"
                             aria-label="Goes to trade website"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset no-js"
                           >
                             Apply For Trade Account Here
                           </a>
@@ -1343,20 +1354,6 @@
                                     Natural Sandy Blonde (#12/16/613)
                                   </a>
                                 </li>
-                                {% comment %}
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-shop-by-shade-mixed-shades-27-30"
-                                      href="/collections/cinnamon-blonde-27-30-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Cinnamon Swirl (#27/30)
-                                    </a>
-                                  </li>
-                                {% endcomment %}
                                 <li>
                                   <a
                                     id="HeaderDrawer-shop-by-shade-mixed-shades-2-4-6"
@@ -1728,20 +1725,6 @@
                                     Strawberry Blonde (#27)
                                   </a>
                                 </li>
-                                {% comment %}
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-shop-by-shade-red-27-30"
-                                      href="/collections/cinnamon-blonde-27-30-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/cinnamon-blonde-27-30-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Cinnamon Swirl (#27/30)
-                                    </a>
-                                  </li>
-                                {% endcomment %}
                                 <li>
                                   <a
                                     id="HeaderDrawer-shop-by-shade-red-30"
@@ -2039,19 +2022,6 @@
                         </li>
 
                         <li>
-                          {% comment %}
-                            <a
-                              id="HeaderDrawer-help-me-choose-length-guide"
-                              href="/blogs/hair-blog/the-ultimate-hair-extension-length-guide"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/blogs/hair-blog/the-ultimate-hair-extension-length-guide' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Length Guide
-                            </a>
-                          {% endcomment %}
-
                           {% liquid
                             assign length_guide_url = 'https://www.youtube.com/watch?v=I2J7XG1tXvQ'
                             assign length_guide_id = 'I2J7XG1tXvQ'
@@ -2844,11 +2814,24 @@
                         </li>
 
                         <li>
-                          <a
+                          <modal-opener
                             id="HeaderDrawer-info-hub-our-trade"
-                            aria-label="Goes to trade website"
+                            class="no-js-hidden"
+                            data-modal="#PopupModal-Trade-Account"
+                          >
+                            <button
+                              id="HeaderDrawer-Popup-Trade-Account-info-hub"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                              type="button"
+                              aria-haspopup="dialog"
+                            >
+                              Trade Application
+                            </button>
+                          </modal-opener>
+                          <a
                             href="https://cliphairtrade.com/pages/trade-account"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                            aria-label="Goes to trade website"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset no-js"
                           >
                             Trade Application
                           </a>

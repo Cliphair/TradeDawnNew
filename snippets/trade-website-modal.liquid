@@ -1,0 +1,47 @@
+<modal-dialog
+  id="PopupModal-Trade-Account"
+  class="menu-simple-modal"
+>
+  <div
+    role="dialog"
+    aria-label="Trade account modal"
+    aria-modal="true"
+    class="menu-simple-modal__content color-accent-4"
+    tabindex="-1"
+  >
+    <div class="menu-simple-modal__content-info center">
+      {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+      {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+      {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+      {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+      {{
+        settings.logo
+        | image_url: width: 600
+        | image_tag:
+          class: 'header__heading-logo motion-reduce',
+          widths: widths,
+          height: logo_height,
+          width: settings.logo_width,
+          alt: logo_alt,
+          sizes: sizes,
+          preload: true
+      }}
+      <p>You're about to be redirected to our Trade website. Please confirm if you'd like to proceed.</p>
+      <a
+        href="https://cliphairtrade.com/pages/trade-account"
+        aria-label="Goes to trade website"
+        class="button button--primary menu-simple-modal__proceed-button"
+      >
+        Proceed to Trade Website
+      </a>
+      <button
+        id="ModalClose-Trade-Account"
+        type="button"
+        class="button button--secondary menu-simple-modal__close-button"
+        aria-label="{{ 'accessibility.close' | t }}"
+      >
+        Stay
+      </button>
+    </div>
+  </div>
+</modal-dialog>
