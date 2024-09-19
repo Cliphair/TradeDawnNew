@@ -1696,6 +1696,25 @@
                 </ul>
               </li>
             </ul>
+            {% comment %}
+              <ul
+                class="mega-menu__list mega-menu__centered color-background-collection-titles"
+                role="list"
+              >
+                <li style="width:100%">
+                  <a
+                    id="HeaderMenu-shop-by-shade-sample-product"
+                    href="/products/hair-extensions-sample-pieces"
+                    class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/products/hair-extensions-sample-pieces' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/products/hair-extensions-sample-pieces' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    ORDER A SAMPLE
+                  </a>
+                </li>
+              </ul>
+            {% endcomment %}
           </div>
         </details>
       </header-menu>
@@ -1736,6 +1755,16 @@
                   {% endif %}
                 >
                   Express Colour Match
+                </a>
+                <a
+                  id="HeaderMenu-help-me-choose-hlep-me-choose-sample-product"
+                  href="/products/hair-extensions-sample-pieces"
+                  class="mega-menu__link link{% if request.path == '/products/hair-extensions-sample-pieces' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/products/hair-extensions-sample-pieces' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  Order A Sample
                 </a>
                 <a
                   id="HeaderMenu-help-me-choose-hlep-me-choose-journey"
@@ -2061,6 +2090,19 @@
                           {% endif %}
                         >
                           Snap Clips
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          id="HeaderMenu-haircare-accessories-accessories-sample-product"
+                          href="/products/hair-extensions-sample-pieces"
+                          class="mega-menu__link link{% if request.path == '/products/hair-extensions-sample-pieces' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/products/hair-extensions-sample-pieces' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Hair Extension Sample Pieces
                         </a>
                       </li>
                     </ul>
