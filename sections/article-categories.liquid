@@ -44,7 +44,10 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient  section-{{ section.id }}-padding ">
+<div
+  id="main-blog-categories"
+  class="color-{{ section.settings.color_scheme }} gradient  section-{{ section.id }}-padding "
+>
   <div class="page-width" style="padding:0!important;">
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper title-wrapper--self-padded-mobile title-wrapper--no-top-margin page-width {{ section.settings.heading_alignment }}">

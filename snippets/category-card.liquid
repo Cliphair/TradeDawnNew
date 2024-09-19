@@ -15,7 +15,7 @@
 {% endunless %}
 
 <a
-  href="{{ blog.url }}/tagged/{{ category_object.category_tag | handle }}{% if scroll_to_grid %}#main-blog-section{% endif %}"
+  href="{{ blog.url }}/tagged/{{ category_object.category_tag | handle }}{% if scroll_to_grid %}#main-blog-categories{% endif %}"
   title="{{ category_object.category_custom_title | default: category_object.category_tag }} blog posts"
   class="category-card"
 >
