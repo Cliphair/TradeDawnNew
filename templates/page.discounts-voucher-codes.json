@@ -162,6 +162,15 @@
             "button_text": "Shop Bundles"
           }
         },
+        "image_3YReVU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/discount-page-outlet.png",
+            "description": "<p><strong>Outlet<\/strong><\/p><p>Get up to 70% off in our outlet sale! <\/p>",
+            "url": "shopify:\/\/collections\/outlet",
+            "button_text": "Find Out More"
+          }
+        },
         "image_cbm7bJ": {
           "type": "image",
           "settings": {
@@ -179,6 +188,7 @@
         "c4ec7fce-508f-4603-9ba8-3e3a54ab7aa9",
         "image_7YNag7",
         "image_6THmFq",
+        "image_3YReVU",
         "image_cbm7bJ"
       ],
       "custom_css": [
