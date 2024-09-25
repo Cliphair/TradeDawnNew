@@ -9,9 +9,9 @@
 */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
+    "logo": "shopify://shop_images/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
     "logo_width": 90,
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "type_header_font": "inter_n5",
     "heading_scale": 100,
     "type_body_font": "inter_n4",
@@ -68,7 +68,7 @@
     "blog_card_style": "standard",
     "blog_card_image_padding": 0,
     "blog_card_text_alignment": "left",
-    "blog_card_color_scheme": "accent-2",
+    "blog_card_color_scheme": "background-collection-titles",
     "blog_card_border_thickness": 0,
     "blog_card_border_opacity": 10,
     "blog_card_corner_radius": 0,
@@ -107,16 +107,16 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-69d57c77-dfa8-46c0-ae7f-75b47c0b9174",
     "sold_out_badge_color_scheme": "inverse",
-    "brand_description": "<p>0345 211 311<\/p><p><a href=\"mailto:customerservice@cliphair.co.uk\" title=\"Contact Us\">customerservice@cliphair.co.uk<\/a><\/p><p>9:30AM - 4:30PM - (Mon - Fri)<\/p><p><\/p><p>Unit 1 Watermill House, Restmor Way,<\/p><p>Wallington SM6 7AH<\/p><p>United Kingdom<\/p><p><\/p>",
-    "brand_image": "shopify:\/\/shop_images\/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
+    "brand_description": "<p>0345 211 311</p><p><a href=\"mailto:customerservice@cliphair.co.uk\" title=\"Contact Us\">customerservice@cliphair.co.uk</a></p><p>9:30AM - 4:30PM - (Mon - Fri)</p><p></p><p>Unit 1 Watermill House, Restmor Way,</p><p>Wallington SM6 7AH</p><p>United Kingdom</p><p></p>",
+    "brand_image": "shopify://shop_images/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
     "brand_image_width": 120,
-    "social_facebook_link": "https:\/\/www.facebook.com\/Cliphair.Limited",
-    "social_instagram_link": "https:\/\/www.instagram.com\/cliphairlimited\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/user\/cliphairlimited",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@cliphairextensions",
-    "social_twitter_link": "https:\/\/twitter.com\/i\/flow\/login?redirect_after_login=%2FCliphairlimited",
+    "social_facebook_link": "https://www.facebook.com/Cliphair.Limited",
+    "social_instagram_link": "https://www.instagram.com/cliphairlimited/",
+    "social_youtube_link": "https://www.youtube.com/user/cliphairlimited",
+    "social_tiktok_link": "https://www.tiktok.com/@cliphairextensions",
+    "social_twitter_link": "https://twitter.com/i/flow/login?redirect_after_login=%2FCliphairlimited",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https:\/\/www.pinterest.co.uk\/cliphair\/",
+    "social_pinterest_link": "https://www.pinterest.co.uk/cliphair/",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": false,
@@ -146,13 +146,13 @@
     ],
     "blocks": {
       "74204263759510710": {
-        "type": "shopify:\/\/apps\/dcart-discount-in-cart\/blocks\/app-embed\/731e2611-8bdf-4514-b5e4-f64f1cae3fb7",
+        "type": "shopify://apps/dcart-discount-in-cart/blocks/app-embed/731e2611-8bdf-4514-b5e4-f64f1cae3fb7",
         "disabled": false,
         "settings": {
         }
       },
       "8962992520437913685": {
-        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+        "type": "shopify://apps/yotpo-loyalty-rewards/blocks/loader-app-embed-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
         "disabled": false,
         "settings": {
           "inject_modules_loader": true,
@@ -160,13 +160,13 @@
         }
       },
       "4215564508307704909": {
-        "type": "shopify:\/\/apps\/sitemap-noindex-pro-seo\/blocks\/app-embed\/4d815e2c-5af0-46ba-8301-d0f9cf660031",
+        "type": "shopify://apps/sitemap-noindex-pro-seo/blocks/app-embed/4d815e2c-5af0-46ba-8301-d0f9cf660031",
         "disabled": true,
         "settings": {
         }
       },
       "11724500921838622758": {
-        "type": "shopify:\/\/apps\/frequently-bought\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
+        "type": "shopify://apps/frequently-bought/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
         "settings": {
         }

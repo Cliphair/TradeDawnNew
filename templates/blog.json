@@ -15,7 +15,7 @@
         "template--15283893993533__b6c51df6-b6e1-4084-867c-38313ffac6d0-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>THE CLIPHAIR BLOG<\/strong>",
+            "heading": "<strong>THE CLIPHAIR BLOG</strong>",
             "heading_size": "h2",
             "h1": true
           }
@@ -29,8 +29,8 @@
         "content_alignment": "center",
         "color_scheme": "inverse",
         "full_width": true,
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "article-trending": {
@@ -39,73 +39,73 @@
         "image_WhXAwQ": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image1.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image1.webp"
           }
         },
         "image_LRefiD": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image2.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image2.webp"
           }
         },
         "image_mTUfwa": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image3.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image3.webp"
           }
         },
         "image_aCrzVp": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image4.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image4.webp"
           }
         },
         "image_rJjbLb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image5.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image5.webp"
           }
         },
         "image_f8LEVG": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image6.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image6.webp"
           }
         },
         "image_bEmzXb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image7.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image7.webp"
           }
         },
         "image_TVnmEx": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image8.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image8.webp"
           }
         },
         "image_Qqw4kL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image9.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image9.webp"
           }
         },
         "image_YhyKHW": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image10.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image10.webp"
           }
         },
         "image_ewke6R": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image11.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image11.webp"
           }
         },
         "image_wG4Ti8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image12.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image12.webp"
           }
         }
       },
@@ -123,12 +123,15 @@
         "image_ewke6R",
         "image_wG4Ti8"
       ],
+      "custom_css": [
+        ".slider-buttons > .slider-button {background: white;}"
+      ],
       "settings": {
-        "heading": "TRENDING ON CLIPHAIR",
+        "heading": "Trending On CLiphair",
         "trending-list": "trending-articles",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "heading_alignment": "center",
-        "color_scheme": "accent-3",
+        "color_scheme": "accent-2",
         "show_image": true,
         "image_ratio": "square",
         "show_date": false,
@@ -138,8 +141,8 @@
         "mobile-column": 2,
         "desktop-row": 3,
         "desktop-column": 6,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "article-categories": {
@@ -155,7 +158,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "slider_visual": "dots",
-        "padding_top": 40,
+        "padding_top": 20,
         "padding_bottom": 0
       }
     },
@@ -173,7 +176,7 @@
         "show_author": true,
         "color_scheme": "inverse",
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 40
       }
     },
     "7e26f39a-bf1f-4e4e-9c7a-f5368fdd91ff": {
@@ -182,40 +185,40 @@
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
-            "text_label": "<p>Ethically<br>Sourced<\/p>",
+            "image": "shopify://shop_images/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced</p>",
             "link": ""
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "<p>Outstanding<br>Reviews<\/p>",
-            "link": "shopify:\/\/pages\/testimonials"
+            "image": "shopify://shop_images/Outstanding-Reviews-_White.svg",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
+            "link": "shopify://pages/testimonials"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "<p>Cliphair<br>Rewards<\/p>",
-            "link": "shopify:\/\/pages\/rewards"
+            "image": "shopify://shop_images/Cliphair-Rewards-_White.svg",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
+            "link": "shopify://pages/rewards"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "<p>Free Delivery<br>& Returns<\/p>",
+            "image": "shopify://shop_images/Free-Delivery-_White.svg",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
             "link": ""
           }
         },
         "cbdbff03-f013-487f-8288-6c9a46426bc6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "<p>Buy Now<br>Pay Later<\/p>",
+            "image": "shopify://shop_images/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
             "link": ""
           }
         }
