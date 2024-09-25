@@ -124,7 +124,8 @@
         "image_wG4Ti8"
       ],
       "custom_css": [
-        ".slider-buttons > .slider-button {background: white;}"
+        ".slider-buttons > .slider-button {background: white;}",
+        ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px;}"
       ],
       "settings": {
         "heading": "Trending On CLiphair",
