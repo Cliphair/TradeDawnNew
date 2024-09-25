@@ -54,6 +54,15 @@
   display: inline-block;
 }
 
+.localization-form__flag {
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.localization-form__flag img {
+  display: block;
+}
+
 @media screen and (max-width: 749px) {
   .localization-form .button {
     word-break: break-all;
@@ -190,6 +199,10 @@ noscript .localization-selector.link {
 
 .disclosure__link--active {
   text-decoration: underline;
+}
+
+.disclosure__link .localization-form__flag {
+  margin-right: 5px;
 }
 
 .disclosure__button[aria-expanded='true'] .icon-caret {

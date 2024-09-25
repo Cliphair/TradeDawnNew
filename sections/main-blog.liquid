@@ -57,12 +57,23 @@
         </div>
 
         {%- if paginate.pages > 1 -%}
-          {%- render 'pagination', paginate: paginate -%}
+          <div class="main-blog__footer">
+            <button
+              id="load-more"
+              class="button load-more__button no-js-hidden"
+              data-next-url="{{ paginate.next.url }}"
+            >
+              Load More
+            </button>
+            {%- render 'pagination', paginate: paginate -%}
+          </div>
         {%- endif -%}
       </div>
     </div>
   {%- endpaginate -%}
 </div>
+
+<script src="{{ 'blog-grid-load-more.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {

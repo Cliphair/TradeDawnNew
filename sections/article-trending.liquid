@@ -17,9 +17,9 @@
     }
   }
 
-  .collage-bg-wrapper .content-bg{
+  /* .collage-bg-wrapper .content-bg{
     background-color: rgba(var(--color-background), {{ section.settings.bg_opacity }});
-  }
+  } */
 {%- endstyle -%}
 
 <style>
@@ -68,70 +68,79 @@
     assign show_mobile_slider = true
   endif
 
-  assign columns_desktop_int = 2
+  assign columns_desktop_int = 4
   assign show_desktop_slider = false
   if list_size > columns_desktop_int
     assign show_desktop_slider = true
   endif
+
+  assign show_tablet_slider = false
+  assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
+  if list_size > columns_tablet
+    assign show_tablet_slider = true
+  endif
 -%}
 
 <div class="collage-bg-wrapper">
-  {% if section.blocks.size != 0 %}
-    <div class="mobile-bg-holder bg-holder">
-      {% for row in (1..section.settings['mobile-row']) %}
-        <div class="row">
-          {% for column in (1..section.settings['mobile-column']) %}
-            <div class="column">
-              {% assign image = images_array[current_image_index].settings.image %}
-              <img
-                src="{{ image | image_url }}"
-                width="{{ image.width }}"
-                height="{{ image.height }}"
-                alt="{{ image.alt }}"
-                loading="lazy"
-              >
-              {% liquid
-                if current_image_index == total_images
-                  assign current_image_index = 0
-                else
-                  assign current_image_index = current_image_index | plus: 1
-                endif
-              %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
-    <div class="desktop-bg-holder bg-holder">
-      {% for row in (1..section.settings['desktop-row']) %}
-        <div class="row">
-          {% for column in (1..section.settings['desktop-column']) %}
-            <div class="column">
-              {% assign image = images_array[current_image_index].settings.image %}
-              <img
-                src="{{ image | image_url }}"
-                width="{{ image.width }}"
-                height="{{ image.height }}"
-                alt="{{ image.alt }}"
-                loading="lazy"
-              >
-              {% liquid
-                if current_image_index == total_images
-                  assign current_image_index = 0
-                else
-                  assign current_image_index = current_image_index | plus: 1
-                endif
-              %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
+  {% comment %}
+    {% if section.blocks.size != 0 %}
+      <div class="mobile-bg-holder bg-holder">
+        {% for row in (1..section.settings['mobile-row']) %}
+          <div class="row">
+            {% for column in (1..section.settings['mobile-column']) %}
+              <div class="column">
+                {% assign image = images_array[current_image_index].settings.image %}
+                <img
+                  src="{{ image | image_url }}"
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                  alt="{{ image.alt }}"
+                  loading="lazy"
+                >
+                {% liquid
+                  if current_image_index == total_images
+                    assign current_image_index = 0
+                  else
+                    assign current_image_index = current_image_index | plus: 1
+                  endif
+                %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="desktop-bg-holder bg-holder">
+        {% for row in (1..section.settings['desktop-row']) %}
+          <div class="row">
+            {% for column in (1..section.settings['desktop-column']) %}
+              <div class="column">
+                {% assign image = images_array[current_image_index].settings.image %}
+                <img
+                  src="{{ image | image_url }}"
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                  alt="{{ image.alt }}"
+                  loading="lazy"
+                >
+                {% liquid
+                  if current_image_index == total_images
+                    assign current_image_index = 0
+                  else
+                    assign current_image_index = current_image_index | plus: 1
+                  endif
+                %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endcomment %}
+
   <div class="content-bg color-{{ section.settings.color_scheme }} gradient ">
-    <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+    <div class="page-width section-{{ section.id }}-padding" style="padding-right:0; padding-left:0;">
       {%- unless section.settings.heading == blank -%}
-        <div class="title-wrapper title-wrapper--self-padded-mobile title-wrapper--no-top-margin {{ section.settings.heading_alignment }}">
+        <div class="page-width title-wrapper title-wrapper--no-top-margin {{ section.settings.heading_alignment }}">
           <h2
             id="SectionHeading-{{ section.id }}"
             class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -146,7 +155,7 @@
 
       <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <ul
-          class="articles-list grid grid--2-col-desktop grid--2-col-tablet-down slider grid--peek slider--tablet slider--desktop articles-list--{{ list_size }}-items"
+          class="articles-list grid grid--{{ columns_desktop_int }}-col-desktop grid--{{ columns_tablet }}-col-tablet grid--{{ columns_mobile_int }}-col-tablet-down slider slide-mobile-{{ show_mobile_slider }} slide-tablet-{{ show_tablet_slider }} slide-desktop-{{ show_desktop_slider }} grid--peek slider--tablet slider--desktop articles-list--{{ list_size }}-items"
           id="Slider-{{ section.id }}"
           role="list"
         >
@@ -184,7 +193,7 @@
           {% endfor %}
         </ul>
         {%- if show_mobile_slider or show_desktop_slider -%}
-          <div class="slider-buttons no-js-hidden slider--2-col-desktop slider--1-col-tablet-down">
+          <div class="slider-buttons small-hide no-js-hidden slider--{{ columns_desktop_int }}-col-desktop slider--{{ columns_mobile_int }}-col-tablet-down">
             <button
               type="button"
               class="slider-button slider-button--prev"
