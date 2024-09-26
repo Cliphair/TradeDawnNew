@@ -95,7 +95,7 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "type": "object",
+            "type": "custom",
             "heading": "Ingredients",
             "icon": "none",
             "content": "{{ product.metafields.additional_information.ingredients | metafield_tag }}",
