@@ -213,7 +213,7 @@
             {% if block.settings.description != empty %}<div>{{ block.settings.description }}</div>{% endif %}
             {% if section.settings.have_buttons -%}
               <div>
-                <p>{{ block.settings.button_text }}</p>
+                <p class='column_button'>{{ block.settings.button_text }}</p>
               </div>
             {%- endif %}
           </a>
@@ -233,9 +233,9 @@
             {% if section.settings.have_buttons -%}
               <div>
                 {% if block.settings.button_text != blank %}
-                  <p>{{ block.settings.button_text }}</p>
+                  <p class='column_button'>{{ block.settings.button_text }}</p>
                 {% else %}
-                  <p>
+                  <p class='column_button'>
                     <a href='https://www.tiktok.com/@cliphairextensions' target='_blank' rel='noopener'>{% render 'icon-tiktok' %}</a>
                     <a href='https://www.instagram.com/cliphairlimited/' target='_blank' rel='noopener'>{% render 'icon-instagram' %}</a>
                     <a href='https://www.facebook.com/Cliphair.Limited' target='_blank' rel='noopener'>{% render 'icon-facebook' %}</a>
