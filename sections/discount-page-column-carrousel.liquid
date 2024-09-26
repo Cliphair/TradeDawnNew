@@ -56,15 +56,22 @@
   #section-{{ section.id }} .column_container > .column{
     width:calc(100% / {{ section.settings.item_per_row_mobile }});
     min-width:calc(100% / {{ section.settings.item_per_row_mobile }});
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   #section-{{ section.id }} .column_container > .column *:not(img){
     color:{{ section.settings.sub_header_color }};
   }
   
-  #section-{{ section.id }} .column_container > .column p:not(img):last-of-type{
+  #section-{{ section.id }} .column_container > .column .column_button{
     color:{{ section.settings.buttons_color }};
     background:{{ section.settings.buttons_bg_color }};
+  }
+
+  #section-{{ section.id }} .column > div {
+    text-align:center;
   }
 
   #section-{{ section.id }} .view-collection > *{
@@ -203,9 +210,11 @@
                 class="{% if section.settings.circle_images %}circle{% endif %}"
               >
             {% endif %}
-            {% if block.settings.description != empty %}{{ block.settings.description }}{% endif %}
+            {% if block.settings.description != empty %}<div>{{ block.settings.description }}</div>{% endif %}
             {% if section.settings.have_buttons -%}
-              <p>{{ block.settings.button_text }}</p>
+              <div>
+                <p>{{ block.settings.button_text }}</p>
+              </div>
             {%- endif %}
           </a>
         {% else %}
@@ -220,17 +229,19 @@
                 class="{% if section.settings.circle_images %}circle{% endif %}"
               >
             {% endif %}
-            {% if block.settings.description != empty %}{{ block.settings.description }}{% endif %}
+            {% if block.settings.description != empty %}<div>{{ block.settings.description }}</div>{% endif %}
             {% if section.settings.have_buttons -%}
-              {% if block.settings.button_text != blank %}
-                <p>{{ block.settings.button_text }}</p>
-              {% else %}
-                <p>
-                  <a href='https://www.tiktok.com/@cliphairextensions' target='_blank' rel='noopener'>{% render 'icon-tiktok' %}</a>
-                  <a href='https://www.instagram.com/cliphairlimited/' target='_blank' rel='noopener'>{% render 'icon-instagram' %}</a>
-                  <a href='https://www.facebook.com/Cliphair.Limited' target='_blank' rel='noopener'>{% render 'icon-facebook' %}</a>
-                </p>
-              {% endif %}
+              <div>
+                {% if block.settings.button_text != blank %}
+                  <p>{{ block.settings.button_text }}</p>
+                {% else %}
+                  <p>
+                    <a href='https://www.tiktok.com/@cliphairextensions' target='_blank' rel='noopener'>{% render 'icon-tiktok' %}</a>
+                    <a href='https://www.instagram.com/cliphairlimited/' target='_blank' rel='noopener'>{% render 'icon-instagram' %}</a>
+                    <a href='https://www.facebook.com/Cliphair.Limited' target='_blank' rel='noopener'>{% render 'icon-facebook' %}</a>
+                  </p>
+                {% endif %}
+              </div>
             {%- endif %}
           </div>
         {% endif %}
