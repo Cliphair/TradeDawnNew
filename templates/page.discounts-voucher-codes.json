@@ -46,8 +46,8 @@
       "settings": {
         "max-width": "2560",
         "bg-color": "#ffffff",
-        "desktop-image": "shopify:\/\/shop_images\/discount-page-banner-desktop.webp",
-        "mobile-image": "shopify:\/\/shop_images\/discount-page-banner-mobile.webp",
+        "desktop-image": "shopify://shop_images/discount-page-banner-desktop.webp",
+        "mobile-image": "shopify://shop_images/discount-page-banner-mobile.webp",
         "url": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -73,8 +73,8 @@
         "desktop-p_left": 20,
         "enable_text": true,
         "custom_text": true,
-        "header": "<h2>Cliphair’s <em>Discounts <\/em>& <em>Voucher Codes<\/em><\/h2>",
-        "sub_header": "<p>Get your favourites for less with Cliphair’s <strong>exclusive discounts<\/strong> and <strong>voucher codes!<\/strong> Discover ways to save on everything from Clip In Hair Extensions and Professional Hair Extensions to Haircare and Accessories with our exclusive offers.<\/p><p>Explore the latest discount and voucher codes at Cliphair to receive the best deals on all your hair extension essentials.<\/p><p>Are you a Student or a Blue Light Card holder? Don’t miss out on our exclusive deals for you!<\/p>",
+        "header": "<h2>Cliphair’s <em>Discounts </em>& <em>Voucher Codes</em></h2>",
+        "sub_header": "<p>Get your favourites for less with Cliphair’s <strong>exclusive discounts</strong> and <strong>voucher codes!</strong> Discover ways to save on everything from Clip In Hair Extensions and Professional Hair Extensions to Haircare and Accessories with our exclusive offers.</p><p>Explore the latest discount and voucher codes at Cliphair to receive the best deals on all your hair extension essentials.</p><p>Are you a Student or a Blue Light Card holder? Don’t miss out on our exclusive deals for you!</p>",
         "description": "",
         "read_more": "",
         "text_width": 100,
@@ -111,71 +111,80 @@
         "53a04cb1-e2fe-4228-b6a3-03a7169951f0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discout-page-new-customer.webp",
-            "description": "<p><strong>Sign Up & Save<\/strong><\/p><p>New to Cliphair? Get 10% off your first order when you subscribe. <\/p>",
-            "url": "https:\/\/manage.kmail-lists.com\/subscriptions\/subscribe?a=R8anrR&g=QQ6Dw6",
+            "image": "shopify://shop_images/discout-page-new-customer.webp",
+            "description": "<p><strong>Sign Up & Save</strong></p><p>New to Cliphair? Get 10% off your first order when you subscribe. </p>",
+            "url": "https://manage.kmail-lists.com/subscriptions/subscribe?a=R8anrR&g=QQ6Dw6",
             "button_text": "Sign Up Now"
           }
         },
         "image_zkRi3q": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-rewards.webp",
-            "description": "<p><strong>Rewards<\/strong><\/p><p>Earn Cliphair rewards when you spend to save next time<\/p>",
-            "url": "shopify:\/\/pages\/rewards",
+            "image": "shopify://shop_images/discount-page-rewards.webp",
+            "description": "<p><strong>Rewards</strong></p><p>Earn Cliphair rewards when you spend to save next time</p>",
+            "url": "shopify://pages/rewards",
             "button_text": "Sign Up Now"
           }
         },
         "3441d4ac-6d8e-4b5f-9527-6ba29d88885b": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-free-delivery.webp",
-            "description": "<p><strong>Free Delivery & Returns<\/strong><\/p><p>Free delivery and returns inside the UK for orders over £30. <\/p>",
-            "url": "shopify:\/\/pages\/shipping-information",
+            "image": "shopify://shop_images/discount-page-free-delivery.webp",
+            "description": "<p><strong>Free Delivery & Returns</strong></p><p>Free delivery and returns inside the UK for orders over £30. </p>",
+            "url": "shopify://pages/shipping-information",
             "button_text": "Find Out More"
           }
         },
         "c4ec7fce-508f-4603-9ba8-3e3a54ab7aa9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-blue-light.webp",
-            "description": "<p><strong>Blue Light Card<\/strong><\/p><p>Work for the NHS? Recieve 10% off your order.<\/p>",
-            "url": "shopify:\/\/pages\/blue-light-card",
+            "image": "shopify://shop_images/discount-page-blue-light.webp",
+            "description": "<p><strong>Blue Light Card</strong></p><p>Work for the NHS? Recieve 10% off your order.</p>",
+            "url": "shopify://pages/blue-light-card",
             "button_text": "Shop Discount"
           }
         },
         "image_7YNag7": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-trade.webp",
-            "description": "<p><strong>Trade Account<\/strong><\/p><p>Professional Hair Technician? Sign up for an account for exclusive trade discounts. <\/p>",
-            "url": "https:\/\/cliphairtrade.com\/pages\/trade-account",
+            "image": "shopify://shop_images/discount-page-trade.webp",
+            "description": "<p><strong>Trade Account</strong></p><p>Professional Hair Technician? Sign up for an account for exclusive trade discounts. </p>",
+            "url": "https://cliphairtrade.com/pages/trade-account",
             "button_text": "Sign Up Now"
+          }
+        },
+        "image_PzcXfn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/discount-page-student-discount.webp",
+            "description": "<p><strong>Student Discount</strong></p><p>Still studying? Get 10% off in partnership with Student Beans</p>",
+            "url": "https://www.studentbeans.com/student-discount/uk/cliphair",
+            "button_text": "Shop Discount"
           }
         },
         "image_6THmFq": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-bundle.webp",
-            "description": "<p><strong>Bundles<\/strong><\/p><p>Exclusive bundle deals, save up to 15%! <\/p>",
-            "url": "shopify:\/\/collections\/hair-extensions-bundle",
+            "image": "shopify://shop_images/discount-page-bundle.webp",
+            "description": "<p><strong>Bundles</strong></p><p>Exclusive bundle deals, save up to 15%! </p>",
+            "url": "shopify://collections/hair-extensions-bundle",
             "button_text": "Shop Bundles"
           }
         },
         "image_3YReVU": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-outlet.png",
-            "description": "<p><strong>Outlet<\/strong><\/p><p>Get up to 70% off in our outlet sale! <\/p>",
-            "url": "shopify:\/\/collections\/outlet",
+            "image": "shopify://shop_images/discount-page-outlet.png",
+            "description": "<p><strong>Outlet</strong></p><p>Get up to 70% off in our outlet sale! </p>",
+            "url": "shopify://collections/outlet",
             "button_text": "Find Out More"
           }
         },
         "image_cbm7bJ": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-social-sale.webp",
-            "description": "<p><strong>Social Media Sales<\/strong><\/p><p>Follow our Socials to stay in the loop and access exclusive codes!<\/p>",
+            "image": "shopify://shop_images/discount-page-social-sale.webp",
+            "description": "<p><strong>Social Media Sales</strong></p><p>Follow our Socials to stay in the loop and access exclusive codes!</p>",
             "url": "",
             "button_text": ""
           }
@@ -187,6 +196,7 @@
         "3441d4ac-6d8e-4b5f-9527-6ba29d88885b",
         "c4ec7fce-508f-4603-9ba8-3e3a54ab7aa9",
         "image_7YNag7",
+        "image_PzcXfn",
         "image_6THmFq",
         "image_3YReVU",
         "image_cbm7bJ"
@@ -260,7 +270,7 @@
         "desktop-p_left": 20,
         "enable_text": true,
         "custom_text": true,
-        "header": "<h2>Cant Pay Yet? Spread The Cost With...<\/h2>",
+        "header": "<h2>Cant Pay Yet? Spread The Cost With...</h2>",
         "sub_header": "",
         "description": "",
         "read_more": "",
@@ -314,7 +324,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p><strong>PAYMENT OPTIONS AVAILABLE<\/strong><\/p>"
+            "text": "<p><strong>PAYMENT OPTIONS AVAILABLE</strong></p>"
           }
         }
       },
@@ -349,56 +359,56 @@
         "1006b4c1-4045-4a0f-97fe-da269a9f7293": {
           "type": "press",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/metro.png",
-            "url": "https:\/\/metro.co.uk\/2022\/02\/07\/this-is-how-often-you-should-wash-your-hair-depending-on-hair-type-16061705\/",
+            "logo_img": "shopify://shop_images/metro.png",
+            "url": "https://metro.co.uk/2022/02/07/this-is-how-often-you-should-wash-your-hair-depending-on-hair-type-16061705/",
             "opacity": 7
           }
         },
         "e9e13d97-1495-4259-b857-650ad484dea5": {
           "type": "press",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/marie_claire.png",
-            "url": "https:\/\/www.marieclaire.co.uk\/promotional-feature\/kate-middleton-ponytail-tips-cliphair-760263",
+            "logo_img": "shopify://shop_images/marie_claire.png",
+            "url": "https://www.marieclaire.co.uk/promotional-feature/kate-middleton-ponytail-tips-cliphair-760263",
             "opacity": 8
           }
         },
         "4ef2ff46-1f82-4052-8607-4a0eefee719c": {
           "type": "press",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/grazia.png",
-            "url": "https:\/\/graziadaily.co.uk\/beauty-hair\/hair\/clip-in-ponytail-extensions-uk\/",
+            "logo_img": "shopify://shop_images/grazia.png",
+            "url": "https://graziadaily.co.uk/beauty-hair/hair/clip-in-ponytail-extensions-uk/",
             "opacity": 8
           }
         },
         "062e250e-5b02-45d7-bef8-5a5188e40b59": {
           "type": "press",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/independent.png",
-            "url": "https:\/\/www.independent.co.uk\/extras\/indybest\/fashion-beauty\/best-clip-in-hair-extensions-b1891280.html",
+            "logo_img": "shopify://shop_images/independent.png",
+            "url": "https://www.independent.co.uk/extras/indybest/fashion-beauty/best-clip-in-hair-extensions-b1891280.html",
             "opacity": 9
           }
         },
         "922b7f89-69d6-4aaa-b6a9-5fdd30922f03": {
           "type": "press",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/Readers_Digest.png",
-            "url": "https:\/\/www.readersdigest.co.uk\/lifestyle\/fashion-beauty\/top-5-celebrity-ponytails-and-how-to-create-them",
+            "logo_img": "shopify://shop_images/Readers_Digest.png",
+            "url": "https://www.readersdigest.co.uk/lifestyle/fashion-beauty/top-5-celebrity-ponytails-and-how-to-create-them",
             "opacity": 7
           }
         },
         "dbe97924-fb4d-4171-995e-b296277122da": {
           "type": "press",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/daily_mail.png",
-            "url": "https:\/\/www.dailymail.co.uk\/femail\/article-7553741\/The-10-beauty-fashion-brands-NEED-know.html",
+            "logo_img": "shopify://shop_images/daily_mail.png",
+            "url": "https://www.dailymail.co.uk/femail/article-7553741/The-10-beauty-fashion-brands-NEED-know.html",
             "opacity": 5
           }
         },
         "f297c334-381c-4dbe-bed5-84f2fbc17057": {
           "type": "press",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/thesun.png",
-            "url": "https:\/\/www.thesun.co.uk\/fabulous\/18696203\/hairstyle-according-to-star-sign\/",
+            "logo_img": "shopify://shop_images/thesun.png",
+            "url": "https://www.thesun.co.uk/fabulous/18696203/hairstyle-according-to-star-sign/",
             "opacity": 6
           }
         }
@@ -447,8 +457,8 @@
         "video_3pNdmd": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-video-thumbnail-1.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0a31701439f74877930d69292935606e.mp4",
+            "image": "shopify://shop_images/discount-page-video-thumbnail-1.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/0a31701439f74877930d69292935606e.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -458,8 +468,8 @@
         "video_UAPqBq": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-video-thumbnail-6.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3065629d255044bc8e03f40b647081e5.mp4",
+            "image": "shopify://shop_images/discount-page-video-thumbnail-6.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/3065629d255044bc8e03f40b647081e5.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -469,8 +479,8 @@
         "video_DnDtiR": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-video-thumbnail-5.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/662c8cd62a2c45418d76db03def80aff.mp4",
+            "image": "shopify://shop_images/discount-page-video-thumbnail-5.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/662c8cd62a2c45418d76db03def80aff.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -480,8 +490,8 @@
         "video_4BWWhw": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-video-thumbnail-4.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/09e25e672b1e4770a189ca8d541c910e.mp4",
+            "image": "shopify://shop_images/discount-page-video-thumbnail-4.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/09e25e672b1e4770a189ca8d541c910e.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -491,8 +501,8 @@
         "video_KkCVjd": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-video-thumbnail-3.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7f002ba5f0534cc0ab2a004c50b39ae7.mp4",
+            "image": "shopify://shop_images/discount-page-video-thumbnail-3.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/7f002ba5f0534cc0ab2a004c50b39ae7.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -502,8 +512,8 @@
         "video_8PQD63": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/discount-page-video-thumbnail-2.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/501a9403370349af96c7d0013faffbfa.mp4",
+            "image": "shopify://shop_images/discount-page-video-thumbnail-2.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/501a9403370349af96c7d0013faffbfa.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -527,8 +537,8 @@
         "@media screen and (min-width: 992px) {.section_header > * {margin-bottom: 20px; } .intro_container {margin-bottom: 40px; }}"
       ],
       "settings": {
-        "header": "<h2>See how they <em>wear it<\/em>.<\/h2>",
-        "intro": "<p>Check out how these influencers use their Cliphair extensions to create flawless looks for every occasion!<\/p>",
+        "header": "<h2>See how they <em>wear it</em>.</h2>",
+        "intro": "<p>Check out how these influencers use their Cliphair extensions to create flawless looks for every occasion!</p>",
         "image_orientation": "portrait",
         "title-position": "bottom",
         "text_color": "#6a6a6a",
@@ -575,11 +585,11 @@
       "type": "video_carrousel",
       "disabled": true,
       "custom_css": [
-        ".socila-media-wrapper > a {background: #fefbff; padding: 20px; border-radius: 50%; aspect-ratio: 1\/1; display: inline-block; font-size: unset; line-height: 1; margin: 0 10px;}",
+        ".socila-media-wrapper > a {background: #fefbff; padding: 20px; border-radius: 50%; aspect-ratio: 1/1; display: inline-block; font-size: unset; line-height: 1; margin: 0 10px;}",
         "@media screen and (min-width: 768px) {.socila-media-wrapper > a {padding: 30px; font-size: 40px; margin: 0 15px; }}"
       ],
       "settings": {
-        "header": "<p>Follow Us On<\/p>",
+        "header": "<p>Follow Us On</p>",
         "intro": "",
         "image_orientation": "portrait",
         "title-position": "bottom",
@@ -632,8 +642,8 @@
       "settings": {
         "max-width": "2560",
         "bg-color": "#ffffff",
-        "desktop-image": "shopify:\/\/shop_images\/discount-page-banner-2.webp",
-        "url": "shopify:\/\/pages\/journey",
+        "desktop-image": "shopify://shop_images/discount-page-banner-2.webp",
+        "url": "shopify://pages/journey",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -648,8 +658,8 @@
         "@media screen and (min-width: 992px) {.section_header > * {margin-bottom: 20px; }}"
       ],
       "settings": {
-        "header": "<h2><em>They say about us...<\/em><\/h2>",
-        "intro": "<p>Here’s what hair extensions enthusiasts and stylists say about our products!<\/p>",
+        "header": "<h2><em>They say about us...</em></h2>",
+        "intro": "<p>Here’s what hair extensions enthusiasts and stylists say about our products!</p>",
         "image_orientation": "portrait",
         "title-position": "bottom",
         "text_color": "#6a6a6a",
@@ -709,7 +719,7 @@
       "settings": {
         "max-width": "768",
         "bg-color": "#fefbff",
-        "desktop-image": "shopify:\/\/shop_images\/why-cliphair-shade-fefbff.webp",
+        "desktop-image": "shopify://shop_images/why-cliphair-shade-fefbff.webp",
         "url": "",
         "padding_top": 0,
         "padding_bottom": 0
