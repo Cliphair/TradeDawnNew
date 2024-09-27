@@ -77,6 +77,12 @@
           "settings": {
           }
         },
+        "reward_points_8zVpGp": {
+          "type": "reward-points",
+          "settings": {
+            "page": "rewards-pop-up"
+          }
+        },
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
           "type": "payment_services",
           "settings": {
@@ -145,6 +151,7 @@
         "buy_buttons",
         "share",
         "order_deadline_67UiV7",
+        "reward_points_8zVpGp",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "collapsible-row-0",
         "collapsible-row-1",
@@ -367,7 +374,7 @@
           "settings": {
             "title": "",
             "author": "Kelly Fletcher",
-            "content": "<p>I am pleased to say they were amazing, the conditioner left the extension soft, revived and extremely enhanced, highly recommended and must have product in your hair care routine, I am extremely happy with all the new products of Cliphair in hair care range, as an old customer, I feel honoured that Cliphair selected me for product review.<br/></p>",
+            "content": "<p>The Purple shampoo gave enough tone without staining the extensions, which is a great thing, as with other brands which I use they often leave purple stains on the extensions.</p>",
             "date": "",
             "review-stars": 5
           }
@@ -377,7 +384,7 @@
           "settings": {
             "title": "",
             "author": "Zoe Webbe",
-            "content": "<p>Lovely smell to these products with a great lather despite being sulphate-free. My hair felt really silkyeven after just using these 2 products. I couldn't wait to try the treatment too!<br/></p>",
+            "content": "<p>I felt this could be a little stronger compared to others on the market however can appreciate these working well and not grabbing too much onto extensions. Again, a great lather to it which can sometimes be lacking in other brands.</p>",
             "date": "",
             "review-stars": 5
           }
@@ -386,8 +393,8 @@
           "type": "review",
           "settings": {
             "title": "",
-            "author": "Charlie Upton",
-            "content": "<p>I've Only Got One Word - WOW. The most incredible mask I've ever used! This is a MUST have! To pair with the quench the thirst shampoo & conditioner - this is a staple! I honestly have no idea how I've never used this before - it's incredible! I will NOT live without the mask!</p>",
+            "author": "Alex Gratrick",
+            "content": "<p>For a purple toning shampoo this is a very good alternative to others out there at a much higher price point. I like this on natural hair when the clients toner starts to fade from the salon as an in-between toner/ colouring appointment. ​</p><p>On extensions I wouldn't normally suggest using toning shampoo as they do tend to have a higher amount of product designed to strip to enable to colour molecules to grab the hair (hence the purple/blue tone ). This does seem to be a mild cleanser in that when I have tested this (diluted in water on extensions) this hasn't made the extensions overly dry. ​</p><p>The smell isn't overpowering its very mild yet clean which I like. And the general shelf life of the anti brass it gives tends to last between 3 and 5 normal washes which is lovely as you do not want to be using this very often on extensions. ​</p>",
             "date": "",
             "review-stars": 5
           }
@@ -396,38 +403,8 @@
           "type": "review",
           "settings": {
             "title": "",
-            "author": "Alex Gratrick",
-            "content": "<p>The conditioner is lovely and thick and even on my hair having so much I only use around a 50p piece size which also makes this incredible value for money. The only thing I will say - and this is completely personal preference I do wish the Scent in these products was stronger it's got a beautiful coconut / shea type Scent to it but unfortunately after blow drying the Scent is gone from my hair (though it's clean so I can't complain!) That being said as that is my only criticism, I would repurchase this!</p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_gzjqrn": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Zoe Webbe",
-            "content": "<p>Lovely smell again. My hair felt lush afterwards and even when coming to blow-dry it, it seemed to dry smoother than ever, Overall, generous sized products and love how on brand the packaging is. </p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_TDT8PX": {
-          "type": "review",
-          "settings": {
-            "title": "",
             "author": "Charlie Upton",
-            "content": "<p>Honestly AMAZING! Smell's incredible also! Lavers Beautifully which I massively struggle with due to wearing extensions and no products leave my hair feeling clean. So this is a must have for me for anyone wearing extensions!<br/></p>",
-            "date": "",
-            "review-stars": 5
-          }
-        },
-        "review_hqYfLg": {
-          "type": "review",
-          "settings": {
-            "title": "",
-            "author": "Kelly Fletcher",
-            "content": "<p>Thank you for the complimentary products it was a pleasure to trail them for you. I am pleased to say they were amazing; The hair mask was extremely silky and must recommend product, I am truly in love with this product and its packaging. </p>",
+            "content": "<p>I've Only Used It A Few Times & Again Wow! Neutralising The Yellow IN SECONDS! And leaves the most ashiest, gorgeous blonde you've ever seen! For any blonde hair or extension wearers this is my top recommendation for them!</p>",
             "date": "",
             "review-stars": 5
           }
@@ -437,10 +414,7 @@
         "review_wfgLE3",
         "review_xbHz9r",
         "review_mwrKTh",
-        "review_3JUaj7",
-        "review_gzjqrn",
-        "review_TDT8PX",
-        "review_hqYfLg"
+        "review_3JUaj7"
       ],
       "settings": {
         "modal-id": "quench-the-thirst-reviews-modal",
