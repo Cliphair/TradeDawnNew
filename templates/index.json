@@ -32,9 +32,9 @@
         "slide_nnGry6": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/homepage-banner-2024-mobile.webp",
-            "image_desktop": "shopify:\/\/shop_images\/homepage-banner-2024-desktop.webp",
-            "image_url": "shopify:\/\/pages\/hair-extensions-by-colour",
+            "image": "shopify://shop_images/new-website-mobile-banner.webp",
+            "image_desktop": "shopify://shop_images/new-website-desktop-banner.webp",
+            "image_url": "shopify://pages/hair-extensions-by-colour",
             "heading": "",
             "heading_size": "h2",
             "subheading": "",
@@ -53,9 +53,9 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/bridal-campaign-mobile-banner.webp",
-            "image_desktop": "shopify:\/\/shop_images\/bridal-campaign-desktop-banner.webp",
-            "image_url": "shopify:\/\/pages\/cliphair-bridal-hair-extensions",
+            "image": "shopify://shop_images/bridal-campaign-mobile-banner.webp",
+            "image_desktop": "shopify://shop_images/bridal-campaign-desktop-banner.webp",
+            "image_url": "shopify://pages/cliphair-bridal-hair-extensions",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -93,13 +93,13 @@
           "type": "element",
           "settings": {
             "text_label": "FREE VIRTUAL HAIR COLOUR MATCHING",
-            "link": ""
+            "link": "shopify://pages/colour-matching-service"
           }
         },
         "element_PzXtwm": {
           "type": "element",
           "settings": {
-            "text_label": "PAY YOUR WAY WITH CLEARPAY & KLARNA",
+            "text_label": "PAY YOUR WAY WITH <a href=\"/pages/clearpay-hair-extensions\" title=\"Clearpay\">CLEARPAY</a> & <a href=\"/pages/klarna-faqs\" title=\"Klarna FAQs | Hair Extensions Klarna\">KLARNA</a>",
             "link": ""
           }
         },
@@ -107,7 +107,7 @@
           "type": "element",
           "settings": {
             "text_label": "FREE UK EXPRESS DELIVERY OVER £75",
-            "link": ""
+            "link": "shopify://pages/shipping-information"
           }
         }
       },
@@ -115,6 +115,10 @@
         "element_zx3LNE",
         "element_PzXtwm",
         "element_h6YLkb"
+      ],
+      "custom_css": [
+        "a {color: inherit; text-decoration: none;}",
+        "a:hover{text-decoration: underline;}"
       ],
       "settings": {
         "text_size": "p",
@@ -138,7 +142,7 @@
             "label": "",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
-            "link": "shopify:\/\/pages\/colour-matching-service",
+            "link": "shopify://pages/colour-matching-service",
             "button_style_secondary": false,
             "circle_images": true
           }
@@ -155,7 +159,7 @@
       "settings": {
         "title": "Choose By Hair Colour…",
         "heading_size": "h1",
-        "introduction": "<p>Browse over <strong>70+ stunning shades<\/strong>, including a wide range of single colours, highlights, balayage and ombre, and our funky shade collection.<\/p>",
+        "introduction": "<p>Browse over <strong>70+ stunning shades</strong>, including a wide range of single colours, highlights, balayage and ombre, and our funky shade collection.</p>",
         "text_allignment": "left",
         "image_ratio": "square",
         "hide_card_arrow": true,
@@ -208,7 +212,7 @@
       "settings": {
         "title": "Choose By Collection...",
         "heading_size": "h1",
-        "introduction": "<p>Explore our wide range of hair extensions, hair care goodies, professional tools, and styling must haves —all waiting for you here at Cliphair!<\/p>",
+        "introduction": "<p>Explore our wide range of hair extensions, hair care goodies, professional tools, and styling must haves —all waiting for you here at Cliphair!</p>",
         "text_allignment": "left",
         "image_ratio": "square",
         "hide_card_arrow": true,
@@ -236,7 +240,7 @@
         "text_wgJyct": {
           "type": "text",
           "settings": {
-            "text": "<p>Take our interactive quiz and find out which hair extensions are best for you!<\/p>",
+            "text": "<p>Take our interactive quiz and find out which hair extensions are best for you!</p>",
             "read-more_text": ""
           }
         },
@@ -244,7 +248,7 @@
           "type": "button",
           "settings": {
             "button_label": "TAKE QUIZ NOW",
-            "button_link": "shopify:\/\/pages\/journey",
+            "button_link": "shopify://pages/journey",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -279,21 +283,21 @@
           "type": "answer",
           "settings": {
             "id": "thin",
-            "answer": "THIN\/FINE"
+            "answer": "THIN/FINE"
           }
         },
         "answer_fHiVMK": {
           "type": "answer",
           "settings": {
             "id": "medium",
-            "answer": "MEDIUM\/AVERAGE"
+            "answer": "MEDIUM/AVERAGE"
           }
         },
         "answer_WGKJxB": {
           "type": "answer",
           "settings": {
             "id": "thick",
-            "answer": "THICK\/VERYTHICK"
+            "answer": "THICK/VERYTHICK"
           }
         }
       },
@@ -306,7 +310,7 @@
       "settings": {
         "id": "journey",
         "page": "journey",
-        "question": "What is <em>your hair<\/em> type?",
+        "question": "What is <em>your hair</em> type?",
         "heading_size": "h2",
         "text_allignment": "left",
         "image_ratio": "portrait",
@@ -334,14 +338,14 @@
         "text_Dn3thJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Don't just take our word for it, see our extensions in real life for yourself and become inspired by our amazing customers! <\/p>"
+            "text": "<p>Don't just take our word for it, see our extensions in real life for yourself and become inspired by our amazing customers! </p>"
           }
         },
         "button_DMUj9Q": {
           "type": "button",
           "settings": {
             "button_label": "FIND YOUR LOOK",
-            "button_link": "shopify:\/\/pages\/lookbook",
+            "button_link": "shopify://pages/lookbook",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -351,73 +355,73 @@
         "image_CXggPb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image1.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image1.webp"
           }
         },
         "image_wE8M3e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image2.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image2.webp"
           }
         },
         "image_XmkpVj": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image3.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image3.webp"
           }
         },
         "image_jLnG3R": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image4.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image4.webp"
           }
         },
         "image_MDRm6y": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image5.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image5.webp"
           }
         },
         "image_p4EX93": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image6.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image6.webp"
           }
         },
         "image_8zwzqh": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image7.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image7.webp"
           }
         },
         "image_ibPek8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image8.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image8.webp"
           }
         },
         "image_Gyx3yL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image9.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image9.webp"
           }
         },
         "image_EkrNPy": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image10.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image10.webp"
           }
         },
         "image_QJdHcj": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image11.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image11.webp"
           }
         },
         "image_piJ8Qx": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lookbook-section-bg-image12.webp"
+            "image": "shopify://shop_images/lookbook-section-bg-image12.webp"
           }
         }
       },
@@ -488,81 +492,81 @@
         "element_3Vf96V": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Grazia_Logo.webp",
+            "image": "shopify://shop_images/Grazia_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/graziadaily.co.uk\/beauty-hair\/hair\/clip-in-ponytail-extensions-uk\/"
+            "link": "https://graziadaily.co.uk/beauty-hair/hair/clip-in-ponytail-extensions-uk/"
           }
         },
         "element_pM9XaE": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Marie_Claire_Logo.webp",
+            "image": "shopify://shop_images/Marie_Claire_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/www.marieclaire.co.uk\/promotional-feature\/kate-middleton-ponytail-tips-cliphair-760263"
+            "link": "https://www.marieclaire.co.uk/promotional-feature/kate-middleton-ponytail-tips-cliphair-760263"
           }
         },
         "element_8H4aiQ": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cosmopolitan_Logo.webp",
+            "image": "shopify://shop_images/Cosmopolitan_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/www.cosmopolitan.com\/uk\/beauty-hair\/hair\/a44710529\/best-clip-in-hair-extensions\/"
+            "link": "https://www.cosmopolitan.com/uk/beauty-hair/hair/a44710529/best-clip-in-hair-extensions/"
           }
         },
         "element_F6bbAV": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/The_Sun_Logo.webp",
+            "image": "shopify://shop_images/The_Sun_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/www.thesun.co.uk\/fabulous\/18696203\/hairstyle-according-to-star-sign\/"
+            "link": "https://www.thesun.co.uk/fabulous/18696203/hairstyle-according-to-star-sign/"
           }
         },
         "element_WBBU3B": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Daily_Mail_Logo.webp",
+            "image": "shopify://shop_images/Daily_Mail_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/www.dailymail.co.uk\/femail\/article-7553741\/The-10-beauty-fashion-brands-NEED-know.html"
+            "link": "https://www.dailymail.co.uk/femail/article-7553741/The-10-beauty-fashion-brands-NEED-know.html"
           }
         },
         "element_dc3A6R": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Hair_Dresser_Journal_Logo_V3.png",
+            "image": "shopify://shop_images/Hair_Dresser_Journal_Logo_V3.png",
             "text_label": "",
-            "link": "https:\/\/mag.hji.co.uk\/articles\/255164?article=51-1"
+            "link": "https://mag.hji.co.uk/articles/255164?article=51-1"
           }
         },
         "element_KKmrXf": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Salon_Logo.webp",
+            "image": "shopify://shop_images/Salon_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/thesalonmagazine.co.uk\/cliphair-more-than-hair-extensions\/"
+            "link": "https://thesalonmagazine.co.uk/cliphair-more-than-hair-extensions/"
           }
         },
         "element_Q94Hw3": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Reader_s_Digest_Logo.webp",
+            "image": "shopify://shop_images/Reader_s_Digest_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/www.readersdigest.co.uk\/lifestyle\/fashion-beauty\/top-5-celebrity-ponytails-and-how-to-create-them"
+            "link": "https://www.readersdigest.co.uk/lifestyle/fashion-beauty/top-5-celebrity-ponytails-and-how-to-create-them"
           }
         },
         "element_NaLGwh": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Independent_Logo.webp",
+            "image": "shopify://shop_images/Independent_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/www.independent.co.uk\/extras\/indybest\/fashion-beauty\/best-clip-in-hair-extensions-b1891280.html"
+            "link": "https://www.independent.co.uk/extras/indybest/fashion-beauty/best-clip-in-hair-extensions-b1891280.html"
           }
         },
         "element_hBXMTc": {
           "type": "element",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Metro_Logo.webp",
+            "image": "shopify://shop_images/Metro_Logo.webp",
             "text_label": "",
-            "link": "https:\/\/metro.co.uk\/2022\/02\/07\/this-is-how-often-you-should-wash-your-hair-depending-on-hair-type-16061705\/"
+            "link": "https://metro.co.uk/2022/02/07/this-is-how-often-you-should-wash-your-hair-depending-on-hair-type-16061705/"
           }
         }
       },
@@ -601,8 +605,8 @@
           "type": "promise",
           "settings": {
             "block-title": "ADD VOLUME",
-            "block-introduction": "<p>More thickness, more bounce, more dimension.<\/p>",
-            "block-image": "shopify:\/\/shop_images\/placeholder_image.webp",
+            "block-introduction": "<p>More thickness, more bounce, more dimension.</p>",
+            "block-image": "shopify://shop_images/placeholder_image.webp",
             "circle-images": true
           }
         },
@@ -610,8 +614,8 @@
           "type": "promise",
           "settings": {
             "block-title": "ADD LENGTH",
-            "block-introduction": "<p>Precious inches for your hair.<\/p>",
-            "block-image": "shopify:\/\/shop_images\/placeholder_image.webp",
+            "block-introduction": "<p>Precious inches for your hair.</p>",
+            "block-image": "shopify://shop_images/placeholder_image.webp",
             "circle-images": true
           }
         }
@@ -623,7 +627,7 @@
       "disabled": true,
       "settings": {
         "title": "THE CLIPHAIR QUALITY PROMISE",
-        "introduction": "<p>100% Remy Human Hair, no nonsense. We give you exactly what you see: luscious tresses, fast-responsive customer service, and daily inspiration on our channels – for you to purchase with confidence and recreate your favourite looks with our hair extensions.<\/p>",
+        "introduction": "<p>100% Remy Human Hair, no nonsense. We give you exactly what you see: luscious tresses, fast-responsive customer service, and daily inspiration on our channels – for you to purchase with confidence and recreate your favourite looks with our hair extensions.</p>",
         "heading_size": "h1",
         "text_allignment": "left",
         "image_ratio": "adapt",
@@ -642,9 +646,9 @@
         "d97a452e-2464-483e-bcd5-f1846fb61062": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Best of Clip Ins.mp4",
+            "video": "shopify://files/videos/Best of Clip Ins.mp4",
             "video_url": "",
-            "cover_image": "shopify:\/\/shop_images\/Best_of_Clip_Ins_Thumbnail.webp",
+            "cover_image": "shopify://shop_images/Best_of_Clip_Ins_Thumbnail.webp",
             "title": "Clip In Extension Tutorials",
             "description": "Clip In Extension Tutorials"
           }
@@ -652,9 +656,9 @@
         "c75280b4-0487-4063-9610-064863363d62": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Best of Permanent.mp4",
+            "video": "shopify://files/videos/Best of Permanent.mp4",
             "video_url": "",
-            "cover_image": "shopify:\/\/shop_images\/Best_of_Permanent_Thumbnail.webp",
+            "cover_image": "shopify://shop_images/Best_of_Permanent_Thumbnail.webp",
             "title": "Permanent Extension Tutorials ",
             "description": "Permanent Extensions Tutorials"
           }
@@ -662,9 +666,9 @@
         "video_EWWLYJ": {
           "type": "video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Best of Bridal.mp4",
+            "video": "shopify://files/videos/Best of Bridal.mp4",
             "video_url": "",
-            "cover_image": "shopify:\/\/shop_images\/Best_of_Bridal_Thumbnail.webp",
+            "cover_image": "shopify://shop_images/Best_of_Bridal_Thumbnail.webp",
             "title": "Bridal Tutorials",
             "description": "Bridal Tutorials"
           }
@@ -682,9 +686,9 @@
       "settings": {
         "title": "Hair Tutorial Videos",
         "heading_size": "h1",
-        "introduction": "<p>Dive into our hair extension tutorial videos for endless styling ideas, step-by-step application guides, and expert extension advice! <\/p>",
+        "introduction": "<p>Dive into our hair extension tutorial videos for endless styling ideas, step-by-step application guides, and expert extension advice! </p>",
         "button_label": "VIEW VIDEO GALLERY",
-        "link": "shopify:\/\/pages\/video-guides",
+        "link": "shopify://pages/video-guides",
         "button_style_secondary": false,
         "text_allignment": "center",
         "image_ratio": "portrait",
@@ -705,104 +709,104 @@
         "image_fDTmfe": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-9.webp",
-            "text_label": "<p>@nicolacoughlan styled by @halleybrisker for SKIMS<\/p><p><a href=\"\/products\/remy-royale-seamless-clip-ins-16-60\" title=\"Barbie Blonde (#16\/60) Double Drawn Seamless Clip In Hair Extensions\">22\" Barbie Blonde Double Drawn Seamless Clip In Hair Extensions<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-9.webp",
+            "text_label": "<p>@nicolacoughlan styled by @halleybrisker for SKIMS</p><p><a href=\"/products/remy-royale-seamless-clip-ins-16-60\" title=\"Barbie Blonde (#16/60) Double Drawn Seamless Clip In Hair Extensions\">22\" Barbie Blonde Double Drawn Seamless Clip In Hair Extensions</a></p>",
             "link": ""
           }
         },
         "image_FNDhT7": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-10.webp",
-            "text_label": "<p>@juliannemoore styled by @halleybrisker<\/p><p><a href=\"\/products\/seamless-clip-in-hair-extensions-double-drawn-light-auburn\" title=\"Light Auburn (#30) Double Drawn Seamless Clip In Hair Extensions\">22\" Light Auburn Double Drawn Seamless Clip In Hair Extenions<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-10.webp",
+            "text_label": "<p>@juliannemoore styled by @halleybrisker</p><p><a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-light-auburn\" title=\"Light Auburn (#30) Double Drawn Seamless Clip In Hair Extensions\">22\" Light Auburn Double Drawn Seamless Clip In Hair Extenions</a></p>",
             "link": ""
           }
         },
         "image_C8JtLM": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-11.webp",
-            "text_label": "<p>@ekinsuofficial styled by @leahsmithhair<\/p><p><a href=\"\/products\/double-wefted-set-clip-in-hair-extensions-medium-brown-4\" title=\"Medium Brown (#4) Double Wefted Full Head Clip In Hair Extensions\">20\" Medium Brown Double Weft Clip In Hair Extensions<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-11.webp",
+            "text_label": "<p>@ekinsuofficial styled by @leahsmithhair</p><p><a href=\"/products/double-wefted-set-clip-in-hair-extensions-medium-brown-4\" title=\"Medium Brown (#4) Double Wefted Full Head Clip In Hair Extensions\">20\" Medium Brown Double Weft Clip In Hair Extensions</a></p>",
             "link": ""
           }
         },
         "image_gkxjfU": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-12.webp",
-            "text_label": "<p>@poppydelevingne styled by @kjfowles<\/p><p><a href=\"\/products\/seamless-clip-in-hair-extensions-double-drawn-lightest-blonde\" title=\"Lightest Blonde (#60) Double Drawn Seamless Clip In Hair Extensions\">22\" Lightest Blonde Seamless Clip In Hair Extensions<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-12.webp",
+            "text_label": "<p>@poppydelevingne styled by @kjfowles</p><p><a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-lightest-blonde\" title=\"Lightest Blonde (#60) Double Drawn Seamless Clip In Hair Extensions\">22\" Lightest Blonde Seamless Clip In Hair Extensions</a></p>",
             "link": ""
           }
         },
         "image_fGPUME": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-13.webp",
-            "text_label": "<p>@ameliamarni styled by @leahsmithhair<\/p><p><a href=\"\/products\/remy-royale-seamless-clip-ins-dark-espresso-melt\" title=\"Espresso Melt Balayage Double Drawn Seamless Clip In Hair Extensions\">20\" Espresso Melt Balayage Double Drawn Seamless Clip In Hair Extensions<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-13.webp",
+            "text_label": "<p>@ameliamarni styled by @leahsmithhair</p><p><a href=\"/products/remy-royale-seamless-clip-ins-dark-espresso-melt\" title=\"Espresso Melt Balayage Double Drawn Seamless Clip In Hair Extensions\">20\" Espresso Melt Balayage Double Drawn Seamless Clip In Hair Extensions</a></p>",
             "link": ""
           }
         },
         "image_4bXD9L": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-1.webp",
-            "text_label": "<p>Courtney Love styled by @peteburkill<\/p><p><a href=\"\/products\/double-wefted-set-clip-in-hair-extensions-bleach-blonde-613\" title=\"Double Wefted Full Head Remy Clip in Human Hair Extensions - Bleach Blonde (#613)\">20\" Double Wefted Clip Ins in shade Bleach Blonde<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-1.webp",
+            "text_label": "<p>Courtney Love styled by @peteburkill</p><p><a href=\"/products/double-wefted-set-clip-in-hair-extensions-bleach-blonde-613\" title=\"Double Wefted Full Head Remy Clip in Human Hair Extensions - Bleach Blonde (#613)\">20\" Double Wefted Clip Ins in shade Bleach Blonde</a></p>",
             "link": ""
           }
         },
         "image_bRzTFF": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-2.webp",
-            "text_label": "<p>@danielle_harold styled by @hairbyjaayyy<\/p><p><a href=\"\/products\/ice-blonde-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Ice Blonde Ultra-Volume Clip In Full Head Set (240-300G)\">26” Ultra Volume Clip Ins in shade Ice Blonde<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-2.webp",
+            "text_label": "<p>@danielle_harold styled by @hairbyjaayyy</p><p><a href=\"/products/ice-blonde-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Ice Blonde Ultra-Volume Clip In Full Head Set (240-300G)\">26” Ultra Volume Clip Ins in shade Ice Blonde</a></p>",
             "link": ""
           }
         },
         "image_eLKDPX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-3.webp",
-            "text_label": "<p>@chloegshore<\/p><p><a href=\"\/products\/nano-ring-hair-extensions-double-drawn-brown-blonde-mix-18-613\" title=\"Biscuit Blondey (#18\/613) Nano Ring Hair Extensions\">24” Remy Royale Nano Rings in shade Biscuit Blondey<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-3.webp",
+            "text_label": "<p>@chloegshore</p><p><a href=\"/products/nano-ring-hair-extensions-double-drawn-brown-blonde-mix-18-613\" title=\"Biscuit Blondey (#18/613) Nano Ring Hair Extensions\">24” Remy Royale Nano Rings in shade Biscuit Blondey</a></p>",
             "link": ""
           }
         },
         "image_hdRCk8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-4.webp",
-            "text_label": "<p>@gracebeverley styled by @joekelllz<\/p><p><a href=\"\/products\/blonde-mix-16-60-clip-in-ponytail-extensions\" title=\"Barbie Blonde (#16\/60) Straight Up Wrap Around Ponytail Extension\">20” Wrap Around Ponytailin shade Barbie Blonde<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-4.webp",
+            "text_label": "<p>@gracebeverley styled by @joekelllz</p><p><a href=\"/products/blonde-mix-16-60-clip-in-ponytail-extensions\" title=\"Barbie Blonde (#16/60) Straight Up Wrap Around Ponytail Extension\">20” Wrap Around Ponytailin shade Barbie Blonde</a></p>",
             "link": ""
           }
         },
         "image_E7dnRR": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-5.webp",
-            "text_label": "<p>@talliastormstyled by @leahsmithhair_<\/p><p><a href=\"\/products\/double-wefted-full-head-remy-clip-in-human-hair-extensions-barbie-blonde-16-60\" title=\"Double Wefted Full Head Remy Clip in Human Hair Extensions - Barbie Blonde (#16\/60)\">Double Wefted Clip Insin shade Barbie Blonde<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-5.webp",
+            "text_label": "<p>@talliastormstyled by @leahsmithhair_</p><p><a href=\"/products/double-wefted-full-head-remy-clip-in-human-hair-extensions-barbie-blonde-16-60\" title=\"Double Wefted Full Head Remy Clip in Human Hair Extensions - Barbie Blonde (#16/60)\">Double Wefted Clip Insin shade Barbie Blonde</a></p>",
             "link": ""
           }
         },
         "image_UQLB3b": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-6.webp",
-            "text_label": "<p>@lizziecundystyled by @kbhairextensions<\/p><p><a href=\"\/collections\/remy-royale-tape-in-extensions\" title=\"High Quality Remy Royale Tape In Hair Extensions\">20” Remy Royale Tapes in shade Hazelnut Brondie, Medium Brown & Light Brown<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-6.webp",
+            "text_label": "<p>@lizziecundystyled by @kbhairextensions</p><p><a href=\"/collections/remy-royale-tape-in-extensions\" title=\"High Quality Remy Royale Tape In Hair Extensions\">20” Remy Royale Tapes in shade Hazelnut Brondie, Medium Brown & Light Brown</a></p>",
             "link": ""
           }
         },
         "image_XVckgU": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-7.webp",
-            "text_label": "<p>@bellehassan<\/p><p><a href=\"\/products\/remy-royale-seamless-clip-ins-soft-bronze\" title=\"Soft Bronze Balayage Double Drawn Seamless Clip In Hair Extensions\">20” Seamless Clip Insin shade Soft Bronze Balayage<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-7.webp",
+            "text_label": "<p>@bellehassan</p><p><a href=\"/products/remy-royale-seamless-clip-ins-soft-bronze\" title=\"Soft Bronze Balayage Double Drawn Seamless Clip In Hair Extensions\">20” Seamless Clip Insin shade Soft Bronze Balayage</a></p>",
             "link": ""
           }
         },
         "image_LDcWRQ": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/as-seen-on-image-8.webp",
-            "text_label": "<p>@harley_brash<\/p><p><a href=\"\/products\/seamless-clip-in-hair-extensions-double-drawn-blondeme\" title=\"BlondeMe (#60\/SS) Double Drawn Seamless Clip In Hair Extensions\">22” Seamless Clip Ins in shadeBlonde Me<\/a><\/p>",
+            "image": "shopify://shop_images/as-seen-on-image-8.webp",
+            "text_label": "<p>@harley_brash</p><p><a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-blondeme\" title=\"BlondeMe (#60/SS) Double Drawn Seamless Clip In Hair Extensions\">22” Seamless Clip Ins in shadeBlonde Me</a></p>",
             "link": ""
           }
         }
@@ -828,7 +832,7 @@
       "settings": {
         "title": "As Seen On",
         "heading_size": "h1",
-        "introduction": "<p>Our hair in the spotlight: Browse some of the best Cliphair looks worn by your favourite celebs! <\/p>",
+        "introduction": "<p>Our hair in the spotlight: Browse some of the best Cliphair looks worn by your favourite celebs! </p>",
         "text_allignment": "center",
         "columns_desktop": 4,
         "swipe_on_desktop": true,
@@ -850,7 +854,7 @@
       "settings": {
         "heading": "The Blog Spot",
         "heading_size": "h1",
-        "introduction": "<p>For the latest haircare tips, top trends and more, browse our blog categories and Hair Extensions Bible for everything you need to know about hair and extensions! <\/p>",
+        "introduction": "<p>For the latest haircare tips, top trends and more, browse our blog categories and Hair Extensions Bible for everything you need to know about hair and extensions! </p>",
         "tags_size": "h4",
         "text_alignment": "center",
         "blog": "hair-blog",
@@ -930,8 +934,8 @@
         "47ed8938-167c-4f51-a079-56b352d27b43": {
           "type": "text",
           "settings": {
-            "text": "<p>With over 15 years industry experience,  Cliphair has become the UK’s leading Remy Human Hair extension supplier, with hundreds of thousands of digital shoppers all over the world. From <a href=\"https:\/\/www.cliphair.co.uk\/collections\/clip-in-hair-extensions\" title=\"Clip In collection page\">Clip Ins<\/a> and <a href=\"https:\/\/www.cliphair.co.uk\/collections\/tape-in-hair-extensions\" title=\"Tape In collection page\">Tape In Extensions<\/a> to <a href=\"https:\/\/www.cliphair.co.uk\/collections\/micro-ring-loop-hair-extensions\" title=\"Micro Ring hair extension collection page\">Permanent Micro Rings<\/a>, <a href=\"https:\/\/www.cliphair.co.uk\/collections\/one-piece-clip-in-hair-extensions\" title=\"One Piece hair extension collection page\">One Pieces<\/a> and <a href=\"https:\/\/www.cliphair.co.uk\/collections\/clip-in-ponytail-extensions\" title=\"Ponytail collection page\">Ponytail Extensions<\/a>, we are without doubt the no. 1 premium hair extension seller on the market.<\/p>",
-            "read-more_text": "<p>If you’re new to wearing hair extensions and want to take the leap, you can learn everything you need to know about choosing and purchasing extensions in our <a href=\"https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/hair-extension-buying-guide-and-hair-glossary\" title=\"Cliphair: Hair Extension Buying Guide & Glossary\">Ultimate Buying Guide<\/a>. For application and maintenance advice, you can also read our <a href=\"https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/how-to-look-after-hair-extensions-ultimate-care-guide\" title=\"Cliphair Guides: How To Look After Hair Extensions\">Hair Extension Care Guide<\/a>.<\/p><p>With a wide, stunning <a href=\"https:\/\/www.cliphair.co.uk\/pages\/hair-extensions-by-colour\" title=\"Hair Colour Chart\">range of shades<\/a>, our premium Remy Hair Extensions can be delivered straight to your door, 7 days a week – no matter where you are. Experience unmatched shine, volume and versatility with our 100% real human hair extensions made from the best quality Remy hair. Choose luxury with Cliphair!<\/p>"
+            "text": "<p>With over 15 years industry experience,  Cliphair has become the UK’s leading Remy Human Hair extension supplier, with hundreds of thousands of digital shoppers all over the world. From <a href=\"https://www.cliphair.co.uk/collections/clip-in-hair-extensions\" title=\"Clip In collection page\">Clip Ins</a> and <a href=\"https://www.cliphair.co.uk/collections/tape-in-hair-extensions\" title=\"Tape In collection page\">Tape In Extensions</a> to <a href=\"https://www.cliphair.co.uk/collections/micro-ring-loop-hair-extensions\" title=\"Micro Ring hair extension collection page\">Permanent Micro Rings</a>, <a href=\"https://www.cliphair.co.uk/collections/one-piece-clip-in-hair-extensions\" title=\"One Piece hair extension collection page\">One Pieces</a> and <a href=\"https://www.cliphair.co.uk/collections/clip-in-ponytail-extensions\" title=\"Ponytail collection page\">Ponytail Extensions</a>, we are without doubt the no. 1 premium hair extension seller on the market.</p>",
+            "read-more_text": "<p>If you’re new to wearing hair extensions and want to take the leap, you can learn everything you need to know about choosing and purchasing extensions in our <a href=\"https://www.cliphair.co.uk/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary\" title=\"Cliphair: Hair Extension Buying Guide & Glossary\">Ultimate Buying Guide</a>. For application and maintenance advice, you can also read our <a href=\"https://www.cliphair.co.uk/blogs/hair-blog/how-to-look-after-hair-extensions-ultimate-care-guide\" title=\"Cliphair Guides: How To Look After Hair Extensions\">Hair Extension Care Guide</a>.</p><p>With a wide, stunning <a href=\"https://www.cliphair.co.uk/pages/hair-extensions-by-colour\" title=\"Hair Colour Chart\">range of shades</a>, our premium Remy Hair Extensions can be delivered straight to your door, 7 days a week – no matter where you are. Experience unmatched shine, volume and versatility with our 100% real human hair extensions made from the best quality Remy hair. Choose luxury with Cliphair!</p>"
           }
         }
       },
@@ -962,7 +966,7 @@
           "settings": {
             "heading": "What does Remy Hair Extensions mean? ",
             "icon": "none",
-            "row_content": "<p>Remy Hair Extensions are the best quality Real Human Hair Extensions available. All the hair is guaranteed to have intact cuticles that are all aligned in one direction to increase longevity, shine and manageability. Insist on Remy hair if you want to look your best!<\/p>",
+            "row_content": "<p>Remy Hair Extensions are the best quality Real Human Hair Extensions available. All the hair is guaranteed to have intact cuticles that are all aligned in one direction to increase longevity, shine and manageability. Insist on Remy hair if you want to look your best!</p>",
             "page": ""
           }
         },
@@ -971,7 +975,7 @@
           "settings": {
             "heading": "How do I know which Real Hair Extension is best for my hair type?",
             "icon": "none",
-            "row_content": "<p>This will depend on what you wish to achieve with real human hair extensions and how you integrate them into your lifestyle. Our Cliphair <a href=\"\/pages\/contact-us\" title=\"Contact Us\">customer service team<\/a> are always on hand to help you make the right hair extension choice. You can find everything you need to know in our <a href=\"\/blogs\/hair-blog\/hair-extension-buying-guide-and-hair-glossary\" title=\"Buying Hair Extensions: Everything You Need To Know\">Ultimate Buying Guide<\/a> which includes recommendations for all hair types and concerns such as thin, thick, curly, short or straight hair.   <\/p>",
+            "row_content": "<p>This will depend on what you wish to achieve with real human hair extensions and how you integrate them into your lifestyle. Our Cliphair <a href=\"/pages/contact-us\" title=\"Contact Us\">customer service team</a> are always on hand to help you make the right hair extension choice. You can find everything you need to know in our <a href=\"/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary\" title=\"Buying Hair Extensions: Everything You Need To Know\">Ultimate Buying Guide</a> which includes recommendations for all hair types and concerns such as thin, thick, curly, short or straight hair.   </p>",
             "page": ""
           }
         },
@@ -980,7 +984,7 @@
           "settings": {
             "heading": "Can you curl or straighten Cliphair Real Human Hair Extensions?",
             "icon": "none",
-            "row_content": "<p>Yes, you can curl, wave, straighten and heat style your extensions just like your own hair as they are made from 100% Remy human hair. Just remember to always protect your extensions with <a href=\"\/products\/cliphair-heat-spray\" title=\"Hair Extension Heat Protection Spray\">Cliphair’s Heat Protection Spray<\/a>. <\/p>",
+            "row_content": "<p>Yes, you can curl, wave, straighten and heat style your extensions just like your own hair as they are made from 100% Remy human hair. Just remember to always protect your extensions with <a href=\"/products/cliphair-heat-spray\" title=\"Hair Extension Heat Protection Spray\">Cliphair’s Heat Protection Spray</a>. </p>",
             "page": ""
           }
         },
@@ -989,7 +993,7 @@
           "settings": {
             "heading": "How long do real human hair extensions usually last?",
             "icon": "none",
-            "row_content": "<p>The longevity of hair extensions is influenced by factors such as the quality of the hair, the method of installation, how well they are cared for, and how often they are used. Clip-ins tend to last 12-18 months with good care, whereas permanent extensions should be removed and reinstalled every 6-8 weeks, but the hair can last up to a year if looked after properly. For more information, take a look at our dedicated blog “<a href=\"\/blogs\/hair-blog\/ever-wondered-how-long-do-hair-extensions-last\" title=\"Ever Wondered How Long Do Hair Extensions Last?\">How long do hair extensions last?<\/a>”.<\/p>",
+            "row_content": "<p>The longevity of hair extensions is influenced by factors such as the quality of the hair, the method of installation, how well they are cared for, and how often they are used. Clip-ins tend to last 12-18 months with good care, whereas permanent extensions should be removed and reinstalled every 6-8 weeks, but the hair can last up to a year if looked after properly. For more information, take a look at our dedicated blog “<a href=\"/blogs/hair-blog/ever-wondered-how-long-do-hair-extensions-last\" title=\"Ever Wondered How Long Do Hair Extensions Last?\">How long do hair extensions last?</a>”.</p>",
             "page": ""
           }
         }
@@ -1019,7 +1023,7 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "button_label": "VIEW MORE FAQ'S",
-        "link": "shopify:\/\/pages\/faqs",
+        "link": "shopify://pages/faqs",
         "button_style_secondary": false,
         "padding_top": 40,
         "padding_bottom": 44
@@ -1031,40 +1035,40 @@
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
-            "text_label": "<p>Ethically<br>Sourced<\/p>",
+            "image": "shopify://shop_images/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced</p>",
             "link": ""
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "<p>Outstanding<br>Reviews<\/p>",
-            "link": "shopify:\/\/pages\/testimonials"
+            "image": "shopify://shop_images/Outstanding-Reviews-_White.svg",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
+            "link": "shopify://pages/testimonials"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "<p>Cliphair<br>Rewards<\/p>",
-            "link": "shopify:\/\/pages\/rewards"
+            "image": "shopify://shop_images/Cliphair-Rewards-_White.svg",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
+            "link": "shopify://pages/rewards"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "<p>Free Delivery<br>& Returns<\/p>",
+            "image": "shopify://shop_images/Free-Delivery-_White.svg",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
             "link": ""
           }
         },
         "cbdbff03-f013-487f-8288-6c9a46426bc6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "<p>Buy Now<br>Pay Later<\/p>",
+            "image": "shopify://shop_images/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
             "link": ""
           }
         }
@@ -1079,7 +1083,7 @@
       "custom_css": [
         "img {max-height: 70px;}",
         "a {text-decoration: none;}",
-        "@media screen and (min-width: 750px) and (max-width: 989px) {.grid--4-col-tablet .grid__item {width: calc((100% - var(--grid-desktop-horizontal-spacing) * 4) \/ 5); }}"
+        "@media screen and (min-width: 750px) and (max-width: 989px) {.grid--4-col-tablet .grid__item {width: calc((100% - var(--grid-desktop-horizontal-spacing) * 4) / 5); }}"
       ],
       "settings": {
         "title": "",

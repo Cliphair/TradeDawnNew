@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "information_videos_8BXc9p": {
+          "type": "information-videos",
+          "settings": {
+            "color_scheme": "accent-4"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -29,6 +35,12 @@
             "title": "Features"
           }
         },
+        "information_videos_MKNiNH": {
+          "type": "information-videos",
+          "settings": {
+            "color_scheme": "inverse"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -40,7 +52,7 @@
             "picker_type": "dropdown"
           }
         },
-        "quantity_selector_6HELXY": {
+        "quantity_selector_RERRjV": {
           "type": "quantity_selector",
           "settings": {
           }
@@ -51,7 +63,7 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true,
             "enable_sc-out-of-stock_app": true,
-            "color_scheme": "background-2"
+            "color_scheme": "inverse"
           }
         },
         "share": {
@@ -63,6 +75,12 @@
         "order_deadline_67UiV7": {
           "type": "order_deadline",
           "settings": {
+          }
+        },
+        "reward_points_B9N8X4": {
+          "type": "reward-points",
+          "settings": {
+            "page": "rewards-pop-up"
           }
         },
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
@@ -82,25 +100,27 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
-            "type": "custom",
-            "heading": "Ingredients",
+            "type": "specification",
+            "heading": "Details",
             "icon": "none",
-            "content": "{{ product.metafields.additional_information.ingredients | metafield_tag }}",
+            "content": "",
             "page": ""
           }
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
-            "type": "custom",
-            "heading": "How to Use",
+            "type": "instructions",
+            "heading": "How to Style",
             "icon": "none",
-            "content": "{{ product.metafields.additional_information.how_to_use | metafield_tag }}",
+            "content": "",
             "page": ""
           }
         },
-        "collapsible_tab_Qap6UU": {
+        "collapsible_tab_JGqU4U": {
           "type": "collapsible_tab",
           "settings": {
             "type": "custom",
@@ -110,7 +130,7 @@
             "page": ""
           }
         },
-        "collapsible_tab_L3aqbx": {
+        "collapsible_tab_36Cgxc": {
           "type": "collapsible_tab",
           "settings": {
             "type": "custom",
@@ -122,26 +142,33 @@
         }
       },
       "block_order": [
+        "information_videos_8BXc9p",
         "title",
         "a0b50969-ea33-4844-941d-db5577728e55",
         "3efc918c-8182-4ef3-bc33-60a83ed7ef86",
+        "information_videos_MKNiNH",
         "price",
         "variant_picker",
-        "quantity_selector_6HELXY",
+        "quantity_selector_RERRjV",
         "buy_buttons",
         "share",
         "order_deadline_67UiV7",
+        "reward_points_B9N8X4",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible_tab_Qap6UU",
-        "collapsible_tab_L3aqbx"
+        "collapsible_tab_JGqU4U",
+        "collapsible_tab_36Cgxc"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.information-videos ~ .information-videos {display: none; }}",
+        "@media screen and (min-width: 750px) {.information-videos:has(~ .information-videos) {display: none; }}"
       ],
       "settings": {
         "enable_sticky_info": true,
         "image_ratio": "square",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
@@ -156,6 +183,7 @@
     },
     "video_list_metafields_UqTJAJ": {
       "type": "video-list-metafields",
+      "disabled": true,
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
       ],
@@ -214,7 +242,7 @@
     "cb0bf916-3e7b-44a5-bee5-ef9302e54a26": {
       "type": "yotpo-review-app",
       "settings": {
-        "container_color_scheme": "",
+        "container_color_scheme": "accent-4",
         "padding_top": 40,
         "padding_bottom": 40
       }
