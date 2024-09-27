@@ -100,6 +100,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "type": "specification",
             "heading": "Details",
@@ -110,6 +111,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "type": "instructions",
             "heading": "How to Style",
@@ -181,6 +183,7 @@
     },
     "video_list_metafields_UqTJAJ": {
       "type": "video-list-metafields",
+      "disabled": true,
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
       ],
