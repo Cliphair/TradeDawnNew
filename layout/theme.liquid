@@ -275,6 +275,16 @@
       }
     {% endstyle %}
 
+    {% assign display_chat_pages = '/account/login;/account/register;/pages/contact-us;/pages/shipping-information;/pages/returns-information;/pages/about-us;/pages/trade-enquiries;/pages/secure-transactions;/pages/faqs;/pages/testimonials;/pages/rewards;/blogs/hair-blog;/pages/hair-extensions-by-colour;/pages/types-of-hair-extensions;/pages/video-guides;/pages/product-quality;/pages/video-guides;/pages/colour-matching-service;/pages/care-instructions;/pages/klarna-faqs;/pages/clearpay-hair-extensions;/pages/blue-light-card;/pages/journey;/blogs/hair-blog/how-to-look-after-hair-extensions-ultimate-care-guide;/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
+    {% assign display_chat_pages = display_chat_pages | split: ';' %}
+    {% unless display_chat_pages contains request.path %}
+      <style>
+        #gorgias-chat-container {
+          display: none;
+        }
+      </style>
+    {% endunless %}
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'cliphair.css' | asset_url | stylesheet_tag }}
 
