@@ -186,7 +186,7 @@
         "text_allignment": "left",
         "image_ratio": "square",
         "hide_card_arrow": true,
-        "columns_desktop": 5,
+        "columns_desktop": 6,
         "swipe_on_desktop": true,
         "color_scheme": "inverse",
         "columns_mobile": "3",
