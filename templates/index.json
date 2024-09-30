@@ -133,6 +133,23 @@
         "padding_bottom": 20
       }
     },
+    "visual_menu_66DUPMN": {
+      "type": "visual-menu",
+      "settings": {
+        "collection-list": "visual-menu",
+        "image_ratio": "square",
+        "circle_images": true,
+        "hide_card_arrow": true,
+        "columns_desktop": 6,
+        "swipe_on_desktop": true,
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
     "753975ec-3602-477e-b65e-6d089a9053cb": {
       "type": "collection-carrousel",
       "blocks": {
@@ -1105,6 +1122,7 @@
     "visual_menu_66DUPM",
     "slideshow_3tCMjU",
     "maquee_bdNYHF",
+    "visual_menu_66DUPMN",
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "collection_carrousel_fb6cDE",
     "rich_text_ez6FdW",
