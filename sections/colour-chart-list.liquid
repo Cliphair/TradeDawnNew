@@ -29,7 +29,7 @@
               >
               <label for="categorie-{{ link.title | strip_html | handle }}">
                 {% liquid
-                  assign image_handle = link.title | strip_html | handle | append: '.webp'
+                  assign image_handle = link.title | strip_html | handle | append: '-snippet.webp'
                   assign image = images[image_handle]
                 %}
                 {% if image != empty %}
