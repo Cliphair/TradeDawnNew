@@ -17,9 +17,15 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span class="localization-form__flag">
-      {{ localization.country | image_url: width: 30 | image_tag }}
+    <span>
+      {{- localization.country.currency.iso_code }}
+      {{ localization.country.currency.symbol }}
     </span>
+    {% comment %}
+      <span class="localization-form__flag">
+        {{ localization.country | image_url: width: 30 | image_tag }}
+      </span>
+    {% endcomment %}
     {% render 'icon-caret' %}
   </button>
   <div class="disclosure__list-wrapper" hidden>
