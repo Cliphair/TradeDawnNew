@@ -11,6 +11,9 @@
   "sections": {
     "visual_menu_66DUPM": {
       "type": "visual-menu",
+      "custom_css": [
+        "@media screen and (min-width: 1400px) {.section-visual-menu {display: none; }}"
+      ],
       "settings": {
         "collection-list": "visual-menu",
         "image_ratio": "square",
@@ -118,7 +121,7 @@
       ],
       "custom_css": [
         "a {color: inherit; text-decoration: none;}",
-        "a:hover{text-decoration: underline;}"
+        "a:hover {text-decoration: underline;}"
       ],
       "settings": {
         "text_size": "p",
@@ -135,6 +138,9 @@
     },
     "visual_menu_66DUPMN": {
       "type": "visual-menu",
+      "custom_css": [
+        "@media screen and (max-width: 1400px) {.section-visual-menu {display: none; }}"
+      ],
       "settings": {
         "collection-list": "visual-menu",
         "image_ratio": "square",
