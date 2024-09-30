@@ -139,7 +139,7 @@
     "visual_menu_66DUPMN": {
       "type": "visual-menu",
       "custom_css": [
-        "@media screen and (max-width: 1399px) {.section-visual-menu {display: none; }}"
+        "@media screen and (max-width: 1400px) {.section-visual-menu {display: none; }}"
       ],
       "settings": {
         "collection-list": "visual-menu",
