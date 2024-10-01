@@ -298,7 +298,10 @@
                   <div class='image-wrapper'>
                     <img loading='lazy' src='{{ block.settings.image | image_url }}' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' class='lazyload image' alt='{{ block.settings.image.alt }}'>
                     <div class='button_container' style="aspect-ratio: {{ block.settings.image.aspect_ratio }}">
-                      <span data-url="{{ block.settings.url}}" class='play_button play_button_{{ randomNumber }}'><i class="icon icon-play"></i></span>
+                      <span
+                        data-url="{{ block.settings.video_link }}"
+                        class="play_button play_button_{{ randomNumber }}"
+                        >{% render 'icon-play' %}</span>
                     </div>
                   </div>
 
