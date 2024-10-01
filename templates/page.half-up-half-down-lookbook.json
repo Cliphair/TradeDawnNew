@@ -12,6 +12,7 @@
     "166445343207c9fec0": {
       "type": "page_font_bfcm",
       "settings": {
+        "font-titles-1": "libre_baskerville_n4",
         "font-text-1": "inter_n4",
         "font-btns": "inter_n4"
       }
@@ -54,7 +55,13 @@
     "a5cbae49-a6ae-455f-bb48-11d2cabda19d": {
       "type": "custom-banner",
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify://shop_images/half-up-down-desktop.webp",
+        "mobile-image": "shopify://shop_images/half-up-down-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "6617bba5-c190-4346-86b8-c0d35da0f814": {
