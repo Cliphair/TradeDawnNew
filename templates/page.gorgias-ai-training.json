@@ -11,6 +11,10 @@
   "sections": {
     "template": {
       "type": "articles-list",
+      "custom_css": [
+        "ul{list-style-position:inside; padding:0;}",
+        "a{color:inherit;}"
+      ],
       "settings": {
         "blog": "hair-blog"
       }
