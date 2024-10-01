@@ -14,36 +14,44 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_nNPD4X": {
+          "type": "announcement",
+          "settings": {
+            "text": "We've Revamped Our Website For A Better, Faster Shopping Experience - Explore Now!",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
             "text": "Buy Now, Pay Later With Klarna & ClearPay",
-            "link": "shopify:\/\/pages\/klarna-faqs"
+            "link": "shopify://pages/klarna-faqs"
           }
         },
         "announcement-bar-1": {
           "type": "announcement",
           "settings": {
             "text": "Free Delivery on orders over £30. Worldwide Shipping",
-            "link": "shopify:\/\/pages\/hair-extensions-by-colour"
+            "link": "shopify://pages/hair-extensions-by-colour"
           }
         },
         "announcement_X6aUFC": {
           "type": "announcement",
           "settings": {
             "text": "Buy 2 Get 10% off Nano, Double Drawn Tapes, I-tip & Flat Tips",
-            "link": "shopify:\/\/pages\/permanent-extensions"
+            "link": "shopify://pages/permanent-extensions"
           }
         },
         "announcement_BwckMh": {
           "type": "announcement",
           "settings": {
             "text": "New Arrivals: Hair Extensions Hair Care & Accessories",
-            "link": "shopify:\/\/collections\/new-arrivals"
+            "link": "shopify://collections/new-arrivals"
           }
         }
       },
       "block_order": [
+        "announcement_nNPD4X",
         "announcement-bar-0",
         "announcement-bar-1",
         "announcement_X6aUFC",
@@ -51,7 +59,7 @@
       ],
       "settings": {
         "color_scheme": "",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "show_scroll_arrow": false,
         "show_social": false,
         "auto_rotate": true,
