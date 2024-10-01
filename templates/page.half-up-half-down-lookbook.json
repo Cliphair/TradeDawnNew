@@ -40,6 +40,7 @@
     },
     "92bc8365-e725-4ded-bb00-7136e361c025": {
       "type": "back-to",
+      "disabled": true,
       "settings": {
         "back_url": "shopify://pages/wish-for-cliphair-holiday-campaign-2023",
         "back_text": "Back To Holiday Campaign 2023",
@@ -54,6 +55,9 @@
     },
     "a5cbae49-a6ae-455f-bb48-11d2cabda19d": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0; max-width: unset;}"
+      ],
       "settings": {
         "max-width": "",
         "bg-color": "#FFF",
