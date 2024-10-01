@@ -9,20 +9,14 @@
 */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "template": {
+      "type": "articles-list",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "accent-4",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "blog": "hair-blog"
       }
     }
   },
   "order": [
-    "main"
+    "template"
   ]
 }
