@@ -47,19 +47,6 @@
         "accessibility_info": ""
       }
     },
-    "1654509137e3348e79": {
-      "type": "slideshow",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "1653662930c08209e6": {
       "type": "page_content",
       "settings": {
@@ -335,15 +322,31 @@
     },
     "1653914869093c7f8d": {
       "type": "page_content",
+      "disabled": true,
       "settings": {
         "content": "faq",
         "title_enabled": true
+      }
+    },
+    "page_faq_4KJtAx": {
+      "type": "page-faq",
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "165053090392f2dcc0",
-    "1654509137e3348e79",
     "1653662930c08209e6",
     "165391112324ee8adf",
     "165391206242984244",
@@ -354,6 +357,7 @@
     "16545291500bc57dfb",
     "16545293875430039f",
     "1654860796c42d2892",
-    "1653914869093c7f8d"
+    "1653914869093c7f8d",
+    "page_faq_4KJtAx"
   ]
 }
