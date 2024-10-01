@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadingContainer = document.querySelector("#ProductGridContainer > .collection");
   const productGrid = document.querySelector('#product-grid');
   const paginationList = document.querySelector('.pagination__list');
+  const yotpoAPI = new Yotpo.API(yotpo);
 
   if (!loadMoreButton) return;
 
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (loadedNextPageUrl) {
           loadMoreButton.disabled = false;
         }
+        yotpoAPI.refreshWidgets();
         loadingContainer.classList.remove("loading");
       })
 
