@@ -41,7 +41,6 @@ function btsVideoTag(videoUrl) {
           </div>
     	`;
     } else {
-        console.log(videoUrl)
         video = `
           <div class='video__container'>
             <div class='close__video'><i onclick='btsCloseBtn()' class="fa-solid fa-xmark close__btn"></i></div>
