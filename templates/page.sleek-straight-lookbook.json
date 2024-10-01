@@ -12,6 +12,7 @@
     "166445343207c9fec0": {
       "type": "page_font_bfcm",
       "settings": {
+        "font-titles-1": "libre_baskerville_n4",
         "font-text-1": "inter_n4",
         "font-btns": "inter_n4"
       }
@@ -39,6 +40,7 @@
     },
     "92bc8365-e725-4ded-bb00-7136e361c025": {
       "type": "back-to",
+      "disabled": true,
       "settings": {
         "back_url": "shopify://pages/wish-for-cliphair-holiday-campaign-2023",
         "back_text": "Back To Holiday Campaign 2023",
@@ -53,8 +55,17 @@
     },
     "a5cbae49-a6ae-455f-bb48-11d2cabda19d": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {max-width: unset; padding: 0;}"
+      ],
       "settings": {
-        "url": ""
+        "max-width": "",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify://shop_images/sleek-straight-desktop.webp",
+        "mobile-image": "shopify://shop_images/sleek-straight-mobile.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "6617bba5-c190-4346-86b8-c0d35da0f814": {
