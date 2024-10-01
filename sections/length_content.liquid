@@ -8,7 +8,7 @@
           			<div class='f_text'>{{ section.settings.d_first-text }}{% if section.settings.d_readmore != blank %} <p id="hidden-container-{{section.id}}" class="read_more_btn" data-target='hidden-container-{{section.id}}' onclick="read_more(this)">Read More</p>{% endif %}</div>
                   
                   	{% if section.settings.d_readmore != empty %}
-          				<div class='hidden-container-{{section.id}} closed s_text'>
+          				<div class='hidden-container-{{section.id}} hidden s_text'>
                           {{ section.settings.d_readmore }}
                           <p id="read-button-close1" class="read_more_btn" data-target='hidden-container-{{section.id}}' onclick="read_less(this)">Read Less</p>
                   		</div>
@@ -19,7 +19,7 @@
           				<div class='f_text'>{{ section.settings.ds_first-text }}{% if section.settings.ds_readmore != blank %} <p id="hidden-container-second-{{section.id}}" class="read_more_btn" data-target='hidden-container-second-{{section.id}}' onclick="read_more(this)">Read More</p>{% endif %}</div>
                   
                   		{% if section.settings.ds_readmore != empty %}
-          					<div class='hidden-container-second-{{section.id}} closed s_text'>
+          					<div class='hidden-container-second-{{section.id}} hidden s_text'>
                             	{{ section.settings.ds_readmore }}
                               	<p id="read-button-close1" class="read_more_btn" data-target='hidden-container-second-{{section.id}}' onclick="read_less(this)">Read Less</p>
                   			</div>
