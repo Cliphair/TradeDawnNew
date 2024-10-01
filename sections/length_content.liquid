@@ -69,19 +69,12 @@
   
 #{{section.id}}{
 	width:100%;
-  	max-width:1250px;
-  	padding:20px 15px 15px;
   	margin:20px auto 0;
   	border-top: 1px solid #efefef;
 }
 
-#{{section.id}} *{
-	color: black;
-}
-
 #{{section.id}} > .inner-container{
 	width:100%;
-  	padding:0;
   	margin:0;
 }
   
@@ -91,9 +84,7 @@
 }
   
 #{{section.id}} .section_title{
-	font-size:14px;
 	margin: 20px 0 10px;
-  	line-height:1.5em;
   	text-align:left;
   	text-transform:capitalize;
   	letter-spacing:1.5px;
@@ -105,9 +96,7 @@
 
 #{{section.id}} .f_text > p,
 #{{section.id}} .s_text > p  {
-	font-size:11px;
     margin: 0 0 10px;
-    line-height:1.5rem;
     text-align:left;
   	letter-spacing:1.5px;
 }
@@ -115,7 +104,6 @@
 #{{section.id}} .f_text > p.read_more_btn,
 #{{section.id}} .s_text > p.read_more_btn
 {
-	margin-top:-10px;
   	color:purple;
   	font-weight:bold;
 }
@@ -166,6 +154,7 @@
     box-shadow: 0 2px 0 #f1e0f3;
   	color:#9c3078!important;
   	max-width: 500px;
+    width:100%;
 }
 
 #{{section.id}} .btn-container .btn_shop-now:hover{
@@ -173,10 +162,6 @@
 }
 
 @media only screen and (min-width:768px){  
-  	#{{section.id}} .section_title{
-    	font-size:22px;
-    }
-  
   	#{{section.id}} .description_container{
         padding:0 15px 0 0;
     }
@@ -184,15 +169,6 @@
 }
   
 @media only screen and (min-width:992px){  
-  	#{{section.id}} .section_title{
-    	font-size:25px;
-    }
-  
-  	#{{section.id}} .f_text > p,
-    #{{section.id}} .s_text > p  {
-        font-size:15px;
-    }
-  
   	#{{section.id}} .btn-container.desktop{
         display:block;
     }
