@@ -206,6 +206,7 @@
   width: auto;
   display: block;
   margin: 0 auto;
+  max-width: 100% !important;
 }
 
 .article-template__content *:has(> img[style*="float"])~.clear {
