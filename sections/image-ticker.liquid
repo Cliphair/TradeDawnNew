@@ -20,8 +20,15 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
-
-
+              {% case section.blocks.first.type %}
+                {% when "announcement" %}
+                  <p class="announcement-bar__message h5">
+                    <span>{{ section.blocks.first.settings.text | escape }}</span>
+                    {%- if section.blocks.first.settings.link != blank -%}
+                      {% render 'icon-arrow' %}
+                    {%- endif -%}
+                  </p>
+                {% when "announcement-image" %}
                   <img
                   class="announcement-bar__image"
                   loading="eager"
@@ -31,6 +38,7 @@
                   alt="{{ section.blocks.first.settings.image.alt }}"
                   style="max-width:100%; display:block;"
                 >
+              {% endcase %}
           
           {%- if section.blocks.first.settings.link != blank -%}
             </a>
@@ -85,7 +93,17 @@
                         class="announcement-bar__link link link--text focus-inset animate-arrow"
                       >
                     {%- endif -%}
-
+                    {% case block.type %}
+                      {% when "announcement" %}
+                        <p class="announcement-bar__message h5">
+                          <span>{{ block.settings.text | escape }}</span>
+                          {% comment %}
+                            {%- if block.settings.link != blank -%}
+                              {% render 'icon-arrow' %}
+                            {%- endif -%}
+                          {% endcomment %}
+                        </p>
+                      {% when "announcement-image" %}
                         <img
                         class="announcement-bar__image"
                         loading="eager"
@@ -95,6 +113,7 @@
                         alt="{{ block.settings.image.alt }}"
                         style="max-width:100%; display:block;"
                       >
+                    {% endcase %}
                     {%- if block.settings.link != blank -%}
                       </a>
                     {%- endif -%}
