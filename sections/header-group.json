@@ -109,6 +109,8 @@
           "type": "announcement-image",
           "settings": {
             "image": "shopify://shop_images/Free_Express_Delivery_Message_Black_copy.gif",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
             "link": ""
           }
         }
@@ -116,13 +118,10 @@
       "block_order": [
         "announcement_image_zkJVKU"
       ],
-      "disabled": true,
+      "custom_css": [
+        "img{height:auto;}"
+      ],
       "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "show_scroll_arrow": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5
       }
     },
     "breadcrumbs": {
