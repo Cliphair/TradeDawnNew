@@ -141,23 +141,17 @@
           <span class="price-item price-item--regular price-item--message">
             <span>
               {% if settings.currency_code_enabled %}
+                <span class="price-item--message-save">SAVE </span>
                 {{
                   price
                   | times: sale_percentage
                   | money_with_currency
-                  | prepend: 'SAVE '
                   | append: ' '
                   | append: discount_object.message
                 }}
               {% else %}
-                {{
-                  price
-                  | times: sale_percentage
-                  | money
-                  | prepend: 'SAVE '
-                  | append: ' '
-                  | append: discount_object.message
-                }}
+                <span class="price-item--message-save">SAVE </span>
+                {{ price | times: sale_percentage | money | append: ' ' | append: discount_object.message }}
               {% endif %}
             </span>
           </span>

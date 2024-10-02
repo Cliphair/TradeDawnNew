@@ -101,6 +101,11 @@
 .price--on-sale .price-item--regular.price-item--message,
 .price--code-sale .price-item--regular.price-item--message {
   text-decoration: none;
+  letter-spacing: 0.6px;
+}
+
+.price-item--message-save {
+  color: green;
 }
 
 .unit-price {
