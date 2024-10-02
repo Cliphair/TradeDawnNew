@@ -31,7 +31,7 @@
                 {% when "announcement-image" %}
                   <img
                   class="announcement-bar__image"
-                  loading="lazy"
+                  loading="eager"
                   src="{{ section.blocks.first.settings.image | image_url }}"
                   width="{{ section.blocks.first.settings.image.width }}"
                   height="{{ section.blocks.first.settings.image.height }}"
