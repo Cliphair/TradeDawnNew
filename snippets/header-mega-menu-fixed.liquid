@@ -57,13 +57,12 @@
                   role="list"
                 >
                   <li style="{%- if childlink.links != blank -%}width:calc(100% / 3);{% endif %}">
-                    <a
+                    <span
                       id="HeaderMenu-clip-ins-clip-in-multi"
-                      href="#"
                       class="mega-menu__link mega-menu__link--level-3 link"
                     >
                       MULTI PIECE CLIP INS
-                    </a>
+                    </span>
                     <ul class="list-unstyled" role="list">
                       <li>
                         <a
@@ -303,43 +302,6 @@
                 >
                   <li style="width:calc(100% / 3);">
                     <a
-                      id="HeaderMenu-professional-weave"
-                      href="/collections/human-hair-weave-wefts-hair-extensions"
-                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      WEAVE HAIR EXTENSIONS
-                    </a>
-                    <ul class="list-unstyled" role="list">
-                      <li>
-                        <a
-                          id="HeaderMenu-professional-weave-classic-weft"
-                          href="/collections/human-hair-weave-wefts-hair-extensions"
-                          class="mega-menu__link link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
-                          {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          Remy Royale Classic Weft (120g)
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          id="HeaderMenu-professional-weave-flat-track"
-                          href="/collections/flat-weft-hair-extensions"
-                          class="mega-menu__link link{% if request.path == '/collections/flat-weft-hair-extensions' %} mega-menu__link--active{% endif %}"
-                          {% if request.path == '/collections/flat-weft-hair-extensions' %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          Remy Royale Flat Track Weft (120g)
-                        </a>
-                      </li>
-                    </ul>
-
-                    <a
                       id="HeaderMenu-professional-tapes"
                       href="/collections/tape-in-hair-extensions"
                       class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/tape-in-hair-extensions' %} mega-menu__link--active{% endif %}"
@@ -384,6 +346,43 @@
                           {% endif %}
                         >
                           Remy Royale Invisible Tape Ins (50g)
+                        </a>
+                      </li>
+                    </ul>
+
+                    <a
+                      id="HeaderMenu-professional-weave"
+                      href="/collections/human-hair-weave-wefts-hair-extensions"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      WEAVE HAIR EXTENSIONS
+                    </a>
+                    <ul class="list-unstyled" role="list">
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-weave-classic-weft"
+                          href="/collections/human-hair-weave-wefts-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Classic Weft (120g)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          id="HeaderMenu-professional-weave-flat-track"
+                          href="/collections/flat-weft-hair-extensions"
+                          class="mega-menu__link link{% if request.path == '/collections/flat-weft-hair-extensions' %} mega-menu__link--active{% endif %}"
+                          {% if request.path == '/collections/flat-weft-hair-extensions' %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Remy Royale Flat Track Weft (120g)
                         </a>
                       </li>
                     </ul>
@@ -465,13 +464,13 @@
                   </li>
 
                   <li style="width:calc(100% / 3);">
-                    <a
+                    <span
                       id="HeaderMenu-professional-tools"
-                      href="#"
+
                       class="mega-menu__link mega-menu__link--level-2 link"
                     >
                       PROFESSIONAL TOOLS & MAINTENANCE
-                    </a>
+                    </span>
                     <ul class="list-unstyled" role="list">
                       <li>
                         <a
@@ -1728,12 +1727,9 @@
             id="HeaderMenu-help-me-choose"
             class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
           >
-            <a
-              href="#"
-              class=""
-            >
+            <span>
               <span> HELP ME CHOOSE </span>
-            </a>
+            </span>
             {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
           </summary>
           <div
@@ -1894,12 +1890,9 @@
             id="HeaderMenu-haircare-accessories"
             class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
           >
-            <a
-              href="#"
-              class=""
-            >
+            <span>
               <span> HAIRCARE & ACCESSORIES </span>
-            </a>
+            </span>
             {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
           </summary>
           <div
@@ -2111,7 +2104,7 @@
                   <li style="width:calc(100% / 3);">
                     <a
                       id="HeaderMenu-haircare-accessories-professional"
-                      href="#"
+                      href="/collections/hair-care/professional-maintenance"
                       class="mega-menu__link mega-menu__link--level-2 link"
                     >
                       PROFESSIONAL MAINTENANCE
@@ -2437,12 +2430,9 @@
             id="HeaderMenu-info-hub"
             class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
           >
-            <a
-              href="#"
-              class=""
-            >
+            <span>
               <span> INFO HUB </span>
-            </a>
+            </span>
             {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
           </summary>
           <div
@@ -2543,13 +2533,12 @@
                   Blog
                 </a>
 
-                <a
+                <span
                   id="HeaderMenu-info-hub-ambassador"
-                  href="#"
                   class="mega-menu__link link"
                 >
                   <span onclick="klrRecruit.openRecruit()">Become An Ambassador</span>
-                </a>
+                </span>
                 <modal-opener
                   id="HeaderMenu-info-hub-trade"
                   class="no-js-hidden"
