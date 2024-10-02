@@ -118,7 +118,6 @@
       "block_order": [
         "announcement_image_zkJVKU"
       ],
-      "disabled": true,
       "custom_css": [
         "img {height: auto;}"
       ],

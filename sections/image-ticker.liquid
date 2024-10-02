@@ -13,7 +13,7 @@
               href="{{ block.settings.link }}"
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
-              <div class="page-width">
+              <div class="">
                 <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
                   {{ block.settings.text | escape }}
                   {%- if block.settings.link != blank -%}
@@ -23,7 +23,7 @@
               </div>
             </a>
           {%- else -%}
-            <div class="page-width">
+            <div class="">
               <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
                 {{ block.settings.text | escape }}
                 {%- if block.settings.link != blank -%}
@@ -47,7 +47,7 @@
               href="{{ block.settings.link }}"
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
-              <div class="page-width {{ block.settings.text_alignment }}">
+              <div class=" {{ block.settings.text_alignment }}">
                 <img
                   class="announcement-bar__image"
                   loading="lazy"
@@ -60,7 +60,7 @@
               </div>
             </a>
           {%- else -%}
-            <div class="page-width {{ block.settings.text_alignment }}">
+            <div class=" {{ block.settings.text_alignment }}">
               <img
                 class="announcement-bar__image"
                 loading="lazy"
