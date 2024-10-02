@@ -1,0 +1,36 @@
+{% liquid
+  assign latest_articles = null | sort
+  assign cut_date = "2022-02-01" | date: "%s"
+  
+  paginate section.settings.blog.articles by section.settings.blog.articles_count
+    for article in section.settings.blog.articles
+      assign pub_date = article.published_at | date: "%s"
+      if pub_date >= cut_date
+        assign valid_article = article | sort
+        assign latest_articles = latest_articles | concat: valid_article
+      endif
+    endfor
+  endpaginate
+%}
+
+<div class="block block--no-preload page-width">
+  <div class="container">
+    <ul>
+      {% for article in latest_articles %}
+          <li>{{ article.title | link_to: article.url }} (<b>by {{ article.author }}</b>)</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "AI Training Articles",
+    "settings": [
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blog"
+      }
+    ]
+  }
+{% endschema %}

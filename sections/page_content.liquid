@@ -1,0 +1,125 @@
+{% if template contains 'page'%}
+	{% assign content = page.content%}
+	{% assign title = page.title %}
+{% elsif template contains 'collection' %}
+	{% assign content = collection.description%}
+	{% assign title = collection.title %}
+{% endif %}
+
+{% if content != blank and content contains '<!-- FAQ section -->' %}
+	{% assign array = content | split: '<!-- FAQ section -->'%}
+	{% assign content = array[0] %}
+	{% assign faq = array[1] %}
+{% endif %}
+
+{% if content != blank and content contains '<!-- split -->' %}
+	{% assign array = content | split: '<!-- split -->'%}
+	{% assign content1 = array[0] %}
+	{% assign content2 = array[1] %}
+{%endif%}
+
+{% if content2 and content2 contains '<!-- split2 -->' %}
+{% assign array = content2 | split: '<!-- split2 -->' %}
+	{% assign content2 = array[0] %}
+	{% assign content3 = array[1] %}
+{%endif%}
+
+{% if content3 and content3 contains '<!-- split3 -->' %}
+{% assign array = content3 | split: '<!-- split3 -->' %}
+	{% assign content3 = array[0] %}
+	{% assign content4 = array[1] %}
+{%endif%}
+
+{{ 'length-page.css' | asset_url | stylesheet_tag }}
+
+<section id='length_page'>
+  		<div class="shadow-1 inner-container page-width">
+  		{% if section.settings.content == 'first' %}
+  			
+  			{% if section.settings.title_enabled %}
+  				<!-- Page Title -->
+  				<h1>{{title}}</h1>
+  			{% endif %}
+  			
+  			{%if content != blank and content contains '<!-- split -->'%}
+  				<!-- Page Description -->
+  				<div>{{ content1 }}</div>
+  			{% else %}
+  				<!-- Page Description -->
+  				<div>{{ content }}</div>
+  			{% endif %}
+  		
+  		{% elsif section.settings.content == 'second' %}
+  			
+  			{% if content2 %}
+  				<!-- Page Description 2-->
+  				<div>{{ content2 }}</div>
+  			{% endif %}
+          
+        {% elsif section.settings.content == 'third' %}
+  			
+  			{% if content3 %}
+  				<!-- Page Description 3-->
+  				<div>{{ content3 }}</div>
+  			{% endif %}
+          
+        {% elsif section.settings.content == 'fourth' %}
+  			
+  			{% if content4 %}
+  				<!-- Page Description 4-->
+  				<div>{{ content4 }}</div>
+  			{% endif %}
+  		
+  		{% elsif section.settings.content == 'faq' %}
+          
+  			{%	if faq %}
+            	<div>{{faq}}</div>
+          	{% endif %}
+  
+  		{% endif %}
+  	</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Content",
+    "settings": [
+		{
+          "type": "select",
+          "id": "content",
+          "label": "Content",
+          "options": [
+            {
+              "value": "first",
+              "label": "First Part"
+            },
+            {
+              "value": "second",
+              "label": "Second Part"
+            },
+			{
+              "value": "third",
+              "label": "Third Part"
+            },
+			{
+              "value": "fourth",
+              "label": "Fourth Part"
+            },
+            {
+              "value": "faq",
+              "label": "FAQs"
+            }
+          ],
+          "default": "first"
+        },
+		{
+          "type": "checkbox",
+          "id": "title_enabled",
+          "label": "Show Title",
+          "default": true,
+		  "info": "Only shows title on the first part"
+        }
+	]
+  }
+{% endschema %}
+

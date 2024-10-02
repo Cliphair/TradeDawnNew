@@ -1,0 +1,349 @@
+<section class="shadow-1  page-width" id='{{section.id}}'>
+	<div class='inner-container'>
+		{% if section.settings.add_description %}
+    		<!-- description section -->
+      		<div class='row bb'>
+    			<div class='col-12 col-sm-9 description_container'>
+        			<h2 class='section_title first_title'>{{ section.settings.d_header }}</h2>
+          			<div class='f_text'>{{ section.settings.d_first-text }}{% if section.settings.d_readmore != blank %} <p id="hidden-container-{{section.id}}" class="read_more_btn" data-target='hidden-container-{{section.id}}' onclick="read_more(this)">Read More</p>{% endif %}</div>
+                  
+                  	{% if section.settings.d_readmore != empty %}
+          				<div class='hidden-container-{{section.id}} hidden s_text'>
+                          {{ section.settings.d_readmore }}
+                          <p id="read-button-close1" class="read_more_btn" data-target='hidden-container-{{section.id}}' onclick="read_less(this)">Read Less</p>
+                  		</div>
+                  	{% endif %}
+                  
+                  	{% if section.settings.ds_header != blank %}
+                  		<h2 class='section_title'>{{ section.settings.ds_header }}</h2>
+          				<div class='f_text'>{{ section.settings.ds_first-text }}{% if section.settings.ds_readmore != blank %} <p id="hidden-container-second-{{section.id}}" class="read_more_btn" data-target='hidden-container-second-{{section.id}}' onclick="read_more(this)">Read More</p>{% endif %}</div>
+                  
+                  		{% if section.settings.ds_readmore != empty %}
+          					<div class='hidden-container-second-{{section.id}} hidden s_text'>
+                            	{{ section.settings.ds_readmore }}
+                              	<p id="read-button-close1" class="read_more_btn" data-target='hidden-container-second-{{section.id}}' onclick="read_less(this)">Read Less</p>
+                  			</div>
+                  		{% endif %}
+                  	{% endif %}
+        		</div>
+          		<div class='col-12 col-sm-3 image_container'>
+          			{% for block in section.blocks %}
+              			{% if block.type == 'd_image' %}
+              				<img loading='lazy' src='{{ block.settings.image | img_url: 'master' }}' class='d_image lazyload' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+              			{% endif %}
+              		{% endfor %}
+          		</div>          	
+          		<div class="btn-container mobile">
+              		<a class="btn purple btn_shop-now" href="{{section.settings.btn_link}}" target="_blank">{%if section.settings.btn_text == blank %}Shop Now!{% else %}{{section.settings.btn_text}} {%endif%}</a>
+          		</div>
+      		</div>
+      	{% endif %}	
+     	
+      	{% if section.settings.add_ba %}
+    		<!-- before and after section -->
+      		<div class='row'>
+    			<div class='col-12 before-after_container'>
+      				<h2 class='section_title'>{{ section.settings.ba_header }}</h2>
+          			<div class='f_text'>{{ section.settings.ba_first-text }}</div>
+          			<div class='s_text'>{{ section.settings.ba_second-text }}</div>
+        		</div>
+          		<div class='col-12 image_container'>
+          			{% for block in section.blocks %}
+              			{% if block.type == 'ba_image' %}
+              				<img loading='lazy' src='{{ block.settings.image | img_url: 'master' }}' class='d_image lazyload' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+              			{% endif %}
+              		{% endfor %}
+          		</div>	
+          		<div class="btn-container mobile">
+              		<a class="btn purple btn_shop-now" href="{{section.settings.btn_link}}" target="_blank">{%if section.settings.btn_text == blank %}Shop Now!{% else %}{{section.settings.btn_text}} {%endif%}</a>
+          		</div>
+      		</div>
+      	{% endif %}  	
+  		<div class="btn-container desktop">
+   			<a class="btn purple btn_shop-now" href="{{section.settings.btn_link}}" target="_blank">{%if section.settings.btn_text == blank %}Shop Now!{% else %}{{section.settings.btn_text}} {%endif%}</a>
+    	</div>
+  	</div>
+</section>
+
+<style>
+  
+#{{section.id}}{
+	width:100%;
+  	margin:20px auto 0;
+  	border-top: 1px solid #efefef;
+}
+
+#{{section.id}} > .inner-container{
+	width:100%;
+  	margin:0;
+}
+  
+#{{section.id}} > .inner-container > * {
+  	padding:0;
+  	margin:0;
+}
+  
+#{{section.id}} .section_title{
+	margin: 20px 0 10px;
+  	text-align:left;
+  	text-transform:capitalize;
+  	letter-spacing:1.5px;
+}
+  
+#{{section.id}} .section_title.first_title{
+  margin-top:30px;;
+}
+
+#{{section.id}} .f_text > p,
+#{{section.id}} .s_text > p  {
+    margin: 0 0 10px;
+    text-align:left;
+  	letter-spacing:1.5px;
+}
+
+#{{section.id}} .f_text > p.read_more_btn,
+#{{section.id}} .s_text > p.read_more_btn
+{
+  	color:purple;
+  	font-weight:bold;
+}
+  
+#{{section.id}} .f_text > p a,
+#{{section.id}} .s_text > p a {
+	font-weight:bold;
+}
+  
+#{{section.id}} .f_text > p a:hover,
+#{{section.id}} .s_text > p a:hover {
+	text-decoration:underline;
+}
+  
+#{{section.id}} .image_container,
+#{{section.id}} .description_container{
+    margin:0;
+    padding:0;
+}
+  
+#{{section.id}} .image_container > img{
+  	width:100%;
+  	height:auto;
+  	object-fit:cover;
+  	display:block;
+    margin:0;
+}
+  
+#{{section.id}} .bb{
+	border-bottom:1px solid #0000001a;
+}
+  
+.row{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0!important;
+}
+
+  .col-12{
+    width:100%;
+  }
+
+  @media screen and (min-width:768px){
+    .col-sm-3{
+      width:calc((100% / 12) * 3);
+    }
+    
+    .col-sm-4{
+      width:calc((100% / 12) * 4);
+    }
+
+    .col-sm-8{
+      width:calc((100% / 12) * 8);
+    }
+
+    .col-sm-9{
+      width:calc((100% / 12) * 9);
+    }
+  }
+
+  @media screen and (min-width:1200px){
+    .col-lg-3{
+      width:calc((100% / 12) * 3);
+    }
+
+    .col-lg-9{
+      width:calc((100% / 12) * 9);
+    }
+  }
+  
+/* Shop Now Buttons */
+#{{section.id}} .btn-container .btn_shop-now{
+    text-decoration:none;
+    padding: 10px 15px;
+}
+
+#{{section.id}} .btn-container{
+	text-align:center;
+  	margin:20px 0 10px;
+}
+  
+#{{section.id}} .btn-container.desktop{
+	display:none;
+}
+
+#{{section.id}} .btn-container .btn_shop-now{
+	background: #f4ecf5!important;
+    box-shadow: 0 2px 0 #f1e0f3;
+  	color:#9c3078!important;
+  	max-width: 500px;
+    width:100%;
+}
+
+#{{section.id}} .btn-container .btn_shop-now:hover{
+  	color:white !important;
+}
+
+@media only screen and (min-width:768px){  
+  	#{{section.id}} .description_container{
+        padding:0 15px 0 0;
+    }
+
+}
+  
+@media only screen and (min-width:992px){  
+  	#{{section.id}} .btn-container.desktop{
+        display:block;
+    }
+  	
+  	#{{section.id}} .btn-container.mobile{
+        display:none;
+    }
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Length",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Description Section"
+		},
+		{
+        	"type": "checkbox",
+          	"id": "add_description",
+          	"label": "Add Description Section?",
+          	"default": true
+        },
+		{
+			"type": "text",
+			"id": "d_header",
+			"label": "First Section Header"
+		},
+		{
+			"type": "richtext",
+			"id": "d_first-text",
+			"label": "First Text"
+		},
+		{
+			"type": "richtext",
+			"id": "d_readmore",
+			"label": "First Read More Text",
+			"info": "This text is displayed is readmore clicked"
+		},
+		{
+			"type": "text",
+			"id": "ds_header",
+			"label": "Second Section Header"
+		},
+		{
+			"type": "richtext",
+			"id": "ds_first-text",
+			"label": "Second Text"
+		},
+		{
+			"type": "richtext",
+			"id": "ds_readmore",
+			"label": "Second Read More Text",
+			"info": "This is readmore is clicked"
+		},
+		{
+			"type": "header",
+			"content": "Before and After Section"
+		},
+		{
+        	"type": "checkbox",
+          	"id": "add_ba",
+          	"label": "Add Before and After Section?",
+          	"default": true
+        },
+		{
+			"type": "text",
+			"id": "ba_header",
+			"label": "Section Header"
+		},
+		{
+			"type": "richtext",
+			"id": "ba_first-text",
+			"label": "Text",
+			"info": "This text is displayed before the image"
+		},
+		{
+			"type": "richtext",
+			"id": "ba_second-text",
+			"label": "Text",
+			"info": "This text is displayed after the image"
+		},
+		{
+			"type": "header",
+			"content": "Shop Now Button"
+		},
+		{
+        	"type": "url",
+          	"id": "btn_link",
+          	"label": "Shop Now Link",
+          	"info": "Add the URL that you want to send the customer to."
+        },
+		{
+			"type": "text",
+			"id": "btn_text",
+			"label": "Button Text",
+			"info": "If empty, text display will be 'Shop Now'."
+		}
+	],
+	"blocks":[
+		{
+			"type": "d_image",
+			"name": "Description image",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Choose one image",
+					"info": "Please, select an image with XXpx width and XXpx height."
+				}
+			]
+		},
+		{
+			"type": "ba_image",
+			"name": "Before and After image",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Choose one image",
+					"info": "Please, select an image with XXpx width and XXpx height."
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

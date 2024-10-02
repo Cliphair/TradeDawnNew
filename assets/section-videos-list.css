@@ -109,21 +109,6 @@
 	height: 1.2rem;
 }
 
-/* iframes */
-.deferred-media-popup-container iframe {
-	position: absolute;
-	width: calc(100% - 3rem);
-	aspect-ratio: 16/9;
-	height: auto;
-	max-width: 1080px;
-}
-
-@media screen and (min-width: 750px) {
-	.deferred-media-popup-container iframe {
-		width: calc(100% - 10rem);
-	}
-}
-
 /* play buttons */
 .section-videos-list .deferred-media__poster-button {
 	background-color: transparent;

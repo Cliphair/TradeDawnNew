@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (loadedNextPageUrl) {
           loadMoreButton.disabled = false;
         }
+        yotpoWidgetsContainer.initWidgets();
         loadingContainer.classList.remove("loading");
       })
 

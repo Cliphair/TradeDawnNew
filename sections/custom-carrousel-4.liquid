@@ -1,0 +1,830 @@
+{% liquid 
+  assign min = 1
+  assign max = 100
+  assign diff = max | minus: min
+  assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min 
+%}
+
+{% capture containerClass %}container-{{ section.id }}{% endcapture %}
+{% assign limit = section.blocks.size | minus: 1 %}
+{% assign mobileStep = section.settings.mobile-col | times: 1 %}
+{% assign tabletStep = section.settings.tablet-col | times: 1 %}
+{% assign desktopStep = section.settings.desktop-col | times: 1 %}
+
+{% assign arrowClass = "" %}
+{% assign containerAlign = "" %}
+{% if section.blocks.size <= mobileStep %}
+  {% assign arrowClass = arrowClass | append: " mobile-none" %}
+  {% assign containerAlign = containerAlign | append: " mobile-center" %}
+{% endif %}
+{% if section.blocks.size <= tabletStep  %}
+  {% assign arrowClass =  arrowClass | append: " tablet-none" %}
+  {% assign containerAlign = containerAlign | append: " tablet-center" %}
+{% endif %}
+{% if section.blocks.size <= desktopStep  %}
+  {% assign arrowClass = arrowClass | append: " desktop-none" %}
+  {% assign containerAlign = containerAlign | append: " desktop-center" %}
+{% endif %}
+
+<link rel="preload" href="{{ 'section-custom-carrousel-2.css' | asset_url }}" as="style" onload="this.rel = 'stylesheet'" />
+<noscript>
+  {{ 'section-custom-carrousel-2.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+{% if section.settings.mex_width != empty %}
+  <style>
+    #section-{{ section.id }} > .inner-container{
+      max-width: {{ section.settings.max_width }}px;
+    }
+  </style>
+{% endif %}
+
+<style>
+  #section-{{ section.id }} .image-wrapper{
+    position:relative;
+  }
+
+  #section-{{ section.id }} .button_container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #section-{{ section.id }} .play_button{
+    opacity: .6;
+    
+    cursor: pointer;
+    color:white;
+  }
+
+  #section-{{ section.id }} .play_button:hover{
+    opacity: 1;
+  }
+
+  #section-{{ section.id }} .play_button svg{
+    width: min(7vw, 40px);
+  }
+
+  #section-{{ section.id }} .item-content{
+    text-align:left;
+  }
+
+  #section-{{ section.id }} .item-content p{
+    margin-bottom:10px;
+    line-height:1.2em
+  }
+
+  #section-{{ section.id }} .item-content > ul{
+    padding-inline-start:5px;
+  }
+
+  #section-{{ section.id }} .item-content > ul > li{
+    margin-bottom:10px;
+    line-height:1em;
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }} .item-content > ul > li{
+      margin-bottom:20px;
+    }
+  }
+</style>
+
+<style>
+  #section-{{ section.id }}{
+    padding-top: {{ section.settings.mobile-p_top }}px;
+    padding-bottom: {{ section.settings.mobile-p_bottom }}px;
+    padding-left: {{ section.settings.mobile-p_left }}px;
+    padding-right: {{ section.settings.mobile-p_right }}px;
+    background: {{ section.settings.bg_color }};
+  }
+
+  #section-{{ section.id }} .section_header > *,
+  #section-{{ section.id }} .block-title > *{
+    font-size:{{ section.settings.mobile-header-font_size }}px;
+    color: {{ section.settings.header_color }};
+  }
+
+  #section-{{ section.id }} .section_intro > *,
+  #section-{{ section.id }} .item-content > *{
+    font-size:{{ section.settings.mobile-text-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item{
+    width:calc(100% / {{section.settings.mobile-col}});
+    min-width:calc(100% / {{section.settings.mobile-col}});
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item img.border{
+    border-color:{{ section.settings.header_color }};
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title h2{
+    margin:0;
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title > .block-subtitle{
+    font-size: calc({{ section.settings.mobile-text-font_size }}px - 2px);
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-btn{
+    font-size: {{ section.settings.mobile-button-font_size }}px;
+    color: {{ section.settings.button_color }};
+    background: {{ section.settings.btn-bg_color }};
+    display:inline-block;
+    padding:5px 30px;
+    margin-top:15px;
+    text-decoration:none;
+  }
+
+  #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-btn:hover{
+    text-decoration:underline;
+  }
+
+  #section-{{ section.id }} .scroll-arrow{
+    position:absolute;
+    top:{{ section.settings.mobile-arrow }}%;
+    color:{{ section.settings.arrow_color }};
+    font-size:{{ section.settings.mobile-arrow-size }}px;
+    width:{{ section.settings.mobile-arrow-size }}px;
+    height:{{ section.settings.mobile-arrow-size }}px;
+  }
+
+  #section-{{ section.id }} .scroll-arrow:hover{
+    opacity: 0.7;
+  }
+
+  #section-{{ section.id }} .scroll-arrow.right{
+    right: 15px;
+    text-align:right;
+    transform:rotate(270deg);
+  }
+
+  #section-{{ section.id }} .scroll-arrow.left{
+    left: 15px;
+    text-align:left;
+    transform:rotate(90deg);
+  }
+  
+  #section-{{ section.id }} .scroll-arrow.mobile-none{
+    display:none;
+  }
+
+  #section-{{ section.id }} .main-button-container > .section-btn{
+    font-size: {{ section.settings.mobile-text-font_size }}px;
+    color: {{ section.settings.text_color }};
+  }
+
+  @media screen and (min-width:768px){
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item{
+      width:calc(100% / {{section.settings.tablet-col}});
+      min-width:calc(100% / {{section.settings.tablet-col}});
+    }
+
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.tablet-arrow }}%;
+      font-size:{{ section.settings.tablet-arrow-size }}px;
+      width:{{ section.settings.tablet-arrow-size }}px;
+      height:{{ section.settings.tablet-arrow-size }}px;
+    }
+    
+    #section-{{ section.id }} .scroll-arrow.mobile-none{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.tablet-none{
+      display:none;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    #section-{{ section.id }}{
+      padding-top: {{ section.settings.desktop-p_top }}px;
+      padding-bottom: {{ section.settings.desktop-p_bottom }}px;
+      padding-left: {{ section.settings.desktop-p_left }}px;
+      padding-right: {{ section.settings.desktop-p_right }}px;
+    }
+
+    #section-{{ section.id }} .section_header > *,
+    #section-{{ section.id }} .block-title > *{
+      font-size:{{section.settings.desktop-header-font_size }}px;
+    }
+
+    #section-{{ section.id }} .section_intro > *,
+    #section-{{ section.id }} .item-content > *{
+      font-size:{{section.settings.desktop-text-font_size }}px;
+    }
+
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item{
+      width:calc(100% / {{section.settings.desktop-col}});
+      min-width:calc(100% / {{section.settings.desktop-col}});
+    }
+    
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title{
+      font-size: {{ section.settings.desktop-text-font_size }}px;
+    }
+  
+    #section-{{ section.id }} .carrousel-container .carrousel-items > .item .item-title > .block-subtitle{
+      font-size: calc({{ section.settings.desktop-text-font_size }}px - 2px);
+    }
+
+    #section-{{ section.id }}  .carrousel-container .carrousel-items > .item .item-btn{
+      font-size: {{ section.settings.desktop-button-font_size }}px;
+    }
+
+    #section-{{ section.id }} .scroll-arrow{
+      top:{{ section.settings.desktop-arrow }}%;
+      font-size:{{ section.settings.desktop-arrow-size }}px;
+      width:{{ section.settings.desktop-arrow-size }}px;
+      height:{{ section.settings.desktop-arrow-size }}px;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.tablet-none{
+      display:block;
+    }
+
+    #section-{{ section.id }} .scroll-arrow.desktop-none{
+      display:none;
+    }
+
+    #section-{{ section.id }} .main-button-container > .section-btn{
+      font-size: {{ section.settings.desktop-text-font_size }}px;
+    }
+  }
+
+  #bts__video-container .video__container{
+    max-width:unset;
+  }
+
+  .video__bg{
+    position:fixed;
+    z-index:1000000;
+    height:100%;
+    width:100%;
+    top:0;
+    right:0;
+    background:#000000a8;
+    padding: 10px 20px;
+    display:flex;
+  }
+  
+  .video__container{
+    max-width: 500px;
+    margin:auto;
+    text-align: center;
+  }
+  
+  .close__video{
+    width:100%;
+    text-align:right;
+    cursor:pointer;
+  }
+  
+  .close__video > *{
+    color:white;
+    font-size: 16px;
+    opacity:0.5;
+  }
+  
+  .close__video > *:hover{
+    opacity:1;
+  }
+  
+  .video__container > .bts__video{
+    width: 100%;
+    max-height:80vh;
+  }
+</style>
+
+<section id='section-{{ section.id }}' class='custom-carrousel-container'>
+
+  <div class='inner-container'>
+    {% if section.settings.header != empty %}
+      <div class='section_header'>{{ section.settings.header }}</div>
+    {% endif %}
+  
+    {% if section.settings.intro != empty %}
+      <div class='section_intro'>{{ section.settings.intro }}</div>
+    {% endif %}
+    
+    <div class='carrousel-container'>
+      
+      <div class='carrousel-items container-{{ section.id }} {{ containerAlign }}'>
+        
+        {% for block in section.blocks %}
+          <div class='item {% if forloop.last %}last{% endif %}'>
+            {% case block.type %}
+              {% when "image" %}
+                  <a href='{{ block.settings.url }}' title="{{ block.settings.text | strip_html }}">
+                    <img loading='lazy' src='{{ block.settings.image | image_url }}' class='lazyload' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' alt='{{ block.settings.image.alt }}'>
+                  </a>
+              
+                  {% if block.settings.text != empty %}
+                    <a href='{{ block.settings.url }}' title='{{ block.settings.text | strip_html }}' class='item-title'>
+                      <span class='block-title'>{{ block.settings.text }}</span>
+                      {% if block.settings.subtitle != empty %}
+                        <span class='block-subtitle'>{{ block.settings.subtitle }}</span>
+                      {% endif %}
+                    </a>
+                  {% endif %}
+                
+                  {% if section.settings.include-button %}
+                    <a href='{{ block.settings.url }}' title='{{ block.settings.text }}' class='item-btn'>{{ section.settings.button-text | remove: "<p>" | remove: "</p>" }}</a>
+                  {% endif %}
+              
+              {% when "video" %}
+                  <div class='image-wrapper'>
+                    <img loading='lazy' src='{{ block.settings.image | image_url }}' height='{{ block.settings.image.height }}' width='{{ block.settings.image.width }}' class='lazyload image' alt='{{ block.settings.image.alt }}'>
+                    <div class='button_container' style="aspect-ratio: {{ block.settings.image.aspect_ratio }}">
+                      <span
+                        data-url="{{ block.settings.url }}"
+                        class="play_button play_button_{{ randomNumber }}"
+                        >{% render 'icon-play' %}</span>
+                    </div>
+                  </div>
+
+                  {% if block.settings.text != empty %}
+                    <div class='item-title'>
+                      <span class='block-title'>{{ block.settings.text }}</span>
+                      {% if block.settings.subtitle != empty %}
+                        <span class='block-subtitle'>{{ block.settings.subtitle }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+              {% when "text" %}
+                  {% if block.settings.text != empty %}
+                    <div class='item-title block-title'>
+                      {{ block.settings.text }}
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.content != empty %}
+                    <div class='item-content'>
+                      {{ block.settings.content }}
+                    </div>
+                  {% endif %}
+                
+                  {% if block.settings.btn-text != empty %}
+                    <a href='{{ block.settings.url }}' title='{{ block.settings.btn-text }}' class='item-btn'>{{ block.settings.btn-text | remove: "<p>" | remove: "</p>" }}</a>
+                  {% endif %}
+            {% endcase %}
+          </div>
+        {% endfor %}
+      </div>
+  
+      {% if section.settings.include-arrows %}
+        {% assign mobileStep = section.settings.mobile-col | times: 1 | floor %}
+        {% assign tabletStep = section.settings.tablet-col | times: 1 | floor %}
+        {% assign desktopStep = section.settings.desktop-col | times: 1 | floor %}
+        {% render "arrows", containerClass: containerClass, limit: limit, stepMobile: mobileStep, stepTablet: tabletStep, stepDesktop: desktopStep, customClass: arrowClass %}
+      {% endif %}
+    </div>
+
+    {% if section.settings.main-button-text != empty and section.settings.main-button-url %}
+      <div class='main-button-container'>
+        <a href='{{ section.settings.main-button-url }}' title='{{ section.setting.main-button-text }}' class='section-btn'>{{ section.settings.main-button-text }}</a>
+      </div>
+    {% endif %}
+    
+  </div>
+</section>
+<script>
+    var playBtns{{randomNumber}} = document.querySelectorAll('.play_button_{{randomNumber}}');
+
+    for(let button of playBtns{{randomNumber}}){
+      button.addEventListener('click', function(){
+        btsVideoTag(button.dataset.url)
+      });
+    }
+  </script>
+{% schema %}
+  {
+    "name": "Custom Carrousel 4",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "header",
+        "label": "Section Header"
+      },
+      {
+        "type": "richtext",
+        "id": "intro",
+        "label": "Section Intro"
+      },
+      {
+        "type": "text",
+        "id": "main-button-text",
+        "label": "Section Button Text"
+      },
+      {
+        "type": "url",
+        "id": "main-button-url",
+        "label": "Section Button URL"
+      },
+      {
+        "type": "header",
+        "content": "Universal Settings"
+      },
+      {
+        "type": "text",
+        "label": "Max width",
+        "info": "Enter the value in px. Ex: 1400, 1250, ...",
+        "id": "max_width"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Desktop Settings"
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_top",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_right",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "desktop-p_left",
+        "min": 0,
+        "max": 50,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Header Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-header-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-header-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Header Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "color",
+        "id": "header_color",
+        "label": "Header Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Text Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-text-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-text-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Text Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Button Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-button-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-button-font_size",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Font Size (desktop)",
+        "default": 18
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "btn-bg_color",
+        "label": "Button Background Colour",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
+        "content": "Display Settings"
+      },
+      {
+        "type": "range",
+        "id": "mobile-col",
+        "min": 1,
+        "max": 10,
+        "step": 0.5,
+        "label": "Columns Mobile",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "tablet-col",
+        "min": 1,
+        "max": 10,
+        "step": 0.5,
+        "label": "Columns Tablet",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "desktop-col",
+        "min": 1,
+        "max": 10,
+        "step": 0.5,
+        "label": "Columns Desktop",
+        "default": 3
+      },
+      {
+        "type": "header",
+        "content": "Arrow Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "include-arrows",
+        "label": "Include Arrows",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "mobile-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "tablet-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (tablet)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "desktop-arrow-size",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Arrow Size (desktop)",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "mobile-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Mobile",
+        "default": 30
+      },
+      {
+        "type": "range",
+        "id": "tablet-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Tablet",
+        "default": 40
+      },
+            {
+        "type": "range",
+        "id": "desktop-arrow",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Arrow Position Desktop",
+        "default": 40
+      },
+      {
+        "type": "color",
+        "id": "arrow_color",
+        "label": "Arrow Colour",
+        "default": "#000000"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Carrousel image",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "label": "Title"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "subtitle",
+            "label": "Subtitle"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "URL",
+            "info": "Add the URL that you want to send the user to."
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "name": "Carrousel video",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Video thumbnail"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Video"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "label": "Title"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "subtitle",
+            "label": "Subtitle"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Carrousel text",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "btn-text",
+            "label": "Button text"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Button URL",
+            "info": "Add the URL that you want to send the user to."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
