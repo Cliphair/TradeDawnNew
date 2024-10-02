@@ -128,7 +128,7 @@
         ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px;}"
       ],
       "settings": {
-        "heading": "Trending On Cliphair",
+        "heading": "Trending",
         "trending-list": "trending-articles",
         "heading_size": "h2",
         "heading_alignment": "center",
