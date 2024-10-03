@@ -6,6 +6,14 @@
   margin: 0 0 1.5rem;
 }
 
+.related-products .product-card-wrapper .yotpo-sr-bottom-line-summary > div{
+  margin-right:0;
+}
+
+.related-products .product-card-wrapper .yotpo-sr-bottom-line-right-panel{
+  display:none!important;
+}
+
 @media screen and (min-width:750px) {
   .related-products__heading {
     margin: 0 0 3rem;
