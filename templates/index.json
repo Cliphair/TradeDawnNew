@@ -92,6 +92,13 @@
     "maquee_bdNYHF": {
       "type": "maquee",
       "blocks": {
+        "element_h6YLkb": {
+          "type": "element",
+          "settings": {
+            "text_label": "FREE UK  SUNDAY DELIVERY OVER £75",
+            "link": "shopify://pages/shipping-information"
+          }
+        },
         "element_zx3LNE": {
           "type": "element",
           "settings": {
@@ -105,19 +112,12 @@
             "text_label": "PAY YOUR WAY WITH <a href=\"/pages/clearpay-hair-extensions\" title=\"Clearpay\">CLEARPAY</a> & <a href=\"/pages/klarna-faqs\" title=\"Klarna FAQs | Hair Extensions Klarna\">KLARNA</a>",
             "link": ""
           }
-        },
-        "element_h6YLkb": {
-          "type": "element",
-          "settings": {
-            "text_label": "FREE UK EXPRESS DELIVERY OVER £75",
-            "link": "shopify://pages/shipping-information"
-          }
         }
       },
       "block_order": [
+        "element_h6YLkb",
         "element_zx3LNE",
-        "element_PzXtwm",
-        "element_h6YLkb"
+        "element_PzXtwm"
       ],
       "custom_css": [
         "a {color: inherit; text-decoration: none;}",
