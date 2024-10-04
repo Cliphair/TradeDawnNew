@@ -75,7 +75,7 @@
         "icon_with_text_XDR44w": {
           "type": "icon-with-text",
           "settings": {
-            "layout": "horizontal",
+            "layout": "vertical",
             "icon_1": "truck",
             "heading_1": "<strong>Unlock Free Sunday Delivery!</strong> Spend Over £75",
             "icon_2": "none",
