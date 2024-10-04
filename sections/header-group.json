@@ -23,6 +23,7 @@
         },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Buy Now, Pay Later With Klarna & ClearPay",
             "link": "shopify://pages/klarna-faqs"
@@ -37,6 +38,7 @@
         },
         "announcement_X6aUFC": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Buy 2 Get 10% off Nano, Double Drawn Tapes, I-tip & Flat Tips",
             "link": "shopify://pages/permanent-extensions"
@@ -44,6 +46,7 @@
         },
         "announcement_BwckMh": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "New Arrivals: Hair Extensions Hair Care & Accessories",
             "link": "shopify://collections/new-arrivals"
