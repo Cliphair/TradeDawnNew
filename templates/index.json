@@ -54,11 +54,10 @@
         },
         "slide_nzbVKg": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/bridal-campaign-mobile-banner.webp",
-            "image_desktop": "shopify://shop_images/bridal-campaign-desktop-banner.webp",
-            "image_url": "shopify://pages/cliphair-bridal-hair-extensions",
+            "image": "shopify://shop_images/Priced_Based_Discount_-_Mob_Banner_19b20ac9-72ca-4171-92b4-1b23bf0d166c.webp",
+            "image_desktop": "shopify://shop_images/Priced_Based_Discount_-Desktop_Banner_907b07c8-bee8-47d0-8d35-e806a0a1e50c.webp",
+            "image_url": "shopify://pages/flash-sale",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
