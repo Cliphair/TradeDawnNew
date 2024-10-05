@@ -73,6 +73,7 @@
     },
     "countdown_DwXXJA": {
       "type": "countdown",
+      "disabled": true,
       "settings": {
         "text": "Free Sunday Delivery Order In",
         "color_scheme": "accent-2",
