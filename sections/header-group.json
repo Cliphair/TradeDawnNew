@@ -73,15 +73,14 @@
     },
     "countdown_DwXXJA": {
       "type": "countdown",
-      "disabled": true,
       "settings": {
-        "text": "Time to go live:",
+        "text": "Free Sunday Delivery Order In",
         "color_scheme": "accent-2",
         "year": 2024,
-        "month": "9",
-        "day": 15,
-        "hour": 23,
-        "minute": 59,
+        "month": "10",
+        "day": 5,
+        "hour": 11,
+        "minute": 29,
         "padding_top": 8,
         "padding_bottom": 8
       }
@@ -111,10 +110,10 @@
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
           "settings": {
-            "image": "shopify://shop_images/Sunday_Delivery_Message.gif",
+            "image": "shopify://shop_images/PBD_ticker.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
-            "link": "shopify://pages/hair-extensions-by-colour"
+            "link": "shopify://pages/flash-sale"
           }
         }
       },
