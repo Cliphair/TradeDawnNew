@@ -62,6 +62,7 @@
         },
         "icon_with_text_h36Ea9": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_1": "truck",
@@ -75,6 +76,12 @@
         "order_deadline_67UiV7": {
           "type": "order_deadline",
           "settings": {
+          }
+        },
+        "reward_points_j7RyPg": {
+          "type": "reward-points",
+          "settings": {
+            "page": "rewards-pop-up"
           }
         },
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
@@ -124,6 +131,7 @@
         "share",
         "icon_with_text_h36Ea9",
         "order_deadline_67UiV7",
+        "reward_points_j7RyPg",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
         "collapsible-row-0",
         "collapsible-row-1",
