@@ -74,6 +74,7 @@
         },
         "icon_with_text_b6MJr9": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_1": "truck",
