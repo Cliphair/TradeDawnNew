@@ -110,12 +110,11 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/PBD_ticker.gif",
+            "image": "shopify://shop_images/ALLTAPES_TICKER.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
-            "link": "shopify://pages/flash-sale"
+            "link": "shopify://collections/permanent-extensions"
           }
         }
       },

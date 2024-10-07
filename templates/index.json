@@ -54,11 +54,10 @@
         },
         "slide_nzbVKg": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Priced_Based_Discount_-_Mob_Banner_19b20ac9-72ca-4171-92b4-1b23bf0d166c.webp",
-            "image_desktop": "shopify://shop_images/Priced_Based_Discount_-Desktop_Banner_907b07c8-bee8-47d0-8d35-e806a0a1e50c.webp",
-            "image_url": "shopify://pages/flash-sale",
+            "image": "shopify://shop_images/ALLTAPES10_New_Version_Mobile_Banner.webp",
+            "image_desktop": "shopify://shop_images/ALLTAPES10_New_Version_Desktop_Banner.webp",
+            "image_url": "shopify://collections/tape-in-hair-extensions",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
