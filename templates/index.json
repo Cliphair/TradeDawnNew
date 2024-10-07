@@ -94,7 +94,7 @@
         "element_h6YLkb": {
           "type": "element",
           "settings": {
-            "text_label": "FREE UK  SUNDAY DELIVERY OVER £75",
+            "text_label": "FREE UK DELIVERY ON ORDERS OVER £30",
             "link": "shopify://pages/shipping-information"
           }
         },
