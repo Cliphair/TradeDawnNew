@@ -32,26 +32,6 @@
     "slideshow_3tCMjU": {
       "type": "slideshow",
       "blocks": {
-        "slide_nzbVKg": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Priced_Based_Discount_-_Mob_Banner_19b20ac9-72ca-4171-92b4-1b23bf0d166c.webp",
-            "image_desktop": "shopify://shop_images/Priced_Based_Discount_-Desktop_Banner_907b07c8-bee8-47d0-8d35-e806a0a1e50c.webp",
-            "image_url": "shopify://pages/flash-sale",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "bottom-right",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-2",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_nnGry6": {
           "type": "slide",
           "settings": {
@@ -71,11 +51,32 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_nzbVKg": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Priced_Based_Discount_-_Mob_Banner_19b20ac9-72ca-4171-92b4-1b23bf0d166c.webp",
+            "image_desktop": "shopify://shop_images/Priced_Based_Discount_-Desktop_Banner_907b07c8-bee8-47d0-8d35-e806a0a1e50c.webp",
+            "image_url": "shopify://pages/flash-sale",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-right",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-2",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_nzbVKg",
-        "slide_nnGry6"
+        "slide_nnGry6",
+        "slide_nzbVKg"
       ],
       "settings": {
         "layout": "full_bleed",
