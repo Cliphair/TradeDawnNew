@@ -72,6 +72,19 @@
             "share_label": "Share"
           }
         },
+        "icon_with_text_jLRtVa": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "truck",
+            "heading_1": "<strong>Unlock Free Sunday Delivery!</strong> Spend Over £75",
+            "icon_2": "none",
+            "heading_2": "",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
         "order_deadline_67UiV7": {
           "type": "order_deadline",
           "settings": {
@@ -152,6 +165,7 @@
         "quantity_selector_RERRjV",
         "buy_buttons",
         "share",
+        "icon_with_text_jLRtVa",
         "order_deadline_67UiV7",
         "reward_points_B9N8X4",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",

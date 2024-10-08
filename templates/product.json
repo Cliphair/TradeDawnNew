@@ -72,6 +72,19 @@
             "share_label": "Share"
           }
         },
+        "icon_with_text_D9qjLA": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "truck",
+            "heading_1": "<strong>Unlock Free Sunday Delivery!</strong> Spend Over £75",
+            "icon_2": "none",
+            "heading_2": "",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
         "order_deadline_67UiV7": {
           "type": "order_deadline",
           "settings": {
@@ -124,7 +137,7 @@
             "type": "custom",
             "heading": "Delivery Info",
             "icon": "none",
-            "content": "<p><span style=\"text-decoration:underline\"><strong>UK<\/strong><\/span><\/p><ul><li>Economy Tracked: 3-5 Working Days - FREE on Orders over £30<\/li><li>Express Tracked: 1-2 Working Days - £3.99<\/li><li>Next Day Guaranteed (Order Before 4pm Mon-Thu) - £7.99<\/li><li>Saturday Guaranteed (Order Before 4pm Friday) - £8.99<\/li><\/ul><p><span style=\"text-decoration:underline\"><strong>USA\/IRELAND\/EU<\/strong><\/span><\/p><ul><li>DHL Express Tracked: (1-2 Working Days) – FREE<br\/>(Min. Order £100, Otherwise £9.99)<\/li><li>Please note you might have to pay duties which are not included in carriage.<\/li><\/ul><p><span style=\"text-decoration:underline\"><strong>REST OF THE WORLD<\/strong><\/span><\/p><ul><li>DHL Express Tracked: (2-4 Working Days) – FREE<br\/>(Min. Order £150, Otherwise £14.99)<\/li><li>Please note you might have to pay duties which are not included in carriage.<\/li><\/ul>",
+            "content": "<p><span style=\"text-decoration:underline\"><strong>UK</strong></span></p><ul><li>Economy Tracked: 3-5 Working Days - FREE on Orders over £30</li><li>Express Tracked: 1-2 Working Days - £3.99</li><li>Next Day Guaranteed (Order Before 4pm Mon-Thu) - £7.99</li><li>Saturday Guaranteed (Order Before 4pm Friday) - £8.99</li></ul><p><span style=\"text-decoration:underline\"><strong>USA/IRELAND/EU</strong></span></p><ul><li>DHL Express Tracked: (1-2 Working Days) – FREE<br/>(Min. Order £100, Otherwise £9.99)</li><li>Please note you might have to pay duties which are not included in carriage.</li></ul><p><span style=\"text-decoration:underline\"><strong>REST OF THE WORLD</strong></span></p><ul><li>DHL Express Tracked: (2-4 Working Days) – FREE<br/>(Min. Order £150, Otherwise £14.99)</li><li>Please note you might have to pay duties which are not included in carriage.</li></ul>",
             "page": ""
           }
         },
@@ -134,7 +147,7 @@
             "type": "custom",
             "heading": "Return Policy",
             "icon": "none",
-            "content": "<p><strong>60 DAYS REFUND OR EXCHANGE<\/strong><\/p><p>At Cliphair, our goal is to ensure complete satisfaction with your purchase. We strive to provide expert guidance to help you choose the best possible products for your needs. However, if for whatever reason you are dissatisfied with your purchase on arrival or have a change of heart before opening, you can return the product for a refund or exchange within 60 days of delivery.<\/p><p>Please note that returns will only be accepted if the seal is still intact on the product. If the seal is removed and the product has been used, we will not be able to authorise the return. Toning or dying our hair extensions, even with our own products, voids the return policy. Therefore, please carefully follow all instructions provided to ensure correct use of products.<\/p><p>View full returns policy and instructions <a href=\"\/pages\/returns-information\" title=\"Returns Information\">here<\/a>.<\/p>",
+            "content": "<p><strong>60 DAYS REFUND OR EXCHANGE</strong></p><p>At Cliphair, our goal is to ensure complete satisfaction with your purchase. We strive to provide expert guidance to help you choose the best possible products for your needs. However, if for whatever reason you are dissatisfied with your purchase on arrival or have a change of heart before opening, you can return the product for a refund or exchange within 60 days of delivery.</p><p>Please note that returns will only be accepted if the seal is still intact on the product. If the seal is removed and the product has been used, we will not be able to authorise the return. Toning or dying our hair extensions, even with our own products, voids the return policy. Therefore, please carefully follow all instructions provided to ensure correct use of products.</p><p>View full returns policy and instructions <a href=\"/pages/returns-information\" title=\"Returns Information\">here</a>.</p>",
             "page": ""
           }
         }
@@ -150,6 +163,7 @@
         "quantity_selector_RERRjV",
         "buy_buttons",
         "share",
+        "icon_with_text_D9qjLA",
         "order_deadline_67UiV7",
         "reward_points_B9N8X4",
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
@@ -301,40 +315,40 @@
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
-            "text_label": "<p>Ethically<br>Sourced<\/p>",
+            "image": "shopify://shop_images/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced</p>",
             "link": ""
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "<p>Outstanding<br>Reviews<\/p>",
-            "link": "shopify:\/\/pages\/testimonials"
+            "image": "shopify://shop_images/Outstanding-Reviews-_White.svg",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
+            "link": "shopify://pages/testimonials"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "<p>Cliphair<br>Rewards<\/p>",
-            "link": "shopify:\/\/pages\/rewards"
+            "image": "shopify://shop_images/Cliphair-Rewards-_White.svg",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
+            "link": "shopify://pages/rewards"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "<p>Free Delivery<br>& Returns<\/p>",
+            "image": "shopify://shop_images/Free-Delivery-_White.svg",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
             "link": ""
           }
         },
         "cbdbff03-f013-487f-8288-6c9a46426bc6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "<p>Buy Now<br>Pay Later<\/p>",
+            "image": "shopify://shop_images/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
             "link": ""
           }
         }
@@ -349,7 +363,7 @@
       "custom_css": [
         "img {max-height: 70px;}",
         "a {text-decoration: none;}",
-        "@media screen and (min-width: 750px) and (max-width: 989px) {.grid--4-col-tablet .grid__item {width: calc((100% - var(--grid-desktop-horizontal-spacing) * 4) \/ 5); }}"
+        "@media screen and (min-width: 750px) and (max-width: 989px) {.grid--4-col-tablet .grid__item {width: calc((100% - var(--grid-desktop-horizontal-spacing) * 4) / 5); }}"
       ],
       "settings": {
         "title": "",

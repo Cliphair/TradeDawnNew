@@ -54,11 +54,10 @@
         },
         "slide_nzbVKg": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/bridal-campaign-mobile-banner.webp",
-            "image_desktop": "shopify://shop_images/bridal-campaign-desktop-banner.webp",
-            "image_url": "shopify://pages/cliphair-bridal-hair-extensions",
+            "image": "shopify://shop_images/ALLTAPES10_New_Version_Mobile_Banner.webp",
+            "image_desktop": "shopify://shop_images/ALLTAPES10_New_Version_Desktop_Banner.webp",
+            "image_url": "shopify://collections/tape-in-hair-extensions",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -92,6 +91,13 @@
     "maquee_bdNYHF": {
       "type": "maquee",
       "blocks": {
+        "element_h6YLkb": {
+          "type": "element",
+          "settings": {
+            "text_label": "FREE UK DELIVERY ON ORDERS OVER £30",
+            "link": "shopify://pages/shipping-information"
+          }
+        },
         "element_zx3LNE": {
           "type": "element",
           "settings": {
@@ -105,19 +111,12 @@
             "text_label": "PAY YOUR WAY WITH <a href=\"/pages/clearpay-hair-extensions\" title=\"Clearpay\">CLEARPAY</a> & <a href=\"/pages/klarna-faqs\" title=\"Klarna FAQs | Hair Extensions Klarna\">KLARNA</a>",
             "link": ""
           }
-        },
-        "element_h6YLkb": {
-          "type": "element",
-          "settings": {
-            "text_label": "FREE UK EXPRESS DELIVERY OVER £75",
-            "link": "shopify://pages/shipping-information"
-          }
         }
       },
       "block_order": [
+        "element_h6YLkb",
         "element_zx3LNE",
-        "element_PzXtwm",
-        "element_h6YLkb"
+        "element_PzXtwm"
       ],
       "custom_css": [
         "a {color: inherit; text-decoration: none;}",
