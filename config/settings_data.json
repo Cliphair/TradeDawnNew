@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "shopify://shop_images/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
@@ -107,7 +107,7 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-69d57c77-dfa8-46c0-ae7f-75b47c0b9174",
     "sold_out_badge_color_scheme": "inverse",
-    "brand_description": "<p>0345 211 311</p><p><a href=\"mailto:customerservice@cliphair.co.uk\" title=\"Contact Us\">customerservice@cliphair.co.uk</a></p><p>9:30AM - 4:30PM - (Mon - Fri)</p><p></p><p>Unit 1 Watermill House, Restmor Way,</p><p>Wallington SM6 7AH</p><p>United Kingdom</p><p></p>",
+    "brand_description": "<p>03450 211 311</p><p><a href=\"mailto:customerservice@cliphair.co.uk\" title=\"Contact Us\">customerservice@cliphair.co.uk</a></p><p>9:30AM - 4:30PM - (Mon - Fri)</p><p></p><p>Unit 1 Watermill House, Restmor Way,</p><p>Wallington SM6 7AH</p><p>United Kingdom</p><p></p>",
     "brand_image": "shopify://shop_images/logo_c33b4969-1d80-4ced-b3a4-314c05752e92.png",
     "brand_image_width": 120,
     "social_facebook_link": "https://www.facebook.com/Cliphair.Limited",
