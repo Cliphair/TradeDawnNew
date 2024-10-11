@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -111,7 +111,7 @@
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
           "settings": {
-            "image": "shopify://shop_images/Saturday_Guaranteed_Delivery_-blue_-hair_extensions.gif",
+            "image": "shopify://shop_images/New_Sunday_Delivery_Hair_Extensions_From_Cliphair.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://collections/permanent-extensions"
