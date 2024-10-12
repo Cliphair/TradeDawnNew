@@ -110,6 +110,7 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/New_Sunday_Delivery_Hair_Extensions_From_Cliphair.gif",
             "text_alignment": "center",
