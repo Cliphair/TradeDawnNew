@@ -110,12 +110,11 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/New_Sunday_Delivery_Hair_Extensions_From_Cliphair.gif",
+            "image": "shopify://shop_images/DROP10_CLIP_INS-Optimized.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
-            "link": "shopify://collections/permanent-extensions"
+            "link": "shopify://collections/clip-in-hair-extensions"
           }
         }
       },

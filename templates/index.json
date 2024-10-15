@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "visual_menu_66DUPM": {
@@ -32,6 +32,26 @@
     "slideshow_3tCMjU": {
       "type": "slideshow",
       "blocks": {
+        "slide_nzbVKg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/DROP10_WEB_BANNER_MOB.webp",
+            "image_desktop": "shopify://shop_images/DROP10_WEB_BANNER_DESKTOP.webp",
+            "image_url": "shopify://collections/clip-in-hair-extensions",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-right",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-2",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_nnGry6": {
           "type": "slide",
           "settings": {
@@ -51,32 +71,11 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_nzbVKg": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/ALLTAPES10_New_Version_Mobile_Banner.webp",
-            "image_desktop": "shopify://shop_images/ALLTAPES10_New_Version_Desktop_Banner.webp",
-            "image_url": "shopify://collections/tape-in-hair-extensions",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "bottom-right",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-2",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_nnGry6",
-        "slide_nzbVKg"
+        "slide_nzbVKg",
+        "slide_nnGry6"
       ],
       "settings": {
         "layout": "full_bleed",
