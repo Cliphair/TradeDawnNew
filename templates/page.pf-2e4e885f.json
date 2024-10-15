@@ -9,20 +9,13 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "pf-2e4e885f": {
+      "type": "pf-2e4e885f",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
-        "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "accent-4",
-        "padding_top": 28,
-        "padding_bottom": 28
       }
     }
   },
   "order": [
-    "main"
+    "pf-2e4e885f"
   ]
 }
