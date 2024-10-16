@@ -120,6 +120,7 @@
     },
     "9153105e-f1cc-457b-81ff-b3e66e6aaa77": {
       "type": "break-line",
+      "disabled": true,
       "custom_css": [
         ".break-line {opacity: 0.4;}"
       ],
@@ -320,6 +321,7 @@
         "fef9efa9-ee1b-4abe-9478-84c54171f44c",
         "5ae29172-f8b0-4c0f-900a-f376f9d96d3b"
       ],
+      "disabled": true,
       "custom_css": [
         ".button_container > .play_button {font-size: min(15vw, 70px);}",
         "a {color: inherit;}",
