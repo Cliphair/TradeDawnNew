@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "166445343207c9fec0": {
@@ -31,9 +40,10 @@
     },
     "962c8e4b-0648-4235-b6a6-143559c32b12": {
       "type": "video-banner",
+      "disabled": true,
       "settings": {
-        "url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7c320b8f435845888fdb8bdd405e2d9d.mp4",
-        "image": "shopify:\/\/shop_images\/fallback-image.webp",
+        "url": "https://cdn.shopify.com/videos/c/o/v/7c320b8f435845888fdb8bdd405e2d9d.mp4",
+        "image": "shopify://shop_images/fallback-image.webp",
         "max-width": "1440",
         "bg-color": "#f0f0f0"
       }
@@ -42,7 +52,7 @@
       "type": "page_description_holiday_campaign",
       "disabled": true,
       "settings": {
-        "section_title": "<em>Shine bright, baby.<\/em>",
+        "section_title": "<em>Shine bright, baby.</em>",
         "title2": "",
         "header_colour": "#494949",
         "header_bold": false,
@@ -50,7 +60,7 @@
         "bg_colour": "#ffffff",
         "max-width": "1440",
         "custom_description": true,
-        "description": "<p>‘tis the season to sparkle. Sharing presents with your friends, gathering around a sumptuous meal, or dancing the night away: no matter what your festive style is, find the perfect look with Gifted Glamour. <br\/><br\/>The party is on: get in your holiday spirit with a brand new hairstyle!<\/p>",
+        "description": "<p>‘tis the season to sparkle. Sharing presents with your friends, gathering around a sumptuous meal, or dancing the night away: no matter what your festive style is, find the perfect look with Gifted Glamour. <br/><br/>The party is on: get in your holiday spirit with a brand new hairstyle!</p>",
         "description__mobile-font-size": 15,
         "description__mobile-padding-topbottom": 15,
         "description__mobile-padding-sides": 15,
@@ -65,13 +75,13 @@
         "b2e25af8-50df-4002-b665-35e07beb662c": {
           "type": "title",
           "settings": {
-            "title": "<h2><em>Shine bright, baby.<\/em><\/h2>"
+            "title": "<h2><em>Shine bright, baby.</em></h2>"
           }
         },
         "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
           "type": "intro",
           "settings": {
-            "intro": "<p>‘tis the season to sparkle. Sharing presents with your friends, gathering around a sumptuous meal, or dancing the night away: no matter what your festive style is, find the perfect look with Gifted Glamour. <br\/><br\/>The party is on: get in your holiday spirit with a brand new hairstyle!<\/p>"
+            "intro": "<p>‘tis the season to sparkle. Sharing presents with your friends, gathering around a sumptuous meal, or dancing the night away: no matter what your festive style is, find the perfect look with Gifted Glamour. <br/><br/>The party is on: get in your holiday spirit with a brand new hairstyle!</p>"
           }
         }
       },
@@ -88,11 +98,11 @@
       "settings": {
         "max-width": "1440",
         "bg-colour": "#ffffff",
-        "mobile-p_top": 30,
+        "mobile-p_top": 0,
         "mobile-p_bottom": 20,
         "mobile-p_right": 20,
         "mobile-p_left": 20,
-        "desktop-p_top": 50,
+        "desktop-p_top": 0,
         "desktop-p_bottom": 40,
         "desktop-p_right": 16,
         "desktop-p_left": 16,
@@ -129,72 +139,72 @@
         "74c3f2d7-404f-4a64-983c-c9964a5b2871": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bundle_image_edit_colour_ring_2.webp",
+            "image": "shopify://shop_images/bundle_image_edit_colour_ring_2.webp",
             "circle_image": false,
             "border": false,
             "text": "Shade Ring Bundle",
             "subtitle": "",
-            "url": "shopify:\/\/products\/shade-ring-bundle",
+            "url": "shopify://products/shade-ring-bundle",
             "image-url": ""
           }
         },
         "ad8175f2-51ac-4162-b9af-ddc0f487f924": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tape-in-starter-bundel.webp",
+            "image": "shopify://shop_images/tape-in-starter-bundel.webp",
             "circle_image": false,
             "border": false,
             "text": "Tape-In Complete Bundle",
             "subtitle": "",
-            "url": "shopify:\/\/products\/tape-in-starter-bundle",
+            "url": "shopify://products/tape-in-starter-bundle",
             "image-url": ""
           }
         },
         "0daf6aee-88f0-4373-80c3-3830fea777d8": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Bundle_Image_Edit_1.webp",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Bundle_Image_Edit_1.webp",
             "circle_image": false,
             "border": false,
             "text": "Weave + Nano Combo Bundle",
             "subtitle": "",
-            "url": "shopify:\/\/products\/weave-combo-bundle",
+            "url": "shopify://products/weave-combo-bundle",
             "image-url": ""
           }
         },
         "905f982b-829c-4154-a8c1-f9a24b175ace": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Bundle_Image_Edit_3.webp",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Bundle_Image_Edit_3.webp",
             "circle_image": false,
             "border": false,
             "text": "Clip In Starter Bundle",
             "subtitle": "",
-            "url": "shopify:\/\/products\/clip-in-starter-bundle",
+            "url": "shopify://products/clip-in-starter-bundle",
             "image-url": ""
           }
         },
         "5b119cfd-f135-4017-895e-4dcbd1fd4b20": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Bundle_Image_Edit_2.webp",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Bundle_Image_Edit_2.webp",
             "circle_image": false,
             "border": false,
             "text": "Nano Ring + Beads Bundle",
             "subtitle": "",
-            "url": "shopify:\/\/products\/nano-ring-starter-bundle",
+            "url": "shopify://products/nano-ring-starter-bundle",
             "image-url": ""
           }
         },
         "7a03e7f8-e613-49ba-a407-ebc8ac3d7fe6": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Bundle_Image_Edit_5.webp",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Bundle_Image_Edit_5.webp",
             "circle_image": false,
             "border": false,
             "text": "Party Season Bundle",
             "subtitle": "",
-            "url": "shopify:\/\/products\/party-season-bundle",
+            "url": "shopify://products/party-season-bundle",
             "image-url": ""
           }
         }
@@ -217,10 +227,10 @@
         ".main-button-container > a:hover {text-decoration-thickness: 2px;}"
       ],
       "settings": {
-        "header": "<h2><em>BUNDLE UP FOR THE HOLIDAYS:<\/em><\/h2>",
-        "intro": "<p><em>Limited Time Christmas Deals!<\/em><\/p>",
+        "header": "<h2><em>BUNDLE UP FOR THE HOLIDAYS:</em></h2>",
+        "intro": "<p><em>Limited Time Christmas Deals!</em></p>",
         "main-button-text": "VIEW ALL",
-        "main-button-url": "shopify:\/\/collections\/hair-extensions-bundle",
+        "main-button-url": "shopify://collections/hair-extensions-bundle",
         "max_width": "1440",
         "bg_color": "#ffffff",
         "mobile-p_top": 30,
@@ -262,45 +272,45 @@
         "a6849c18-f99c-4bc7-a428-11520236f4ce": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sleek-and-straight.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9c4c79ceec1b4ace8d9a1295d376da95.mp4",
-            "video_title": "<p><em>Sleek & Straight<\/em><\/p>",
-            "description": "<p>Fifi wears <a href=\"\/products\/natural-off-black-1b-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Natural\/Off Black (#1B) Ultra-Volume Clip In Full Head Set (240-300G)\">26” Ultra Volume Clip ins in shade ‘Natural Black’ <\/a>to create this stunning party look. <\/p>",
+            "image": "shopify://shop_images/sleek-and-straight.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/9c4c79ceec1b4ace8d9a1295d376da95.mp4",
+            "video_title": "<p><em>Sleek & Straight</em></p>",
+            "description": "<p>Fifi wears <a href=\"/products/natural-off-black-1b-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Natural/Off Black (#1B) Ultra-Volume Clip In Full Head Set (240-300G)\">26” Ultra Volume Clip ins in shade ‘Natural Black’ </a>to create this stunning party look. </p>",
             "button-text": "Lookbook",
-            "button-link": "shopify:\/\/pages\/sleek-straight-lookbook-holiday-campaign-2023"
+            "button-link": "shopify://pages/sleek-straight-lookbook-holiday-campaign-2023"
           }
         },
         "8bc302be-4798-46c3-8adb-d36358bf4923": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sultry-waves.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7a82406046dd48c2841acc06715bdc69.mp4",
-            "video_title": "<p><em>Sultry Waves<\/em><\/p>",
-            "description": "<p>Lauren wears <a href=\"\/products\/medium-brown-4-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Medium Brown (#4) Ultra-Volume Clip In Full Head Set (240-300G)\">22” Ultra Volume Clip ins in shade ‘Medium Brown’<\/a><\/p>",
+            "image": "shopify://shop_images/sultry-waves.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/7a82406046dd48c2841acc06715bdc69.mp4",
+            "video_title": "<p><em>Sultry Waves</em></p>",
+            "description": "<p>Lauren wears <a href=\"/products/medium-brown-4-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Medium Brown (#4) Ultra-Volume Clip In Full Head Set (240-300G)\">22” Ultra Volume Clip ins in shade ‘Medium Brown’</a></p>",
             "button-text": "Lookbook",
-            "button-link": "shopify:\/\/pages\/sultry-waves-lookbook-holiday-campaign-2023"
+            "button-link": "shopify://pages/sultry-waves-lookbook-holiday-campaign-2023"
           }
         },
         "fef9efa9-ee1b-4abe-9478-84c54171f44c": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/half-up-half-down.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/173a887cfc06460389ca44331b401d7f.mp4",
-            "video_title": "<p><em>Half Up Half Down<\/em><\/p>",
-            "description": "<p>Ayeisha wears our <a href=\"\/products\/remy-royale-seamless-clip-ins-dark-blonde-ash-blonde-mix-14-22\" title=\"Iced Cappuccino (#14\/22) Double Drawn Seamless Clip In Hair Extensions\">22” Remy Royale Seamless Clip ins in shade ‘Iced Cappuccino’<\/a><\/p>",
+            "image": "shopify://shop_images/half-up-half-down.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/173a887cfc06460389ca44331b401d7f.mp4",
+            "video_title": "<p><em>Half Up Half Down</em></p>",
+            "description": "<p>Ayeisha wears our <a href=\"/products/remy-royale-seamless-clip-ins-dark-blonde-ash-blonde-mix-14-22\" title=\"Iced Cappuccino (#14/22) Double Drawn Seamless Clip In Hair Extensions\">22” Remy Royale Seamless Clip ins in shade ‘Iced Cappuccino’</a></p>",
             "button-text": "Lookbook",
-            "button-link": "shopify:\/\/pages\/half-up-half-down-lookbook-holiday-campaign-2023"
+            "button-link": "shopify://pages/half-up-half-down-lookbook-holiday-campaign-2023"
           }
         },
         "5ae29172-f8b0-4c0f-900a-f376f9d96d3b": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/power-ponytail.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/59961c6b110f451cb5a371bf53ac4715.mp4",
-            "video_title": "<p><em>Power Ponytail<\/em><\/p>",
-            "description": "<p>Diana wears our <a href=\"\/products\/platinum-blondeme-straight-up-wrap-around-ponytail-extension\" title=\"Platinum BlondeMe Straight Up Wrap Around Ponytail Extension\">24” Wrap Around Ponytail in shade ‘Platinum Blonde Highlights’<\/a><\/p>",
+            "image": "shopify://shop_images/power-ponytail.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/59961c6b110f451cb5a371bf53ac4715.mp4",
+            "video_title": "<p><em>Power Ponytail</em></p>",
+            "description": "<p>Diana wears our <a href=\"/products/platinum-blondeme-straight-up-wrap-around-ponytail-extension\" title=\"Platinum BlondeMe Straight Up Wrap Around Ponytail Extension\">24” Wrap Around Ponytail in shade ‘Platinum Blonde Highlights’</a></p>",
             "button-text": "Lookbook",
-            "button-link": "shopify:\/\/pages\/power-ponytail-lookbook-holiday-campaign-2023"
+            "button-link": "shopify://pages/power-ponytail-lookbook-holiday-campaign-2023"
           }
         }
       },
@@ -316,8 +326,8 @@
         "@media screen and (min-width: 768px) {.section_header {margin-bottom: 25px; } .placeholder_image_container {padding: 30px; }}"
       ],
       "settings": {
-        "header": "<h2><em>GIFTED GLAMOUR: THE LOOKBOOK<\/em><\/h2>",
-        "intro": "<p>Get inspired, choose your hair, watch the tutorial, and get styling: getting a party-perfect new look has never been easier!<\/p>",
+        "header": "<h2><em>GIFTED GLAMOUR: THE LOOKBOOK</em></h2>",
+        "intro": "<p>Get inspired, choose your hair, watch the tutorial, and get styling: getting a party-perfect new look has never been easier!</p>",
         "image_orientation": "portrait",
         "title-position": "top",
         "text_color": "#494949",
@@ -366,96 +376,96 @@
         "442b8d9a-8cbd-4996-a43b-f18d1da6b98d": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hair-care-product-bottle.webp",
+            "image": "shopify://shop_images/hair-care-product-bottle.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>UNDER £15<\/em>",
+            "text": "<em>UNDER £15</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/under-15",
+            "url": "shopify://collections/under-15",
             "image-url": ""
           }
         },
         "ee97fb3a-bbfa-4f45-ae10-e49bb9e2306b": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/professional-hair-extension-application-example.webp",
+            "image": "shopify://shop_images/professional-hair-extension-application-example.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>UNDER £100<\/em>",
+            "text": "<em>UNDER £100</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/under-100",
+            "url": "shopify://collections/under-100",
             "image-url": ""
           }
         },
         "c6c06c2a-cb50-4431-95de-c43b710d6ab0": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/stocking-stuffers.webp",
+            "image": "shopify://shop_images/stocking-stuffers.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>STOCKING STUFFERS<\/em>",
+            "text": "<em>STOCKING STUFFERS</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/stocking-stuffers",
+            "url": "shopify://collections/stocking-stuffers",
             "image-url": ""
           }
         },
         "4a369b39-438b-4ab4-a97b-6ac55d92eaa7": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_For_Beginners_thumbnail.webp",
+            "image": "shopify://shop_images/Holiday_Page_23_-_For_Beginners_thumbnail.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>FOR BEGINNERS<\/em>",
+            "text": "<em>FOR BEGINNERS</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/for-beginners-gift-guide",
+            "url": "shopify://collections/for-beginners-gift-guide",
             "image-url": ""
           }
         },
         "8a28b53d-7b2a-4e32-8167-5d8bcb8e5930": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/luxury-lovers-collection.webp",
+            "image": "shopify://shop_images/luxury-lovers-collection.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>LUXURY LOVERS<\/em>",
+            "text": "<em>LUXURY LOVERS</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/luxury-lovers-gift-guide",
+            "url": "shopify://collections/luxury-lovers-gift-guide",
             "image-url": ""
           }
         },
         "53811450-2376-44d8-aa2e-44cd4c05043b": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/trend-setters-collection.webp",
+            "image": "shopify://shop_images/trend-setters-collection.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>TREND SETTERS<\/em>",
+            "text": "<em>TREND SETTERS</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/trend-setters-gift-guide",
+            "url": "shopify://collections/trend-setters-gift-guide",
             "image-url": ""
           }
         },
         "e68add47-0283-4048-be75-ddafac8afac3": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/total-transformation-collection.webp",
+            "image": "shopify://shop_images/total-transformation-collection.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>TOTAL TRANSFORMATION<\/em>",
+            "text": "<em>TOTAL TRANSFORMATION</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/total-transformation-gift-guide",
+            "url": "shopify://collections/total-transformation-gift-guide",
             "image-url": ""
           }
         },
         "9138ac6c-0757-4998-aa55-4086e4fb0619": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/salon-enthusiasts.webp",
+            "image": "shopify://shop_images/salon-enthusiasts.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>SALON ENTHUSIAST<\/em>",
+            "text": "<em>SALON ENTHUSIAST</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/salon-enthusiast-gift-guide",
+            "url": "shopify://collections/salon-enthusiast-gift-guide",
             "image-url": ""
           }
         }
@@ -476,7 +486,7 @@
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; padding: 10px 0;}"
       ],
       "settings": {
-        "header": "<h2><em>YOUR ULTIMATE GIFT GUIDE<\/em><\/h2>",
+        "header": "<h2><em>YOUR ULTIMATE GIFT GUIDE</em></h2>",
         "intro": "",
         "main-button-text": "",
         "main-button-url": "",
@@ -521,60 +531,60 @@
         "f086ca95-85b7-477e-a14d-d0e0e03967e6": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tape-in-application.webp",
+            "image": "shopify://shop_images/tape-in-application.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Tape Ins<\/em>",
+            "text": "<em>Tape Ins</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/tape-in-hair-extensions",
+            "url": "shopify://collections/tape-in-hair-extensions",
             "image-url": ""
           }
         },
         "50d22042-0b90-47d7-b470-7bfc65792929": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/double-weft-application.webp",
+            "image": "shopify://shop_images/double-weft-application.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Double Weft<\/em>",
+            "text": "<em>Double Weft</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions",
+            "url": "shopify://collections/double-wefted-clip-in-hair-extensions",
             "image-url": ""
           }
         },
         "f883e432-ef9f-49e8-b770-bb4bb850517b": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/nano-ring-application.webp",
+            "image": "shopify://shop_images/nano-ring-application.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Nano Ring<\/em>",
+            "text": "<em>Nano Ring</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/nano-rings-hair-extensions",
+            "url": "shopify://collections/nano-rings-hair-extensions",
             "image-url": ""
           }
         },
         "37d444d6-6944-4c4b-8955-56a021cb399a": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hair-weft-application.webp",
+            "image": "shopify://shop_images/hair-weft-application.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Hair Weft<\/em>",
+            "text": "<em>Hair Weft</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/human-hair-weave-wefts-hair-extensions",
+            "url": "shopify://collections/human-hair-weave-wefts-hair-extensions",
             "image-url": ""
           }
         },
         "85aecb97-b760-44ed-9709-9d6384157072": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/seamless-application.webp",
+            "image": "shopify://shop_images/seamless-application.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Seamless<\/em>",
+            "text": "<em>Seamless</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair",
+            "url": "shopify://collections/seamless-clip-in-hair-extensions-double-drawn-hair",
             "image-url": ""
           }
         }
@@ -594,8 +604,8 @@
         "@media screen and (min-width: 992px) {.carrousel-items > .item {padding-right: 30px; } .carrousel-items > .item img {margin-bottom: 20px; } .item-btn {width: 70%; padding: 7px 15px; }}"
       ],
       "settings": {
-        "header": "<h2><em>Festive Favourites<\/em><\/h2>",
-        "intro": "<p>Seasonal Must Haves<\/p>",
+        "header": "<h2><em>Festive Favourites</em></h2>",
+        "intro": "<p>Seasonal Must Haves</p>",
         "main-button-text": "",
         "main-button-url": "",
         "max_width": "1440",
@@ -615,7 +625,7 @@
         "desktop-text-font_size": 20,
         "text_color": "#494949",
         "include-button": true,
-        "button-text": "<p>Shop<\/p>",
+        "button-text": "<p>Shop</p>",
         "mobile-button-font_size": 12,
         "desktop-button-font_size": 20,
         "button_color": "#ffffff",
@@ -637,7 +647,7 @@
       "type": "product-options-display",
       "disabled": true,
       "settings": {
-        "header": "<h2><em>Gift Card Option<\/em><\/h2>",
+        "header": "<h2><em>Gift Card Option</em></h2>",
         "intro": "",
         "product": "cliphair-e-gift-card",
         "text_color": "#494949",
@@ -667,11 +677,11 @@
         "f29be8e9-ab56-4b62-80a0-f788bcc7a717": {
           "type": "entry",
           "settings": {
-            "title": "<p>You can gift up to:<\/p>",
-            "description": "<ul><li>£25 <\/li><li>£50<\/li><li>£100<\/li><li>£150 <\/li><li>£200<\/li><li>£250<\/li><\/ul>",
+            "title": "<p>You can gift up to:</p>",
+            "description": "<ul><li>£25 </li><li>£50</li><li>£100</li><li>£150 </li><li>£200</li><li>£250</li></ul>",
             "button-text": "Get Gifting",
-            "button-url": "shopify:\/\/products\/cliphair-e-gift-card",
-            "image": "shopify:\/\/shop_images\/holiday-page-gift-card.webp"
+            "button-url": "shopify://products/cliphair-e-gift-card",
+            "image": "shopify://shop_images/holiday-page-gift-card.webp"
           }
         }
       },
@@ -682,8 +692,8 @@
 
       ],
       "settings": {
-        "header": "<h2><em>Gift Card Option<\/em><\/h2>",
-        "intro": "<p>Unsure of the perfect gift? <em>Offer the luxury of choice<\/em> with an e-card for premium hair extensions – the ultimate thoughtful gesture.<\/p>",
+        "header": "<h2><em>Gift Card Option</em></h2>",
+        "intro": "<p>Unsure of the perfect gift? <em>Offer the luxury of choice</em> with an e-card for premium hair extensions – the ultimate thoughtful gesture.</p>",
         "max-width": "768",
         "text-colour": "#494949",
         "button-colour": "#494949",
@@ -716,60 +726,60 @@
         "773ba6e6-65cf-44ac-8af2-fb08180c431e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/new-arrivals-invisible-tapes.webp",
+            "image": "shopify://shop_images/new-arrivals-invisible-tapes.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Invisible tapes<\/em>",
+            "text": "<em>Invisible tapes</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/remy-royale-invisible-tape-in-hair-extensions",
+            "url": "shopify://collections/remy-royale-invisible-tape-in-hair-extensions",
             "image-url": ""
           }
         },
         "d5289475-13ff-4eca-ba4d-7ddaaecf39a1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/new-arrivals-flat-weft.webp",
+            "image": "shopify://shop_images/new-arrivals-flat-weft.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Flat weft weave<\/em>",
+            "text": "<em>Flat weft weave</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/flat-weft-hair-extensions",
+            "url": "shopify://collections/flat-weft-hair-extensions",
             "image-url": ""
           }
         },
         "cb96d513-c19a-405a-9389-ecc9a8f849df": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/new-arrivals-premium-tape.webp",
+            "image": "shopify://shop_images/new-arrivals-premium-tape.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Premium tapes<\/em>",
+            "text": "<em>Premium tapes</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/remy-royale-tape-in-extensions",
+            "url": "shopify://collections/remy-royale-tape-in-extensions",
             "image-url": ""
           }
         },
         "770f4e88-e92f-4871-8ff9-a55acb6c0487": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/nano-bond-hair-extensions.webp",
+            "image": "shopify://shop_images/nano-bond-hair-extensions.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Nano bonds<\/em>",
+            "text": "<em>Nano bonds</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/nano-bond-hair-extensions",
+            "url": "shopify://collections/nano-bond-hair-extensions",
             "image-url": ""
           }
         },
         "2f450639-19df-4f3b-9277-a8f56f7c8c1e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/new-arrivals-flat-tip.webp",
+            "image": "shopify://shop_images/new-arrivals-flat-tip.webp",
             "circle_image": false,
             "border": false,
-            "text": "<em>Flat tip<\/em>",
+            "text": "<em>Flat tip</em>",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/flat-tip-hair-extensions",
+            "url": "shopify://collections/flat-tip-hair-extensions",
             "image-url": ""
           }
         }
@@ -788,8 +798,8 @@
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
       ],
       "settings": {
-        "header": "<h2><em>New Arrivals: Elevate Your Hair Game!<\/em><\/h2>",
-        "intro": "<p>What’s new, cutie-boo? Explore our NEW permanent hair extensions: Invisible Tapes, Remy Royale Tapes, Flat Wefts, Flat Tips, and Nano Bond hair extensions. All the luxury of cuticle-aligned, double-drawn tresses – now available in FIVE new formats.<\/p>",
+        "header": "<h2><em>New Arrivals: Elevate Your Hair Game!</em></h2>",
+        "intro": "<p>What’s new, cutie-boo? Explore our NEW permanent hair extensions: Invisible Tapes, Remy Royale Tapes, Flat Wefts, Flat Tips, and Nano Bond hair extensions. All the luxury of cuticle-aligned, double-drawn tresses – now available in FIVE new formats.</p>",
         "main-button-text": "",
         "main-button-url": "",
         "max_width": "1440",
@@ -833,10 +843,10 @@
         "41a30ebc-6593-467b-b63c-4005611c8db1": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Reel_Thumbnail_1_BehindTheHashtag.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/613eadb57e5443b49cf896e15a10e1e3.mp4",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Reel_Thumbnail_1_BehindTheHashtag.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/613eadb57e5443b49cf896e15a10e1e3.mp4",
             "video_title": "",
-            "description": "<p>@emilybull wears our <a href=\"\/products\/seamless-clip-in-hair-extensions-double-drawn-medium-brown\" title=\"Medium Brown (#4) Double Drawn Seamless Clip In Hair Extensions\">18” Seamless Clip Ins<\/a> in shade ‘<a href=\"\/collections\/medium-brown-hair-extensions-4\" title=\"Chocolate Brown Hair Extensions (#4)\">Medium Brown<\/a>’<\/p>",
+            "description": "<p>@emilybull wears our <a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-medium-brown\" title=\"Medium Brown (#4) Double Drawn Seamless Clip In Hair Extensions\">18” Seamless Clip Ins</a> in shade ‘<a href=\"/collections/medium-brown-hair-extensions-4\" title=\"Chocolate Brown Hair Extensions (#4)\">Medium Brown</a>’</p>",
             "button-text": "",
             "button-link": ""
           }
@@ -844,10 +854,10 @@
         "6e931ba3-7357-451a-8c06-32fa51b22920": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Reel_Thumbnail_2_BehindTheHashtag.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/377efec315a44cbcbf2ac82f77ac1cbb.mp4",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Reel_Thumbnail_2_BehindTheHashtag.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/377efec315a44cbcbf2ac82f77ac1cbb.mp4",
             "video_title": "",
-            "description": "<p>@kaseyjaynecounsel wears our <a href=\"\/products\/autumn-spice-30b-straight-up-wrap-around-ponytail-extension\" title=\"Autumn Spice (#30B) Straight Up Wrap Around Ponytail Extension\">20” Wrap Around Ponytail<\/a> in shade ‘<a href=\"\/collections\/autumn-spice-hair-extensions-30b\" title=\"Autumn Spice Hair Extensions (#30B)\">Autumn Spice<\/a>’<\/p>",
+            "description": "<p>@kaseyjaynecounsel wears our <a href=\"/products/autumn-spice-30b-straight-up-wrap-around-ponytail-extension\" title=\"Autumn Spice (#30B) Straight Up Wrap Around Ponytail Extension\">20” Wrap Around Ponytail</a> in shade ‘<a href=\"/collections/autumn-spice-hair-extensions-30b\" title=\"Autumn Spice Hair Extensions (#30B)\">Autumn Spice</a>’</p>",
             "button-text": "",
             "button-link": ""
           }
@@ -855,10 +865,10 @@
         "9b3864f2-2127-47c6-9122-178295b12fda": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Reel_Thumbnail_3_BehindTheHashtag.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/836297a5e4e94df486021b0a2684c02f.mp4",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Reel_Thumbnail_3_BehindTheHashtag.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/836297a5e4e94df486021b0a2684c02f.mp4",
             "video_title": "",
-            "description": "<p>@kirstyeelizabeth wears our <a href=\"\/products\/light-auburn-30-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Light Auburn (#30) Ultra-Volume Clip In Full Head Set (240-300G)\">20” Ultra Volume Clip Ins<\/a> in shade ‘<a href=\"\/collections\/light-auburn-hair-extensions-30\" title=\"Light Auburn Hair Extensions (#30)\">Light Auburn<\/a>’<\/p>",
+            "description": "<p>@kirstyeelizabeth wears our <a href=\"/products/light-auburn-30-ultra-volume-clip-in-full-head-set-240-300g\" title=\"Light Auburn (#30) Ultra-Volume Clip In Full Head Set (240-300G)\">20” Ultra Volume Clip Ins</a> in shade ‘<a href=\"/collections/light-auburn-hair-extensions-30\" title=\"Light Auburn Hair Extensions (#30)\">Light Auburn</a>’</p>",
             "button-text": "",
             "button-link": ""
           }
@@ -866,10 +876,10 @@
         "6ce7c103-5346-4e45-83c1-9a5b2c0ced26": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Reel_Thumbnail_4_BehindTheHashtag.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/97e75f636e454fcbaf24569d81ac31e6.mp4",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Reel_Thumbnail_4_BehindTheHashtag.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/97e75f636e454fcbaf24569d81ac31e6.mp4",
             "video_title": "",
-            "description": "<p>@lauragilmour_ wears our <a href=\"\/products\/seamless-clip-in-hair-extensions-double-drawn-ice-blonde\" title=\"Ice Blonde Double Drawn Seamless Clip In Hair Extensions\">22” Seamless Clip Ins<\/a> in shade ‘<a href=\"\/collections\/ice-blonde-platinum-blonde-hair-extensions\" title=\"Ice Blonde \/ Platinum Blonde Hair Extensions\">Ice Blonde<\/a>’<\/p>",
+            "description": "<p>@lauragilmour_ wears our <a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-ice-blonde\" title=\"Ice Blonde Double Drawn Seamless Clip In Hair Extensions\">22” Seamless Clip Ins</a> in shade ‘<a href=\"/collections/ice-blonde-platinum-blonde-hair-extensions\" title=\"Ice Blonde / Platinum Blonde Hair Extensions\">Ice Blonde</a>’</p>",
             "button-text": "",
             "button-link": ""
           }
@@ -877,10 +887,10 @@
         "fd2e9ba0-e02e-4b08-8bb3-94866c737f78": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Holiday_Page_23_-_Reel_Thumbnail_5_BehindTheHashtag.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/109f568f52be49b0bb98af1add2533b0.mp4",
+            "image": "shopify://shop_images/Holiday_Page_23_-_Reel_Thumbnail_5_BehindTheHashtag.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/109f568f52be49b0bb98af1add2533b0.mp4",
             "video_title": "",
-            "description": "<p>@makeupbyslb wears our <a href=\"\/products\/seamless-clip-in-hair-extensions-double-drawn-medium-ash-brown\" title=\"Medium Ash Brown (#8) Double Drawn Seamless Clip In Hair Extensions\">24” Seamless Clip Ins<\/a> in shade ‘<a href=\"\/collections\/medium-ash-brown-hair-extensions-8\" title=\"Medium Ash Brown Hair Extensions (#8)\">Medium Ash Brown<\/a>’<\/p>",
+            "description": "<p>@makeupbyslb wears our <a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-medium-ash-brown\" title=\"Medium Ash Brown (#8) Double Drawn Seamless Clip In Hair Extensions\">24” Seamless Clip Ins</a> in shade ‘<a href=\"/collections/medium-ash-brown-hair-extensions-8\" title=\"Medium Ash Brown Hair Extensions (#8)\">Medium Ash Brown</a>’</p>",
             "button-text": "",
             "button-link": ""
           }
@@ -898,12 +908,12 @@
         ".placeholder_image_container {padding: 15px 15px 5px;}",
         ".placeholder_image_container .image {border-radius: 10px;}",
         ".button_container > .play_button {font-size: min(15vw, 70px);}",
-        "a{color:inherit;}",
+        "a {color: inherit;}",
         "@media screen and (min-width: 992px) {.placeholder_image_container {padding: 25px 25px 5px; }}"
       ],
       "settings": {
-        "header": "<p>Behind The Hashtag: <br\/><em>#WishForCliphair Moments<\/em><\/p>",
-        "intro": "<p>See how our amazing customers and influencers are embracing the #WishForCliphair campaign. Explore their stunning holiday looks, style inspirations, and more!<\/p>",
+        "header": "<p>Behind The Hashtag: <br/><em>#WishForCliphair Moments</em></p>",
+        "intro": "<p>See how our amazing customers and influencers are embracing the #WishForCliphair campaign. Explore their stunning holiday looks, style inspirations, and more!</p>",
         "image_orientation": "portrait",
         "title-position": "bottom",
         "text_color": "#494949",
@@ -952,20 +962,20 @@
         "b2e25af8-50df-4002-b665-35e07beb662c": {
           "type": "title",
           "settings": {
-            "title": "<h2>Christmas Wishes in Your Inbox! <br\/><em>Join Us!<\/em><\/h2>"
+            "title": "<h2>Christmas Wishes in Your Inbox! <br/><em>Join Us!</em></h2>"
           }
         },
         "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
           "type": "intro",
           "settings": {
-            "intro": "<p>Get ready to enjoy a world of beauty delivered straight to your inbox. Subscribe now for: <\/p><ul><li>Exclusive Offers <\/li><li>New Product Updates <\/li><li>Expert Styling Tips<\/li><\/ul>"
+            "intro": "<p>Get ready to enjoy a world of beauty delivered straight to your inbox. Subscribe now for: </p><ul><li>Exclusive Offers </li><li>New Product Updates </li><li>Expert Styling Tips</li></ul>"
           }
         },
         "1a47bcbd-1805-4f90-888f-1e086368cbe3": {
           "type": "button",
           "settings": {
             "btn-text": "Shop Now",
-            "btn-url": "\/pages\/2023-bridal-hair-extension-quiz"
+            "btn-url": "/pages/2023-bridal-hair-extension-quiz"
           }
         }
       },
@@ -1008,7 +1018,7 @@
       "disabled": true,
       "settings": {
         "max-width": "",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "url": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -1020,49 +1030,49 @@
         "34440aa2-b51e-4e1d-9ba5-b7996799e132": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/15-festive-hairstyles-for-this-winter"
+            "article": "hair-blog/15-festive-hairstyles-for-this-winter"
           }
         },
         "adec2dc8-6ec2-4165-bc32-6854571440e6": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/how-to-winter-proof-your-hair-20-steps-to-stay-fabulous-sub-zero"
+            "article": "hair-blog/how-to-winter-proof-your-hair-20-steps-to-stay-fabulous-sub-zero"
           }
         },
         "8fd0e49a-6d92-4c9e-b0b4-ace8b9a21e00": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/10-celebrity-christmas-looks-to-get-inspired-for-your-holiday-season"
+            "article": "hair-blog/10-celebrity-christmas-looks-to-get-inspired-for-your-holiday-season"
           }
         },
         "628b2400-2237-4c89-a7ca-e5c428435a8f": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/10-glam-christmas-hairstyles-to-make-them-go-ho-ho-ho"
+            "article": "hair-blog/10-glam-christmas-hairstyles-to-make-them-go-ho-ho-ho"
           }
         },
         "b4cc73e1-677f-47ec-94f8-f408bc81493f": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/5-trendy-hair-colour-ideas-for-winter"
+            "article": "hair-blog/5-trendy-hair-colour-ideas-for-winter"
           }
         },
         "597a2c66-2c68-4513-bc22-ad02ae4d1b2c": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/the-top-10-christmas-gifts-for-hair-extensions-lovers"
+            "article": "hair-blog/the-top-10-christmas-gifts-for-hair-extensions-lovers"
           }
         },
         "1f623ead-1a78-4f6f-ad1d-b9f2ca1fe5f9": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/last-minute-haircare-stocking-stuffer-gift-ideas"
+            "article": "hair-blog/last-minute-haircare-stocking-stuffer-gift-ideas"
           }
         },
         "9bf37f18-5081-4b52-84eb-d5476b74b9db": {
           "type": "article",
           "settings": {
-            "article": "hair-blog\/15-new-years-eve-hairstyles"
+            "article": "hair-blog/15-new-years-eve-hairstyles"
           }
         }
       },
@@ -1080,7 +1090,7 @@
 
       ],
       "settings": {
-        "header": "<p>Your Seasonal <em>Beauty<\/em> Blog<\/p>",
+        "header": "<p>Your Seasonal <em>Beauty</em> Blog</p>",
         "intro": "",
         "text_color": "#494949",
         "bg_color": "#ffffff",
@@ -1109,11 +1119,11 @@
         "83a974c4-8ef5-41dc-9bd6-267ebc3cd0c0": {
           "type": "entry",
           "settings": {
-            "title": "<p>Gift Card Option <\/p>",
-            "description": "<p>Copy about gift card, the benefits for the person being gifted etc and pricing<\/p><p>You can gift up to:<\/p><p>£25.    £50.    £100<\/p><p>£150.  £200.  £250<\/p>",
+            "title": "<p>Gift Card Option </p>",
+            "description": "<p>Copy about gift card, the benefits for the person being gifted etc and pricing</p><p>You can gift up to:</p><p>£25.    £50.    £100</p><p>£150.  £200.  £250</p>",
             "button-text": "Get Gifting",
             "button-url": "#",
-            "image": "shopify:\/\/shop_images\/image_1011.png"
+            "image": "shopify://shop_images/image_1011.png"
           }
         }
       },
