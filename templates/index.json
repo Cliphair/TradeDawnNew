@@ -35,8 +35,8 @@
         "slide_nzbVKg": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DROP10_WEB_BANNER_MOB.webp",
-            "image_desktop": "shopify://shop_images/DROP10_WEB_BANNER_DESKTOP.webp",
+            "image": "shopify://shop_images/DROP10_MOB.webp",
+            "image_desktop": "shopify://shop_images/DROP10_DESKTOP.webp",
             "image_url": "shopify://collections/clip-in-hair-extensions",
             "heading": "",
             "heading_size": "h1",
