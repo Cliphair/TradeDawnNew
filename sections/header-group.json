@@ -110,12 +110,11 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/DROP10_CLIP_INS-Optimized.gif",
+            "image": "shopify://shop_images/PERM10_TICKER_2.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
-            "link": "shopify://collections/clip-in-hair-extensions"
+            "link": "shopify://collections/permanent-extensions"
           }
         }
       },

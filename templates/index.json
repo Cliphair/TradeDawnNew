@@ -34,7 +34,6 @@
       "blocks": {
         "slide_nzbVKg": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/perm10_-_mob_banner.png",
             "image_desktop": "shopify://shop_images/perm10_-_Desktop_banner.png",
