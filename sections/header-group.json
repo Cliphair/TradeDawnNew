@@ -111,10 +111,10 @@
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
           "settings": {
-            "image": "shopify://shop_images/PERM10_TICKER_2.gif",
+            "image": "shopify://shop_images/New_Sunday_Delivery_Hair_Extensions_From_Cliphair.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
-            "link": "shopify://collections/permanent-extensions"
+            "link": "shopify://collections/hair-extensions-by-colour"
           }
         }
       },
