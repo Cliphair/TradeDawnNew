@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_tjpANJ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Save 10% Off Permanent Extensions - Use CODE PERM10",
+            "link": "shopify://collections/permanent-extensions"
+          }
+        },
         "announcement_nNPD4X": {
           "type": "announcement",
           "settings": {
@@ -54,6 +61,7 @@
         }
       },
       "block_order": [
+        "announcement_tjpANJ",
         "announcement_nNPD4X",
         "announcement-bar-0",
         "announcement-bar-1",
