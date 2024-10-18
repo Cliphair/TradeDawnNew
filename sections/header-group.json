@@ -110,6 +110,7 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DROP10_CLIP_INS-Optimized.gif",
             "text_alignment": "center",

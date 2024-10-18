@@ -34,6 +34,7 @@
       "blocks": {
         "slide_nzbVKg": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DROP10_MOB.webp",
             "image_desktop": "shopify://shop_images/DROP10_DESKTOP.webp",
