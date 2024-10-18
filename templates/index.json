@@ -36,9 +36,9 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/DROP10_MOB.webp",
-            "image_desktop": "shopify://shop_images/DROP10_DESKTOP.webp",
-            "image_url": "shopify://collections/clip-in-hair-extensions",
+            "image": "shopify://shop_images/perm10_-_mob_banner.png",
+            "image_desktop": "shopify://shop_images/perm10_-_Desktop_banner.png",
+            "image_url": "shopify://collections/permanent-extensions",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
