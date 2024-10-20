@@ -32,26 +32,6 @@
     "slideshow_3tCMjU": {
       "type": "slideshow",
       "blocks": {
-        "slide_nzbVKg": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/perm10_-_mob_banner.png",
-            "image_desktop": "shopify://shop_images/perm10_-_Desktop_banner.png",
-            "image_url": "shopify://collections/permanent-extensions",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "bottom-right",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-2",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_nnGry6": {
           "type": "slide",
           "settings": {
@@ -71,11 +51,32 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_nzbVKg": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/perm10_-_mob_banner.png",
+            "image_desktop": "shopify://shop_images/perm10_-_Desktop_banner.png",
+            "image_url": "shopify://collections/permanent-extensions",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-right",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-2",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_nzbVKg",
-        "slide_nnGry6"
+        "slide_nnGry6",
+        "slide_nzbVKg"
       ],
       "settings": {
         "layout": "full_bleed",

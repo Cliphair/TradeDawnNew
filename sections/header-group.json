@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_tjpANJ": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Save 10% Off Permanent Extensions - Use CODE PERM10",
             "link": "shopify://collections/permanent-extensions"
