@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "166445343207c9fec0": {
@@ -19,14 +19,15 @@
     },
     "custom_banner_gEey7w": {
       "type": "custom-banner",
+      "disabled": true,
       "custom_css": [
         "div > div {padding: 0;}"
       ],
       "settings": {
         "max-width": "2560",
         "bg-color": "#ffffff",
-        "desktop-image": "shopify:\/\/shop_images\/holiday-szn-page-banner-desktop.webp",
-        "mobile-image": "shopify:\/\/shop_images\/holiday-szn-page-banner-mobile.webp",
+        "desktop-image": "shopify://shop_images/holiday-szn-page-banner-desktop.webp",
+        "mobile-image": "shopify://shop_images/holiday-szn-page-banner-mobile.webp",
         "url": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -38,7 +39,7 @@
         "d0d717d8-7d78-48bd-846e-21e1cdb0b124": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/szn15-discount-code.webp",
+            "image": "shopify://shop_images/szn15-discount-code.webp",
             "description": "",
             "url": "",
             "button_text": ""
@@ -47,7 +48,7 @@
         "1a34ec2a-e874-449c-9d4b-4d0342b801b4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/szn30-discount-code.webp",
+            "image": "shopify://shop_images/szn30-discount-code.webp",
             "description": "",
             "url": "",
             "button_text": ""
@@ -56,7 +57,7 @@
         "3e0c803b-89cf-4066-bc58-581aa6fea065": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/szn50-discount-code.webp",
+            "image": "shopify://shop_images/szn50-discount-code.webp",
             "description": "",
             "url": "",
             "button_text": ""
@@ -65,7 +66,7 @@
         "75f910c9-eced-4e28-9618-236062e209f9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/szn75-discount-code.webp",
+            "image": "shopify://shop_images/szn75-discount-code.webp",
             "description": "",
             "url": "",
             "button_text": "this is a test"
@@ -130,20 +131,20 @@
         "f5287e11-a76e-43ba-b226-093ca6ac8b12": {
           "type": "intro",
           "settings": {
-            "intro": "<p>Save up on your festive look, and<br\/>gift the <em>Christmas present they’ll forever cherish<\/em><\/p>"
+            "intro": "<p>Save up on your festive look, and<br/>gift the <em>Christmas present they’ll forever cherish</em></p>"
           }
         },
         "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
           "type": "intro",
           "settings": {
-            "intro": "<p>Up to £75 off EVERYTHING – including our best-sellers and new professional hair extensions. What are you waiting for? Wrap the best hair present of the year, with lengths from 12” to 26” and over 70 shades available!<\/p>"
+            "intro": "<p>Up to £75 off EVERYTHING – including our best-sellers and new professional hair extensions. What are you waiting for? Wrap the best hair present of the year, with lengths from 12” to 26” and over 70 shades available!</p>"
           }
         },
         "b2e25af8-50df-4002-b665-35e07beb662c": {
           "type": "title",
           "disabled": true,
           "settings": {
-            "title": "<h2>BIG, BOLD & BEAUTIFUL<\/h2>"
+            "title": "<h2>BIG, BOLD & BEAUTIFUL</h2>"
           }
         },
         "1a47bcbd-1805-4f90-888f-1e086368cbe3": {
@@ -151,7 +152,7 @@
           "disabled": true,
           "settings": {
             "btn-text": "SHOP NOW",
-            "btn-url": "\/pages\/hair-extensions-by-colour"
+            "btn-url": "/pages/hair-extensions-by-colour"
           }
         }
       },
@@ -194,72 +195,72 @@
         "773ba6e6-65cf-44ac-8af2-fb08180c431e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-tape-in.webp",
+            "image": "shopify://shop_images/holiday-szn-tape-in.webp",
             "circle_image": false,
             "border": false,
             "text": "Tape Ins",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/tape-in-hair-extensions",
+            "url": "shopify://collections/tape-in-hair-extensions",
             "image-url": ""
           }
         },
         "d5289475-13ff-4eca-ba4d-7ddaaecf39a1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-double-weft.webp",
+            "image": "shopify://shop_images/holiday-szn-double-weft.webp",
             "circle_image": false,
             "border": false,
             "text": "Double Weft",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions",
+            "url": "shopify://collections/double-wefted-clip-in-hair-extensions",
             "image-url": ""
           }
         },
         "cb96d513-c19a-405a-9389-ecc9a8f849df": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-nano-ring.webp",
+            "image": "shopify://shop_images/holiday-szn-nano-ring.webp",
             "circle_image": false,
             "border": false,
             "text": "Nano Ring",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/nano-rings-hair-extensions",
+            "url": "shopify://collections/nano-rings-hair-extensions",
             "image-url": ""
           }
         },
         "10cfbeeb-2dc0-414b-9bb0-e986bac01e29": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-hair-weft.webp",
+            "image": "shopify://shop_images/holiday-szn-hair-weft.webp",
             "circle_image": false,
             "border": false,
             "text": "Hair Weft",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/remy-royale-double-drawn-hair-weft-extensions",
+            "url": "shopify://collections/remy-royale-double-drawn-hair-weft-extensions",
             "image-url": ""
           }
         },
         "2f450639-19df-4f3b-9277-a8f56f7c8c1e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-seamless.webp",
+            "image": "shopify://shop_images/holiday-szn-seamless.webp",
             "circle_image": false,
             "border": false,
             "text": "Seamless",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair",
+            "url": "shopify://collections/seamless-clip-in-hair-extensions-double-drawn-hair",
             "image-url": ""
           }
         },
         "47fc98ce-6df2-4739-bea0-1570fbc4fc4b": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-ultra.webp",
+            "image": "shopify://shop_images/holiday-szn-ultra.webp",
             "circle_image": false,
             "border": false,
             "text": "Ultra Volume",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/ultra-clip-in-hair-extensions",
+            "url": "shopify://collections/ultra-clip-in-hair-extensions",
             "image-url": ""
           }
         }
@@ -278,7 +279,7 @@
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
       ],
       "settings": {
-        "header": "<p><em>Festive Favourites <\/em>Seasonal Must Haves<\/p>",
+        "header": "<p><em>Festive Favourites </em>Seasonal Must Haves</p>",
         "intro": "",
         "main-button-text": "",
         "main-button-url": "",
@@ -323,54 +324,54 @@
         "7d1b1220-e119-4004-b0e3-2664d0ed42fd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-goat-tape.webp",
+            "image": "shopify://shop_images/holiday-szn-goat-tape.webp",
             "description": "",
-            "url": "shopify:\/\/collections\/tape-in-hair-extensions",
+            "url": "shopify://collections/tape-in-hair-extensions",
             "button_text": ""
           }
         },
         "46df4382-825a-4181-9dec-21b6897ae5c2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-goat-double.webp",
+            "image": "shopify://shop_images/holiday-szn-goat-double.webp",
             "description": "",
-            "url": "shopify:\/\/collections\/double-wefted-clip-in-hair-extensions",
+            "url": "shopify://collections/double-wefted-clip-in-hair-extensions",
             "button_text": ""
           }
         },
         "6250e1c0-18ea-4dac-b5b0-dda11c9712e6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-goat-nano.webp",
+            "image": "shopify://shop_images/holiday-szn-goat-nano.webp",
             "description": "",
-            "url": "shopify:\/\/collections\/nano-rings-hair-extensions",
+            "url": "shopify://collections/nano-rings-hair-extensions",
             "button_text": ""
           }
         },
         "3b6886fd-b0ef-47a0-a557-c2f019ea57e5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-goat-hair-weft.webp",
+            "image": "shopify://shop_images/holiday-szn-goat-hair-weft.webp",
             "description": "",
-            "url": "shopify:\/\/collections\/remy-royale-double-drawn-hair-weft-extensions",
+            "url": "shopify://collections/remy-royale-double-drawn-hair-weft-extensions",
             "button_text": ""
           }
         },
         "210f3af3-2e3a-4042-9f2f-60267f621380": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-goat-seamless.webp",
+            "image": "shopify://shop_images/holiday-szn-goat-seamless.webp",
             "description": "",
-            "url": "shopify:\/\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair",
+            "url": "shopify://collections/seamless-clip-in-hair-extensions-double-drawn-hair",
             "button_text": ""
           }
         },
         "2eb93e0f-6900-40e1-b149-ef972514c880": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-goat-ultra.webp",
+            "image": "shopify://shop_images/holiday-szn-goat-ultra.webp",
             "description": "",
-            "url": "shopify:\/\/collections\/ultra-clip-in-hair-extensions",
+            "url": "shopify://collections/ultra-clip-in-hair-extensions",
             "button_text": ""
           }
         }
@@ -399,7 +400,7 @@
         "include-dots": true,
         "dot_icon_size": 14,
         "dot_icon_colour": "#373737",
-        "header": "<h2>THE G.O.A.T COLLECTION<\/h2>",
+        "header": "<h2>THE G.O.A.T COLLECTION</h2>",
         "header_color": "#373737",
         "header_bg_color": "#f1f0ec",
         "sub_header": "",
@@ -407,7 +408,7 @@
         "have_buttons": false,
         "buttons_color": "#000000",
         "buttons_bg_color": "#ffffff",
-        "intro": "<p>We made these hair extensions. You’ve decided, they’re the Greatest Of All Time. Here’s our best-sellers:<\/p>",
+        "intro": "<p>We made these hair extensions. You’ve decided, they’re the Greatest Of All Time. Here’s our best-sellers:</p>",
         "show_collection": false,
         "collection-text": "",
         "url": "",
@@ -431,60 +432,60 @@
         "773ba6e6-65cf-44ac-8af2-fb08180c431e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-invisible-tape.webp",
+            "image": "shopify://shop_images/holiday-szn-invisible-tape.webp",
             "circle_image": false,
             "border": false,
             "text": "Invisible tapes",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/remy-royale-invisible-tape-in-hair-extensions",
+            "url": "shopify://collections/remy-royale-invisible-tape-in-hair-extensions",
             "image-url": ""
           }
         },
         "d5289475-13ff-4eca-ba4d-7ddaaecf39a1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-flat-weft.webp",
+            "image": "shopify://shop_images/holiday-szn-flat-weft.webp",
             "circle_image": false,
             "border": false,
             "text": "Flat weft weave",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/flat-weft-hair-extensions",
+            "url": "shopify://collections/flat-weft-hair-extensions",
             "image-url": ""
           }
         },
         "cb96d513-c19a-405a-9389-ecc9a8f849df": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-premium-tape.webp",
+            "image": "shopify://shop_images/holiday-szn-premium-tape.webp",
             "circle_image": false,
             "border": false,
             "text": "Premium tapes",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/remy-royale-tape-in-extensions",
+            "url": "shopify://collections/remy-royale-tape-in-extensions",
             "image-url": ""
           }
         },
         "10cfbeeb-2dc0-414b-9bb0-e986bac01e29": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-nano-bond.webp",
+            "image": "shopify://shop_images/holiday-szn-nano-bond.webp",
             "circle_image": false,
             "border": false,
             "text": "Nano bonds",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/nano-bond-hair-extensions",
+            "url": "shopify://collections/nano-bond-hair-extensions",
             "image-url": ""
           }
         },
         "2f450639-19df-4f3b-9277-a8f56f7c8c1e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/holiday-szn-flat-tip.webp",
+            "image": "shopify://shop_images/holiday-szn-flat-tip.webp",
             "circle_image": false,
             "border": false,
             "text": "Flat tip",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/flat-tip-hair-extensions",
+            "url": "shopify://collections/flat-tip-hair-extensions",
             "image-url": ""
           }
         }
@@ -501,8 +502,8 @@
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
       ],
       "settings": {
-        "header": "<h2><em>New Arrivals: Elevate Your Hair Game!<\/em><\/h2>",
-        "intro": "<p>What’s new, cutie-boo? Explore our NEW permanent hair extensions: Invisible Tapes, Remy Royale Tapes, Flat Wefts, Flat Tips, and Nano Bond hair extensions. All the luxury of cuticle-aligned, double-drawn tresses – now available in FIVE new formats. \u2028<\/p>",
+        "header": "<h2><em>New Arrivals: Elevate Your Hair Game!</em></h2>",
+        "intro": "<p>What’s new, cutie-boo? Explore our NEW permanent hair extensions: Invisible Tapes, Remy Royale Tapes, Flat Wefts, Flat Tips, and Nano Bond hair extensions. All the luxury of cuticle-aligned, double-drawn tresses – now available in FIVE new formats.  </p>",
         "main-button-text": "",
         "main-button-url": "",
         "max_width": "1440",
@@ -547,7 +548,7 @@
           "type": "image",
           "settings": {
             "description": "",
-            "url": "shopify:\/\/collections\/under-100",
+            "url": "shopify://collections/under-100",
             "button_text": "GIFTS UNDER £100"
           }
         },
@@ -555,7 +556,7 @@
           "type": "image",
           "settings": {
             "description": "",
-            "url": "shopify:\/\/collections\/hair-care",
+            "url": "shopify://collections/hair-care",
             "button_text": "HAIR CARE"
           }
         },
@@ -563,7 +564,7 @@
           "type": "image",
           "settings": {
             "description": "",
-            "url": "shopify:\/\/collections\/under-15",
+            "url": "shopify://collections/under-15",
             "button_text": "GIFTS UNDER £15"
           }
         },
@@ -571,7 +572,7 @@
           "type": "image",
           "settings": {
             "description": "",
-            "url": "shopify:\/\/collections\/hair-extensions-bundle",
+            "url": "shopify://collections/hair-extensions-bundle",
             "button_text": "BUNDLES"
           }
         }
@@ -582,6 +583,7 @@
         "ef8afc0f-5671-42f5-ac12-e18aa5b660ff",
         "a60e3a45-e5ed-4b9a-b97f-3c24c672ebc6"
       ],
+      "disabled": true,
       "custom_css": [
         ".column_container > .column {padding: 5px;}",
         ".column_container > .column > p {line-height: 1.2em; font-weight: bold; padding: 10px 0; border-radius: 10px;}",
@@ -604,7 +606,7 @@
         "include-dots": false,
         "dot_icon_size": 16,
         "dot_icon_colour": "#000000",
-        "header": "<h2><em>gift guide<\/em><\/h2>",
+        "header": "<h2><em>gift guide</em></h2>",
         "header_color": "#6f3737",
         "header_bg_color": "rgba(0,0,0,0)",
         "sub_header": "",
@@ -615,7 +617,7 @@
         "intro": "",
         "show_collection": true,
         "collection-text": "Explore Campaign",
-        "url": "shopify:\/\/pages\/wish-for-cliphair-holiday-campaign-2023",
+        "url": "shopify://pages/wish-for-cliphair-holiday-campaign-2023",
         "header-mobile-font_size": 16,
         "mobile-font_size": 10,
         "mobile-p_top": 0,
@@ -636,56 +638,56 @@
         "f29be8e9-ab56-4b62-80a0-f788bcc7a717": {
           "type": "entry",
           "settings": {
-            "title": "<p><strong>OAK BRONDIE<\/strong><\/p>",
-            "title-image": "shopify:\/\/shop_images\/8-60-shade-snippet.jpg",
-            "description": "<p>A blend of Lightest Blonde and Medium Ash Brown, curated as a warmer toned alternative to it’s ashy sister shade ‘Iced Cappuccino’. Tailored for highlighted brunettes or brondies, this unique shade offers a perfect balance, adding warmth and dimension to your locks.<\/p>",
+            "title": "<p><strong>OAK BRONDIE</strong></p>",
+            "title-image": "shopify://shop_images/8-60-shade-snippet.jpg",
+            "description": "<p>A blend of Lightest Blonde and Medium Ash Brown, curated as a warmer toned alternative to it’s ashy sister shade ‘Iced Cappuccino’. Tailored for highlighted brunettes or brondies, this unique shade offers a perfect balance, adding warmth and dimension to your locks.</p>",
             "button-text": "SHOP NOW",
-            "button-url": "shopify:\/\/collections\/oak-brondie-hair-extensions",
-            "image": "shopify:\/\/shop_images\/8-60-tph_website-full.webp"
+            "button-url": "shopify://collections/oak-brondie-hair-extensions",
+            "image": "shopify://shop_images/8-60-tph_website-full.webp"
           }
         },
         "8bc36ace-48b5-4d7e-bc87-deab6d1b0b0f": {
           "type": "entry",
           "settings": {
-            "title": "<p><strong>COWGIRL COPPER<\/strong><\/p>",
-            "title-image": "shopify:\/\/shop_images\/color-cowgirl-copper-350-33.png",
-            "description": "<p>A trending sensation in the world of red. This shade is crafted by seamlessly blending the brightness of 'Flaming Ginger,' a vibrant auburn, with the depth of 'Dark Auburn.' This harmonious fusion creates the perfect balance for a true, deep, and vibrant copper shade<\/p>",
+            "title": "<p><strong>COWGIRL COPPER</strong></p>",
+            "title-image": "shopify://shop_images/color-cowgirl-copper-350-33.png",
+            "description": "<p>A trending sensation in the world of red. This shade is crafted by seamlessly blending the brightness of 'Flaming Ginger,' a vibrant auburn, with the depth of 'Dark Auburn.' This harmonious fusion creates the perfect balance for a true, deep, and vibrant copper shade</p>",
             "button-text": "SHOP NOW",
-            "button-url": "shopify:\/\/collections\/cowgirl-copper-350-33-hair-extensions",
-            "image": "shopify:\/\/shop_images\/350-33-rcf_website-full.webp"
+            "button-url": "shopify://collections/cowgirl-copper-350-33-hair-extensions",
+            "image": "shopify://shop_images/350-33-rcf_website-full.webp"
           }
         },
         "02ee2eeb-497f-4c5c-a7c3-4d013bd4736f": {
           "type": "entry",
           "settings": {
-            "title": "<p><strong>PASTEL PINK<\/strong><\/p>",
-            "title-image": "shopify:\/\/shop_images\/pastel-pink-snippet.webp",
-            "description": "<p>Introducing our newest addition to our 'Funky Shade' collection. This soft and playful shade embodies the essence of ballet slipper pink, offering a subtle and feminine touch. A perfect choice for those seeking a more understated yet stylish colourful expression.<\/p>",
+            "title": "<p><strong>PASTEL PINK</strong></p>",
+            "title-image": "shopify://shop_images/pastel-pink-snippet.webp",
+            "description": "<p>Introducing our newest addition to our 'Funky Shade' collection. This soft and playful shade embodies the essence of ballet slipper pink, offering a subtle and feminine touch. A perfect choice for those seeking a more understated yet stylish colourful expression.</p>",
             "button-text": "SHOP NOW",
-            "button-url": "shopify:\/\/collections\/pastel-pink-hair-extensions",
-            "image": "shopify:\/\/shop_images\/pastelpink-dw_website-full.webp"
+            "button-url": "shopify://collections/pastel-pink-hair-extensions",
+            "image": "shopify://shop_images/pastelpink-dw_website-full.webp"
           }
         },
         "616bcdd5-599f-4792-9330-402fdf1fcaf3": {
           "type": "entry",
           "settings": {
-            "title": "<p><strong>ASH BLACK BAL<\/strong><\/p>",
-            "title-image": "shopify:\/\/shop_images\/ash_black_balayage.webp",
-            "description": "<p>This stunning balayage mixes an elegant Ash Brown with the best-selling Jet Black in a naturally-sunkissed way. Perfect to bring a touch of light and brightness to black hair, this black root melt paired with cool-toned ash brown is the perfect recipe to vamp things up in your mane<\/p>",
+            "title": "<p><strong>ASH BLACK BAL</strong></p>",
+            "title-image": "shopify://shop_images/ash_black_balayage.webp",
+            "description": "<p>This stunning balayage mixes an elegant Ash Brown with the best-selling Jet Black in a naturally-sunkissed way. Perfect to bring a touch of light and brightness to black hair, this black root melt paired with cool-toned ash brown is the perfect recipe to vamp things up in your mane</p>",
             "button-text": "SHOP NOW",
-            "button-url": "shopify:\/\/collections\/ash-black-balayage-hair-extensions",
-            "image": "shopify:\/\/shop_images\/ash.bb-rcf_website-full.png"
+            "button-url": "shopify://collections/ash-black-balayage-hair-extensions",
+            "image": "shopify://shop_images/ash.bb-rcf_website-full.png"
           }
         },
         "4b226763-dce8-459b-92dd-509b3520129a": {
           "type": "entry",
           "settings": {
-            "title": "<p><strong>SILVER SHADOW<\/strong><\/p>",
-            "title-image": "shopify:\/\/shop_images\/color-silver-shadow-balayage.png",
-            "description": "<p>The stunning Silver Shadow shade mixes SilverSand and cool Ash Brown to a Natural Black base to satisfy the most sophisticated palates. Bold, beautiful, and effortlessly trendy, this gorgeous flurry of black, brown, and blonde takes the best of each world<\/p>",
+            "title": "<p><strong>SILVER SHADOW</strong></p>",
+            "title-image": "shopify://shop_images/color-silver-shadow-balayage.png",
+            "description": "<p>The stunning Silver Shadow shade mixes SilverSand and cool Ash Brown to a Natural Black base to satisfy the most sophisticated palates. Bold, beautiful, and effortlessly trendy, this gorgeous flurry of black, brown, and blonde takes the best of each world</p>",
             "button-text": "SHOP NOW",
-            "button-url": "shopify:\/\/collections\/silver-shadow-balayage-hair-extensions",
-            "image": "shopify:\/\/shop_images\/silver-sb-rrh_website-full.jpg"
+            "button-url": "shopify://collections/silver-shadow-balayage-hair-extensions",
+            "image": "shopify://shop_images/silver-sb-rrh_website-full.jpg"
           }
         }
       },
@@ -700,7 +702,7 @@
 
       ],
       "settings": {
-        "header": "<h2><em>Check Out Our New Shades<\/em><\/h2>",
+        "header": "<h2><em>Check Out Our New Shades</em></h2>",
         "intro": "",
         "max-width": "1200",
         "text-colour": "#373737",
@@ -734,11 +736,11 @@
         "f29be8e9-ab56-4b62-80a0-f788bcc7a717": {
           "type": "entry",
           "settings": {
-            "title": "<p>You can gift up to:<\/p>",
-            "description": "<ul><li>£25 <\/li><li>£50<\/li><li>£100<\/li><li>£150 <\/li><li>£200<\/li><li>£250<\/li><\/ul>",
+            "title": "<p>You can gift up to:</p>",
+            "description": "<ul><li>£25 </li><li>£50</li><li>£100</li><li>£150 </li><li>£200</li><li>£250</li></ul>",
             "button-text": "Get Gifting",
-            "button-url": "shopify:\/\/products\/cliphair-e-gift-card",
-            "image": "shopify:\/\/shop_images\/gift-card.png"
+            "button-url": "shopify://products/cliphair-e-gift-card",
+            "image": "shopify://shop_images/gift-card.png"
           }
         }
       },
@@ -750,8 +752,8 @@
         "h2 {margin-top: 0;}"
       ],
       "settings": {
-        "header": "<h2><em>Gift Card Option<\/em><\/h2>",
-        "intro": "<p>Unsure of the perfect gift? <em>Offer the luxury of choice<\/em> with an e-card for premium hair extensions – the ultimate thoughtful gesture.<\/p>",
+        "header": "<h2><em>Gift Card Option</em></h2>",
+        "intro": "<p>Unsure of the perfect gift? <em>Offer the luxury of choice</em> with an e-card for premium hair extensions – the ultimate thoughtful gesture.</p>",
         "max-width": "768",
         "text-colour": "#494949",
         "button-colour": "#ffffff",
@@ -786,8 +788,8 @@
       "settings": {
         "max-width": "992",
         "bg-color": "#f1f0ec",
-        "desktop-image": "shopify:\/\/shop_images\/holiday-szn-why-cliphair.webp",
-        "url": "shopify:\/\/pages\/colour-matching-service",
+        "desktop-image": "shopify://shop_images/holiday-szn-why-cliphair.webp",
+        "url": "shopify://pages/colour-matching-service",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -798,8 +800,8 @@
         "57a51456-8749-43a2-8a3e-1489d9267913": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black_friday-video5.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4a1958e32ab14e948c6f9e849f38a85d.mp4",
+            "image": "shopify://shop_images/black_friday-video5.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/4a1958e32ab14e948c6f9e849f38a85d.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -809,8 +811,8 @@
         "52f1a142-4e10-413d-aff3-d51e5fd40452": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black_friday-video6.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b572149cce9941f898509d451cc4408c.mp4",
+            "image": "shopify://shop_images/black_friday-video6.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/b572149cce9941f898509d451cc4408c.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -820,8 +822,8 @@
         "f41a2e48-38c7-46fa-85e9-06e5d43cf4c7": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black_friday-video1.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bcceccb6d1af45b3a818cb0d3d7b785a.mp4",
+            "image": "shopify://shop_images/black_friday-video1.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/bcceccb6d1af45b3a818cb0d3d7b785a.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -831,8 +833,8 @@
         "38b36ef9-4b05-4c9e-88aa-2390577bf73e": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black_friday-video3.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/de461e681c294b8e8ddca41f5da331d7.mp4",
+            "image": "shopify://shop_images/black_friday-video3.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/de461e681c294b8e8ddca41f5da331d7.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -842,8 +844,8 @@
         "f2d54cc9-220f-473a-8640-37c9c21c205e": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black_friday-video2.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1b25a1960e3641f5a15e7390dbc7e733.mp4",
+            "image": "shopify://shop_images/black_friday-video2.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/1b25a1960e3641f5a15e7390dbc7e733.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -853,8 +855,8 @@
         "808311db-19b4-44b7-85c1-0639925df478": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black_friday-video4.webp",
-            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/054eaf096ec640258888618600f162aa.mp4",
+            "image": "shopify://shop_images/black_friday-video4.webp",
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/054eaf096ec640258888618600f162aa.mp4",
             "video_title": "",
             "description": "",
             "button-text": "",
@@ -877,7 +879,7 @@
         "@media screen and (min-width: 992px) {.section_header {margin-bottom: 35px; } .socila-media-wrapper {margin-top: 35px; }}"
       ],
       "settings": {
-        "header": "<p>AS SEEN ON<\/p>",
+        "header": "<p>AS SEEN ON</p>",
         "intro": "",
         "image_orientation": "portrait",
         "title-position": "bottom",
@@ -926,8 +928,8 @@
       "settings": {
         "max-width": "992",
         "bg-color": "#ffffff",
-        "desktop-image": "shopify:\/\/shop_images\/colour_matching_banner_mobile.webp",
-        "url": "shopify:\/\/pages\/colour-matching-service",
+        "desktop-image": "shopify://shop_images/colour_matching_banner_mobile.webp",
+        "url": "shopify://pages/colour-matching-service",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -938,72 +940,72 @@
         "2f450639-19df-4f3b-9277-a8f56f7c8c1e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/8-60-shade-snippet.jpg",
+            "image": "shopify://shop_images/8-60-shade-snippet.jpg",
             "circle_image": false,
             "border": false,
             "text": "OAK BRONDIE",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/oak-brondie-hair-extensions",
+            "url": "shopify://collections/oak-brondie-hair-extensions",
             "image-url": ""
           }
         },
         "773ba6e6-65cf-44ac-8af2-fb08180c431e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/350_33_thumbnail.webp",
+            "image": "shopify://shop_images/350_33_thumbnail.webp",
             "circle_image": false,
             "border": false,
             "text": "COWGIRL COPPER",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/cowgirl-copper-350-33-hair-extensions",
+            "url": "shopify://collections/cowgirl-copper-350-33-hair-extensions",
             "image-url": ""
           }
         },
         "cb96d513-c19a-405a-9389-ecc9a8f849df": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pastel-pink-snippet.webp",
+            "image": "shopify://shop_images/pastel-pink-snippet.webp",
             "circle_image": false,
             "border": false,
             "text": "PASTEL PINK",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/pastel-pink-hair-extensions",
+            "url": "shopify://collections/pastel-pink-hair-extensions",
             "image-url": ""
           }
         },
         "d5289475-13ff-4eca-ba4d-7ddaaecf39a1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/color-platinum-blondeme.png",
+            "image": "shopify://shop_images/color-platinum-blondeme.png",
             "circle_image": false,
             "border": false,
             "text": "PLATINUM BLONDE HIGHLIGHT",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/platinum-blondeme-hair-extensions",
+            "url": "shopify://collections/platinum-blondeme-hair-extensions",
             "image-url": ""
           }
         },
         "116158a5-4323-4cc9-8ca6-cb25f3a488f3": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/color-silver-shadow-balayage.png",
+            "image": "shopify://shop_images/color-silver-shadow-balayage.png",
             "circle_image": false,
             "border": false,
             "text": "SILVER SHADOW BALAYAGE",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/silver-shadow-balayage-hair-extensions",
+            "url": "shopify://collections/silver-shadow-balayage-hair-extensions",
             "image-url": ""
           }
         },
         "a6556d01-89f9-4e69-bfda-126d9b76b92f": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ash_black_balayage.webp",
+            "image": "shopify://shop_images/ash_black_balayage.webp",
             "circle_image": false,
             "border": false,
             "text": "ASH BLACK BALAYAGE",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/ash-black-balayage-hair-extensions",
+            "url": "shopify://collections/ash-black-balayage-hair-extensions",
             "image-url": ""
           }
         }
@@ -1024,7 +1026,7 @@
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
       ],
       "settings": {
-        "header": "<h2><em>Check Out Our New Shades<\/em><\/h2>",
+        "header": "<h2><em>Check Out Our New Shades</em></h2>",
         "intro": "",
         "main-button-text": "",
         "main-button-url": "",
@@ -1069,84 +1071,84 @@
         "2f450639-19df-4f3b-9277-a8f56f7c8c1e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/18-613_931f20d3-0d24-4f32-8cfc-db1a74eacd74.jpg",
+            "image": "shopify://shop_images/18-613_931f20d3-0d24-4f32-8cfc-db1a74eacd74.jpg",
             "circle_image": false,
             "border": false,
             "text": "MIXED",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/highlighted-hair-extensions",
+            "url": "shopify://collections/highlighted-hair-extensions",
             "image-url": ""
           }
         },
         "773ba6e6-65cf-44ac-8af2-fb08180c431e": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black.jpg",
+            "image": "shopify://shop_images/black.jpg",
             "circle_image": false,
             "border": false,
             "text": "BLACKS",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/black-shades",
+            "url": "shopify://collections/black-shades",
             "image-url": ""
           }
         },
         "cb96d513-c19a-405a-9389-ecc9a8f849df": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/browns.jpg",
+            "image": "shopify://shop_images/browns.jpg",
             "circle_image": false,
             "border": false,
             "text": "BROWNS",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/brown-hair-extensions",
+            "url": "shopify://collections/brown-hair-extensions",
             "image-url": ""
           }
         },
         "d5289475-13ff-4eca-ba4d-7ddaaecf39a1": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/blondes.jpg",
+            "image": "shopify://shop_images/blondes.jpg",
             "circle_image": false,
             "border": false,
             "text": "BLONDES",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/blonde-hair-extensions",
+            "url": "shopify://collections/blonde-hair-extensions",
             "image-url": ""
           }
         },
         "72af5571-c7ba-4edf-9e58-13cee9c36b28": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/reds.jpg",
+            "image": "shopify://shop_images/reds.jpg",
             "circle_image": false,
             "border": false,
             "text": "REDS",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/red-hair-extensions",
+            "url": "shopify://collections/red-hair-extensions",
             "image-url": ""
           }
         },
         "880e1d42-7f26-4f2b-a957-eb4b95de8494": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Balayage_48dfabf9-2e8b-4736-ad6c-b9b9b6803304.jpg",
+            "image": "shopify://shop_images/Balayage_48dfabf9-2e8b-4736-ad6c-b9b9b6803304.jpg",
             "circle_image": false,
             "border": false,
             "text": "BALAYAGE & OMBRE",
             "subtitle": "",
-            "url": "shopify:\/\/pages\/balayage-ombre-hair-extensions",
+            "url": "shopify://pages/balayage-ombre-hair-extensions",
             "image-url": ""
           }
         },
         "4701c05a-5419-47d0-b377-1ff90004f0d6": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pastel-pink-snippet.webp",
+            "image": "shopify://shop_images/pastel-pink-snippet.webp",
             "circle_image": false,
             "border": false,
             "text": "FUNKY",
             "subtitle": "",
-            "url": "shopify:\/\/collections\/funky-coloured-hair-extensions",
+            "url": "shopify://collections/funky-coloured-hair-extensions",
             "image-url": ""
           }
         }
@@ -1168,7 +1170,7 @@
         ".carrousel-container .carrousel-items > .item .item-title > .block-title {margin: 15px 0 10px; font-weight: 400 !important;}"
       ],
       "settings": {
-        "header": "<p>SHOP BY SHADE<\/p>",
+        "header": "<p>SHOP BY SHADE</p>",
         "intro": "",
         "main-button-text": "",
         "main-button-url": "",
@@ -1214,33 +1216,33 @@
           "type": "intro",
           "disabled": true,
           "settings": {
-            "intro": "<p><em>Enjoy Your Early Access Discount<\/em><\/p>"
+            "intro": "<p><em>Enjoy Your Early Access Discount</em></p>"
           }
         },
         "b2e25af8-50df-4002-b665-35e07beb662c": {
           "type": "title",
           "settings": {
-            "title": "<p>Use Code: BF15<\/p>"
+            "title": "<p>Use Code: BF15</p>"
           }
         },
         "502693e8-3a73-4864-848f-84723a0fc975": {
           "type": "html-intro",
           "settings": {
-            "html-intro": "<p class=\"small\">min order: £50<\/p>"
+            "html-intro": "<p class=\"small\">min order: £50</p>"
           }
         },
         "57dcfd0d-8c7b-47d1-96c0-5452beba5988": {
           "type": "intro",
           "disabled": true,
           "settings": {
-            "intro": "<p><strong>Use Code: BF15<\/strong><\/p>"
+            "intro": "<p><strong>Use Code: BF15</strong></p>"
           }
         },
         "1a47bcbd-1805-4f90-888f-1e086368cbe3": {
           "type": "button",
           "settings": {
             "btn-text": "SHOP NOW",
-            "btn-url": "https:\/\/www.cliphair.co.uk\/discount\/BF15"
+            "btn-url": "https://www.cliphair.co.uk/discount/BF15"
           }
         }
       },
