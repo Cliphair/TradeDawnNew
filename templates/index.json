@@ -35,8 +35,8 @@
         "slide_nnGry6": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/new-website-mobile-banner.webp",
-            "image_desktop": "shopify://shop_images/new-website-desktop-banner.webp",
+            "image": "shopify://shop_images/homepage-banner-2024-mobile.webp",
+            "image_desktop": "shopify://shop_images/homepage-banner-2024-desktop.webp",
             "image_url": "shopify://pages/hair-extensions-by-colour",
             "heading": "",
             "heading_size": "h2",
@@ -54,11 +54,10 @@
         },
         "slide_nzbVKg": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/perm10_-_mob_banner.png",
-            "image_desktop": "shopify://shop_images/perm10_-_Desktop_banner.png",
-            "image_url": "shopify://collections/permanent-extensions",
+            "image": "shopify://shop_images/hanger-carrier-mobile-banner.webp",
+            "image_desktop": "shopify://shop_images/hanger-carrier-desktop-banner.webp",
+            "image_url": "shopify://products/hair-extension-hanger-and-carrier-bag",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
