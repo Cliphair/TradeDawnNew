@@ -2559,6 +2559,12 @@ product-info .loading-overlay:not(.hidden)~*,
   transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
+@media screen and (min-width:990px) {
+  .header__heading-logo-wrapper {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 989px) {
 
   .header__heading,
@@ -3642,17 +3648,17 @@ details-disclosure>details {
 
 /* iframes */
 .deferred-media-popup-container iframe {
-	position: absolute;
-	width: calc(100% - 3rem);
-	aspect-ratio: 16/9;
-	height: auto;
-	max-width: 1080px;
+  position: absolute;
+  width: calc(100% - 3rem);
+  aspect-ratio: 16/9;
+  height: auto;
+  max-width: 1080px;
 }
 
 @media screen and (min-width: 750px) {
-	.deferred-media-popup-container iframe {
-		width: calc(100% - 10rem);
-	}
+  .deferred-media-popup-container iframe {
+    width: calc(100% - 10rem);
+  }
 }
 
 /* Deferred media pop-up */
@@ -3715,15 +3721,12 @@ details-disclosure>details {
 
 /* .sc_simple-info__row {
   display: none !important;
-<<<<<<< HEAD
-} */
-=======
 }
 
 /* TO BE REMOVED LATER */
-.shadow-1.shadow-1-wpt{
-  margin:0!important;
-  padding:0!important
+.shadow-1.shadow-1-wpt {
+  margin: 0 !important;
+  padding: 0 !important
 }
 
 /* Old read mores - can be deleted once collections udpated */
@@ -3740,5 +3743,3 @@ details-disclosure>details {
   transition: text-decoration-thickness var(--duration-short) ease;
   cursor: pointer;
 }
-
->>>>>>> 113fe299fb783568e28a001f44adb91158b320ae

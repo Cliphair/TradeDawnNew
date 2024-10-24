@@ -52,7 +52,13 @@
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
-      width: 65%;
+      width: 70%;
+    }
+
+    @media screen and (min-width:990px){
+      .scrolled-past-header .header__heading-logo-wrapper {
+        width: 75%;
+      }
     }
   {%- endif -%}
 
