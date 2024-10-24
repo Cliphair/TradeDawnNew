@@ -26,6 +26,9 @@
                 type="radio"
                 name="categories"
                 value="{{ link.title | strip_html | handle }}"
+                {% if forloop.first %}
+                  checked
+                {% endif %}
               >
               <label for="categorie-{{ link.title | strip_html | handle }}">
                 {% liquid
@@ -59,7 +62,7 @@
                 <a
                   href="{{ second-level-link.url }}"
                   title="{{ second-level-link.title | strip_html | escape }}"
-                  class="collection_link"
+                  class="collection_link {% unless forloop.parentloop.first %}hidden{% endunless %}"
                   data-group="{{ link.title | strip_html | handle }}"
                 >
                   <img

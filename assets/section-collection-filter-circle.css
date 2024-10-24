@@ -13,7 +13,6 @@
 
 .section-collection-filter-circle .filter-circle {
   margin: 0;
-  align-items: flex-start;
 }
 
 .section-collection-filter-circle .filter-circle__item>.facet-checkbox {
