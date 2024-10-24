@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function openReadMore(btn) {
     btn.classList.add('hidden');
-    btn.parentElement.nextElementSibling.classList.remove('hidden')
+    btn.parentElement.nextElementSibling.classList.remove('hidden');
 }
 
 function closeReadLess(btn) {
