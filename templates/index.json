@@ -12,6 +12,8 @@
     "visual_menu_66DUPM": {
       "type": "visual-menu",
       "custom_css": [
+        ".grid--peek .grid__item {min-width: unset;}",
+        "@media screen and (max-width: 749px) {.slider--tablet.grid--peek.grid--3-col-tablet-down .grid__item {width: calc( (100% - 1.5rem - var(--grid-mobile-horizontal-spacing) * 5) / 3 ); }}",
         "@media screen and (min-width: 1400px) {.section-visual-menu {display: none; }}"
       ],
       "settings": {
