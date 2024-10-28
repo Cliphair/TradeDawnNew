@@ -19,6 +19,26 @@
         "color_scheme": "accent-4"
       }
     },
+    "collection_filter_circle_YUDjy3": {
+      "type": "collection-filter-circle",
+      "settings": {
+        "filter_type": "colour-group",
+        "heading": "",
+        "heading_size": "h2",
+        "text_allignment": "left",
+        "image_ratio": "adapt",
+        "circle_image": true,
+        "show_title": true,
+        "columns_desktop": 6,
+        "swipe_on_desktop": true,
+        "color_scheme": "accent-4",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "slider_visual": "dots",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -29,21 +49,21 @@
         "image_shape": "default",
         "show_secondary_image": false,
         "colour_as_title": true,
-        "show_type": true,
+        "show_type": false,
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
-        "display_type_image": true,
+        "display_type_image": false,
         "type_image_src": "shade",
         "badge_style": "fixed",
         "display_low_inventory": true,
         "low_inventory": 5,
         "enable_filtering": true,
         "filter_type": "drawer",
-        "remove_filters": "Length",
+        "remove_filters": "",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 20,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -148,6 +168,7 @@
   },
   "order": [
     "banner",
+    "collection_filter_circle_YUDjy3",
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
     "b400924f-2211-460e-841c-e909605faf8f",
