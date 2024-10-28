@@ -128,6 +128,333 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "rich_text_Th7kaQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mDfBny": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Party</em> Season <strong>Essentials</strong>",
+            "heading_size": "h1",
+            "h1": false
+          }
+        },
+        "text_gk8m9Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Short copy talking about party season hairstyles and how hair extensions elevate the style and accessories are needed to achieve it.</p>",
+            "read-more_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_mDfBny",
+        "text_gk8m9Q"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_carrousel_9gAxkJ": {
+      "type": "collection-carrousel",
+      "blocks": {
+        "collections_WEJL8d": {
+          "type": "collections",
+          "settings": {
+            "label": "",
+            "collection-list": "choose-by-hair-extensions-type-professional",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "circle_images": false
+          }
+        }
+      },
+      "block_order": [
+        "collections_WEJL8d"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "image_ratio": "adapt",
+        "hide_card_arrow": true,
+        "columns_desktop": 4,
+        "swipe_on_desktop": true,
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "slider_visual": "counter",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ifRWQV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gYwx6F": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Gifting Glamour</em>",
+            "heading_size": "h1",
+            "h1": false
+          }
+        },
+        "text_EbbKE9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Short description explaining we have a trove of glamourous stocking stuffers and other gift options for loved ones or yourself to add to your wishlist.</p>",
+            "read-more_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_gYwx6F",
+        "text_EbbKE9"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_carrousel_xBRm4U": {
+      "type": "collection-carrousel",
+      "blocks": {
+        "collections_WAx99U": {
+          "type": "collections",
+          "settings": {
+            "label": "",
+            "collection-list": "choose-by-hair-extensions-type-clip-ins",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "circle_images": false
+          }
+        }
+      },
+      "block_order": [
+        "collections_WAx99U"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "image_ratio": "square",
+        "hide_card_arrow": true,
+        "columns_desktop": 4,
+        "swipe_on_desktop": true,
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "slider_visual": "counter",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_image_link_t9FAMJ": {
+      "type": "slideshow-image-link",
+      "blocks": {
+        "slide_Fc4Wij": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/spooky12-mobile-banner.webp",
+            "image_desktop": "shopify://shop_images/spooky12-desktop-banner.webp",
+            "image_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_Fc4Wij"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_RGBdab": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AdJbPT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Festive <strong>Favourites</strong>",
+            "heading_size": "h1",
+            "h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AdJbPT"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_carrousel_qRk4ye": {
+      "type": "collection-carrousel",
+      "blocks": {
+        "collections_z7UKUB": {
+          "type": "collections",
+          "settings": {
+            "label": "",
+            "collection-list": "choose-by-hair-extensions-type-professional",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "circle_images": true
+          }
+        }
+      },
+      "block_order": [
+        "collections_z7UKUB"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "image_ratio": "square",
+        "hide_card_arrow": true,
+        "columns_desktop": 6,
+        "swipe_on_desktop": true,
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "slider_visual": "counter",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_DGPaKx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A9imR9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em><strong>Party Season</strong></em> Inspiration",
+            "heading_size": "h1",
+            "h1": false
+          }
+        },
+        "text_KiCAJx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Copy something like: Get inspired this party season by our favourite festive looks from our christmas campaign shoot! Halley Brisker shows us how recreate the looks at home with Clip-Ins etc</p>",
+            "read-more_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_A9imR9",
+        "text_KiCAJx"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "videos_list_LrmHHX": {
+      "type": "videos-list",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "text_allignment": "left",
+        "image_ratio": "square",
+        "hide_card_arrow": false,
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_J7TrQM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Qxx36G": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Spot Of <strong>Festive Reading</strong>",
+            "heading_size": "h1",
+            "h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Qxx36G"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "blog_spot_TCqjhg": {
+      "type": "blog-spot",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "tags_size": "h3",
+        "text_alignment": "center",
+        "blog": "hair-blog",
+        "post_limit": 4,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "show_image": true,
+        "image_ratio": "square",
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "enable_tags": false,
+        "scroll_to_grid": false,
+        "tags_columns_desktop": 3,
+        "tags_swipe_on_desktop": false,
+        "tags_columns_mobile": "1",
+        "tags_swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -135,6 +462,17 @@
     "slideshow_image_link_7DNKLU",
     "collection_carrousel_mit7eT",
     "rich_text_fRiq7G",
-    "video_UAqYMW"
+    "video_UAqYMW",
+    "rich_text_Th7kaQ",
+    "collection_carrousel_9gAxkJ",
+    "rich_text_ifRWQV",
+    "collection_carrousel_xBRm4U",
+    "slideshow_image_link_t9FAMJ",
+    "rich_text_RGBdab",
+    "collection_carrousel_qRk4ye",
+    "rich_text_DGPaKx",
+    "videos_list_LrmHHX",
+    "rich_text_J7TrQM",
+    "blog_spot_TCqjhg"
   ]
 }
