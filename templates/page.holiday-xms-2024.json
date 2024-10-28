@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "heading_size": "h1",
@@ -20,9 +21,120 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "slideshow_image_link_7DNKLU": {
+      "type": "slideshow-image-link",
+      "blocks": {
+        "slide_dTAemM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/spooky12-mobile-banner.webp",
+            "image_desktop": "shopify://shop_images/spooky12-desktop-banner.webp",
+            "image_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_dTAemM"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "collection_carrousel_mit7eT": {
+      "type": "collection-carrousel",
+      "blocks": {
+        "collections_DJp8KJ": {
+          "type": "collections",
+          "settings": {
+            "label": "",
+            "collection-list": "choose-by-hair-extensions-type-clip-ins",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": true,
+            "circle_images": true
+          }
+        }
+      },
+      "block_order": [
+        "collections_DJp8KJ"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "image_ratio": "square",
+        "hide_card_arrow": true,
+        "columns_desktop": 6,
+        "swipe_on_desktop": true,
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "slider_visual": "counter",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_fRiq7G": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aaUGWN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Welcome</em> To The Christmas Shop",
+            "heading_size": "h1",
+            "h1": true
+          }
+        },
+        "text_aTAHBR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Short description of page including new giftsets, stocking stuffers, gift cards, bundle deals, party season inspo and party season essentials.</p>",
+            "read-more_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aaUGWN",
+        "text_aTAHBR"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_UAqYMW": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "",
+        "cover_image": "shopify://shop_images/placeholder-video-thumbnail.png",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "slideshow_image_link_7DNKLU",
+    "collection_carrousel_mit7eT",
+    "rich_text_fRiq7G",
+    "video_UAqYMW"
   ]
 }
