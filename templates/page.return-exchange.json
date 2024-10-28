@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -29,7 +29,7 @@
           "settings": {
             "heading": "Return Policy",
             "icon": "none",
-            "row_content": "<p>You have 60 days to organise a return. In order to do so, you can visit our <a href=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\" title=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\">Return & Exchange page<\/a> and follow the simple instructions. Keep in mind that our Customer Service team will need to have photographic evidence of the product <strong>in the exact conditions it is before shipping it out<\/strong>. <\/p><p>Our Customer Service team will review your request (along with provided images), and process it. This entire process can take up to 3 to 5 working days, for both exchange and refund return requests.<\/p>",
+            "row_content": "<p>You have 60 days to organise a return. In order to do so, you can visit our <a href=\"https://cliphair-uk.myshopify.com/apps/return_prime\" title=\"https://cliphair-uk.myshopify.com/apps/return_prime\">Return & Exchange page</a> and follow the simple instructions. Keep in mind that our Customer Service team will need to have photographic evidence of the product <strong>in the exact conditions it is before shipping it out</strong>. </p><p>Our Customer Service team will review your request (along with provided images), and process it. This entire process can take up to 3 to 5 working days, for both exchange and refund return requests.</p>",
             "page": ""
           }
         },
@@ -38,7 +38,7 @@
           "settings": {
             "heading": "How To Request A Return Or Exchange",
             "icon": "none",
-            "row_content": "<p>Returning an item to get a refund or swapping it over with something else is easy. Follow these steps for a seamless return experience!<\/p><h3>Step 1: Request Return<\/h3><p>Go on our <a href=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\" title=\"https:\/\/cliphair-uk.myshopify.com\/apps\/return_prime\">Return & Exchange page<\/a> and fill in the form.<\/p><p><\/p><h3>Step 2: Take A Picture<\/h3><p>Take 2-3 photographs of your items in the exact conditions they are being returned in.<\/p><p><\/p><h3>Step 3: Wait For Our Team To Contact You<\/h3><p>You will receive an email when your request has been sent, and another one when it’s been approved or rejected. This can take up to 2-3 working days.<\/p><p><\/p><h3>Step 4: Print Your Shipping Label<\/h3><p>If your request has been approved, you will receive an approval email which will include a link to your unique shipping label that you <strong>must<\/strong> generate and attach to your parcel. You can also take this generated shipping label to the Post Office who will then assist you further by printing off the shipping label.<\/p><p><\/p><h3>Step 5: Return Approved: You’re All Set!<\/h3><p>Once your request has been approved and your parcel has been scanned and in our system, your refund process will be automatically initiated. You can sit back, and relax! <\/p><p><\/p><h3>Step 5b: Exchanged Approved: Let Us Know About Your Choice…<\/h3><p>If you have sent an exchange request and it’s been approved, don’t forget to get in touch with our team to arrange a payment or refund in case there is a difference in price between your selected product and your returned item.<\/p>",
+            "row_content": "<p>Returning an item to get a refund or swapping it over with something else is easy. Follow these steps for a seamless return experience!</p><h3>Step 1: Request Return</h3><p>Go on our <a href=\"https://cliphair-uk.myshopify.com/apps/return_prime\" title=\"https://cliphair-uk.myshopify.com/apps/return_prime\">Return & Exchange page</a> and fill in the form.</p><p></p><h3>Step 2: Take A Picture</h3><p>Take 2-3 photographs of your items in the exact conditions they are being returned in.</p><p></p><h3>Step 3: Wait For Our Team To Contact You</h3><p>You will receive an email when your request has been sent, and another one when it’s been approved or rejected. This can take up to 2-3 working days.</p><p></p><h3>Step 4: Print Your Shipping Label</h3><p>If your request has been approved, you will receive an approval email which will include a link to your unique shipping label that you <strong>must</strong> generate and attach to your parcel. You can also take this generated shipping label to the Post Office who will then assist you further by printing off the shipping label.</p><p></p><h3>Step 5: Return Approved: You’re All Set!</h3><p>Once your request has been approved and your parcel has been scanned and in our system, your refund process will be automatically initiated. You can sit back, and relax! </p><p></p><h3>Step 5b: Exchanged Approved: Let Us Know About Your Choice…</h3><p>If you have sent an exchange request and it’s been approved, don’t forget to get in touch with our team to arrange a payment or refund in case there is a difference in price between your selected product and your returned item.</p>",
             "page": ""
           }
         },
@@ -47,7 +47,7 @@
           "settings": {
             "heading": "Why Has My Return Or Exchange Request Been Denied?",
             "icon": "none",
-            "row_content": "<p>The reason why our team might reject your return or exchange request is usually down to the conditions of one or more of your items. This can be because of broken hygiene seals, visible signs of usage, alterations, product build-up, etc.<\/p><p>Visible signs of usage, alterations, and product build-up include:<\/p><ul><li>Hair dye<\/li><li>Hair that has been worn, brushed, or styled<\/li><li>Hair extensions set that are incomplete<\/li><li>Hair that smells as a result of using products or improper storage<\/li><\/ul><p>Other reasons why we can reject a return are:<\/p><ul><li>The wrong item has been sent<\/li><li>The return has been requested after 60 days<\/li><\/ul><p>Polite note: <strong>curly clip in hair extensions <\/strong>won’t be able to be returned without their silver\/gold hygiene bands.<\/p>",
+            "row_content": "<p>The reason why our team might reject your return or exchange request is usually down to the conditions of one or more of your items. This can be because of broken hygiene seals, visible signs of usage, alterations, product build-up, etc.</p><p>Visible signs of usage, alterations, and product build-up include:</p><ul><li>Hair dye</li><li>Hair that has been worn, brushed, or styled</li><li>Hair extensions set that are incomplete</li><li>Hair that smells as a result of using products or improper storage</li></ul><p>Other reasons why we can reject a return are:</p><ul><li>The wrong item has been sent</li><li>The return has been requested after 60 days</li></ul><p>Polite note: <strong>curly clip in hair extensions </strong>won’t be able to be returned without their silver/gold hygiene bands.</p>",
             "page": ""
           }
         },
@@ -56,7 +56,7 @@
           "settings": {
             "heading": "What Are Good Conditions To Return My Item(s)?",
             "icon": "none",
-            "row_content": "<p>In order to expect a solid <em>yes<\/em> from our team, your item should be in the following conditions:<\/p><ul><li>Unused<\/li><li>Have the hygiene seals intact<\/li><li>Not show any product build-up or alteration of any sort<\/li><\/ul><p>Hair extensions that have been used, styled, or sprayed with products won’t be able to be returned. Hair care products without the foil seal on the bottle\/tub or that have been used won’t be able to be returned. Hair accessories that come in damaged packaging won’t be able to be returned.<\/p><p>Sending us pictures that accurately depicts the state of your items at the time of returning them saves you and our team precious time!<\/p>",
+            "row_content": "<p>In order to expect a solid <em>yes</em> from our team, your item should be in the following conditions:</p><ul><li>Unused</li><li>Have the hygiene seals intact</li><li>Not show any product build-up or alteration of any sort</li></ul><p>Hair extensions that have been used, styled, or sprayed with products won’t be able to be returned. Hair care products without the foil seal on the bottle/tub or that have been used won’t be able to be returned. Hair accessories that come in damaged packaging won’t be able to be returned.</p><p>Sending us pictures that accurately depicts the state of your items at the time of returning them saves you and our team precious time!</p>",
             "page": ""
           }
         },
@@ -65,7 +65,7 @@
           "settings": {
             "heading": "What Happens Next?",
             "icon": "none",
-            "row_content": "<p>Once your request has been received and reviewed by our team, you will be notified about it being accepted or rejected. If it’s accepted, then you will receive a link to generate your unique shipping label.<\/p>",
+            "row_content": "<p>Once your request has been received and reviewed by our team, you will be notified about it being accepted or rejected. If it’s accepted, then you will receive a link to generate your unique shipping label.</p>",
             "page": ""
           }
         },
@@ -74,7 +74,7 @@
           "settings": {
             "heading": "I just sent an item and it got approved, however the photo I attached doesn’t qualify for a return. What should I do?",
             "icon": "none",
-            "row_content": "<p>If you attached a photograph that doesn’t reflect the actual conditions of your item at the point of returning, please get in touch with our customer service team by shooting us an email at:<a href=\"mailto:customerservice@cliphair.co.uk\"><span style=\"text-decoration:underline\">customerservice@cliphair.co.uk<\/span><\/a>or give us a ring on: +44 03450 211 311. Please be mindful this has to be done within 48 hours from your return.<\/p>",
+            "row_content": "<p>If you attached a photograph that doesn’t reflect the actual conditions of your item at the point of returning, please get in touch with our customer service team by shooting us an email at:<a href=\"mailto:customerservice@cliphair.co.uk\"><span style=\"text-decoration:underline\">customerservice@cliphair.co.uk</span></a>or give us a ring on: +44 03450 211 311. Please be mindful this has to be done within 48 hours from your return.</p>",
             "page": ""
           }
         },
@@ -83,7 +83,7 @@
           "settings": {
             "heading": "Exchanging Goods: Difference In Price",
             "icon": "none",
-            "row_content": "<p>If you have an approved exchange and your chosen product has a higher or lower price than the one you’re returning, then please get in touch with our Customer Service team to arrange a payment or refund for the difference in price.<\/p>",
+            "row_content": "<p>If you have an approved exchange and your chosen product has a higher or lower price than the one you’re returning, then please get in touch with our Customer Service team to arrange a payment or refund for the difference in price.</p>",
             "page": ""
           }
         },
@@ -92,7 +92,7 @@
           "settings": {
             "heading": "I Am In Two Minds Between Two Shades Or More",
             "icon": "none",
-            "row_content": "<p>If you’re indecisive between two shades or more, you can always resort to our FREE colour matching service. We work with hair professionals and qualified colour technicians to find the perfect shade for everyone, and we do it completely free of charge. Get in touch via Whatsapp, Instagram, or simply visit our Colour Match Service page to find out more!<\/p><p>Another option for you is to “rent” a colour ring so that you can check what our shades look like in real life. We have two options for you, one for solid shades and one for mixed and highlighted colours. Check them out on this page. Once you’re done, you can simply return it to us and get a refund – or exchange it for the product you want, in the exact shade that works for you!<\/p>",
+            "row_content": "<p>If you’re indecisive between two shades or more, you can always resort to our FREE colour matching service. We work with hair professionals and qualified colour technicians to find the perfect shade for everyone, and we do it completely free of charge. Get in touch via Whatsapp, Instagram, or simply visit our Colour Match Service page to find out more!</p><p>Another option for you is to “rent” a colour ring so that you can check what our shades look like in real life. We have two options for you, one for solid shades and one for mixed and highlighted colours. Check them out on this page. Once you’re done, you can simply return it to us and get a refund – or exchange it for the product you want, in the exact shade that works for you!</p>",
             "page": ""
           }
         },
@@ -101,7 +101,7 @@
           "settings": {
             "heading": "I Received A Free Gift With My Item. Do I Need To Return It?",
             "icon": "none",
-            "row_content": "<p>Yes, any freebies that are part of an offer will need to be returned with the item you’re sending back.<\/p>",
+            "row_content": "<p>Yes, any freebies that are part of an offer will need to be returned with the item you’re sending back.</p>",
             "page": ""
           }
         },
@@ -110,7 +110,7 @@
           "settings": {
             "heading": "Will I Get Charged For Returning An Item?",
             "icon": "none",
-            "row_content": "<p>No, as long as you’re a UK-based customer, we’ll take care of any return charges.<\/p><p>If you’re ordering from the United States, check our US website for returns and exchanges!<\/p><p>For any other international buyers, unfortunately at the time being we are unable to cover the return cost, therefore you will be charged for return shipping.<\/p>",
+            "row_content": "<p>No, as long as you’re a UK-based customer, we’ll take care of any return charges.</p><p>If you’re ordering from the United States, check our US website for returns and exchanges!</p><p>For any other international buyers, unfortunately at the time being we are unable to cover the return cost, therefore you will be charged for return shipping.</p>",
             "page": ""
           }
         },
@@ -119,7 +119,7 @@
           "settings": {
             "heading": "I Have Lost My Return Label, What Can I Do?",
             "icon": "none",
-            "row_content": "<p>As long as it hasn’t been scanned already, you can always print it again!<\/p>",
+            "row_content": "<p>As long as it hasn’t been scanned already, you can always print it again!</p>",
             "page": ""
           }
         },
@@ -128,7 +128,7 @@
           "settings": {
             "heading": "Refunds & Exchanges",
             "icon": "none",
-            "row_content": "<ul><li>Customers can return the item for a refund within 60 days of receipt of merchandise.<\/li><li>If the colour received is not suitable and you are not sure what colour to exchange it for, you can send your own hair snippet or sample along with the item and our hair experts will try their best to match it for you or please use the link below to use our FREE colour matching service. <a href=\"https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service\" title=\"Colour Matching Service\">https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service<\/a><\/li><li>Returned item(s) must be unused, in their original packaging and in a resaleable condition. If product has been removed from its packaging (and has broken hygiene bands), then please contact our customer service via email <a href=\"mailto:customerservice@cliphair.co.uk\">(customerservice@cliphair.co.uk)<\/a> to get an authorization code. Any items returned in such condition and without the code will be destroyed.<\/li><li>We do not accept returns on any items that have been altered in anyway including, but not limited to, being cut, dyed, toned or customised in any way.<\/li><li>Returning an item is FREE within the United Kingdom.<\/li><li>If you are outside UK or you wish to return the item through a courier of your choice please address the package to: <strong>Cliphair Ltd, Unit 1, Watermill House, Restmor Way, Wallington, SM6 7AH, United Kingdom.<\/strong><\/li><li>Refunds are for the product price at the time of purchase only.<\/li><li>Like to like exchanges or where exchange value is lesser than the initial amount paid will be processed within 48 working hours of receipt of the item(s). If exchange value is higher than the initial amount paid a full refund will be processed and you will be more than welcome to place a new order.<\/li><\/ul><h3>Important Note:<\/h3><p>Refunds on returned items will be issued in the same payment form as tendered at the time of purchase. Returns are normally processed within 2-3 working days of receipt. You will get an email notification once your return has been processed. Please allow 5-7 working days for funds to be visible in your account after return has been processed.<\/p>",
+            "row_content": "<ul><li>Customers can return the item for a refund within 60 days of receipt of merchandise.</li><li>If the colour received is not suitable and you are not sure what colour to exchange it for, you can send your own hair snippet or sample along with the item and our hair experts will try their best to match it for you or please use the link below to use our FREE colour matching service. <a href=\"https://www.cliphair.co.uk/pages/colour-matching-service\" title=\"Colour Matching Service\">https://www.cliphair.co.uk/pages/colour-matching-service</a></li><li>Returned item(s) must be unused, in their original packaging and in a resaleable condition. If product has been removed from its packaging (and has broken hygiene bands), then please contact our customer service via email <a href=\"mailto:customerservice@cliphair.co.uk\">(customerservice@cliphair.co.uk)</a> to get an authorization code. Any items returned in such condition and without the code will be destroyed.</li><li>We do not accept returns on any items that have been altered in anyway including, but not limited to, being cut, dyed, toned or customised in any way.</li><li>Returning an item is FREE within the United Kingdom.</li><li>If you are outside UK or you wish to return the item through a courier of your choice please address the package to: <strong>Cliphair Ltd, Unit 1, Watermill House, Restmor Way, Wallington, SM6 7AH, United Kingdom.</strong></li><li>Refunds are for the product price at the time of purchase only.</li><li>Like to like exchanges or where exchange value is lesser than the initial amount paid will be processed within 48 working hours of receipt of the item(s). If exchange value is higher than the initial amount paid a full refund will be processed and you will be more than welcome to place a new order.</li></ul><h3>Important Note:</h3><p>Refunds on returned items will be issued in the same payment form as tendered at the time of purchase. Returns are normally processed within 2-3 working days of receipt. You will get an email notification once your return has been processed. Please allow 5-7 working days for funds to be visible in your account after return has been processed.</p>",
             "page": ""
           }
         }
@@ -146,6 +146,9 @@
         "collapsible_row_KEXBwb",
         "collapsible_row_GbCe8r",
         "collapsible_row_4mpR9z"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.collapsible-content-wrapper-narrow {padding: 0 5rem; max-width: 140rem; }}"
       ],
       "settings": {
         "caption": "",
@@ -173,40 +176,40 @@
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
-            "text_label": "<p>Ethically<br>Sourced<\/p>",
+            "image": "shopify://shop_images/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced</p>",
             "link": ""
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "<p>Outstanding<br>Reviews<\/p>",
-            "link": "shopify:\/\/pages\/testimonials"
+            "image": "shopify://shop_images/Outstanding-Reviews-_White.svg",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
+            "link": "shopify://pages/testimonials"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "<p>Cliphair<br>Rewards<\/p>",
-            "link": "shopify:\/\/pages\/rewards"
+            "image": "shopify://shop_images/Cliphair-Rewards-_White.svg",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
+            "link": "shopify://pages/rewards"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "<p>Free Delivery<br>& Returns<\/p>",
+            "image": "shopify://shop_images/Free-Delivery-_White.svg",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
             "link": ""
           }
         },
         "cbdbff03-f013-487f-8288-6c9a46426bc6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "<p>Buy Now<br>Pay Later<\/p>",
+            "image": "shopify://shop_images/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
             "link": ""
           }
         }
@@ -232,6 +235,7 @@
         "color_scheme": "background-collection-titles",
         "columns_mobile": "3",
         "swipe_on_mobile": false,
+        "slider_visual": "counter",
         "padding_top": 36,
         "padding_bottom": 52
       }
