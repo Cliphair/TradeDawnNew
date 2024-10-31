@@ -619,6 +619,9 @@
         "video_4LHgzt",
         "video_cNtLWM"
       ],
+      "custom_css": [
+        ".section-videos-list {--grid-mobile-horizontal-spacing: 5px; --grid-desktop-horizontal-spacing: 5px;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
