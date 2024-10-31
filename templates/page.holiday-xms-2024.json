@@ -118,8 +118,8 @@
         "columns_mobile": "3",
         "swipe_on_mobile": true,
         "slider_visual": "counter",
-        "padding_top": 32,
-        "padding_bottom": 32,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "button_label": "",
         "link": "",
         "button_style_secondary": false
@@ -149,6 +149,7 @@
         "text_aTAHBR"
       ],
       "custom_css": [
+        ".rich-text__wrapper {width: 100%;}",
         "@media screen and (max-width: 990px) {br {display: none; }}"
       ],
       "settings": {
@@ -165,14 +166,14 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "enable_video_looping": false,
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/CLIP HAIR - BRIDAL CAMPAIGN - LANDSCAPE (D3)(3).mp4",
         "video_url": "",
-        "cover_image": "shopify://shop_images/placeholder-video-thumbnail.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "rich_text_Th7kaQ": {
@@ -198,13 +199,16 @@
         "heading_mDfBny",
         "text_gk8m9Q"
       ],
+      "custom_css": [
+        ".rich-text__wrapper {width: 100%;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "collection_carrousel_9gAxkJ": {
