@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+main#MainContent {
+  --page-width: 1920px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+.h0 {
+  font-weight: 300;
+  color: #5c5c5c;
+}
+
+h1 em,
+.h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+.h0 em {
+  font-family: "Libre Caslon Text", serif;
+}
+
+p {
+  color: #5c5c5c;
+}
+
+.rte+.rte {
+  margin-top: 2.8rem;
+}
+
+@media screen and (min-width:750px) {
+  .rte+.rte {
+    margin-top: 3.8rem;
+  }
+}
+
+@media screen and (min-width:1400px) {
+
+  h1,
+  .h1,
+  h2,
+  .h2 {
+    font-size: 7rem;
+  }
+
+  p {
+    font-size: 40px;
+  }
+}
