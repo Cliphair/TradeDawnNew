@@ -262,7 +262,8 @@
         ".h4 {color: #5c5c5c; font-weight: 300;}",
         ".collection-carrousel {--grid-mobile-horizontal-spacing: 5px; --grid-desktop-horizontal-spacing: 5px;}",
         ".slider--tablet.grid--peek .grid__item:first-of-type {margin-left: 0 !important;}",
-        "@media screen and (min-width: 990px) {.slider--desktop.grid--3-col-desktop .grid__item {width: calc( ( 100% - 15rem - var(--desktop-margin-left-first-item) - var(--grid-desktop-horizontal-spacing) * 4 ) / 3 );}}"
+        "@media screen and (min-width: 750px) and (max-width: 989px) {.slider--tablet.grid--peek.grid--3-col-tablet .grid__item {width: calc((100% - 7rem) / 3); }}",
+        "@media screen and (min-width: 990px) {.slider--desktop.grid--3-col-desktop .grid__item {width: calc( (100% - 22rem) / 3 ); }}"
       ],
       "settings": {
         "title": "",
