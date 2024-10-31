@@ -468,29 +468,29 @@
         "collection_nxiGih": {
           "type": "collection",
           "settings": {
-            "collection": "under-15",
-            "custom_title": "Under £15"
+            "collection": "double-wefted-clip-in-hair-extensions",
+            "custom_title": "Double Weft"
           }
         },
         "collection_erKLk4": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
-            "custom_title": "Under £30"
+            "collection": "tape-in-hair-extensions",
+            "custom_title": "Tapes"
           }
         },
         "collection_9QLRVM": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
-            "custom_title": "Under £50"
+            "collection": "nano-rings-hair-extensions",
+            "custom_title": "Nano Rings"
           }
         },
         "collection_PWKdhx": {
           "type": "collection",
           "settings": {
-            "collection": "under-100",
-            "custom_title": "Under £100"
+            "collection": "seamless-clip-in-hair-extensions-double-drawn-hair",
+            "custom_title": "Seamless"
           }
         },
         "collection_N9NDPx": {
@@ -525,7 +525,6 @@
         "collection_hLceke"
       ],
       "custom_css": [
-        ".grid--peek .grid__item {min-width: unset;}",
         ".h4 {color: #5c5c5c; font-weight: 300;}"
       ],
       "settings": {
@@ -586,6 +585,40 @@
     },
     "videos_list_LrmHHX": {
       "type": "videos-list",
+      "blocks": {
+        "video_hBEkNY": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Tasmyn.mp4",
+            "video_url": "",
+            "title": "Video Title",
+            "description": ""
+          }
+        },
+        "video_4LHgzt": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Style Red Balayage.mp4",
+            "video_url": "",
+            "title": "Video Title",
+            "description": ""
+          }
+        },
+        "video_cNtLWM": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/@naomipricee Iced Cappuccino Seamless 16inch 1 .mov",
+            "video_url": "",
+            "title": "Video Title",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_hBEkNY",
+        "video_4LHgzt",
+        "video_cNtLWM"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -593,17 +626,17 @@
         "button_label": "",
         "link": "",
         "button_style_secondary": false,
-        "text_allignment": "left",
-        "image_ratio": "square",
-        "hide_card_arrow": false,
+        "text_allignment": "center",
+        "image_ratio": "portrait",
+        "hide_card_arrow": true,
         "columns_desktop": 3,
-        "swipe_on_desktop": false,
+        "swipe_on_desktop": true,
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "slider_visual": "counter",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "rich_text_J7TrQM": {
