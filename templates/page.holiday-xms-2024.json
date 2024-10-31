@@ -101,6 +101,9 @@
         "collection_fWC3B3",
         "collection_hLceke"
       ],
+      "custom_css": [
+        ".h4{color:#5c5c5c; font-weight:300;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h2",
