@@ -149,7 +149,7 @@
         "text_aTAHBR"
       ],
       "custom_css": [
-        "@media screen and (max-width: 749px) {br {display: none; }}"
+        "@media screen and (max-width: 990px) {br {display: none; }}"
       ],
       "settings": {
         "desktop_content_position": "center",
