@@ -620,7 +620,8 @@
       ],
       "custom_css": [
         ".h5 {margin-bottom: 0;}",
-        "@media screen and (min-width: 750px) and (max-width: 989px) {.slider--tablet.grid--peek.grid--2-col-tablet .grid__item {width: calc((100% - 7rem - var(--grid-desktop-horizontal-spacing) * 3) / 2); padding-bottom: 0; }}"
+        "@media screen and (min-width: 750px) and (max-width: 989px) {.slider--tablet.grid--peek.grid--2-col-tablet .grid__item {width: calc((100% - 7rem - var(--grid-desktop-horizontal-spacing) * 3) / 2); padding-bottom: 0; }}",
+        ".deferred-media__poster-button {color: white;}"
       ],
       "settings": {
         "title": "",
