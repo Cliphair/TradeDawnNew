@@ -259,7 +259,9 @@
         "collection_Xma9JV"
       ],
       "custom_css": [
-        ".h4 {color: #5c5c5c; font-weight: 300;}"
+        ".h4 {color: #5c5c5c; font-weight: 300;}",
+        ".collection-carrousel {--grid-mobile-horizontal-spacing: 5px; --grid-desktop-horizontal-spacing: 5px;}",
+        ".slider--tablet.grid--peek .grid__item:first-of-type {margin-left: 0 !important;}"
       ],
       "settings": {
         "title": "",
@@ -269,7 +271,7 @@
         "image_ratio": "portrait",
         "circle_images": false,
         "hide_card_arrow": true,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "swipe_on_desktop": true,
         "color_scheme": "",
         "columns_mobile": "3",
