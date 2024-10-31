@@ -705,6 +705,11 @@
     },
     "article_trending_hqNhpg": {
       "type": "article-trending",
+      "custom_css": [
+        ".article-card {background: #ffffff;}",
+        ".card__content{padding-right:0; padding-left:0;}",
+        ".h5 {color: #5c5c5c;}"
+      ],
       "settings": {
         "heading": "",
         "trending-list": "red-head-blogs",
