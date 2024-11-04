@@ -117,7 +117,7 @@
         "heading_size": "h2",
         "introduction": "",
         "text_allignment": "left",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "circle_images": false,
         "hide_card_arrow": true,
         "columns_desktop": 6,
