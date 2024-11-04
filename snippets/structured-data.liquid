@@ -1,39 +1,4 @@
-{% if template contains 'product' %}
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Product",
-      "brand": {
-        "@type": "Brand",
-        "name": {{ product.vendor | json }}
-      },
-      "sku": {{ product.selected_or_first_available_variant.sku | json }},
-      "gtin8": {{ product.selected_or_first_available_variant.sku | json }},
-      "description": {{ product.description | strip_html | json }},
-      "url":{{ canonical_url | json }},
-      "name": {{ product.title | json }},
-      {%- if product.featured_image -%}
-        "image": "{{ product.featured_image | product_img_url: "grande" | prepend : "https:"}}",
-      {%- endif -%}
-      "offers": {
-        "@type": "Offer",
-        "url":{{ canonical_url | json }},
-        "price": {{ product.selected_or_first_available_variant.price | money_without_currency | remove: "," }},
-        "priceCurrency": "{{ shop.currency }}",
-        "availability": "{%- if product.selected_or_first_available_variant.available -%}InStock{%- else -%}OutOfStock{%- endif -%}",
-        "itemCondition": "http://schema.org/NewCondition",
-        "priceValidUntil": "{{ "now" | date: "%s" | plus: 31556952 | date: "%b %d, %Y" }}"
-      }
-      {%- if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_count != "0" -%}
-        ,"aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": {{ product.metafields.yotpo.reviews_average }},
-          "ratingCount": {{ product.metafields.yotpo.reviews_count }}
-        }
-      {%- endif -%}
-    }
-  </script>
-{% elsif template contains 'collection' %}
+{% if template contains 'collection' %}
   <script type="application/ld+json">
     [
       {
