@@ -26,12 +26,8 @@
                 type="radio"
                 name="categories"
                 value="{{ link.title | strip_html | handle }}"
-                {% if section.settings.list.links contains "Browns" %}
-                  {% if link.title == "Browns" %}checked{% endif %}
-                {% else %}
-                  {% if forloop.first %}
-                    checked
-                  {% endif %}
+                {% if link.title == "Browns" %}
+                  checked
                 {% endif %}
               >
               <label for="categorie-{{ link.title | strip_html | handle }}">
