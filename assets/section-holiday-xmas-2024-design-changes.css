@@ -4,57 +4,58 @@ main#MainContent {
   --page-width: 1920px;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-.h0 {
+main#MainContent h1,
+main#MainContent .h1,
+main#MainContent h2,
+main#MainContent .h2,
+main#MainContent h3,
+main#MainContent .h3,
+main#MainContent .h0 {
   font-weight: 300;
-  color: #5c5c5c;
+  color: #242424;
 }
 
-h1 em,
-.h1 em,
-h2 em,
-.h2 em,
-h3 em,
-.h3 em,
-.h0 em {
+main#MainContent h1 em,
+main#MainContent .h1 em,
+main#MainContent h2 em,
+main#MainContent .h2 em,
+main#MainContent h3 em,
+main#MainContent .h3 em,
+main#MainContent .h0 em {
   font-family: "Libre Caslon Text", serif;
 }
 
-p {
-  color: #5c5c5c;
+main#MainContent p {
+  color: #242424;
+  font-weight:300;
 }
 
-.rte+.rte {
+main#MainContent .rte+.rte {
   margin-top: 2.8rem;
 }
 
 @media screen and (min-width:990px) {
-  .rte+.rte {
+  main#MainContent .rte+.rte {
     margin-top: 3.8rem;
   }
 }
 
-h1,
-  .h1,
-  h2,
-  .h2 {
+main#MainContent h1,
+main#MainContent .h1,
+main#MainContent h2,
+main#MainContent .h2 {
     font-size: 3rem;
   }
 
-@media screen and (min-width:1400px) {
-  h1,
-  .h1,
-  h2,
-  .h2 {
+@media screen and (min-width:1920px) {
+  main#MainContent h1,
+  main#MainContent .h1,
+  main#MainContent h2,
+  main#MainContent .h2 {
     font-size: 7rem;
   }
 
-  p {
+  main#MainContent p {
     font-size: 40px;
   }
 }
