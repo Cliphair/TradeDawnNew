@@ -42,12 +42,14 @@ main#MainContent .rte+.rte {
   }
 }
 
-main#MainContent h1,
-main#MainContent .h1,
-main#MainContent h2,
-main#MainContent .h2 {
+@media screen and (min-width:768px) {
+  main#MainContent h1,
+  main#MainContent .h1,
+  main#MainContent h2,
+  main#MainContent .h2 {
     font-size: 3rem;
   }
+}
 
 @media screen and (min-width:990px) {
   main#MainContent h1,
