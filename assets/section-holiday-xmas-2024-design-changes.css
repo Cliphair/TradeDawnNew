@@ -13,6 +13,7 @@ main#MainContent .h3,
 main#MainContent .h0 {
   font-weight: 300;
   color: #242424;
+  line-height: 1.1em;
 }
 
 main#MainContent h1 em,
@@ -25,9 +26,10 @@ main#MainContent .h0 em {
   font-family: "Libre Caslon Text", serif;
 }
 
-main#MainContent p {
+main#MainContent p{
   color: #242424;
   font-weight:300;
+  line-height: 1.1em;
 }
 
 main#MainContent .rte+.rte {
