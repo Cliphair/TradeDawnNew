@@ -1120,6 +1120,13 @@
           }{% unless forloop.last %},{% endunless %}
         {%- endfor -%}
       ]
+      {%- if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_count != "0" -%}
+        ,"aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": {{ product.metafields.yotpo.reviews_average }},
+            "ratingCount": {{ product.metafields.yotpo.reviews_count }}
+        }
+      {%- endif -%}
     }
   </script>
 </section>
