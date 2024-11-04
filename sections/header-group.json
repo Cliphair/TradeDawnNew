@@ -120,7 +120,7 @@
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
           "settings": {
-            "image": "shopify://shop_images/New_Sunday_Delivery_Hair_Extensions_From_Cliphair.gif",
+            "image": "shopify://shop_images/Free_Express_Delivery_Message_Black_copy.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://collections/hair-extensions-by-colour"
@@ -130,7 +130,6 @@
       "block_order": [
         "announcement_image_zkJVKU"
       ],
-      "disabled": true,
       "custom_css": [
         "img {height: auto;}"
       ],
