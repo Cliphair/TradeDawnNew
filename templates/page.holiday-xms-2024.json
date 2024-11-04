@@ -197,8 +197,8 @@
         "text_gk8m9Q": {
           "type": "text",
           "settings": {
-            "text": "<p>Short copy talking about party season hairstyles and how hair extensions elevate the style and accessories are needed to achieve it.</p>",
-            "read-more_text": ""
+            "text": "<p>It’s time to level up your locks this Christmas! Our luxury Remy hair extensions are the perfect way to add instant beauty and drama to your look.</p>",
+            "read-more_text": "<p>...</p>"
           }
         }
       },
@@ -225,6 +225,7 @@
           "type": "collection",
           "settings": {
             "collection": "clip-in-hair-extensions",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-clip-ins.webp",
             "custom_title": "Clip Ins"
           }
         },
@@ -232,6 +233,7 @@
           "type": "collection",
           "settings": {
             "collection": "clip-in-ponytail-extensions",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-ponytail.webp",
             "custom_title": "Ponytails"
           }
         },
@@ -239,6 +241,7 @@
           "type": "collection",
           "settings": {
             "collection": "one-piece-clip-in-hair-extensions",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-volumisers.webp",
             "custom_title": "Volumisers"
           }
         },
@@ -246,13 +249,15 @@
           "type": "collection",
           "settings": {
             "collection": "fringe-clip-in-hair-extensions",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-fring.webp",
             "custom_title": "Fringes"
           }
         },
         "collection_Xma9JV": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "party-season-essentials",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-party-season.webp",
             "custom_title": "All Party Season Extensions"
           }
         }
@@ -306,7 +311,7 @@
         "text_EbbKE9": {
           "type": "text",
           "settings": {
-            "text": "<p>Short description explaining we have a trove of glamourous stocking stuffers and other gift options for loved ones or yourself to add to your wishlist.</p>",
+            "text": "<p>Unlock a treasure trove of glamorous stocking stuffers, gifts for your loved ones or to add to your own wish list! From luxurious hair extensions to essential accessories and styling kits, we've got everything to make this Christmas truly unforgettable.</p>",
             "read-more_text": ""
           }
         }
@@ -333,7 +338,8 @@
         "collection_knXnRf": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "under-15",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-gift-sets-2.webp",
             "custom_title": "Gift Sets"
           }
         },
@@ -341,20 +347,23 @@
           "type": "collection",
           "settings": {
             "collection": "stocking-stuffers",
-            "custom_title": "Stocking stuffers"
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-stocking-stuffers-2.webp",
+            "custom_title": "Stocking Stuffers"
           }
         },
         "collection_VrwD6f": {
           "type": "collection",
           "settings": {
             "collection": "under-15",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-under-15-2.webp",
             "custom_title": "Under £15"
           }
         },
         "collection_bhWaMe": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "under-30-gift-guide",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-under-30-2.webp",
             "custom_title": "Under £30"
           }
         },
@@ -362,13 +371,15 @@
           "type": "collection",
           "settings": {
             "collection": "hair-extensions-bundle",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-bundle-2.webp",
             "custom_title": "Bundle deals"
           }
         },
         "collection_Bk9zCh": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "under-50-gift-guide",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-under-50-2.webp",
             "custom_title": "Under £50"
           }
         },
@@ -376,6 +387,7 @@
           "type": "collection",
           "settings": {
             "collection": "under-100",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-under-100-2.webp",
             "custom_title": "Under £100"
           }
         }
