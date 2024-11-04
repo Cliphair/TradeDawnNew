@@ -28,6 +28,8 @@
 
     {% render 'meta-tags' %}
 
+    {% render 'structured-data' %}
+
     <meta name="referrer" content="no-referrer-when-downgrade">
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -40,26 +42,6 @@
     {{ content_for_header }}
 
     <!-- Manual hreflang between UK and US sites -->
-    <!--
-      <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
-      <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}">
-      <link
-        rel="alternate"
-        hreflang="de-DE"
-        href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de' }}"
-      >
-      <link
-        rel="alternate"
-        hreflang="en-CA"
-        href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca' }}"
-      >
-      <link
-        rel="alternate"
-        hreflang="en-AU"
-        href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' }}"
-      >
-      <link rel="alternate" hreflang="en-GB" href="{{ canonical_url  }}">
-    -->
     {% render 'hreflang' %}
     <!-- End manual hreflang between UK and US sites -->
 
