@@ -593,6 +593,7 @@
           "settings": {
             "video": "shopify://files/videos/Tasmyn.mp4",
             "video_url": "",
+            "cover_image": "shopify://shop_images/holiday-xmas-2024-video-1.webp",
             "title": "Video Title",
             "description": ""
           }
@@ -602,6 +603,7 @@
           "settings": {
             "video": "shopify://files/videos/Style Red Balayage.mp4",
             "video_url": "",
+            "cover_image": "shopify://shop_images/holiday-xmas-2024-video-2.webp",
             "title": "Video Title",
             "description": ""
           }
@@ -611,6 +613,7 @@
           "settings": {
             "video": "shopify://files/videos/@naomipricee Iced Cappuccino Seamless 16inch 1 .mov",
             "video_url": "",
+            "cover_image": "shopify://shop_images/holiday-xmas-2024-video-3.webp",
             "title": "Video Title",
             "description": ""
           }
@@ -656,10 +659,18 @@
             "heading_size": "h1",
             "h1": false
           }
+        },
+        "text_ynQBg7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore our favourite festive blogs and discover never-before-seen styling inspo, hair extension do’s and don’ts, plus quick and easy maintenance tips to keep your locks thriving throughout the colder weather!</p>",
+            "read-more_text": ""
+          }
         }
       },
       "block_order": [
-        "heading_Qxx36G"
+        "heading_Qxx36G",
+        "text_ynQBg7"
       ],
       "custom_css": [
         ".rich-text__wrapper {width: 100%;}"
