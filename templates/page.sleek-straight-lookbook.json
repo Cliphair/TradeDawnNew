@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "166445343207c9fec0": {
@@ -42,7 +42,7 @@
       "type": "back-to",
       "disabled": true,
       "settings": {
-        "back_url": "shopify://pages/wish-for-cliphair-holiday-campaign-2023",
+        "back_url": "shopify://pages/wish-for-cliphair-holiday-campaign",
         "back_text": "Back To Holiday Campaign 2023",
         "max_width": true,
         "mobile_font": 10,
