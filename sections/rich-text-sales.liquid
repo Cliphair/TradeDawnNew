@@ -29,7 +29,9 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.heading }}
+                {% assign base_tag = "<h2 class='" %}
+                {% capture new_tag %}{{ base_tag }}{{ block.settings.heading_size }}{{ "'" }}{% endcapture %}
+                {{ block.settings.heading | replace: "<h2", new_tag }}
               </div>
             {%- when 'caption' -%}
               <p
