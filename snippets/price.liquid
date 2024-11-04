@@ -47,6 +47,7 @@
 
       if start_date_int <= current_date_int and end_date_int > current_date_int
         assign code_sale_running = true
+        break
       else
         assign code_sale_running = false
       endif
