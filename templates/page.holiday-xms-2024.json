@@ -140,7 +140,7 @@
           "type": "heading",
           "settings": {
             "heading": "<h2><em>Welcome</em> To <br/>The Christmas Shop</h2>",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "h1": false
           }
         },
@@ -157,7 +157,7 @@
         "text_aTAHBR"
       ],
       "custom_css": [
-        ".rich-text__wrapper {width: 100%;}"
+        ".rich-text__wrapper {width: 100%; max-width: 1730px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -207,7 +207,7 @@
         "text_gk8m9Q"
       ],
       "custom_css": [
-        ".rich-text__wrapper {width: 100%;}"
+        ".rich-text__wrapper {width: 100%; max-width: 1730px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -321,7 +321,7 @@
         "text_EbbKE9"
       ],
       "custom_css": [
-        ".rich-text__wrapper {width: 100%;}"
+        ".rich-text__wrapper {width: 100%; max-width: 1730px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -477,7 +477,7 @@
         "text_3cG8tN"
       ],
       "custom_css": [
-        ".rich-text__wrapper {width: 100%;}"
+        ".rich-text__wrapper {width: 100%; max-width: 1730px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -574,7 +574,7 @@
         "text_KiCAJx"
       ],
       "custom_css": [
-        ".rich-text__wrapper {width: 100%;}"
+        ".rich-text__wrapper {width: 100%; max-width: 1730px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -673,7 +673,7 @@
         "text_ynQBg7"
       ],
       "custom_css": [
-        ".rich-text__wrapper {width: 100%;}"
+        ".rich-text__wrapper {width: 100%; max-width:1730px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
