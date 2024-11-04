@@ -62,7 +62,7 @@
                 <a
                   href="{{ second-level-link.url }}"
                   title="{{ second-level-link.title | strip_html | escape }}"
-                  class="collection_link {% unless forloop.parentloop.first %}hidden{% endunless %}"
+                  class="collection_link {% unless link.title == "Browns" %}hidden{% endunless %}"
                   data-group="{{ link.title | strip_html | handle }}"
                 >
                   <img
