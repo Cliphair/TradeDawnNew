@@ -139,9 +139,9 @@
         "heading_aaUGWN": {
           "type": "heading",
           "settings": {
-            "heading": "<h1><em>Welcome</em> To <br>The Christmas Shop</h1>",
+            "heading": "<h2><em>Welcome</em> To <br/>The Christmas Shop</h2>",
             "heading_size": "h1",
-            "h1": true
+            "h1": false
           }
         },
         "text_aTAHBR": {
@@ -719,7 +719,7 @@
     "article_trending_hqNhpg": {
       "type": "article-trending",
       "custom_css": [
-        ".article-card {background: #FDF6FF;}",
+        ".article-card {background: #fdf6ff;}",
         ".card__content {padding-right: 0; padding-left: 0;}",
         ".h5 {color: #5c5c5c;}"
       ],
