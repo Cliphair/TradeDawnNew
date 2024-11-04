@@ -221,7 +221,7 @@
     "506f6558-7efd-4e91-a56a-75b4a46d81cc": {
       "type": "frequently-bought-together-app",
       "settings": {
-        "container_color_scheme": "accent-2",
+        "container_color_scheme": "background-2",
         "padding_top": 40,
         "padding_bottom": 20
       }
