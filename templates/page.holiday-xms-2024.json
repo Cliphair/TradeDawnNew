@@ -594,7 +594,7 @@
             "video": "shopify://files/videos/Tasmyn.mp4",
             "video_url": "",
             "cover_image": "shopify://shop_images/holiday-xmas-2024-video-1.webp",
-            "title": "Video Title",
+            "title": "This big, bouncy blowout with soft, bevelled ends will have you channelling your inner diva.",
             "description": ""
           }
         },
@@ -604,7 +604,7 @@
             "video": "shopify://files/videos/Style Red Balayage.mp4",
             "video_url": "",
             "cover_image": "shopify://shop_images/holiday-xmas-2024-video-2.webp",
-            "title": "Video Title",
+            "title": "Featuring voluminous waves, flicked ends and feathery bangs, this hairstyle takes inspiration from the chic styles of the 1970s.",
             "description": ""
           }
         },
@@ -614,7 +614,7 @@
             "video": "shopify://files/videos/@naomipricee Iced Cappuccino Seamless 16inch 1 .mov",
             "video_url": "",
             "cover_image": "shopify://shop_images/holiday-xmas-2024-video-3.webp",
-            "title": "Video Title",
+            "title": "A 60s inspired half up, half down look with a baby beehive fit for a cocktail party!",
             "description": ""
           }
         }
@@ -678,9 +678,9 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "accent-2",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
@@ -719,7 +719,7 @@
     "article_trending_hqNhpg": {
       "type": "article-trending",
       "custom_css": [
-        ".article-card {background: #ffffff;}",
+        ".article-card {background: #FDF6FF;}",
         ".card__content {padding-right: 0; padding-left: 0;}",
         ".h5 {color: #5c5c5c;}"
       ],
@@ -728,7 +728,7 @@
         "trending-list": "red-head-blogs",
         "heading_size": "h1",
         "heading_alignment": "left",
-        "color_scheme": "",
+        "color_scheme": "accent-2",
         "show_image": true,
         "image_ratio": "square",
         "show_date": true,
