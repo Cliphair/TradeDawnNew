@@ -20,8 +20,8 @@
         "slide_dTAemM": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/spooky12-mobile-banner.webp",
-            "image_desktop": "shopify://shop_images/spooky12-desktop-banner.webp",
+            "image": "shopify://shop_images/holiday-xmas-2024-mobile-banner.webp",
+            "image_desktop": "shopify://shop_images/holiday-xmas-2024-desktop-banner.webp",
             "image_url": ""
           }
         }
@@ -46,20 +46,23 @@
           "type": "collection",
           "settings": {
             "collection": "under-15",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-under-15.webp",
             "custom_title": "Under £15"
           }
         },
         "collection_erKLk4": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "under-30-gift-guide",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-uner-30.webp",
             "custom_title": "Under £30"
           }
         },
         "collection_9QLRVM": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "under-50-gift-guide",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-under-50.webp",
             "custom_title": "Under £50"
           }
         },
@@ -67,13 +70,15 @@
           "type": "collection",
           "settings": {
             "collection": "under-100",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-under-100.webp",
             "custom_title": "Under £100"
           }
         },
         "collection_N9NDPx": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "stocking-stuffers",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-stocking-fillers.webp",
             "custom_title": "Stocking fillers"
           }
         },
@@ -81,13 +86,15 @@
           "type": "collection",
           "settings": {
             "collection": "hair-extensions-bundle",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-bundle-deals.webp",
             "custom_title": "Bundle Deals"
           }
         },
         "collection_hLceke": {
           "type": "collection",
           "settings": {
-            "collection": "100g-hair-extensions",
+            "collection": "party-season-essentials",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-party-essentials.webp",
             "custom_title": "Party Essentials"
           }
         }
@@ -110,8 +117,8 @@
         "heading_size": "h2",
         "introduction": "",
         "text_allignment": "left",
-        "image_ratio": "square",
-        "circle_images": true,
+        "image_ratio": "adapt",
+        "circle_images": false,
         "hide_card_arrow": true,
         "columns_desktop": 6,
         "swipe_on_desktop": true,
