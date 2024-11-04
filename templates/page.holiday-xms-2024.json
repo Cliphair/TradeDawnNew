@@ -434,9 +434,9 @@
         "slide_Fc4Wij": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/spooky12-mobile-banner.webp",
-            "image_desktop": "shopify://shop_images/spooky12-desktop-banner.webp",
-            "image_url": ""
+            "image": "shopify://shop_images/holiday-xmas-2024-gift-card.webp",
+            "image_desktop": "shopify://shop_images/holiday-xmas-2024-gift-card.webp",
+            "image_url": "shopify://products/cliphair-e-gift-card"
           }
         }
       },
@@ -463,10 +463,18 @@
             "heading_size": "h1",
             "h1": false
           }
+        },
+        "text_3cG8tN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wrap up your holiday look with our festive favourites! Shop our top 10 best sellers, including extensions and haircare.</p>",
+            "read-more_text": ""
+          }
         }
       },
       "block_order": [
-        "heading_AdJbPT"
+        "heading_AdJbPT",
+        "text_3cG8tN"
       ],
       "custom_css": [
         ".rich-text__wrapper {width: 100%;}"
@@ -510,37 +518,13 @@
             "collection": "seamless-clip-in-hair-extensions-double-drawn-hair",
             "custom_title": "Seamless"
           }
-        },
-        "collection_N9NDPx": {
-          "type": "collection",
-          "settings": {
-            "collection": "100g-hair-extensions",
-            "custom_title": "Stocking fillers"
-          }
-        },
-        "collection_fWC3B3": {
-          "type": "collection",
-          "settings": {
-            "collection": "hair-extensions-bundle",
-            "custom_title": "Bundle Deals"
-          }
-        },
-        "collection_hLceke": {
-          "type": "collection",
-          "settings": {
-            "collection": "100g-hair-extensions",
-            "custom_title": "Party Essentials"
-          }
         }
       },
       "block_order": [
         "collection_nxiGih",
         "collection_erKLk4",
         "collection_9QLRVM",
-        "collection_PWKdhx",
-        "collection_N9NDPx",
-        "collection_fWC3B3",
-        "collection_hLceke"
+        "collection_PWKdhx"
       ],
       "custom_css": [
         ".h4 {color: #5c5c5c; font-weight: 300;}"
@@ -580,7 +564,7 @@
         "text_KiCAJx": {
           "type": "text",
           "settings": {
-            "text": "<p>Copy something like: Get inspired this party season by our favourite festive looks from our christmas campaign shoot! Halley Brisker shows us how recreate the looks at home with Clip-Ins etc</p>",
+            "text": "<p>Get inspired this party season by our favourite looks from our Christmas campaign shoot! Celebrity hairstylist Halley Brisker shares the magic behind how to recreate each look at home with our seamless clip in extensions.</p>",
             "read-more_text": ""
           }
         }
