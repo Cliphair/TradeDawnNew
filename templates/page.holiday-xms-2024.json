@@ -420,7 +420,7 @@
         "swipe_on_mobile": true,
         "slider_visual": "counter",
         "padding_top": 40,
-        "padding_bottom": 80,
+        "padding_bottom": 40,
         "button_label": "",
         "link": "",
         "button_style_secondary": false
@@ -482,7 +482,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 100,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
@@ -549,8 +549,8 @@
         "columns_mobile": "3",
         "swipe_on_mobile": true,
         "slider_visual": "counter",
-        "padding_top": 80,
-        "padding_bottom": 100,
+        "padding_top": 40,
+        "padding_bottom": 80,
         "button_label": "",
         "link": "",
         "button_style_secondary": false
@@ -651,8 +651,8 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "slider_visual": "counter",
-        "padding_top": 76,
-        "padding_bottom": 100
+        "padding_top": 40,
+        "padding_bottom": 80
       }
     },
     "rich_text_J7TrQM": {
@@ -686,7 +686,7 @@
         "content_alignment": "center",
         "color_scheme": "accent-2",
         "full_width": true,
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
@@ -712,8 +712,8 @@
         "mobile-column": 1,
         "desktop-row": 1,
         "desktop-column": 1,
-        "padding_top": 60,
-        "padding_bottom": 32
+        "padding_top": 40,
+        "padding_bottom": 20
       }
     },
     "rich_text_FCFgTi": {
@@ -743,7 +743,7 @@
         "color_scheme": "accent-2",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 60
+        "padding_bottom": 40
       }
     },
     "rich_text_cWMNia": {
@@ -777,7 +777,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 100,
+        "padding_top": 80,
         "padding_bottom": 0
       }
     },
@@ -849,8 +849,8 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "slider_visual": "counter",
-        "padding_top": 80,
-        "padding_bottom": 100,
+        "padding_top": 40,
+        "padding_bottom": 80,
         "button_label": "",
         "link": "",
         "button_style_secondary": false
