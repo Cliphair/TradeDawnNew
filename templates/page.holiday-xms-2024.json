@@ -176,7 +176,6 @@
         "enable_video_looping": true,
         "video": "shopify://files/videos/cliphair_campaign_v3.3_new_text_(final) (1440p)(1).mp4",
         "video_url": "",
-        "cover_image": "shopify://shop_images/placeholder-video-thumbnail.png",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -199,7 +198,7 @@
           "type": "text",
           "settings": {
             "text": "<p>It’s time to level up your locks this Christmas! Our luxury Remy hair extensions are the perfect way to add instant beauty and drama to your look.</p>",
-            "read-more_text": "<p>...</p>"
+            "read-more_text": "<p>Whether you’re a first-time extension wearer or just looking for a brand-new style, we have everything you need. From our easy, zero commitment clip in extensions, to hydrating haircare and must-have accessories, we’re here help you become the star at the top of the tree! </p>"
           }
         }
       },
