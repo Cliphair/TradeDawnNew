@@ -55,11 +55,10 @@
               >
                 {% if block.settings['read-more_text'] != blank %}
                   {{ block.settings.text | replace_last: "</p>", " <span class='read-more__btn'>Read More</span></p>" }}
-                  <span
-                    class="hidden"
-                  >
-                    {{ block.settings['read-more_text'] | replace_last: "</p>", " <span class='read-less__btn'>Read Less</span></p>" }}
-                  </span>
+
+                    {{ block.settings['read-more_text'] | replace_first: "<p", "<p class='hidden'" | replace_last: "</p>", " <span class='read-less__btn'>Read Less</span></p>" }}
+
+
                 {% else %}
                   {{ block.settings.text }}
                 {% endif %}
