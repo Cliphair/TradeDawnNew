@@ -110,7 +110,8 @@
       ],
       "custom_css": [
         ".grid--peek .grid__item {min-width: unset;}",
-        ".h4 {color: #5c5c5c; font-weight: 300;}"
+        ".h4 {color: #5c5c5c; font-weight: 300;}",
+        "@media screen and (min-width:1920px){.h4 {font-size: 27px;}}"
       ],
       "settings": {
         "title": "",
