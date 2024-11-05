@@ -54,10 +54,10 @@
                 {% endif %}
               >
                 <span>
-                  {{ block.settings.text }}
-                  {% if block.settings['read-more_text'] != blank -%}
+                  {{ block.settings.text | replace_last: "</p>", "<span class='read-more__btn'>Read More</span></p>" }}
+                  <!-- {% if block.settings['read-more_text'] != blank -%}
                     <span class="read-more__btn">Read More</span>
-                  {%- endif %}
+                  {%- endif %} -->
                 </span>
                 {% if block.settings['read-more_text'] != blank %}
                 <span
