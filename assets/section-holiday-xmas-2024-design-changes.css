@@ -26,7 +26,8 @@ main#MainContent .h0 em {
   font-family: "Libre Caslon Text", serif;
 }
 
-main#MainContent .h4{
+main#MainContent .h4,
+main#MainContent .h5{
   color: #5c5c5c;
   font-weight: 300;
   line-height: 1.1em;
@@ -78,7 +79,8 @@ main#MainContent .rte+.rte {
     font-size: 7rem;
   }
 
-  main#MainContent .h4{
+  main#MainContent .h4,
+main#MainContent .h5{
     font-size:27px;
   }
 
