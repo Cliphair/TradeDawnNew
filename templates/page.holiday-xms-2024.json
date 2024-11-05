@@ -791,10 +791,46 @@
             "custom_image": "shopify://shop_images/holiday-xmas-2024-colour-match.webp",
             "custom_title": "Colour Matching"
           }
+        },
+        "element_NgpEhp": {
+          "type": "element",
+          "settings": {
+            "url": "shopify://blogs/hair-blog/the-ultimate-hair-extension-length-guide",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-length-guide.webp",
+            "custom_title": "Length Guide"
+          }
+        },
+        "element_RtEXQE": {
+          "type": "element",
+          "settings": {
+            "url": "shopify://pages/lookbook",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-lookbook.webp",
+            "custom_title": "Lookbook"
+          }
+        },
+        "element_cifD4U": {
+          "type": "element",
+          "settings": {
+            "url": "shopify://pages/contact-us",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-contact-us.webp",
+            "custom_title": "Contact Us"
+          }
+        },
+        "element_4yXjmF": {
+          "type": "element",
+          "settings": {
+            "url": "shopify://pages/journey",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-hair-quiz.webp",
+            "custom_title": "Hair Quiz"
+          }
         }
       },
       "block_order": [
-        "element_BPhFRG"
+        "element_BPhFRG",
+        "element_NgpEhp",
+        "element_RtEXQE",
+        "element_cifD4U",
+        "element_4yXjmF"
       ],
       "settings": {
         "title": "",
