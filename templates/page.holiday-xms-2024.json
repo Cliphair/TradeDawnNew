@@ -783,17 +783,38 @@
     },
     "multicolumn_bXze6k": {
       "type": "link-carrousel-by-block",
+      "blocks": {
+        "element_BPhFRG": {
+          "type": "element",
+          "settings": {
+            "url": "shopify://pages/colour-matching-service",
+            "custom_image": "shopify://shop_images/holiday-xmas-2024-colour-match.webp",
+            "custom_title": "Colour Matching"
+          }
+        }
+      },
+      "block_order": [
+        "element_BPhFRG"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
         "image_ratio": "square",
+        "circle_images": false,
+        "hide_card_arrow": false,
         "columns_desktop": 4,
+        "swipe_on_desktop": false,
         "color_scheme": "",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "slider_visual": "counter",
         "padding_top": 40,
         "padding_bottom": 40,
-        "button_label": ""
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false
       }
     }
   },
