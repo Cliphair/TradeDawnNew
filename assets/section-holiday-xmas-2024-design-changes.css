@@ -42,16 +42,16 @@ main#MainContent .rte+.rte {
   }
 }
 
-
-main#MainContent h1,
-main#MainContent .h1,
-main#MainContent h2,
-main#MainContent .h2 {
-  font-size: 3rem;
+@media screen and (min-width:768px) {
+  main#MainContent h1,
+  main#MainContent .h1,
+  main#MainContent h2,
+  main#MainContent .h2 {
+    font-size: 3rem;
+  }
 }
 
-
-@media screen and (min-width:990px) {
+/* @media screen and (min-width:990px) {
   main#MainContent h1,
   main#MainContent .h1,
   main#MainContent h2,
@@ -62,9 +62,9 @@ main#MainContent .h2 {
   main#MainContent p {
     font-size: 25px;
   }
-}
+} */
 
-@media screen and (min-width:1920px) {
+/* @media screen and (min-width:1920px) {
   main#MainContent h1,
   main#MainContent .h1,
   main#MainContent h2,
@@ -75,4 +75,4 @@ main#MainContent .h2 {
   main#MainContent p {
     font-size: 40px;
   }
-}
+} */
