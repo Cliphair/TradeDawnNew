@@ -717,7 +717,7 @@
       }
     },
     "rich_text_FCFgTi": {
-      "type": "rich-text",
+      "type": "rich-text-sales",
       "blocks": {
         "button_U6yB8h": {
           "type": "button",
@@ -747,12 +747,12 @@
       }
     },
     "rich_text_cWMNia": {
-      "type": "rich-text",
+      "type": "rich-text-sales",
       "blocks": {
         "heading_UxVKRb": {
           "type": "heading",
           "settings": {
-            "heading": "Need A Hand?",
+            "heading": "<h2>Need A Hand?</h2>",
             "heading_size": "h1",
             "h1": false
           }
