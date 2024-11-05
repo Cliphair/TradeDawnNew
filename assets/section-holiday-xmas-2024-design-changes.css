@@ -72,6 +72,10 @@ main#MainContent .rte+.rte {
     font-size: 7rem;
   }
 
+  main#MainContent .h4{
+    font-size:27px;
+  }
+
   main#MainContent p {
     font-size: 40px;
   }
