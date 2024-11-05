@@ -139,7 +139,7 @@
           "type": "heading",
           "settings": {
             "heading": "<h2><em>Welcome</em> To <br/>The Christmas Shop</h2>",
-            "heading_size": "h0",
+            "heading_size": "h1",
             "h1": false
           }
         },
