@@ -269,7 +269,6 @@
         "collection_Xma9JV"
       ],
       "custom_css": [
-        ".h4 {color: #5c5c5c; font-weight: 300;}",
         ".collection-carrousel {--grid-mobile-horizontal-spacing: 5px; --grid-desktop-horizontal-spacing: 5px;}",
         ".slider--tablet.grid--peek .grid__item:first-of-type {margin-left: 0 !important;}",
         "@media screen and (min-width: 750px) and (max-width: 989px) {.slider--tablet.grid--peek.grid--3-col-tablet .grid__item {width: calc((100% - 10rem) / 3); }}",
@@ -490,13 +489,6 @@
     "collection_carrousel_qRk4ye": {
       "type": "collection-carrousel-by-block",
       "blocks": {
-        "collection_nxiGih": {
-          "type": "collection",
-          "settings": {
-            "collection": "double-wefted-clip-in-hair-extensions",
-            "custom_title": "Double Weft"
-          }
-        },
         "collection_erKLk4": {
           "type": "collection",
           "settings": {
@@ -504,11 +496,25 @@
             "custom_title": "Tapes"
           }
         },
+        "collection_nxiGih": {
+          "type": "collection",
+          "settings": {
+            "collection": "double-wefted-clip-in-hair-extensions",
+            "custom_title": "Double Weft"
+          }
+        },
         "collection_9QLRVM": {
           "type": "collection",
           "settings": {
             "collection": "nano-rings-hair-extensions",
             "custom_title": "Nano Rings"
+          }
+        },
+        "collection_yCKEDX": {
+          "type": "collection",
+          "settings": {
+            "collection": "remy-royale-double-drawn-hair-weft-extensions",
+            "custom_title": "Hair Weft"
           }
         },
         "collection_PWKdhx": {
@@ -520,9 +526,10 @@
         }
       },
       "block_order": [
-        "collection_nxiGih",
         "collection_erKLk4",
+        "collection_nxiGih",
         "collection_9QLRVM",
+        "collection_yCKEDX",
         "collection_PWKdhx"
       ],
       "custom_css": [
