@@ -126,7 +126,7 @@
         "swipe_on_mobile": true,
         "slider_visual": "counter",
         "padding_top": 40,
-        "padding_bottom": 80,
+        "padding_bottom": 100,
         "button_label": "",
         "link": "",
         "button_style_secondary": false
