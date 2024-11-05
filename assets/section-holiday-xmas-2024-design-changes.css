@@ -83,7 +83,7 @@ main#MainContent .rte+.rte {
     font-size:27px;
   }
 
-  main#MainContent .h5{
+  main#MainContent .h5:not(.article-card__info){
     font-size:20px;
   }
 
