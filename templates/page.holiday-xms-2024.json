@@ -713,7 +713,7 @@
         "desktop-row": 1,
         "desktop-column": 1,
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 20
       }
     },
     "rich_text_FCFgTi": {
@@ -743,7 +743,7 @@
         "color_scheme": "accent-2",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "rich_text_cWMNia": {
@@ -832,6 +832,9 @@
         "element_cifD4U",
         "element_4yXjmF"
       ],
+      "custom_css": [
+        ".grid--peek .grid__item {min-width: unset;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -839,9 +842,9 @@
         "text_allignment": "left",
         "image_ratio": "square",
         "circle_images": false,
-        "hide_card_arrow": false,
+        "hide_card_arrow": true,
         "columns_desktop": 4,
-        "swipe_on_desktop": false,
+        "swipe_on_desktop": true,
         "color_scheme": "",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
