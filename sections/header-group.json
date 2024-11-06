@@ -14,27 +14,11 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_tjpANJ": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Save 10% Off Permanent Extensions - Use CODE PERM10",
-            "link": "shopify://collections/permanent-extensions"
-          }
-        },
-        "announcement_nNPD4X": {
-          "type": "announcement",
-          "settings": {
-            "text": "We've Revamped Our Website For A Better, Faster Shopping Experience - Explore Now!",
-            "link": "shopify://blogs/hair-blog/our-new-website-everything-you-need-to-know"
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Buy Now, Pay Later With Klarna & ClearPay",
-            "link": "shopify://pages/klarna-faqs"
+            "text": "Free Express Delivery On Orders Over £75 (UK Only)",
+            "link": ""
           }
         },
         "announcement-bar-1": {
@@ -44,30 +28,18 @@
             "link": "shopify://pages/shipping-information"
           }
         },
-        "announcement_X6aUFC": {
+        "announcement_nNPD4X": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Buy 2 Get 10% off Nano, Double Drawn Tapes, I-tip & Flat Tips",
-            "link": "shopify://pages/permanent-extensions"
-          }
-        },
-        "announcement_BwckMh": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "New Arrivals: Hair Extensions Hair Care & Accessories",
-            "link": "shopify://collections/new-arrivals"
+            "text": "We've Revamped Our Website For A Better, Faster Shopping Experience - Explore Now!",
+            "link": "shopify://blogs/hair-blog/our-new-website-everything-you-need-to-know"
           }
         }
       },
       "block_order": [
-        "announcement_tjpANJ",
-        "announcement_nNPD4X",
         "announcement-bar-0",
         "announcement-bar-1",
-        "announcement_X6aUFC",
-        "announcement_BwckMh"
+        "announcement_nNPD4X"
       ],
       "settings": {
         "color_scheme": "",
