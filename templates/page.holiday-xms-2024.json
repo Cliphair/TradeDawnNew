@@ -45,7 +45,7 @@
         "collection_nxiGih": {
           "type": "collection",
           "settings": {
-            "collection": "under-15",
+            "collection": "under-15-gift-guide",
             "custom_image": "shopify://shop_images/holiday-xmas-2024-under-15.webp",
             "custom_title": "Under £15"
           }
@@ -336,7 +336,7 @@
         "collection_knXnRf": {
           "type": "collection",
           "settings": {
-            "collection": "under-15",
+            "collection": "under-15-gift-guide",
             "custom_image": "shopify://shop_images/holiday-xmas-2024-gift-sets-2.webp",
             "custom_title": "Gift Sets"
           }
@@ -352,7 +352,7 @@
         "collection_VrwD6f": {
           "type": "collection",
           "settings": {
-            "collection": "under-15",
+            "collection": "under-15-gift-guide",
             "custom_image": "shopify://shop_images/holiday-xmas-2024-under-15-2.webp",
             "custom_title": "Under £15"
           }

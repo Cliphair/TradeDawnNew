@@ -564,7 +564,7 @@
           "type": "image",
           "settings": {
             "description": "",
-            "url": "shopify://collections/under-15",
+            "url": "shopify://collections/under-15-gift-guide",
             "button_text": "GIFTS UNDER £15"
           }
         },
