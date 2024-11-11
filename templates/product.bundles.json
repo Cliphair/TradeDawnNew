@@ -26,8 +26,7 @@
         },
         "a0b50969-ea33-4844-941d-db5577728e55": {
           "type": "rating",
-          "settings": {
-          }
+          "settings": {}
         },
         "3efc918c-8182-4ef3-bc33-60a83ed7ef86": {
           "type": "short-description",
@@ -43,8 +42,7 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -54,8 +52,7 @@
         },
         "quantity_selector_RERRjV": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -87,8 +84,7 @@
         },
         "order_deadline_67UiV7": {
           "type": "order_deadline",
-          "settings": {
-          }
+          "settings": {}
         },
         "reward_points_B9N8X4": {
           "type": "reward-points",
@@ -98,8 +94,7 @@
         },
         "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
           "type": "payment_services",
-          "settings": {
-          }
+          "settings": {}
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -139,7 +134,7 @@
             "type": "custom",
             "heading": "Delivery Info",
             "icon": "none",
-            "content": "<p><span style=\"text-decoration:underline\"><strong>UK</strong></span></p><ul><li>Economy Tracked: 3-5 Working Days - FREE on Orders over £30</li><li>Express Tracked: 1-2 Working Days - £3.99</li><li>Next Day Guaranteed (Order Before 4pm Mon-Thu) - £7.99</li><li>Saturday Guaranteed (Order Before 4pm Friday) - £8.99</li></ul><p><span style=\"text-decoration:underline\"><strong>USA/IRELAND/EU</strong></span></p><ul><li>DHL Express Tracked: (1-2 Working Days) – FREE<br/>(Min. Order £100, Otherwise £9.99)</li><li>Please note you might have to pay duties which are not included in carriage.</li></ul><p><span style=\"text-decoration:underline\"><strong>REST OF THE WORLD</strong></span></p><ul><li>DHL Express Tracked: (2-4 Working Days) – FREE<br/>(Min. Order £150, Otherwise £14.99)</li><li>Please note you might have to pay duties which are not included in carriage.</li></ul>",
+            "content": "<p><span style=\"text-decoration:underline\"><strong>UK</strong></span></p><ul><li>Economy Tracked: 3-5 Working Days - FREE on Orders over £30</li><li>Express Tracked: 1-2 Working Days - £3.99</li><li>Next Working Day Guaranteed (Order Before 4pm Mon-Thu) - £7.99</li><li>Next Working Day by 10.30 AM (Order Before 4pm Mon-Thu) - £11.99</li><li>Saturday Guaranteed (Order Before 4pm Friday) - £8.99</li><li>Sunday Delivery (Order Before 11:30 AM Saturday) - £5.99</li></ul><p><span style=\"text-decoration:underline\"><strong>USA/IRELAND/EU</strong></span></p><ul><li>DHL Express Tracked: (1-2 Working Days) – FREE<br/>(Min. Order £100, Otherwise £9.99)</li><li>Please note you might have to pay duties which are not included in carriage.</li></ul><p><span style=\"text-decoration:underline\"><strong>REST OF THE WORLD</strong></span></p><ul><li>DHL Express Tracked: (2-4 Working Days) – FREE<br/>(Min. Order £150, Otherwise £14.99)</li><li>Please note you might have to pay duties which are not included in carriage.</li></ul>",
             "page": ""
           }
         },
