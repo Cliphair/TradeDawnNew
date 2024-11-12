@@ -181,7 +181,7 @@
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
-        "title": "Choose By Hair Colour…",
+        "title": "Choose By Hair Colour",
         "heading_size": "h1",
         "introduction": "<p>Browse over <strong>70+ stunning shades</strong>, including a wide range of single colours, highlights, balayage and ombre, and our funky shade collection.</p>",
         "text_allignment": "left",
@@ -234,7 +234,7 @@
         "@media screen and (max-width: 950px) {br {display: none; }}"
       ],
       "settings": {
-        "title": "Choose By Collection...",
+        "title": "Choose By Collection",
         "heading_size": "h1",
         "introduction": "<p>Explore our wide range of hair extensions, hair care goodies, professional tools, and styling must haves —all waiting for you here at Cliphair!</p>",
         "text_allignment": "left",
