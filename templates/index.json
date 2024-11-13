@@ -626,6 +626,14 @@
     "image_list_nPnYgL": {
       "type": "image-list",
       "blocks": {
+        "image_UJnFyW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sophie-turner-as-seen-on.webp",
+            "text_label": "<p>@sophiet styled by @halleybrisker</p><p>16\" Peaches & Cream Double Drawn Seamless Clip Ins </p>",
+            "link": ""
+          }
+        },
         "image_fDTmfe": {
           "type": "image",
           "settings": {
@@ -740,6 +748,7 @@
         }
       },
       "block_order": [
+        "image_UJnFyW",
         "image_fDTmfe",
         "image_FNDhT7",
         "image_C8JtLM",
