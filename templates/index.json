@@ -210,23 +210,10 @@
             "button_style_secondary": false,
             "circle_images": false
           }
-        },
-        "collections_Wkh4rx": {
-          "type": "collections",
-          "disabled": true,
-          "settings": {
-            "label": "Professionals",
-            "collection-list": "choose-by-hair-extensions-type-professional",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "circle_images": false
-          }
         }
       },
       "block_order": [
-        "collections_6ibEMM",
-        "collections_Wkh4rx"
+        "collections_6ibEMM"
       ],
       "custom_css": [
         "h3 {color: #414141;}",
@@ -298,55 +285,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "quiz_question_G3AdFU": {
-      "type": "quiz-question",
-      "blocks": {
-        "answer_bKhDca": {
-          "type": "answer",
-          "settings": {
-            "id": "thin",
-            "answer": "THIN/FINE"
-          }
-        },
-        "answer_fHiVMK": {
-          "type": "answer",
-          "settings": {
-            "id": "medium",
-            "answer": "MEDIUM/AVERAGE"
-          }
-        },
-        "answer_WGKJxB": {
-          "type": "answer",
-          "settings": {
-            "id": "thick",
-            "answer": "THICK/VERYTHICK"
-          }
-        }
-      },
-      "block_order": [
-        "answer_bKhDca",
-        "answer_fHiVMK",
-        "answer_WGKJxB"
-      ],
-      "disabled": true,
-      "settings": {
-        "id": "journey",
-        "page": "journey",
-        "question": "What is <em>your hair</em> type?",
-        "heading_size": "h2",
-        "text_allignment": "left",
-        "image_ratio": "portrait",
-        "color_scheme": "accent-2",
-        "button_style_secondary": false,
-        "show_information": false,
-        "columns_desktop": 3,
-        "swipe_on_desktop": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 40,
-        "padding_bottom": 48
       }
     },
     "rich_text_collage_bg_qibWaW": {
@@ -622,48 +560,6 @@
         "padding_bottom": 20
       }
     },
-    "60c353fa-c484-4da2-b7b1-75781aa41474": {
-      "type": "quality-promise",
-      "blocks": {
-        "2f773af5-523f-4df7-a94c-b8678aedb67f": {
-          "type": "promise",
-          "settings": {
-            "block-title": "ADD VOLUME",
-            "block-introduction": "<p>More thickness, more bounce, more dimension.</p>",
-            "block-image": "shopify://shop_images/placeholder_image.webp",
-            "circle-images": true
-          }
-        },
-        "05518ad7-790e-4c49-a31a-55d095aa2786": {
-          "type": "promise",
-          "settings": {
-            "block-title": "ADD LENGTH",
-            "block-introduction": "<p>Precious inches for your hair.</p>",
-            "block-image": "shopify://shop_images/placeholder_image.webp",
-            "circle-images": true
-          }
-        }
-      },
-      "block_order": [
-        "2f773af5-523f-4df7-a94c-b8678aedb67f",
-        "05518ad7-790e-4c49-a31a-55d095aa2786"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "THE CLIPHAIR QUALITY PROMISE",
-        "introduction": "<p>100% Remy Human Hair, no nonsense. We give you exactly what you see: luscious tresses, fast-responsive customer service, and daily inspiration on our channels – for you to purchase with confidence and recreate your favourite looks with our hair extensions.</p>",
-        "heading_size": "h1",
-        "text_allignment": "left",
-        "image_ratio": "adapt",
-        "color_scheme": "inverse",
-        "slider_visual": "dots",
-        "button_label": "FIND OUT MORE",
-        "link": "#",
-        "button_style_secondary": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "b19c81a2-f86e-4e52-9a50-dca37f731b16": {
       "type": "videos-list",
       "blocks": {
@@ -754,6 +650,14 @@
             "link": ""
           }
         },
+        "image_EHCiUE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/grace-rosa-as-seen-on.webp",
+            "text_label": "<p>@gracexrosa styled by @ashleyleehair</p><p><a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-lightest-blonde\" title=\"Lightest Blonde (#60) Double Drawn Seamless Clip In Hair Extensions\">24\" Lightest Blonde Double Drawn Seamless Clip In Hair Extensions</a></p>",
+            "link": ""
+          }
+        },
         "image_gkxjfU": {
           "type": "image",
           "settings": {
@@ -839,6 +743,7 @@
         "image_fDTmfe",
         "image_FNDhT7",
         "image_C8JtLM",
+        "image_EHCiUE",
         "image_gkxjfU",
         "image_fGPUME",
         "image_4bXD9L",
@@ -1133,11 +1038,9 @@
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "collection_carrousel_fb6cDE",
     "rich_text_ez6FdW",
-    "quiz_question_G3AdFU",
     "rich_text_collage_bg_qibWaW",
     "rich_text_XgpBnz",
     "maquee_mnMgq6",
-    "60c353fa-c484-4da2-b7b1-75781aa41474",
     "b19c81a2-f86e-4e52-9a50-dca37f731b16",
     "image_list_nPnYgL",
     "342029b3-5620-4e2e-864b-55edf0aa9b0d",
