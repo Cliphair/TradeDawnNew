@@ -223,8 +223,8 @@
       "@context" : "http://schema.org",
       "@type": "CollectionPage",
       "name": "{{ collection.title}}",
-      "url": "{{ shop.url | append: collection.url }}",
-      {% if collection.image %}"image": "{{ collection.image | img_url: "master" }}"{% endif %}
+      "url": "{{ shop.url | append: collection.url }}"
+      {% if collection.image %},"image": "{{ collection.image | img_url: "master" }}"{% endif %}
     }{% if collection.products != empty %},{% endif %}
     {% for product in collection.products %}
       {
