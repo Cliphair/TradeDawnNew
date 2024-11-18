@@ -1824,6 +1824,7 @@ klarna-placement::part(osm-badge-container) {
 .specification table {
   width: 100%;
   margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .specification table tr:nth-child(2n) {
