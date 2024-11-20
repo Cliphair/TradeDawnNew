@@ -44,9 +44,9 @@
           >
             <span class="localization-form__flag">
               {% if country_name == 'Ireland' %}
-                <img src="{{ "euro-zone.svg" | asset_url }}" alt="Euro Zone" width="32" height="24">
+                <img src="{{ "euro-zone.svg" | asset_url }}" alt="Euro Zone" width="32" height="24" loading="lazy">
               {% else %}
-                {{ country | image_url: width: 32 | image_tag }}
+                {{ country | image_url: width: 32 | image_tag: loading: 'lazy' }}
               {% endif %}
             </span>
             {% comment %} {{ country.name }} {% endcomment %}
@@ -70,7 +70,7 @@
               data-value="{{ country.iso_code }}"
             >
               <span class="localization-form__flag">
-                {{ country | image_url: width: 32 | image_tag }}
+                {{ country | image_url: width: 32 | image_tag: loading: 'lazy' }}
               </span>
               {% comment %} {{ country.name }} {% endcomment %}
               {{- country.currency.iso_code }}
