@@ -3713,6 +3713,11 @@ details-disclosure>details {
   z-index: 2 !important;
 }
 
+/* Pagefly old elements */
+.blog-cat-tagged{
+  display:none!important;
+}
+
 /* DCart app */
 .sc_simple-info__tag,
 .sc_simple-info__tag .sc-tag {
