@@ -61,10 +61,10 @@
   }
 }
 
-.videos-list__item:only-child {
+/* .videos-list__item:only-child {
   max-width: 100%;
   width: 100%;
-}
+} */
 
 @media screen and (max-width: 749px) {
   .slider.videos-list--1-items {
