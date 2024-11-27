@@ -2595,6 +2595,149 @@
               <li>
                 <details id="Details-menu-drawer-menu-item-6">
                   <summary
+                    id="HeaderDrawer-christmas-shop"
+                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                  >
+                    CHRISTMAS SHOP
+                    {% render 'icon-arrow' %}
+                    {% render 'icon-caret' %}
+                  </summary>
+                  <div
+                    id="link-blog"
+                    class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                    tabindex="-1"
+                  >
+                    <div class="menu-drawer__inner-submenu">
+                      <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                        {% render 'icon-arrow' %}
+                        BACK
+                      </button>
+                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-all"
+                            href="/pages/wish-for-cliphair-holiday-campaign"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/wish-for-cliphair-holiday-campaign' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Shop All
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-gift-sets"
+                            href="/collections/hair-extensions-gift-sets"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-gift-sets' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/hair-extensions-gift-sets' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Christmas Gift Sets
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-under-15"
+                            href="/collections/under-15"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-15' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/under-15' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Under £15
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-under-30"
+                            href="/collections/under-30"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-30' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/under-30' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Under £30
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-under-50"
+                            href="/collections/under-50"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-50' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/under-50' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Under £50
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-under-100"
+                            href="/collections/under-100"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-100' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/under-100' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Under £100
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-stocking-fillers"
+                            href="/collections/stocking-stuffers"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/stocking-stuffers' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/stocking-stuffers' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Stocking Fillers
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-party-season"
+                            href="/collections/party-season-essentials"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/party-season-essentials' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/party-season-essentials' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Party Season Essentials
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-value-bundles"
+                            href="/collections/hair-extensions-bundle"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-bundle' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/collections/hair-extensions-bundle' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Value Bundles
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </details>
+              </li>
+
+              <li>
+                <details id="Details-menu-drawer-menu-item-6">
+                  <summary
                     id="HeaderDrawer-blog"
                     class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
                   >
