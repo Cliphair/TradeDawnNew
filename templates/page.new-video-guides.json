@@ -1222,10 +1222,21 @@
             "button_label": "",
             "link": ""
           }
+        },
+        "video_aMaA4C": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "description": "",
+            "title": "",
+            "button_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "video_QAE4D4"
+        "video_QAE4D4",
+        "video_aMaA4C"
       ],
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
