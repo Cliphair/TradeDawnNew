@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "page-content": {
@@ -30,7 +30,7 @@
         "text_zLP6MX": {
           "type": "text",
           "settings": {
-            "text": "<p>If you want long lasting, healthy looking, beautiful hair extensions it is essential that you care for them well and use the correct products. Neglected hair extensions can look dry, unnatural and become difficult to manage, follow our care guide to keep your hair looking and feeling gorgeous!<\/p>",
+            "text": "<p>If you want long lasting, healthy looking, beautiful hair extensions it is essential that you care for them well and use the correct products. Neglected hair extensions can look dry, unnatural and become difficult to manage, follow our care guide to keep your hair looking and feeling gorgeous!</p>",
             "read-more_text": ""
           }
         }
@@ -53,7 +53,7 @@
         "image_h7ykcA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/instruction-banner-styling-hair.webp",
+            "image": "shopify://shop_images/instruction-banner-styling-hair.webp",
             "text_label": "",
             "link": ""
           }
@@ -61,7 +61,7 @@
         "image_Af3nyU": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/instruction-banner-washing-hair.webp",
+            "image": "shopify://shop_images/instruction-banner-washing-hair.webp",
             "text_label": "",
             "link": ""
           }
@@ -69,7 +69,7 @@
         "image_FdnLjk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/instruction-banner-dying-hair.webp",
+            "image": "shopify://shop_images/instruction-banner-dying-hair.webp",
             "text_label": "",
             "link": ""
           }
@@ -77,7 +77,7 @@
         "image_tPcYgV": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/instruction-banner-storing-hair.webp",
+            "image": "shopify://shop_images/instruction-banner-storing-hair.webp",
             "text_label": "",
             "link": ""
           }
@@ -112,7 +112,7 @@
           "settings": {
             "heading": "Brushing",
             "icon": "none",
-            "row_content": "<p><strong>ALWAYS<\/strong> brush your extensions before applying them, before washing them and after you take them out.<br\/><br\/>Only use an extension safe hairbrush like <a href=\"https:\/\/www.cliphair.co.uk\/products\/detangling-hair-brush\" title=\"The Wet One by Cliphair Detangling Hairbrush\">The Wet One by Cliphair Detangling brush<\/a>. Brushes with bobbled ends or very fine teeth can catch the seams of the hair extensions causing hair fallout.<br\/><br\/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.<br\/><br\/><strong>NEVER<\/strong> brush your hair extensions whilst they are wet. This puts too much tension on the seams and can cause them to break.<br\/><br\/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.<\/p>",
+            "row_content": "<p><strong>ALWAYS</strong> brush your extensions before applying them, before washing them and after you take them out.<br/><br/>Only use an extension safe hairbrush like <a href=\"https://www.cliphair.co.uk/products/detangling-hair-brush\" title=\"The Wet One by Cliphair Detangling Hairbrush\">The Wet One by Cliphair Detangling brush</a>. Brushes with bobbled ends or very fine teeth can catch the seams of the hair extensions causing hair fallout.<br/><br/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.<br/><br/><strong>NEVER</strong> brush your hair extensions whilst they are wet. This puts too much tension on the seams and can cause them to break.<br/><br/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.</p>",
             "page": ""
           }
         },
@@ -121,7 +121,7 @@
           "settings": {
             "heading": "Washing",
             "icon": "none",
-            "row_content": "<p>Try to only wash your hair extensions every 12-14 uses unless they desperately need washing in between. The less you wash them the longer they will last!<br\/><br\/><strong>ONLY<\/strong> use Cliphair’s extensions safe <a href=\"https:\/\/www.cliphair.co.uk\/products\/quench-the-thirst-deep-moisture-shampoo\" title=\"Quench The Thirst – Deep Moisture Shampoo\">Shampoo<\/a> & <a href=\"https:\/\/www.cliphair.co.uk\/products\/quench-the-thirst-deep-moisture-conditioner\" title=\"Quench The Thirst - Deep Moisture Conditioner\">Conditioner<\/a>. Alcohol and Sulphates are harmful to hair extensions as they strip the hair of its natural oils. Use only Sulphate free products like our <a href=\"https:\/\/www.cliphair.co.uk\/collections\/quench-the-thirst\" title=\"Quench The Thirst\">Deep Moisture range<\/a>.<br\/><br\/><strong>ALWAYS<\/strong> brush your extensions before washing them to prevent matting. If they are very knotty after washing you should detangle them gently before drying with an extensions friendly hairbrush suitable for wet hair such as <a href=\"https:\/\/www.cliphair.co.uk\/products\/detangling-hair-brush\" title=\"The Wet One by Cliphair Detangling Hairbrush\">The Wet One by Cliphair<\/a>.<br\/><br\/><strong>ALWAYS<\/strong> use a conditioner after the shampoo to add moisture back into the hair.<br\/><br\/><strong>USE<\/strong> a deep <a href=\"https:\/\/www.cliphair.co.uk\/products\/quench-the-thirst-deep-conditioning-hair-mask\" title=\"Quench The Thirst - Deep Conditioning Hair Mask\">conditioning hair mask<\/a> on your clip-ins if they are feeling dry, damaged or dehydrated. This will breathe new life back into you’re hair extensions and restore moisture.<\/p>",
+            "row_content": "<p>Try to only wash your hair extensions every 12-14 uses unless they desperately need washing in between. The less you wash them the longer they will last!<br/><br/><strong>ONLY</strong> use Cliphair’s extensions safe <a href=\"https://www.cliphair.co.uk/products/quench-the-thirst-deep-moisture-shampoo\" title=\"Quench The Thirst – Deep Moisture Shampoo\">Shampoo</a> & <a href=\"https://www.cliphair.co.uk/products/quench-the-thirst-deep-moisture-conditioner\" title=\"Quench The Thirst - Deep Moisture Conditioner\">Conditioner</a>. Alcohol and Sulphates are harmful to hair extensions as they strip the hair of its natural oils. Use only Sulphate free products like our <a href=\"https://www.cliphair.co.uk/collections/quench-the-thirst\" title=\"Quench The Thirst\">Deep Moisture range</a>.<br/><br/><strong>ALWAYS</strong> brush your extensions before washing them to prevent matting. If they are very knotty after washing you should detangle them gently before drying with an extensions friendly hairbrush suitable for wet hair such as <a href=\"https://www.cliphair.co.uk/products/detangling-hair-brush\" title=\"The Wet One by Cliphair Detangling Hairbrush\">The Wet One by Cliphair</a>.<br/><br/><strong>ALWAYS</strong> use a conditioner after the shampoo to add moisture back into the hair.<br/><br/><strong>USE</strong> a deep <a href=\"https://www.cliphair.co.uk/products/quench-the-thirst-deep-conditioning-hair-mask\" title=\"Quench The Thirst - Deep Conditioning Hair Mask\">conditioning hair mask</a> on your clip-ins if they are feeling dry, damaged or dehydrated. This will breathe new life back into you’re hair extensions and restore moisture.</p>",
             "page": ""
           }
         },
@@ -130,8 +130,8 @@
           "settings": {
             "heading": "Drying & Styling",
             "icon": "none",
-            "row_content": "<p>Like most suppliers, we do not permanently straighten our human hair extensions as it reduces the quality and styling possibilities, it also has a less natural finish. All of our hair after washing will dry with a natural, loose wave if not styled. With some quick and basic styling, the hair will easily return to its silky, smooth state. As all of our extensions are made from 100% human hair, they can be straightened, curled, blow-dried or styled in any way you like! Heres our top tips for safe styling…<br\/><br\/><strong>ALWAYS<\/strong> use a heat protection spray on the hair before using any heated tools such as tongs, straighteners, wavers, hair dryers or heated rollers. This will protect the hair from the heat and prevent any damage.<br\/><br\/><strong>USE<\/strong> heatless alternatives when possible, to reduce the amount of heat on the hair. Braids and soft rollers are perfect for creating heatless curls!<br\/><br\/><strong>AFTER<\/strong> washing your hair extensions its best to let them dry naturally if you have the time. You can do this by hanging them up in a warm area. Once the hair is dry you can then style as you wish feeling great that you’ve minimised the use of heat!<br\/><br\/><strong>180-190<\/strong> is the max temperature you should be using on hair extensions to avoid any damage or breakage.<br\/><br\/>If you need your extensions to dry quickly, apply heat protection spray and dry them with a hairdryer on a low heat.<\/p>",
-            "page": ""
+            "row_content": "",
+            "page": "care-instructions-page-clip-ins-drying-styling"
           }
         },
         "template--15448673845309__bdbd9dd0-cd78-40b6-9b64-70d0f9d9823c-collapsible_row-4": {
@@ -139,7 +139,7 @@
           "settings": {
             "heading": "Storage & Usage",
             "icon": "none",
-            "row_content": "<p><strong>NEVER<\/strong> store hair extensions next to a window or in direct sunlight as this could damage the hair.<br\/><br\/><strong>NEVER<\/strong> sleep or swim with your hair extensions attached. Clip-Ins and Hair pieces are designed for occasional use and are not suitable for sleeping\/swimming\/gym.<br\/><br\/>Keep the clips shut whilst you are storing the hair to avoid any matting\/tangles.<br\/><br\/>Use your hair extensions box to store the hair when it is not being used. Lay the hair as flat as possible and always brush before storing.<\/p>",
+            "row_content": "<p><strong>NEVER</strong> store hair extensions next to a window or in direct sunlight as this could damage the hair.<br/><br/><strong>NEVER</strong> sleep or swim with your hair extensions attached. Clip-Ins and Hair pieces are designed for occasional use and are not suitable for sleeping/swimming/gym.<br/><br/>Keep the clips shut whilst you are storing the hair to avoid any matting/tangles.<br/><br/>Use your hair extensions box to store the hair when it is not being used. Lay the hair as flat as possible and always brush before storing.</p>",
             "page": ""
           }
         },
@@ -148,7 +148,7 @@
           "settings": {
             "heading": "Dying & Toning",
             "icon": "none",
-            "row_content": "<p>Human hair extensions can be dyed or toned however this does lessen the quality and reduce the lifespan of the product. As the hair has been removed from its natural root it no longer receives the vital nutrients and oils it needs to remain healthy and strong. Dying and toning can weaken the hair further so for this reason we advise against dying or toning the hair if possible. <strong>Once the hair has been dyed or toned this voids the returns policy. This applies to all dyes and toners, including toning\/purple shampoos and pigmented conditioners<\/strong>. If you still decide to colour the hair, follow our advice below…<br\/><br\/><strong>NEVER<\/strong> bleach or lighten any hair extensions. If you need to dye the hair you should only go darker, never lighter as this will seriously damage the extensions.<br\/><br\/><strong>TEST<\/strong> a small section before dying the hair all over to check the colour is how you expect. Extensions are coated during manufacturing to prolong the lifespan; this can affect how colours take to the hair.<br\/><br\/>When using a toning shampoo on hair extensions it's best to do it as a colour bath to dilute the strength. Fill a sink with lukewarm water and add a few drops of the toning shampoo, mix well then soak the extensions for the recommended time.<br\/><br\/>Remember, we have over 60 colours to choose from in our collection and a <a href=\"https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service\" target=\"_blank\" title=\"Free colour matching\">free colour match service<\/a> to help you find the right shade, so chances are you won't need to dye the hair after all.<\/p>",
+            "row_content": "<p>Human hair extensions can be dyed or toned however this does lessen the quality and reduce the lifespan of the product. As the hair has been removed from its natural root it no longer receives the vital nutrients and oils it needs to remain healthy and strong. Dying and toning can weaken the hair further so for this reason we advise against dying or toning the hair if possible. <strong>Once the hair has been dyed or toned this voids the returns policy. This applies to all dyes and toners, including toning/purple shampoos and pigmented conditioners</strong>. If you still decide to colour the hair, follow our advice below…<br/><br/><strong>NEVER</strong> bleach or lighten any hair extensions. If you need to dye the hair you should only go darker, never lighter as this will seriously damage the extensions.<br/><br/><strong>TEST</strong> a small section before dying the hair all over to check the colour is how you expect. Extensions are coated during manufacturing to prolong the lifespan; this can affect how colours take to the hair.<br/><br/>When using a toning shampoo on hair extensions it's best to do it as a colour bath to dilute the strength. Fill a sink with lukewarm water and add a few drops of the toning shampoo, mix well then soak the extensions for the recommended time.<br/><br/>Remember, we have over 60 colours to choose from in our collection and a <a href=\"https://www.cliphair.co.uk/pages/colour-matching-service\" target=\"_blank\" title=\"Free colour matching\">free colour match service</a> to help you find the right shade, so chances are you won't need to dye the hair after all.</p>",
             "page": ""
           }
         }
@@ -180,7 +180,7 @@
           "settings": {
             "heading": "Brushing",
             "icon": "none",
-            "row_content": "<p><strong>ALWAYS<\/strong> brush your extensions before washing them and before sleeping.<br\/><br\/><strong>ONLY<\/strong> use an extension safe hairbrush like <a href=\"https:\/\/www.cliphair.co.uk\/products\/detangling-hair-brush\" title=\"The Wet One by Cliphair Detangling Hairbrush\">The Wet One by Cliphair Detangling brush<\/a>. Brushes with bobbled ends or very fine teeth can catch the attachments of your hair extensions causing them to fall out.<br\/><br\/>Brush your hair 1-3 times per day to avoid knots building up.<br\/><br\/>Check daily in between your extensions at the root area to make sure there is no matting occurring.<br\/><br\/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.<\/p>",
+            "row_content": "<p><strong>ALWAYS</strong> brush your extensions before washing them and before sleeping.<br/><br/><strong>ONLY</strong> use an extension safe hairbrush like <a href=\"https://www.cliphair.co.uk/products/detangling-hair-brush\" title=\"The Wet One by Cliphair Detangling Hairbrush\">The Wet One by Cliphair Detangling brush</a>. Brushes with bobbled ends or very fine teeth can catch the attachments of your hair extensions causing them to fall out.<br/><br/>Brush your hair 1-3 times per day to avoid knots building up.<br/><br/>Check daily in between your extensions at the root area to make sure there is no matting occurring.<br/><br/>When brushing your extensions, work from the ends upwards, holding the hair firmly above where you are brushing to avoid pulling the seams.</p>",
             "page": ""
           }
         },
@@ -189,7 +189,7 @@
           "settings": {
             "heading": "Washing",
             "icon": "none",
-            "row_content": "<p><strong>ONLY<\/strong> use Cliphair’s extensions safe <a href=\"https:\/\/www.cliphair.co.uk\/products\/quench-the-thirst-deep-moisture-shampoo\" title=\"Quench The Thirst – Deep Moisture Shampoo\">Shampoo<\/a> & <a href=\"https:\/\/www.cliphair.co.uk\/products\/quench-the-thirst-deep-moisture-conditioner\" title=\"Quench The Thirst - Deep Moisture Conditioner\">Conditioner<\/a>. Alcohol and Sulphates are harmful to hair extensions as they strip the hair of its natural oils. Use only Sulphate free products like our <a href=\"https:\/\/www.cliphair.co.uk\/collections\/quench-the-thirst\" title=\"Quench The Thirst\">Deep Moisture range<\/a>.<br\/><br\/><strong>ALWAYS<\/strong> brush your extensions before washing them to prevent matting.<br\/><br\/><strong>AVOID<\/strong> using conditioner near the roots of your hair as this can degrade the extension tips and cause them to move and fall out.<br\/><br\/>Try to only wash your hair 1-2 times per week to keep your extensions in the best condition. Over washing the extensions can dry them out and also cause them to slip. Use Dry Shampoo in between washes to prolong to need to wash your hair!<br\/><br\/>At least every other wash but no more than once per week, use the Cliphair <a href=\"https:\/\/www.cliphair.co.uk\/products\/quench-the-thirst-deep-conditioning-hair-mask\" title=\"Quench The Thirst - Deep Conditioning Hair Mask\">deep conditioning treatment<\/a> on the mid lengths and ends of your hair for extra hydration.<\/p>",
+            "row_content": "<p><strong>ONLY</strong> use Cliphair’s extensions safe <a href=\"https://www.cliphair.co.uk/products/quench-the-thirst-deep-moisture-shampoo\" title=\"Quench The Thirst – Deep Moisture Shampoo\">Shampoo</a> & <a href=\"https://www.cliphair.co.uk/products/quench-the-thirst-deep-moisture-conditioner\" title=\"Quench The Thirst - Deep Moisture Conditioner\">Conditioner</a>. Alcohol and Sulphates are harmful to hair extensions as they strip the hair of its natural oils. Use only Sulphate free products like our <a href=\"https://www.cliphair.co.uk/collections/quench-the-thirst\" title=\"Quench The Thirst\">Deep Moisture range</a>.<br/><br/><strong>ALWAYS</strong> brush your extensions before washing them to prevent matting.<br/><br/><strong>AVOID</strong> using conditioner near the roots of your hair as this can degrade the extension tips and cause them to move and fall out.<br/><br/>Try to only wash your hair 1-2 times per week to keep your extensions in the best condition. Over washing the extensions can dry them out and also cause them to slip. Use Dry Shampoo in between washes to prolong to need to wash your hair!<br/><br/>At least every other wash but no more than once per week, use the Cliphair <a href=\"https://www.cliphair.co.uk/products/quench-the-thirst-deep-conditioning-hair-mask\" title=\"Quench The Thirst - Deep Conditioning Hair Mask\">deep conditioning treatment</a> on the mid lengths and ends of your hair for extra hydration.</p>",
             "page": ""
           }
         },
@@ -198,7 +198,7 @@
           "settings": {
             "heading": "Drying & Styling",
             "icon": "none",
-            "row_content": "<p>Like most suppliers, we do not permanently straighten our human hair extensions as it reduces the quality and styling possibilities, it also has a less natural finish. All of our hair after washing will dry with a natural, loose wave if not styled. With some quick and basic styling, the hair will easily return to its silky, smooth state. As all of our extensions are made from 100% human hair, they can be straightened, curled, blow-dried or styled in any way you like! Here's our top tips for safe styling…<br\/><br\/><strong>ALWAYS<\/strong> use a heat protection spray on the hair before using any heated tools such as tongs, straighteners, wavers, hair dryers or heated rollers. This will protect the hair from the heat and prevent any damage.<br\/><br\/><strong>USE<\/strong> heatless alternatives when possible to reduce the amount of heat on the hair. Braids and soft rollers are perfect for creating heatless curls!<br\/><br\/><strong>AFTER<\/strong> washing your permanent hair extensions it's best to completely dry the roots to prevent any build up or irritation.<br\/><br\/><strong>180-190<\/strong> is the max temperature you should be using on hair extensions to avoid any damage or breakage.<\/p>",
+            "row_content": "<p>Like most suppliers, we do not permanently straighten our human hair extensions as it reduces the quality and styling possibilities, it also has a less natural finish. All of our hair after washing will dry with a natural, loose wave if not styled. With some quick and basic styling, the hair will easily return to its silky, smooth state. As all of our extensions are made from 100% human hair, they can be straightened, curled, blow-dried or styled in any way you like! Here's our top tips for safe styling…<br/><br/><strong>ALWAYS</strong> use a heat protection spray on the hair before using any heated tools such as tongs, straighteners, wavers, hair dryers or heated rollers. This will protect the hair from the heat and prevent any damage.<br/><br/><strong>USE</strong> heatless alternatives when possible to reduce the amount of heat on the hair. Braids and soft rollers are perfect for creating heatless curls!<br/><br/><strong>AFTER</strong> washing your permanent hair extensions it's best to completely dry the roots to prevent any build up or irritation.<br/><br/><strong>180-190</strong> is the max temperature you should be using on hair extensions to avoid any damage or breakage.</p>",
             "page": ""
           }
         },
@@ -207,7 +207,7 @@
           "settings": {
             "heading": "Maintenance & Usage",
             "icon": "none",
-            "row_content": "<p><strong>NEVER<\/strong> sleep with wet hair extensions. This can cause serious matting at the roots and ends which can damage your own hair.<br\/><br\/><strong>NEVER<\/strong> apply permanent hair extensions yourself onto your own hair. We advise only ever having a qualified extensionist apply your hair for the safest and best results.<br\/><br\/><strong>ALWAYS<\/strong> attend your maintenance appointments. All types of hair extensions will need repositioning or replacing after 6-8 weeks of wear, skipping these appointments can cause damage to your own hair and the hair extensions.<br\/><br\/>Loosely braid your hair whilst you sleep to prevent any knotting or matting forming.<br\/><br\/>Sleeping on a silk pillowcase is better for your hair and hair extensions as it is softer than cotton. When you move in your sleep your hair rubs against the surface of your pillow, having a soft material like silk reduces the friction.<\/p>",
+            "row_content": "<p><strong>NEVER</strong> sleep with wet hair extensions. This can cause serious matting at the roots and ends which can damage your own hair.<br/><br/><strong>NEVER</strong> apply permanent hair extensions yourself onto your own hair. We advise only ever having a qualified extensionist apply your hair for the safest and best results.<br/><br/><strong>ALWAYS</strong> attend your maintenance appointments. All types of hair extensions will need repositioning or replacing after 6-8 weeks of wear, skipping these appointments can cause damage to your own hair and the hair extensions.<br/><br/>Loosely braid your hair whilst you sleep to prevent any knotting or matting forming.<br/><br/>Sleeping on a silk pillowcase is better for your hair and hair extensions as it is softer than cotton. When you move in your sleep your hair rubs against the surface of your pillow, having a soft material like silk reduces the friction.</p>",
             "page": ""
           }
         },
@@ -216,7 +216,7 @@
           "settings": {
             "heading": "Dying & Toning",
             "icon": "none",
-            "row_content": "<p>Human hair extensions can be dyed or toned however this does lessen the quality and reduce the lifespan of the product. As the hair has been removed from its natural root it no longer receives the vital nutrients and oils it needs to remain healthy and strong. Dying and toning can weaken the hair further so for this reason we advise against dying or toning the hair if possible. <strong>Once the hair has been dyed or toned this voids the returns policy. This applies to all dyes and toners, including toning\/purple shampoos and pigmented conditioners<\/strong>. If you still decide to colour the hair, follow our advice below…<br\/><br\/><strong>NEVER<\/strong> bleach or lighten any hair extensions. If you need to dye the hair you should only go darker, never lighter as this will seriously damage the extensions.<br\/><br\/><strong>TEST<\/strong> a small section before dying the hair all over to check the colour is how you expect. Extensions are coated during manufacturing to prolong the lifespan; this can affect how colours take to the hair.<br\/><br\/><strong>NEVER<\/strong> dye your hair with your extensions attached, this can cause the hair to slip out and can create a build-up of residue in between your extensions causing irritation.<br\/><br\/>If using a Toning shampoo, please bear in mind that hair extensions tend to be more porous than your own hair so may take to colour more quickly. We advise diluting your toning shampoo and leaving it on the hair for less time for the best results.<br\/><br\/>Remember, we have over 60 colours to choose from in our collection and a <a href=\"https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service\" target=\"_blank\" title=\"Free colour matching\">free colour match service<\/a> to help you find the right shade, so chances are you wont need to dye the hair after all.<\/p>",
+            "row_content": "<p>Human hair extensions can be dyed or toned however this does lessen the quality and reduce the lifespan of the product. As the hair has been removed from its natural root it no longer receives the vital nutrients and oils it needs to remain healthy and strong. Dying and toning can weaken the hair further so for this reason we advise against dying or toning the hair if possible. <strong>Once the hair has been dyed or toned this voids the returns policy. This applies to all dyes and toners, including toning/purple shampoos and pigmented conditioners</strong>. If you still decide to colour the hair, follow our advice below…<br/><br/><strong>NEVER</strong> bleach or lighten any hair extensions. If you need to dye the hair you should only go darker, never lighter as this will seriously damage the extensions.<br/><br/><strong>TEST</strong> a small section before dying the hair all over to check the colour is how you expect. Extensions are coated during manufacturing to prolong the lifespan; this can affect how colours take to the hair.<br/><br/><strong>NEVER</strong> dye your hair with your extensions attached, this can cause the hair to slip out and can create a build-up of residue in between your extensions causing irritation.<br/><br/>If using a Toning shampoo, please bear in mind that hair extensions tend to be more porous than your own hair so may take to colour more quickly. We advise diluting your toning shampoo and leaving it on the hair for less time for the best results.<br/><br/>Remember, we have over 60 colours to choose from in our collection and a <a href=\"https://www.cliphair.co.uk/pages/colour-matching-service\" target=\"_blank\" title=\"Free colour matching\">free colour match service</a> to help you find the right shade, so chances are you wont need to dye the hair after all.</p>",
             "page": ""
           }
         }
@@ -246,7 +246,7 @@
         "text_YaPGEg": {
           "type": "text",
           "settings": {
-            "text": "<p>Still need help? No Problem! Check out our <a href=\"https:\/\/www.cliphair.co.uk\/blogs\/hair-blog\/how-to-look-after-hair-extensions-ultimate-care-guide\" target=\"_blank\" title=\"Ultimate Care Guide\">Ultimate Care Guide<\/a> for even more in depth advice on how to look after your hair extensions.<\/p>",
+            "text": "<p>Still need help? No Problem! Check out our <a href=\"https://www.cliphair.co.uk/blogs/hair-blog/how-to-look-after-hair-extensions-ultimate-care-guide\" target=\"_blank\" title=\"Ultimate Care Guide\">Ultimate Care Guide</a> for even more in depth advice on how to look after your hair extensions.</p>",
             "read-more_text": ""
           }
         }
@@ -269,40 +269,40 @@
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
-            "text_label": "<p>Ethically<br>Sourced<\/p>",
+            "image": "shopify://shop_images/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced</p>",
             "link": ""
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "<p>Outstanding<br>Reviews<\/p>",
-            "link": "shopify:\/\/pages\/testimonials"
+            "image": "shopify://shop_images/Outstanding-Reviews-_White.svg",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
+            "link": "shopify://pages/testimonials"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "<p>Cliphair<br>Rewards<\/p>",
-            "link": "shopify:\/\/pages\/rewards"
+            "image": "shopify://shop_images/Cliphair-Rewards-_White.svg",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
+            "link": "shopify://pages/rewards"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "<p>Free Delivery<br>& Returns<\/p>",
+            "image": "shopify://shop_images/Free-Delivery-_White.svg",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
             "link": ""
           }
         },
         "cbdbff03-f013-487f-8288-6c9a46426bc6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "<p>Buy Now<br>Pay Later<\/p>",
+            "image": "shopify://shop_images/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
             "link": ""
           }
         }
