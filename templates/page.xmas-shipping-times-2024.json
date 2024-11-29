@@ -21,12 +21,12 @@
       }
     },
     "rich_text_HRmg4g": {
-      "type": "rich-text",
+      "type": "rich-text-sales",
       "blocks": {
         "heading_EU6QJE": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>CHRISTMAS </strong>SHIPPING TIMES",
+            "heading": "<h1><strong>CHRISTMAS</strong> <br>SHIPPING TIMES</h1>",
             "heading_size": "h0",
             "h1": true
           }
