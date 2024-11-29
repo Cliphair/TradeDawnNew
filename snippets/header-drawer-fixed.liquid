@@ -382,9 +382,7 @@
                                     id="HeaderDrawer-professional-nano-ring-nano-bond"
                                     href="/collections/nano-rings-hair-extensions?filter.p.product_type=Remy+Royale+Nano+Bonds"
                                     class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/nano-rings-hair-extensions?filter.p.product_type=Remy+Royale+Nano+Bonds' %} menu-drawer__menu-item--active{% endif %}"
-                                    {% if request.path
-                                        == '/collections/nano-rings-hair-extensions'
-                                    %}
+                                    {% if request.path == '/collections/nano-rings-hair-extensions' %}
                                       aria-current="page"
                                     {% endif %}
                                   >
@@ -2727,6 +2725,19 @@
                             {% endif %}
                           >
                             Value Bundles
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            id="HeaderDrawer-christmas-shop-shipping-time"
+                            href="/pages/christmas-shipping-times-2024"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/christmas-shipping-times-2024' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/pages/christmas-shipping-times-2024' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Christmas Shipping Times
                           </a>
                         </li>
                       </ul>
