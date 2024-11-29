@@ -9,20 +9,57 @@
  */
 {
   "sections": {
+    "rich_text_dPHXte": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_HRmg4g": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EU6QJE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>CHRISTMAS </strong>SHIPPING TIMES",
+            "heading_size": "h0",
+            "h1": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_EU6QJE"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-collection-titles",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
-        "show_title": true,
-        "heading_size": "h1",
+        "show_title": false,
+        "heading_size": "h0",
         "show_content": true,
-        "text_alignment": "left",
-        "color_scheme": "accent-4",
-        "padding_top": 28,
-        "padding_bottom": 28
+        "text_alignment": "center",
+        "color_scheme": "background-1",
+        "padding_top": 20,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
+    "rich_text_dPHXte",
+    "rich_text_HRmg4g",
     "main"
   ]
 }
