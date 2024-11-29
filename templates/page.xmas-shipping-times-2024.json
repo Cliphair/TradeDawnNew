@@ -26,8 +26,8 @@
         "heading_EU6QJE": {
           "type": "heading",
           "settings": {
-            "heading": "<h1><strong>CHRISTMAS</strong> <br>SHIPPING TIMES</h1>",
-            "heading_size": "h0",
+            "heading": "<h1><strong>CHRISTMAS</strong> <br/>SHIPPING TIMES</h1>",
+            "heading_size": "h1",
             "h1": true
           }
         }
@@ -35,13 +35,16 @@
       "block_order": [
         "heading_EU6QJE"
       ],
+      "custom_css": [
+        ".rich-text {background: rgb(182, 149, 191); background: linear-gradient( 180deg, rgba(182, 149, 191, 1) 0%, rgba(237, 229, 239, 1) 85%, rgba(255, 255, 255, 1) 100% );}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-collection-titles",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     },
     "main": {
