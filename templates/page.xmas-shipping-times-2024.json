@@ -51,6 +51,9 @@
     },
     "custom_banner_FtcqjF": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div{max-width: unset; padding-right: 0; padding-left: 0;}"
+      ],
       "settings": {
         "max-width": "",
         "bg-color": "#f4f2f5",
