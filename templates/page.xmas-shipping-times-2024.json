@@ -49,6 +49,10 @@
         "padding_bottom": 28
       }
     },
+    "font": {
+      "type": "page_font_xmas_timings",
+      "settings": {}
+    },
     "custom_banner_FtcqjF": {
       "type": "custom-banner",
       "custom_css": [
@@ -83,6 +87,7 @@
   "order": [
     "rich_text_dPHXte",
     "rich_text_HRmg4g",
+    "font",
     "custom_banner_FtcqjF",
     "main"
   ]
