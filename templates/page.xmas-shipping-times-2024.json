@@ -52,7 +52,7 @@
     "custom_banner_FtcqjF": {
       "type": "custom-banner",
       "custom_css": [
-        "div > div{max-width: unset; padding-right: 0; padding-left: 0;}"
+        "div > div {max-width: unset; padding-right: 0; padding-left: 0;}"
       ],
       "settings": {
         "max-width": "",
@@ -66,13 +66,16 @@
     },
     "main": {
       "type": "main-page",
+      "custom_css": [
+        ".color-background-1 {background: #f4f2f5;}"
+      ],
       "settings": {
         "show_title": false,
         "heading_size": "h0",
         "show_content": true,
         "text_alignment": "center",
         "color_scheme": "background-1",
-        "padding_top": 20,
+        "padding_top": 4,
         "padding_bottom": 40
       }
     }
