@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -39,8 +39,7 @@
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "faq_4pTbgj": {
           "type": "faq",
@@ -51,7 +50,9 @@
         "footer_LgHUFf": {
           "type": "footer",
           "settings": {
-            "text": "<h2>INTERESTED IN HAIR EXTENSIONS? SHOP THE BEST SELLERS…<\/h2><p>For our full range of Hair Extensions including <a href=\"\/collections\/clip-in-hair-extensions\" title=\"Clip In Hair Extensions\">Clip-Ins<\/a>, <a href=\"\/collections\/clip-in-ponytail-extensions\" title=\"Clip In Ponytail Extensions\">Ponytails<\/a>, <a href=\"\/pages\/permanent-extensions\" title=\"Permanent Hair Extensions\">Permanent<\/a> and many more with over 60 shades to choose from head to our <a href=\"\/\" title=\"\/\">Main Page<\/a>. Including our best selling <a href=\"\/collections\/seamless-clip-in-hair-extensions-double-drawn-hair\" title=\"Seamless Clip In Hair Extensions: Double Drawn\">Seamless<\/a>, <a href=\"\/collections\/tape-in-hair-extensions\" title=\"Tape In Hair Extensions\">Tape In Hair Extensions<\/a>, and <a href=\"\/collections\/one-piece-clip-in-hair-extensions\" title=\"One Piece Clip in Hair Extensions\">One Piece Hair Extensions<\/a>.<\/p>"
+            "text": "<p>Looking for flawless, salon-worthy hair without breaking the bank? At Cliphair, we’ve got you covered with luxurious <a href=\"https://online-store-web.shopifyapps.com/collections/clip-in-hair-extensions\" title=\"Clip In Hair Extensions\">clip-in extensions</a> for quick transformations and <a href=\"https://online-store-web.shopifyapps.com/collections/permanent-extensions\" title=\"Professional Hair Extensions\">permanent hair extensions</a> like <a href=\"https://online-store-web.shopifyapps.com/collections/tape-in-hair-extensions\" title=\"Tape In Hair Extensions\">tape-ins</a>, <a href=\"https://online-store-web.shopifyapps.com/collections/nano-rings-hair-extensions\" title=\"Nano Ring Hair Extensions\">nano rings</a>  and <a href=\"https://online-store-web.shopifyapps.com/collections/human-hair-weave-wefts-hair-extensions\" title=\"Human Hair Weave & Weft Extensions\">weaves</a> for long-lasting glam. Extensions require special care and maintenance <br/>to preserve their quality, which is why we have all the  <a href=\"https://online-store-web.shopifyapps.com/collections/hair-care\" title=\"Hair Extensions Care & Maintenance Products\">top-notch hydrating haircare products</a>, and <a href=\"https://online-store-web.shopifyapps.com/collections/accessories\" title=\"Hair Extensions Accessories\">essential accessories</a> and <a href=\"https://online-store-web.shopifyapps.com/collections/hair-care/professional-maintenance\" title=\"Hair Extensions Care & Maintenance Products\">maintenance must-haves</a> needed to keep your style on point.</p><p>Need the perfect shade? Browse our full range of human hair extensions in over <a href=\"https://online-store-web.shopifyapps.com/pages/hair-extensions-by-colour\" title=\"Hair Extensions By Colour\">70 rich, silky shades</a>  or check out our <a href=\"https://online-store-web.shopifyapps.com/pages/colour-matching-service\" title=\"Colour Matching Service\">FREE Express Colour Match Service</a> to ensure a seamless blend every time. Chat with our <a href=\"https://online-store-web.shopifyapps.com/pages/contact-us\" title=\"Contact Us\">team of friendly experts</a> who will reach out to you with a perfect match in less than 48 hours, or browse our <a href=\"https://online-store-web.shopifyapps.com/pages/lookbook\" title=\"The Cliphair Lookbook\">Lookbook</a> for the latest hair looks worn by the Cliphair community. From instant length to long-term volume, Cliphair is your go-to for locks with exceptional quality and endless possibilities! </p>",
+            "enable_share": true,
+            "share_label": "Share"
           }
         }
       },
@@ -81,40 +82,40 @@
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
-            "text_label": "<p>Ethically<br>Sourced<\/p>",
+            "image": "shopify://shop_images/Ethically-Sourced-_White_32345e81-b264-4ed2-9a09-7ac34b332700.svg",
+            "text_label": "<p>Ethically<br>Sourced</p>",
             "link": ""
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outstanding-Reviews-_White.svg",
-            "text_label": "<p>Outstanding<br>Reviews<\/p>",
-            "link": "shopify:\/\/pages\/testimonials"
+            "image": "shopify://shop_images/Outstanding-Reviews-_White.svg",
+            "text_label": "<p>Outstanding<br>Reviews</p>",
+            "link": "shopify://pages/testimonials"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cliphair-Rewards-_White.svg",
-            "text_label": "<p>Cliphair<br>Rewards<\/p>",
-            "link": "shopify:\/\/pages\/rewards"
+            "image": "shopify://shop_images/Cliphair-Rewards-_White.svg",
+            "text_label": "<p>Cliphair<br>Rewards</p>",
+            "link": "shopify://pages/rewards"
           }
         },
         "template--15283894157373__c6a82ce6-f9b5-448b-af80-7e17ba7abc7b-logo_image-4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Free-Delivery-_White.svg",
-            "text_label": "<p>Free Delivery<br>& Returns<\/p>",
+            "image": "shopify://shop_images/Free-Delivery-_White.svg",
+            "text_label": "<p>Free Delivery<br>& Returns</p>",
             "link": ""
           }
         },
         "cbdbff03-f013-487f-8288-6c9a46426bc6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Buy-Now-Pay-Later-_White.svg",
-            "text_label": "<p>Buy Now<br>Pay Later<\/p>",
+            "image": "shopify://shop_images/Buy-Now-Pay-Later-_White.svg",
+            "text_label": "<p>Buy Now<br>Pay Later</p>",
             "link": ""
           }
         }
@@ -140,6 +141,7 @@
         "color_scheme": "background-collection-titles",
         "columns_mobile": "3",
         "swipe_on_mobile": false,
+        "slider_visual": "counter",
         "padding_top": 36,
         "padding_bottom": 52
       }
