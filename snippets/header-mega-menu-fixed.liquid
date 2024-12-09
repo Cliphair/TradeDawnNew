@@ -2400,34 +2400,34 @@
                 </a>
               </li>
 
-              {% comment %}
-                <li
-                  class="scroll-trigger animate--slide-in"
-                  style="--animation-order: 1;"
+              
+              <li
+                class="scroll-trigger animate--slide-in"
+                style="--animation-order: 1;"
+              >
+                {% liquid
+                  assign menu_image = images['christmas-shop-desktop-menu.webp']
+                %}
+                <img
+                  srcset="
+                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ menu_image | image_url }} {{ menu_image.width }}w
+                  "
+                  src="{{ menu_image | image_url: width: 480 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) 480px"
+                  alt="{{ menu_image.alt }}"
+                  width="{{ menu_image.width }}"
+                  height="{{ menu_image.height }}"
+                  loading="lazy"
+                  class="motion-reduce"
                 >
-                  {% liquid
-                    assign menu_image = images['blog-desktop-menu.webp']
-                  %}
-                  <img
-                    srcset="
-                      {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
-                      {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
-                      {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
-                      {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
-                      {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                      {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                      {{ menu_image | image_url }} {{ menu_image.width }}w
-                    "
-                    src="{{ menu_image | image_url: width: 480 }}"
-                    sizes="(min-width: {{ settings.page_width }}px) 480px"
-                    alt="{{ menu_image.alt }}"
-                    width="{{ menu_image.width }}"
-                    height="{{ menu_image.height }}"
-                    loading="lazy"
-                    class="motion-reduce"
-                  >
-                </li>
-              {% endcomment %}
+              </li>
+              
             </ul>
           </div>
         </details>
