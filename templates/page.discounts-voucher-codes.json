@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "8ef15549-887d-43b3-b5a9-adb613c708a7": {
@@ -131,7 +131,7 @@
           "settings": {
             "image": "shopify://shop_images/discount-page-free-delivery.webp",
             "description": "<p><strong>Free Delivery & Returns</strong></p><p>Free delivery and returns inside the UK for orders over £30. </p>",
-            "url": "shopify://pages/shipping-information",
+            "url": "shopify://pages/hair-extensions-shipping-delivery",
             "button_text": "Find Out More"
           }
         },
@@ -307,18 +307,15 @@
       "blocks": {
         "klarna_yaPL7H": {
           "type": "klarna",
-          "settings": {
-          }
+          "settings": {}
         },
         "clearpay_9rP9F8": {
           "type": "clearpay",
-          "settings": {
-          }
+          "settings": {}
         },
         "paypal_Dr3fdm": {
           "type": "paypal",
-          "settings": {
-          }
+          "settings": {}
         },
         "text_mbNPmd": {
           "type": "text",
