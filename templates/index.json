@@ -682,6 +682,14 @@
             "link": ""
           }
         },
+        "image_gbwtBe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bre-as-seen-on.webp",
+            "text_label": "<p>@bre_tiesi styled by @hairbyjaypinder</p><p><a href=\"/products/jet-black-1-ultra-volume-clip-in-full-head-set-240-300g\" target=\"_blank\" title=\"Jet Black (#1) Ultra-Volume Clip In Full Head Set (240-300G)\">24\" Jet Black Ultra Volume Clip Ins </a></p>",
+            "link": ""
+          }
+        },
         "image_fGPUME": {
           "type": "image",
           "settings": {
@@ -763,6 +771,7 @@
         "image_C8JtLM",
         "image_EHCiUE",
         "image_gkxjfU",
+        "image_gbwtBe",
         "image_fGPUME",
         "image_4bXD9L",
         "image_bRzTFF",
