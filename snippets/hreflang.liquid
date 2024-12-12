@@ -6,12 +6,14 @@
   {% comment %}Hreflang homepage{% endcomment %}
   <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}">
   <link rel="alternate" hreflang="de-DE" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de' }}">
+  <link rel="alternate" hreflang="fr-FR" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/fr-fr' }}">
   <link rel="alternate" hreflang="en-CA" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca' }}">
   <link rel="alternate" hreflang="en-AU" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' }}">
 
 {% elsif request.page_type == 'blog' %}
   <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com'}}">
   <link rel="alternate" hreflang="de-DE" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de'}}">
+  <link rel="alternate" hreflang="fr-FR" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/fr-fr' }}">
   <link rel="alternate" hreflang="en-CA" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca'}}">
   <link rel="alternate" hreflang="en-AU" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au'}}">
 
@@ -31,6 +33,11 @@
     >
     <link
       rel="alternate"
+      hreflang="fr-FR"
+      href="{{ shop.url | append: blog.url | replace: shop.domain, 'www.cliphair.com/fr-fr'}}"
+    >
+    <link
+      rel="alternate"
       hreflang="en-CA"
       href="{{ shop.url | append: blog.url | replace: shop.domain, 'www.cliphair.com/en-ca'}}"
     >
@@ -42,6 +49,7 @@
   {% else %}
     <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com'}}">
     <link rel="alternate" hreflang="de-DE" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de'}}">
+    <link rel="alternate" hreflang="fr-FR" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/fr-fr'}}">
     <link rel="alternate" hreflang="en-CA" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca'}}">
     <link rel="alternate" hreflang="en-AU" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au'}}">
   {% endif %}
@@ -70,6 +78,11 @@
     >
     <link
       rel="alternate"
+      hreflang="fr-FR"
+      href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/fr-fr' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-50", "/collections/under-75"  | replace: "/collections/under-30", "/collections/under-50"| replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}"
+    >
+    <link
+      rel="alternate"
       hreflang="en-CA"
       href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca' | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-50", "/collections/under-75"  | replace: "/collections/under-30", "/collections/under-50" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" }}"
     >
@@ -81,6 +94,7 @@
   {% else %}
     <link rel="alternate" hreflang="en-US" href="{{ 'https://www.cliphair.com/' }}">
     <link rel="alternate" hreflang="de-DE" href="{{ 'https://www.cliphair.com/de-de/' }}">
+    <link rel="alternate" hreflang="fr-FR" href="{{ 'https://www.cliphair.com/fr-fr/' }}">
     <link rel="alternate" hreflang="en-CA" href="{{ 'https://www.cliphair.com/en-ca/' }}">
     <link rel="alternate" hreflang="en-AU" href="{{ 'https://www.cliphair.com/en-au/' }}">
   {% endunless %}
