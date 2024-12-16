@@ -1,0 +1,43 @@
+#xmas-message .product-popup-modal__button {
+  display: block;
+  font-weight: bold;
+}
+
+.xmas-message-modal .product-popup-modal__content {
+  background: #f4f2f5;
+  padding: 0 1.5rem;
+}
+
+.xmas-message-modal .product-popup-modal__content-info {
+  padding-right: 0 !important;
+}
+
+.xmas-message-modal .h2 {
+  margin-bottom: 2rem;
+}
+
+.xmas-message-modal p {
+  font-size: 1.4rem;
+}
+
+.xmas-message-modal p:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.xmas-message-modal .button {
+  margin: 1.5rem 0;
+}
+
+.xmas-message-modal .product-popup-modal__content table {
+  white-space: wrap;
+}
+
+.xmas-message-modal .table-shipping-times tr>td:first-of-type {
+  display: none;
+}
+
+.xmas-message-modal .table-shipping-times:first-of-type tbody tr:nth-child(7),
+.xmas-message-modal .table-shipping-times:first-of-type tbody tr:nth-child(8),
+.xmas-message-modal .table-shipping-times:first-of-type tbody tr:nth-child(9) {
+  display: none;
+}
