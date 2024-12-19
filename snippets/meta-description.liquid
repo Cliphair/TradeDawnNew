@@ -12,7 +12,7 @@
     {% liquid
       assign tag_string_size = tag_string.size
       assign description_final_size = 160 | minus: tag_string_size
-      assign description = description | truncate: description_final_size | append: tag_string
+      assign description = description | truncate: description_final_size, "" | append: tag_string
     %}
     {% assign description = description %}
   {% endif %}
