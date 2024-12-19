@@ -16,10 +16,11 @@
     {%- endunless -%}
 
     {% render "meta-title" %}
+    {% render "meta-description" %}
 
-    {% if page_description %}
+    <!-- {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}
+    {% endif %} -->
 
     {% render 'meta-tags' %}
 
