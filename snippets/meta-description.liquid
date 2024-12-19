@@ -1,0 +1,22 @@
+{% if page_description %}
+  
+  {% liquid
+    assign description = page_description | escape
+    if description.size > 160
+      assign description = description | truncate: 157, "..."
+    endif
+  %}
+  
+  {% if current_tags %}
+    {% capture tag_string %} | Tagged: {{ current_tags | join: ', ' }}{% endcapture %}
+    {% liquid
+      assign tag_string_size = tag_string.size
+      assign description_final_size = 160 | minus: tag_string_size
+      assign description = description | truncate: description_final_size | join: tag_string
+    %}
+    {% assign description = description %}
+  {% endif %}
+  
+  <meta name="description" content="{{ description }}">
+
+{% endif %}
