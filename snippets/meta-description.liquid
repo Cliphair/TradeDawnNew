@@ -21,6 +21,8 @@
 
 {% endif %}
 
-{% comment %}{% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}{% endcomment %}
+{% comment %}
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+{% endcomment %}
