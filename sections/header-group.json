@@ -30,6 +30,7 @@
         },
         "announcement_nNPD4X": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "We've Revamped Our Website For A Better, Faster Shopping Experience - Explore Now!",
             "link": "shopify://blogs/hair-blog/our-new-website-everything-you-need-to-know"
