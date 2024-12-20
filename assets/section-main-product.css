@@ -1813,6 +1813,23 @@ klarna-placement::part(osm-badge-container) {
 
 #order-deadline .trustblox-instruction{
   margin-top:0;
+  animation: blink 2s infinite;
+  font-weight:bold;
+  color:red;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: .3;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
 
 /* Specification */
