@@ -1811,6 +1811,10 @@ klarna-placement::part(osm-badge-container) {
   display: inline-block !important;
 }
 
+#order-deadline .trustblox-instruction{
+  margin-top:0;
+}
+
 /* Specification */
 .specification p {
   border-top: 1px solid #ddd;
