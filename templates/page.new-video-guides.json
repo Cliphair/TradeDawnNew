@@ -84,6 +84,28 @@
     "tutorials_pDW6YK": {
       "type": "tutorials",
       "blocks": {
+        "video_eVVtAL": {
+          "type": "video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=44JZNkwk_0s",
+            "cover_image": "shopify://shop_images/Length_Guide_Thumbnail_Small_a6a06913-a0b6-4933-97e1-7323d7427f78.webp",
+            "description": "Hair Extensions Length Guide",
+            "title": "HAIR EXTENSIONS LENGTH GUIDE",
+            "button_label": "Hair Extensions – View Collection",
+            "link": "shopify://pages/hair-extensions-by-colour"
+          }
+        },
+        "video_QNyMmD": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/How To Apply Nano Rings.mp4",
+            "video_url": "",
+            "description": "How To Apply Nano Rings",
+            "title": "HOW TO APPLY NANO RINGS",
+            "button_label": "Nano Ring – View Collection",
+            "link": "shopify://collections/nano-rings-hair-extensions"
+          }
+        },
         "video_p3DWak": {
           "type": "video",
           "settings": {
@@ -614,6 +636,8 @@
         }
       },
       "block_order": [
+        "video_eVVtAL",
+        "video_QNyMmD",
         "video_p3DWak",
         "video_RjznNa",
         "video_qwfp6w",
@@ -1223,10 +1247,70 @@
             "button_label": "Quench The Thirst - View Collection",
             "link": "shopify://collections/quench-the-thirst"
           }
+        },
+        "video_RB8brp": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/How To Wash Clip In Extensions.mp4",
+            "video_url": "",
+            "description": "How To Wash Clip In Extensions",
+            "title": "HOW TO WASH CLIP IN EXTENSIONS",
+            "button_label": "Clip-Ins – View Collection",
+            "link": "shopify://collections/clip-in-hair-extensions"
+          }
+        },
+        "video_jQCRG7": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/How To Wash Curly Clip In Extensions.mp4",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "description": "How To Wash Curly Clip In Extensions",
+            "title": "HOW TO WASH CURLY CLIP IN EXTENSIONS",
+            "button_label": "Curly Clip-Ins – View Collection",
+            "link": "shopify://collections/curly-clip-in-hair-extensions"
+          }
+        },
+        "video_gUDmkx": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/How To Wash Permanent Extensions With Purple Shampoo.mp4",
+            "video_url": "",
+            "description": "How To Wash Permanent Extensions With Purple Shampoo",
+            "title": "HOW TO WASH PERMANENT EXTENSIONS WITH PURPLE SHAMPOO",
+            "button_label": "Purple Shampoo – View Collection",
+            "link": "shopify://collections/hair-care"
+          }
+        },
+        "video_jU7dFn": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/How To Use Purple Shampoo On Clip In Extensions.mp4",
+            "video_url": "",
+            "description": "How To Use Purple Shampoo On Clip In Extensions",
+            "title": "HOW TO USE PURPLE SHAMPOO ON CLIP IN EXTENSIONS",
+            "button_label": "Purple Shampoo – View Collection",
+            "link": "shopify://collections/hair-care"
+          }
+        },
+        "video_NpUFAT": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Different Ways To Use Purple Shampoo.mp4",
+            "video_url": "",
+            "description": "Different Ways To Use Purple Shampoo",
+            "title": "DIFFERENT WAYS TO USE PURPLE SHAMPOO",
+            "button_label": "Purple Shampoo – View Collection",
+            "link": "shopify://collections/hair-care"
+          }
         }
       },
       "block_order": [
-        "video_QAE4D4"
+        "video_QAE4D4",
+        "video_RB8brp",
+        "video_jQCRG7",
+        "video_gUDmkx",
+        "video_jU7dFn",
+        "video_NpUFAT"
       ],
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
