@@ -56,6 +56,7 @@
         },
         "slide_nzbVKg": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/hanger-carrier-mobile-banner.webp",
             "image_desktop": "shopify://shop_images/hanger-carrier-desktop-banner.webp",
