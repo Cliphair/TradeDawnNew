@@ -651,6 +651,14 @@
             "link": ""
           }
         },
+        "image_KJrQnV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fernemccann.webp",
+            "text_label": "<p>@fernemccann styled by @hairbyjaypinder</p><p><a href=\"/products/medium-brown-4-clip-in-ponytail-extensions\" target=\"_blank\" title=\"Medium Brown (#4) Straight Up Wrap Around Ponytail\">20\" Medium Brown Wrap Around Ponytail </a></p>",
+            "link": ""
+          }
+        },
         "image_jLtYAq": {
           "type": "image",
           "settings": {
@@ -768,6 +776,7 @@
         "image_UJnFyW",
         "image_fDTmfe",
         "image_FNDhT7",
+        "image_KJrQnV",
         "image_jLtYAq",
         "image_C8JtLM",
         "image_EHCiUE",
