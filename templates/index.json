@@ -659,6 +659,14 @@
             "link": ""
           }
         },
+        "image_rHmacL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/kellyosbourne.webp",
+            "text_label": "<p>@kellyosbourne styled by @hairbyjaypinder</p><p><a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-lightest-blonde\" target=\"_blank\" title=\"Lightest Blonde (#60) Double Drawn Seamless Clip In Hair Extensions\">20\" Lightest Blonde (#60) Seamless Clip-In Extensions </a></p>",
+            "link": ""
+          }
+        },
         "image_jLtYAq": {
           "type": "image",
           "settings": {
@@ -777,6 +785,7 @@
         "image_fDTmfe",
         "image_FNDhT7",
         "image_KJrQnV",
+        "image_rHmacL",
         "image_jLtYAq",
         "image_C8JtLM",
         "image_EHCiUE",
