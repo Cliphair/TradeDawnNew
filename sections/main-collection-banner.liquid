@@ -27,7 +27,7 @@
         {% comment %}<span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>{% endcomment %}
         {{- collection.title | escape -}}
         {% if current_tags %}
-          <span class="visually-hidden">Tagged: {{ current_tags | join: ', ' }} </span>
+          <span class="visually-hidden">Tagged: {{ current_tags | join: ', ' }}</span>
         {% endif %}
       </h1>
 
