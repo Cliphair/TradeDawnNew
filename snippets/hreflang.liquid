@@ -1,6 +1,6 @@
 {% comment %}Same for all the pages{% endcomment %}
-<link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
-<link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB">
+<!-- <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
+<link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB"> -->
 
 {% if request.page_type == 'index' %}
   {% comment %}Hreflang homepage{% endcomment %}
@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="en-AU" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-au' }}">
 
 {% elsif request.page_type == 'blog' %}
-  <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com'}}">
+  <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' | remove: "fi-fi/"| remove: "no-no/"| remove: "el-cy/"}}">
   <link rel="alternate" hreflang="de-DE" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/de-de'}}">
   <link rel="alternate" hreflang="fr-FR" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/fr-fr' }}">
   <link rel="alternate" hreflang="en-CA" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com/en-ca'}}">
