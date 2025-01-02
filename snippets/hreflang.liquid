@@ -15,6 +15,8 @@
   {% assign excluded_pages = '/pages/flash-sale-upto-15-off;/pages/clearpay-hair-extensions;/pages/hair-extensions;/pages/discounts-and-voucher-codes;/pages/blue-light-card;/pages/lookbook;/pages/clearpay-sales-offers;/pages/salon-international;/pages/festive-season-timings-2020' | split: ';' %}
   {% if excluded_pages contains path %}
     {% assign path = "/" %}
+  {% else %}
+    {% assign path = path | replace: "/collections/under-15", "/collections/under-25" | replace: "/collections/under-50", "/collections/under-75" | replace: "/collections/under-30", "/collections/under-50" | replace: "/collections/under-100", "/collections/under-130" | replace: "/pages/2023-bridal-hairstylist-award" , "/pages/cliphair-bridal-hair-extensions" %}
   {% endif %}
 {% endif %}
 
