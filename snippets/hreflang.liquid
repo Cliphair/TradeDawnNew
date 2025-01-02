@@ -12,7 +12,7 @@
     {% assign path = blog.url %}
   {% endif %}
 {% else %}
-  {% assign excluded_pages = '/pages/flash-sale-upto-15-off;/pages/clearpay-hair-extensions;/pages/hair-extensions;/pages/discounts-and-voucher-codes;/pages/blue-light-card;/pages/lookbook;/pages/clearpay-sales-offers;/pages/salon-international;/pages/festive-season-timings-2020' | split: ';' %}
+  {% assign excluded_pages = '/pages/flash-sale;/pages/clearpay-hair-extensions;/pages/hair-extensions;/pages/discounts-and-voucher-codes;/pages/blue-light-card;/pages/lookbook;/pages/clearpay-sales-offers;/pages/salon-international;/pages/festive-season-timings-2020' | split: ';' %}
   {% if excluded_pages contains path %}
     {% assign path = "/" %}
   {% else %}
