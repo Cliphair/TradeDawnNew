@@ -2,7 +2,7 @@
 {% comment %} <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
 <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB"> {% endcomment %}
 
-<test {{ request.locale }}>
+<test-locale {{ request.locale }}>
 
 {% if request.page_type == 'index' %}
   {% comment %}Hreflang homepage{% endcomment %}
