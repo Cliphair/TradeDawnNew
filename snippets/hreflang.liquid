@@ -100,6 +100,9 @@
   {% endunless %}
 {% endif %}
 
-{% if request.locale %}
+{% assign markets = "Finland,Norway,Cyprus" | split: "," %}
+{% if markets contains localization.market.handle %}
+  <p>Market</p>
 {% else %}
+  <p>No Market</p>
 {% endif %}
