@@ -1,9 +1,7 @@
 {% comment %}Same for all the pages{% endcomment %}
 {% comment %} <link rel="alternate" hreflang="x-default" href="{{ canonical_url  }}">
 <link rel="alternate" href="{{ canonical_url  }}" hreflang="en-GB"> {% endcomment %}
-
-<test-locale {{ request.locale.name }}>
-
+<test-locale>{{ request.locale.iso_code }}</test-locale>
 {% if request.page_type == 'index' %}
   {% comment %}Hreflang homepage{% endcomment %}
   <link rel="alternate" hreflang="en-US" href="{{ canonical_url | replace: shop.domain, 'www.cliphair.com' }}">
@@ -100,4 +98,8 @@
     <link rel="alternate" hreflang="en-CA" href="{{ 'https://www.cliphair.com/en-ca/' }}">
     <link rel="alternate" hreflang="en-AU" href="{{ 'https://www.cliphair.com/en-au/' }}">
   {% endunless %}
+{% endif %}
+
+{% if request.locale %}
+{% else %}
 {% endif %}
