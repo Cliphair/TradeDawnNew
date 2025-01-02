@@ -102,7 +102,9 @@
 
 {% assign markets = "finland,norway,cyprus" | split: "," %}
 {% if markets contains localization.market.handle %}
-  <p>Market</p>
+  {% assign path = request.path | remove: "/fi-fi" | remove: "/no-no" | remove: "/el-cy" %}
 {% else %}
-  <p>No Market</p>
+  {% assign path = request.path %}
 {% endif %}
+
+<p>{{ request.path }} - {{ path }}</p>
