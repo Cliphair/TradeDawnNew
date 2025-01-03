@@ -19,6 +19,51 @@
         "color_scheme": "accent-4"
       }
     },
+    "image_list_cVemxL": {
+      "type": "image-list",
+      "blocks": {
+        "image_EkB7hP": {
+          "type": "image",
+          "settings": {
+            "text_label": "<p>Clip-In Extension Bundles</p>",
+            "link": "/collections/hair-extensions-bundle/clip-in-bundle"
+          }
+        },
+        "image_jfB4Rz": {
+          "type": "image",
+          "settings": {
+            "text_label": "<p>Permanent Extension Bundles</p>",
+            "link": "/collections/hair-extensions-bundle/professional-bundle"
+          }
+        },
+        "image_xRLP7x": {
+          "type": "image",
+          "settings": {
+            "text_label": "<p>Haircare & Accessories Bundles</p>",
+            "link": "/collections/hair-extensions-bundle/hair-care-accessories-bundle"
+          }
+        }
+      },
+      "block_order": [
+        "image_EkB7hP",
+        "image_jfB4Rz",
+        "image_xRLP7x"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "accent-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "slider_visual": "counter",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "collection_carrousel_by_block_bBTTEE": {
       "type": "collection-carrousel-by-block",
       "blocks": {
@@ -53,14 +98,23 @@
             "custom_image": "shopify://shop_images/holiday-xmas-2024-fring.webp",
             "custom_title": "Fringes"
           }
+        },
+        "collection_inMtkn": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
         }
       },
       "block_order": [
         "collection_J6yqAm",
         "collection_g68yJk",
         "collection_MzQph6",
-        "collection_tpgf7q"
+        "collection_tpgf7q",
+        "collection_inMtkn"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -211,6 +265,7 @@
   },
   "order": [
     "banner",
+    "image_list_cVemxL",
     "collection_carrousel_by_block_bBTTEE",
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
