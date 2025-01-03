@@ -22,14 +22,6 @@
     "image_list_cVemxL": {
       "type": "image-list",
       "blocks": {
-        "image_EkB7hP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/clip-in-bundle-1-square.webp",
-            "text_label": "<p>Clip-In Extension Bundles</p>",
-            "link": "/collections/hair-extensions-bundle/clip-in-bundle"
-          }
-        },
         "image_d7Tqxt": {
           "type": "image",
           "settings": {
@@ -56,7 +48,6 @@
         }
       },
       "block_order": [
-        "image_EkB7hP",
         "image_d7Tqxt",
         "image_jfB4Rz",
         "image_xRLP7x"
@@ -77,79 +68,7 @@
         "swipe_on_mobile": true,
         "slider_visual": "counter",
         "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
-    "collection_carrousel_by_block_bBTTEE": {
-      "type": "collection-carrousel-by-block",
-      "blocks": {
-        "collection_J6yqAm": {
-          "type": "collection",
-          "settings": {
-            "collection": "clip-in-hair-extensions",
-            "custom_image": "shopify://shop_images/holiday-xmas-2024-clip-ins.webp",
-            "custom_title": "Clip Ins"
-          }
-        },
-        "collection_g68yJk": {
-          "type": "collection",
-          "settings": {
-            "collection": "clip-in-ponytail-extensions",
-            "custom_image": "shopify://shop_images/holiday-xmas-2024-ponytail.webp",
-            "custom_title": "Ponytails"
-          }
-        },
-        "collection_MzQph6": {
-          "type": "collection",
-          "settings": {
-            "collection": "one-piece-clip-in-hair-extensions",
-            "custom_image": "shopify://shop_images/holiday-xmas-2024-volumisers.webp",
-            "custom_title": "Volumisers"
-          }
-        },
-        "collection_tpgf7q": {
-          "type": "collection",
-          "settings": {
-            "collection": "fringe-clip-in-hair-extensions",
-            "custom_image": "shopify://shop_images/holiday-xmas-2024-fring.webp",
-            "custom_title": "Fringes"
-          }
-        },
-        "collection_inMtkn": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "custom_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_J6yqAm",
-        "collection_g68yJk",
-        "collection_MzQph6",
-        "collection_tpgf7q",
-        "collection_inMtkn"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "introduction": "",
-        "text_allignment": "left",
-        "image_ratio": "square",
-        "circle_images": true,
-        "hide_card_arrow": true,
-        "columns_desktop": 6,
-        "swipe_on_desktop": true,
-        "color_scheme": "accent-4",
-        "columns_mobile": "3",
-        "swipe_on_mobile": true,
-        "slider_visual": "counter",
-        "padding_top": 12,
-        "padding_bottom": 12,
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false
+        "padding_bottom": 0
       }
     },
     "product-grid": {
@@ -282,7 +201,6 @@
   "order": [
     "banner",
     "image_list_cVemxL",
-    "collection_carrousel_by_block_bBTTEE",
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
     "b400924f-2211-460e-841c-e909605faf8f",
