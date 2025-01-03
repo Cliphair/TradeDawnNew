@@ -93,7 +93,7 @@
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
           "settings": {
-            "image": "shopify://shop_images/Hair_Extensions_Sunday_Delivery_Message_Green_BG.gif",
+            "image": "shopify://shop_images/free_sunday.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://pages/hair-extensions-by-colour"
