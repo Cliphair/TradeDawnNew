@@ -288,6 +288,38 @@
         "padding_bottom": 40
       }
     },
+    "rich_text_rApCNT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Dp9UQ7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hear It From Our Community ",
+            "heading_size": "h1",
+            "h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Dp9UQ7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "yotpo_review_carrousel_eXBCYB": {
+      "type": "yotpo-review-carrousel",
+      "settings": {
+        "container_color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "rich_text_collage_bg_qibWaW": {
       "type": "rich-text-collage-bg",
       "blocks": {
@@ -418,8 +450,8 @@
         "mobile-column": 2,
         "desktop-row": 2,
         "desktop-column": 6,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     },
     "rich_text_XgpBnz": {
@@ -855,38 +887,6 @@
         "padding_bottom": 40
       }
     },
-    "rich_text_rApCNT": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Dp9UQ7": {
-          "type": "heading",
-          "settings": {
-            "heading": "Hear It From Our Community ",
-            "heading_size": "h1",
-            "h1": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Dp9UQ7"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "yotpo_review_carrousel_eXBCYB": {
-      "type": "yotpo-review-carrousel",
-      "settings": {
-        "container_color_scheme": "inverse",
-        "padding_top": 20,
-        "padding_bottom": 40
-      }
-    },
     "fef9cc49-05dc-468b-82e4-1520264647b6": {
       "type": "rich-text",
       "blocks": {
@@ -1084,14 +1084,14 @@
     "753975ec-3602-477e-b65e-6d089a9053cb",
     "collection_carrousel_fb6cDE",
     "rich_text_ez6FdW",
+    "rich_text_rApCNT",
+    "yotpo_review_carrousel_eXBCYB",
     "rich_text_collage_bg_qibWaW",
     "rich_text_XgpBnz",
     "maquee_mnMgq6",
     "b19c81a2-f86e-4e52-9a50-dca37f731b16",
     "image_list_nPnYgL",
     "342029b3-5620-4e2e-864b-55edf0aa9b0d",
-    "rich_text_rApCNT",
-    "yotpo_review_carrousel_eXBCYB",
     "fef9cc49-05dc-468b-82e4-1520264647b6",
     "f41c0e3b-b362-4900-8b02-4a5cc75bd290",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
