@@ -63,7 +63,7 @@
       ],
       "custom_css": [
         "img {border-radius: 50%;}",
-        "@media screen and (min-width: 750px) {.images-list {justify-content: center; } .slider-buttons{display:none; }}"
+        "@media screen and (min-width: 750px) {.images-list {justify-content: center; } .slider-buttons {display: none; }}"
       ],
       "settings": {
         "title": "",
@@ -76,7 +76,7 @@
         "columns_mobile": "3",
         "swipe_on_mobile": true,
         "slider_visual": "counter",
-        "padding_top": 0,
+        "padding_top": 12,
         "padding_bottom": 0
       }
     },
