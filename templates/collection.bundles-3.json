@@ -25,6 +25,15 @@
         "image_EkB7hP": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/clip-in-bundle-1-square.webp",
+            "text_label": "<p>Clip-In Extension Bundles</p>",
+            "link": "/collections/hair-extensions-bundle/clip-in-bundle"
+          }
+        },
+        "image_d7Tqxt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/clip-in-bundle-2-square.webp",
             "text_label": "<p>Clip-In Extension Bundles</p>",
             "link": "/collections/hair-extensions-bundle/clip-in-bundle"
           }
@@ -32,6 +41,7 @@
         "image_jfB4Rz": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/permanent-bundle-square.webp",
             "text_label": "<p>Permanent Extension Bundles</p>",
             "link": "/collections/hair-extensions-bundle/professional-bundle"
           }
@@ -39,6 +49,7 @@
         "image_xRLP7x": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/hair-care-accessories-bundle-square.webp",
             "text_label": "<p>Haircare & Accessories Bundles</p>",
             "link": "/collections/hair-extensions-bundle/hair-care-accessories-bundle"
           }
@@ -46,18 +57,22 @@
       },
       "block_order": [
         "image_EkB7hP",
+        "image_d7Tqxt",
         "image_jfB4Rz",
         "image_xRLP7x"
+      ],
+      "custom_css": [
+        "img {border-radius: 50%;}"
       ],
       "settings": {
         "title": "",
         "heading_size": "h2",
         "introduction": "",
         "text_allignment": "left",
-        "columns_desktop": 3,
-        "swipe_on_desktop": false,
+        "columns_desktop": 6,
+        "swipe_on_desktop": true,
         "color_scheme": "accent-1",
-        "columns_mobile": "2",
+        "columns_mobile": "3",
         "swipe_on_mobile": true,
         "slider_visual": "counter",
         "padding_top": 0,
