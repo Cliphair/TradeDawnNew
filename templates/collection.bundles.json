@@ -62,7 +62,8 @@
         "image_xRLP7x"
       ],
       "custom_css": [
-        "img {border-radius: 50%;}"
+        "img {border-radius: 50%;}",
+        "@media screen and (min-width: 750px) {.images-list {justify-content: center; } .slider-buttons{display:none; }}"
       ],
       "settings": {
         "title": "",
