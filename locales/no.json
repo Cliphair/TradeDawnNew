@@ -310,8 +310,76 @@
         },
         "datepicker": {
           "show_previous_month": "Vis forrige måned, {{month}} {{year}}",
-          "show_next_month": "Vis neste måned, {{month}} {{year}}"
+          "show_next_month": "Vis neste måned, {{month}} {{year}}",
+          "in_range": "Innen rekkevidde",
+          "range_start": "Rekkestart",
+          "range_end": "Rekkevidde slutt"
+        },
+        "list_formatter": {
+          "and": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, og {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} og {{secondWord}}"
+          },
+          "or": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, eller {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} eller {{secondWord}}"
+          },
+          "narrow": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, {{lastWord}}",
+            "twoWordConnector": "{{firstWord}}, {{secondWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Klynge av {{number}} markør",
+            "other": "Klynge av {{number}} markører"
+          }
+        },
+        "sheet": {
+          "expand": "Utvide"
+        },
+        "dropzone": {
+          "add_file": "Legg til fil",
+          "invalid_file_type": "Filtype støttes ikke",
+          "dragged_over": "Slipp filen for å laste opp"
         }
+      },
+      "contact": {
+        "title": "informasjon",
+        "address_title": "Adresse",
+        "shipping_used_as_billing_notice": "Dette vil også bli brukt som din faktureringsadresse for denne bestillingen.",
+        "delivery_option_title": "Leverings metode",
+        "contact_method_title": "Kontakt",
+        "email_label": "E-post",
+        "email_placeholder": "E-post",
+        "email_or_phone_label": "E-post eller mobilnummer",
+        "email_or_phone_placeholder": "E-post eller mobilnummer",
+        "stored_addresses_label": "Lagrede adresser",
+        "available_addresses_label": "Tilgjengelige adresser",
+        "new_address_label": "Bruk en ny adresse",
+        "first_name_label": "Fornavn",
+        "optional_first_name_label": "Fornavn (valgfritt)",
+        "last_name_label": "Etternavn",
+        "company_label": "Selskap",
+        "company_attention_label": "Bedrift/oppmerksomhet",
+        "optional_company_attention_label": "Firma/oppmerksomhet (valgfritt)",
+        "optional_company_label": "Firma (valgfritt)",
+        "address1_label": "Adresse",
+        "address2_label": "Leilighet, suite osv.",
+        "optional_address2_label": "Leilighet, suite osv. (valgfritt)",
+        "city_label": "By",
+        "country_label": "Land/region",
+        "country_code": "Lands-/regionkode",
+        "province_label": "Provins",
+        "province_placeholder": "Provins",
+        "county_label": "fylke",
+        "county_placeholder": "fylke",
+        "state_label": "Stat",
+        "state_placeholder": "Stat",
+        "region_label": "region"
       }
     }
   }
