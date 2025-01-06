@@ -2544,7 +2544,97 @@
       },
       "storefront": {
         "invalid_password": "Passordet er feil. Prøv igjen."
+      },
+      "tags": {
+        "add_articles": "Begrens søket til artikler som også har tag %{tag}",
+        "add_products": "Begrens utvalget til produkter som matcher taggen %{tag}",
+        "remove_articles": "Utvid søket til artikler som ikke er merket %{tag}",
+        "remove_products": "Fjern taggen %{tag}"
       }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Takk for at du abonnerer på vår e-postliste.",
+        "disclaimer": "Du kan melde deg av når som helst.",
+        "unsubscribe": "Avslutte abonnementet"
+      },
+      "unsubscribed": {
+        "confirmation": "Du har meldt deg av e-postlisten vår.",
+        "disclaimer": "Du vil ikke motta flere markedsføringsoppdateringer fra oss. Du kan abonnere på nytt når som helst.",
+        "preview": "Du forhåndsviser hva kundene vil se når de avslutter abonnementet."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Du har valgt å åpne e-postsporing.</b>",
+          "visibility": "Åpningspriser for e-post vil bli rapportert anonymt. Vi vil bare se om du har åpnet en e-post som en del av en samlet åpningshastighet for e-post.",
+          "opt_out_html": "Du kan <a style='text-decoration:underline;' href='%{link}'>velge bort</a> e-postsporing hvis du ikke ønsker å dele denne informasjonen.",
+          "preview_bar": "Du forhåndsviser hva kunder vil se når de velger å åpne e-postsporing."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Du har valgt bort sporing av åpen e-post.</b>",
+          "visibility": "Vi vil ikke se om du har åpnet e-postene våre.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Velg</a> åpen sporing via e-post.",
+          "preview_bar": "Du forhåndsviser hva kunder vil se når de velger bort sporing av åpen e-post."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Vi sporer ikke lenger e-poståpninger.</b>",
+          "privacy_policy": "Etter at denne e-posten ble sendt, oppdaterte vi personvernreglene våre, og vi sporer ikke lenger åpninger."
+        },
+        "track": {
+          "status_html": "<b>E-post åpen sporing rapporteres.</b>",
+          "visibility": "Vi vil bare se om du har åpnet e-posten, som en del av den totale åpningsraten for e-post."
+        },
+        "updated_policy": {
+          "status_html": "<b>E-post åpen sporing rapporteres.</b>",
+          "visibility": "Vi har oppdatert retningslinjene våre, og nå åpnes sporings-e-poster. Åpningspriser for e-post vil bli rapportert anonymt. Vi vil bare se om du har åpnet en e-post som en del av den totale åpningshastigheten for e-post.",
+          "opt_out_html": "Hvis du ikke ønsker å dele denne informasjonen, kan du <a style='text-decoration:underline;' href='%{link}'>melde deg av.</a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "På lager",
+          "out_of_stock": "Utsolgt"
+        }
+      },
+      "boolean": {
+        "true_label": "Ja",
+        "false_label": "Nei"
+      }
+    },
+    "search": {
+      "error": "Det oppsto et problem med å laste søkeresultatene dine. Oppdater siden eller prøv igjen senere.",
+      "sorting": {
+        "relevance": "Relevans",
+        "price_ascending": "Pris, lav til høy",
+        "price_descending": "Pris, høy til lav"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Feil - %{title}",
+      "products": "Produkter",
+      "shopping_cart": "din handlevogn",
+      "account": "Regnskap",
+      "create_account": "Opprett konto",
+      "reset_account": "Tilbakestill konto",
+      "addresses": "Adresser",
+      "order": "Rekkefølge %{name}",
+      "search": "Søk",
+      "search_results": {
+        "one": "Søk: %{count} resultat funnet for \"%{terms}\"",
+        "other": "Søk: %{count} resultater funnet for \"%{terms}\""
+      },
+      "collections": "Samlinger",
+      "not_found": "404 ikke funnet",
+      "challenge": "Utfordring",
+      "checkpoint": "Kontrollpunkt"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} rabatter er brukt"
+    },
+    "challenge": {
+      "message": "For å fortsette, gi oss beskjed om at du ikke er en robot."
     }
   }
 }
