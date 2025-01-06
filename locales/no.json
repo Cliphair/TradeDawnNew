@@ -2977,8 +2977,80 @@
         "submitted_label": "Sendt inn",
         "submitted_description": "Se gjennom bestillings- og betalingsdetaljer.",
         "there_was_a_problem_label": "Det var et problem",
-        "track_shipment": "Spor forsendelse"
-      }
+        "track_shipment": "Spor forsendelse",
+        "request_return": "Be om retur",
+        "view_order_for_details": "Se bestillingen for detaljer",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Administrer på Amazon"
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Administrer med Amazon",
+            "new_window_disclaimer": "(åpner et nytt vindu)"
+          }
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Levering garantert av",
+            "external_promise_brand_label": "Levering innen kl",
+            "not_delivered_by_label": "Leveres etter {{date}}",
+            "delivery_guarantee_expired_label": "Leveringsgarantien utløpt",
+            "modal_accessibility_button_label": "Leveringsløftedetaljer",
+            "download_shop_app_button_label": "Last ned Shop for å spore",
+            "track_with_shop_button_label": "Spor med Shop",
+            "claim_shop_cash_button_label": "Krev Shop Cash"
+          },
+          "details_modal": {
+            "title": "Leveringsgaranti",
+            "active_delivery_guarantee_label": "Levering innen kl {{date}}",
+            "expired_delivery_guarantee_description": "Denne bestillingens 30-dagers Shop Promise-garanti har utløpt.",
+            "expired_badge_label": "Utløpt",
+            "order_includes_guarantees_label": "Din bestilling inkluderer {{deliveryAgreementsCount}} garantier",
+            "order_includes_guarantees_description": "Shop Promise garanterer rask og pålitelig levering. Gjør krav på Shop Cash hvis bestillingen din kommer etter {{date}}.",
+            "delivered_after_label": "Leveres etter {{date}}",
+            "delivered_after_description": "Fordi bestillingen din kom sent, er du kvalifisert til å kreve {{amount}} Shop Cash.",
+            "claimed_shop_cash_description": "Fordi denne bestillingen kom sent, krevde du {{amount}} Shop Cash.",
+            "eligible_to_claim_shop_cash_description": "Fordi bestillingen din kom sent, er du kvalifisert til å kreve {{amount}} Shop Cash.",
+            "learn_more_button_label": "Lære mer",
+            "claim_shop_cash_button_label": "Krev Shop Cash",
+            "view_balance_in_shop_button_label": "Se saldo i Butikk",
+            "scan_to_claim_shop_cash_label": "Skann for å kreve Shop Cash"
+          }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Levering støttet av",
+            "mixed_brands_label": "Garantert levering",
+            "not_delivered_by_label": "Ikke levert av {{date}}",
+            "modal_accessibility_button_label": "Leveringsløftedetaljer"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Gjør krav på Shop Cash",
+            "no_shop_app_label": "{{appDownloadLink}} for å kreve Shop Cash",
+            "download_shop_app_label": "Last ned Shop"
+          },
+          "details_modal": {
+            "title": "Levering støttet av",
+            "modal_accessiblity_label": "Leveringsløftedetaljer",
+            "delivery_guarantee_label": "Leveringsgaranti",
+            "delivery_by_label": "Levering innen kl {{date}}",
+            "delivery_guaranteed_by_label": "Levering garantert av {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "Du kan være kvalifisert til å kreve Shop Cash hvis denne bestillingen kommer for sent.",
+              "may_be_eligible_not_authorized_label": "Du kan være kvalifisert til å kreve Shop Cash fordi denne bestillingen kom for sent. Logg inn for å se detaljer.",
+              "redeemed_label": "Du har allerede gjort krav på Shop Cash fordi denne bestillingen kom for sent.",
+              "expired_label": "Denne bestillingen er ikke kvalifisert for et krav om forsinket levering fordi 30-dagers garantien har utløpt.",
+              "no_shop_cash_label": "Denne bestillingen er ikke kvalifisert for et krav om forsinket levering fordi den ikke ble betalt med Shop Pay.",
+              "no_longer_guaranteed_label": "Disse varene er ikke lenger dekket av en leveringsgaranti.",
+              "claim_shop_cash_title": "Skann for å kreve {{amount}} i Shop Cash",
+              "claim_shop_cash_description": "Du kan bruke Shop Cash på fremtidige kjøp i Shop-appen."
+            }
+          }
+        }
+      },
+      "status_mark_as_delivered": "Merk som levert",
+      "fulfillment_status_title": "Oppfyllelsesstatus: {{status}}",
+      "buy_again": "Kjøp igjen"
     }
   }
 }
