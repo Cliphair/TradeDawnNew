@@ -3912,6 +3912,76 @@
       "copy_to_clipboard": "Kopier link",
       "share_url": "Link",
       "success_message": "Linken er kopiert til utklippstavlen"
+    },
+    "slider": {
+      "of": "eller",
+      "next_slide": "Skyv til høyre",
+      "previous_slide": "Skyv til venstre",
+      "name": "Skyveknapp"
+    }
+  },
+  "newsletter": {
+    "label": "Skriv inn e-postadressen din",
+    "success": "Takk for at du abonnerer",
+    "button_label": "Meld meg på"
+  },
+  "accessibility": {
+    "skip_to_text": "Hopp til innholdet",
+    "skip_to_product_info": "Gå til produktinformasjon",
+    "close": "Lukk",
+    "unit_price_separator": "per",
+    "vendor": "Leverandør:",
+    "error": "Feil",
+    "refresh_page": "Å velge et utvalg resulterer i en helsideoppdatering.",
+    "link_messages": {
+      "new_window": "Åpnes i et nytt vindu.",
+      "external": "Åpner ekstern nettside."
+    },
+    "loading": "Laster inn...",
+    "total_reviews": "totalt antall anmeldelser",
+    "star_reviews_info": "{{ rating_value }} av {{ rating_max }} stjerner",
+    "collapsible_content_title": "Sammenleggbart innhold",
+    "complementary_products": "Komplementære produkter"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blogg",
+      "read_more_title": "Les mer: {{ title }}",
+      "comments": {
+        "one": "{{ count }} kommentar",
+        "other": "{{ count }} kommentarer"
+      },
+      "moderated": "Vær oppmerksom på at kommentarer må godkjennes før de publiseres.",
+      "comment_form_title": "Legg igjen en kommentar",
+      "name": "Navn",
+      "email": "E-post",
+      "message": "Kommentar",
+      "post": "Post Kommentar",
+      "back_to_blog": "Tilbake til bloggen",
+      "share": "Del denne artikkelen",
+      "success": "Kommentaren din ble lagt ut! Takk skal du ha!",
+      "success_moderated": "Kommentaren din ble lagt ut. Vi vil publisere den om en liten stund, ettersom bloggen vår er moderert."
+    }
+  },
+  "onboarding": {
+    "product_title": "Eksempel på produkttittel",
+    "collection_title": "Samlingens navn"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "LEGG I VESKEN",
+      "choose_options": "Velg alternativer",
+      "choose_product_options": "Velg alternativer for {{ product_name }}",
+      "description": "Beskrivelse",
+      "inventory_in_stock": "På lager",
+      "inventory_in_stock_show_count": "{{ quantity }} på lager",
+      "inventory_low_stock": "Lite lager",
+      "inventory_low_stock_show_count": "Lav lagerbeholdning: {{ quantity }} igjen",
+      "inventory_out_of_stock": "Utsolgt",
+      "inventory_out_of_stock_continue_selling": "På lager",
+      "sku": "SKU",
+      "on_sale": "Skitne",
+      "product_variants": "Produktvarianter"
     }
   }
 }
