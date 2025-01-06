@@ -2268,9 +2268,83 @@
           "outdated": {
             "shipping_method": "Fraktalternativene er endret for bestillingen din. Se gjennom valget ditt.",
             "payment_terms": "Betalingsvilkårene er endret. Se gjennom bestillingen din"
+          },
+          "invalid": {
+            "shipping_address": "Skriv inn en gyldig leveringsadresse",
+            "billing_address": "Skriv inn en gyldig faktureringsadresse",
+            "shipping_option": "Velg et gyldig fraktalternativ",
+            "email": "Skriv inn en gyldig e-post",
+            "zone": "Angi en gyldig stat/provins",
+            "emirate": "Skriv inn et gyldig emirat",
+            "postal_code": "Skriv inn et gyldig postnummer",
+            "phone": "Skriv inn et gyldig telefonnummer",
+            "reduction_code": "Skriv inn en gyldig rabattkode eller gavekort",
+            "billing_must_match_shipping": "Må samsvare med leveringsadressen"
+          },
+          "missing": {
+            "first_name": "Skriv inn et fornavn",
+            "last_name": "Skriv inn et etternavn",
+            "address1": "Skriv inn en adresse",
+            "address2": "Gå inn i en leilighet, suite osv.",
+            "city": "Skriv inn en by",
+            "province": "Velg en stat/provins",
+            "country": "Velg et land/region",
+            "zip": "Skriv inn et postnummer",
+            "phone": "Skriv inn et telefonnummer"
+          },
+          "formatting": {
+            "name_contains_emojis": "Slett emoji fra navnet ditt",
+            "postal_code_contains_emoji": "Slett emoji fra postnummeret ditt",
+            "first_name_too_long": "Fornavnet inneholder for mange bokstaver",
+            "last_name_too_long": "Etternavnet inneholder for mange bokstaver"
+          },
+          "select_different_shipping_address_to_resolve_errors": "Leveringsadressen din er ugyldig. Velg en annen adresse eller bruk en ny."
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "Reduser størrelsen på notatet til 5000 eller færre tegn."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "Gavekortprisen må være større enn 0.",
+            "gift_card_price_must_not_exceed_limit": "Gavekortprisen må ikke overstige %{gift_card_limit}.",
+            "subtotal_limit_reached": "Maksimalverdien for ordrelinjer er nådd."
           }
         }
       }
+    },
+    "pagination": {
+      "previous": "Tidligere",
+      "next": "Neste"
+    },
+    "links": {
+      "powered_by_shopify": "Drevet av Shopify",
+      "learn_more": "Lære mer"
+    },
+    "feed": {
+      "more": "Mer"
+    },
+    "attributes": {
+      "email": "e-post",
+      "password": "passord",
+      "password_confirmation": "Passordbekreftelsen",
+      "first_name": "fornavn",
+      "last_name": "etternavn",
+      "body": "kropp",
+      "signature": "Adresse"
+    },
+    "addresses": {
+      "zip_code": "post kode",
+      "postal_code": "Postnummer",
+      "postcode": "postnummer",
+      "pincode": "Pinkode",
+      "region": "region",
+      "prefecture": "Prefektur",
+      "province": "Provins",
+      "state": "Stat",
+      "state_and_territory": "Stat/territorium",
+      "county": "fylke"
     }
   }
 }
