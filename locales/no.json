@@ -3857,8 +3857,61 @@
       "log_out_everywhere": {
         "title": "Logg ut overalt",
         "description": "Hvis du har mistet en enhet eller har sikkerhetsproblemer, logg ut overalt for å sikre sikkerheten til kontoen din.",
-        "button": "Logg ut overalt"
+        "button": "Logg ut overalt",
+        "warning_message": "Du vil også bli logget ut på denne enheten."
       }
+    }
+  },
+  "general": {
+    "password_page": {
+      "login_form_heading": "Gå inn i butikken med passord:",
+      "login_password_button": "Skriv inn med passord",
+      "login_form_password_label": "Passord",
+      "login_form_password_placeholder": "Ditt passord",
+      "login_form_error": "Feil passord!",
+      "login_form_submit": "Tast inn",
+      "admin_link_html": "Er du butikkeier? <a href=\"/admin\" class=\"link underlined-link\">Logg inn her</a>",
+      "powered_by_shopify_html": "Denne butikken vil bli drevet av {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Del på Facebook",
+        "share_on_twitter": "Tweet på Twitter",
+        "share_on_pinterest": "Fest på Pinterest"
+      },
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Fortsette å handle",
+    "pagination": {
+      "label": "Personsøking",
+      "page": "Side {{ number }}",
+      "next": "Neste side",
+      "previous": "Forrige side"
+    },
+    "search": {
+      "search": "jeg leter etter...",
+      "reset": "Fjern søkeord"
+    },
+    "cart": {
+      "view": "Se handlekurv ({{ count }})",
+      "view_empty_cart": "Se handlekurv",
+      "item_added": "Vare lagt til i handlekurven din"
+    },
+    "share": {
+      "close": "Lukk andel",
+      "copy_to_clipboard": "Kopier link",
+      "share_url": "Link",
+      "success_message": "Linken er kopiert til utklippstavlen"
     }
   }
 }
