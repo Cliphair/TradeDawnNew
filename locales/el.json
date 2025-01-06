@@ -561,5 +561,12 @@
       "signup_form_success": "We will send you an email right before we open!",
       "password_link": "Enter using password"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "payment_errors": {
+        "expired_buyer_action": "Η απαιτούμενη ενέργεια έχει λήξει. Δοκιμάστε ξανά ή χρησιμοποιήστε διαφορετικό τρόπο πληρωμής."
+      }
+    }
   }
 }
