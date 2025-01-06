@@ -132,7 +132,7 @@
         "scroll_mobile": true,
         "duration_mobile": 20,
         "columns_desktop": 3,
-        "scroll_desktop": false,
+        "scroll_desktop": true,
         "duration_desktop": 20,
         "padding_top": 20,
         "padding_bottom": 20
