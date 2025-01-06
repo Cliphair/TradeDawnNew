@@ -3515,7 +3515,99 @@
         "edit_modal_title": "Rediger PO-nummer",
         "empty_state": "Ingen PO-nummer",
         "modal_po_number_input_label": "Postnummer",
-        "modal_po_number_input_max_length_error": "PO-numre har en maksimum på {{maxLength}} tegn."
+        "modal_po_number_input_max_length_error": "PO-numre har en maksimum på {{maxLength}} tegn.",
+        "save": "Lagre",
+        "title": "PO #{{poNumber}}"
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Det oppsto et problem med å slette denne adressen. Prøv på nytt eller oppdater siden."
+      },
+      "addresses_loading_issue": {
+        "description": "Tilkoblingsfeil. Sjekk Internett-tilkoblingen din og prøv igjen."
+      },
+      "banner_title": {
+        "one": "Det er {{count}} feil",
+        "other": "Det er {{count}} feil"
+      },
+      "failed_address_creation": {
+        "description": "Det oppsto et problem med å opprette adressen din. Prøv å oppdatere denne siden eller sjekk internettforbindelsen din."
+      },
+      "failed_address_update": {
+        "description": "Det oppsto et problem med å oppdatere adressen din. Prøv å oppdatere denne siden eller sjekk internettforbindelsen din."
+      },
+      "load_orders_error": {
+        "title": "Kan ikke laste bestillinger",
+        "description": "Prøv på nytt eller kom tilbake senere.",
+        "retry_button": "Prøv på nytt"
+      },
+      "load_paypal_error": {
+        "description": "Det er et problem med å laste inn PayPal. Vær så snill, prøv på nytt."
+      },
+      "logout_everywhere": {
+        "description": "Noe gikk galt under utlogging. Vær så snill, prøv på nytt."
+      },
+      "no_access_to_locations": {
+        "description": "Du har ikke tilgang til noen steder"
+      },
+      "not_found": {
+        "description": "Sjekk URL-en eller prøv igjen om noen minutter.",
+        "title": "Det er et problem med å laste denne siden"
+      },
+      "order_not_found": {
+        "description": "Denne bestillingen eksisterer ikke, eller du har ikke tillatelse til å se den.",
+        "title": "Finner ikke bestillingen"
+      },
+      "profile_update_error": {
+        "description": "Det oppsto et problem med å oppdatere profilen din. Prøv å oppdatere denne siden eller sjekk internettforbindelsen din."
+      },
+      "retry_action_label": "Prøv på nytt",
+      "load_extension_error": {
+        "title": "Feil",
+        "description": "Oppdater denne siden eller prøv igjen om noen minutter.",
+        "refresh_button": "Oppdater side"
+      }
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "For mange forsøk",
+        "description": "Vennligst prøv igjen om noen minutter"
+      }
+    },
+    "payment_methods": {
+      "title": "Betalingsmetoder",
+      "add_payment_method_button": "Legg til betalingsmåte",
+      "add_payment_method_banner": "Legg til betalingsmetode for raskere utsjekking eller forhåndsautoriserte tjenester",
+      "no_payment_methods_banner": "Ingen betalingsmetoder lagt til",
+      "edit_payment_method_button_accessibility_label": "Rediger {{paymentMethodName}} som slutter med {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Redigere {{paymentMethodName}}",
+      "delete_payment_method_button": "Slett",
+      "delete_payment_method_button_accessibility_label": "Slett {{paymentMethodName}}",
+      "back_button": "Tilbake",
+      "back_button_accessibility_label": "Tilbake til {{paymentMethodStepTitle}}",
+      "default": "Misligholde",
+      "generic_card": "Kort",
+      "expiration_warning_button_accessibility_label": "Vis utløpsadvarsel for {{paymentMethodName}} som slutter med {{lastDigits}}",
+      "expires_soon": "Dette kortet utløper snart",
+      "expired": "Dette kortet er utløpt",
+      "card_update_consent": "Denne betalingsmåten vil bli lagret for fremtidige kjøp.",
+      "digital_wallet_title": "Digital lommebok",
+      "credit_or_debit_card_title": "Kreditt- eller debetkort",
+      "google_pay": {
+        "loading": "Laster inn Google Pay",
+        "errors": {
+          "generic": "Det oppsto et problem med Google Pay. Prøv på nytt eller bruk en annen betalingsmetode.",
+          "missing_billing_address": "Google Pay krever en faktureringsadresse. Vennligst legg til en til kontoen din."
+        }
+      },
+      "apple_pay": {
+        "loading": "Laster inn Apple Pay",
+        "errors": {
+          "generic": "Det var et problem med Apple Pay. Prøv på nytt eller bruk en annen betalingsmetode.",
+          "not_available": "Apple Pay er ikke tilgjengelig på denne enheten.",
+          "missing_billing_address": "Apple Pay krever en faktureringsadresse. Vennligst legg til en til kontoen din."
+        }
       }
     }
   }
