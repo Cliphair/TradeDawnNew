@@ -3981,7 +3981,71 @@
       "inventory_out_of_stock_continue_selling": "På lager",
       "sku": "SKU",
       "on_sale": "Skitne",
-      "product_variants": "Produktvarianter"
+      "product_variants": "Produktvarianter",
+      "media": {
+        "load_image": "Last bilde {{ index }} i gallerivisning",
+        "gallery_viewer": "Galleri Viewer",
+        "load_model": "Last inn 3D-modell {{ index }} i galleri-visning",
+        "load_video": "Spill video {{ index }} i gallerivisning",
+        "image_available": "Bilde {{ index }} er nå tilgjengelig i gallerivisning",
+        "open_media": "Åpne media {{ index }} i modal",
+        "play_model": "Spill 3D Viewer",
+        "play_video": "Spill av video"
+      },
+      "quantity": {
+        "label": "Mengde",
+        "input_label": "Mengde for {{ product }}",
+        "increase": "Øk mengde for {{ product }}",
+        "decrease": "Reduser mengde for {{ product }}",
+        "minimum_of": "Minimum på {{ quantity }}",
+        "maximum_of": "Maksimalt {{ quantity }}",
+        "multiples_of": "Økninger på {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i handlekurven",
+        "note": "Se mengderegler"
+      },
+      "volume_pricing": {
+        "title": "Volumprising",
+        "note": "Volumpriser tilgjengelig",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "til {{ price }}/stk",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "Se butikkinformasjon",
+        "check_other_stores": "Sjekk tilgjengelighet i andre butikker",
+        "pick_up_available": "Henting tilgjengelig",
+        "pick_up_available_at_html": "Kan hentes kl <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Henting er for øyeblikket ikke tilgjengelig kl <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Kunne ikke laste inn tilgjengelighet for henting",
+        "refresh": "Forfriske"
+      },
+      "price": {
+        "from_price_html": "Fra {{ price }}",
+        "regular_price": "Vanlig pris",
+        "sale_price": "Salgs pris",
+        "unit_price": "Enhetspris"
+      },
+      "share": "Del dette produktet",
+      "sold_out": "Utsolgt",
+      "unavailable": "Utilgjengelig",
+      "vendor": "Leverandør",
+      "value_unavailable": "{{ option_value }} - Ikke på lager",
+      "variant_sold_out_or_unavailable": "Varianten er utsolgt eller ikke tilgjengelig",
+      "video_exit_message": "{{ title }} åpner fullskjermvideo i samme vindu.",
+      "view_full_details": "Se alle detaljer",
+      "xr_button": "Se i rommet ditt",
+      "xr_button_label": "Se i rommet ditt, laster inn element i utvidet virkelighet-vindu",
+      "include_taxes": "Avgift inkludert.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Frakt</a> beregnes i kassen."
+    },
+    "modal": {
+      "label": "Mediegalleri"
+    },
+    "facets": {
+      "apply": "Søke",
+      "clear": "Klar",
+      "clear_all": "Fjern alle",
+      "from": "Fra"
     }
   }
 }
