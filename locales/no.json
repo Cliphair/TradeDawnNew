@@ -2480,8 +2480,70 @@
           "paid": "Betalt",
           "unpaid": "Ubetalt",
           "voided": "Ugyldig",
-          "partially_paid": "Delvis betalt"
+          "partially_paid": "Delvis betalt",
+          "partially_refunded": "Delvis refundert",
+          "refunded": "Refundert",
+          "expired": "Utløpt"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Oppfylt",
+          "complete": "Fullstendig",
+          "partial": "Delvis",
+          "unfulfilled": "Uoppfylt",
+          "restocked": "Fylles på lager"
+        },
+        "transaction_status": {
+          "success": "Suksess",
+          "pending": "Avventer",
+          "failure": "Feil",
+          "error": "Feil"
+        },
+        "cancel_reason": {
+          "declined": "Betaling avvist",
+          "inventory": "Varer er utilgjengelige",
+          "fraud": "Uredelig ordre",
+          "customer": "Kunden endret/kansellerte ordre",
+          "staff": "Personalfeil",
+          "other": "Annen"
+        },
+        "cash_on_delivery": "Postoppkrav (COD)"
+      },
+      "cart": {
+        "only_n_items_available": "Du kan bare legge til %{count} %{name} i handlekurven.",
+        "too_many_items_in_cart": "Du kan ikke legge til mer %{name} i handlekurven.",
+        "less_than_minimum": "Denne varen har et minimum av %{min}.",
+        "more_than_maximum": "Denne varen har et maksimum på %{max}.",
+        "not_respect_step": "Du kan bare legge til dette elementet i trinn på %{step}.",
+        "all_items_in_cart": "Alle %{count} %{name} er i handlekurven din.",
+        "empty_update": "kan ikke oppdatere tom handlekurv",
+        "missing_parameters": "ingen gyldig ID eller linjeparameter",
+        "generic_error": "Handlevognfeil",
+        "product_not_available": "Produktet er ikke tilgjengelig",
+        "too_many_line_items_error": "Din handlekurv kan ikke inneholde mer enn %{max} varer.",
+        "link_expired": "Linken er utløpt",
+        "link_no_longer_exists": "Linken eksisterer ikke lenger.",
+        "stock_problems_html": "En eller flere varer er ikke lenger tilgjengelig. Vi har levert en <a href='%{link}'>oppdatert handlekurv</a> .",
+        "changed": "Handlevogn byttet",
+        "items_changed": "Ett eller flere elementer er endret.",
+        "product_sold_out": "Produktet '%{name}' er allerede utsolgt.",
+        "variant_not_found": "Finner ikke variant",
+        "variant_requires_selling_plan": "Variant kan kun kjøpes med en salgsplan.",
+        "selling_plan_not_available_for_company_locations": "Kun engangskjøp er tilgjengelig for B2B-bestillinger",
+        "digital_product_not_available_for_company_locations": "Denne varen kan ikke legges til en B2B-bestilling",
+        "selling_plan_not_applicable": "Kan ikke bruke salgsplan på variant",
+        "shipping_address_not_required": "Denne handlekurven krever ikke frakt",
+        "shipping_address_invalid": "Det oppsto et problem med å beregne fraktprisene dine. Fortsett til kassen for å velge en fraktpris før du fullfører bestillingen.",
+        "bundle_requires_components": "Bundleproduktet '%{name}' kan ikke legges til i handlekurven.",
+        "gift_card_with_components_not_supported": "Bundleproduktet '%{name}' kan ikke legges til i handlekurven.",
+        "gift_card_price_must_be_greater_than_zero": "Bundleproduktet '%{name}' kan ikke legges til i handlekurven.",
+        "view_lines_limit_reached": "Linjene må være mindre enn %{limit}",
+        "cart_too_large": "Handlevognen er for stor.",
+        "merchandise_line_transformers": {
+          "run_error": "Det oppsto en feil i handlekurven din."
         }
+      },
+      "storefront": {
+        "invalid_password": "Passordet er feil. Prøv igjen."
       }
     }
   }
