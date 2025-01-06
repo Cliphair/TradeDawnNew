@@ -2104,7 +2104,90 @@
         "search_button": "Søk",
         "address_label": "Adresse",
         "selector_tabs": "Velger for hentepunkt",
-        "selector_tab_map": "Kart"
+        "selector_tab_map": "Kart",
+        "selector_tab_list": "Liste",
+        "could_not_resolve_address": "Kunne ikke finne adressen din. Prøv på nytt eller bruk en annen adresse",
+        "no_pickup_points_near_you": "Ingen hentepunkter funnet i nærheten av den valgte adressen",
+        "no_pickup_points_near_location": "Ingen hentepunkter funnet i nærheten av din plassering",
+        "no_pickup_points_found": "Ingen hentepunkter funnet",
+        "paginator": {
+          "next_accessibility_label": "Neste side",
+          "previous_accessibility_label": "Forrige side",
+          "header": {
+            "one": "Viser %{first} - %{last} av %{count} poeng",
+            "other": "Viser %{first} - %{last} av %{count} punkter"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} av %{count} punkter",
+            "other": "%{pickup_point_index} av %{count} punkter"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} av %{count} poeng",
+            "other": "%{first} - %{last} av %{count} poeng"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} hentepunkt i nærheten av ditt sted",
+          "other": "%{count} hentepunkter i nærheten av ditt sted"
+        },
+        "change": "Endring",
+        "waiting_on_pickup_point_location_notice": "Søker etter hentepunkter...",
+        "geolocation": {
+          "shared_location_button": "Bruk posisjonen min",
+          "errors": {
+            "unsuported_by_browser": "Å få geolokalisering støttes ikke av nettleseren din. Prøv på nytt eller bruk en annen nettleser.",
+            "permission_not_allowed": "Tillat deling av posisjonen din.",
+            "permission_denied": "Kunne ikke finne posisjonen din. Prøv igjen."
+          }
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Det var et problem med kassen vår",
+          "message": "Oppdater denne siden eller prøv igjen om noen minutter",
+          "action": {
+            "cta": "Oppdater side"
+          },
+          "request_id": "Forespørsels-ID: {{requestId}}"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Gå tilbake til handlekurven",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} for å oppdatere mengdene",
+        "subscription_changed": "Ett av abonnementene dine er endret.",
+        "company_location_changed": "Handlekurven din har blitt oppdatert. Se gjennom bestillingen din før du sender den.",
+        "company_location_changed_product_removed": "Handlekurven din har blitt oppdatert fordi noen produkter ikke er tilgjengelige på dette stedet. Se gjennom bestillingen din før du sender den.",
+        "violations_title": "{{violation}} mangler eller er ugyldig",
+        "individual_violations_title": {
+          "DeliveryViolations": "Sendingsadresse",
+          "PaymentViolations": "Fakturaadresse",
+          "OtherViolations": "BESTILLINGSINFORMASJON",
+          "UnhandledViolations": "BESTILLINGSINFORMASJON"
+        },
+        "all_violations_content": "Ring eller {{emailLink}} oss for å oppdatere denne informasjonen og fullføre bestillingen din:",
+        "all_violations_email_link": "e-post",
+        "editable_shipping_address_violations_message_title": "Legg til denne informasjonen for å fullføre bestillingen:",
+        "editable_shipping_address_violations_message_footer": "For å permanent oppdatere adressen for denne plasseringen, {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "kontakt oss",
+        "shipping_address_incomplete_title": "Leveringsadressen er ufullstendig",
+        "calculating_shipping": "Frakt beregnes fortsatt. Prøv igjen om noen sekunder. Du har ikke blitt belastet.",
+        "calculating_taxes": "Skatter beregnes fortsatt. Prøv igjen om noen sekunder. Du har ikke blitt belastet."
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Anmeldelse",
+          "link_label": "{{partnerDisplayName}} Vilkår og betingelser"
+        }
+      },
+      "online_store_chat": {
+        "title": "Spørsmål? snakk med oss"
+      },
+      "local_pickup": {
+        "location_address_search_label": "Adresse",
+        "location_information": {
+          "one": "Det er %{count} butikk med lager nær %{address}",
+          "other": "Det er %{count} butikker med lager nær %{address}"
+        }
       }
     }
   }
