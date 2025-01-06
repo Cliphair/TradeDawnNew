@@ -1082,7 +1082,69 @@
         "cashapppay_label": "Cash App Pay",
         "przelewy24_label": "Przelewy24",
         "blik_label": "Se",
-        "twint_label": "Twint"
+        "twint_label": "Twint",
+        "mobilepay_label": "Mobile Pay",
+        "vipps_label": "VIP-er",
+        "grabpay_label": "GrabPay",
+        "kcp_creditcard_label": "KCP kredittkort",
+        "purchase_options_card_update_agreement_label_html": "Ved å oppdatere betalingsmåten din godkjenner du betalinger for gjentakende eller utsatte kjøp i henhold til denne butikkens <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">kanselleringspolicy</a> .",
+        "subscription_card_update_agreement_label": "Endring av betalingsmåte vil oppdatere abonnementet ditt og fremtidige gjentakende betalinger.",
+        "subscription_agreement_label": "En eller flere varer i handlekurven din er et utsatt kjøp eller et abonnement. Ved å fortsette med betalingen godtar du at betalingsmåten din automatisk belastes med prisen og frekvensen som er oppført på denne siden til den avsluttes eller du kansellerer. Alle kanselleringer er underlagt %{cancelled}.",
+        "subscription_agreement_cancelled": "avbestillingsregler",
+        "subscription_heading": "Abonnementsavtale",
+        "subscription_agreement_label_html": "Jeg forstår at jeg godtar et abonnement. Den fornyes til prisen og frekvensen som er oppført til den slutter eller er\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">avbrutt</a>.\n",
+        "purchase_options_agreement_label": "En eller flere varer i handlekurven din er et utsatt eller tilbakevendende kjøp. Ved å fortsette med betalingen godtar du at betalingsmåten din automatisk belastes med prisen og frekvensen som er oppført på denne siden til den avsluttes eller du kansellerer. Alle kanselleringer er underlagt  %{cancellation_policy_label}.",
+        "purchase_options_agreement_label_html": "Jeg forstår at en eller flere varer i handlekurven min er et utsatt eller tilbakevendende kjøp. Ved å fortsette godtar jeg\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">avbestillingsregler</a>\nog autorisere deg til å belaste betalingsmåten min til prisene, frekvensen og datoene som er oppført på denne siden frem til min\nbestillingen er oppfylt eller jeg kansellerer, hvis det er tillatt.\n",
+        "purchase_options_agreement_label_wallets": "Ved å fortsette med betalingen, godtar du de fremtidige kostnadene som er oppført på denne siden og kanselleringsreglene.",
+        "change_currency_section_description": "Velg et valutaalternativ",
+        "no_real_orders_dev_store": "Denne butikken kan ikke akseptere ekte bestillinger eller ekte betalinger.",
+        "waiting_on_payment_methods": "Får tilgjengelige betalingsmåter...",
+        "apple_pay_payment_error": "Betalingen din kunne ikke fullføres. Prøv på nytt eller bruk en annen betalingsmetode.",
+        "taxes_not_included": "Skatter ikke inkludert",
+        "no_taxes_banner_content": "Avgifter belastes ikke for denne bestillingen. Når du har samlet inn betalingen, kan det ikke lenger legges til skatter.",
+        "paypal": {
+          "connect": "Klikk for å koble til PayPal-kontoen din"
+        },
+        "apple": {
+          "connect": "Klikk for å koble til Apple Pay-kontoen din",
+          "not_available": "Apple Pay er ikke tilgjengelig i denne nettleseren. For å koble til Apple Pay-kontoen din må du bruke Safari på en Apple-enhet."
+        },
+        "google": {
+          "connect": "Klikk for å koble til Google Pay-kontoen din",
+          "error_authorizing": "Feil ved autorisering av betaling"
+        },
+        "account_connected": "Konto tilkoblet.",
+        "mor_disclaimer_html": "Ved å klikke nedenfor og fullføre bestillingen, godtar du å kjøpe varen(e) fra Global-e som registrert selger\nfor denne transaksjonen, på Global-e sine <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">vilkår og betingelser</a>\nog <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">retningslinjer for personvern</a> . Global-e er en internasjonal\nleverandør av oppfyllelsestjenester til %{shop_name}\n",
+        "pending_payment": {
+          "due_notice": "Din betaling på %{amount_due} forfaller den %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "Din betaling på %{amount_due} forfaller.",
+            "instruction_html": "Foreta betalingen din på Multibanco eller online ved å bruke detaljene nedenfor. For spørsmål eller for å oppdatere betalingsdetaljer, %{contact_us}.",
+            "entity": "Entitet",
+            "reference": "Henvisning",
+            "amount": "Beløp",
+            "find_nearest_atm": "Finn nærmeste minibank"
+          }
+        },
+        "update_payment_method": "Oppdater betalingsmåten",
+        "order_covered_by_store_credit_notice": "Bestillingen din dekkes av butikkkreditten din.",
+        "order_covered_by_redeemables_notice": "Bestillingen din er dekket.",
+        "store_credit": {
+          "label": "Butikkreditt",
+          "apply_label": "Bruk butikkkreditt",
+          "add_label": "Legg til butikkkreditt",
+          "manage_label": "Administrer butikkkreditt",
+          "buying_gift_card": "Du kan ikke bruke butikkkreditt til å kjøpe et gavekort",
+          "no_fixed_selling_plans": "Du kan ikke bruke butikkkreditt med utsatte kjøpsalternativer"
+        },
+        "clear": "Klar",
+        "billing_must_match_shipping_notice": "Betalingsmetodens faktureringsadresse må samsvare med leveringsadressen.",
+        "same_billing_address_checkbox_label": "Bruk leveringsadresse som faktureringsadresse",
+        "location_billing_address_label": "Steds faktureringsadresse",
+        "fact_billing_address_label": "Fakturaadresse",
+        "location_shipping_address_label": "Sted leveringsadresse",
+        "use_order_billing_address_label": "Bruk ordrefaktureringsadresse",
+        "use_location_billing_address_label": "Bruk stedets faktureringsadresse"
       }
     }
   }
