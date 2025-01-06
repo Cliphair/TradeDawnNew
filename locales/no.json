@@ -3308,7 +3308,67 @@
       "default_address_update_success_notification": "Standardadressen er oppdatert",
       "loading_add_form_accessibility_message": "Laster inn nytt adresseskjema",
       "loading_edit_form_accessibility_message": "Laster rediger adresseskjema",
-      "loading_form_accessibility_message": "Laster adresseskjema"
+      "loading_form_accessibility_message": "Laster adresseskjema",
+      "loading_finished_accessibility_message": "Adresseskjemaet er lastet inn",
+      "save": "Lagre",
+      "save_accessibility_label": "Lagre adresse {{address}}",
+      "section_title_accessibility_label": "Legg til adresse",
+      "update_success_notification": "Adressen er oppdatert"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Selskapsnavn",
+        "company_card_section_accessibility_label": "Selskap"
+      },
+      "locations": {
+        "contact_email": "E-post",
+        "contact_list_title": "Mennesker",
+        "contact_name": "Navn",
+        "contact_permissions": "Tillatelser",
+        "contact_phone_number": "Telefonnummer",
+        "location_picker_label": "Stedsnavn",
+        "location_picker_accessibility_label": "Stedsnavn: {{locationName}}",
+        "net_payment_terms_description": "{{name}}: betalinger forfaller innen {{numberOfDays}} dager",
+        "deposit_percentage": "{{percentage}} innskudd",
+        "own_role_contact_name": "Du",
+        "pagination": {
+          "load_more": "Last mer",
+          "load_more_accessibility_label": "Last inn flere lokasjoner"
+        },
+        "payment_details_title": "Betalingsinformasjon",
+        "payment_terms": "Betalingsbetingelser",
+        "permissions_label": "Dine tillatelser",
+        "permissions_title": "Tillatelser",
+        "section_title": "plassering",
+        "shipping_address_required": "Legg til en leveringsadresse til dette stedet for å begynne å legge inn bestillinger.",
+        "staff_and_permissions_title": "Personale og tillatelser",
+        "tax_details_title": "Skattedetaljer",
+        "tax_id": "Skatte-ID",
+        "tax_exemptions": "Skattefritak",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} mer",
+        "multiple_tax_exemptions_and": "og",
+        "tax_exemptions_modal_close": "Lukk",
+        "taxes_none": "Ingen",
+        "tax_exemption_not_applicable": "N/A",
+        "tax_exemptions_modal_button_accessibility_label": "Se alle skattefritak"
+      },
+      "location_selection": {
+        "continue_to_store": "Fortsett å lagre",
+        "description": "Hvis du allerede har varer i handlekurven, kan endring av plassering påvirke handlekurvpriser og kvanta.",
+        "list_accessibility_label": "Stedsliste",
+        "list_item_accessibility_label": "{{name}}: {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}}: Ingen adresse",
+        "list_loading_accessibility_message": "Laster inn liste over steder",
+        "list_loading_address_accessibility_message": "Laster adresse for {{locationName}}",
+        "list_loading_finished_accessibility_message": "Liste over steder er lastet inn",
+        "loading_store_accessibility_message": "Skal på butikk",
+        "no_location_title": "Kun personlige bestillinger",
+        "no_location_description": "Du har ikke lenger tillatelse til å legge inn bestillinger for {{company}}. Du kan fortsatt legge inn personlige bestillinger.",
+        "no_locations_found": "Ingen steder funnet",
+        "search": "Søk etter et sted",
+        "search_location_title": "Velg et sted",
+        "selection_cancel_button": "Avbryt"
+      }
     }
   }
 }
