@@ -1219,8 +1219,74 @@
         "order_edit_banner_title": "Betaling av {{amount_owed}} er nødvendig",
         "order_edit_banner_subtitle": "Din bestilling {{order_number}} ble oppdatert. Gå gjennom disse endringene, og betal for å bekrefte bestillingen din.",
         "order_edit_banner_items_added": {
-          "one": "La til"
-        }
+          "one": "La til",
+          "other": "La til %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Fjernet",
+          "with_quantities": "Fjernet {{delta}} av {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Returnert {{quantity}}",
+          "with_quantities": "Returnert {{delta}} av {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Fjernet fra retur",
+          "with_quantities": "Fjernet {{delta}} fra retur"
+        },
+        "order_edit_banner_single_item_added": "La til",
+        "order_edit_banner_multiple_items_added": "La til {{amount}}",
+        "order_edit_banner_single_item_removed": "Fjernet",
+        "order_edit_banner_multiple_items_removed": "Fjernet {{amount}}",
+        "order_edit_banner_single_item_returned": "Returnert",
+        "order_edit_banner_multiple_items_returned": "Returnert {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Fjernet fra retur",
+        "order_edit_banner_multiple_items_return_line_item_removed": "Fjernet {{amount}} fra retur",
+        "order_edit_banner_updated_order_label": "Oppdatert bestilling",
+        "gift_card_wrapper": {
+          "heading": "Gavekort",
+          "apply_gift_card_label": "Bruk et gavekort",
+          "apply_another_gift_card_label": "Bruk et annet gavekort",
+          "gift_card_label": "Gavekort %{identifier}",
+          "payment_tag": "Gavekort",
+          "add_label": "Legg til et gavekort",
+          "manage_label": "Administrer gavekort"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Legg til et gavekort eller butikkkreditt",
+          "manage_label": "Administrer gavekort eller lagre kreditt"
+        },
+        "gift_card_checkbox_label": "Bruk gavekort",
+        "custom_onsite_payment_method_modal": {
+          "title": "Tilpasset betalingsbekreftelse på stedet"
+        },
+        "markets_pro_disclaimer_label": "Ved å klikke nedenfor og fullføre bestillingen din, samtykker du i å kjøpe varen(e) dine fra Global-e som handelsmann for denne transaksjonen, i henhold til Global-e's %{markets_pro_terms} og %{privacy_policy}. Global-e er en internasjonal oppfyllelsestjenesteleverandør til %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Vilkår og betingelser",
+        "markets_pro_disclaimer_privacy_policy": "Personvernerklæring",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Forhandlerens vilkår og betingelser",
+        "markets_pro_disclaimer_privacy_policy_title": "Personvernerklæring for selgere",
+        "purchase_order_number": {
+          "title": "Postnummer",
+          "label": "PO-nummer (valgfritt)"
+        },
+        "alternative_payment_currency_total_notice": "Merk: du vil bli belastet %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Merk: konvertert total er %{amount_due}.",
+        "waiting_on_taxes_message": "Hvis skatten din ikke beregnes innen de neste sekundene, oppdater siden.",
+        "waiting_on_taxes_notice": "Beregning av skatter",
+        "payment_method": "Betalingsmetode",
+        "expired_payment_method": "Valgt betalingsmåte er utløpt",
+        "payment_method_update_failed": "Oppdatering av betalingsmåte mislyktes.",
+        "proposed_gateway_unavailable": "Den foreslåtte betalingsgatewayen er utilgjengelig",
+        "pay_in_installments_split_pay_short": "4 utbetalinger av %{amount}",
+        "gift_cards_unavailable": "Gavekortet ditt kan ikke lenger brukes på denne bestillingen og har blitt fjernet",
+        "payment_flexibility_terms_id_mismatch": "Betalingsfleksibilitetsvilkår ID samsvarer ikke"
+      },
+      "billing": {
+        "billing_address_title": "Regning til",
+        "same_as_shipping": "samme som leveringsadressen",
+        "add_address": "Bruk en annen adresse",
+        "edit": "Redigere",
+        "delete": "Slett"
       }
     }
   }
