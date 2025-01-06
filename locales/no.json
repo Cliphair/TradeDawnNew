@@ -3608,6 +3608,66 @@
           "not_available": "Apple Pay er ikke tilgjengelig på denne enheten.",
           "missing_billing_address": "Apple Pay krever en faktureringsadresse. Vennligst legg til en til kontoen din."
         }
+      },
+      "store_credit": {
+        "label": "Butikkreditt",
+        "accesibility_label": "Butikkreditt - {{formattedBalance}}",
+        "expirable_amounts_button": "Se utløpbare beløp",
+        "expirable_amounts_label": "Utløpsbeløp",
+        "details_modal": {
+          "title": "Utløpbar butikkkreditt",
+          "balance_label": "Balansere",
+          "expiration_date_label": "Utløpsdato",
+          "amount_label": "Beløp",
+          "date_label": "Dato",
+          "expirable_balance_info": "Noe av saldoen din vil utløpe på en fremtidig dato",
+          "expirable_amount_label": "Totalt utløpsbeløp",
+          "expirable_amounts_info": "Beløp som utløper tidligere, brukes først ved kassen",
+          "expirable_amounts_button": "Utsikt",
+          "expired_amounts_button": "Se utløpte beløp",
+          "pagination": {
+            "load_more_label": "Last mer",
+            "load_more_accessibility_label": "Last inn flere utløpbare beløp"
+          }
+        }
+      },
+      "payment_details": {
+        "title": "Detaljer om betalingsmåte",
+        "credit_card_details_accessibility_label": "slutter om {{lastDigits}}",
+        "billing_title": "Fakturaadresse",
+        "card_info_title": "Kortinformasjon",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expiring_on": "Utløper på {{expiryDate}}",
+        "payment_method_expired_on": "Utløp den {{expiryDate}}",
+        "preauthorized_payments": "Forhåndsautoriserte betalinger",
+        "close_payment_modal": "Lukk",
+        "close_payment_modal_accessibility_label": "Lukk betalingsmåtedetaljer modal",
+        "payment_method_not_found_error": "Finner ikke betalingsmåten",
+        "payment_details_loading": "Laster inn betalingsmåtedetaljer",
+        "pre_authorized_payments": "Forhåndsautoriserte betalinger",
+        "total_amount_of_subscription_line_items_left": "og {{total}} til",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} varer totalt, viser {{totalItemsToDisplay}} varer.",
+        "next_payment_due": "Neste betaling forfaller {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Redigere",
+        "edit_payment_method_button_accessibility_label": "Rediger betalingsmåten som slutter på {{lastDigits}}",
+        "loading_shop_pay": "Laster Shop Pay",
+        "invalid_payment_method": "Ugyldig betalingsmåte",
+        "invalid_payment_method_message": "Bruk et nytt kredittkort for å fortsette å motta kommende bestillinger.",
+        "replace_payment_method": "Bytt ut betalingsmåten",
+        "checkout_card_banner": "Denne betalingsmåten kan kun brukes for forhåndsautoriserte betalinger. Det vil ikke vises i kassen hvis du er logget inn i denne butikken.",
+        "default_checkbox": "Satt som standard",
+        "default_checkbox_accessibility_label": "Angi denne betalingsmåten som standard"
+      },
+      "edit_payment_method": {
+        "title": "Rediger betalingsmåte",
+        "save_payment_method_button": "Lagre",
+        "cancel_edit_payment_method_button": "Avbryt",
+        "payment_method_updated_toast": "Betalingsmåten er oppdatert",
+        "billing_address": "Fakturaadresse",
+        "billing_address_add_new": "Legg til ny",
+        "billing_address_choose_from_list": "Velg fra listen",
+        "future_purchases_notice": "Denne betalingsmåten vil bli lagret for fremtidige kjøp.",
+        "generic_error": "Det oppsto et problem under oppdateringen. Vær så snill, prøv på nytt."
       }
     }
   }
