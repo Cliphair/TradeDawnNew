@@ -1394,7 +1394,65 @@
         "gift_cards_not_supported_with_deferred_purchase_options": "Gavekort støttes ikke med utsatte kjøpsalternativer.",
         "gift_card_buying_gift_card": "Du kan ikke bruke et gavekort til å kjøpe et annet gavekort",
         "payment_gateway_missing": "Velg en betalingsmetode.",
-        "payment_gateway_needs_paid_plan_error": "Denne betalingsmåten er ikke tilgjengelig i butikken akkurat nå"
+        "payment_gateway_needs_paid_plan_error": "Denne betalingsmåten er ikke tilgjengelig i butikken akkurat nå",
+        "payment_gateway_incompatible_with_multi_currency": "For å fullføre denne kassen i din lokale valuta, må du betale med kredittkort.",
+        "payment_gateway_not_in_test_mode": "er ikke konfigurert for å teste bestillinger. Denne butikken kan ikke akseptere ekte bestillinger eller ekte betalinger.",
+        "payment_gateway_unsupported_for_subscriptions": "Denne betalingsmåten er ikke tilgjengelig for abonnementsbestillinger.",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "Denne betalingsmåten er ikke tilgjengelig for utsatte kjøpsalternativer.",
+        "payment_gateway_unsupported_for_country": "Denne betalingsmåten er ikke tilgjengelig for fraktlandet ditt.",
+        "payment_gateway_unsupported_for_development_store_html": "For å legge inn en testbestilling, må du bruke en testbetalingsgateway. Lær mer om <a href=\"%{docs_link}\">testing av bestillinger i utviklingsbutikker</a> .",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "Du har nådd grensen for utviklingsbutikkbestillinger med denne betalingsbehandleren. For å legge inn en annen bestilling, må du bruke en testbetalingsgateway. Lær mer om <a href=\"%{docs_link}\">testing av bestillinger i utviklingsbutikker</a> .",
+        "purchase_options_agreement_blank": "For å fortsette med kjøpet må du godta de utsatte eller gjentakende kjøpsvilkårene.",
+        "physical_gift_card_invalid_quantity": "Fysiske gavekortordrelinjer må ha et antall som samsvarer med antall gavekortkoder.",
+        "physical_gift_card_duplicate_code": "Fysisk gavekortordrelinje inneholder duplikatkode.",
+        "physical_gift_card_invalid_code": "Den fysiske gavekortkoden er ugyldig.",
+        "email_blank": "Skriv inn en e-post",
+        "phone_blank": "Skriv inn et telefonnummer",
+        "address_country_invalid": "Velg et land/region fra listen",
+        "address_zip_invalid": "Skriv inn et gyldig postnummer",
+        "gift_card_invalid": "Gavekortet «••••%{last_four_characters}» er ikke lenger gyldig",
+        "vaulting_agreement_blank": "Kortet ditt må lagres fordi saldoen for denne bestillingen skal betales senere.",
+        "sms_marketing_phone_invalid": "Skriv inn et gyldig telefonnummer",
+        "address_suggestion_did_you_mean_html": "Mente du %{html}?",
+        "split_cart_international_shipping_not_supported": "Alle varer må bruke samme leveringsmetode når de sendes internasjonalt. Oppdater leveringsmetoden eller opprett flere bestillinger."
+      },
+      "store_credit_errors": {
+        "generic_error": "Det oppsto et problem med butikkkreditten din. Prøv på nytt eller last inn siden på nytt."
+      },
+      "redeemable_errors": {
+        "gift_card": {
+          "duplicate": "Gavekortet er allerede brukt på bestillingen din",
+          "insufficient_funds": "Dette gavekortet har ingen midler igjen",
+          "expired": "Dette gavekortet er utløpt",
+          "not_available": "Dette gavekortet er ikke lenger tilgjengelig",
+          "invalid": "Skriv inn et gyldig gavekort",
+          "currency_mismatch": "Kun gavekort i %{shop_currency} aksepteres",
+          "generic": "Gavekortet kunne ikke legges til kassen",
+          "throttle_limit_exceeded": "Du har overskredet maksimalt antall forsøk. Prøv igjen senere.",
+          "no_longer_available": "Dette gavekortet kan ikke lenger brukes med denne kassen"
+        }
+      },
+      "payment_errors": {
+        "amount_too_small": "Minimumsbetalingsbeløpet må være høyere enn $0,50 USD. Vennligst prøv igjen med et høyere beløp.",
+        "method_not_available": "Den forespurte betalingsmåten er ikke tilgjengelig. Velg en annen betalingsmåte og prøv på nytt.",
+        "available_methods_updated": "Tilgjengelige betalingsmåter er oppdatert.",
+        "generic_error": "Det oppsto et problem under behandlingen av betalingen din. Prøv på nytt eller bruk en annen betalingsmetode.",
+        "rejected_transaction": "Betalingen din ble avvist. Prøv på nytt eller bruk en annen betalingsmetode.",
+        "credit_card_processing": "Betalingen din kan ikke behandles av tekniske årsaker. Prøv igjen om noen minutter, eller bruk en annen betalingsmetode.",
+        "checkout_amount_changed": "Betalingen din kunne ikke behandles fordi beløpet som skal betales i kassen har endret seg. Vennligst sjekk bestillingen din og prøv igjen.",
+        "deferred_payment_not_allowed": "Utsatt betaling er ikke tillatt. Vennligst sjekk bestillingen din og prøv igjen.",
+        "deferred_payment_required": "Denne bestillingen krever utsatt betaling. Vennligst sjekk bestillingen din og prøv igjen.",
+        "deferred_amount_changed": "Betalingen din kunne ikke behandles fordi det utsatte betalingsbeløpet er endret. Vennligst sjekk bestillingen din og prøv igjen.",
+        "deferred_date_changed": "Betalingen din kunne ikke behandles fordi den utsatte betalingsdatoen er endret. Vennligst sjekk bestillingen din og prøv igjen.",
+        "order_total_changed": "Bestillingssummen din er endret. Se gjennom og prøv igjen.",
+        "payment_processing": "Betalingen din kan ikke behandles av tekniske årsaker. Prøv på nytt eller bruk en annen betalingsmetode.",
+        "payment_processing_no_retry": "Betalingen din kan ikke behandles av tekniske årsaker. Prøv en annen betalingsmåte.",
+        "paypal_zero_amount": "Du kan ikke bruke PayPal for %{amount} bestillinger. Bekreft at bestillingen din er korrekt og gå til kassen uten PayPal.",
+        "paypal_invalid_token": "PayPal var ikke tilgjengelig. Prøv på nytt eller bruk et annet betalingsalternativ.",
+        "pay_later_failed": "Det oppsto en feil under behandling av betalingen din med Pay senere. Velg en annen betalingsmåte og prøv på nytt.",
+        "three_d_secure_failed": "Betalingen din kunne ikke bekreftes. Prøv på nytt eller bruk en annen betalingsmetode.",
+        "three_d_secure_failed_duplicate": "Kredittkortets 3D Secure-autentisering mislyktes fordi en annen allerede er i gang.",
+        "three_d_secure_throttled": "For mange forsøk; vennligst vent før du prøver igjen"
       }
     }
   }
