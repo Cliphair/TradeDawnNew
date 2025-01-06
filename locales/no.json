@@ -699,7 +699,74 @@
           "paid_today": "Totalt betalt i dag",
           "due_on_fulfillment_title": "Betaling av %{amount_due} forfaller ved oppfyllelse",
           "due_on_receipt_title": "Betaling av %{amount_due} forfaller ved mottak"
-        }
+        },
+        "deferred_balance_info": {
+          "due_on_fulfillment_title": "Saldo på {{amount_due}} forfaller ved oppfyllelse",
+          "title": "Saldo på {{amount_due}} forfaller den {{due_at}}"
+        },
+        "payment_terms_totals": {
+          "due_today": "Helt termin i dag",
+          "due_later": "Total forfall %{due_at}",
+          "due_on_fulfillment": "Total forfall ved oppfyllelse",
+          "due_on_receipt": "Sum forfaller ved mottak",
+          "due_later_checkout_to_draft": "Totalt forfaller senere",
+          "total_paid": "Totalt betalt"
+        },
+        "maximum_discount_code_limit_reached": "Du har nådd maksimalt antall rabattkoder. Fjern en eksisterende kode for å bruke <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> fungerer ikke akkurat nå. Kontakt oss for hjelp.",
+        "due_on_fulfillment": "Forfaller ved oppfyllelse",
+        "gift_card_masked": "•••• %{last_characters}",
+        "subscriptions": "Abonnementer",
+        "duties_label": "Plikter",
+        "duties_and_taxes_label": "Toll og skatter",
+        "error_duties_tooltip": "Denne bestillingen sendes fra et annet land, så toll og avgifter kan bli belastet ved levering.",
+        "may_be_charged_on_delivery": "Kan belastes ved levering",
+        "total_updated_label_with_price": "Oppdatert totalpris: %{totalPrice}",
+        "updated_shipping_method": "Oppdatert fraktmetode: %{shipping_method}",
+        "recurring_payments": "Gjentakende betalinger",
+        "recurring_total_multiple_label": "Denne bestillingen har en gjentakende kostnad for flere varer.",
+        "deferred_total_due_date_label": "Total forfall {{date}}",
+        "full_price": "Full pris: %{price}",
+        "custom_discount": "Tilpasset rabatt",
+        "expand_component_information": {
+          "one": "Vis %{count} element",
+          "other": "Vis %{count} elementer"
+        },
+        "collapse_component_information": {
+          "one": "Skjul %{count} element",
+          "other": "Skjul %{count} elementer"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "Legg til rabatt",
+          "merchandise_quantity_label": {
+            "one": "%{count} punkt",
+            "other": "%{count} gjenstander"
+          }
+        },
+        "alternative_payment_currency_total": "Belastet som %{amount_due}"
+      },
+      "shipping": {
+        "title": "Shipping",
+        "delivery_title": "Leveranse",
+        "shipping_method_title": "Forsendelsesmetode",
+        "shipping_method_one_time_purchase_group_title": "Engangskjøp",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Første sending",
+          "other": "Første forsendelser"
+        },
+        "shipping_method_subscription_group_title": "Abonnement",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Gjentakende forsendelse",
+          "other": "Gjentakende forsendelser"
+        },
+        "subscription_shipping": "Abonnementsfrakt",
+        "subscription_local_delivery": "Abonnement lokal levering",
+        "subscription_pickup": "Henting av abonnement",
+        "waiting_on_rate_notice": "Får tilgjengelige fraktpriser …",
+        "waiting_on_pickup_location_notice": "Får tilgjengelige hentesteder …",
+        "no_rates_for_cart_or_destination_notice": "Det er ingen tilgjengelige forsendelsesmetoder for handlekurven eller adressen din",
+        "no_pickup_location_notice": "Minst ett av produktene dine er ikke tilgjengelig for henting"
       }
     }
   }
