@@ -1513,8 +1513,72 @@
         "escape_confirmation": "Du har betalt for bestillingen din.",
         "escape_action": "Se ordrebekreftelse ›",
         "components": {
-          "close": "Lukk"
+          "close": "Lukk",
+          "processing": "Behandling…",
+          "expand": "Se mer",
+          "submit": "Sende inn"
         }
+      },
+      "processing": {
+        "redirecting_page_title": "Omdirigerer …",
+        "redirecting_title": "Omdirigerer …",
+        "redirecting_notice": "Vent mens vi omdirigerer deg.",
+        "redirecting_to_bank": "Omdirigerer til {{bank}}",
+        "complete_your_purchase_title": "Fullfør kjøpet",
+        "continue_to_payment_gateway_notice": "Fortsett til betaling for å legge til betalingsinformasjonen din.",
+        "continue_to_payment_gateway_button_label": "Fortsett å betale",
+        "complete_your_purchase_title_error": "Korriger betalingsinformasjonen din",
+        "continue_to_payment_gateway_notice_error": "Betalingsinformasjonen din kunne ikke bekreftes.",
+        "continue_to_payment_gateway_button_label_error": "Oppdater betalingsinformasjon",
+        "page_title": "Behandler ordre",
+        "title": "Behandler ordre",
+        "your_order_has_been_received_title": "takk for din bestilling",
+        "you_will_receive_confirmation": "Vi får mange bestillinger akkurat nå. Du bør snart motta bekreftelse på e-post eller tekstmelding. Gi oss beskjed hvis du ikke mottar den i løpet av den neste timen.",
+        "you_will_not_be_charged": "Du blir ikke belastet ennå",
+        "wait": {
+          "short": "Bestillingen din behandles.",
+          "medium": {
+            "one": "Din bestilling blir behandlet. Estimert ventetid er %{count} minutt.",
+            "other": "Din bestilling blir behandlet. Estimert ventetid er %{count} minutter."
+          },
+          "long": "Du vil motta en e-post så snart bestillingen din er behandlet. Det er for tiden et høyt ordrevolum.",
+          "no_auto_refresh_html": "Hvis du ikke blir omdirigert automatisk, %{link}.",
+          "refresh_this_page": "oppdater denne siden"
+        },
+        "action_required": "Handling kreves",
+        "modal_notice": "Fullfør den nødvendige handlingen for å fortsette"
+      },
+      "failed_payment": {
+        "page_title": "Betalingen kunne ikke behandles",
+        "title": "Betalingen kunne ikke behandles",
+        "payment_not_processed_title": "Betalingen din kunne ikke behandles",
+        "payment_not_processed_text": "Du har ikke blitt belastet. Gå tilbake til handlekurven for å fullføre kjøpet.",
+        "return_to_cart_button_label": "Gå tilbake til handlekurven"
+      },
+      "payment_gateway": {
+        "credit_card_label": "Kredittkort",
+        "bank_deposit_label": "Bankinnskudd",
+        "cash_on_delivery_label": "Postoppkrav (COD)",
+        "money_order_label": "Postanvisning",
+        "debit_card_label": "Debetkort",
+        "deferred_payment_label": "Velg betalingsmåte senere",
+        "fixed_payment_label": "Betalingen din forfaller den {{dueDate}}.",
+        "generic_payment_terms": "Du er på {{translatedName}} vilkår. Betalingen din forfaller den {{dueDate}}.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} til en konto med tilgang til denne plasseringen for å legge til eller bruke lagrede betalingsmåter.",
+            "link": "Logg Inn"
+          }
+        },
+        "direct_payment_terms": "Du er på {{translatedName}} vilkår. Kortet ditt vil bli belastet den {{dueDate}}.",
+        "fixed_direct_payment_terms": "Kortet ditt belastes pr {{dueDate}}.",
+        "order_due_on_fulfillment_choose_later": "Betalingen din forfaller når bestillingen er utført.",
+        "order_due_on_fulfillment_payment": "Kortet ditt vil bli belastet når bestillingen er fullført.",
+        "order_due_on_receipt_choose_later": "Betalingen din forfaller ved mottak.",
+        "order_deposit_due_now": "{{depositAmount}} forfaller i dag. Saldoen er på {{translatedName}} vilkår og forfaller den {{dueDate}}.",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} har termin i dag. Saldoen forfaller når bestillingen din er utført.",
+        "order_deposit_due_on_receipt": "{{depositAmount}} har termin i dag. Saldoen forfaller senere.",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} har termin i dag. Saldoen forfaller pr {{dueDate}}."
       }
     }
   }
