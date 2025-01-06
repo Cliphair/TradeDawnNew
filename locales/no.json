@@ -1730,7 +1730,65 @@
         "no_tracking_number": "Det er ikke noe sporingsnummer for denne bestillingen.",
         "out_for_delivery": "Ute for levering",
         "out_for_delivery_title": "Bestillingen din er ute for levering",
-        "out_for_delivery_description_html": "Bestillingen din er på vei og skal ankomme i dag. Hvis den ikke leveres i løpet av de neste 2 dagene, %{contact_us}."
+        "out_for_delivery_description_html": "Bestillingen din er på vei og skal ankomme i dag. Hvis den ikke leveres i løpet av de neste 2 dagene, %{contact_us}.",
+        "out_for_delivery_local_description_html": "Bestillingen din kommer snart.",
+        "out_for_delivery_local_title": "Bestillingen din er ute for levering",
+        "attempted_delivery": "Forsøkt levering",
+        "attempted_delivery_title": "Det ble gjort et forsøk på å levere bestillingen din",
+        "attempted_delivery_description_html": "Det ble gjort et forsøk på å levere bestillingen din, men det var mislykket. %{contact_us} for å avtale et nytt leveringsforsøk.",
+        "attempted_delivery_local_title": "Mistet levering",
+        "attempted_delivery_local_description_html": "Vi kunne ikke levere bestillingen din. For å planlegge en ny levering, %{contact_us}.",
+        "delivered": "Levert",
+        "delivered_title": "Bestillingen din er levert",
+        "delivered_description_html": "Bestillingen din er levert til adressen du oppga. Hvis du ikke har mottatt den, eller hvis du har andre problemer, %{contact_us}.",
+        "delivered_local_title": "Bestillingen din er levert",
+        "delivered_local_description_html": "Har du ikke mottatt bestillingen din? %{let_us_know}.",
+        "choose_payment_method_later": "Velg betalingsmåte senere",
+        "picked_up_title": "Bestillingen din er hentet",
+        "picked_up_description_html": "Din bestilling ble hentet på %{location_name} den %{date}.",
+        "contact_us": "Kontakt oss",
+        "contact_us_lowercase": "kontakt oss",
+        "contact_us_html": "Trenger hjelp? %{contact_us}",
+        "updated_time": "Oppdatert %{time_ago} siden",
+        "failure": "Ikke levert",
+        "failed_title": "Bestillingen din kunne ikke leveres",
+        "failed_contact_merchant": "Kontakt %{company} for å avtale levering.",
+        "failed_contact_merchant_no_company": "Kontakt oss for å avtale levering.",
+        "non_shippable_title": "Bestillingen din er fullført",
+        "let_us_know": "Gi oss beskjed",
+        "login_title": "Logg inn for å se alle ordredetaljer",
+        "login_description": "Du finner ordrenummeret ditt i kvitteringen du mottok på e-post.",
+        "login_description_phone": "Du finner ordrenummeret ditt i kvitteringen du mottok på tekstmelding.",
+        "login_not_customer_html": "Ikke %{name}? Du kan %{link}",
+        "login_reorder_link_text": {
+          "one": "kjøp dette produktet også",
+          "other": "kjøp disse produktene også"
+        },
+        "customer_information_hidden_fields_message": "Logg inn for å se all kundeinformasjon.",
+        "cancelled_title": "Bestillingen din er kansellert",
+        "cancelled_description": "Din bestilling ble kansellert den %{date}. Kontakt oss hvis du har spørsmål.",
+        "order_number_label": "Ordrenummer",
+        "customer_validation_error": "Skriv inn en gyldig e-post eller ordrenummer.",
+        "customer_validation_error_phone": "Skriv inn et gyldig telefon- eller ordrenummer.",
+        "login": "Logg Inn",
+        "unfulfilled_items_title": "Forbereder for frakt",
+        "unfulfilled_items_description": "Vi forbereder for tiden disse varene for frakt.",
+        "marker": {
+          "current": "Gjeldende forsendelsessted",
+          "shipping": "Sendingsadresse"
+        },
+        "pick_up_in_store_marker": {
+          "current": "Gjeldende forsendelsessted",
+          "shipping": "Hentested"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "Varer i denne forsendelsen",
+          "unfulfilled_table_title": "Varer som forberedes for frakt",
+          "product_image_label": "Produktbilde",
+          "description_label": "Beskrivelse",
+          "quantity_label": "Mengde"
+        },
+        "order_updates_description_missing": "Du mottar ikke fraktoppdateringer."
       }
     }
   }
