@@ -914,7 +914,69 @@
         "add_delivery_instructions": "Legg til leveringsinstruksjoner",
         "edit": "Redigere",
         "delete": "Slett",
-        "address_more": "Flere handlinger for denne adressen"
+        "address_more": "Flere handlinger for denne adressen",
+        "address_delete": "Slett adresse",
+        "address_edit": "Rediger adresse",
+        "address_confirm": "Er du sikker på at du vil slette denne adressen fra kontoen din?",
+        "address_default": "Satt som standard",
+        "address_form": {
+          "add_address": "Legg til adresse",
+          "save": "Lagre",
+          "cancel": "Avbryt",
+          "generic_error": "Det oppsto et problem med å lagre adressen din. Vær så snill, prøv på nytt.",
+          "one_time_address_subtitle": "Bruk en engangsadresse for denne bestillingen"
+        },
+        "different_shipping_method_summary": "Angi en annen leveringsadresse for å se tilgjengelige leveringsmetoder",
+        "invalid_shipping_method_summary": "Skriv inn en gyldig leveringsadresse for å se tilgjengelige leveringsmetoder",
+        "method_summary": {
+          "incomplete_address_entered": "Skriv inn en fullstendig leveringsadresse for å se tilgjengelige leveringsmetoder",
+          "incomplete_address_selected": "Velg en komplett leveringsadresse for å se tilgjengelige leveringsmetoder"
+        },
+        "local_pickup": {
+          "search_address": "Søk etter adresse",
+          "rollup_title": "Butikkens plassering"
+        },
+        "missing_shipping_address": "Leveringsadresse mangler",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} gjenstander",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} mer",
+        "split_shipping_merchandise_shipment_number": "Forsendelse %{number} av %{total}",
+        "pre_order_ships_now": "Sendes nå",
+        "pre_order_ships_later": "Sendes senere",
+        "pre_order_ships_date": "Skip %{date}",
+        "split_shipping_shipped_by_shop": "Sendt av %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Flere forsendelser",
+        "split_shipping_shipping_label": "Metode",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} forsendelser",
+        "split_shipping_multiple_shipment_notice": "Bestillingen din kommer i flere forsendelser",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Din bestilling vil ankomme i %{quantity} forsendelser",
+        "split_shipping_more_shipping_options": "Flere fraktalternativer",
+        "split_shipping_shipment_number": "Forsendelse %{number}",
+        "split_shipping_merchandise_quantity_label_inline_primary": "Mengde: %{quantity}",
+        "split_shipping_merchandise_quantity_label_inline": "%{merchandise_title} ×%{quantity}",
+        "split_shipping_option_free": "Gratis frakt",
+        "split_shipping_option_lowest_price": "Laveste pris",
+        "split_shipping_option_fastest": "Raskest",
+        "split_shipping_option_recommended": "Anbefalt",
+        "split_shipping_option_custom": "Tilpasset"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Ytterligere informasjon"
+        }
+      },
+      "payment": {
+        "network_card_payment_options": "Velg et kortnettverk",
+        "amazon_payments_label": "Amazon Pay",
+        "amazon_payments_login_hint": "Du vil bli bedt om å logge på med Amazon.",
+        "amazon_payments_logout": "Logg ut fra Amazon Pay",
+        "amazon_payments_failed_mfa_challenge": "Den valgte betalingsmåten kunne ikke brukes. Velg en annen metode eller kontakt banken eller kortutstederen din.",
+        "amazon_payments_abandoned_mfa_challenge": "Betalingen din kunne ikke fullføres. Prøv en annen betalingsmåte eller kontakt banken eller kortutstederen din.",
+        "amazon_payments_could_not_enqueue_authorize": "Det oppsto et problem under behandlingen av betalingen din. Prøv på nytt eller bruk en annen betalingsmetode.",
+        "title": "innbetaling",
+        "amount_left_to_pay_label": "Betalings forfall:",
+        "discount_button_action_label": "Bruk rabattkode",
+        "gift_card_code_label": "Gavekortkode",
+        "apply_gift_card_button_label": "Søke"
       }
     }
   }
