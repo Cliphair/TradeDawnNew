@@ -2020,9 +2020,91 @@
         "recurring_totals_with_initial_order_shipping_discount": "Første betaling %{total_price_with_discount}, deretter %{recurring_total}",
         "recurring_totals_with_policies": {
           "first_cycles": {
-            "one": "Første betaling %{total_price}"
+            "one": "Første betaling %{total_price}",
+            "other": "Første %{count} betalinger %{total_price} hver"
+          },
+          "following_cycles": ", så %{total_price} hver %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", deretter %{count} betaling på %{total_price}",
+            "other": ", så %{count} betalinger på %{total_price} hver"
           }
         }
+      },
+      "customer_payment_methods": {
+        "page_title": "Betalingsmetoder",
+        "title": "Betalingsmetoder",
+        "update_card_button_label": "Oppdater kortet",
+        "delete_customer_mandate": {
+          "generic_error": "Det oppsto et problem under behandlingen av forespørselen din.",
+          "success_message": "Betalingsmåten din er slettet"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "For mange forsøk",
+          "description": "Vennligst prøv igjen om noen minutter"
+        },
+        "line_to_check_out": "Du står i kø for å sjekke ut",
+        "cart_summary_heading": "Handlevognen din",
+        "merchandise": {
+          "available": "Tilgjengelig",
+          "sold_out": "Betal ut"
+        },
+        "inventory": {
+          "partial_inventory_banner": "En del av handlekurven din er utsolgt og vil ikke være tilgjengelig for kjøp i kassen.",
+          "sold_out": {
+            "heading": "Handlevognen din er utsolgt",
+            "storefront_body": "Gå tilbake til butikken for å fortsette å handle",
+            "no_storefront_body": "Dessverre er varen du ønsker å kjøpe ikke lenger tilgjengelig.",
+            "link": "Tilbake til butikken"
+          }
+        },
+        "title": "Kø",
+        "time_to_checkout_title": "På tide å sjekke ut - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Beregner estimert ventetid",
+          "less_than_one": "Estimert ventetid: Mindre enn ett minutt",
+          "one": "Estimert ventetid: {{count}} minutt",
+          "other": "Estimert ventetid: {{count}} minutter"
+        },
+        "last_checked": "(Sist sjekket: {{time}})",
+        "footer": {
+          "heading": "Ikke oppdater denne siden, den oppdateres automatisk.",
+          "body": "Varer i handlekurven din er ikke reservert før du fullfører kassen."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Det oppsto et problem med å behandle forespørselen din. Ta kontakt med butikkeieren."
+      },
+      "no_address_location": {
+        "title": "Sted uten adresse",
+        "header": "Du har ingen leveringsadresse for dette stedet",
+        "alt_header": "Mangler leveringsadresse",
+        "message": "Kontakt oss for å legge til en adresse for dette stedet for å fullføre kassen.",
+        "email_us_button_label": "Send oss en e-post"
+      },
+      "order_errors": {
+        "creation_failure": "Det oppsto et problem med å opprette bestillingen din. Prøv igjen, eller kontakt oss for mer informasjon.",
+        "network_failure": "Bestillingen din kunne ikke sendes på grunn av en nettverksfeil. Sjekk tilkoblingen og prøv igjen.",
+        "inventory_reservation_failure": "Noen varer er ikke lenger tilgjengelig."
+      },
+      "session_errors": {
+        "session_not_unique": "Det oppsto et problem under behandlingen av bestillingen din. Oppdater denne siden for å gå tilbake til butikken.",
+        "session_already_finished": "Denne bestillingen er allerede sendt inn. Du kan gå tilbake til butikken for å starte en ny bestilling."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Lukket",
+        "business_hours": "Åpningstider",
+        "no_business_hours": "Ingen åpningstider tilgjengelig",
+        "open_twenty_four_hours": "Åpent 24/7",
+        "title": "Hentested",
+        "or": "eller",
+        "search_button": "Søk",
+        "address_label": "Adresse",
+        "selector_tabs": "Velger for hentepunkt",
+        "selector_tab_map": "Kart"
       }
     }
   }
