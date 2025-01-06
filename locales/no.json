@@ -3790,7 +3790,75 @@
       "tuesday": "tirsdag",
       "wednesday": "onsdag",
       "thursday": "Torsdag",
-      "friday": "fredag"
+      "friday": "fredag",
+      "saturday": "lørdag",
+      "sunday": "søndag",
+      "mondayAbbreviation": "Mo",
+      "tuesdayAbbreviation": "ti",
+      "wednesdayAbbreviation": "Vi",
+      "thursdayAbbreviation": "Th",
+      "fridayAbbreviation": "Ms",
+      "saturdayAbbreviation": "Sa",
+      "sundayAbbreviation": "Su",
+      "showNextMonth": "Vis neste måned, {{month}} {{year}}",
+      "showPreviousMonth": "Vis forrige måned, {{month}} {{year}}",
+      "rangeStart": "Rekkestart",
+      "inRange": "Innen rekkevidde",
+      "rangeEnd": "Rekkevidde slutt",
+      "autocompleteOptionsAvailable": {
+        "one": "{{count}} element tilgjengelig",
+        "other": "{{count}} gjenstander tilgjengelig"
+      },
+      "removeItem": "Fjerne {{label}}",
+      "removeTag": "Fjern taggen",
+      "month": {
+        "one": "måned",
+        "other": "måneder"
+      },
+      "mapClusterTitle": {
+        "one": "Klynge av {{number}} markør",
+        "other": "Klynge av {{number}} markører"
+      },
+      "expandSheet": "Utvide",
+      "qrCode": "QR kode",
+      "addFile": "Legg til fil",
+      "dropzoneInvalidFileType": "Filtype støttes ikke",
+      "dropzoneDraggedOver": "Slipp filen for å laste opp"
+    },
+    "profile_preview_bar": {
+      "customize_button": "Tilpass",
+      "hide_bar": "Skjul bar",
+      "navigate_to_admin": "Naviger til admin",
+      "close_preview": "Lukk forhåndsvisning",
+      "previewing": "Du forhåndsviser:",
+      "saved_at": "Lagt til {{date}} kl {{time}}",
+      "viewing": "Du ser på:",
+      "not_available": "Profildata er ikke tilgjengelig",
+      "actions_button": "Handlinger"
+    },
+    "active_inspector": {
+      "extension": {
+        "select": "Velg utvidelsen som heter {{extensionName}}",
+        "unselect": "Fjern markeringen av utvidelsen som heter {{extensionName}}",
+        "move_down": "Flytt utvidelsen til neste posisjon",
+        "move_up": "Flytt utvidelsen til forrige posisjon",
+        "remove": "Fjern utvidelsen",
+        "move_down_tooltip": "Flytt til neste posisjon",
+        "move_up_tooltip": "Flytt til forrige posisjon",
+        "remove_tooltip": "Fjerne"
+      }
+    },
+    "editor": {
+      "link_new_tab_confirmation": "Denne lenken kan ikke åpnes inne i redigeringsverktøyet. Den vil bli åpnet i et nytt vindu ({{resolved_to_link}}). Klikk OK for å fortsette."
+    },
+    "settings": {
+      "title": "Innstillinger",
+      "loading_accessibility_message": "Laster inn innstillingssiden",
+      "log_out_everywhere": {
+        "title": "Logg ut overalt",
+        "description": "Hvis du har mistet en enhet eller har sikkerhetsproblemer, logg ut overalt for å sikre sikkerheten til kontoen din.",
+        "button": "Logg ut overalt"
+      }
     }
   }
 }
