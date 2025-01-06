@@ -2769,7 +2769,75 @@
         "estimated_shortform": "Est. {{date}}",
         "estimated_delivery": "Forventet {{date}}",
         "one_images_accessibility_label": "Bestillingen inkluderer {{lineItemName1}}",
-        "two_images_accessibility_label": "Bestillingen inkluderer {{lineItemName1}}, {{lineItemName2}}"
+        "two_images_accessibility_label": "Bestillingen inkluderer {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "Bestillingen inkluderer {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "Bestillingen inkluderer {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}}, {{lineItemName2}}, og {{numberOfAdditionalProducts}} flere produkter",
+        "more_than_four_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, og {{numberOfAdditionalProducts}} flere produkter",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} produkter",
+        "carousel": {
+          "one_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}} antall {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}} antall {{lineItemQuantity1}}, {{lineItemName2}} antall {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}} antall {{lineItemQuantity1}}, {{lineItemName2}} antall {{lineItemQuantity2}}, {{lineItemName3}} antall {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}} antall {{lineItemQuantity1}}, {{lineItemName2}} antall {{lineItemQuantity2}}, {{lineItemName3}} antall {{lineItemQuantity3}}, {{lineItemName4}} antall {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}} antall {{lineItemQuantity1}}, {{lineItemName2}} antall {{lineItemQuantity2}}, {{lineItemName3}} antall {{lineItemQuantity3}}, {{lineItemName4}} antall {{lineItemQuantity4}}, {{lineItemName5}} antall {{lineItemQuantity5}}.",
+          "six_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}} antall {{lineItemQuantity1}}, {{lineItemName2}} antall {{lineItemQuantity2}}, {{lineItemName3}} antall {{lineItemQuantity3}}, {{lineItemName4}} antall {{lineItemQuantity4}}, {{lineItemName5}} antall {{lineItemQuantity5}}, {{lineItemName6}} antall {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "Bestillingen inkluderer {{lineItemName1}} antall {{lineItemQuantity1}}, {{lineItemName2}} antall {{lineItemQuantity2}}, {{lineItemName3}} antall {{lineItemQuantity3}}, {{lineItemName4}} antall {{lineItemQuantity4}}, {{lineItemName5}} antall {{lineItemQuantity5}}, {{lineItemName6}} antall {{lineItemQuantity6}} og mer",
+          "view_order_details": "Se ordre detaljer",
+          "previous": "Tidligere",
+          "next": "Neste"
+        },
+        "items": {
+          "one": "{{count}} punkt",
+          "other": "{{count}} gjenstander"
+        },
+        "list_view": "Vis listevisning",
+        "no_filtered_results_description": "Fjern eller juster filtre for å se bestillingene dine",
+        "no_filtered_results_title": "Ingen filtrerte resultater",
+        "order_link": "Se bestilling {{name}}",
+        "order_number": "Rekkefølge {{name}}",
+        "orders_title": "Bekreftet",
+        "pagination": {
+          "nav_accessibility_label": "Bestiller navigasjonsknapper",
+          "next": "Neste",
+          "next_accessibility_label": "Neste bestillinger",
+          "previous": "Forrige",
+          "previous_accessibility_label": "Tidligere bestillinger",
+          "load_more": "Last mer",
+          "load_more_accessibility_label": "Last inn flere bestillinger"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Se bestillingen for detaljer",
+            "estimated_delivery": "Forventet {{date}}",
+            "last_updated": "Sist oppdatert {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Est. leveranse {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "payment_status": {
+          "list_view": {
+            "overdue": "Forfalt betaling",
+            "due": "Betalings forfall {{date}}",
+            "due_today": "Betaling forfaller i dag",
+            "due_without_date": "Betalings forfall",
+            "due_on_fulfillment": "Betaling ved oppfyllelse",
+            "pay_to_confirm": "Betal for å bekrefte",
+            "payment_not_due": "Betaling ennå ikke forfalt"
+          },
+          "table_view": {
+            "overdue": "Forfalt",
+            "due": "Forfaller {{date}}",
+            "due_today": "Har termin i dag",
+            "paid": "Betalt",
+            "due_without_date": "Forfaller",
+            "due_on_fulfillment": "Forfaller ved oppfyllelse",
+            "pay_to_confirm": "Betal for å bekrefte"
+          }
+        }
       }
     }
   }
