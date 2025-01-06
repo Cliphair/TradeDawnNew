@@ -3183,8 +3183,74 @@
         "summary": "Shipping",
         "free": "Gratis",
         "free_shipping_discount": "Gratis frakt",
-        "one_time": "Engangsfrakt"
+        "one_time": "Engangsfrakt",
+        "subscription": "Abonnementsfrakt"
+      },
+      "pickup": {
+        "pickup": "Plukke opp",
+        "pickup_location": "Hentested",
+        "pickup_point": "Hentested"
+      },
+      "show_items": "Vis elementer",
+      "show_order_summary": "Vis ordresammendrag",
+      "hide_order_summary": "Skjul ordresammendrag",
+      "subtitle": "Bekreftet {{date}}",
+      "subtotal": "Delsum",
+      "summary_list_title_accessibility_label": "Bestill varer",
+      "summary_title": "Bestillingssammendrag",
+      "summary_totals_title_accessibility_label": "Bestillingssummer",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Last ned Shop for å spore pakken",
+        "track_order_with_shop": "Spor bestilling med butikk",
+        "title_header": "Skann med telefonen",
+        "real_time_delivery_updates": "Shop vil sende deg leveringsoppdateringer i sanntid når bestillingen din er sendt."
+      },
+      "edit_summary": {
+        "added": "La til",
+        "added_with_quantity": "La til {{quantity}}",
+        "removed": "Fjernet",
+        "removed_with_quantity": "Fjernet {{quantity}}",
+        "updated_at": "Bestillingen din ble oppdatert den {{date}}",
+        "returned": "Returnert",
+        "returned_with_quantities": "Returnert {{delta}} av {{total}}",
+        "removed_with_quantities": "Fjernet {{delta}} av {{total}}",
+        "return_line_item_removed": "Fjernet fra retur",
+        "return_line_item_removed_with_quantities": "Fjernet {{delta}} fra retur"
+      },
+      "shop_pay": {
+        "order_completed_with": "Bestilling fullført med",
+        "learn_more": "Lære mer"
+      },
+      "taxes": "Skatter",
+      "taxes_included": "Inkludert {{amount}} i skatter",
+      "duties_and_taxes_included": "Sum inkluderer avgifter og avgifter. Ingen ekstra kostnader ved levering.",
+      "duties": "Plikter",
+      "ok_duties_tooltip": "Denne bestillingen sendes fra et annet land, så avgifter er lagt til bestillingen din.",
+      "error_duties_tooltip": "Denne bestillingen sendes fra et annet land, så toll og avgifter kan bli belastet ved levering.",
+      "zero_duties_tooltip": "Denne bestillingen sendes fra et annet land. Toll belastes ikke for bestillinger med denne verdien.",
+      "tip": "Tips",
+      "title": "Rekkefølge {{name}}",
+      "total": "Total",
+      "unit_price": "{{price}}/ea",
+      "pagination": {
+        "load_more": "Last mer",
+        "load_more_accessibility_label": "Last inn flere varer",
+        "loading_accessibility_label": "Laster varer"
+      },
+      "login_to_view_all_order_details": "Logg inn for å se alle ordredetaljer.",
+      "log_in": "Logg Inn",
+      "logged_in_account_no_permission_to_order": "Du er logget inn som {{email}}. Denne kontoen har ikke tillatelse til å administrere denne bestillingen.",
+      "log_in_to_a_different_account": "Logg på en annen konto",
+      "fees": {
+        "restocking_fee": "Etterfyllingsgebyr",
+        "return_shipping_fee": "Returfrakt"
+      },
+      "vat_invoices": {
+        "title": "mva-fakturaer"
       }
+    },
+    "addresses": {
+      "add_button": "Legg til adresse"
     }
   }
 }
