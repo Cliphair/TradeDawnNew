@@ -3437,9 +3437,85 @@
             "description_waiting_for_manual_payment": "Denne bestillingen har en ventende betaling. Saldoen vil bli oppdatert når betaling er mottatt.",
             "description_due_on_receipt": "Du vil motta en faktura når betaling forfaller.",
             "description_due_on_receipt_partially_paid": "Denne ordren ble delvis betalt. Du har en gjenværende saldo. Du vil motta en faktura når betaling forfaller.",
-            "description_due_on_fulfillment": "Betaling forfaller når alle varene i denne bestillingen er oppfylt."
-          }
+            "description_due_on_fulfillment": "Betaling forfaller når alle varene i denne bestillingen er oppfylt.",
+            "description_due_on_fulfillment_partially_paid": "Denne ordren ble delvis betalt. Du har en gjenværende saldo. Betaling forfaller når alle varene i denne bestillingen er oppfylt."
+          },
+          "draft": {
+            "description": "Betalingsdetaljer avgjøres når bestillingen er bekreftet.",
+            "title": "Betaling ennå ikke forfalt",
+            "in_review": {
+              "description": "Betalingsdetaljer avgjøres når bestillingen er bekreftet.",
+              "title": "Betaling ennå ikke forfalt"
+            },
+            "submitted": {
+              "description": "Send inn betaling for å bekrefte denne bestillingen.",
+              "title": "Betal for å bekrefte",
+              "deposit": {
+                "title": "Betaling forfaller",
+                "due_later": "Balansen er på {{translatedName}} vilkår og forfaller den {{dueDate}}.",
+                "due_on_fulfillment": "Saldoen forfaller når alle varene i denne bestillingen er oppfylt.",
+                "due_on_receipt": "Du vil motta en faktura for den gjenværende saldoen.",
+                "due_on_date": "Saldoen forfaller {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} vil forfalle når bestillingen din er bekreftet. Restbeløpet vil være på {{translatedName}} vilkår.",
+              "due_on_fulfillment": "{{depositAmount}} forfaller når bestillingen din er bekreftet. Saldoen forfaller når bestillingen er oppfylt.",
+              "due_on_receipt": "{{depositAmount}} forfaller når bestillingen din er bekreftet. Saldoen forfaller senere.",
+              "due_on_date": "{{depositAmount}} forfaller når bestillingen din er bekreftet. Saldoen forfaller pr {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "Betalt",
+            "title_with_date": "Betalt {{date}}",
+            "description": "Bestillingen din er fullt betalt."
+          },
+          "refund": {
+            "title": "Refundert",
+            "title_with_date": "Refundert {{date}}",
+            "description_full_refund": "Du har mottatt full refusjon for denne bestillingen.",
+            "description_single_refund": "Du har mottatt en delvis refusjon for denne bestillingen.",
+            "description_multiple_refunds": "Du mottok delvis refusjon for denne bestillingen."
+          },
+          "canceled": {
+            "title": "Betaling kansellert",
+            "description": "Du ble ikke belastet."
+          },
+          "pay_now": "Betal nå",
+          "pay_now_accessibility_label": "Betal nå for bestilling {{orderName}}",
+          "title": "Betalingsstatus"
+        },
+        "order_timeline": {
+          "expand_events_label": "Vis detaljer",
+          "expand_events_accessibility_label": "Vis utkast til bestillingsdetaljer",
+          "hide_events_label": "Skjul detaljer",
+          "hide_events_accessibility_label": "Skjul utkast til bestillingsdetaljer"
+        },
+        "subtitle": "Sendt inn {{date}}",
+        "title": "Rekkefølge {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Denne betalingsmåten vil ikke lenger være tilgjengelig for fremtidige kjøp fra dette stedet.",
+          "description_with_replacement": "Sletting av denne betalingsmåten vil påvirke forhåndsautoriserte betalinger for dette stedet. Erstatt den med en alternativ betalingsmetode for å fortsette å motta kommende bestillinger."
+        },
+        "payment_details": {
+          "order_label": "Rekkefølge {{name}}",
+          "draft_label": "Utkast til ordre {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Legg til PO-nummer",
+        "add_modal_title": "Legg til PO-nummer",
+        "cancel": "Avbryt",
+        "close_modal_accessibility_label": "Lukk PO nummer modal",
+        "discard": "Kast",
+        "discard_changes_modal_title": "Forkaste endringer?",
+        "edit_accessibility_label": "Rediger PO-nummer",
+        "edit_modal_title": "Rediger PO-nummer",
+        "empty_state": "Ingen PO-nummer",
+        "modal_po_number_input_label": "Postnummer",
+        "modal_po_number_input_max_length_error": "PO-numre har en maksimum på {{maxLength}} tegn."
       }
     }
   }
