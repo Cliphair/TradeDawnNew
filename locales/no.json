@@ -4389,6 +4389,30 @@
       "play_slideshow": "Spill av lysbildefremvisning",
       "carousel": "Karusell",
       "slide": "Lysbilde"
+    },
+    "page": {
+      "title": "Side tittel"
+    },
+    "quick_order_list": {
+      "product_total": "Produkt delsum",
+      "view_cart": "Se handlekurv",
+      "each": "{{ money }}/ea",
+      "product": "Produkt",
+      "variant": "Variant",
+      "variant_total": "Variant totalt",
+      "items_added": {
+        "one": "{{ quantity }} element lagt til",
+        "other": "{{ quantity }} elementer lagt til"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} element fjernet",
+        "other": "{{ quantity }} elementer fjernet"
+      },
+      "product_variants": "Produktvarianter",
+      "total_items": "Totale varer",
+      "remove_all_items_confirmation": "Fjerne alle {{ quantity }} varer fra handlekurven?",
+      "remove_all": "Fjern alle",
+      "cancel": "Avbryt"
     }
   }
 }
