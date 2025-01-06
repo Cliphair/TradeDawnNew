@@ -766,7 +766,83 @@
         "waiting_on_rate_notice": "Får tilgjengelige fraktpriser …",
         "waiting_on_pickup_location_notice": "Får tilgjengelige hentesteder …",
         "no_rates_for_cart_or_destination_notice": "Det er ingen tilgjengelige forsendelsesmetoder for handlekurven eller adressen din",
-        "no_pickup_location_notice": "Minst ett av produktene dine er ikke tilgjengelig for henting"
+        "no_pickup_location_notice": "Minst ett av produktene dine er ikke tilgjengelig for henting",
+        "no_rates_contact_notice": "Kontakt oss for mer informasjon",
+        "no_rates_for_country_notice": "Fant ingen fraktpriser for denne adressen.",
+        "free_rate_label": "Gratis",
+        "cheapest_rate_label": "Billigst",
+        "please_enter_your_shipping_information_notice": "Vennligst skriv inn fraktinformasjonen din.",
+        "estimated_delivery_date": {
+          "one": "%{count} virkedag",
+          "other": "%{count} virkedager"
+        },
+        "estimated_delivery_date_range": "%{minimum} til %{maximum} arbeidsdager",
+        "delivery_date_range": "%{min_time}–%{max_time}",
+        "estimated_delivery_time": "Forventet levering %{time}",
+        "estimated_delivery_time_range": "Estimert levering %{min_time}–%{max_time}",
+        "delivery_today": "Levering samme dag %{time}",
+        "delivery_tomorrow": "Levering neste dag %{time}",
+        "two_day_delivery": "2-dagers levering %{time}",
+        "delivery": "Leveranse %{time}",
+        "arrives_time": "Kommer %{time}",
+        "arrives_time_range": "Ankommer %{min_time}–%{max_time}",
+        "estimated_time": "Antatt %{time}",
+        "estimated_time_range": "Estimert %{min_time}–%{max_time}",
+        "default_description": "Sendes innen 1 virkedag",
+        "shipping_line_phone_label": "Mobilnummer (påkrevd)",
+        "shipping_line_phone": "Din kurer kan bruke dette nummeret til å kontakte deg.",
+        "shipping_line_delivery_phone_label": "Mobiltelefonnummer",
+        "shipping_line_delivery_phone": "Du kan bli kontaktet med oppdateringer om leveringen din.",
+        "optional_shipping_line_delivery_instructions_label": "Leveringsinstruksjoner (valgfritt)",
+        "shipping_line_delivery_instructions": "Skriv inn nødvendig informasjon som dørkoder eller avleveringsinstruksjoner.",
+        "other_method": {
+          "zero": "Ingen andre metoder tilgjengelig",
+          "one": "%{count} annen metode tilgjengelig på",
+          "other": "%{count} andre tilgjengelige metoder fra kl"
+        },
+        "shipping_rate_discounted_amount": "Var: %{original_amount}. Nå: %{amount}",
+        "local_delivery": "Lokal levering",
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "Gratis frakt for %{count} mer levering",
+            "other": "Gratis frakt for %{count} flere leveranser"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Gratis frakt for %{count} levering",
+            "other": "Gratis frakt for %{count} leveranser"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Gratis frakt for %{count} mer levering, deretter %{recurring_order_shipping_price}",
+            "other": "Gratis frakt for %{count} flere leveranser, deretter %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Gratis frakt for %{count} levering, deretter %{recurring_order_shipping_price}",
+            "other": "Gratis frakt for %{count} leveranser, deretter %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} mer levering for %{shipping_price}",
+            "other": "%{count} flere leveranser for %{shipping_price} hver"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{count} levering for %{shipping_price}",
+            "other": "%{count} flere leveranser for %{shipping_price} hver"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Gratis frakt for den første %{cycle}, etterfulgt av %{recurring_order_shipping_price}",
+            "other": "Gratis frakt for den første %{cycle}, etterfulgt av %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} for %{count} flere leveranser",
+            "other": "%{shipping_price} for %{count} flere leveranser (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} for %{count} levering",
+            "other": "%{shipping_price} for %{count} leveranser (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} for %{count} mer levering, etterfulgt av %{recurring_order_shipping_price}"
+          }
+        }
       }
     }
   }
