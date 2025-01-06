@@ -3250,7 +3250,65 @@
       }
     },
     "addresses": {
-      "add_button": "Legg til adresse"
+      "add_button": "Legg til adresse",
+      "add_button_text": "Legge til",
+      "add_button_accessibility_label": "Legg til adresse",
+      "back_button": "Tilbake",
+      "back_button_accessibility_label": "Tilbake til redigeringsadresse {{address}}",
+      "add_address_banner": "Legg til adresser som skal brukes i kassen",
+      "no_addresses_banner": "Ingen adresser lagt til",
+      "address_deleted_notification": "Adresse slettet",
+      "cancel_adding_address_accessibility_label": "Avbryt å legge til adresse",
+      "cancel_deletion_button": "Avbryt",
+      "cancel_deletion_button_accessibility_label": "Avbryt sletting {{address}}",
+      "default_address": {
+        "title": "Standard adresse",
+        "title_accessibility_label": "Standard adresse: {{address}}"
+      },
+      "delete_button": "Slett",
+      "delete_button_accessibility_label": "Slett {{address}}",
+      "delete_confirmation_button": "Slett adresse",
+      "delete_confirmation_button_accessibility_label": "Slett {{address}}",
+      "delete_confirmation_message": "Vil du slette adressen? Eksisterende bestillinger påvirkes ikke.",
+      "delete_confirmation_title": "Vil du slette adressen?",
+      "delete_confirmation_description": "Eksisterende bestillinger påvirkes ikke.",
+      "edit_button": "Redigere",
+      "edit_button_accessibility_label": "Redigere {{address}}",
+      "edit_section_accessibility_label": "Redigere {{address}}",
+      "edit_modal_title": {
+        "default": "Rediger adresse",
+        "billing": "Rediger faktureringsadresse",
+        "shipping": "Rediger leveringsadresse"
+      },
+      "loading_accessibility_message": "Laster adresse",
+      "loading_addresses_accessibility_message": "Laster inn adresser",
+      "loading_billing_accessibility_message": "Laster faktureringsadresse",
+      "loading_finished_accessibility_message": "Ny adresseside er lastet inn",
+      "loading_shipping_accessibility_message": "Laster leveringsadresse",
+      "pagination": {
+        "load_more": "Last mer",
+        "load_more_accessibility_label": "Last inn flere adresser"
+      },
+      "save_new_address_accessibility_label": "Lagre adresse",
+      "title": "Adresser",
+      "billing_address_dropdown_placeholder": "Fakturaadresse"
+    },
+    "address_form": {
+      "attention": "Merk følgende",
+      "attention_company": "Selskap/oppmerksomhet",
+      "attention_help_text": "Navnet på en person eller avdeling",
+      "auto_complete_close_accessibility_label": "Lukk forslag",
+      "auto_complete_title": "Forslag",
+      "billing_address": "Bruk som faktureringsadresse",
+      "cancel": "Avbryt",
+      "cancel_accessibility_label": "Avbryt redigering av adresse {{address}}",
+      "creation_success_notification": "Adresse lagt til",
+      "default_address": "Dette er standardadressen min",
+      "default_address_creation_success_notification": "Standardadresse lagt til",
+      "default_address_update_success_notification": "Standardadressen er oppdatert",
+      "loading_add_form_accessibility_message": "Laster inn nytt adresseskjema",
+      "loading_edit_form_accessibility_message": "Laster rediger adresseskjema",
+      "loading_form_accessibility_message": "Laster adresseskjema"
     }
   }
 }
