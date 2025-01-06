@@ -561,5 +561,15 @@
       "signup_form_success": "We will send you an email right before we open!",
       "password_link": "Enter using password"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "payment_errors": {
+        "expired_buyer_action": "Vaadittu toimenpide on vanhentunut. Yritä uudelleen tai käytä toista maksutapaa."
+      },
+      "processing": {
+        "modal_notice": "Suorita vaadittu toimenpide jatkaaksesi"
+      }
+    }
   }
 }
