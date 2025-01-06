@@ -2634,7 +2634,79 @@
       "discounts_with_count": "%{count} rabatter er brukt"
     },
     "challenge": {
-      "message": "For å fortsette, gi oss beskjed om at du ikke er en robot."
+      "message": "For å fortsette, gi oss beskjed om at du ikke er en robot.",
+      "submit_button_text": "Sende inn",
+      "error": "Svaret ditt var ikke riktig, prøv igjen."
+    },
+    "checkpoint": {
+      "message": "Løs Captcha for å fortsette",
+      "error": "Captcha-validering mislyktes",
+      "submit_button_text": "Sende inn"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Vanligvis klar på 1 time",
+        "two_hours": "Vanligvis klar på 2 timer",
+        "four_hours": "Vanligvis klar på 4 timer",
+        "twenty_four_hours": "Vanligvis klar på 24 timer",
+        "two_to_four_days": "Vanligvis klar på 2-4 dager",
+        "five_or_more_days": "Vanligvis klar om 5+ dager",
+        "zero_to_two_hours": "Vanligvis klar på 2 timer",
+        "two_to_four_hours": "Vanligvis klar på 4 timer",
+        "immediately": "Klar for henting nå",
+        "next_day": "Klar for henting neste dag"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Dette elementet er et gjentakende eller utsatt kjøp. Ved å fortsette, godtar jeg %{cancellationPolicyLink} og gir deg tillatelse til å belaste betalingsmetoden min til prisene, frekvensen og datoene som er oppført på denne siden inntil bestillingen min er oppfylt eller jeg avbestiller, hvis det er tillatt.",
+      "buyer_consent_cart": "En eller flere av varene i handlekurven din er et gjentakende eller utsatt kjøp. Ved å fortsette godtar jeg %{cancellationPolicyLink} og gir deg tillatelse til å belaste betalingsmetoden min til prisene, frekvensen og datoene som er oppført på denne siden inntil bestillingen min er oppfylt eller jeg avbestiller, hvis det er tillatt.",
+      "cancellation_policy": "avbestillingsregler"
+    }
+  },
+  "customer_accounts": {
+    "date": {
+      "range": "{{startDate}}–{{endDate}}",
+      "humanize": {
+        "lessThanOneYearAgo": "{{date}} på {{time}}",
+        "lessThanOneHourAgo": {
+          "one": "{{count}} minutt siden",
+          "other": "{{count}} minutter siden"
+        },
+        "lessThanOneMinuteAgo": "Akkurat nå",
+        "lessThanOneWeekAgo": "{{weekday}} på {{time}}",
+        "yesterday": "I går kl {{time}}",
+        "today": "I dag kl {{time}}",
+        "tomorrow": "I morgen kl {{time}}",
+        "lessThanOneWeekAway": "{{weekday}} på {{time}}",
+        "lessThanOneYearAway": "{{date}} på {{time}}"
+      }
+    },
+    "enable_javascript": "For å se kontoen din, aktiver JavaScript i nettleserinnstillingene eller logg på med en annen nettleser.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Skjul konto-menyen",
+        "label": "Regnskap",
+        "show_accessibility_label": "Vis kontomenyen",
+        "nav_accessibility_label": "Kontonavigering",
+        "open_menu_accessibility_label": "Åpne Kontonavigering",
+        "close_menu_accessibility_label": "Lukk Kontonavigering",
+        "loading_message": "Laster kontonavigering"
+      },
+      "action_menu_accessibility_label": "Flere handlinger",
+      "close_menu_accessibility_label": "Lukk hovednavigasjonen",
+      "contact_email_subject": "Kontakt fra {{shopName}} nettbutikk",
+      "contact_link": "Kontaktinformasjon",
+      "delete_confirmation": {
+        "cancel": "Avbryt",
+        "delete": "Slett"
+      },
+      "dismiss_toast": "Avskjedige",
+      "document_title": "{{sectionName}} - {{shopName}} - Regnskap",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "go_to_store_link": "Gå til butikken",
+      "loading_message": "Laster",
+      "log_out_link": "Logg ut",
+      "logout_overlay_label": "Logger deg ut..."
     }
   }
 }
