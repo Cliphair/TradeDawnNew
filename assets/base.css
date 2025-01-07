@@ -3715,8 +3715,7 @@ details-disclosure>details {
   text-decoration-thickness: 0.2rem;
 }
 
-/* Privy app */
-#privy-container,
+/* Attentive app */
 #attentive_overlay {
   z-index: 2 !important;
 }
