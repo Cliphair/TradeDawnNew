@@ -1,4 +1,4 @@
-{% if page_description %}
+{% comment %} {% if page_description %}
   
   {% liquid
     assign description = page_description | escape
@@ -19,10 +19,8 @@
   
   <meta name="description" content="{{ description }}">
 
-{% endif %}
+{% endif %} {% endcomment %}
 
-{% comment %}
-  {% if page_description %}
-    <meta name="description" content="{{ page_description | escape }}">
-  {% endif %}
-{% endcomment %}
+{% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}">
+{% endif %}
