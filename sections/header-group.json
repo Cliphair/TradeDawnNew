@@ -93,7 +93,7 @@
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
           "settings": {
-            "image": "shopify://shop_images/Free_Express_Delivery_Message_Black_copy.gif",
+            "image": "shopify://shop_images/Free_Express_Delivery_Ends_Today_Ticker.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://pages/hair-extensions-by-colour"
