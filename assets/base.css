@@ -3081,6 +3081,10 @@ details-disclosure>details {
   font-weight: 400;
 }
 
+.menu-drawer__menu .new-arrival{
+  margin-left:0.5rem;
+}
+
 .gradient {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
