@@ -93,7 +93,7 @@
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
           "settings": {
-            "image": "shopify://shop_images/Hair_Extensions_Monday_Delivery.gif",
+            "image": "shopify://shop_images/Free_Next_Day_Guaranteed_Delivery_c64b9875-bf1f-4afa-8db5-41b6e94c769b.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://pages/hair-extensions-by-colour"
@@ -103,7 +103,6 @@
       "block_order": [
         "announcement_image_zkJVKU"
       ],
-      "disabled": true,
       "custom_css": [
         "img {height: auto;}"
       ],
