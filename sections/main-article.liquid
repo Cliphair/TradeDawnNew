@@ -152,7 +152,7 @@
               class="article-template__content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               {{ block.shopify_attributes }}
             >
-              {{ article.metafields.seo.footer | metafield_tag | default: block.settings.text }}
+              {{ block.settings.text }}
             </div>
 
             <div class="extra-block-wrapper" style="flex-wrap:wrap">
@@ -680,8 +680,7 @@
         {
           "type": "richtext",
           "id": "text",
-          "label": "Default text",
-          "info": "It will be used in case metafield is empty"
+          "label": "Text"
         },
         {
           "type": "checkbox",
