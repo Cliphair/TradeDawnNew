@@ -3081,6 +3081,14 @@ details-disclosure>details {
   font-weight: 400;
 } */
 
+.new-arrival:after{
+  content: " New";
+  color:#a590c1;
+  font-style: italic;
+  letter-spacing: .5px;
+  font-weight: 400;
+}
+
 .gradient {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
