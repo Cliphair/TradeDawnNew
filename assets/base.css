@@ -3074,15 +3074,7 @@ details-disclosure>details {
   word-break: break-word;
 }
 
-/* .new-arrival{
-  color:#a590c1;
-  font-style: italic;
-  letter-spacing: .5px;
-  font-weight: 400;
-} */
-
-.new-arrival:after{
-  content: " New";
+.new-arrival{
   color:#a590c1;
   font-style: italic;
   letter-spacing: .5px;
