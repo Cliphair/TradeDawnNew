@@ -1,3 +1,32 @@
+{% liquid
+  assign colour_matching_row_mobile = files[colour-matching-row-mobile.webp]
+  assign contact_row_mobile = files[contact-row-mobile.webp]
+  assign lookbook_column_mobile = files[lookbook-column-mobile.webp]
+  assign quiz_column_mobile = files[quiz-column-mobile.webp]
+  assign sample_column_mobile = files[sample-column-mobile.webp]
+  assign video_guides_column_mobile = files[video-guides-column-mobile.webp]
+%}
+
+<style>
+  .grid-container{
+    display:grid;
+    
+  }
+</style>
+
+<div class='grid grid-container'>
+  <div>
+    {{ colour_matching_row_mobile | image_url | image_tag  }}
+  </div>
+  <div>
+    {{ quiz_column_mobile | image_url | image_tag  }}
+    {{ sample_column_mobile | image_url | image_tag  }}
+  </div>
+  <div>
+    {{ contact_row_mobile | image_url | image_tag  }}
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Section name",
