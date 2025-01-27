@@ -40,11 +40,51 @@
         "padding_top": 12,
         "padding_bottom": 12
       }
+    },
+    "image_list_RLAEfL": {
+      "type": "image-list",
+      "blocks": {
+        "image_xmxDKt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lookbook-column-mobile.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_CjXBPw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/video-guides-column-mobile.webp",
+            "text_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_xmxDKt",
+        "image_CjXBPw"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 2,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
     }
   },
   "order": [
     "main",
     "image_collage_wikJ67",
-    "video_9GXmLV"
+    "video_9GXmLV",
+    "image_list_RLAEfL"
   ]
 }
