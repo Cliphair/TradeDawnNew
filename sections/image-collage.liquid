@@ -45,21 +45,22 @@
   }
 </style>
 
-<div class='grid grid-container page-width'>
-  <div class='first'>
-    <img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'>
-  </div>
-  <div class='second'>
-    <img src='{{ quiz_column_mobile | image_url: width: 768 }}' width="{{ quiz_column_mobile.width }}" height='{{ quiz_column_mobile.height }}' loading='lazy'>
-  </div>
-  <div class='third'>
-    <img src='{{ sample_column_mobile | image_url: width: 768 }}' width="{{ sample_column_mobile.width }}" height='{{ sample_column_mobile.height }}' loading='lazy'>
-  </div>
-  <div class='fourth'>
-    <img src='{{ contact_row_mobile | image_url: width: 768 }}' width="{{ contact_row_mobile.width }}" height='{{ contact_row_mobile.height }}' loading='lazy'>
+<div class='page-width'>
+  <div class='grid grid-container'>
+    <div class='first'>
+      <img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'>
+    </div>
+    <div class='second'>
+      <img src='{{ quiz_column_mobile | image_url: width: 768 }}' width="{{ quiz_column_mobile.width }}" height='{{ quiz_column_mobile.height }}' loading='lazy'>
+    </div>
+    <div class='third'>
+      <img src='{{ sample_column_mobile | image_url: width: 768 }}' width="{{ sample_column_mobile.width }}" height='{{ sample_column_mobile.height }}' loading='lazy'>
+    </div>
+    <div class='fourth'>
+      <img src='{{ contact_row_mobile | image_url: width: 768 }}' width="{{ contact_row_mobile.width }}" height='{{ contact_row_mobile.height }}' loading='lazy'>
+    </div>
   </div>
 </div>
-
 {% schema %}
   {
     "name": "Section name",
