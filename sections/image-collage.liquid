@@ -16,7 +16,7 @@
 
 <div class='grid grid-container'>
   <div>
-    {{ colour_matching_row_mobile | image_tag }}
+    <img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'>
   </div>
   <div>
     {{ quiz_column_mobile | image_url | image_tag  }}
