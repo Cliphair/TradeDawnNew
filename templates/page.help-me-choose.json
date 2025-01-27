@@ -65,6 +65,9 @@
         "image_xmxDKt",
         "image_CjXBPw"
       ],
+      "custom_css": [
+        ".images-list {gap: 10px; margin-top: 0;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h2",
