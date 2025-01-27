@@ -118,6 +118,13 @@
     },
     "blog_spot_kPndtr": {
       "type": "blog-spot",
+      "custom_css": [
+        ".title-wrapper--self-padded-tablet-down {padding: 0 5rem;}",
+        "h2 {margin-bottom: 0; padding: 16px 0; background: #bcade6; color: white;}",
+        ".intro-wrapper p {background: #bcade6; color: white; padding-bottom: 16px; margin-bottom: 10px; margin-top: 0;}",
+        ".card__information {text-align: center;}",
+        ".article-card__excerpt {display: none;}"
+      ],
       "settings": {
         "heading": "The Cliphair Blog",
         "heading_size": "h2",
@@ -127,7 +134,7 @@
         "blog": "hair-blog",
         "post_limit": 4,
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "columns_desktop": 4,
         "swipe_on_desktop": false,
         "color_scheme": "",
