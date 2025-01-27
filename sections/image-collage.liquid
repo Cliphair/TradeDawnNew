@@ -13,6 +13,13 @@
     
   }
 
+  flex{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+
   img{
     width:100%;
     height:auto;
@@ -23,9 +30,9 @@
   <div>
     <img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'>
   </div>
-  <div>
-    {{ quiz_column_mobile | image_url | image_tag  }}
-    {{ sample_column_mobile | image_url | image_tag  }}
+  <div class='flex'>
+    <img src='{{ quiz_column_mobile | image_url: width: 768 }}' width="{{ quiz_column_mobile.width }}" height='{{ quiz_column_mobile.height }}' loading='lazy'>
+    <img src='{{ sample_column_mobile | image_url: width: 768 }}' width="{{ sample_column_mobile.width }}" height='{{ sample_column_mobile.height }}' loading='lazy'>
   </div>
   <div>
     {{ contact_row_mobile | image_url | image_tag  }}
