@@ -10,31 +10,49 @@
 <style>
   .grid-container{
     display:grid;
-    
+    gap:0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
   }
 
-  .flex{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-    gap:20px;
-  }
 
   img{
     width:100%;
     height:auto;
   }
+
+  .first{
+    grid-column:1 / 2;
+    grid-row: 1;
+  }
+
+  .second{
+    grid-column:1 / 1;
+    grid-row: 2;
+  }
+
+  .third{
+    grid-column:2 / 2;
+    grid-row: 2;
+  }
+
+  .fourth{
+    grid-column:1 / 2;
+    grid-row: 1;
+  }
 </style>
 
 <div class='grid grid-container page-width'>
-  <div>
+  <div class='first'>
     <img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'>
   </div>
-  <div class='flex'>
+  <div class='second'>
     <img src='{{ quiz_column_mobile | image_url: width: 768 }}' width="{{ quiz_column_mobile.width }}" height='{{ quiz_column_mobile.height }}' loading='lazy'>
+  </div>
+  <div class='third'>
     <img src='{{ sample_column_mobile | image_url: width: 768 }}' width="{{ sample_column_mobile.width }}" height='{{ sample_column_mobile.height }}' loading='lazy'>
   </div>
-  <div>
+  <div class='fourth'>
     <img src='{{ contact_row_mobile | image_url: width: 768 }}' width="{{ contact_row_mobile.width }}" height='{{ contact_row_mobile.height }}' loading='lazy'>
   </div>
 </div>
