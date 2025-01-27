@@ -66,7 +66,7 @@
         "image_CjXBPw"
       ],
       "custom_css": [
-        ".images-list {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing:10px; margin-top: 0;}"
+        ".images-list {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; margin-top: 0;}"
       ],
       "settings": {
         "title": "",
@@ -80,7 +80,70 @@
         "swipe_on_mobile": false,
         "slider_visual": "counter",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_6rBC6B": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9rPN3x": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Cliphair Blog",
+            "heading_size": "h2",
+            "h1": false
+          }
+        },
+        "text_xaqJPb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For the latest haircare tips, top trends and more, browse our blog  for everything you need to know about hair and extensions!</p>",
+            "read-more_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_9rPN3x",
+        "text_xaqJPb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "blog_spot_kPndtr": {
+      "type": "blog-spot",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "introduction": "",
+        "tags_size": "h4",
+        "text_alignment": "left",
+        "blog": "hair-blog",
+        "post_limit": 4,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "columns_desktop": 4,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "show_image": true,
+        "image_ratio": "square",
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "enable_tags": false,
+        "scroll_to_grid": false,
+        "tags_columns_desktop": 3,
+        "tags_swipe_on_desktop": false,
+        "tags_columns_mobile": "1",
+        "tags_swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },
@@ -88,6 +151,8 @@
     "main",
     "image_collage_wikJ67",
     "video_9GXmLV",
-    "image_list_RLAEfL"
+    "image_list_RLAEfL",
+    "rich_text_6rBC6B",
+    "blog_spot_kPndtr"
   ]
 }
