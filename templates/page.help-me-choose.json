@@ -25,10 +25,26 @@
     "image_collage_wikJ67": {
       "type": "image-collage",
       "settings": {}
+    },
+    "video_9GXmLV": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=44JZNkwk_0s",
+        "cover_image": "shopify://shop_images/length_guide_landscape.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "image_collage_wikJ67"
+    "image_collage_wikJ67",
+    "video_9GXmLV"
   ]
 }
