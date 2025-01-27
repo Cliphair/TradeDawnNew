@@ -106,6 +106,7 @@
         "heading_9rPN3x",
         "text_xaqJPb"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -118,11 +119,11 @@
     "blog_spot_kPndtr": {
       "type": "blog-spot",
       "settings": {
-        "heading": "",
+        "heading": "The Cliphair Blog",
         "heading_size": "h2",
-        "introduction": "",
+        "introduction": "<p>For the latest haircare tips, top trends and more, browse our blog  for everything you need to know about hair and extensions!</p>",
         "tags_size": "h4",
-        "text_alignment": "left",
+        "text_alignment": "center",
         "blog": "hair-blog",
         "post_limit": 4,
         "columns_mobile": "2",
