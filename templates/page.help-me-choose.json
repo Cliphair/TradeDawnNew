@@ -119,7 +119,7 @@
     "blog_spot_kPndtr": {
       "type": "blog-spot",
       "custom_css": [
-        ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; margin-top: 0;}",
+        ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; --grid-desktop-vertical-spacing: 10px; --grid-mobile-vertical-spacing: 10px; margin-top: 0;}",
         ".title-wrapper--self-padded-tablet-down {padding: 0 5rem;}",
         "h2 {margin-bottom: 0; padding: 16px 0; background: #bcade6; color: white;}",
         ".intro-wrapper p {background: #bcade6; color: white; padding-bottom: 16px; margin-bottom: 10px; margin-top: 0;}",
