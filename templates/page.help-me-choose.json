@@ -152,7 +152,7 @@
         "tags_columns_mobile": "1",
         "tags_swipe_on_mobile": false,
         "slider_visual": "counter",
-        "padding_top": 12,
+        "padding_top": 0,
         "padding_bottom": 12
       }
     }
