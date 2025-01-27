@@ -66,7 +66,7 @@
         "image_CjXBPw"
       ],
       "custom_css": [
-        ".images-list {gap: 10px; margin-top: 0;}"
+        ".images-list {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing:10px; margin-top: 0;}"
       ],
       "settings": {
         "title": "",
