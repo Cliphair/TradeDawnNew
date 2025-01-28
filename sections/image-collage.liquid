@@ -5,6 +5,13 @@
   assign quiz_column_mobile = images["quiz-column-mobile.webp"]
   assign sample_column_mobile = images["sample-column-mobile.webp"]
   assign video_guides_column_mobile = images["video-guides-column-mobile.webp"]
+
+  assign colour_matching_page = pages["colour-matching-service"]
+  assign contact_page = pages["contact-us"]
+  assign lookbook_page = pages["lookbook"]
+  assign quiz_page = pages["journey"]
+  assign sample_product = all_products["hair-extensions-sample-pieces"]
+  assign video_guides_page = pages["video-guides"]
 %}
 
 <style>
@@ -48,16 +55,16 @@
 <div class='page-width'>
   <div class='grid grid-container scroll-trigger animate--slide-in'>
     <div class='first' data-cascade style="--animation-order: 1;">
-      <img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'>
+      <a href='{{ colour_matching_page.url }}' title='{{ colour_matching_page.title }}'><img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'></a>
     </div>
     <div class='second' class='first' data-cascade style="--animation-order: 2;">
-      <img src='{{ quiz_column_mobile | image_url: width: 768 }}' width="{{ quiz_column_mobile.width }}" height='{{ quiz_column_mobile.height }}' loading='lazy'>
+      <a href='{{ quiz_page.url }}' title='{{ quiz_page.title }}'><img src='{{ quiz_column_mobile | image_url: width: 768 }}' width="{{ quiz_column_mobile.width }}" height='{{ quiz_column_mobile.height }}' loading='lazy'></a>
     </div>
     <div class='third' class='first' data-cascade style="--animation-order: 3;">
-      <img src='{{ sample_column_mobile | image_url: width: 768 }}' width="{{ sample_column_mobile.width }}" height='{{ sample_column_mobile.height }}' loading='lazy'>
+      <a href='{{ sample_product.url }}' title='{{ sample_product.title }}'><img src='{{ sample_column_mobile | image_url: width: 768 }}' width="{{ sample_column_mobile.width }}" height='{{ sample_column_mobile.height }}' loading='lazy'></a>
     </div>
     <div class='fourth' class='first' data-cascade style="--animation-order: 4;">
-      <img src='{{ contact_row_mobile | image_url: width: 768 }}' width="{{ contact_row_mobile.width }}" height='{{ contact_row_mobile.height }}' loading='lazy'>
+      <a href='{{ contact_page.url }}' title='{{ contact_page.title }}'><img src='{{ contact_row_mobile | image_url: width: 768 }}' width="{{ contact_row_mobile.width }}" height='{{ contact_row_mobile.height }}' loading='lazy'></a>
     </div>
   </div>
 </div>
