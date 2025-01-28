@@ -48,7 +48,39 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-0f548082-83ee-43db-baa9-5f5968cc606f",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_TdrK43": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XhTFXK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Help Me Choose",
+            "heading_size": "h0",
+            "h1": true
+          }
+        },
+        "text_NB9Egd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>New to hair extensions?<br/>Take advantage of our handy tools to shop with confidence...</p>",
+            "read-more_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_XhTFXK",
+        "text_NB9Egd"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-0f548082-83ee-43db-baa9-5f5968cc606f",
         "full_width": true,
         "padding_top": 24,
         "padding_bottom": 24
@@ -236,6 +268,7 @@
   "order": [
     "main",
     "rich_text_edHcAa",
+    "rich_text_TdrK43",
     "image_collage_wikJ67",
     "custom_banner_BfcyQF",
     "collage_TXDKW7",
