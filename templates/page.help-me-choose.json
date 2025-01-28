@@ -106,7 +106,7 @@
       ],
       "settings": {
         "max-width": "",
-        "bg-color": "#FFF",
+        "bg-color": "#ffffff",
         "desktop-image": "shopify://shop_images/video-guides-column-desktop.webp",
         "url": "shopify://pages/video-guides",
         "padding_top": 12,
@@ -127,7 +127,8 @@
         "image_7PcEq3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/lookbook-column-desktop.webp"
+            "image": "shopify://shop_images/lookbook-column-desktop.webp",
+            "url": "shopify://pages/lookbook"
           }
         }
       },
