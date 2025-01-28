@@ -177,7 +177,7 @@
           "settings": {
             "image": "shopify://shop_images/lookbook-column-mobile.webp",
             "text_label": "",
-            "link": ""
+            "link": "shopify://pages/lookbook"
           }
         },
         "image_CjXBPw": {
@@ -185,7 +185,7 @@
           "settings": {
             "image": "shopify://shop_images/video-guides-column-mobile.webp",
             "text_label": "",
-            "link": ""
+            "link": "shopify://pages/video-guides"
           }
         }
       },
