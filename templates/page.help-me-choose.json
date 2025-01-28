@@ -249,7 +249,7 @@
       "type": "blog-spot",
       "custom_css": [
         ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; --grid-mobile-vertical-spacing: 10px; margin-top: 0;}",
-        "@media screen and (min-width:750px){.title-wrapper--self-padded-tablet-down {padding: 0 5rem; }}",
+        "@media screen and (min-width: 750px) {.title-wrapper--self-padded-tablet-down {padding: 0 5rem; }}",
         "h2 {margin-bottom: 0; padding: 16px 0; background: #bcade6; color: white;}",
         ".intro-wrapper p {background: #bcade6; color: white; padding-bottom: 16px; margin-bottom: 10px; margin-top: 0;}",
         ".card__information {text-align: center;}",
@@ -284,6 +284,15 @@
         "padding_top": 0,
         "padding_bottom": 12
       }
+    },
+    "custom_liquid_zYryxT": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.blog .card__heading{\ncolor:#414141;\n}\n\n@media screen and (max-width:767px){\n.blog .intro-wrapper p,\n.blog .card__heading{\nfont-size:1.2rem\n}\n}\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -296,6 +305,7 @@
     "video_9GXmLV",
     "image_list_RLAEfL",
     "rich_text_6rBC6B",
-    "blog_spot_kPndtr"
+    "blog_spot_kPndtr",
+    "custom_liquid_zYryxT"
   ]
 }
