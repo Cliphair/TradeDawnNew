@@ -362,10 +362,10 @@
           "background_gradient": "",
           "headers": "#a698c5",
           "text": "#a698c5",
-          "button": "#a698c5",
+          "button": "#bcade6",
           "button_label": "#ffffff",
-          "secondary_button_label": "#a698c5",
-          "shadow": "#a698c5"
+          "secondary_button_label": "#bcade6",
+          "shadow": "#bcade6"
         }
       }
     }

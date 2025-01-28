@@ -135,7 +135,11 @@
         "video_hwyH3N",
         "image_7PcEq3"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".isolate {display: none;}",
+        ".collage {--grid-desktop-horizontal-spacing: 10px;}",
+        "@media screen and (min-width: 768px) {.isolate {display: block; }}"
+      ],
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -149,6 +153,9 @@
     },
     "video_9GXmLV": {
       "type": "video",
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.video-section {display: none; }}"
+      ],
       "settings": {
         "heading": "",
         "heading_size": "h2",
@@ -187,7 +194,8 @@
         "image_CjXBPw"
       ],
       "custom_css": [
-        ".images-list {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; margin-top: 0;}"
+        ".images-list {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; margin-top: 0;}",
+        "@media screen and (min-width: 768px) {div {display: none; }}"
       ],
       "settings": {
         "title": "",
@@ -241,12 +249,12 @@
       "type": "blog-spot",
       "custom_css": [
         ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; --grid-mobile-vertical-spacing: 10px; margin-top: 0;}",
-        ".title-wrapper--self-padded-tablet-down {padding: 0 5rem;}",
+        "@media screen and (min-width:750px){.title-wrapper--self-padded-tablet-down {padding: 0 5rem; }}",
         "h2 {margin-bottom: 0; padding: 16px 0; background: #bcade6; color: white;}",
         ".intro-wrapper p {background: #bcade6; color: white; padding-bottom: 16px; margin-bottom: 10px; margin-top: 0;}",
         ".card__information {text-align: center;}",
         ".article-card__excerpt {display: none;}",
-        ".blog__button {margin-top: 0; background: #bcade6;}"
+        ".blog__button {margin-top: 0;}"
       ],
       "settings": {
         "heading": "The Cliphair Blog",
@@ -260,7 +268,7 @@
         "swipe_on_mobile": false,
         "columns_desktop": 4,
         "swipe_on_desktop": false,
-        "color_scheme": "background-1",
+        "color_scheme": "scheme-0f548082-83ee-43db-baa9-5f5968cc606f",
         "show_image": true,
         "image_ratio": "square",
         "show_date": false,
