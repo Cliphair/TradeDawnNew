@@ -45,6 +45,10 @@
         "heading_ff49tp",
         "text_9m7MzE"
       ],
+      "custom_css": [
+        ".rich-text__text{font-size:1.2rem;}",
+        "@media screen and (min-width: 768px) {.rich-text {display: none; }}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -76,6 +80,10 @@
       "block_order": [
         "heading_XhTFXK",
         "text_NB9Egd"
+      ],
+      "custom_css": [
+        ".rich-text {display: none;}",
+        "@media screen and (min-width: 768px) {.rich-text {display: block; }}"
       ],
       "settings": {
         "desktop_content_position": "center",
