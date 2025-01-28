@@ -46,7 +46,7 @@
         "text_9m7MzE"
       ],
       "custom_css": [
-        ".rich-text__text{font-size:1.2rem;}",
+        ".rich-text__text {font-size: 1.2rem;}",
         "@media screen and (min-width: 768px) {.rich-text {display: none; }}"
       ],
       "settings": {
@@ -100,11 +100,15 @@
     },
     "custom_banner_BfcyQF": {
       "type": "custom-banner",
+      "custom_css": [
+        "div > div {display: none;}",
+        "@media screen and (min-width: 768px) {div > div {display: block; }}"
+      ],
       "settings": {
         "max-width": "",
         "bg-color": "#FFF",
         "desktop-image": "shopify://shop_images/video-guides-column-desktop.webp",
-        "url": "",
+        "url": "shopify://pages/video-guides",
         "padding_top": 12,
         "padding_bottom": 0
       }
@@ -131,6 +135,7 @@
         "video_hwyH3N",
         "image_7PcEq3"
       ],
+      "custom_css": [],
       "settings": {
         "heading": "",
         "heading_size": "h1",
