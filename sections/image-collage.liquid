@@ -46,17 +46,17 @@
 </style>
 
 <div class='page-width'>
-  <div class='grid grid-container'>
-    <div class='first'>
+  <div class='grid grid-container scroll-trigger animate--slide-in'>
+    <div class='first' data-cascade style="--animation-order: 1;">
       <img src='{{ colour_matching_row_mobile | image_url: width: 768 }}' width="{{ colour_matching_row_mobile.width }}" height='{{ colour_matching_row_mobile.height }}' loading='lazy'>
     </div>
-    <div class='second'>
+    <div class='second' class='first' data-cascade style="--animation-order: 2;">
       <img src='{{ quiz_column_mobile | image_url: width: 768 }}' width="{{ quiz_column_mobile.width }}" height='{{ quiz_column_mobile.height }}' loading='lazy'>
     </div>
-    <div class='third'>
+    <div class='third' class='first' data-cascade style="--animation-order: 3;">
       <img src='{{ sample_column_mobile | image_url: width: 768 }}' width="{{ sample_column_mobile.width }}" height='{{ sample_column_mobile.height }}' loading='lazy'>
     </div>
-    <div class='fourth'>
+    <div class='fourth' class='first' data-cascade style="--animation-order: 4;">
       <img src='{{ contact_row_mobile | image_url: width: 768 }}' width="{{ contact_row_mobile.width }}" height='{{ contact_row_mobile.height }}' loading='lazy'>
     </div>
   </div>
