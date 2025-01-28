@@ -81,7 +81,11 @@
     {%- endunless -%}
 
     {% unless section.settings.introduction == blank %}
-      <div class="page-width intro-wrapper {{ section.settings.text_alignment }}">
+      <div class="page-width intro-wrapper {{ section.settings.text_alignment }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+        {% endif %}
+        >
         {{ section.settings.introduction }}
       </div>
     {% endunless %}
