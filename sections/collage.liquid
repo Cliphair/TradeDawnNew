@@ -47,6 +47,9 @@
                     style="--ratio-percent: 100%"
                   {% endif %}
                 >
+                  {% if block.settings.url %}
+                    <a href='{{ block.settings.url }}' title=''>
+                  {% endif %}
                   {%- if block.settings.image != blank -%}
                     {%- liquid
                       if section.settings.desktop_layout == 'left'
@@ -90,6 +93,9 @@
                   {%- else -%}
                     {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                   {%- endif -%}
+                  {% if block.settings.url %}
+                    </a>
+                  {% endif %}
                 </div>
               </div>
             {%- when 'product' -%}
@@ -371,6 +377,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.collage.blocks.image.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link",
+          "info": "Not required"
         }
       ]
     },
