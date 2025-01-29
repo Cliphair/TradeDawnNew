@@ -279,6 +279,15 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_CdxNFj": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n@media screen and (min-width: 990px) {\n  .slider--desktop::after {\n    content: none;\n  }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "rich_text_87mby7": {
       "type": "rich-text",
       "blocks": {
@@ -458,6 +467,7 @@
     "image_list_RLAEfL",
     "rich_text_6rBC6B",
     "article_trending_UtVcVC",
+    "custom_liquid_CdxNFj",
     "rich_text_87mby7",
     "collapsible_content_JQaFJ4"
   ]
