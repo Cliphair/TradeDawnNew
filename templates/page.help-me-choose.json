@@ -284,8 +284,8 @@
       "settings": {
         "custom_liquid": "<style>\n@media screen and (min-width: 990px) {\n  .slider--desktop::after {\n    content: none;\n  }\n}\n</style>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_87mby7": {
