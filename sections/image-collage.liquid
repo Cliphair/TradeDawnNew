@@ -1,114 +1,21 @@
 {% liquid
   assign colour_matching_row_mobile = images["colour-matching-row-mobile.webp"]
   assign contact_row_mobile = images["contact-row-mobile.webp"]
-  assign lookbook_column_mobile = images["lookbook-column-mobile.webp"]
   assign quiz_column_mobile = images["quiz-column-mobile.webp"]
   assign sample_column_mobile = images["sample-column-mobile.webp"]
-  assign video_guides_column_mobile = images["video-guides-column-mobile.webp"]
 
   assign colour_matching_row_desktop = images["colour-matching-row-desktop.webp"]
   assign contact_row_desktop = images["contact-row-desktop.webp"]
-  assign lookbook_column_desktop = images["lookbook-column-desktop.webp"]
   assign quiz_column_desktop = images["quiz-column-desktop.webp"]
   assign sample_column_desktop = images["sample-column-desktop.webp"]
-  assign video_guides_column_desktop = images["video-guides-column-desktop.webp"]
 
   assign colour_matching_page = pages["colour-matching-service"]
   assign contact_page = pages["contact-us"]
-  assign lookbook_page = pages["lookbook"]
   assign quiz_page = pages["journey"]
   assign sample_product = all_products["hair-extensions-sample-pieces"]
-  assign video_guides_page = pages["video-guides"]
 %}
 
-<style>
-  .mobile{
-    display:block;
-  }
-  
-  .desktop{
-    display:none;
-  }
-  
-  .grid-container{
-    display:grid;
-    gap:1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
-  }
-
-  img{
-    width:100%;
-    height:auto;
-    display:block;
-    margin:0;
-    padding:0;
-  }
-
-  .first{
-    grid-column:1 / 3;
-    grid-row: 1;
-  }
-
-  .second{
-    grid-column:1 / 2;
-    grid-row: 2;
-  }
-
-  .third{
-    grid-column:2 / 3;
-    grid-row: 2;
-  }
-
-  .fourth{
-    grid-column:1 / 3;
-    grid-row: 3;
-  }
-
-  @media screen and (min-width:768px){
-    .mobile{
-      display:none;
-    }
-
-    .desktop{
-      display:block;
-    }
-
-    .grid-container{
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto 1fr;
-    }
-
-    .first{
-      grid-column:1 / 2;
-      grid-row: 1/3;
-    }
-
-    .first a {
-      height:100%;
-    }
-
-    .first img{
-      height: 100%;
-      object-fit:cover;
-    }
-
-    .second{
-      grid-column:2/4;
-      grid-row: 1;
-    }
-  
-    .third{
-      grid-column:2 / 3;
-      grid-row: 2/3;
-    }
-  
-    .fourth{
-      grid-column:3 / 4;
-      grid-row: 2/3;
-    }
-  }
-</style>
+{{ 'help-me-choose-collage.css' | asset_url | stylesheet_tag }}
 
 <div class='page-width'>
   <div class='grid grid-container scroll-trigger animate--slide-in'>
