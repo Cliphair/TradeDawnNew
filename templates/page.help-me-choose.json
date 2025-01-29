@@ -236,63 +236,214 @@
         "heading_9rPN3x",
         "text_xaqJPb"
       ],
-      "disabled": true,
+      "custom_css": [
+        ".rich-text__blocks {background: #bdade6; padding: 12px 6px; max-width: 100%;}",
+        ".rich-text__heading,.rich-text__text {color: white; max-width: 78rem; margin-right: auto; margin-left: auto;}",
+        "@media screen and (max-width: 750px) {.rich-text__wrapper {width: 100%; } .rich-text__text {font-size: 1.2rem; }}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "blog_spot_kPndtr": {
-      "type": "blog-spot",
+    "article_trending_UtVcVC": {
+      "type": "article-trending",
       "custom_css": [
-        ".grid {--grid-desktop-horizontal-spacing: 10px; --grid-mobile-horizontal-spacing: 10px; --grid-mobile-vertical-spacing: 10px; margin-top: 0;}",
-        "@media screen and (min-width: 750px) {.title-wrapper--self-padded-tablet-down {padding: 0 5rem; }}",
-        "h2 {margin-bottom: 0; padding: 16px 0; background: #bcade6; color: white;}",
-        ".intro-wrapper p {background: #bcade6; color: white; padding-bottom: 16px; margin-bottom: 10px; margin-top: 0;}",
-        ".card__information {text-align: center;}",
-        ".article-card__excerpt {display: none;}",
-        ".blog__button {margin-top: 0;}"
+        ".articles-list {--grid-desktop-horizontal-spacing: 10px; margin-top: 0;}",
+        ".article-card {background: white;}",
+        ".card__heading {color: #414141; text-align: center;}",
+        ".collage-bg-wrapper > div > div {padding-right: 1.5rem !important; padding-left: 1.5rem !important;}",
+        ".grid__item:first-of-type {margin-left: 0 !important;}",
+        "@media screen and (min-width: 750px) {.collage-bg-wrapper > div > div {padding-right: 5rem !important; padding-left: 5rem !important; }}"
       ],
       "settings": {
-        "heading": "The Cliphair Blog",
-        "heading_size": "h2",
-        "introduction": "<p>For the latest haircare tips, top trends and more, browse our blog  for everything you need to know about hair and extensions!</p>",
-        "tags_size": "h4",
-        "text_alignment": "center",
-        "blog": "hair-blog",
-        "post_limit": 4,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "columns_desktop": 4,
-        "swipe_on_desktop": false,
-        "color_scheme": "scheme-0f548082-83ee-43db-baa9-5f5968cc606f",
+        "heading": "",
+        "trending-list": "trending-articles",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "color_scheme": "",
         "show_image": true,
         "image_ratio": "square",
         "show_date": false,
         "show_author": false,
-        "show_view_all": true,
-        "enable_tags": false,
-        "scroll_to_grid": false,
-        "tags_columns_desktop": 3,
-        "tags_swipe_on_desktop": false,
-        "tags_columns_mobile": "1",
-        "tags_swipe_on_mobile": false,
-        "slider_visual": "counter",
-        "padding_top": 0,
-        "padding_bottom": 12
+        "bg_opacity": 0,
+        "mobile-row": 1,
+        "mobile-column": 1,
+        "desktop-row": 1,
+        "desktop-column": 1,
+        "padding_top": 12,
+        "padding_bottom": 0
       }
     },
-    "custom_liquid_zYryxT": {
-      "type": "custom-liquid",
+    "rich_text_87mby7": {
+      "type": "rich-text",
+      "blocks": {
+        "button_gW98p7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Blogs",
+            "button_link": "shopify://blogs/hair-blog",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_gW98p7"
+      ],
       "settings": {
-        "custom_liquid": "<style>\n.blog .card__heading{\ncolor:#414141;\n}\n\n@media screen and (max-width:767px){\n.blog .intro-wrapper p,\n.blog .card__heading{\nfont-size:1.2rem\n}\n}\n</style>",
-        "color_scheme": "background-1",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3fd0d3fd-8093-47db-8ba4-dcc1350611fe",
+        "full_width": true,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "collapsible_content_JQaFJ4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_jmBhXn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What different types of hair extensions do you offer?",
+            "icon": "none",
+            "row_content": "<p>We offer both <a href=\"/collections/clip-in-hair-extensions\" target=\"_blank\" title=\"Clip In Hair Extensions\">clip-in</a> and <a href=\"/collections/permanent-extensions\" target=\"_blank\" title=\"Professional Hair Extensions\">permanent hair extensions</a> to suit any hair concern. Clip in extensions are convenient and non-committal, perfect for special occasions or temporary style changes. Permanent extensions, worn for several weeks at a time, include <a href=\"/collections/tape-in-hair-extensions\" target=\"_blank\" title=\"Tape In Hair Extensions\">tape ins</a>, <a href=\"/collections/human-hair-weave-wefts-hair-extensions\" target=\"_blank\" title=\"Human Hair Weave & Weft Extensions\">weaves</a>, <a href=\"/collections/nano-rings-hair-extensions\" target=\"_blank\" title=\"Nano Ring Hair Extensions\">nano rings</a> and more. Perfect for long term use and provide a seamless, natural look for daily wear. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UQFfJT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to put hair extensions in? ",
+            "icon": "none",
+            "row_content": "<p>The time it takes to put in hair extensions varies. Multipiece Clip-in extensions typically take only 10–15 minutes to apply, as they simply clip onto your natural hair. One piece Clip in hair extensions are super-fast to apply as you only need to attach a single weft, these volumizers can be applied in under 5 minutes! Permanent extensions, however, require a salon appointment and can take anywhere from 1–4 hours depending on the method used and the amount of hair being applied.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UUVVUg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I look after hair extensions? ",
+            "icon": "none",
+            "row_content": "<p>Proper care is essential to maintain the quality and lifespan of your hair extensions. Always store them in a cool, dry place when not in use, or use our <a href=\"/products/hair-extension-hanger-and-carrier-bag\" target=\"_blank\" title=\"Hair Extension Hanger and Carrier\">Hair Extension Hanger and Carrier</a>. Never wash your clip in extensions when they are clipped into your natural hair. To keep them hydrated and healthy, use our extension friendly sulphate free and paraben-free <a href=\"/products/quench-the-thirst-deep-moisture-shampoo\" target=\"_blank\" title=\"Deep Moisture Shampoo\">Deep Moisture Shampoo </a>and <a href=\"/products/quench-the-thirst-deep-moisture-conditioner\" target=\"_blank\" title=\"Deep Moisture Conditioner\">Conditioner</a>. Avoid excessive heat styling and always use our <a href=\"/products/cliphair-heat-spray\" target=\"_blank\" title=\"Hair Extension Heat Protection Spray\">Heat Protection Spray</a> when styling with tools like curling irons or straighteners. For more information, please see our <a href=\"/pages/care-instructions\" target=\"_blank\" title=\"Care Instructions\">full hair extension care guide</a>.  </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gJGk4c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I choose the right colour of hair extensions?",
+            "icon": "none",
+            "row_content": "<p>To select the perfect colour match, compare the extensions with the mid-lengths and ends of your natural hair rather than the roots. We also offer a <a href=\"/pages/colour-matching-service\" target=\"_blank\" title=\"Colour Matching Service\">free, express colour-matching service</a> where you can send a photo of your hair for expert advice and a shade match within hours. Alternatively, you can order a <a href=\"/products/hair-extensions-sample-pieces\" target=\"_blank\" title=\"Hair Extension Sample Pieces\">high quality Remy hair sample</a> to ensure the best match. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7kpM9K": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I choose the right length of hair extensions? ",
+            "icon": "none",
+            "row_content": "<p>When choosing a length, consider your natural hair length, desired look and lifestyle. Cliphair offers extensions ranging from 12 inches to 26 inches. If your only using hair extensions for added volume and thickness, opt for a length that matches your own hair. Explore our <a href=\"https://www.youtube.com/watch?v=44JZNkwk_0s\" target=\"_blank\" title=\"Length Guide Video on Youtube\">Length Guide video</a> to help you gage which length best suits your height, shape and overall style.  </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_d9xkaF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I choose the right amount of hair extensions? ",
+            "icon": "none",
+            "row_content": "<p>Choosing the right amount of hair extensions depends on your desired look and hair type. For clip ins, one set may be enough for subtle volume or length, while thicker hair or a more dramatic transformation may require two sets. For permanent extensions, your stylist will assess the thickness and length of your natural hair to recommend the proper quantity, ensuring a balanced and natural finish. Our blog <a href=\"/blogs/hair-blog/how-many-grams-of-hair-extensions-do-i-need\" target=\"_blank\" title=\"How Many Grams Of Hair Extensions Do I Need?\">‘how many grams of hair extensions do I need?</a>’ explains everything you need to know.  </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9JDpzB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do Remy hair extensions last? ",
+            "icon": "none",
+            "row_content": "<p>Remy human hair extensions, known for their high-quality, typically last between 6-12 months for clip-ins but this also depends on how well they’re looked after and how often you wear them. Quality also plays a big part in hair extension life cycles, AAA grade hair applied permanently will usually last 3 months whereas Higher quality AAAAA grade Remy hair can last 6-12 months in permanent hair extensions. All the professional hair extensions in our <a href=\"/collections/double-drawn-hair-extensions\" target=\"_blank\" title=\"Double Drawn Hair Extensions\">Remy Royale collection</a> are made from AAAAA grade, double drawn, Remy human hair.  </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8xFDb4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which hair extensions are suitable for my hair type? ",
+            "icon": "none",
+            "row_content": "<p>The best type of hair extensions for your hair will depend on factors like your hair's thickness, length, and condition. For permanent hair extensions, your stylist will suggest the perfect type during a consultation once they have assessed your hair or you can take our interactive <a href=\"/pages/journey\" target=\"_blank\" title=\"Journey\">quiz</a> to find out yourself! </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cU8iaa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which hair extensions are suitable for thin hair? ",
+            "icon": "none",
+            "row_content": "<p>For thin hair, lightweight clip in hair extensions like our <a href=\"/collections/full-head-clip-in-hair-extensions\" target=\"_blank\" title=\"Full Head Clip In Hair Extensions\">Classic Full Head</a> are an excellent choice because they can be strategically placed to add volume without causing strain on the natural hair. Permanent options like <a href=\"/collections/tape-in-hair-extensions\" target=\"_blank\" title=\"Tape In Hair Extensions\">tape-in extensions</a> and <a href=\"/collections/nano-rings-hair-extensions\" target=\"_blank\" title=\"Nano Ring Hair Extensions\">nano rings</a> are also highly suitable for thin hair, as they lie flat against the scalp and blend seamlessly, offering a natural look without adding too much weight that could damage fine strands. A professional consultation can help determine the most appropriate method and amount to ensure your hair remains healthy. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WnM6zt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which hair extensions are suitable for thick hair? ",
+            "icon": "none",
+            "row_content": "<p> For thick hair, our <a href=\"/collections/ultra-clip-in-hair-extensions\" target=\"_blank\" title=\"Ultra-Volume Clip In Full Head Extensions (240-300G)\">Ultra-Volume Clip in extensions</a> work well for adding length or enhancing volume, as they can be layered to match the density of your natural hair. Permanent extensions like <a href=\"/collections/tape-in-hair-extensions\" title=\"Tape In Hair Extensions\">tape ins</a> or <a href=\"/collections/human-hair-weave-wefts-hair-extensions\" target=\"_blank\" title=\"Human Hair Weave & Weft Extensions\">hair wefts</a> are ideal for thick hair as they are applied quickly and blend blunt haircuts well into hair extensions.  </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_X8ceXd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will hair extensions damage my hair?  ",
+            "icon": "none",
+            "row_content": "<p>When applied and maintained correctly, hair extensions will not damage your natural hair. Clip-ins are great because they are not worn continuously and do not require adhesives or heat. Permanent extensions, if applied by a professional and cared for properly, are also gentle on your hair. It's important to follow our <a href=\"/pages/care-instructions\" target=\"_blank\" title=\"Care Instructions\">care instructions</a> and avoid overuse of heat or harsh products to keep both your natural hair and extensions healthy. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_jmBhXn",
+        "collapsible_row_UQFfJT",
+        "collapsible_row_UUVVUg",
+        "collapsible_row_gJGk4c",
+        "collapsible_row_7kpM9K",
+        "collapsible_row_d9xkaF",
+        "collapsible_row_9JDpzB",
+        "collapsible_row_8xFDb4",
+        "collapsible_row_cU8iaa",
+        "collapsible_row_WnM6zt",
+        "collapsible_row_X8ceXd"
+      ],
+      "custom_css": [
+        ".collapsible-content-wrapper-narrow {max-width: 1400px; padding: 0 1.5rem;}",
+        "@media screen and (min-width: 750px) {.collapsible-content-wrapper-narrow {padding: 0 5rem; }}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "arrow_style": "half-arrow",
+        "color_scheme": "background-1",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "faq_schema": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "button_label": "",
+        "link": "",
+        "button_style_secondary": false,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
@@ -306,7 +457,8 @@
     "video_9GXmLV",
     "image_list_RLAEfL",
     "rich_text_6rBC6B",
-    "blog_spot_kPndtr",
-    "custom_liquid_zYryxT"
+    "article_trending_UtVcVC",
+    "rich_text_87mby7",
+    "collapsible_content_JQaFJ4"
   ]
 }
