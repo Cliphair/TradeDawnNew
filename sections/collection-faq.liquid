@@ -77,7 +77,7 @@
                 </div>
               {%- endfor -%}
               {% if size >5  %}
-                <p class='read-more__btn'>Read More FAQs</p>
+                <p class='read-more__btn_faq'>Read More FAQs</p>
                 <div class='hidden'>
                    {%- for entry in faqs offset: 5 -%}
                     <div
@@ -110,7 +110,7 @@
                       </details>
                     </div>
                   {%- endfor -%}
-                  <p class='read-less__btn'>Read Less FAQs</p>
+                  <p class='read-less__btn_faq'>Read Less FAQs</p>
                 </div>
               {% endif %}
             </div>
@@ -121,12 +121,29 @@
   </div>
 
   <script>
-    function openReadMore(btn) {
+    document.addEventListener("DOMContentLoaded", () => {
+      let readMoreBtns = document.getElementsByClassName('read-more__btn_faq');
+      let readLessBtns = document.getElementsByClassName('read-less__btn_faq');
+    
+      for (let btn of readMoreBtns) {
+        btn.addEventListener('click', () => {
+          openReadMoreFaq(btn);
+        })
+      }
+    
+      for (let btn of readLessBtns) {
+        btn.addEventListener('click', () => {
+          closeReadLessFaq(btn);
+        })
+      }
+    })
+    
+    function openReadMoreFaq(btn) {
       btn.classList.add('hidden');
       btn.nextElementSibling.classList.remove('hidden');
     }
     
-    function closeReadLess(btn) {
+    function closeReadLessFaq(btn) {
       btn.parentElement.previousElementSibling.classList.remove('hidden');
       btn.parentElement.classList.add('hidden');
     }
