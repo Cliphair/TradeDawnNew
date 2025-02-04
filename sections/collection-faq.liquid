@@ -16,6 +16,10 @@
 {%- endstyle -%}
 
 {% assign faqs = collection.metafields.custom.collection_faqs.value %}
+{% assign size = 0 %}
+{%- for entry in faqs -%}
+  {% assign size = size | plus: 1 %}
+{% endfor %}
 
 {% if faqs %}
   <div id="FAQs" class="color-{{ section.settings.color_scheme }} gradient">
@@ -71,7 +75,7 @@
                     </div>
                   </details>
                 </div>
-                {% if faqs.size > 5 %}
+                {% if size >5  %}
                   <p>Read More FAQs</p>
                 {% endif %}
               {%- endfor -%}
