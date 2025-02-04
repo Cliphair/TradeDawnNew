@@ -98,7 +98,8 @@
                 <div class='hidden'>
                    {%- for entry in faqs offset: 5 -%}
                     <div
-                      class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}{% if forloop.first %} style='margin-top:0;'{% endif %}"
+                      class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                      {% if forloop.first %} style='margin-top:0;'{% endif %}
                     >
                       <details
                         id="Details-{{ block.id }}-{{ section.id }}"
