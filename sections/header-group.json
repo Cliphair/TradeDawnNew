@@ -92,7 +92,6 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Free_Next_Day_Guaranteed_Delivery_c64b9875-bf1f-4afa-8db5-41b6e94c769b.gif",
             "text_alignment": "center",
