@@ -41,7 +41,7 @@
           </div>
           <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             <div class="grid__item">
-              {%- for entry in faqs -%}
+              {%- for entry in faqs limit: 5 -%}
                 <div
                   class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
                 >
