@@ -75,8 +75,44 @@
                     </div>
                   </details>
                 </div>
-                
               {%- endfor -%}
+              {% if size >5  %}
+                <p>Read More FAQs</p>
+                <div class='hidden'>
+                   {%- for entry in faqs offset: 5 -%}
+                    <div
+                      class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                    >
+                      <details
+                        id="Details-{{ block.id }}-{{ section.id }}"
+                        {% if section.settings.open_first_collapsible_row and forloop.first %}
+                          open
+                        {% endif %}
+                      >
+                        <summary id="Summary-{{ forloop.index }}-{{ section.id }}">
+                          <h3 class="accordion__title inline-richtext h4">
+                            {{ entry.question }}
+                          </h3>
+                          {% if section.settings.arrow_style == 'full-arrow' %}
+                            {% render 'icon-arrow' %}
+                          {% elsif section.settings.arrow_style == 'half-arrow' %}
+                            {% render 'icon-caret' %}
+                          {% endif %}
+                        </summary>
+                        <div
+                          class="accordion__content rte"
+                          id="CollapsibleAccordion-{{ forloop.index }}-{{ section.id }}"
+                          role="region"
+                          aria-labelledby="Summary-{{ forloop.index }}-{{ section.id }}"
+                        >
+                          {{ entry.answer | metafield_tag }}
+                        </div>
+                      </details>
+                    </div>
+                  {%- endfor -%}
+                  <p>Read Less FAQs</p>
+                </div>
+              {% endif %}
             </div>
           </div>
         </div>
