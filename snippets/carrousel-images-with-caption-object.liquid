@@ -1,0 +1,116 @@
+{{ 'logo-list.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+<style>
+  .section-images-list ul{
+    padding:0;
+  }
+  
+  .text-container p{
+    margin:0!important;
+    font-size:1rem;
+    text-align:left;
+  }
+
+  button[disabled]{
+    display:none;
+  }
+</style>
+<div id="{{ section.id }}">
+  {%- liquid
+    assign size = 0
+    for entry in image_list.value
+      assign size = size | plus: 1
+    endfor
+
+    assign columns_mobile_int = 2 | plus: 0
+    assign show_mobile_slider = false
+    if size > columns_mobile_int
+      assign show_mobile_slider = true
+    endif
+
+    assign columns_desktop_int = 4 | plus: 0
+    assign show_desktop_slider = false
+    if size > columns_desktop_int
+      assign show_desktop_slider = true
+    endif
+
+    assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
+    if size > columns_tablet
+      assign show_tablet_slider = true
+    endif
+  -%}
+
+  <div class="section-images-list images-list-wrapper">
+    <slider-component
+      class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    >
+      <ul
+        class="images-list grid grid--4-col-desktop grid--{{ columns_tablet }}-col-tablet grid--2-col-tablet-down slider grid--peek slider--tablet slider--desktop images-list--{{ size }}-items "
+        id="Slider-{{ section.id }}"
+        role="list"
+      >
+        {%- liquid
+          assign columns = size
+          if columns > 3
+            assign columns = 3
+          endif
+        -%}
+
+        {%- for block in image_list.value -%}
+          {% liquid
+            assign image = block.image.value
+            assign caption = block.caption
+          %}
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="images-list__item grid__item custom__slide{% if show_mobile_slider or show_tablet_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <img
+              srcset="{{ image | image_url: width: image.width }}"
+              src="{{ image | image_url: width: 190 }}"
+              alt="{{ image.alt | escape }}"
+              loading="lazy"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+            >
+            <div class="text-container h5">{{ caption | metafield_tag }}</div>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if show_mobile_slider or show_tablet_slider or show_desktop_slider -%}
+        <div class="slider-buttons no-js-hidden small-hide slider--4-col-desktop slider--2-col-tablet-down">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+
+          <div class="slider-counter caption visually-hidden">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ size }}</span>
+          </div>
+
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+          >
+            {% render 'icon-caret' %}
+          </button>
+        </div>
+      {%- endif -%}
+    </slider-component>
+  </div>
+</div>
+
