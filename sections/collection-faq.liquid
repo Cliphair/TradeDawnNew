@@ -13,6 +13,21 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .read-less-faq__btn,
+  .read-less-faq__btn{
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset: .3rem;
+    transition: text-decoration-thickness var(--duration-short) ease;
+  }
+
+  .read-less-faq__btn:hover,
+  .read-less-faq__btn:hover{
+    color: rgb(var(--color-link));
+    text-decoration-thickness: .2rem;
+  }
+  
 {%- endstyle -%}
 
 {% assign faqs = collection.metafields.custom.collection_faqs.value %}
@@ -77,7 +92,7 @@
                 </div>
               {%- endfor -%}
               {% if size >5  %}
-                <p class='read-more__btn faq'>Read More FAQs</p>
+                <p class='read-more-faq__btn'>Read More FAQs</p>
                 <div class='hidden'>
                    {%- for entry in faqs offset: 5 -%}
                     <div
@@ -110,7 +125,7 @@
                       </details>
                     </div>
                   {%- endfor -%}
-                  <p class='read-less__btn_faq'>Read Less FAQs</p>
+                  <p class='read-less-faq__btn'>Read Less FAQs</p>
                 </div>
               {% endif %}
             </div>
@@ -122,8 +137,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      let readMoreBtns = document.querySelector('.read-more__btn .faq');
-      let readLessBtns = document.querySelector('.read-less__btn .faq');
+      let readMoreBtns = document.getElementsByClassName('read-more-faq__btn');
+      let readLessBtns = document.getElementsByClassName('read-less-faq__btn');
     
       for (let btn of readMoreBtns) {
         btn.addEventListener('click', () => {
