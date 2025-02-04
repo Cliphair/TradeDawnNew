@@ -77,7 +77,7 @@
                 </div>
               {%- endfor -%}
               {% if size >5  %}
-                <p class='read-more__btn_faq'>Read More FAQs</p>
+                <p class='read-more__btn faq'>Read More FAQs</p>
                 <div class='hidden'>
                    {%- for entry in faqs offset: 5 -%}
                     <div
@@ -122,8 +122,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      let readMoreBtns = document.getElementsByClassName('read-more__btn_faq');
-      let readLessBtns = document.getElementsByClassName('read-less__btn_faq');
+      let readMoreBtns = document.querySelector('.read-more__btn .faq');
+      let readLessBtns = document.querySelector('.read-less__btn .faq');
     
       for (let btn of readMoreBtns) {
         btn.addEventListener('click', () => {
