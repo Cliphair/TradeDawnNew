@@ -10,6 +10,12 @@
 {%- endstyle -%}
 
 {% liquid
+  if collection.metafields.visual_content.image_carrousel
+    assign location_class = collection.metafields.visual_content.image_carrousel.value.location
+    assign images = collection.metafields.visual_content.image_carrousel.value.images
+    assign element = '<div class="' | append: location_class | append: '"></div>'
+  endif
+  
   assign description = collection.description
   if description contains '<!-- split -->'
     assign description = description | split: '<!-- split -->' | first
@@ -33,16 +39,14 @@
 
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte {{ section.settings.text_alignment }}">
-          {{ description }}
-          {% comment %}
-            <span class="short-description">
-              {{ collection.description | strip_html | truncate: 300 }}
-            </span>
-            <span class="full-description" style="display: none;">
-              {{ collection.description }}
-            </span>
-            <a href="javascript:void(0);" class="toggle-description">Read More</a>
-          {% endcomment %}
+          {% if description contains element %}
+            {% assign parts = description | split: element %}
+            {{ parts.first }}
+            {% render 'carrousel-images-with-caption-object' image_list:images %}
+            {{ parts.last }}
+          {% else %}
+            {{ description }}
+          {% endif %}
         </div>
       {%- endif -%}
     </div>
