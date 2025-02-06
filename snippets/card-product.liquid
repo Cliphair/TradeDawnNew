@@ -204,10 +204,10 @@
               >
                 <!-- {{- 'products.product.on_sale' | t -}} -->
                 {{
-                  card_product.selected_or_first_available_variant.price
-                  | minus: card_product.selected_or_first_available_variant.compare_at_price
+                  card_product.first_available_variant.price
+                  | minus: card_product.first_available_variant.compare_at_price
                   | times: 100.0
-                  | divided_by: card_product.selected_or_first_available_variant.compare_at_price
+                  | divided_by: card_product.first_available_variant.compare_at_price
                   | times: 100
                   | divided_by: 100
                   | floor
