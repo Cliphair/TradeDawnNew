@@ -92,9 +92,8 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Free_Next_Day_Guaranteed_Delivery_c64b9875-bf1f-4afa-8db5-41b6e94c769b.gif",
+            "image": "shopify://shop_images/Free_Saturday_Guaranteed_Delivery_on_hair_extensions_from_clip_hair_extensions.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://pages/hair-extensions-by-colour"
