@@ -197,7 +197,7 @@
               >
                 {{ inventory }} LEFT
               </span>
-            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+            {%- elsif card_product.selected_or_first_available_variant.compare_at_price > card_product.selected_or_first_available_variant.price and card_product.available -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
