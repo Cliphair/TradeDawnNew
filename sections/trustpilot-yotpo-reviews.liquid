@@ -115,7 +115,7 @@
 
         if (data.status.code === 200) {
             return {
-                averageScore: data.response.bottomline.product_score,
+                averageScore: data.response.bottomline.average_score,
                 totalReviews: data.response.bottomline.total_reviews
             };
         } else {
