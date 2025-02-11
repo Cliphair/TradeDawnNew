@@ -85,7 +85,7 @@
   }
 
   function updateYotpoRating(){
-    getYotpoReviewScore.then(data => {
+    getYotpoReviewScore().then(data => {
       if (data) {
         console.log(`Average Score: ${data.averageScore}`);
         console.log(`Total Reviews: ${data.totalReviews}`);
