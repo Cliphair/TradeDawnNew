@@ -85,7 +85,7 @@
   }
 
   function updateYotpoRating(){
-    let stars = Array.from(document.getElmentsByClassName('yotpo-star'));
+    let stars = Array.from(document.getElementsByClassName('yotpo-star'));
     let fullStarsLastIndex = null;
     let halfStarsLastIndex = null;
     
@@ -99,7 +99,7 @@
     });
 
     for( let i=5; i >= fullStarsLastIndex; i--){
-      console.log(stars[0])
+      console.log(stars[i])
       stars[i].classList.remove("full");
       if(i == halfStarsLastIndex){
         stars[i].classList.add("half");
