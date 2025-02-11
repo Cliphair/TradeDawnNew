@@ -64,7 +64,7 @@
   <div class='yotpo-review'>
     <div class='yotpo-stars'>
       {% for i in (1..5) %}
-        <span class='icon half filled'>{% render'icon-star' %}</span>
+        <span class='icon full filled'>{% render'icon-star' %}</span>
       {% endfor %}
     </div>
     <svg width="58" height="16" viewBox="0 0 58 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +76,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function(){
-    updateYotpoRating()
+    updateYotpoRating();
   })
 
   function removeTrustpilotText() {
@@ -85,13 +85,20 @@
   }
 
   function updateYotpoRating(){
+    let stars = document.querySelector('.yotpo-stars .icon');
+    let fullStarsLastIndex = 5;
+    let halfStarsLastIndex = null;
+    
     getYotpoReviewScore().then(data => {
       if (data) {
-        console.log(`Average Score: ${data.averageScore}`);
-        console.log(`Total Reviews: ${data.totalReviews}`);
-      } else{
-        console.log("not working")
+        fullStarsLastIndex = Math.trunc(data.averageScore);
+        if (fullStarsLastIndex < 5 && (data.averageScore - fullStarsLastIndex >= 0)){
+          halfStarsLastIndex = fullStarsLastIndex + 1;
+        }
       }
+
+      console.log(fullStarsLastIndex)
+      console.log(halfStarsLastIndex)
     });
   }
 
