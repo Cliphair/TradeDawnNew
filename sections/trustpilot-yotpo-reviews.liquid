@@ -64,7 +64,7 @@
   <div class='yotpo-review'>
     <div class='yotpo-stars'>
       {% for i in (1..5) %}
-        <span class='icon full filled'>{% render'icon-star' %}</span>
+        <span class='yotpo-star icon full filled'>{% render'icon-star' %}</span>
       {% endfor %}
     </div>
     <svg width="58" height="16" viewBox="0 0 58 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
   }
 
   function updateYotpoRating(){
-    let stars = document.querySelector('.yotpo-stars .icon');
+    let stars = document.getElementsByClass('yotpo-star');
     let fullStarsLastIndex = null;
     let halfStarsLastIndex = null;
     
