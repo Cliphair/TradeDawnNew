@@ -22,8 +22,19 @@
     justify-content:center;
     align-items:center;
     background:blue;
-  
   }
+
+  .yotpo-review{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .yotpo-stars{
+    display: flex;
+    gap: 2px;
+  }
+  
 </style>
 <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
@@ -38,8 +49,8 @@
   
   |
   
-  <div>
-    <div>
+  <div class='yotpo-review'>
+    <div class='yotpo-stars'>
       {% for i in (1..5) %}
         <span class='icon filled'>{% render'icon-star' %}</span>
       {% endfor %}
