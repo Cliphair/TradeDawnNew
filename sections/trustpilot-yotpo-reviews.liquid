@@ -131,11 +131,13 @@
 
   function updateYotpoRating(){
     let stars = Array.from(document.getElementsByClassName('yotpo-star'));
+    let score = document.querySelector('.yotpo-score');
     let fullStarsLastIndex = null;
     let halfStarsLastIndex = null;
     
     getYotpoReviewScore().then(data => {
       if (data) {
+        score.innerText = data.averageScore;
         fullStarsLastIndex = Math.trunc(data.averageScore);
         if (fullStarsLastIndex < 5 && (data.averageScore - fullStarsLastIndex >= 0)){
           halfStarsLastIndex = fullStarsLastIndex + 1;
