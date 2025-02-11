@@ -91,18 +91,21 @@
     
     getYotpoReviewScore().then(data => {
       if (data) {
-        console.log(data)
         fullStarsLastIndex = Math.trunc(data.averageScore);
         if (fullStarsLastIndex < 5 && (data.averageScore - fullStarsLastIndex >= 0)){
           halfStarsLastIndex = fullStarsLastIndex + 1;
         }
+
+        stars.forEach((element, index) => {
+          if(index + 1 > fullStarsLastIndex){
+            element.classList.remove("full");
+          }
+          if(halfStarsLastIndex && index + 1 == halfStarsLastIndex){
+            element.classList.add("half")
+          }
+        })
       }
     });
-    console.log(fullStarsLastIndex)
-    stars.forEach((element, index) => {
-      console.log(index)
-      console.log(element)
-    })
   }
 
   async function getYotpoReviewScore(){
