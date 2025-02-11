@@ -64,7 +64,7 @@
   <div class='yotpo-review'>
     <div class='yotpo-stars'>
       {% for i in (1..5) %}
-        <span class='yotpo-star icon full filled'>{% render'icon-star' %}</span>
+        <span class='yotpo-star icon full'>{% render'icon-star' %}</span>
       {% endfor %}
     </div>
     <svg width="58" height="16" viewBox="0 0 58 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,10 +98,10 @@
 
         stars.forEach((element, index) => {
           if(index + 1 > fullStarsLastIndex){
-            element.classList.remove("full");
+            element.classList.add("full");
           }
           if(halfStarsLastIndex && index + 1 == halfStarsLastIndex){
-            element.classList.add("half")
+            element.classList.add("half");
           }
         })
       }
