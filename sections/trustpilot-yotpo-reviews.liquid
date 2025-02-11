@@ -99,7 +99,7 @@
 <div>
 
   <div>
-    <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b732fbfb950b10de65e5" data-businessunit-id="5fd0f3477e75ee0001d12767" data-style-height="24px" data-style-width="100%" data-text-color="#414141">
+    <div class="trustpilot-widget trustpilot-review" data-locale="en-GB" data-template-id="5419b732fbfb950b10de65e5" data-businessunit-id="5fd0f3477e75ee0001d12767" data-style-height="24px" data-style-width="100%" data-text-color="#414141">
       <a href="https://uk.trustpilot.com/review/cliphair.com" target="_blank" rel="noopener">Trustpilot</a>
     </div>
   </div>
@@ -122,12 +122,20 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function(){
+    removeTrustpilotText();
     updateYotpoRating();
   })
 
   function removeTrustpilotText() {
-    let test = document.querySelector('#trust-score');
-    console.log(test)
+    const container = document.querySelector('.trustpilot-review'); // Change to your target element
+    const checkIframe = setInterval(() => {
+        const iframe = container.querySelector('iframe'); // Look inside the specific container
+        if (iframe) {
+            console.log('Iframe found:', iframe);
+            iframe.onload = () => console.log('Iframe has loaded.');
+            clearInterval(checkIframe); // Stop checking after finding it
+        }
+    }, 500);
   }
 
   function updateYotpoRating(){
