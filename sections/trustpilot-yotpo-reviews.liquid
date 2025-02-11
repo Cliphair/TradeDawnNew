@@ -97,7 +97,7 @@
         }
 
         stars.forEach((element, index) => {
-          if(index + 1 > fullStarsLastIndex){
+          if(index + 1 <= fullStarsLastIndex){
             element.classList.add("full");
           }
           if(halfStarsLastIndex && index + 1 == halfStarsLastIndex){
