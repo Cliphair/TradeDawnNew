@@ -20,7 +20,9 @@
 </div></div>
   |
   <div>***** Yotpo</div>
-
+    {% for i in (1..5) %}
+      <span>{% render'icon-star' %}</span>
+      {% endfor %}
     {% liquid
       assign rating_decimal = 0
       assign decimal = 3.3 | modulo: 1
