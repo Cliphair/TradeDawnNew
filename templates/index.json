@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "trustpilot_yotpo_reviews_8UQNtz": {
+      "type": "trustpilot-yotpo-reviews",
+      "settings": {}
+    },
     "visual_menu_66DUPM": {
       "type": "visual-menu",
       "custom_css": [
@@ -1077,6 +1081,7 @@
     }
   },
   "order": [
+    "trustpilot_yotpo_reviews_8UQNtz",
     "visual_menu_66DUPM",
     "slideshow_3tCMjU",
     "maquee_bdNYHF",
