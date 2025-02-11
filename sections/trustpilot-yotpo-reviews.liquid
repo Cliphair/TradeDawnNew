@@ -86,7 +86,7 @@
 
   function updateYotpoRating(){
     let stars = document.querySelector('.yotpo-stars .icon');
-    let fullStarsLastIndex = 5;
+    let fullStarsLastIndex = null;
     let halfStarsLastIndex = null;
     
     getYotpoReviewScore().then(data => {
@@ -96,10 +96,11 @@
           halfStarsLastIndex = fullStarsLastIndex + 1;
         }
       }
-
-      console.log(fullStarsLastIndex)
-      console.log(halfStarsLastIndex)
     });
+
+    stars.map(star => {
+      console.log(star)
+    })
   }
 
   async function getYotpoReviewScore(){
