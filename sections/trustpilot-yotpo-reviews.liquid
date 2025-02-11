@@ -98,9 +98,12 @@
       }
     });
 
-    stars.map(star => {
-      console.log(star)
-    })
+    for(int i = 5; i > fullStarsLastIndex; i--){
+      stars[i].classList.remove("full");
+      if(i == halfStarsLastIndex){
+        stars[i].classList.add("half");
+      }
+    }
   }
 
   async function getYotpoReviewScore(){
