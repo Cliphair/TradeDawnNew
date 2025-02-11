@@ -23,7 +23,7 @@
 
     {% liquid
       assign rating_decimal = 0
-      assign decimal = 4.8 | modulo: 1
+      assign decimal = 4.3 | modulo: 1
       if decimal >= 0.3 and decimal <= 0.7
         assign rating_decimal = 0.5
       elsif decimal > 0.7
