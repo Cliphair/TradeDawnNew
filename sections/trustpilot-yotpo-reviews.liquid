@@ -91,6 +91,7 @@
     
     getYotpoReviewScore().then(data => {
       if (data) {
+        console.log(data)
         fullStarsLastIndex = Math.trunc(data.averageScore);
         if (fullStarsLastIndex < 5 && (data.averageScore - fullStarsLastIndex >= 0)){
           halfStarsLastIndex = fullStarsLastIndex + 1;
