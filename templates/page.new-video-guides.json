@@ -95,6 +95,18 @@
             "link": "shopify://pages/hair-extensions-by-colour"
           }
         },
+        "video_eRmDNf": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/How to use a Cliphair Colour Ring.mp4",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "cover_image": "shopify://shop_images/colour-ring-video-thumbnail.webp",
+            "description": "How to use a Cliphair Colour Ring",
+            "title": "HOW TO USE A CLIPHAIR COLOUR RING",
+            "button_label": "Colour Ring - View Product",
+            "link": "shopify://products/hair-extensions-colour-ring"
+          }
+        },
         "video_QNyMmD": {
           "type": "video",
           "settings": {
@@ -622,21 +634,11 @@
             "button_label": "Ponytail - View Collection",
             "link": "shopify://collections/clip-in-ponytail-extensions"
           }
-        },
-        "video_7yLfD6": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=AQYV15FBELM",
-            "cover_image": "shopify://shop_images/TRANSFORMATIONS.png",
-            "description": "BRAIDED HALF UP",
-            "title": "BRAIDED HALF UP",
-            "button_label": "Double Weft - View Collection",
-            "link": "shopify://collections/double-wefted-clip-in-hair-extensions"
-          }
         }
       },
       "block_order": [
         "video_eVVtAL",
+        "video_eRmDNf",
         "video_QNyMmD",
         "video_p3DWak",
         "video_RjznNa",
@@ -684,8 +686,7 @@
         "video_phGQrG",
         "video_YkW7ke",
         "video_M4JQB3",
-        "video_CbGaAQ",
-        "video_7yLfD6"
+        "video_CbGaAQ"
       ],
       "custom_css": [
         ".deferred-media__poster-button {color: white;}"
