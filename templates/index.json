@@ -11,6 +11,7 @@
   "sections": {
     "trustpilot_yotpo_reviews_8UQNtz": {
       "type": "trustpilot-yotpo-reviews",
+      "disabled": true,
       "settings": {}
     },
     "visual_menu_66DUPM": {
