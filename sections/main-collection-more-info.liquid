@@ -26,6 +26,7 @@
 %}
 
 {% for carrousel in collection.metafields.visual_content.description_carrousel %}
+  {{ carrousel }}
   {% assign location_class = carrousel.value.location %}
   {{ location_class }}
   {% assign elements = carrousel.value.elements %}
