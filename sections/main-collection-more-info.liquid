@@ -26,7 +26,7 @@
 %}
 
 {% for carrousel in collection.metafields.visual_content.description_carrousel %}
-  {% assign location_class = location_class | append: "," | append: carrousel.value.location %}
+  {% assign location_class = carrousel.value.location %}
   {% assign elements = carrousel.value.elements %}
   {% assign html_element = '<div class="' | append: location_class | append: '"></div>' %}
   {% if description contains html_element %}
