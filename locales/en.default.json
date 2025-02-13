@@ -568,5 +568,164 @@
       "signup_form_success": "We will send you an email right before we open!",
       "password_link": "Enter using password"
     }
+  },
+  "navbar": {
+    "top_level": {
+      "clip_ins": "CLIP INS",
+      "professional": "PROFESSIONAL",
+      "shop_by_shade": "SHOP BY SHADE",
+      "help_me_choose": "HELP ME CHOOSE",
+      "haircare_accessories": "HAIRCARE & ACCESSORIES",
+      "blog": "BLOG",
+      "info_hub": "INFO HUB",
+      "offers_savings": "OFFERS & SAVINGS"
+    },
+    "sub_level": {
+      "clip_in":{
+        "all": "All Clip In Hair Extensions",
+        "multi_piece": "Multi Piece Clip Ins",
+        "seamless":"Seamless Full Head (150-190g)",
+        "classic": "Classic Full Head (130g)",
+        "double_weft": "Double Weft Full Head (180-220g)",
+        "ultra_volume": "Ultra-Volume Full Head (240-300g)",
+        "curly": "Curly Full Head (115-160g)",
+        "one_piece": "One Piece Hair Extensions",
+        "top_up": "Top Up Piece (40g)",
+        "quad_weft": "Quad Weft Piece (80g)",
+        "supreme": "Supreme Quad Piece (120g)",
+        "hairpieces_ponytail": "Hairpieces & Ponytails",
+        "ponytail": "Clip In Ponytail (100-140g)",
+        "fringe": "Clip In Fringe (30g)",
+        "bundle": "Clip In Extensions Value Bundles",
+        "gift_card": "E-Gift Card"
+      },
+      "professional": {
+        "all": "All Professional Extensions",
+        "nanos": "Nano Ring Hair Extensions",
+        "nano_ring": "Remy Royale Nano Rings (50g)",
+        "nano_bonds": "Remy Royale Nano Bonds (50g)",
+        "tapes": "Tape Hair Extensions",
+        "tape_in": "Tape In Hair Extensions (100g)",
+        "remy_tape_in": "Remy Royale Tape Ins (50g)",
+        "remy_invisible_tape_in": "Remy Royale Invisible Tape Ins (50g)",
+        "weaves": "Weave Hair Extensions",
+        "remy_classic_weft":"Remy Royale Classic Weft (120g)",
+        "remy_flat_weft": "Remy Royale Flat Track Weft (120g)",
+        "pre_bondeds": "Pre Bonded Hair Extensions",
+        "remy_i_tip": "Remy Royale I-Tips (50g)",
+        "remy_flat_tip": "Remy Royale Flat Tips (50g)",
+        "tools_maintenance": "Professional Tools & Maintenance",
+        "colour_ring": "Colour Rings",
+        "nano_beads": "Nano Beads",
+        "tape_remover": "Tape Remover",
+        "tape_tabs": "Tape Tabs",
+        "wig_glue": "Wig Glue",
+        "wig_glue_remover": "Wig Glue Remover",
+        "tape_remover_spare_tabs":"Tape Remover & Spare Tabs Set",
+        "wig_glue_and_remover": "Wig Glue & Remover Set",
+        "maintenance_bundle": "Maintenance Value Bundles",
+        "professional_bundle": "Permanent Extensions Value Bundles",
+        "gift_card": "E-Gift Card",
+        "apply_trade": "Apply For Trade Account Here"
+      },
+      "shades": {
+        "all": "All Shades",
+        "blacks": {
+          "blacks": "Blacks",
+          "jet_black": "Jet Black (#1)",
+          "natural_black": "Off/Natural Black (#1B)"
+        },
+        "browns":{
+          "browns": "Browns",
+          "darkest_brown": "Darkest Brown (#2)",
+          "dark_brown": "Dark Brown (#3)",
+          "medium_brown": "Medium Brown (#4)",
+          "toffee_brown": "Toffee Brown (#5)",
+          "light_brown": "Light Brown (#6)",
+          "mousey_brown": "Mousey Brown (#6B)",
+          "medium_ash_brown": "Medium Ash Brown (#8)",
+          "ash_brown": "Ash Brown (#9)"
+        },
+        "blondes": {
+          "blondes": "Blondes",
+          "silver_sand": "Silver Sand (#SS)",
+          "ice_blonde": "Ice Blonde",
+          "lightest_blonde": "Lightest Blonde (#60)",
+          "bleach_blonde":"Bleach Blonde (#613)",
+          "light_golden_blonde": "Light Golden Blonde (#16)",
+          "lightest_brown": "Lightest Brown (#18)",
+          "dark_blonde": "Dark Blonde (#14)",
+          "light_ash_blonde": "Light Ash Blonde (#22)",
+          "strawberry_blonde": "Strawberry Blonde (#27)"
+        },
+        "highlights": {
+          "highlights": "Highlights",
+          "iced_cappuccino": "Iced Cappuccino (#14/22)",
+          "oak_brondie": "Oak Brondie",
+          "biscuit_blondey": "Biscuit Blondey (#18/613)",
+          "creamy_blonde": "Creamy Blonde (#22/613)",
+          "blondeme": "BlondeMe (#60/SS)",
+          "platinum_blondeme": "Platinum BlondeMe",
+          "peaches_cream": "Peaches & Cream (#27/613)",
+          "goldilocks": "Goldilocks (#16/613)",
+          "barbie_blonde": "Barbie Blonde (#16/60)",
+          "butterscotch_blonde": "Butterscotch Blonde (#10/16)",
+          "natural_sandy_blonde": "Natural Sandy Blonde (#12/16/613)",
+          "espresso_melt": "Espresso Melt (#2/4/6)",
+          "cookies_cream": "Cookies & Cream (#4/613)",
+          "chestnut_bronde": "Chestnut Bronde (#6/613)",
+          "dirty_blonde": "Dirty Blonde (#9/613)",
+          "chocolate_honey": "Chocolate Honey (#4/27)",
+          "hazelnut_brondie": "Hazelnut Brondie (#6/27)",
+          "cinnamon_brownie": "Cinnamon Brownie (#4/30)"
+        },
+        "balayages": {
+          "balayages": "Balayages",
+          "ash_black_balayage": "Ash Black Balayage",
+          "silver_shadow_balayage": "Silver Shadow Balayage",
+          "espresso_melt_balayage": "Espresso Melt Balayage",
+          "soft_bronze_balayage": "Soft Bronze Balayage",
+          "biscuit_blondey_balayage": "Biscuit Blondey Balayage",
+          "chestnut_bronde_balayage": "Chestnut Bronde Balayage",
+          "cinnamon_swirl_balayage": "Cinnamon Swirl Balayage",
+          "chestnut_honey_balayage": "Chestnut Honey Balayage"
+        },
+        "ombres": {
+          "ombres": "Ombres",
+          "silver_black_ombre": "Silver Black Ombre (#T1B/SG)",
+          "espresso_honey_ombre": "Espresso Honey Ombre (#T2/27)",
+          "chocolate_honey_ombre": "Chocolate Honey Ombre (#T4/27)",
+          "toffee_honey_ombre": "Toffee Honey Ombre (#T6/27)"
+        },
+        "reds": {
+          "reds": "Reds & Auburns",
+          "strawberry_blonde": "Strawberry Blonde (#27)",
+          "light_auburn": "Light Auburn (#30)",
+          "autumn_spice": "Autumn Spice (#30B)",
+          "dark_auburn": "Dark Auburn/Copper Red (#33)",
+          "cowgirl_copper": "Cowgirl Copper (#350/33)",
+          "flaming_ginger": "Flaming Ginger (#350)",
+          "plum_cherry_red": "Plum/Cherry Red (#530)",
+          "deep_red": "Deep Red",
+          "mahogany_red": "Mahogany Red (#99J)",
+          "bright_red": "Bright Red"
+        },
+        "funkies": {
+          "funkies": "Funkies",
+          "silver_grey":"Silver/Grey",
+          "pastel_pink":"Pastel Pink",
+          "turquoise":"Turquoise",
+          "blue": "Blue",
+          "purple": "Purple",
+          "bright_red": "Bright Red"
+        },
+        "sample": "Order A Sample"
+      }
+
+    },
+    "helpers": {
+      "back": "BACK"
+    }
   }
 }
+

@@ -1,13 +1,25 @@
-{% if colour_name %}
-  {% liquid
-    assign image_handle = colour_name | escape | handle | append: '-snippet.webp'
-    assign card_image = images[image_handle]
-  %}
-  <img
-    src="{{ card_image | image_url: width: 40 }}"
-    height="40"
-    width="40"
-    loading="lazy"
-    class="colour-snippet motion-reduce"
-  >
+{% if collection_object or colour_name %}
+  {% if collection_object and collection_object.featured_image %}
+    <img
+      src="{{ collection_object.featured_image | image_url: width: 40 }}"
+      height="40"
+      width="40"
+      loading="lazy"
+      class="colour-snippet motion-reduce"
+      alt="{{ collection_object.featured_image.alt }}"
+    >
+  {% else %}
+    {% liquid
+      assign image_handle = colour_name | escape | handle | append: '-snippet.webp'
+      assign card_image = images[image_handle]
+    %}
+    <img
+      src="{{ card_image | image_url: width: 40 }}"
+      height="40"
+      width="40"
+      loading="lazy"
+      class="colour-snippet motion-reduce"
+      alt="{{ card_image.alt }}"
+    >
+  {% endif %}
 {% endif %}

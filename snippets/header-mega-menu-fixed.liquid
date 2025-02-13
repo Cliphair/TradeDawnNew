@@ -1727,9 +1727,21 @@
             id="HeaderMenu-help-me-choose"
             class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
           >
-            <span>
-              <span> HELP ME CHOOSE </span>
-            </span>
+            <a
+              href="/pages/help-me-choose"
+              class=""
+              {% if request.path == '/pages/help-me-choose' %}
+                aria-current="page"
+              {% endif %}
+            >
+              <span
+                {%- if request.path == '/pages/help-me-choose' %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                HELP ME CHOOSE
+              </span>
+            </a>
             {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
           </summary>
           <div
@@ -2030,7 +2042,7 @@
                             aria-current="page"
                           {% endif %}
                         >
-                          Hair Extension Holder<span class='new-arrival'> NEW</span>
+                          Hair Extension Holder<span class="new-arrival"> NEW</span>
                         </a>
                       </li>
 
@@ -2287,166 +2299,166 @@
     </li>
 
     {% comment %}
-    <!-- Christmas Shop -->
-    <li>
-      <header-menu>
-        <details id="Details-HeaderMenu-9" class="mega-menu">
-          <summary
-            id="HeaderMenu-christmas-shop"
-            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
-          >
-            <a
-              href="/pages/wish-for-cliphair-holiday-campaign"
-              class=""
-              {% if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
-                aria-current="page"
-              {% endif %}
+      <!-- Christmas Shop -->
+      <li>
+        <header-menu>
+          <details id="Details-HeaderMenu-9" class="mega-menu">
+            <summary
+              id="HeaderMenu-christmas-shop"
+              class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
             >
-              <span
-                {%- if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
-                  class="header__active-menu-item"
+              <a
+                href="/pages/wish-for-cliphair-holiday-campaign"
+                class=""
+                {% if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
+                  aria-current="page"
                 {% endif %}
               >
-                CHRISTMAS SHOP
-              </span>
-            </a>
-            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
-          </summary>
-          <div
-            id="MegaMenu-Content-9"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
-            tabindex="-1"
-          >
-            <ul
-              class="mega-menu__list"
-              role="list"
+                <span
+                  {%- if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
+                    class="header__active-menu-item"
+                  {% endif %}
+                >
+                  CHRISTMAS SHOP
+                </span>
+              </a>
+              {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+            </summary>
+            <div
+              id="MegaMenu-Content-9"
+              class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
+              tabindex="-1"
             >
-              <li style="width:calc(100% / 1);">
-                <a
-                  id="HeaderMenu-christmas-shop-gift-sets"
-                  href="/collections/hair-extensions-gift-sets"
-                  class="mega-menu__link link{% if request.path =='/collections/hair-extensions-gift-sets' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/hair-extensions-gift-sets' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Christmas Gift Sets
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-under-15"
-                  href="/collections/under-15"
-                  class="mega-menu__link link{% if request.path =='/collections/under-15' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/under-15' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Under £15
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-under-30"
-                  href="/collections/under-30"
-                  class="mega-menu__link link{% if request.path =='/collections/under-30' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/under-30' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Under £30
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-under-50"
-                  href="/collections/under-50"
-                  class="mega-menu__link link{% if request.path =='/collections/under-50' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/under-50' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Under £50
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-under-100"
-                  href="/collections/under-100"
-                  class="mega-menu__link link{% if request.path =='/collections/under-100' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/under-100' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Under £100
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-stocking-fillers"
-                  href="/collections/stocking-stuffers"
-                  class="mega-menu__link link{% if request.path =='/collections/stocking-stuffers' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/stocking-stuffers' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Stocking Fillers
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-party-season"
-                  href="/collections/party-season-essentials"
-                  class="mega-menu__link link{% if request.path =='/collections/party-season-essentials' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/party-season-essentials' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Party Season Essentials
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-value-bundles"
-                  href="/collections/hair-extensions-bundle"
-                  class="mega-menu__link link{% if request.path =='/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/collections/hair-extensions-bundle' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Value Bundles
-                </a>
-                <a
-                  id="HeaderMenu-christmas-shop-shipping-time"
-                  href="/pages/christmas-postal-dates-2024"
-                  class="mega-menu__link link{% if request.path =='/pages/christmas-postal-dates-2024' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/pages/christmas-postal-dates-2024' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Christmas Shipping Times
-                </a>
-              </li>
-
-              <li
-                class="scroll-trigger animate--slide-in"
-                style="--animation-order: 1;"
+              <ul
+                class="mega-menu__list"
+                role="list"
               >
-                {% liquid
-                  assign menu_image = images['christmas-shop-desktop-menu.webp']
-                %}
-                <img
-                  srcset="
-                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
-                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
-                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                    {{ menu_image | image_url }} {{ menu_image.width }}w
-                  "
-                  src="{{ menu_image | image_url: width: 480 }}"
-                  sizes="(min-width: {{ settings.page_width }}px) 480px"
-                  alt="{{ menu_image.alt }}"
-                  width="{{ menu_image.width }}"
-                  height="{{ menu_image.height }}"
-                  loading="lazy"
-                  class="motion-reduce"
+                <li style="width:calc(100% / 1);">
+                  <a
+                    id="HeaderMenu-christmas-shop-gift-sets"
+                    href="/collections/hair-extensions-gift-sets"
+                    class="mega-menu__link link{% if request.path =='/collections/hair-extensions-gift-sets' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/hair-extensions-gift-sets' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Christmas Gift Sets
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-under-15"
+                    href="/collections/under-15"
+                    class="mega-menu__link link{% if request.path =='/collections/under-15' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/under-15' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Under £15
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-under-30"
+                    href="/collections/under-30"
+                    class="mega-menu__link link{% if request.path =='/collections/under-30' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/under-30' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Under £30
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-under-50"
+                    href="/collections/under-50"
+                    class="mega-menu__link link{% if request.path =='/collections/under-50' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/under-50' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Under £50
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-under-100"
+                    href="/collections/under-100"
+                    class="mega-menu__link link{% if request.path =='/collections/under-100' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/under-100' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Under £100
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-stocking-fillers"
+                    href="/collections/stocking-stuffers"
+                    class="mega-menu__link link{% if request.path =='/collections/stocking-stuffers' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/stocking-stuffers' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Stocking Fillers
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-party-season"
+                    href="/collections/party-season-essentials"
+                    class="mega-menu__link link{% if request.path =='/collections/party-season-essentials' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/party-season-essentials' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Party Season Essentials
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-value-bundles"
+                    href="/collections/hair-extensions-bundle"
+                    class="mega-menu__link link{% if request.path =='/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/collections/hair-extensions-bundle' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Value Bundles
+                  </a>
+                  <a
+                    id="HeaderMenu-christmas-shop-shipping-time"
+                    href="/pages/christmas-postal-dates-2024"
+                    class="mega-menu__link link{% if request.path =='/pages/christmas-postal-dates-2024' %} mega-menu__link--active{% endif %}"
+                    {% if request.path == '/pages/christmas-postal-dates-2024' %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    Christmas Shipping Times
+                  </a>
+                </li>
+
+                <li
+                  class="scroll-trigger animate--slide-in"
+                  style="--animation-order: 1;"
                 >
-              </li>
-            </ul>
-          </div>
-        </details>
-      </header-menu>
-    </li>
+                  {% liquid
+                    assign menu_image = images['christmas-shop-desktop-menu.webp']
+                  %}
+                  <img
+                    srcset="
+                      {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
+                      {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
+                      {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
+                      {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                      {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                      {{ menu_image | image_url }} {{ menu_image.width }}w
+                    "
+                    src="{{ menu_image | image_url: width: 480 }}"
+                    sizes="(min-width: {{ settings.page_width }}px) 480px"
+                    alt="{{ menu_image.alt }}"
+                    width="{{ menu_image.width }}"
+                    height="{{ menu_image.height }}"
+                    loading="lazy"
+                    class="motion-reduce"
+                  >
+                </li>
+              </ul>
+            </div>
+          </details>
+        </header-menu>
+      </li>
     {% endcomment %}
-    
+
     <!-- Blog -->
     <li>
       <header-menu>

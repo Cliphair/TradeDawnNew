@@ -1,0 +1,269 @@
+<li>
+  {% assign object = collections['clip-in-hair-extensions'] %}
+  <a
+    id="HeaderDrawer-clip-ins-all"
+    href="{{ object.url }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    {{ 'navbar.sub_level.clip_in.all' | t }}
+  </a>
+</li>
+<li>
+  <details id="Details-menu-drawer-clip-ins-multipiece">
+    <summary
+      id="HeaderDrawer-clip-ins-multipiece"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {{ 'navbar.sub_level.clip_in.multi_piece' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-multipiece"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['seamless-clip-in-hair-extensions-double-drawn-hair'] %}
+          <a
+            id="HeaderDrawer-clip-ins-multipiece-seamless"
+            href="{{  object.url  }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.seamless' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['full-head-clip-in-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-multipiece-classic"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.classic' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['double-wefted-clip-in-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-multipiece-double-weft"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.double_weft' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['ultra-clip-in-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-multipiece-ultra"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.ultra_volume' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['curly-clip-in-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-multipiece-curly"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.curly' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-clip-ins-one-piece">
+    <summary
+      id="HeaderDrawer-clip-ins-one-piece"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {{ 'navbar.sub_level.clip_in.one_piece' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-one-piece"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['one-piece-top-up-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-one-piece-top-up"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.top_up' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['quad-weft-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-one-piece-quad-weft"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.quad_weft' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['supreme-quad-weft-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-one-piece-top-up"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.supreme' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-clip-ins-hairpieces-ponytail">
+    <summary
+      id="HeaderDrawer-clip-ins-hairpieces-ponytail"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {{ 'navbar.sub_level.clip_in.hairpieces_ponytail' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-hairpieces-ponytail"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['clip-in-ponytail-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-hairpieces-ponytail-ponytail"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.ponytail' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['fringe-clip-in-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-clip-ins-hairpieces-ponytail-fringe"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ 'navbar.sub_level.clip_in.fringe' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  {% assign object = collections['hair-extensions-bundle'] %}
+  <a
+    id="HeaderDrawer-clip-ins-bundle"
+    href="{{ object.url | append: '/clip-in-bundle' }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    {{ 'navbar.sub_level.clip_in.bundle' | t }}
+  </a>
+</li>
+
+<li>
+  {% assign object = all_products['cliphair-e-gift-card'] %}
+  <a
+    id="HeaderDrawer-clip-ins-gift-card"
+    href="{{ object.url }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    {{ 'navbar.sub_level.clip_in.gift_card' | t }}
+  </a>
+</li>

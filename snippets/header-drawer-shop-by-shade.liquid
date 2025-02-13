@@ -1,0 +1,1294 @@
+<li>
+  {% assign object = pages['hair-extensions-by-colour'] %}
+  <a
+    id="HeaderDrawer-shop-by-shade-all"
+    href="{{ object.url }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    {{ 'navbar.sub_level.shades.all' | t }}
+  </a>
+</li>
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-black">
+    <summary
+      id="HeaderDrawer-shop-by-shade-black"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Natural Black (#1B)' %}
+      {{ 'navbar.sub_level.shades.blacks.blacks' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-black"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['jet-black-hair-extensions-1'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-black-1"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Jet Black (#1)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blacks.jet_black' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['off-natural-black-hair-extensions-1b'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-black-1b"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Natural Black (#1B)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blacks.natural_black' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-brown">
+    <summary
+      id="HeaderDrawer-shop-by-shade-brown"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Light Brown (#6)' %}
+      {{ 'navbar.sub_level.shades.browns.browns' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-brown"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['darkest-brown-hair-extensions-2'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-2"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Darkest Brown (#2)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.darkest_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['dark-brown-hair-extensions-3'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-3"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Dark Brown (#3)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.dark_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['medium-brown-hair-extensions-4'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-4"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Medium Brown (#4)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.medium_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['toffee-brown-hair-extensions-5'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-5"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Toffee Brown (#5)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.toffee_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['light-chestnut-brown-hair-extensions-6'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-6"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Light Brown (#6)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.light_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['mousey-brown-hair-extensions-6b'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-6b"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Mousey Brown (#6B)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.mousey_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['medium-ash-brown-hair-extensions-8'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-8"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Medium Ash Brown (#8)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.medium_ash_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['ash-brown-hair-extensions-9'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-brown-9"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Ash Brown (#9)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.browns.ash_brown' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-blonde">
+    <summary
+      id="HeaderDrawer-shop-by-shade-blonde"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Light Ash Blonde (#22)' %}
+      {{ 'navbar.sub_level.shades.blondes.blondes' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-blonde"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['sandy-blonde-hair-extensions-ss'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-ss"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Silver Sand (#SS)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.silver_sand' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['ice-blonde-platinum-blonde-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-iceblonde"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == 'object.url' %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Ice Blonde', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.ice_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['lightest-blonde-hair-extensions-60'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-60"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Lightest Blonde (#60)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.lightest_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['bleach-blonde-hair-extensions-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Bleach Blonde (#613)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.bleach_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['light-golden-blonde-hair-extensions-16'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-16"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Golden Blonde (#16)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.light_golden_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['lightest-brown-hair-extensions-18'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-18"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Lightest Brown (#18)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.lightest_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['dark-blonde-hair-extensions-14'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-14"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Dark Blonde (#14)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.lightest_brown' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['light-ash-blonde-hair-extensions-22'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-22"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Light Ash Blonde (#22)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.blondes.light_ash_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['strawberry-ginger-blonde-hair-extensions-27'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-blonde-27"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Strawberry Blonde (#27)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.blondes.strawberry_blonde' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-mixed-shades">
+    <summary
+      id="HeaderDrawer-shop-by-shade-mixed-shades"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Oak Brondie' %}
+      {{ 'navbar.sub_level.shades.highlights.highlights' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-mixed-shades"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['blonde-mix-hair-extensions-14-22'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-14-22"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Iced Cappuccino (#14/22)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.iced_cappuccino' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['oak-brondie-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-oak-brondie"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Oak Brondie', collection_object: object %}
+            {{ 'navbar.sub_level.shades.highlights.oak_brondie' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['brown-blonde-mix-hair-extensions-18-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-18-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Biscuit Blondey (#18/613)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.biscuit_blondey' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['blonde-mix-hair-extensions-22-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-22-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Creamy Blonde (#22/613)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.creamy_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['blondeme-60-ss-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-60-ss"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'BlondeMe (#60/SS)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.highlights.blondeme' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['platinum-blondeme-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-platinum-blondeme"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Platinum BlondeMe', collection_object: object %}
+            {{ 'navbar.sub_level.shades.highlights.platinum_blondeme' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['blonde-mix-hair-extensions-27-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-27-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Peaches & Cream (#27/613)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.peaches_cream' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['blonde-mix-hair-extensions-16-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-16-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Goldilocks (#16/613)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.highlights.goldilocks' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['blonde-mix-16-60-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-16-60"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Barbie Blonde (#16/60)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.highlights.barbie_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['brown-blonde-mix-hair-extensions-10-16'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-10-16"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Butterscotch Blonde (#10/16)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.butterscotch_blonde' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['brown-blonde-mix-hair-extensions-12-16-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-12-16-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Natural Sandy Blonde (#12/16/613)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.natural_sandy_blonde' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['brown-mix-hair-extensions-2-4-6'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-2-4-6"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Espresso Melt (#2/4/6)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.highlights.espresso_melt' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['brown-blonde-mix-hair-extensions-4-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-4-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Cookies & Cream (#4/613)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.cookies_cream' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['brown-blonde-mix-hair-extensions-6-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-6-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Chestnut Bronde (#6/613)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.chestnut_bronde' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['brown-blonde-mix-hair-extensions-9-613'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-9-613"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Dirty Blonde (#9/613)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.highlights.dirty_blonde' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['brown-blonde-mix-hair-extensions-4-27'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-4-27"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Chocolate Honey (#4/27)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.chocolate_honey' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['brown-ginger-blonde-mix-hair-extensions-6-27'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-6-27"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Hazelnut Brondie (#6/27)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.hazelnut_brondie' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['brown-auburn-mix-hair-extensions-4-30'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-mixed-shades-4-30"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Cinnamon Brownie (#4/30)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.highlights.cinnamon_brownie' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-balayage">
+    <summary
+      id="HeaderDrawer-shop-by-shade-balayage"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Chestnut Bronde Balayage' %}
+      {{ 'navbar.sub_level.shades.balayages.balayages' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-balayage"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['ash-black-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-ash-black"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Ash Black Balayage', collection_object: object %}
+            {{ 'navbar.sub_level.shades.balayages.ash_black_balayage' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['silver-shadow-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-silver-shadow"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Silver Shadow Balayage', collection_object: object %}
+            {{ 'navbar.sub_level.shades.balayages.silver_shadow_balayage' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['dark-espresso-melt-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-espresso-melt"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Espresso Melt Balayage', collection_object: object %}
+            {{ 'navbar.sub_level.shades.balayages.espresso_melt_balayage' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['soft-bronze-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-soft-bronze"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url' %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Soft Bronze Balayage', collection_object: object %}
+            {{ 'navbar.sub_level.shades.balayages.soft_bronze_balayage' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['biscuit-blondey-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-biscuit-blondey"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Biscuit Blondey Balayage',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.balayages.biscuit_blondey_balayage' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['biscuit-blondey-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-chestnut-bronde"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Chestnut Bronde Balayage',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.balayages.chestnut_bronde_balayage' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['cinnamon-swirl-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-cinnamon-swirl"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Cinnamon Swirl Balayage',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.balayages.cinnamon_swirl_balayage' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['chestnut-honey-balayage-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-balayage-chestnut-honey"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Chestnut Honey Balayage',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.balayages.chestnut_honey_balayage' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-ombre">
+    <summary
+      id="HeaderDrawer-shop-by-shade-ombre"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Silver Black Ombre (#T1B/SG)' %}
+      {{ 'navbar.sub_level.shades.ombres.ombres' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-ombre"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['ombre-t1b-sg-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-ombre-t1b-sg"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Silver Black Ombre (#T1B/SG)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.ombres.silver_black_ombre' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['ombre-t2-27-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-ombre-t2-27"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Espresso Honey Ombre (#T2/27)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.ombres.espresso_honey_ombre' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['ombre-t4-27-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-ombre-t4-27"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Chocolate Honey Ombre (#T4/27)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.ombres.chocolate_honey_ombre' | t }}
+          </a>
+        </li>
+
+        <li>
+          {% assign object = collections['ombre-t6-27-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-ombre-t6-27"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Toffee Honey Ombre (#T6/27)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.ombres.toffee_honey_ombre' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-red">
+    <summary
+      id="HeaderDrawer-shop-by-shade-red"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Cowgirl Copper (#350/33)' %}
+      {{ 'navbar.sub_level.shades.reds.reds' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-red"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['strawberry-ginger-blonde-hair-extensions-27'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-27"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Strawberry Blonde (#27)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.reds.strawberry_blonde' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['light-auburn-hair-extensions-30'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-30"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Light Auburn (#30)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.light_auburn' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['autumn-spice-hair-extensions-30b'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-30b"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Autumn Spice (#30B)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.autumn_spice' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['dark-auburn-copper-red-hair-extensions-33'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-33"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Dark Auburn (#33)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.dark_auburn' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['cowgirl-copper-350-33-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-350-33"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet',
+              colour_name: 'Cowgirl Copper (#350/33)',
+              collection_object: object
+            %}
+            {{ 'navbar.sub_level.shades.reds.cowgirl_copper' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['ginger-natural-red-hair-extensions-350'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-350"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Flaming Ginger (#350)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.flaming_ginger' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['plum-cherry-red-hair-extensions-530'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-530"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Plum/Cherry Red (#530)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.plum_cherry_red' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['deep-red-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-deep-red"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Deep Red', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.deep_red' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['mahogany-red-hair-extensions-99j'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-99j"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Mahogany Red (#99J)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.mahogany_red' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['bright-red-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-red-bright-red"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Bright Red', collection_object: object %}
+            {{ 'navbar.sub_level.shades.reds.bright_red' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  <details id="Details-menu-drawer-shop-by-shade-funky">
+    <summary
+      id="HeaderDrawer-shop-by-shade-funky"
+      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+    >
+      {% render 'header-drawer-shade-snippet', colour_name: 'Pastel Pink' %}
+      {{ 'navbar.sub_level.shades.funkies.funkies' | t }}
+      {% render 'icon-arrow' %}
+      {% render 'icon-caret' %}
+    </summary>
+    <div
+      id="childlink-funky"
+      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+    >
+      <button
+        class="menu-drawer__close-button link link--text focus-inset"
+        aria-expanded="true"
+      >
+        {% render 'icon-arrow' %}
+        {{ 'navbar.helpers.back' | t }}
+      </button>
+      <ul
+        class="menu-drawer__menu list-menu"
+        role="list"
+        tabindex="-1"
+      >
+        <li>
+          {% assign object = collections['silver-hair-extensions-sg'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-funky-sg"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Silver Grey (#SG)', collection_object: object %}
+            {{ 'navbar.sub_level.shades.funkies.silver_grey' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['pastel-pink-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-funky-pastel-pink"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Pastel Pink', collection_object: object %}
+            {{ 'navbar.sub_level.shades.funkies.pastel_pink' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['turquoise-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-funky-turquoise"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Turquoise', collection_object: object %}
+            {{ 'navbar.sub_level.shades.funkies.turquoise' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['blue-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-funky-blue"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Blue', collection_object: object %}
+            {{ 'navbar.sub_level.shades.funkies.blue' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['purple-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-funky-purple"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Purple', collection_object: object %}
+            {{ 'navbar.sub_level.shades.funkies.purple' | t }}
+          </a>
+        </li>
+        <li>
+          {% assign object = collections['bright-red-hair-extensions'] %}
+          <a
+            id="HeaderDrawer-shop-by-shade-funky-bright-red"
+            href="{{ object.url }}"
+            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+            {% if request.path == object.url %}
+              aria-current="page"
+            {% endif %}
+          >
+            {% render 'header-drawer-shade-snippet', colour_name: 'Bright Red', collection_object: object %}
+            {{ 'navbar.sub_level.shades.funkies.bright_red' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</li>
+
+<li>
+  {% assign object = all_products['hair-extensions-sample-pieces'] %}
+  <a
+    id="HeaderDrawer-shop-by-sample-product"
+    href="{{ object.url }}"
+    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+    {% if request.path == object.url %}
+      aria-current="page"
+    {% endif %}
+  >
+    {{ 'navbar.sub_level.shades.sample' | t }}
+  </a>
+</li>

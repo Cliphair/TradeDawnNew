@@ -75,7 +75,8 @@
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                         <span class="active-facets__button-inner button button--tertiary">
-                          {{ filter.label }}: {{ value.label | escape }}
+                          {{ filter.label }}: {{ value.label | escape -}}
+                          {%- if filter.label == 'Discount Amount' %}% off{% endif %}
                           {% render 'icon-close-small' %}
                           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                         </span>
@@ -207,7 +208,10 @@
                                     stroke-linejoin="round" />
                                 </svg>
 
-                                <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                <span aria-hidden="true">
+                                  {{- value.label | escape -}}
+                                  {%- if filter.label == 'Discount Amount' %}% off{% endif %} ({{ value.count }})</span
+                                >
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
                                   {%- if value.count == 1 -%}
@@ -271,7 +275,10 @@
                                     stroke-linejoin="round" />
                                 </svg>
 
-                                <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                <span aria-hidden="true">
+                                  {{- value.label | escape -}}
+                                  {%- if filter.label == 'Discount Amount' %}% off{% endif %} ({{ value.count }})</span
+                                >
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
                                   {%- if value.count == 1 -%}
@@ -418,7 +425,8 @@
                   <facet-remove>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                       <span class="active-facets__button-inner button button--tertiary">
-                        {{ filter.label }}: {{ value.label | escape }}
+                        {{ filter.label }}: {{ value.label | escape -}}
+                        {%- if filter.label == 'Discount Amount' %}% off{% endif %}
                         {% render 'icon-close-small' %}
                         <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                       </span>
@@ -715,7 +723,12 @@
                                     <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
                                   </svg>
 
-                                  <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                  <span aria-hidden="true">
+                                    {{- value.label | escape -}}
+                                    {%- if filter.label == 'Discount Amount' %}% off{% endif %} (
+                                    {{- value.count -}}
+                                    )</span
+                                  >
                                   <span class="visually-hidden">
                                     {{- value.label | escape }} (
                                     {%- if value.count == '1' -%}
@@ -937,7 +950,8 @@
         <facet-remove>
           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
             <span class="active-facets__button-inner button button--tertiary">
-              {{ filter.label }}: {{ value.label | escape }}
+              {{ filter.label }}: {{ value.label | escape -}}
+              {%- if filter.label == 'Discount Amount' %}% off{% endif %}
               {% render 'icon-close-small' %}
               <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
             </span>
@@ -1064,7 +1078,8 @@
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                   <span class="active-facets__button-inner button button--tertiary">
-                    {{ filter.label }}: {{ value.label | escape }}
+                    {{ filter.label }}: {{ value.label | escape -}}
+                    {%- if filter.label == 'Discount Amount' %}% off{% endif %}
                     {% render 'icon-close-small' %}
                     <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                   </span>
