@@ -14,13 +14,7 @@
   }
 {%- endstyle -%}
 
-{% liquid
-  if collection.metafields.visual_content.image_carrousel
-    assign location_class = collection.metafields.visual_content.image_carrousel.value.location
-    assign images = collection.metafields.visual_content.image_carrousel.value.images
-    assign element = '<div class="' | append: location_class | append: '"></div>'
-  endif
-  
+{% liquid 
   if section.settings.remove_introduction
     if collection.description contains '<!-- split -->'
       assign description = collection.description | split: '<!-- FAQ section -->' | first
@@ -31,20 +25,27 @@
   endif
 %}
 
+{% for carrousel in collection.metafields.visual_content.description_carrousel %}
+  {% assign location_class = location_class | append: "," | append: carrousel.value.location %}
+  {% assign elements = carrousel.value.elements %}
+  {% assign html_element = '<div class="' | append: location_class | append: '"></div>' %}
+  {% if description contains html_element %}
+    {% assign parts = description | split: html_element %}
+    {% capture description %}
+      {{ parts.first }}
+      {% render 'description-carrousel' elements: elements %}
+      {{ parts.last }}
+    {% endcapture %}
+  {% endif %}
+{% endfor %}
+
 {% if description %}
   <div class="collection-hero color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
     <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       <div class="collection-hero__text-wrapper">
         {%- if section.settings.show_collection_description -%}
           <div class="collection-hero__description rte {{ section.settings.text_alignment }}">
-            {% if description contains element %}
-              {% assign parts = description | split: element %}
-              {{ parts.first }}
-              {% render 'carrousel-images-with-caption-object' image_list:images %}
-              {{ parts.last }}
-            {% else %}
-              {{ description }}
-            {% endif %}
+            {{ description }}
           </div>
         {%- endif -%}
       </div>
