@@ -21,6 +21,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid-outlet",
+      "custom_css": [
+        ".grid:last-child{margin-bottom:2rem;}"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
