@@ -182,6 +182,7 @@
                     section_id: section.id,
                     colour_as_title: section.settings.colour_as_title,
                     show_type: section.settings.show_type,
+                    show_variant: section.settings.show_variant,
                     badge_style: section.settings.badge_style,
                     display_low_inventory: section.settings.display_low_inventory,
                     low_inventory: section.settings.low_inventory | times: 1,
@@ -364,6 +365,12 @@
       "default": false,
       "label": "Use colour as title",
       "info": "Uses metafield Colour Name, if empty title will be used instead."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant",
+      "default": false,
+      "label": "Show selected variant"
     },
     {
       "type": "checkbox",

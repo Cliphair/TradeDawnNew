@@ -280,7 +280,7 @@
           </h3>
 
           <div class="card-information">
-            {%- if sale_variant -%}
+            {%- if sale_variant and show_variant -%}
               <span class="visually-hidden">Variant:</span>
               <div class="caption-with-letter-spacing light">{{ sale_variant.title }}</div>
             {%- endif -%}
