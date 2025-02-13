@@ -22,7 +22,7 @@
     "product-grid": {
       "type": "main-collection-product-grid-outlet",
       "custom_css": [
-        ".grid:last-child{margin-bottom:2rem;}"
+        ".grid:last-child {margin-bottom: 2rem;}"
       ],
       "settings": {
         "products_per_page": 16,
@@ -145,8 +145,8 @@
         "columns_mobile": "3",
         "swipe_on_mobile": false,
         "slider_visual": "counter",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     }
   },
