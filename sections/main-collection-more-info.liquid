@@ -31,6 +31,25 @@
   endif
 %}
 
+{% comment %}
+{% for carrousel in collection.metafields.visual_content.description_carrousel %}
+  {{ carrousel }}
+  {% assign location_class = carrousel.value.location %}
+  {{ location_class }}
+  {% assign elements = carrousel.value.elements %}
+  {% assign html_element = '<div class="' | append: location_class | append: '"></div>' %}
+  {{ html_element }}
+  {% if description contains html_element %}
+    {% assign parts = description | split: html_element %}
+    {% capture description %}
+      {{ parts.first }}
+      {% render 'description-carrousel' elements: elements %}
+      {{ parts.last }}
+    {% endcapture %}
+  {% endif %}
+{% endfor %}
+{% endcomment %}
+
 {% if description %}
   <div class="collection-hero color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
     <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
