@@ -691,8 +691,8 @@
         "image_KJrQnV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/fernemccann.webp",
-            "text_label": "<p>@fernemccann styled by @hairbyjaypinder</p><p><a href=\"/products/medium-brown-4-clip-in-ponytail-extensions\" target=\"_blank\" title=\"Medium Brown (#4) Straight Up Wrap Around Ponytail\">20\" Medium Brown Wrap Around Ponytail </a></p>",
+            "image": "shopify://shop_images/fern-as-seen-on.webp",
+            "text_label": "<p>Fern Mccann Styled By @hairbyjaypinder</p><p><a href=\"/products/seamless-clip-in-hair-extensions-double-drawn-medium-brown\" target=\"_blank\" title=\"Medium Brown (#4) Double Drawn Seamless Clip In Hair Extensions\">22\" Medium Brown (#4) Seamless Clip Ins</a></p>",
             "link": ""
           }
         },
@@ -717,6 +717,14 @@
           "settings": {
             "image": "shopify://shop_images/as-seen-on-image-11.webp",
             "text_label": "<p>@ekinsuofficial styled by @leahsmithhair</p><p><a href=\"/products/double-wefted-set-clip-in-hair-extensions-medium-brown-4\" title=\"Medium Brown (#4) Double Wefted Full Head Clip In Hair Extensions\">20\" Medium Brown Double Weft Clip In Hair Extensions</a></p>",
+            "link": ""
+          }
+        },
+        "image_6GEaeT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/kelsey-as-seen-on.webp",
+            "text_label": "<p>@being_kelsey styled by @hairbyjaypinder</p><p><a href=\"/products/remy-royale-seamless-clip-ins-16-60\" target=\"_blank\" title=\"Barbie Blonde (#16/60) Double Drawn Seamless Clip In Hair Extensions\">16\" Barbie Blonde (#16/60) Seamless Clip-In Extensions </a></p>",
             "link": ""
           }
         },
@@ -825,6 +833,7 @@
         "image_rHmacL",
         "image_jLtYAq",
         "image_C8JtLM",
+        "image_6GEaeT",
         "image_EHCiUE",
         "image_gkxjfU",
         "image_gbwtBe",
