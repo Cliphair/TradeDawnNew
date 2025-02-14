@@ -19,6 +19,21 @@
         "color_scheme": "accent-4"
       }
     },
+    "custom_banner_rak9cy": {
+      "type": "custom-banner",
+      "custom_css": [
+        "div > div {padding: 0; max-width: unset;}"
+      ],
+      "settings": {
+        "max-width": "",
+        "bg-color": "#FFF",
+        "desktop-image": "shopify://shop_images/outlet-desktop-banner.webp",
+        "mobile-image": "shopify://shop_images/outlet-mobile-banner.webp",
+        "url": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid-outlet",
       "custom_css": [
@@ -152,6 +167,7 @@
   },
   "order": [
     "banner",
+    "custom_banner_rak9cy",
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
     "b400924f-2211-460e-841c-e909605faf8f",
