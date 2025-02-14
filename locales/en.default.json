@@ -172,7 +172,7 @@
         "unit_price": "Unit price"
       },
       "share": "Share this product",
-      "sold_out": "Sold out",
+      "sold_out": "Out of Stock",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Out of stock",
@@ -581,10 +581,10 @@
       "offers_savings": "OFFERS & SAVINGS"
     },
     "sub_level": {
-      "clip_in":{
+      "clip_in": {
         "all": "All Clip In Hair Extensions",
         "multi_piece": "Multi Piece Clip Ins",
-        "seamless":"Seamless Full Head (150-190g)",
+        "seamless": "Seamless Full Head (150-190g)",
         "classic": "Classic Full Head (130g)",
         "double_weft": "Double Weft Full Head (180-220g)",
         "ultra_volume": "Ultra-Volume Full Head (240-300g)",
@@ -609,7 +609,7 @@
         "remy_tape_in": "Remy Royale Tape Ins (50g)",
         "remy_invisible_tape_in": "Remy Royale Invisible Tape Ins (50g)",
         "weaves": "Weave Hair Extensions",
-        "remy_classic_weft":"Remy Royale Classic Weft (120g)",
+        "remy_classic_weft": "Remy Royale Classic Weft (120g)",
         "remy_flat_weft": "Remy Royale Flat Track Weft (120g)",
         "pre_bondeds": "Pre Bonded Hair Extensions",
         "remy_i_tip": "Remy Royale I-Tips (50g)",
@@ -621,7 +621,7 @@
         "tape_tabs": "Tape Tabs",
         "wig_glue": "Wig Glue",
         "wig_glue_remover": "Wig Glue Remover",
-        "tape_remover_spare_tabs":"Tape Remover & Spare Tabs Set",
+        "tape_remover_spare_tabs": "Tape Remover & Spare Tabs Set",
         "wig_glue_and_remover": "Wig Glue & Remover Set",
         "maintenance_bundle": "Maintenance Value Bundles",
         "professional_bundle": "Permanent Extensions Value Bundles",
@@ -635,7 +635,7 @@
           "jet_black": "Jet Black (#1)",
           "natural_black": "Off/Natural Black (#1B)"
         },
-        "browns":{
+        "browns": {
           "browns": "Browns",
           "darkest_brown": "Darkest Brown (#2)",
           "dark_brown": "Dark Brown (#3)",
@@ -651,7 +651,7 @@
           "silver_sand": "Silver Sand (#SS)",
           "ice_blonde": "Ice Blonde",
           "lightest_blonde": "Lightest Blonde (#60)",
-          "bleach_blonde":"Bleach Blonde (#613)",
+          "bleach_blonde": "Bleach Blonde (#613)",
           "light_golden_blonde": "Light Golden Blonde (#16)",
           "lightest_brown": "Lightest Brown (#18)",
           "dark_blonde": "Dark Blonde (#14)",
@@ -712,20 +712,18 @@
         },
         "funkies": {
           "funkies": "Funkies",
-          "silver_grey":"Silver/Grey",
-          "pastel_pink":"Pastel Pink",
-          "turquoise":"Turquoise",
+          "silver_grey": "Silver/Grey",
+          "pastel_pink": "Pastel Pink",
+          "turquoise": "Turquoise",
           "blue": "Blue",
           "purple": "Purple",
           "bright_red": "Bright Red"
         },
         "sample": "Order A Sample"
       }
-
     },
     "helpers": {
       "back": "BACK"
     }
   }
 }
-
