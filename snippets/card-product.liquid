@@ -319,6 +319,8 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% assign hidden_message_types = "Nano Ring Hair Extensions,Remy Royale Flat Tip,Remy Royale I-Tips,Remy Royale Invisible Tape,Remy Royale Nano Bonds,Remy Royale Tape ins" | split: "," %}
+            {% if hidden_message_types contains card_product.type %}<div class="caption-with-letter-spacing light hidden hidden-message">Buy 2 or more &  Get 10% off</div>{% endif %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class="card__information-volume-pricing-note">
                 <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
