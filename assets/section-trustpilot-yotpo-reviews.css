@@ -1,0 +1,114 @@
+.section-trutpilot-yotpo .title-wrapper--no-top-margin h2 {
+  margin-top: 0 !important;
+}
+
+.section-trutpilot-yotpo .reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.section-trutpilot-yotpo .review {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.section-trutpilot-yotpo .stars {
+  display: flex;
+  gap: 2px;
+}
+
+.section-trutpilot-yotpo .stars .icon.star {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #dcdce6;
+}
+
+.section-trutpilot-yotpo .icon.star svg {
+  width: 10px;
+  fill: white;
+}
+
+.section-trutpilot-yotpo .star.full.filled {
+  background: var(--star_color);
+}
+
+.section-trutpilot-yotpo .star.half.filled {
+  background: linear-gradient(90deg, var(--star_color) 50%, #dcdce6 50%);
+}
+
+.section-trutpilot-yotpo .review img {
+  height: 20px;
+  width: auto;
+}
+
+.section-trutpilot-yotpo .tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Tooltip text */
+.section-trutpilot-yotpo .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1000;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.section-trutpilot-yotpo .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.section-trutpilot-yotpo .tooltip .tooltiptext {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 7px;
+  font-size: 1rem;
+}
+
+.section-trutpilot-yotpo .tooltip .tooltiptext::after {
+  content: ' ';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.section-trutpilot-yotpo .separator {
+  width: 2px;
+  height: 30px;
+  margin: 0;
+  opacity: .2;
+  background: black;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width:449px) {
+  .section-trutpilot-yotpo .reviews-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .section-trutpilot-yotpo .separator {
+    width: 150px;
+    height: 1px;
+    margin: 1rem 0;
+  }
+}
