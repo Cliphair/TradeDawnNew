@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -20,14 +29,14 @@
           "type": "answer",
           "settings": {
             "id": "thin",
-            "answer": "Thin\/Fine"
+            "answer": "Thin/Fine"
           }
         },
         "answer_EmNq4A": {
           "type": "answer",
           "settings": {
             "id": "medium",
-            "answer": "Medium\/Average Thickness"
+            "answer": "Medium/Average Thickness"
           }
         },
         "answer_QrN6fM": {
@@ -69,7 +78,7 @@
           "settings": {
             "id": "short",
             "answer": "Short (above shoulders)",
-            "answer_image": "shopify:\/\/shop_images\/short_journey.jpg"
+            "answer_image": "shopify://shop_images/short_journey.jpg"
           }
         },
         "answer_hCExC3": {
@@ -77,7 +86,7 @@
           "settings": {
             "id": "mid",
             "answer": "Mid-Length (top of bra)",
-            "answer_image": "shopify:\/\/shop_images\/Avarage.jpg"
+            "answer_image": "shopify://shop_images/Avarage.jpg"
           }
         },
         "answer_99rqHW": {
@@ -85,7 +94,7 @@
           "settings": {
             "id": "long",
             "answer": "Long (middle to lower back)",
-            "answer_image": "shopify:\/\/shop_images\/Thick.jpg"
+            "answer_image": "shopify://shop_images/Thick.jpg"
           }
         }
       },
@@ -94,9 +103,7 @@
         "answer_hCExC3",
         "answer_99rqHW"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "id": "journey",
         "page": "journey",
@@ -171,7 +178,7 @@
           "settings": {
             "id": "clipin",
             "answer": "Clip-Ins (DIY product)",
-            "answer_image": "shopify:\/\/shop_images\/Clip_In_af2b4728-f605-44a7-83a7-543c895d4e9d.jpg"
+            "answer_image": "shopify://shop_images/Clip_In_af2b4728-f605-44a7-83a7-543c895d4e9d.jpg"
           }
         },
         "answer_aCkDFB": {
@@ -179,7 +186,7 @@
           "settings": {
             "id": "permanent",
             "answer": "Permanent (professional application)",
-            "answer_image": "shopify:\/\/shop_images\/permanent_extensions_1df2bd0b-6854-40f9-8184-26400c592c9e.jpg"
+            "answer_image": "shopify://shop_images/permanent_extensions_1df2bd0b-6854-40f9-8184-26400c592c9e.jpg"
           }
         }
       },
@@ -214,7 +221,7 @@
         "visible": false,
         "id": "journey",
         "title": "Your perfect match is...",
-        "message": "If you need help choosing the correct shade, let us help you with our <a href=\"https:\/\/www.cliphair.co.uk\/pages\/colour-matching-service\" title=\"colour match\">free colour match<\/a> service.",
+        "message": "If you need help choosing the correct shade, let us help you with our <a href=\"https://www.cliphair.co.uk/pages/colour-matching-service\" title=\"colour match\">free colour match</a> service.",
         "accordion_header": "You could also use:",
         "heading_size": "h1",
         "text_allignment": "center",
@@ -225,6 +232,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "trustpilot_carrousel_rLCEP3": {
+      "type": "trustpilot-carrousel",
+      "settings": {
+        "title": "See What People Say on Trustpilot!",
+        "heading_size": "h2",
+        "text_allignment": "center",
+        "color_scheme": "background-2",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
     }
   },
   "order": [
@@ -233,6 +251,7 @@
     "quiz_question_6XeMep",
     "quiz_question_4agX9E",
     "quiz_question_nHUaJd",
-    "quiz_answer_YPArwe"
+    "quiz_answer_YPArwe",
+    "trustpilot_carrousel_rLCEP3"
   ]
 }
