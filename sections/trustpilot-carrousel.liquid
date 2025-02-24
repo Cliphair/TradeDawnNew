@@ -1,0 +1,145 @@
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script -->
+
+{% style %}
+  .section-trutpilot-yotpo .title-wrapper--no-top-margin h2 {
+    margin-top: 0 !important;
+    margin-bottom:3rem;
+  }
+
+  iframe:focus-visible{
+    outline:none;
+    box-shadow:none;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="{{ section.settings.text_allignment }} page-width">
+    <div class="title-wrapper--no-top-margin ">
+      {% if section.settings.title != blank %}
+        <h2
+          id="SectionHeading-{{ section.id }}"
+          class="inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if section.settings.title == blank %} capitalize{% endif %}"
+        >
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+    </div>
+
+    <div class="reviews-container">
+      <!-- TrustBox widget - Carousel -->
+      <div
+        class="trustpilot-widget"
+        data-locale="en-GB"
+        data-template-id="53aa8912dec7e10d38f59f36"
+        data-businessunit-id="4c4c36a300006400050d7196"
+        data-style-height="140px"
+        data-style-width="100%"
+        data-stars="5"
+        data-text-color="#414141"
+      >
+        <a href="https://uk.trustpilot.com/review/cliphair.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+      </div>
+      <!-- End TrustBox widget -->
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trustpilot Carrousel",
+  "tag": "section",
+  "class": "section section-trutpilot-yotpo",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "text_allignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Text allignment"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "presets": [{ "name": "Trustpilot Carrousel" }]
+}
+{% endschema %}
