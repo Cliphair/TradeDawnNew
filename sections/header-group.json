@@ -92,9 +92,8 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Sunday_delivery_hair_extensions_blackfriday_sale.gif",
+            "image": "shopify://shop_images/Free_Express_Delivery_Message_Black_copy.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://pages/hair-extensions-by-colour"
