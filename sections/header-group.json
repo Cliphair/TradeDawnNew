@@ -92,6 +92,7 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Hair_Extensions_Monday_Delivery.gif",
             "text_alignment": "center",
