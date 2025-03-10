@@ -176,7 +176,7 @@
         "image_xmxDKt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/lookbook-column-mobile.webp",
+            "image": "shopify://shop_images/help-me-choose-lookbook-mobile-new.webp",
             "text_label": "",
             "link": "shopify://pages/lookbook"
           }
@@ -184,7 +184,7 @@
         "image_CjXBPw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/video-guides-column-mobile.webp",
+            "image": "shopify://shop_images/help-me-choose-video-guide-mobile-new.webp",
             "text_label": "",
             "link": "shopify://pages/video-guides"
           }
