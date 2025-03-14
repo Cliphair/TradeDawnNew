@@ -108,11 +108,22 @@
             "color_scheme": "accent-1",
             "link": ""
           }
+        },
+        "announcement_image_8amwCN": {
+          "type": "announcement-image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Hair_Extensions_Monday_Delivery.gif",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement_image_zkJVKU",
-        "announcement_image_FmKiMd"
+        "announcement_image_FmKiMd",
+        "announcement_image_8amwCN"
       ],
       "custom_css": [
         "img {height: auto;}"
