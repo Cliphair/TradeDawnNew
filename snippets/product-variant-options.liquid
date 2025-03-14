@@ -71,13 +71,16 @@
       {% comment %}
         {% if option.selected_value == value %}
           selected="selected"
-        {% endif %}
+        {% endif %}h
       {% endcomment %}
     >
       {% if option.available -%}
         {{- 'products.product.value_unavailable' | t: option_value: value -}}
       {%- else -%}
         {{- value -}}
+        {% if value.variant.inventory_quantity <= 0 %}
+          {{- 'products.product.value_unavailable' | t: option_value: '' -}}
+        {% endif %}
       {%- endif %}
     </option>
   {%- endif -%}

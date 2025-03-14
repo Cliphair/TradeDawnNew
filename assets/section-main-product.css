@@ -1752,8 +1752,13 @@ klarna-placement::part(osm-badge-container) {
   text-transform: uppercase;
 }
 
-.product-form__input--dropdown option.option-name {
+.product-form__input--dropdown option span.option-name {
   text-align: center;
+}
+
+.product-form__input--dropdown option.out-of-stock,
+.product-form__input--dropdown option.unavailable {
+  color: rgba(var(--color-foreground), .3);
 }
 
 /* price block */
@@ -1811,24 +1816,24 @@ klarna-placement::part(osm-badge-container) {
   display: inline-block !important;
 }
 
-#order-deadline .trustblox-instruction{
-  margin-top:0;
+#order-deadline .trustblox-instruction {
+  margin-top: 0;
   animation: blink 2s infinite;
-  font-weight:bold;
-  color:red;
+  font-weight: bold;
+  color: red;
 }
 
 @keyframes blink {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
 
   50% {
-      opacity: .3;
+    opacity: .3;
   }
 
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 

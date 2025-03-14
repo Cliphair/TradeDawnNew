@@ -1097,6 +1097,7 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
+      this.hideOutOfStockApp();
     } else {
       this.updateMedia();
       this.updateURL();
@@ -1198,6 +1199,13 @@ class VariantSelects extends HTMLElement {
         .map((variantOption) => variantOption[`option${index + 1}`]);
       this.setInputAvailability(optionInputs, availableOptionInputsValue);
     });
+  }
+
+  hideOutOfStockApp() {
+    const outOfStockContainer = document.querySelector('#esc-oos-form');
+    if (outOfStockContainer) {
+      outOfStockContainer.innerHTML = ""
+    }
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
@@ -1304,6 +1312,10 @@ class VariantSelects extends HTMLElement {
           addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
           window.variantStrings.soldOut
         );
+
+        if (!addButtonUpdated.hasAttribute('disabled')) {
+          this.hideOutOfStockApp();
+        }
 
         publish(PUB_SUB_EVENTS.variantChange, {
           data: {
