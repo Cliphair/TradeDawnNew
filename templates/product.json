@@ -59,7 +59,7 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true,
-            "enable_sc-out-of-stock_app": true,
+            "enable_sc-out-of-stock_app": false,
             "color_scheme": "inverse"
           }
         },
