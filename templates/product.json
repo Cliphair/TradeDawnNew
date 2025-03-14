@@ -54,6 +54,10 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "sc_back_in_stock_app_block_JKfDnH": {
+          "type": "shopify://apps/sc-back-in-stock/blocks/app-block/839cbcb7-0406-4c2b-8e74-a54d987b90ab",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -68,10 +72,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "sc_back_in_stock_app_block_JKfDnH": {
-          "type": "shopify://apps/sc-back-in-stock/blocks/app-block/839cbcb7-0406-4c2b-8e74-a54d987b90ab",
-          "settings": {}
         },
         "icon_with_text_D9qjLA": {
           "type": "icon-with-text",
@@ -160,9 +160,9 @@
         "price",
         "variant_picker",
         "quantity_selector_RERRjV",
+        "sc_back_in_stock_app_block_JKfDnH",
         "buy_buttons",
         "share",
-        "sc_back_in_stock_app_block_JKfDnH",
         "icon_with_text_D9qjLA",
         "order_deadline_67UiV7",
         "reward_points_B9N8X4",
