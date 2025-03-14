@@ -92,16 +92,27 @@
       "blocks": {
         "announcement_image_zkJVKU": {
           "type": "announcement-image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Saturday_Guaranteed_Delivery_-blue_-hair_extensions.gif",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "shopify://pages/hair-extensions-by-colour"
           }
+        },
+        "announcement_image_FmKiMd": {
+          "type": "announcement-image",
+          "settings": {
+            "image": "shopify://shop_images/Sunday_delivery_hair_extensions_blackfriday_sale.gif",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement_image_zkJVKU"
+        "announcement_image_zkJVKU",
+        "announcement_image_FmKiMd"
       ],
       "custom_css": [
         "img {height: auto;}"
