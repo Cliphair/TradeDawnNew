@@ -119,12 +119,23 @@
             "color_scheme": "accent-1",
             "link": ""
           }
+        },
+        "announcement_image_Q3tyyb": {
+          "type": "announcement-image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DROP10_CLIP_INS-Optimized.gif",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement_image_zkJVKU",
         "announcement_image_FmKiMd",
-        "announcement_image_8amwCN"
+        "announcement_image_8amwCN",
+        "announcement_image_Q3tyyb"
       ],
       "custom_css": [
         "img {height: auto;}"
