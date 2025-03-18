@@ -69,7 +69,6 @@
         },
         "slide_cnhnUM": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Group_21068.webp",
             "image_desktop": "shopify://shop_images/Group_21067.webp",
