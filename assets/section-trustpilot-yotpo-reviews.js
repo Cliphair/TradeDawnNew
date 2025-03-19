@@ -3,36 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   updateYotpoRating();
 });
 
-async function getTrustpilotReviewScore() {
-  const url = `https://api.trustpilot.com/v1/business-units/find?name=cliphair.co.uk&apikey=ZQkKMT68qUbje3CdgpoUD83QRwlAybrc`;
-
-  try {
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    if (data.score.trustScore && data.numberOfReviews.usedForTrustScoreCalculation) {
-      return {
-        averageScore: data.score.trustScore,
-        totalReviews: data.numberOfReviews.usedForTrustScoreCalculation,
-      };
-    } else {
-      throw new Error('Missing infromation from Truspilot API');
-    }
-  } catch (error) {
-    console.error('Error fetching Truspilot site review score:', error);
-    return null;
-  }
-}
 
 function updateTrustpilotRating() {
   let stars = Array.from(document.getElementsByClassName('trustpilot-star'));

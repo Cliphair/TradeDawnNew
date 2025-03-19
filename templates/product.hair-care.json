@@ -100,7 +100,7 @@
             "type": "custom",
             "heading": "Ingredients",
             "icon": "none",
-            "content": "{{ product.metafields.additional_information.ingredients | metafield_tag }}",
+            // "content": "{{ product.metafields.additional_information.ingredients | metafield_tag }}",
             "page": ""
           }
         },
@@ -110,7 +110,7 @@
             "type": "custom",
             "heading": "How to Use",
             "icon": "none",
-            "content": "{{ product.metafields.additional_information.how_to_use | metafield_tag }}",
+            // "content": "{{ product.metafields.additional_information.how_to_use | metafield_tag }}",
             "page": ""
           }
         },

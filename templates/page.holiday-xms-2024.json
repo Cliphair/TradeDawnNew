@@ -167,21 +167,21 @@
         "padding_bottom": 0
       }
     },
-    "video_UAqYMW": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/cliphair_campaign_v3.3_new_text_(final) (1440p)(1).mp4",
-        "video_url": "",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 80
-      }
-    },
+    // "video_UAqYMW": {
+    //   "type": "video",
+    //   "settings": {
+    //     "heading": "",
+    //     "heading_size": "h1",
+    //     "enable_video_looping": true,
+    //     "video": "shopify://files/videos/cliphair_campaign_v3.3_new_text_(final) (1440p)(1).mp4",
+    //     "video_url": "",
+    //     "description": "",
+    //     "full_width": true,
+    //     "color_scheme": "",
+    //     "padding_top": 40,
+    //     "padding_bottom": 80
+    //   }
+    // },
     "rich_text_Th7kaQ": {
       "type": "rich-text-sales",
       "blocks": {
@@ -591,71 +591,71 @@
         "padding_bottom": 0
       }
     },
-    "videos_list_LrmHHX": {
-      "type": "videos-list",
-      "blocks": {
-        "video_hBEkNY": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Tasmyn.mp4",
-            "video_url": "",
-            "cover_image": "shopify://shop_images/holiday-xmas-2024-video-1.webp",
-            "title": "This big, bouncy blowout with soft, bevelled ends will have you channelling your inner diva.",
-            "description": ""
-          }
-        },
-        "video_4LHgzt": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Style Red Balayage.mp4",
-            "video_url": "",
-            "cover_image": "shopify://shop_images/holiday-xmas-2024-video-2.webp",
-            "title": "Featuring voluminous waves, flicked ends and feathery bangs, this hairstyle takes inspiration from the chic styles of the 1970s.",
-            "description": ""
-          }
-        },
-        "video_cNtLWM": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/@naomipricee Iced Cappuccino Seamless 16inch 1 .mov",
-            "video_url": "",
-            "cover_image": "shopify://shop_images/holiday-xmas-2024-video-3.webp",
-            "title": "A 60s inspired half up, half down look with a baby beehive fit for a cocktail party!",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_hBEkNY",
-        "video_4LHgzt",
-        "video_cNtLWM"
-      ],
-      "custom_css": [
-        ".h5 {margin-bottom: 0; max-width: 85%; margin-right: auto; margin-left: auto;}",
-        ".deferred-media {--ratio-percent: 132.29%!important;}",
-        "@media screen and (min-width: 750px) and (max-width: 989px) {.slider--tablet.grid--peek.grid--2-col-tablet .grid__item {width: calc((100% - 7rem - var(--grid-desktop-horizontal-spacing) * 3) / 2); padding-bottom: 0; }}",
-        ".deferred-media__poster-button {color: white;}"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "introduction": "",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "text_allignment": "center",
-        "image_ratio": "portrait",
-        "hide_card_arrow": true,
-        "columns_desktop": 3,
-        "swipe_on_desktop": true,
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "slider_visual": "counter",
-        "padding_top": 40,
-        "padding_bottom": 80
-      }
-    },
+    // "videos_list_LrmHHX": {
+    //   "type": "videos-list",
+    //   "blocks": {
+    //     "video_hBEkNY": {
+    //       "type": "video",
+    //       "settings": {
+    //         "video": "shopify://files/videos/Tasmyn.mp4",
+    //         "video_url": "",
+    //         "cover_image": "shopify://shop_images/holiday-xmas-2024-video-1.webp",
+    //         "title": "This big, bouncy blowout with soft, bevelled ends will have you channelling your inner diva.",
+    //         "description": ""
+    //       }
+    //     },
+    //     "video_4LHgzt": {
+    //       "type": "video",
+    //       "settings": {
+    //         "video": "shopify://files/videos/Style Red Balayage.mp4",
+    //         "video_url": "",
+    //         "cover_image": "shopify://shop_images/holiday-xmas-2024-video-2.webp",
+    //         "title": "Featuring voluminous waves, flicked ends and feathery bangs, this hairstyle takes inspiration from the chic styles of the 1970s.",
+    //         "description": ""
+    //       }
+    //     },
+    //     "video_cNtLWM": {
+    //       "type": "video",
+    //       "settings": {
+    //         "video": "shopify://files/videos/@naomipricee Iced Cappuccino Seamless 16inch 1 .mov",
+    //         "video_url": "",
+    //         "cover_image": "shopify://shop_images/holiday-xmas-2024-video-3.webp",
+    //         "title": "A 60s inspired half up, half down look with a baby beehive fit for a cocktail party!",
+    //         "description": ""
+    //       }
+    //     }
+    //   },
+    //   "block_order": [
+    //     "video_hBEkNY",
+    //     "video_4LHgzt",
+    //     "video_cNtLWM"
+    //   ],
+    //   "custom_css": [
+    //     ".h5 {margin-bottom: 0; max-width: 85%; margin-right: auto; margin-left: auto;}",
+    //     ".deferred-media {--ratio-percent: 132.29%!important;}",
+    //     "@media screen and (min-width: 750px) and (max-width: 989px) {.slider--tablet.grid--peek.grid--2-col-tablet .grid__item {width: calc((100% - 7rem - var(--grid-desktop-horizontal-spacing) * 3) / 2); padding-bottom: 0; }}",
+    //     ".deferred-media__poster-button {color: white;}"
+    //   ],
+    //   "settings": {
+    //     "title": "",
+    //     "heading_size": "h1",
+    //     "introduction": "",
+    //     "button_label": "",
+    //     "link": "",
+    //     "button_style_secondary": false,
+    //     "text_allignment": "center",
+    //     "image_ratio": "portrait",
+    //     "hide_card_arrow": true,
+    //     "columns_desktop": 3,
+    //     "swipe_on_desktop": true,
+    //     "color_scheme": "",
+    //     "columns_mobile": "2",
+    //     "swipe_on_mobile": true,
+    //     "slider_visual": "counter",
+    //     "padding_top": 40,
+    //     "padding_bottom": 80
+    //   }
+    // },
     "rich_text_J7TrQM": {
       "type": "rich-text-sales",
       "blocks": {
@@ -863,7 +863,7 @@
     "slideshow_image_link_7DNKLU",
     "collection_carrousel_mit7eT",
     "rich_text_fRiq7G",
-    "video_UAqYMW",
+    // "video_UAqYMW",
     "rich_text_Th7kaQ",
     "collection_carrousel_9gAxkJ",
     "rich_text_ifRWQV",
@@ -872,7 +872,7 @@
     "rich_text_RGBdab",
     "collection_carrousel_qRk4ye",
     "rich_text_DGPaKx",
-    "videos_list_LrmHHX",
+    // "videos_list_LrmHHX",
     "rich_text_J7TrQM",
     "article_trending_hqNhpg",
     "rich_text_FCFgTi",

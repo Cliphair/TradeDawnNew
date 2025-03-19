@@ -630,36 +630,36 @@
     "b19c81a2-f86e-4e52-9a50-dca37f731b16": {
       "type": "videos-list",
       "blocks": {
-        "d97a452e-2464-483e-bcd5-f1846fb61062": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Best of Clip Ins.mp4",
-            "video_url": "",
-            "cover_image": "shopify://shop_images/Best_of_Clip_Ins_Thumbnail.webp",
-            "title": "Clip In Extension Tutorials",
-            "description": "Clip In Extension Tutorials"
-          }
-        },
-        "c75280b4-0487-4063-9610-064863363d62": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Best of Permanent.mp4",
-            "video_url": "",
-            "cover_image": "shopify://shop_images/Best_of_Permanent_Thumbnail.webp",
-            "title": "Permanent Extension Tutorials ",
-            "description": "Permanent Extensions Tutorials"
-          }
-        },
-        "video_EWWLYJ": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Best of Bridal.mp4",
-            "video_url": "",
-            "cover_image": "shopify://shop_images/Best_of_Bridal_Thumbnail.webp",
-            "title": "Bridal Tutorials",
-            "description": "Bridal Tutorials"
-          }
-        }
+        // "d97a452e-2464-483e-bcd5-f1846fb61062": {
+        //   "type": "video",
+        //   "settings": {
+        //     "video": "shopify://files/videos/Best of Clip Ins.mp4",
+        //     "video_url": "",
+        //     "cover_image": "shopify://shop_images/Best_of_Clip_Ins_Thumbnail.webp",
+        //     "title": "Clip In Extension Tutorials",
+        //     "description": "Clip In Extension Tutorials"
+        //   }
+        // },
+        // "c75280b4-0487-4063-9610-064863363d62": {
+        //   "type": "video",
+        //   "settings": {
+        //     "video": "shopify://files/videos/Best of Permanent.mp4",
+        //     "video_url": "",
+        //     "cover_image": "shopify://shop_images/Best_of_Permanent_Thumbnail.webp",
+        //     "title": "Permanent Extension Tutorials ",
+        //     "description": "Permanent Extensions Tutorials"
+        //   }
+        // },
+        // "video_EWWLYJ": {
+        //   "type": "video",
+        //   "settings": {
+        //     "video": "shopify://files/videos/Best of Bridal.mp4",
+        //     "video_url": "",
+        //     "cover_image": "shopify://shop_images/Best_of_Bridal_Thumbnail.webp",
+        //     "title": "Bridal Tutorials",
+        //     "description": "Bridal Tutorials"
+        //   }
+        // }
       },
       "block_order": [
         "d97a452e-2464-483e-bcd5-f1846fb61062",

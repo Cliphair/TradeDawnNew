@@ -15,8 +15,8 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    {% render "meta-title" %}
-    {% render "meta-description" %}
+    {% render 'meta-title' %}
+    {% render 'meta-description' %}
     {% render 'meta-tags' %}
 
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -29,10 +29,6 @@
     {%- endif -%}
 
     {{ content_for_header }}
-
-    <!-- Manual hreflang between UK and US sites -->
-    {% render 'hreflang' %}
-    <!-- End manual hreflang between UK and US sites -->
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -244,16 +240,6 @@
       }
     {% endstyle %}
 
-    {% assign display_chat_pages = '/account/login;/account/register;/pages/contact-us;/pages/shipping-information;/pages/returns-information;/pages/about-us;/pages/trade-enquiries;/pages/secure-transactions;/pages/faqs;/pages/testimonials;/pages/rewards;/blogs/hair-blog;/pages/hair-extensions-by-colour;/pages/types-of-hair-extensions;/pages/video-guides;/pages/product-quality;/pages/video-guides;/pages/colour-matching-service;/pages/care-instructions;/pages/klarna-faqs;/pages/clearpay-hair-extensions;/pages/blue-light-card;/pages/journey;/blogs/hair-blog/how-to-look-after-hair-extensions-ultimate-care-guide;/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
-    {% assign display_chat_pages = display_chat_pages | split: ';' %}
-    {% unless display_chat_pages contains request.path %}
-      <style>
-        #gorgias-chat-container {
-          display: none;
-        }
-      </style>
-    {% endunless %}
-
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'cliphair.css' | asset_url | stylesheet_tag }}
 
@@ -284,102 +270,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-    </script>
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-M2K9MPB');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Global site tag (gtag.js) - Google AdWords: 1042639650 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1042639650"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'AW-1042639650', { ' allow_enhanced_conversions': true });
-    </script>
-
-    <!-- Google Search Console -->
-    <meta name="google-site-verification" content="HvAqHHuAuJHeEcYJApy0_ntuJ3siwlX4pstL0cHorNc" />
-    <meta name="google-site-verification" content="JoPHbiizYu_xo-uwJW6PG-hXqbFGGkdCtN-FLT_9Tq4" />
-    <!-- End Google Search Console -->
-    
-    <!-- Tradedoubler tracking code -->
-    <!-- Sales Script -->
-    <script language="JavaScript">
-      (function (i, s, o, g, r, a, m) {
-        i['TDConversionObject'] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(window, document, 'script', 'https://svht.tradedoubler.com/tr_sdk.js', 'tdconv');
-    </script>
-    <script type="text/javascript" src="https://wrap.tradedoubler.com/wrap?id=26269"></script>
-    <!-- End Tradedoubler tag -->
-
-    <!-- Start Pinterest Verification -->
-    <meta name="p:domain_verify" content="7b7b3e0692bc917536cfa7850940d593">
-    <!-- End Pinterest Verification -->
-
-    <!-- Yotpo -->
-    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/Sddq5b54LKByO9MIWYhSzw" async></script>
-    <script
-      src="https://cdn-widgetsrepository.yotpo.com/v1/loader/aMREVTSJZfbqjVqxLsKxYMHAmpb94LftONho8TDm"
-      async
-    ></script>
-    <!-- End Yotpo -->
-
-    <!-- Klear influencer form -->
-    <script
-      async
-      src="https://klear.com/dist/external.bundle.js?form=7b8e7f282e50817e0d385ee78dfd50f95f75f524"
-    ></script>
-
-    <script>
-      if (window.location.pathname == 'https://www.cliphair.co.uk/hair-extensions-news/wp-content/uploads/') {
-        location.replace(
-          window.location.pathname.replace(
-            'https://www.cliphair.co.uk/hair-extensions-news/wp-content/uploads/',
-            'https://cdn.shopify.com/s/files/1/0069/6470/7389/files/'
-          )
-        );
-      }
-    </script>
-
-    <!-- Intelligems scripts --> 
-    <script>
-      window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
-      window._template = {
-          directory: "{{ template.directory }}",
-          name: "{{ template.name }}",
-          suffix: "{{ template.suffix }}"
-      };
-    </script>
-    <script type="module" blocking="render" fetchpriority="high" src="https://cdn.intelligems.io/esm/a815b85d9315/bundle.js" async></script>
-    
-    {% include 'pagefly-app-header' %}
   </head>
 
   <body
@@ -388,15 +278,6 @@
       {% if request.page_type == 'index' %}home{% endif %}
     "
   >
-    <!-- Klarna message -->
-    <script
-      async
-      data-environment="production"
-      src="https://js.klarna.com/web-sdk/v1/klarna.js"
-      data-client-id="c65be49b-fb3d-5160-81ef-ef06072a9807"
-    ></script>
-    <!-- End Klarna message -->
-
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -466,65 +347,5 @@
     <!-- Start custom scripts -->
     <script src="{{ 'cliphair.js' | asset_url }}" defer="defer"></script>
     <!-- End custom scripts -->
-
-    <!-- Klarna -->
-    <script>
-      window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}
-    </script>
-    <!-- End Klarna -->
   </body>
 </html>
-
-<!-- Begin Shopify-Clearpay JavaScript Snippet (v1.2.0) -->
-{% if cart.currency.iso_code == shop.currency %}
-  <script type="text/javascript">
-    // Overrides:
-    var clearpay_msg_size = 'xs';  // Can be 'xs', 'sm', 'md' or 'lg'.
-    var clearpay_bold_amount = false;
-    // var clearpay_logo_theme = 'colour';  // Can be 'colour', 'black' or 'white'.
-    // var clearpay_modal_open_icon = true;
-    // var clearpay_hide_upper_limit = false;
-    // var clearpay_hide_lower_limit = true;
-    // var clearpay_show_if_outside_limits = true;
-
-    //var clearpay_product_integration_enabled = false;
-    var clearpay_product_selector = '#clearpay';
-    // var clearpay_variable_price_fallback = false;
-    var clearpay_variable_price_fallback_selector = '.final-price .money';
-    // var clearpay_variable_price_fallback_method = 'mutation';  // Can be 'mutation' or 'interval'.
-
-    var clearpay_cart_integration_enabled = false;
-    // var clearpay_cart_static_selector = '#cart-subtotal-selector';
-    // var clearpay_variable_subtotal_fallback = false;
-    // var clearpay_variable_subtotal_fallback_selector = '';
-    // var clearpay_variable_subtotal_fallback_method = 'mutation'; // Can be 'mutation' or 'interval'.
-
-    // var clearpay_dynamic_cart_integration_enabled = false;
-    // var clearpay_dynamic_cart_selector = '.cart-drawer__footer .totals';
-    // var clearpay_dynamic_cart_observer_target = '#CartDrawer';
-
-    var clearpay_footer_logo_enabled = true;
-    var clearpay_footer_logo_format = 'icon';  // Can be 'icon', 'stacked' or 'logo'.
-    var clearpay_footer_logo_theme = 'colour'; // Can be 'colour', 'black' or 'white'.
-    var clearpay_footer_logo_background = 'border';  // Can be 'border' or 'transparent'.
-    var clearpay_footer_logo_container = 'footer ul.list-payment';
-    var clearpay_footer_logo_template = '<li class="list-payment__item"><object data="{logo_path}" type="image/svg+xml"></object></li>';
-
-    // Non-editable fields:
-    var clearpay_js_language = {{ localization.language.iso_code | slice: 0, 2 | json }};
-    var clearpay_js_country = {{ localization.country.iso_code | json }};
-    var clearpay_shop_currency = {{ shop.currency | json }};
-    var clearpay_cart_currency = {{ cart.currency.iso_code | json }};
-    var clearpay_shop_money_format = {{ shop.money_format | json }};
-    var clearpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
-    var clearpay_theme_name = {{ theme.name | json }};
-    var clearpay_product = {{ product | json }};
-    var clearpay_current_variant = {{ product.selected_or_first_available_variant | json }};
-    var clearpay_cart_total_price = {{ cart.total_price | json }};
-    var clearpay_js_snippet_version = '1.2.0';
-  </script>
-  <script type="text/javascript" src="https://static.afterpay.com/shopify-clearpay-javascript.js" async></script>
-{% else %}
-  <!-- Clearpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
-{% endif %}
-<!-- End Shopify-Clearpay JavaScript Snippet (v1.2.0) -->
