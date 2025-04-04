@@ -33,21 +33,43 @@
         "padding_bottom": 36
       }
     },
-    "trustpilot_carrousel_4kBmgP": {
-      "type": "trustpilot-carrousel",
+    "rich_text_rApCNT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Dp9UQ7": {
+          "type": "heading",
+          "settings": {
+            "heading": "See What People Say on Yotpo!",
+            "heading_size": "h2",
+            "h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Dp9UQ7"
+      ],
       "settings": {
-        "title": "See What People Say on Trustpilot!",
-        "heading_size": "h2",
-        "text_allignment": "center",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-2",
-        "padding_top": 12,
-        "padding_bottom": 12
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "yotpo_review_carrousel_eXBCYB": {
+      "type": "yotpo-review-carrousel",
+      "settings": {
+        "container_color_scheme": "background-2",
+        "padding_top": 20,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
     "main",
     "colour_chart_list_Kjmjzz",
-    "trustpilot_carrousel_4kBmgP"
+    "rich_text_rApCNT",
+    "yotpo_review_carrousel_eXBCYB"
   ]
 }

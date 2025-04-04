@@ -60,9 +60,16 @@
             "share_label": "Share"
           }
         },
-        "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
-          "type": "payment_services",
+        "klarna_on_site_messaging_app_block_3kiAmP": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
           }
         },
         "collapsible-row-0": {
@@ -107,7 +114,7 @@
         "quantity_selector_jRL7p9",
         "buy_buttons",
         "share",
-        "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
+        "klarna_on_site_messaging_app_block_3kiAmP",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2"
@@ -125,14 +132,6 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 20,
-        "padding_bottom": 40
-      }
-    },
-    "506f6558-7efd-4e91-a56a-75b4a46d81cc": {
-      "type": "frequently-bought-together-app",
-      "settings": {
-        "container_color_scheme": "accent-2",
-        "padding_top": 40,
         "padding_bottom": 40
       }
     },
@@ -161,14 +160,6 @@
         "padding_bottom": 40
       }
     },
-    "cb0bf916-3e7b-44a5-bee5-ef9302e54a26": {
-      "type": "yotpo-review-app",
-      "settings": {
-        "container_color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "2ba62760-f7d7-46c5-ae93-8ade6e208816": {
       "type": "blog-spot",
       "custom_css": [
@@ -181,7 +172,7 @@
         "introduction": "",
         "tags_size": "h3",
         "text_alignment": "center",
-        "blog": "hair-blog",
+        "blog": "news",
         "post_limit": 4,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -274,24 +265,12 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "custom_liquid_wj84kt": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<script>\n  window.addEventListener('load', function() {\n  var _learnq = window._learnq || [];\n  function addedToCart() {\n   fetch(`${window.location.origin}/cart.js`)\n   .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n       _learnq.push(['track', 'Added to Cart', cart]);\n       klAjax = false;\n      }\n   }))\n  };\n  (function (ns, fetch) {\n    ns.fetch = function() {\n      const response = fetch.apply(this, arguments);\n      response.then(res => {\n        if (`${window.location.origin}/cart/add.js`\n          .includes(res.url) && res.url !== '') {\n              addedToCart()\n        }\n      });\n      return response\n     }\n  }(window, window.fetch));\n  var klAjax = true;\n  var atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\n  for (var i = 0; i < atcButtons.length; i++) { \n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n  }\n  });\n</script>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "main",
-    "506f6558-7efd-4e91-a56a-75b4a46d81cc",
     "related-products",
-    "cb0bf916-3e7b-44a5-bee5-ef9302e54a26",
     "2ba62760-f7d7-46c5-ae93-8ade6e208816",
-    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b",
-    "custom_liquid_wj84kt"
+    "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
 }

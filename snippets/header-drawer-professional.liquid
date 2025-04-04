@@ -39,10 +39,10 @@
         tabindex="-1"
       >
         <li>
-          {% assign object = collections['nano-rings-hair-extensions'] %}
+          {% assign object = collections['nano-ring-hair-extensions'] %}
           <a
             id="HeaderDrawer-professional-nano-ring-nano-ring"
-            href="{{ object.url | append: '?filter.p.product_type=Nano+Ring+Hair+Extensions' }}"
+            href="{{ object.url }}"
             class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
             {% if request.path == object.url %}
               aria-current="page"
@@ -53,9 +53,10 @@
         </li>
 
         <li>
+          {% assign object = collections['remy-royale-nano-bonds-hair-extensions'] %}
           <a
             id="HeaderDrawer-professional-nano-ring-nano-bond"
-            href="{{ object.url | append: '?filter.p.product_type=Remy+Royale+Nano+Bonds' }}"
+            href="{{ object.url }}"
             class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
             {% if request.path == object.url %}
               aria-current="page"
@@ -110,7 +111,7 @@
         </li>
 
         <li>
-          {% assign object = collections['remy-royale-tape-in-extensions'] %}
+          {% assign object = collections['remy-royale-tape-ins'] %}
           <a
             id="HeaderDrawer-professional-tape-remy-tape"
             href="{{ object.url }}"
@@ -182,7 +183,7 @@
         </li>
 
         <li>
-          {% assign object = collections['flat-weft-hair-extensions'] %}
+          {% assign object = collections['remy-royale-flat-weft-hair-extensions'] %}
           <a
             id="HeaderDrawer-professional-weave-flat-track"
             href="{{ object.url }}"
@@ -240,7 +241,7 @@
         </li>
 
         <li>
-          {% assign object = collections['flat-tip-hair-extensions'] %}
+          {% assign object = collections['remy-royale-flat-tip-hair-extensions'] %}
           <a
             id="HeaderDrawer-professional-pre-bonded-flat-tip"
             href="{{ object.url }}"
@@ -427,44 +428,5 @@
     {% endif %}
   >
     {{ 'navbar.sub_level.professional.professional_bundle' | t }}
-  </a>
-</li>
-
-<li>
-  {% assign object = all_products['cliphair-e-gift-card'] %}
-  <a
-    id="HeaderDrawer-professional-gift-card"
-    href="{{ object.url }}"
-    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
-    {% if request.path == object.url %}
-      aria-current="page"
-    {% endif %}
-  >
-    {{ 'navbar.sub_level.professional.gift_card' | t }}
-  </a>
-</li>
-
-<li>
-  {% assign object = pages['trade-account'] %}
-  <modal-opener
-    id="HeaderDrawer-professional-trade-account"
-    class="no-js-hidden"
-    data-modal="#PopupModal-Trade-Account"
-  >
-    <button
-      id="HeaderDrawer-Popup-Trade-Account-professional"
-      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-      type="button"
-      aria-haspopup="dialog"
-    >
-      {{ 'navbar.sub_level.professional.apply_trade' | t }}
-    </button>
-  </modal-opener>
-  <a
-    href="{{ object.url }}"
-    aria-label="Goes to trade website"
-    class="menu-drawer__menu-item link link--text list-menu__item focus-inset no-js"
-  >
-    {{ 'navbar.sub_level.professional.apply_trade' | t }}
   </a>
 </li>

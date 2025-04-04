@@ -9,19 +9,7 @@
  */
 {
   "sections": {
-    "trustpilot_yotpo_reviews_8UQNtz": {
-      "type": "trustpilot-yotpo-reviews",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "text_allignment": "left",
-        "color_scheme": "",
-        "star_color": "#ac90c1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
+
     "visual_menu_66DUPM": {
       "type": "visual-menu",
       "custom_css": [
@@ -66,53 +54,10 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_cnhnUM": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Group_21068.webp",
-            "image_desktop": "shopify://shop_images/Group_21067.webp",
-            "image_url": "shopify://collections/clip-in-hair-extensions",
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_nzbVKg": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/hanger-carrier-mobile-banner.webp",
-            "image_desktop": "shopify://shop_images/hanger-carrier-desktop-banner.webp",
-            "image_url": "shopify://products/hair-extension-hanger-and-carrier-bag",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "bottom-right",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-2",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_nnGry6",
-        "slide_cnhnUM",
-        "slide_nzbVKg"
+        "slide_nnGry6"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -131,7 +76,7 @@
         "element_h6YLkb": {
           "type": "element",
           "settings": {
-            "text_label": "FREE UK DELIVERY ON ORDERS OVER £30",
+            "text_label": "FREE UK DELIVERY ON ORDERS OVER £75",
             "link": "shopify://pages/hair-extensions-shipping-delivery"
           }
         },
@@ -141,19 +86,11 @@
             "text_label": "FREE VIRTUAL HAIR COLOUR MATCHING",
             "link": "shopify://pages/colour-matching-service"
           }
-        },
-        "element_PzXtwm": {
-          "type": "element",
-          "settings": {
-            "text_label": "PAY YOUR WAY WITH <a href=\"/pages/clearpay-hair-extensions\" title=\"Clearpay\">CLEARPAY</a> & <a href=\"/pages/klarna-faqs\" title=\"Klarna FAQs | Hair Extensions Klarna\">KLARNA</a>",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "element_h6YLkb",
-        "element_zx3LNE",
-        "element_PzXtwm"
+        "element_zx3LNE"
       ],
       "custom_css": [
         "a {color: inherit; text-decoration: none;}",
@@ -165,9 +102,9 @@
         "columns_mobile": "1",
         "scroll_mobile": true,
         "duration_mobile": 20,
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "scroll_desktop": true,
-        "duration_desktop": 20,
+        "duration_desktop": 15,
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -201,7 +138,7 @@
             "label": "",
             "collection-list": "choose-by-hair-colour",
             "button_label": "FREE COLOUR MATCH",
-            "link": "shopify://pages/colour-matching-service",
+            "link": "mailto:raza@cliphair.co.uk",
             "button_style_secondary": false,
             "circle_images": true
           }
@@ -374,7 +311,7 @@
           "type": "button",
           "settings": {
             "button_label": "FIND YOUR LOOK",
-            "button_link": "shopify://pages/lookbook",
+            "button_link": "https://www.cliphair.co.uk/pages/lookbook",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -630,36 +567,36 @@
     "b19c81a2-f86e-4e52-9a50-dca37f731b16": {
       "type": "videos-list",
       "blocks": {
-        // "d97a452e-2464-483e-bcd5-f1846fb61062": {
-        //   "type": "video",
-        //   "settings": {
-        //     "video": "shopify://files/videos/Best of Clip Ins.mp4",
-        //     "video_url": "",
-        //     "cover_image": "shopify://shop_images/Best_of_Clip_Ins_Thumbnail.webp",
-        //     "title": "Clip In Extension Tutorials",
-        //     "description": "Clip In Extension Tutorials"
-        //   }
-        // },
-        // "c75280b4-0487-4063-9610-064863363d62": {
-        //   "type": "video",
-        //   "settings": {
-        //     "video": "shopify://files/videos/Best of Permanent.mp4",
-        //     "video_url": "",
-        //     "cover_image": "shopify://shop_images/Best_of_Permanent_Thumbnail.webp",
-        //     "title": "Permanent Extension Tutorials ",
-        //     "description": "Permanent Extensions Tutorials"
-        //   }
-        // },
-        // "video_EWWLYJ": {
-        //   "type": "video",
-        //   "settings": {
-        //     "video": "shopify://files/videos/Best of Bridal.mp4",
-        //     "video_url": "",
-        //     "cover_image": "shopify://shop_images/Best_of_Bridal_Thumbnail.webp",
-        //     "title": "Bridal Tutorials",
-        //     "description": "Bridal Tutorials"
-        //   }
-        // }
+        "d97a452e-2464-483e-bcd5-f1846fb61062": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Best of Clip Ins.mp4",
+            "video_url": "",
+            "cover_image": "shopify://shop_images/Best_of_Clip_Ins_Thumbnail.webp",
+            "title": "Clip In Extension Tutorials",
+            "description": "Clip In Extension Tutorials"
+          }
+        },
+        "c75280b4-0487-4063-9610-064863363d62": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Best of Permanent.mp4",
+            "video_url": "",
+            "cover_image": "shopify://shop_images/Best_of_Permanent_Thumbnail.webp",
+            "title": "Permanent Extension Tutorials ",
+            "description": "Permanent Extensions Tutorials"
+          }
+        },
+        "video_EWWLYJ": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Best of Bridal.mp4",
+            "video_url": "",
+            "cover_image": "shopify://shop_images/Best_of_Bridal_Thumbnail.webp",
+            "title": "Bridal Tutorials",
+            "description": "Bridal Tutorials"
+          }
+        }
       },
       "block_order": [
         "d97a452e-2464-483e-bcd5-f1846fb61062",
@@ -907,7 +844,7 @@
         "introduction": "<p>For the latest haircare tips, top trends and more, browse our blog categories and Hair Extensions Bible for everything you need to know about hair and extensions! </p>",
         "tags_size": "h4",
         "text_alignment": "center",
-        "blog": "hair-blog",
+        "blog": "news",
         "post_limit": 4,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -952,8 +889,8 @@
         "47ed8938-167c-4f51-a079-56b352d27b43": {
           "type": "text",
           "settings": {
-            "text": "<p>With over 15 years industry experience,  Cliphair has become the UK’s leading Remy Human Hair extension supplier, with hundreds of thousands of digital shoppers all over the world. From <a href=\"https://www.cliphair.co.uk/collections/clip-in-hair-extensions\" title=\"Clip In collection page\">Clip Ins</a> and <a href=\"https://www.cliphair.co.uk/collections/tape-in-hair-extensions\" title=\"Tape In collection page\">Tape In Extensions</a> to <a href=\"https://www.cliphair.co.uk/collections/micro-ring-loop-hair-extensions\" title=\"Micro Ring hair extension collection page\">Permanent Micro Rings</a>, <a href=\"https://www.cliphair.co.uk/collections/one-piece-clip-in-hair-extensions\" title=\"One Piece hair extension collection page\">One Pieces</a> and <a href=\"https://www.cliphair.co.uk/collections/clip-in-ponytail-extensions\" title=\"Ponytail collection page\">Ponytail Extensions</a>, we are without doubt the no. 1 premium hair extension seller on the market.</p>",
-            "read-more_text": "<p>If you’re new to wearing hair extensions and want to take the leap, you can learn everything you need to know about choosing and purchasing extensions in our <a href=\"https://www.cliphair.co.uk/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary\" title=\"Cliphair: Hair Extension Buying Guide & Glossary\">Ultimate Buying Guide</a>. For application and maintenance advice, you can also read our <a href=\"https://www.cliphair.co.uk/blogs/hair-blog/how-to-look-after-hair-extensions-ultimate-care-guide\" title=\"Cliphair Guides: How To Look After Hair Extensions\">Hair Extension Care Guide</a>.</p><p>With a wide, stunning <a href=\"https://www.cliphair.co.uk/pages/hair-extensions-by-colour\" title=\"Hair Colour Chart\">range of shades</a>, our premium Remy Hair Extensions can be delivered straight to your door, 7 days a week – no matter where you are. Experience unmatched shine, volume and versatility with our 100% real human hair extensions made from the best quality Remy hair. Choose luxury with Cliphair!</p>"
+            "text": "<p>With over 15 years industry experience,  Cliphair has become the UK’s leading Remy Human Hair extension supplier, with hundreds of thousands of digital shoppers all over the world. From <a href=\"/collections/clip-in-hair-extensions\" title=\"Clip In collection page\">Clip Ins</a> and <a href=\"/collections/tape-in-hair-extensions\" title=\"Tape In collection page\">Tape In Extensions</a> to <a href=\"/collections/micro-ring-loop-hair-extensions\" title=\"Micro Ring hair extension collection page\">Permanent Micro Rings</a>, <a href=\"/collections/one-piece-clip-in-hair-extensions\" title=\"One Piece hair extension collection page\">One Pieces</a> and <a href=\"/collections/clip-in-ponytail-extensions\" title=\"Ponytail collection page\">Ponytail Extensions</a>, we are without doubt the no. 1 premium hair extension seller on the market.</p>",
+            "read-more_text": "<p>If you’re new to wearing hair extensions and want to take the leap, you can learn everything you need to know about choosing and purchasing extensions in our <a target= \"_blank\" href=\"https://www.cliphair.co.uk/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary\" title=\"Cliphair: Hair Extension Buying Guide & Glossary\">Ultimate Buying Guide</a>. For application and maintenance advice, you can also read our <a target=\"_blank\" href=\"https://www.cliphair.co.uk/blogs/hair-blog/how-to-look-after-hair-extensions-ultimate-care-guide\" title=\"Cliphair Guides: How To Look After Hair Extensions\">Hair Extension Care Guide</a>.</p><p>With a wide, stunning <a href=\"/pages/hair-extensions-by-colour\" title=\"Hair Colour Chart\">range of shades</a>, our premium Remy Hair Extensions can be delivered straight to your door, 7 days a week – no matter where you are. Experience unmatched shine, volume and versatility with our 100% real human hair extensions made from the best quality Remy hair. Choose luxury with Cliphair!</p>"
           }
         }
       },
@@ -982,7 +919,7 @@
         "template--15283894157373__f41c0e3b-b362-4900-8b02-4a5cc75bd290-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What does Remy Hair Extensions mean? ",
+            "heading": "What does Remy Hair Extensions mean?",
             "icon": "none",
             "row_content": "<p>Remy Hair Extensions are the best quality Real Human Hair Extensions available. All the hair is guaranteed to have intact cuticles that are all aligned in one direction to increase longevity, shine and manageability. Insist on Remy hair if you want to look your best!</p>",
             "page": ""
@@ -993,7 +930,7 @@
           "settings": {
             "heading": "How do I know which Real Hair Extension is best for my hair type?",
             "icon": "none",
-            "row_content": "<p>This will depend on what you wish to achieve with real human hair extensions and how you integrate them into your lifestyle. Our Cliphair <a href=\"/pages/contact-us\" title=\"Contact Us\">customer service team</a> are always on hand to help you make the right hair extension choice. You can find everything you need to know in our <a href=\"/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary\" title=\"Buying Hair Extensions: Everything You Need To Know\">Ultimate Buying Guide</a> which includes recommendations for all hair types and concerns such as thin, thick, curly, short or straight hair.   </p>",
+            "row_content": "<p>This will depend on what you wish to achieve with real human hair extensions and how you integrate them into your lifestyle. Our Cliphair <a href=\"/pages/contact-us\" title=\"Contact Us\">customer service team</a> are always on hand to help you make the right hair extension choice. You can find everything you need to know in our <a href=\"https://www.cliphair.co.uk/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary\" target=\"_blank\" title=\"Buying Hair Extensions: Everything You Need To Know\">Ultimate Buying Guide</a> which includes recommendations for all hair types and concerns such as thin, thick, curly, short or straight hair.</p>",
             "page": ""
           }
         },
@@ -1011,7 +948,7 @@
           "settings": {
             "heading": "How long do real human hair extensions usually last?",
             "icon": "none",
-            "row_content": "<p>The longevity of hair extensions is influenced by factors such as the quality of the hair, the method of installation, how well they are cared for, and how often they are used. Clip-ins tend to last 12-18 months with good care, whereas permanent extensions should be removed and reinstalled every 6-8 weeks, but the hair can last up to a year if looked after properly. For more information, take a look at our dedicated blog “<a href=\"/blogs/hair-blog/ever-wondered-how-long-do-hair-extensions-last\" title=\"Ever Wondered How Long Do Hair Extensions Last?\">How long do hair extensions last?</a>”.</p>",
+            "row_content": "<p>The longevity of hair extensions is influenced by factors such as the quality of the hair, the method of installation, how well they are cared for, and how often they are used. Clip-ins tend to last 12-18 months with good care, whereas permanent extensions should be removed and reinstalled every 6-8 weeks, but the hair can last up to a year if looked after properly. For more information, take a look at our dedicated blog “<a href=\"https://www.cliphair.co.uk//blogs/hair-blog/ever-wondered-how-long-do-hair-extensions-last\" target=\"_blank\" title=\"Ever Wondered How Long Do Hair Extensions Last?\">How long do hair extensions last?</a>”.</p>",
             "page": ""
           }
         }
@@ -1120,7 +1057,6 @@
     }
   },
   "order": [
-    "trustpilot_yotpo_reviews_8UQNtz",
     "visual_menu_66DUPM",
     "slideshow_3tCMjU",
     "maquee_bdNYHF",

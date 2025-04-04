@@ -2011,18 +2011,20 @@
                         BACK
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                        <li>
-                          <a
-                            id="HeaderDrawer-help-me-choose-express-colour-matching"
-                            href="/pages/colour-matching-service"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/colour-matching-service' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/pages/colour-matching-service' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Express Colour Matching
-                          </a>
-                        </li>
+                        {% comment %}
+                          <li>
+                            <a
+                              id="HeaderDrawer-help-me-choose-express-colour-matching"
+                              href="/pages/colour-matching-service"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/colour-matching-service' %} menu-drawer__menu-item--active{% endif %}"
+                              {% if request.path == '/pages/colour-matching-service' %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              Express Colour Matching
+                            </a>
+                          </li>
+                        {% endcomment %}
 
                         <li>
                           <a
@@ -2104,11 +2106,11 @@
                         <li>
                           <a
                             id="HeaderDrawer-help-me-choose-lookbook"
-                            href="/pages/lookbook"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/lookbook' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/pages/lookbook' %}
-                              aria-current="page"
-                            {% endif %}
+                            href="https://www.cliphair.co.uk/pages/lookbook"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                            target="_blank"
+                            title="Lookbook Cliphair UK"
+                            aria-label="Lookbook Cliphair UK (open in a new tab)"
                           >
                             Lookbook
                           </a>
@@ -2127,18 +2129,20 @@
                           </a>
                         </li>
 
-                        <li>
-                          <a
-                            id="HeaderDrawer-help-me-buying-guide"
-                            href="/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog/hair-extension-buying-guide-and-hair-glossary' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Ultimate Hair Extensions Buying Guide
-                          </a>
-                        </li>
+                        {% comment %}
+                          <li>
+                            <a
+                              id="HeaderDrawer-help-me-buying-guide"
+                              href="/blogs/news/hair-extension-buying-guide-and-hair-glossary"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/hair-extension-buying-guide-and-hair-glossary' %} menu-drawer__menu-item--active{% endif %}"
+                              {% if request.path == '/blogs/news/hair-extension-buying-guide-and-hair-glossary' %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              Ultimate Hair Extensions Buying Guide
+                            </a>
+                          </li>
+                        {% endcomment %}
                       </ul>
                     </div>
                   </div>
@@ -2594,19 +2598,6 @@
                             </div>
                           </details>
                         </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-haircare-accessories-gift-card"
-                            href="/products/cliphair-e-gift-card"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/cliphair-e-gift-card' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/products/cliphair-e-gift-card' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            E-Gift Card
-                          </a>
-                        </li>
                       </ul>
                     </div>
                   </div>
@@ -2795,9 +2786,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-blog-homepage"
-                            href="/blogs/hair-blog"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog' %}
+                            href="/blogs/news"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2808,9 +2799,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-latest-blogs"
-                            href="/blogs/hair-blog#main-blog-section"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog#main-blog-section' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog#main-blog-section' %}
+                            href="/blogs/news#main-blog-section"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news#main-blog-section' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news#main-blog-section' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2821,9 +2812,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-hair-extension-bible"
-                            href="/blogs/hair-blog/tagged/the-hair-extensions-bible"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/tagged/the-hair-extensions-bible' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog/tagged/the-hair-extensions-bible' %}
+                            href="/blogs/news/tagged/the-hair-extensions-bible"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/the-hair-extensions-bible' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news/tagged/the-hair-extensions-bible' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2834,9 +2825,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-top-trends"
-                            href="/blogs/hair-blog/tagged/top-trends"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/tagged/top-trends' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog/tagged/top-trends' %}
+                            href="/blogs/news/tagged/top-trends"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/top-trends' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news/tagged/top-trends' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2847,9 +2838,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-styling-guides-tutorials"
-                            href="/blogs/hair-blog/tagged/styling-guides-tutorials"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/tagged/styling-guides-tutorials' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog/tagged/styling-guides-tutorials' %}
+                            href="/blogs/news/tagged/styling-guides-tutorials"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/styling-guides-tutorials' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news/tagged/styling-guides-tutorials' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2860,9 +2851,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-haircare-tips"
-                            href="/blogs/hair-blog/tagged/hair-care-tips"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/tagged/hair-care-tips' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog/tagged/hair-care-tips' %}
+                            href="/blogs/news/tagged/hair-care-tips"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/hair-care-tips' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news/tagged/hair-care-tips' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2873,9 +2864,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-wedding-occasion-hair"
-                            href="/blogs/hair-blog/tagged/wedding-occasion-hair"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/tagged/wedding-occasion-hair' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog/tagged/wedding-occasion-hair' %}
+                            href="/blogs/news/tagged/wedding-occasion-hair"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/wedding-occasion-hair' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news/tagged/wedding-occasion-hair' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2886,9 +2877,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-blog-celebrity-lifestyle"
-                            href="/blogs/hair-blog/tagged/lifestyle-pop-culture"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog/tagged/lifestyle-pop-culture' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog/tagged/lifestyle-pop-culture' %}
+                            href="/blogs/news/tagged/lifestyle-pop-culture"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/lifestyle-pop-culture' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news/tagged/lifestyle-pop-culture' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -2935,7 +2926,7 @@
                           </a>
                         </li>
 
-                        <li>
+                        {% comment %} <li>
                           <a
                             id="HeaderDrawer-info-hub-rewards"
                             href="/pages/rewards"
@@ -2946,7 +2937,7 @@
                           >
                             Rewards
                           </a>
-                        </li>
+                        </li> {% endcomment %}
 
                         <li>
                           <a
@@ -3016,9 +3007,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-info-hub-blog"
-                            href="/blogs/hair-blog"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/hair-blog' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/hair-blog' %}
+                            href="/blogs/news"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/blogs/news' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -3026,16 +3017,16 @@
                           </a>
                         </li>
 
-                        <li>
+                        {% comment %} <li>
                           <span
                             id="HeaderDrawer-info-hub-our-ambassador"
                             class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
                           >
                             <span onclick="klrRecruit.openRecruit()">Become An Ambassador</span>
                           </span>
-                        </li>
+                        </li> {% endcomment %}
 
-                        <li>
+                        {% comment %} <li>
                           <modal-opener
                             id="HeaderDrawer-info-hub-our-trade"
                             class="no-js-hidden"
@@ -3057,7 +3048,7 @@
                           >
                             Trade Application
                           </a>
-                        </li>
+                        </li> {% endcomment %}
                       </ul>
                     </div>
                     <div class="menu-drawer__utility-links">
@@ -3169,7 +3160,7 @@
                         BACK
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                        <li>
+                        {% comment %} <li>
                           <a
                             id="HeaderDrawer-discounts-rewards"
                             href="/pages/rewards"
@@ -3180,9 +3171,9 @@
                           >
                             My Rewards
                           </a>
-                        </li>
+                        </li> {% endcomment %}
 
-                        <li>
+                        {% comment %} <li>
                           <a
                             id="HeaderDrawer-discounts-new-customer-discount"
                             href="/pages/rewards"
@@ -3193,9 +3184,9 @@
                           >
                             New Customer Discount
                           </a>
-                        </li>
+                        </li> {% endcomment %}
 
-                        <li>
+                        {% comment %} <li>
                           <a
                             id="HeaderDrawer-discounts-blue-light-card-discount"
                             href="/pages/blue-light-card"
@@ -3206,9 +3197,9 @@
                           >
                             Blue Light Card Discount
                           </a>
-                        </li>
+                        </li> {% endcomment %}
 
-                        <li>
+                        {% comment %} <li>
                           <a
                             id="HeaderDrawer-discounts-student-discount"
                             href="https://www.studentbeans.com/student-discount/uk/cliphair"
@@ -3217,7 +3208,7 @@
                           >
                             Student Discount
                           </a>
-                        </li>
+                        </li> {% endcomment %}
 
                         <li>
                           <a
@@ -3231,6 +3222,7 @@
                             Value Bundles
                           </a>
                         </li>
+                        
                         <li>
                           <a
                             id="HeaderDrawer-discounts-outlet"

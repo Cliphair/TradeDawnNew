@@ -24,23 +24,14 @@
         "announcement-bar-1": {
           "type": "announcement",
           "settings": {
-            "text": "Free Delivery on orders over £30. Worldwide Shipping",
+            "text": "Free Delivery on orders over £75. Worldwide Shipping",
             "link": "shopify://pages/hair-extensions-shipping-delivery"
-          }
-        },
-        "announcement_nNPD4X": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "We've Revamped Our Website For A Better, Faster Shopping Experience - Explore Now!",
-            "link": "shopify://blogs/hair-blog/our-new-website-everything-you-need-to-know"
           }
         }
       },
       "block_order": [
         "announcement-bar-0",
-        "announcement-bar-1",
-        "announcement_nNPD4X"
+        "announcement-bar-1"
       ],
       "settings": {
         "color_scheme": "",
@@ -80,7 +71,7 @@
         "color_scheme": "background-1",
         "menu_color_scheme": "background-1",
         "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 4,

@@ -7,6 +7,7 @@
   - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
   - price_class: {String} Adds a price class to the price element (optional)
   - show_compare_at_price: {Boolean} Renders the compare at price if the product matches the condition (optional)
+  - price_message: {String} Adds a text after the price element (optional)
 
   Usage:
   {% render 'price', product: product %}
@@ -101,6 +102,9 @@
         <span class="price-item price-item--regular{%- unless compare_at_price > price and product.quantity_price_breaks_configured? != true %} final-price{% endunless %}">
           {{ money_price }}
         </span>
+        {% if price_message -%}
+          <span class="h5">{{ price_message }}</span>
+        {%- endif %}
       {%- endif -%}
     </div>
     <div class="price__sale">
@@ -123,7 +127,6 @@
       <span class="price-item price-item--sale price-item--last{%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} final-price{% endif %}">
         {{ money_price }}
       </span>
-
       {% if template.name == 'product' %}
         {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %}
           <span class="price-item price-item--regular price-item--message">

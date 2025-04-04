@@ -22,7 +22,7 @@
     "collection_filter_circle_YUDjy3": {
       "type": "collection-filter-circle",
       "settings": {
-        "filter_type": "colour-group",
+        "filter_type": "colour-category",
         "heading": "",
         "heading_size": "h2",
         "text_allignment": "left",

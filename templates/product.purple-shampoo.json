@@ -82,19 +82,17 @@
             "heading_3": ""
           }
         },
-        "order_deadline_67UiV7": {
-          "type": "order_deadline",
-          "settings": {}
-        },
-        "reward_points_8zVpGp": {
-          "type": "reward-points",
+        "klarna_on_site_messaging_app_block_3kiAmP": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
-            "page": "rewards-pop-up"
+            "data_key": "top-strip-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
           }
-        },
-        "79f2f247-84e6-4366-a5bf-6f17746c4cb4": {
-          "type": "payment_services",
-          "settings": {}
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -126,17 +124,17 @@
             "page": ""
           }
         },
-        "collapsible_tab_L8wRzX": {
+        "collapsible_tab_JGqU4U": {
           "type": "collapsible_tab",
           "settings": {
             "type": "custom",
             "heading": "Delivery Info",
             "icon": "none",
-            "content": "<p><span style=\"text-decoration:underline\"><strong>UK</strong></span></p><ul><li>Economy Tracked: 3-5 Working Days - FREE on Orders over £30</li><li>Express Tracked: 1-2 Working Days - £3.99</li><li>Next Working Day Guaranteed (Order Before 4pm Mon-Thu) - £7.99</li><li>Next Working Day by 10.30 AM (Order Before 3pm Mon-Thu) - £11.99</li><li>Saturday Guaranteed (Order Before 4pm Friday) - £8.99</li><li>Sunday Guaranteed (Order Before 3pm Saturday) - £5.99</li><li>Monday Guaranteed (Order Before 3pm Sunday) - £7.99</li><li>Pickup at Nearby Shop (Order Before      3pm For Next Working Day) - £3.99</li></ul><p><span style=\"text-decoration:underline\"><strong>USA</strong></span></p><ul><li>Express Tracked: (1-2 Working Days) – FREE<br/>(Min. Order £150, Otherwise £9.99)</li></ul><p><span style=\"text-decoration:underline\"><strong>Canada</strong></span></p><ul><li>Express Tracked: (1-2 Working Days) – FREE<br/>(Min. Order £150, Otherwise £12.99)</li></ul><p><span style=\"text-decoration:underline\"><strong>IRELAND/EU</strong></span></p><ul><li>Express Tracked: (1-2 Working Days) – 11.49<br/><strong>(Taxes Paid by Customer on Delivery)</strong></li><li>Economy Tracked: (4-7 Working Days) - £25.00<br/><strong>(Inc. All Taxes & Duties. Nothing to pay on Delivery)</strong> </li></ul><p><span style=\"text-decoration:underline\"><strong>REST OF THE WORLD</strong></span></p><ul><li>Express Tracked: (2-4 Working Days) – 14.99</li></ul><p><strong>Please note you might have to pay duties which are not included in carriage.</strong></p>",
+            "content": "<p><span style=\"text-decoration:underline\"><strong>UK</strong></span></p><ul><li>Economy Tracked: 2-4 Working Days - FREE on Orders over £75</li><li>Next Working Day Guaranteed (Order Before 4pm Mon-Thu) - £4.99</li><li>Next Working Day by 10.30 AM (Order Before 3pm Mon-Thu) - £9.99</li><li>Saturday Guaranteed (Order Before 4pm Friday) - £6.99</li><li>Sunday Guaranteed (Order Before 3pm Saturday) - £4.99</li><li>Monday Guaranteed (Order Before 3pm Sunday) - £4.99</li><li>Pickup at Nearby Shop (Order Before      3pm For Next Working Day) - £3.49</li></ul><p><span style=\"text-decoration:underline\"><strong>EU - (Excluding Hungry, Italy, Spain)</strong></span></p><ul><li>Express Tracked: (1-2 Working Days) – FREE<br/>(Min. Order £600, Otherwise £14.99)</li></ul><p><span style=\"text-decoration:underline\"><strong>REST OF THE WORLD</strong></span></p><ul><li>Express Tracked: (2-4 Working Days) – FREE<br/>(Min. Order £600, Otherwise £19.99)</li></ul><p><strong>Please note Customers in EU / CANADA might have to pay duties which are not included in carriage.</strong></p>",
             "page": ""
           }
         },
-        "collapsible_tab_NUa6HR": {
+        "collapsible_tab_36Cgxc": {
           "type": "collapsible_tab",
           "settings": {
             "type": "custom",
@@ -159,14 +157,12 @@
         "buy_buttons",
         "share",
         "icon_with_text_XDR44w",
-        "order_deadline_67UiV7",
-        "reward_points_8zVpGp",
-        "79f2f247-84e6-4366-a5bf-6f17746c4cb4",
+        "klarna_on_site_messaging_app_block_3kiAmP",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible_tab_L8wRzX",
-        "collapsible_tab_NUa6HR"
+        "collapsible_tab_JGqU4U",
+        "collapsible_tab_36Cgxc"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.information-videos ~ .information-videos {display: none; }}",
@@ -213,14 +209,6 @@
         "padding_bottom": 40
       }
     },
-    "506f6558-7efd-4e91-a56a-75b4a46d81cc": {
-      "type": "frequently-bought-together-app",
-      "settings": {
-        "container_color_scheme": "background-2",
-        "padding_top": 40,
-        "padding_bottom": 20
-      }
-    },
     "related-products": {
       "type": "related-products-by-colour",
       "settings": {
@@ -265,7 +253,7 @@
         "introduction": "",
         "tags_size": "h3",
         "text_alignment": "center",
-        "blog": "hair-blog",
+        "blog": "news",
         "post_limit": 4,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -437,27 +425,16 @@
         "header_desktop_font_size": 30,
         "text_desktop_font_size": 20
       }
-    },
-    "custom_liquid_47cCk4": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<script>\n  window.addEventListener('load', function() {\n  var _learnq = window._learnq || [];\n  function addedToCart() {\n   fetch(`${window.location.origin}/cart.js`)\n   .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n       _learnq.push(['track', 'Added to Cart', cart]);\n       klAjax = false;\n      }\n   }))\n  };\n  (function (ns, fetch) {\n    ns.fetch = function() {\n      const response = fetch.apply(this, arguments);\n      response.then(res => {\n        if (`${window.location.origin}/cart/add.js`\n          .includes(res.url) && res.url !== '') {\n              addedToCart()\n        }\n      });\n      return response\n     }\n  }(window, window.fetch));\n  var klAjax = true;\n  var atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\n  for (var i = 0; i < atcButtons.length; i++) { \n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n  }\n  });\n</script>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
     "main",
     "video_list_metafields_UqTJAJ",
-    "506f6558-7efd-4e91-a56a-75b4a46d81cc",
     "related-products",
     "cb0bf916-3e7b-44a5-bee5-ef9302e54a26",
     "2ba62760-f7d7-46c5-ae93-8ade6e208816",
     "product_faq_NBzNDV",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b",
-    "reviews-modal",
-    "custom_liquid_47cCk4"
+    "reviews-modal"
   ]
 }
