@@ -18,47 +18,8 @@
 
           {% when 'product' %}
             {% unless collection %}
-              {% assign baseCollections = 'Accessories:accessories,
-                Bundle:hair-extensions-bundle,
-                Clip In Fringe Extensions:fringe-clip-in-hair-extensions,
-                Clip in Ponytail:clip-in-ponytail-extensions,
-                Curly Clip In Hair Extensions:curly-clip-in-hair-extensions,
-                DIY Clip In Hair Extensions:diy-clip-in-hair-extensions,
-                Double wefted full head:double-wefted-clip-in-hair-extensions,
-                Euro Straight Hair Weft / Weave:euro-straight-hair-weft-weave,
-                Full Head Set:full-head-clip-in-hair-extensions,
-                Hair Care:hair-care,
-                Highlighted Clip In Hair Extensions:highlighted-clip-in-hair-extensions,
-                I-TIP Straight Pre-bonded Hair Extensions:i-tip-straight-pre-bonded-hair-extensions,
-                Micro Ring Hair Extensions:micro-ring-loop-hair-extensions,
-                Nano Ring Hair Extensions:nano-rings-hair-extensions,
-                One Piece Clip In Hair Extensions:one-piece-top-up-hair-extensions,
-                Quad Weft Pieces:quad-weft-hair-extensions,
-                Remy Royale Flat Tip:flat-tip-hair-extensions,
-                Remy Royale Flat Weft Hair Extensions:flat-weft-hair-extensions,
-                Remy Royale I-Tips:remy-royale-i-tips-pre-bonded-hair-extensions,
-                Remy Royale Invisible Tape:remy-royale-invisible-tape-in-hair-extensions,
-                Remy Royale Nano Bonds:nano-rings-hair-extensions,
-                Remy Royale Seamless Clip ins:seamless-clip-in-hair-extensions-double-drawn-hair,
-                Remy Royale Tape ins:remy-royale-tape-in-extensions,
-                Remy Royale Weave Weft Hair Extensions:remy-royale-double-drawn-hair-weft-extensions,
-                Supreme Quad Weft Pieces:supreme-quad-weft,
-                Tape in Hair Extensions:tape-in-hair-extensions,
-                U-TIP Straight Pre-bonded Hair Extensions:u-tip-straight-pre-bonded-hair-extensions,
-                Ultra-Volume Full Head:ultra-clip-in-hair-extensions,
-                Wavy Clip In Hair Extensions:wavy-clip-in-human-hair-extensions,
-                Wrap Ponytail:straight-up-wrap-around-ponytail-hair-extensions,
-                Gift Set:hair-extensions-gift-sets'
-                | split: ','
-              %}
-              {% for entry in baseCollections %}
-                {% assign productType = entry | split: ':' | first | strip %}
-                {% assign collectionHandle = entry | split: ':' | last | strip %}
-                {% if productType == product.type %}
-                  {% assign collection = collections[collectionHandle] %}
-                  {% break %}
-                {% endif %}
-              {% endfor %}
+              {% include 'collection-mapping', map_by: 'type' %}
+              {% assign collection = collection_mapped %}
             {% endunless %}
 
             {% if collection.handle == 'double-wefted-clip-in-hair-extensions'

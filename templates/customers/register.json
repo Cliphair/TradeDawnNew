@@ -1,10 +1,32 @@
 {
   "sections": {
+    "0c153882-297c-45dd-9e13-0c3b0fe48078": {
+      "type": "page-header",
+      "settings": {
+        "custom-title": true,
+        "first-line": "JOIN THE CLIPHAIR'S TRADING COMMUNITY",
+        "second-line": "",
+        "hide": false,
+        "text_colour": "#4a4a4a",
+        "bg_colour": "#ffffff",
+        "mobile-font-size": 25,
+        "mobile-top-padding": 30,
+        "mobile-bottom-padding": 30,
+        "mobile-right-padding": 14,
+        "mobile-left-padding": 14,
+        "desktop-font-size": 30,
+        "desktop-top-padding": 30,
+        "desktop-bottom-padding": 30,
+        "desktop-right-padding": 14,
+        "desktop-left-padding": 14
+      }
+    },
     "main": {
       "type": "main-register"
     }
   },
   "order": [
+    "0c153882-297c-45dd-9e13-0c3b0fe48078",
     "main"
   ]
 }

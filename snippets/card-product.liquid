@@ -197,7 +197,10 @@
               >
                 {{ inventory }} LEFT
               </span>
-            {%- elsif card_product.selected_or_first_available_variant.compare_at_price > card_product.selected_or_first_available_variant.price and card_product.available -%}
+            {%- elsif card_product.selected_or_first_available_variant.compare_at_price
+                > card_product.selected_or_first_available_variant.price
+              and card_product.available
+            -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
@@ -211,7 +214,7 @@
                   | times: 100
                   | divided_by: 100
                   | floor
-                -}} 
+                -}}
                 %
               </span>
             {% elsif card_product.tags contains 'New Arrivals' and badge_style != 'fixed' %}
@@ -249,9 +252,9 @@
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
-              {% if colour_as_title and card_product.metafields.custom.colour_name %}
+              {% if colour_as_title and card_product.metafields.custom.color %}
                 <span class="visually-hidden">Title: {{ card_product.title }}</span>
-                {{ card_product.metafields.custom.colour_name | escape }}
+                {{ card_product.metafields.custom.color | escape }}
               {% else %}
                 {{ card_product.title | escape }}
               {% endif %}
@@ -310,17 +313,21 @@
 
               <!-- Yotpo widget -->
               <div
-                class="yotpo-widget-instance {{ settings.card_text_alignment }}"
-                data-yotpo-instance-id="277269"
-                data-yotpo-product-id="{{ card_product.id }}"
-                data-yotpo-cart-product-id="{{ item.product.id }}"
-                data-yotpo-section-id="{{ template.name }}"
+                class="yotpo-widget-instance"
+                data-yotpo-instance-id="861792"
+                data-yotpo-product-id="{{card_product.id}}"
+                data-yotpo-cart-product-id="{{item.product.id}}"
+                data-yotpo-section-id="{{template.name}}"
               ></div>
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
-            {% assign hidden_message_types = "Nano Ring Hair Extensions,Remy Royale Flat Tip,Remy Royale I-Tips,Remy Royale Invisible Tape,Remy Royale Nano Bonds,Remy Royale Tape ins" | split: "," %}
-            {% if hidden_message_types contains card_product.type %}<div class="caption-with-letter-spacing light hidden hidden-message">Buy 2 or more &  Get 10% off</div>{% endif %}
+            {% assign hidden_message_types = 'Nano Ring Hair Extensions,Remy Royale Flat Tip,Remy Royale I-Tips,Remy Royale Invisible Tape,Remy Royale Nano Bonds,Remy Royale Tape ins'
+              | split: ','
+            %}
+            {% if hidden_message_types contains card_product.type %}
+              <div class="caption-with-letter-spacing light hidden hidden-message">Buy 2 or more & Get 10% off</div>
+            {% endif %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class="card__information-volume-pricing-note">
                 <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>

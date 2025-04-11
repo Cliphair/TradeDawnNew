@@ -251,32 +251,22 @@
       }
     },
     "article_trending_UtVcVC": {
-      "type": "article-trending",
+      "type": "blog-spot",
       "custom_css": [
-        ".articles-list {--grid-desktop-horizontal-spacing: 10px; margin-top: 0;}",
-        ".article-card {background: white;}",
-        ".card__heading {color: #414141; text-align: center;}",
-        ".collage-bg-wrapper > div > div {padding-right: 1.5rem !important; padding-left: 1.5rem !important;}",
-        ".grid__item:first-of-type {margin-left: 0 !important;}",
-        "@media screen and (min-width: 750px) {.collage-bg-wrapper > div > div {padding-right: 5rem !important; padding-left: 5rem !important; }}"
+        ".article-card__excerpt {display:none;}",
       ],
       "settings": {
-        "heading": "",
-        "trending-list": "help-me-choose-blogs",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "color_scheme": "",
-        "show_image": true,
-        "image_ratio": "square",
+        "heading":"",
+        "heading_size": "h2",
+        "text_alignment": "center",
+        "blog": "news",
+        "post_limit": 4,
+        "columns_mobile": "2",
+        "columns_desktop":4,
         "show_date": false,
-        "show_author": false,
-        "bg_opacity": 0,
-        "mobile-row": 1,
-        "mobile-column": 1,
-        "desktop-row": 1,
-        "desktop-column": 1,
-        "padding_top": 12,
-        "padding_bottom": 0
+        "show_view_all": false,
+        "padding_top": 0,
+        "padding_bottom":0
       }
     },
     "custom_liquid_CdxNFj": {

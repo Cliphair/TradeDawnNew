@@ -314,7 +314,7 @@
                           {% assign custom_information_object = null %}
                         {% else %}
                           {% liquid
-                            assign path = product.type | handle | append: '-instructions'
+                            assign path = product.type | handle | append: '-dos-donts'
                             assign page_content = pages[path]
                           %}
                           {% if page_content.content != blank %}

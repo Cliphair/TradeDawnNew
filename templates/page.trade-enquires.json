@@ -10,6 +10,44 @@
         "font-btns": "inter_n6"
       }
     },
+    "slideshow_3tCMjU": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_nnGry6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/homepage-banner-2024-mobile.webp",
+            "image_desktop": "shopify://shop_images/homepage-banner-2024-desktop.webp",
+            "image_url": "shopify://pages/hair-extensions-by-colour",
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_nnGry6"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Cliphair slideshow banners"
+      }
+    },
     "0c153882-297c-45dd-9e13-0c3b0fe48078": {
       "type": "page-header",
       "settings": {
@@ -99,12 +137,19 @@
             "btn-text": "REGISTER NOW",
             "btn-url": "https:\/\/cliphairtrade.com\/account\/register"
           }
+        },
+        "text_KghhPB": {
+          "type": "html-intro",
+          "settings": {
+            "html-intro": "<p>Already have an account? <a href=\"/account/login\" title=\"Log in\">Log In</a></p>"
+          }
         }
       },
       "block_order": [
         "b2e25af8-50df-4002-b665-35e07beb662c",
         "57dcfd0d-8c7b-47d1-96c0-5452beba5988",
-        "1a47bcbd-1805-4f90-888f-1e086368cbe3"
+        "1a47bcbd-1805-4f90-888f-1e086368cbe3",
+        "text_KghhPB"
       ],
       "settings": {
         "max-width": "1440",
@@ -406,6 +451,7 @@
   },
   "order": [
     "166445343207c9fec0",
+    "slideshow_3tCMjU",
     "0c153882-297c-45dd-9e13-0c3b0fe48078",
     "57c89bc1-e173-4782-bfe1-7229f34f91ab",
     "bridal23_custom-text",

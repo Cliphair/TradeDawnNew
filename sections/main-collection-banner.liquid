@@ -1,101 +1,102 @@
-{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+{% if customer %}
+  {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+  {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
+  {%- style -%}
+    @media screen and (max-width: 749px) {
+      .collection-hero--with-image .collection-hero__inner {
+        padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
+      }
     }
-  }
-{%- endstyle -%}
+  {%- endstyle -%}
 
-{% liquid
-  if collection.metafields.visual_content.image_carrousel
-    assign location_class = collection.metafields.visual_content.image_carrousel.value.location
-    assign images = collection.metafields.visual_content.image_carrousel.value.images
-    assign element = '<div class="' | append: location_class | append: '"></div>'
-  endif
-  
-  assign description = collection.description
-  if description contains '<!-- split -->'
-    assign description = description | split: '<!-- split -->' | first
-  endif
+  {% liquid
+    if collection.metafields.visual_content.image_carrousel
+      assign location_class = collection.metafields.visual_content.image_carrousel.value.location
+      assign images = collection.metafields.visual_content.image_carrousel.value.images
+      assign element = '<div class="' | append: location_class | append: '"></div>'
+    endif
 
-  if description contains '<!-- FAQ section -->'
-    assign description = description | split: '<!-- FAQ section -->' | first
-  endif
-%}
+    assign description = collection.description
+    if description contains '<!-- split -->'
+      assign description = description | split: '<!-- split -->' | first
+    endif
 
-<div class="collection-hero color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %}">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title {{ section.settings.heading_size }}">
-        {% comment %}<span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>{% endcomment %}
-        {{- collection.title | escape -}}
-        {% if current_tags %}
-          <span class="visually-hidden">| Tagged: {{ current_tags | join: ', ' }}</span>
-        {% endif %}
-      </h1>
+    if description contains '<!-- FAQ section -->'
+      assign description = description | split: '<!-- FAQ section -->' | first
+    endif
+  %}
 
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte {{ section.settings.text_alignment }}">
-          {% if description contains element %}
-            {% assign parts = description | split: element %}
-            {{ parts.first }}
-            {% render 'carrousel-images-with-caption-object' image_list:images %}
-            {{ parts.last }}
-          {% else %}
-            {{ description }}
+  <div class="collection-hero color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %}">
+    <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <div class="collection-hero__text-wrapper">
+        <h1 class="collection-hero__title {{ section.settings.heading_size }}">
+          {% comment %}<span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>{% endcomment %}
+          {{- collection.title | escape -}}
+          {% if current_tags %}
+            <span class="visually-hidden">| Tagged: {{ current_tags | join: ', ' }}</span>
           {% endif %}
+        </h1>
+
+        {%- if section.settings.show_collection_description -%}
+          <div class="collection-hero__description rte {{ section.settings.text_alignment }}">
+            {% if description contains element %}
+              {% assign parts = description | split: element %}
+              {{ parts.first }}
+              {% render 'carrousel-images-with-caption-object', image_list: images %}
+              {{ parts.last }}
+            {% else %}
+              {{ description }}
+            {% endif %}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.show_collection_image and collection.image -%}
+        <div class="collection-hero__image-container media gradient">
+          <img
+            srcset="
+              {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ collection.image | image_url }} {{ collection.image.width }}w
+            "
+            src="{{ collection.image | image_url: width: 750 }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+            alt=""
+            width="{{ collection.image.width }}"
+            height="{{ collection.image.height }}"
+          >
         </div>
       {%- endif -%}
     </div>
-
-    {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
-        <img
-          srcset="
-            {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
-            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ collection.image | image_url }} {{ collection.image.width }}w
-          "
-          src="{{ collection.image | image_url: width: 750 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-          alt=""
-          width="{{ collection.image.width }}"
-          height="{{ collection.image.height }}"
-        >
-      </div>
-    {%- endif -%}
   </div>
-</div>
 
-{% comment %}
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var toggleDescription = document.querySelector('.toggle-description');
-      var shortDescription = document.querySelector('.short-description');
-      var fullDescription = document.querySelector('.full-description');
+  {% comment %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var toggleDescription = document.querySelector('.toggle-description');
+        var shortDescription = document.querySelector('.short-description');
+        var fullDescription = document.querySelector('.full-description');
 
-      toggleDescription.addEventListener('click', function () {
-        if (fullDescription.style.display === 'none') {
-          fullDescription.style.display = 'block';
-          shortDescription.style.display = 'none';
-          toggleDescription.textContent = 'Read Less';
-        } else {
-          fullDescription.style.display = 'none';
-          shortDescription.style.display = 'block';
-          toggleDescription.textContent = 'Read More';
-        }
+        toggleDescription.addEventListener('click', function () {
+          if (fullDescription.style.display === 'none') {
+            fullDescription.style.display = 'block';
+            shortDescription.style.display = 'none';
+            toggleDescription.textContent = 'Read Less';
+          } else {
+            fullDescription.style.display = 'none';
+            shortDescription.style.display = 'block';
+            toggleDescription.textContent = 'Read More';
+          }
+        });
       });
-    });
-  </script>
-{% endcomment %}
-
+    </script>
+  {% endcomment %}
+{% endif %}
 {% schema %}
 {
   "name": "t:sections.main-collection-banner.name",

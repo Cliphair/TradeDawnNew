@@ -31,8 +31,8 @@
         "show_content": true,
         "text_alignment": "left",
         "color_scheme": "accent-4",
-        "list": "help",
-        "blog": "hair-blog",
+        "list": "customer-services",
+        "blog": "news",
         "limit_articles": 3,
         "padding_top": 20,
         "padding_bottom": 40

@@ -7,6 +7,20 @@
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
+    <!-- Apply for an account -->
+    <li>
+      <a
+        href="{{ routes.account_register_url }}"
+        class="header__menu-item list-menu__item link link--text focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}{% if request.path == routes.account_register_url %} mega-menu__link--active{% endif %}"
+        {% if request.path == routes.account_register_url %}
+          aria-current="page"
+        {% endif %}
+      >
+        <span>APPLY FOR TRADE</span>
+      </a>
+      {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
+    </li>
+
     <!-- Clip Ins -->
     <li>
       <header-menu>
@@ -1530,9 +1544,9 @@
                   <li>
                     <a
                       id="HeaderMenu-shop-by-shade-reds-deep-red"
-                      href="/collections/deep-red-hair-extensions"
-                      class="mega-menu__link link{% if request.path == '/collections/deep-red-hair-extensions' %} mega-menu__link--active{% endif %}"
-                      {% if request.path == '/collections/deep-red-hair-extensions' %}
+                      href="/collections/deep-red"
+                      class="mega-menu__link link{% if request.path == '/collections/deep-red' %} mega-menu__link--active{% endif %}"
+                      {% if request.path == '/collections/deep-red' %}
                         aria-current="page"
                       {% endif %}
                     >
@@ -2249,314 +2263,19 @@
       </header-menu>
     </li>
 
-    {% comment %}
-      <!-- Christmas Shop -->
-      <li>
-        <header-menu>
-          <details id="Details-HeaderMenu-9" class="mega-menu">
-            <summary
-              id="HeaderMenu-christmas-shop"
-              class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
-            >
-              <a
-                href="/pages/wish-for-cliphair-holiday-campaign"
-                class=""
-                {% if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
-                  aria-current="page"
-                {% endif %}
-              >
-                <span
-                  {%- if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
-                    class="header__active-menu-item"
-                  {% endif %}
-                >
-                  CHRISTMAS SHOP
-                </span>
-              </a>
-              {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
-            </summary>
-            <div
-              id="MegaMenu-Content-9"
-              class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
-              tabindex="-1"
-            >
-              <ul
-                class="mega-menu__list"
-                role="list"
-              >
-                <li style="width:calc(100% / 1);">
-                  <a
-                    id="HeaderMenu-christmas-shop-gift-sets"
-                    href="/collections/hair-extensions-gift-sets"
-                    class="mega-menu__link link{% if request.path =='/collections/hair-extensions-gift-sets' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/hair-extensions-gift-sets' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Christmas Gift Sets
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-under-15"
-                    href="/collections/under-15"
-                    class="mega-menu__link link{% if request.path =='/collections/under-15' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/under-15' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Under £15
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-under-30"
-                    href="/collections/under-30"
-                    class="mega-menu__link link{% if request.path =='/collections/under-30' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/under-30' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Under £30
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-under-50"
-                    href="/collections/under-50"
-                    class="mega-menu__link link{% if request.path =='/collections/under-50' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/under-50' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Under £50
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-under-100"
-                    href="/collections/under-100"
-                    class="mega-menu__link link{% if request.path =='/collections/under-100' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/under-100' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Under £100
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-stocking-fillers"
-                    href="/collections/stocking-stuffers"
-                    class="mega-menu__link link{% if request.path =='/collections/stocking-stuffers' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/stocking-stuffers' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Stocking Fillers
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-party-season"
-                    href="/collections/party-season-essentials"
-                    class="mega-menu__link link{% if request.path =='/collections/party-season-essentials' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/party-season-essentials' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Party Season Essentials
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-value-bundles"
-                    href="/collections/hair-extensions-bundle"
-                    class="mega-menu__link link{% if request.path =='/collections/hair-extensions-bundle' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/collections/hair-extensions-bundle' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Value Bundles
-                  </a>
-                  <a
-                    id="HeaderMenu-christmas-shop-shipping-time"
-                    href="/pages/christmas-postal-dates-2024"
-                    class="mega-menu__link link{% if request.path =='/pages/christmas-postal-dates-2024' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/pages/christmas-postal-dates-2024' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Christmas Shipping Times
-                  </a>
-                </li>
-
-                <li
-                  class="scroll-trigger animate--slide-in"
-                  style="--animation-order: 1;"
-                >
-                  {% liquid
-                    assign menu_image = images['christmas-shop-desktop-menu.webp']
-                  %}
-                  <img
-                    srcset="
-                      {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
-                      {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
-                      {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
-                      {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
-                      {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                      {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                      {{ menu_image | image_url }} {{ menu_image.width }}w
-                    "
-                    src="{{ menu_image | image_url: width: 480 }}"
-                    sizes="(min-width: {{ settings.page_width }}px) 480px"
-                    alt="{{ menu_image.alt }}"
-                    width="{{ menu_image.width }}"
-                    height="{{ menu_image.height }}"
-                    loading="lazy"
-                    class="motion-reduce"
-                  >
-                </li>
-              </ul>
-            </div>
-          </details>
-        </header-menu>
-      </li>
-    {% endcomment %}
-
     <!-- Blog -->
     <li>
-      <header-menu>
-        <details id="Details-HeaderMenu-6" class="mega-menu">
-          <summary
-            id="HeaderMenu-blog"
-            class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
-          >
-            <a
-              href="/blogs/news"
-              class=""
-              {% if request.path == '/blogs/news' %}
-                aria-current="page"
-              {% endif %}
-            >
-              <span
-                {%- if request.path == '/blogs/news' %}
-                  class="header__active-menu-item"
-                {% endif %}
-              >
-                BLOG
-              </span>
-            </a>
-            {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
-          </summary>
-          <div
-            id="MegaMenu-Content-6"
-            class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup page-width"
-            tabindex="-1"
-          >
-            <ul
-              class="mega-menu__list"
-              role="list"
-            >
-              <li style="width:calc(100% / 1);">
-                <a
-                  id="HeaderMenu-blog-homepage"
-                  href="/blogs/news"
-                  class="mega-menu__link link{% if request.path =='/blogs/news' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Blog Homepage
-                </a>
-                <a
-                  id="HeaderMenu-blog-latest"
-                  href="/blogs/news#main-blog-section"
-                  class="mega-menu__link link{% if request.path =='/blogs/news#main-blog-section' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news#main-blog-section' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Latest Blogs
-                </a>
-                <a
-                  id="HeaderMenu-blog-extension-bible"
-                  href="/blogs/news/tagged/the-hair-extensions-bible"
-                  class="mega-menu__link link{% if request.path =='/blogs/news/tagged/the-hair-extensions-bible' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news/tagged/the-hair-extensions-bible' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Hair Extension Bible
-                </a>
-                <a
-                  id="HeaderMenu-blog-top-trends"
-                  href="/blogs/news/tagged/top-trends"
-                  class="mega-menu__link link{% if request.path =='/blogs/news/tagged/top-trends' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news/tagged/top-trends' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Top Trends
-                </a>
-                <a
-                  id="HeaderMenu-blog-styling-guides"
-                  href="/blogs/news/tagged/styling-guides-tutorials"
-                  class="mega-menu__link link{% if request.path =='/blogs/news/tagged/styling-guides-tutorials' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news/tagged/styling-guides-tutorials' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Styling Guides & Tutorials
-                </a>
-                <a
-                  id="HeaderMenu-blog-haircare-tips"
-                  href="/blogs/news/tagged/hair-care-tips"
-                  class="mega-menu__link link{% if request.path =='/blogs/news/tagged/hair-care-tips' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news/tagged/hair-care-tips' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Haircare & Tips
-                </a>
-                <a
-                  id="HeaderMenu-blog-wedding"
-                  href="/blogs/news/tagged/wedding-occasion-hair"
-                  class="mega-menu__link link{% if request.path =='/blogs/news/tagged/wedding-occasion-hair' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news/tagged/wedding-occasion-hair' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Wedding & Occasion Hair
-                </a>
-                <a
-                  id="HeaderMenu-blog-lifestyle"
-                  href="/blogs/news/tagged/lifestyle-pop-culture"
-                  class="mega-menu__link link{% if request.path =='/blogs/news/tagged/lifestyle-pop-culture' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/blogs/news/tagged/lifestyle-pop-culture' %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  Celebrity & Lifestyle
-                </a>
-              </li>
-
-              <li
-                class="scroll-trigger animate--slide-in"
-                style="--animation-order: 1;"
-              >
-                {% liquid
-                  assign menu_image = images['blog-desktop-menu.webp']
-                %}
-                <img
-                  srcset="
-                    {%- if menu_image.width >= 165 -%}{{ menu_image | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if menu_image.width >= 360 -%}{{ menu_image | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if menu_image.width >= 535 -%}{{ menu_image | image_url: width: 535 }} 535w,{%- endif -%}
-                    {%- if menu_image.width >= 750 -%}{{ menu_image | image_url: width: 750 }} 750w,{%- endif -%}
-                    {%- if menu_image.width >= 1070 -%}{{ menu_image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                    {%- if menu_image.width >= 1500 -%}{{ menu_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                    {{ menu_image | image_url }} {{ menu_image.width }}w
-                  "
-                  src="{{ menu_image | image_url: width: 480 }}"
-                  sizes="(min-width: {{ settings.page_width }}px) 480px"
-                  alt="{{ menu_image.alt }}"
-                  width="{{ menu_image.width }}"
-                  height="{{ menu_image.height }}"
-                  loading="lazy"
-                  class="motion-reduce"
-                >
-              </li>
-            </ul>
-          </div>
-        </details>
-      </header-menu>
+      {% assign object = blogs.news %}
+      <a
+        href="{{ object.url }}"
+        class="header__menu-item list-menu__item link link--text focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}{% if request.path == object.ur %} mega-menu__link--active{% endif %}"
+        {% if request.path == object.url %}
+          aria-current="page"
+        {% endif %}
+      >
+        <span>BLOG</span>
+      </a>
+      {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
     </li>
 
     <!-- Info Hub -->
@@ -2593,19 +2312,6 @@
                   Our Story
                 </a>
 
-                {% comment %}
-                  <a
-                    id="HeaderMenu-info-hub-rewards"
-                    href="/pages/rewards"
-                    class="mega-menu__link link{% if request.path == '/pages/rewards' %} mega-menu__link--active{% endif %}"
-                    {% if request.path == '/pages/rewards' %}
-                      aria-current="page"
-                    {% endif %}
-                  >
-                    Rewards
-                  </a>
-                {% endcomment %}
-
                 <a
                   id="HeaderMenu-info-hub-contact-us"
                   href="/pages/contact-us"
@@ -2630,9 +2336,9 @@
 
                 <a
                   id="HeaderMenu-info-hub-shipping"
-                  href="/pages/hair-extensions-shipping-delivery"
-                  class="mega-menu__link link{% if request.path == '/pages/hair-extensions-shipping-delivery' %} mega-menu__link--active{% endif %}"
-                  {% if request.path == '/pages/hair-extensions-shipping-delivery' %}
+                  href="/pages/shipping-information"
+                  class="mega-menu__link link{% if request.path == '/pages/shipping-information' %} mega-menu__link--active{% endif %}"
+                  {% if request.path == '/pages/shipping-information' %}
                     aria-current="page"
                   {% endif %}
                 >
@@ -2671,38 +2377,6 @@
                 >
                   Blog
                 </a>
-
-                {% comment %}
-                  <span
-                    id="HeaderMenu-info-hub-ambassador"
-                    class="mega-menu__link link"
-                  >
-                    <span onclick="klrRecruit.openRecruit()">Become An Ambassador</span>
-                  </span>
-                {% endcomment %}
-                {% comment %}
-                  <modal-opener
-                    id="HeaderMenu-info-hub-trade"
-                    class="no-js-hidden"
-                    data-modal="#PopupModal-Trade-Account"
-                  >
-                    <button
-                      id="HeaderMenu-Popup-Trade-Account-info-hub"
-                      class="mega-menu__link link"
-                      type="button"
-                      aria-haspopup="dialog"
-                    >
-                      Trade Application
-                    </button>
-                  </modal-opener>
-                  <a
-                    href="https://cliphairtrade.com/pages/trade-account"
-                    aria-label="Goes to trade website"
-                    class="mega-menu__link link no-js"
-                  >
-                    Trade Application
-                  </a>
-                {% endcomment %}
               </li>
 
               <li
@@ -2745,21 +2419,9 @@
             id="HeaderMenu-discounts"
             class="header__menu-item list-menu__item link focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}"
           >
-            <a
-              href="/pages/discounts-and-voucher-codes"
-              class=""
-              {% if request.path == '/pages/discounts-and-voucher-codes' %}
-                aria-current="page"
-              {% endif %}
-            >
-              <span
-                {%- if request.path == '/pages/discounts-and-voucher-codes' %}
-                  class="header__active-menu-item"
-                {% endif %}
-              >
-                OFFERS & SAVINGS
-              </span>
-            </a>
+            <span>
+              <span> OFFERS & SAVINGS </span>
+            </span>
             {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
           </summary>
           <div
@@ -2875,6 +2537,20 @@
           </div>
         </details>
       </header-menu>
+    </li>
+
+    <!-- Bulk -->
+    <li>
+      <a
+        href="/apps/shop"
+        class="header__menu-item list-menu__item link link--text focus-inset{% unless section.settings.show_icon_arrow %} no-arrow{% endunless %}{% if request.path == "/apps/shop" %} mega-menu__link--active{% endif %}"
+        {% if request.path == '/apps/shop' %}
+          aria-current="page"
+        {% endif %}
+      >
+        <span>BULK ORDER</span>
+      </a>
+      {% if section.settings.show_icon_arrow %}{% render 'icon-caret' %}{% endif %}
     </li>
   </ul>
 </nav>

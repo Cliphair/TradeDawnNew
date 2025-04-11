@@ -90,9 +90,9 @@
               {% endif %}
             >
               {% render 'video-card',
-                video: element.video.value,
-                title: element.title,
-                description: element.video.value.alt,
+                video: element.video_file.value,
+                title: element.video_title,
+                description: element.video_file.value.alt,
                 image_ratio: 1
               %}
             </li>

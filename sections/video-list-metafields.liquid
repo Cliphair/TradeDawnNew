@@ -130,8 +130,8 @@
               {% endif %}
             >
               {% render 'video-card',
-                video: video_obj.video.value,
-                description: video_obj.video.value.alt,
+                video: video_obj.video_file.value,
+                description: video_obj.video_file.value.alt,
                 image_ratio: image_ratio
               %}
             </li>

@@ -1,166 +1,807 @@
-{{ 'customer.css' | asset_url | stylesheet_tag }}
+{% comment %}
+  {{ 'customer.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+{% endcomment %}
+
+<style type="text/css">
+  .aaa_formbuilder_container {
+    padding: 10px;
   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+  .aaaformbuilder_form .form-group {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .aaaformbuilder_form .fb-submit button {
+    background-color: #00afec !important;
+  }
+  .aaaformbuilder_form .fb-submit button {
+    color: #ffffff !important;
+  }
+  .aaaformbuilder_form .fb-submit button {
+    font-size: 14px !important;
+  }
+  .aaaformbuilder_form input {
+    height: 4.5rem;
+  }
+  .aaa_formbuilder_container h1.header {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  .aaa_formbuilder_container h2.header {
+    display: block;
+    font-weight: 600;
+  }
+
+  .aaaformbuilder_form .form-group select {
+    border: 1px solid rgb(118, 118, 118);
+  }
+
+  .aaaformbuilder_form .form-group button {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .customer.register .aaa_formbuilder_container {
+      width: 100% !important;
     }
   }
-{%- endstyle -%}
 
-<div class="customer register section-{{ section.id }}-padding">
-  <svg style="display: none">
-    <symbol id="icon-error" viewBox="0 0 13 13">
-      <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-      <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-      <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-      <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-    </symbol>
-  </svg>
-  <h1>
-    {{ 'customer.register.title' | t }}
-  </h1>
-  {%- form 'create_customer', novalidate: 'novalidate' -%}
-    {%- if form.errors -%}
-      <h2 class="form__message" tabindex="-1" autofocus>
-        <svg aria-hidden="true" focusable="false">
-          <use href="#icon-error" />
-        </svg>
-        {{ 'templates.contact.form.error_heading' | t }}
-      </h2>
-      <ul>
-        {%- for field in form.errors -%}
-          <li>
-            {%- if field == 'form' -%}
-              {{ form.errors.messages[field] }}
-            {%- else -%}
-              <a href="#RegisterForm-{{ field }}">
-                {{ form.errors.translated_fields[field] | capitalize }}
+  @media screen and (min-width: 769px) {
+    .aaaformbuilder_form .form-group:has(> .half-width) {
+      width: calc(50% - 20px);
+      margin-right: 10px;
+    }
+  }
+</style>
+
+<div class="customer register section-{{ section.id }}-padding page-width">
+  {% comment %}
+    <svg style="display: none">
+      <symbol id="icon-error" viewBox="0 0 13 13">
+        <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+        <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+        <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+        <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+      </symbol>
+    </svg>
+    <h1>
+      {{ 'customer.register.title' | t }}
+    </h1>
+    {%- form 'create_customer', novalidate: 'novalidate' -%}
+      {%- if form.errors -%}
+        <h2 class="form__message" tabindex="-1" autofocus>
+          <svg aria-hidden="true" focusable="false">
+            <use href="#icon-error" />
+          </svg>
+          {{ 'templates.contact.form.error_heading' | t }}
+        </h2>
+        <ul>
+          {%- for field in form.errors -%}
+            <li>
+              {%- if field == 'form' -%}
                 {{ form.errors.messages[field] }}
-              </a>
-            {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-    <div class="field">
-      <input
-        type="text"
-        name="customer[first_name]"
-        id="RegisterForm-FirstName"
-        {% if form.first_name %}
-          value="{{ form.first_name }}"
-        {% endif %}
-        autocomplete="given-name"
-        placeholder="{{ 'customer.register.first_name' | t }}"
-      >
-      <label for="RegisterForm-FirstName">
-        {{ 'customer.register.first_name' | t }}
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="text"
-        name="customer[last_name]"
-        id="RegisterForm-LastName"
-        {% if form.last_name %}
-          value="{{ form.last_name }}"
-        {% endif %}
-        autocomplete="family-name"
-        placeholder="{{ 'customer.register.last_name' | t }}"
-      >
-      <label for="RegisterForm-LastName">
-        {{ 'customer.register.last_name' | t }}
-      </label>
-    </div>
-
-    <div class="field">
-      <input
-        type="email"
-        name="customer[email]"
-        id="RegisterForm-email"
-        {% if form.email %}
-          value="{{ form.email }}"
-        {% endif %}
-        spellcheck="false"
-        autocapitalize="off"
-        autocomplete="email"
-        aria-required="true"
-        {% if form.errors contains 'email' %}
-          aria-invalid="true"
-          aria-describedby="RegisterForm-email-error"
-        {% endif %}
-        placeholder="{{ 'customer.register.email' | t }}"
-      >
-      <label for="RegisterForm-email">
-        {{ 'customer.register.email' | t }}
-      </label>
-    </div>
-    {%- if form.errors contains 'email' -%}
-      <span id="RegisterForm-email-error" class="form__message">
-        <svg aria-hidden="true" focusable="false">
-          <use href="#icon-error" />
-        </svg>
-        {{ form.errors.translated_fields.email | capitalize }}
-        {{ form.errors.messages.email }}.
-      </span>
-    {%- endif -%}
-
-    {% comment %}
+              {%- else -%}
+                <a href="#RegisterForm-{{ field }}">
+                  {{ form.errors.translated_fields[field] | capitalize }}
+                  {{ form.errors.messages[field] }}
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
       <div class="field">
         <input
-          type="tel"
-          name="customer[note][phone]"
-          id="RegisterForm-Phone"
-          {% if form.phone %}
-            value="{{ form.phone }}"
+          type="text"
+          name="customer[first_name]"
+          id="RegisterForm-FirstName"
+          {% if form.first_name %}
+            value="{{ form.first_name }}"
           {% endif %}
-          autocomplete="tel"
-          placeholder="{{ 'templates.contact.form.phone' | t }}"
-          requeired
+          autocomplete="given-name"
+          placeholder="{{ 'customer.register.first_name' | t }}"
         >
-        <label for="RegisterForm-Phone">
-          {{ 'templates.contact.form.phone' | t }}
+        <label for="RegisterForm-FirstName">
+          {{ 'customer.register.first_name' | t }}
         </label>
       </div>
-    {% endcomment %}
+      <div class="field">
+        <input
+          type="text"
+          name="customer[last_name]"
+          id="RegisterForm-LastName"
+          {% if form.last_name %}
+            value="{{ form.last_name }}"
+          {% endif %}
+          autocomplete="family-name"
+          placeholder="{{ 'customer.register.last_name' | t }}"
+        >
+        <label for="RegisterForm-LastName">
+          {{ 'customer.register.last_name' | t }}
+        </label>
+      </div>
 
-    <div class="field">
-      <input
-        type="password"
-        name="customer[password]"
-        id="RegisterForm-password"
-        aria-required="true"
-        {% if form.errors contains 'password' %}
-          aria-invalid="true"
-          aria-describedby="RegisterForm-password-error"
-        {% endif %}
-        placeholder="{{ 'customer.register.password' | t }}"
-      >
-      <label for="RegisterForm-password">
-        {{ 'customer.register.password' | t }}
-      </label>
-    </div>
-    {%- if form.errors contains 'password' -%}
-      <span id="RegisterForm-password-error" class="form__message">
-        <svg aria-hidden="true" focusable="false">
-          <use href="#icon-error" />
-        </svg>
-        {{ form.errors.translated_fields.password | capitalize }}
-        {{ form.errors.messages.password }}.
-      </span>
-    {%- endif -%}
+      <div class="field">
+        <input
+          type="email"
+          name="customer[email]"
+          id="RegisterForm-email"
+          {% if form.email %}
+            value="{{ form.email }}"
+          {% endif %}
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="email"
+          aria-required="true"
+          {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="RegisterForm-email-error"
+          {% endif %}
+          placeholder="{{ 'customer.register.email' | t }}"
+        >
+        <label for="RegisterForm-email">
+          {{ 'customer.register.email' | t }}
+        </label>
+      </div>
+      {%- if form.errors contains 'email' -%}
+        <span id="RegisterForm-email-error" class="form__message">
+          <svg aria-hidden="true" focusable="false">
+            <use href="#icon-error" />
+          </svg>
+          {{ form.errors.translated_fields.email | capitalize }}
+          {{ form.errors.messages.email }}.
+        </span>
+      {%- endif -%}
 
-    <button>
-      {{ 'customer.register.submit' | t }}
-    </button>
-  {%- endform -%}
+      {% comment %}
+        <div class="field">
+          <input
+            type="tel"
+            name="customer[note][phone]"
+            id="RegisterForm-Phone"
+            {% if form.phone %}
+              value="{{ form.phone }}"
+            {% endif %}
+            autocomplete="tel"
+            placeholder="{{ 'templates.contact.form.phone' | t }}"
+            requeired
+          >
+          <label for="RegisterForm-Phone">
+            {{ 'templates.contact.form.phone' | t }}
+          </label>
+        </div>
+      {% endcomment %}
+
+      <div class="field">
+        <input
+          type="password"
+          name="customer[password]"
+          id="RegisterForm-password"
+          aria-required="true"
+          {% if form.errors contains 'password' %}
+            aria-invalid="true"
+            aria-describedby="RegisterForm-password-error"
+          {% endif %}
+          placeholder="{{ 'customer.register.password' | t }}"
+        >
+        <label for="RegisterForm-password">
+          {{ 'customer.register.password' | t }}
+        </label>
+      </div>
+      {%- if form.errors contains 'password' -%}
+        <span id="RegisterForm-password-error" class="form__message">
+          <svg aria-hidden="true" focusable="false">
+            <use href="#icon-error" />
+          </svg>
+          {{ form.errors.translated_fields.password | capitalize }}
+          {{ form.errors.messages.password }}.
+        </span>
+      {%- endif -%}
+
+      <button>
+        {{ 'customer.register.submit' | t }}
+      </button>
+    {%- endform -%}
+  {% endcomment %}
+  <div
+    class="aaa_formbuilder_container loaded_aaa_formbuilder"
+    style="background-color: #F7F7F7; width: 100%; margin: 0 auto; float: none; "
+  >
+    <form
+      method="post"
+      action=""
+      class="aaaformbuilder_form  aaa_formbuilder_form_id_16375"
+      enctype="multipart/form-data"
+    >
+      <input type="hidden" name="url" class="get_current_page_url" value=""
+      ><input type="hidden" name="container_id" value=""><input type="hidden" name="form_id" value="16375"
+      ><input type="hidden" name="form_domain" value="trade-cliphair.myshopify.com"
+      ><input
+        type="hidden"
+        name=""
+        value="Thank You! for your application, right now we are evaluating your account, you will be able to order as soon as possible."
+        class="success_msg"
+
+      ><input type="hidden" name="" value="Please fill all the required fields" class="error_msg"
+      ><input type="hidden" name="" value="Please enter a valid email address." class="emailerror_msg"
+      ><input type="hidden" name="" value="https://cliphairtrade.com/" class="aaa_thankyoupageurl"
+      ><input type="hidden" name="uploadeLimit" class="formUploadLimit" value="50"
+      ><input type="hidden" name="allowefiletype" class="allowedfiletype" value=""
+      ><input type="hidden" name="conditionallogic" class="conditionallogic" value="">
+      <div class="">
+        <h1 type="h1" class="header" name="" id="" style="color: rgb(74, 74, 74);">Apply For Trade Account Now</h1>
+      </div>
+      <div class="">
+        <h2 type="h2" class="header" name="" id="" style="color: rgb(74, 74, 74);">Personal Information</h2>
+      </div>
+      <div class="fb-text form-group field-first-name">
+        <label for="first-name" class="fb-text-label" style="color: rgb(74, 74, 74);"
+          >First Name <span class="required">*</span>
+        </label>
+        <input
+          type="text"
+          required=""
+          class="form-control  half-width"
+          name="first-name"
+          id="first-name"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'first-name','text','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-text form-group field-last-name">
+        <label for="last-name" class="fb-text-label" style="color: rgb(74, 74, 74);"
+          >Last Name <span class="required">*</span>
+        </label>
+        <input
+          type="text"
+          required=""
+          class="form-control half-width"
+          name="last-name"
+          id="last-name"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'last-name','text','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-email form-group field-replyemail">
+        <label for="replyemail" class="fb-email-label" style="color: rgb(74, 74, 74);"
+          >Email <span class="required">*</span>
+        </label>
+        <input
+          type="email"
+          required=""
+          class="form-control half-width"
+          name="replyemail"
+          id="replyemail"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'replyemail','email','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-password form-group field-customer-password">
+        <label for="customer-password" class="fb-password-label" style="color: rgb(74, 74, 74);"
+          >Password <span class="required">*</span>
+        </label>
+        <input
+          type="password"
+          required=""
+          class="form-control half-width"
+          name="customer-password"
+          id="customer-password"
+          aria-required="true"
+          default-req-status="true"
+        >
+      </div>
+      <div class="">
+        <h2 type="h2" class="header" name="" id="" style="color: rgb(74, 74, 74);">Business Information</h2>
+      </div>
+      <div class="fb-text form-group field-text-1628256857606">
+        <label for="text-1628256857606" class="fb-text-label" style="color: rgb(74, 74, 74);"
+          >Business Name <span class="required">*</span>
+        </label>
+        <input
+          type="text"
+          required=""
+          class="form-control half-width"
+          name="text-1628256857606"
+          id="text-1628256857606"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'text-1628256857606','text','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-select form-group field-select-1628256774530">
+        <label for="select-1628256774530" class="fb-select-label" style="color: rgb(74, 74, 74);"
+          >What is the size of your salon? <span class="required">*</span> </label
+        ><select
+          type="select"
+          required=""
+          placeholder="Please choose an option"
+          class="form-control half-width"
+          name="select-1628256774530"
+          id="select-1628256774530"
+          aria-required="true"
+          default-req-status="true"
+          onchange="checkConditionalLogicNew(event, this.value,'select-1628256774530','select','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+          <option disabled="" selected="">Please choose an option</option>
+          <option value="mobile">Mobile/Freelancer</option>
+          <option value="small">Small Salon (1-5 chairs)</option>
+          <option value="medium">Medium Salon (6-12 chairs)</option>
+          <option value="large">Large Salon (12+ chairs)</option>
+          <option value="medium">Chain Salon</option>
+        </select>
+      </div>
+      <div class="fb-number form-group field-number-1628256982133">
+        <label for="number-1628256982133" class="fb-number-label" style="color: rgb(74, 74, 74);"
+          >Mobile Number <span class="required">*</span>
+        </label>
+        <input
+          type="number"
+          required=""
+          class="form-control half-width"
+          name="number-1628256982133"
+          id="number-1628256982133"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'number-1628256982133','number','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-text form-group field-text-1628256917708">
+        <label for="text-1628256917708" class="fb-text-label" style="color: rgb(74, 74, 74);"
+          >Business Address <span class="required">*</span>
+        </label>
+        <input
+          type="text"
+          required=""
+          class="form-control half-width"
+          name="text-1628256917708"
+          id="text-1628256917708"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'text-1628256917708','text','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-text form-group field-aaa-customer-zip-code">
+        <label for="aaa-customer-zip-code" class="fb-text-label" style="color: rgb(74, 74, 74);">Post Code </label>
+        <input
+          type="text"
+          class="form-control half-width"
+          name="aaa-customer-zip-code"
+          id="aaa-customer-zip-code"
+          onkeyup="checkConditionalLogicNew(event, this.value,'aaa-customer-zip-code','text','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-select form-group field-aaa-form-builder-country">
+        <label for="aaa-form-builder-country" class="fb-select-label" style="color: rgb(74, 74, 74);">Country </label
+        ><select
+          type="select"
+          class="form-control half-width"
+          name="aaa-form-builder-country"
+          id="aaa-form-builder-country"
+          onchange="checkConditionalLogicNew(event, this.value,'aaa-form-builder-country','select','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+          <option value="United Kingdom" selected="true">United Kingdom</option>
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Algeria">Algeria</option>
+          <option value="Andorra">Andorra</option>
+          <option value="Angola">Angola</option>
+          <option value="Antigua And Barbuda">Antigua And Barbuda</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Armenia">Armenia</option>
+          <option value="Aruba">Aruba</option>
+          <option value="Australia">Australia</option>
+          <option value="Austria">Austria</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+          <option value="Bahamas">Bahamas</option>
+          <option value="Bahrain">Bahrain</option>
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Barbados">Barbados</option>
+          <option value="Belarus">Belarus</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Belize">Belize</option>
+          <option value="Benin">Benin</option>
+          <option value="Bermuda">Bermuda</option>
+          <option value="Bhutan">Bhutan</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Bosnia And Herzegovina">Bosnia And Herzegovina</option>
+          <option value="Botswana">Botswana</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Brunei">Brunei</option>
+          <option value="Bulgaria">Bulgaria</option>
+          <option value="New Caledonia">New Caledonia</option>
+          <option value="Cambodia">Cambodia</option>
+          <option value="Republic of Cameroon">Republic of Cameroon</option>
+          <option value="Canada">Canada</option>
+          <option value="Cayman Islands">Cayman Islands</option>
+          <option value="Chile">Chile</option>
+          <option value="china">China</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Comoros">Comoros</option>
+          <option value="Congo">Congo</option>
+          <option value="Congo  The Democratic Republic Of The">Congo, The Democratic Republic Of The</option>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+          <option value="Croatia">Croatia</option>
+          <option value="Curaçao">Curaçao</option>
+          <option value="Cyprus">Cyprus</option>
+          <option value="Czech Republic">Czech Republic</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Dominica">Dominica</option>
+          <option value="Dominican Republic">Dominican Republic</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="Egypt">Egypt</option>
+          <option value="El Salvador">El Salvador</option>
+          <option value="Estonia">Estonia</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Equatorial Guinea">Equatorial Guinea</option>
+          <option value="Faroe Islands">Faroe Islands</option>
+          <option value="Fiji">Fiji</option>
+          <option value="Finland">Finland</option>
+          <option value="France">France</option>
+          <option value="Gabon">Gabon</option>
+          <option value="Gambia">Gambia</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Germany">Germany</option>
+          <option value="Ghana">Ghana</option>
+          <option value="French Polynesia">French Polynesia</option>
+          <option value="Gibraltar">Gibraltar</option>
+          <option value="Greece">Greece</option>
+          <option value="Greenland">Greenland</option>
+          <option value="Grenada">Grenada</option>
+          <option value="Guadeloupe">Guadeloupe</option>
+          <option value="Guatemala">Guatemala</option>
+          <option value="Guernsey">Guernsey</option>
+          <option value="Guyana">Guyana</option>
+          <option value="Haiti">Haiti</option>
+          <option value="Honduras">Honduras</option>
+          <option value="Hong Kong">Hong Kong</option>
+          <option value="Hungary">Hungary</option>
+          <option value="Iceland">Iceland</option>
+          <option value="India">India</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Isle Of Man">Isle Of Man</option>
+          <option value="Israel">Israel</option>
+          <option value="Italy">Italy</option>
+          <option value="Jamaica">Jamaica</option>
+          <option value="Japan">Japan</option>
+          <option value="Jersey">Jersey</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Kazakhstan">Kazakhstan</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Kosovo">Kosovo</option>
+          <option value="Kuwait">Kuwait</option>
+          <option value="Kyrgyzstan">Kyrgyzstan</option>
+          <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+          <option value="Latvia">Latvia</option>
+          <option value="Lebanon">Lebanon</option>
+          <option value="Lesotho">Lesotho</option>
+          <option value="Liberia">Liberia</option>
+          <option value="Liechtenstein">Liechtenstein</option>
+          <option value="Lithuania">Lithuania</option>
+          <option value="Luxembourg">Luxembourg</option>
+          <option value="Macao">Macao</option>
+          <option value="Macedonia  Republic Of">Macedonia, Republic Of</option>
+          <option value="Madagascar">Madagascar</option>
+          <option value="Malawi">Malawi</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Maldives">Maldives</option>
+          <option value="Malta">Malta</option>
+          <option value="Martinique">Martinique</option>
+          <option value="Mauritius">Mauritius</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Moldova  Republic of">Moldova, Republic of</option>
+          <option value="Monaco">Monaco</option>
+          <option value="Mongolia">Mongolia</option>
+          <option value="Montenegro">Montenegro</option>
+          <option value="Morocco">Morocco</option>
+          <option value="Mozambique">Mozambique</option>
+          <option value="Myanmar">Myanmar</option>
+          <option value="Namibia">Namibia</option>
+          <option value="Nepal">Nepal</option>
+          <option value="Netherlands Antilles">Netherlands Antilles</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Nicaragua">Nicaragua</option>
+          <option value="Niger">Niger</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Norway">Norway</option>
+          <option value="Oman">Oman</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Palestinian Territory  Occupied">Palestinian Territory, Occupied</option>
+          <option value="Panama">Panama</option>
+          <option value="Papua New Guinea">Papua New Guinea</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Peru">Peru</option>
+          <option value="Philippines">Philippines</option>
+          <option value="Poland">Poland</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Qatar">Qatar</option>
+          <option value="Reunion">Reunion</option>
+          <option value="Romania">Romania</option>
+          <option value="Russia">Russia</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="Saint Kitts And Nevis">Saint Kitts And Nevis</option>
+          <option value="Saint Lucia">Saint Lucia</option>
+          <option value="Saint Martin">Saint Martin</option>
+          <option value="Sao Tome And Principe">Sao Tome And Principe</option>
+          <option value="Samoa">Samoa</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Senegal">Senegal</option>
+          <option value="Serbia">Serbia</option>
+          <option value="Seychelles">Seychelles</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Sint Maarten">Sint Maarten</option>
+          <option value="Slovakia">Slovakia</option>
+          <option value="Slovenia">Slovenia</option>
+          <option value="Solomon Islands">Solomon Islands</option>
+          <option value="South Africa">South Africa</option>
+          <option value="South Korea">South Korea</option>
+          <option value="Spain">Spain</option>
+          <option value="Sri Lanka">Sri Lanka</option>
+          <option value="St. Vincent">St. Vincent</option>
+          <option value="Sudan">Sudan</option>
+          <option value="Suriname">Suriname</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Syria">Syria</option>
+          <option value="Taiwan">Taiwan</option>
+          <option value="Tanzania  United Republic Of">Tanzania, United Republic Of</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+          <option value="Tunisia">Tunisia</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Turkmenistan">Turkmenistan</option>
+          <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+          <option value="Uganda">Uganda</option>
+          <option value="Ukraine">Ukraine</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="United States">United States</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Uzbekistan">Uzbekistan</option>
+          <option value="Vanuatu">Vanuatu</option>
+          <option value="Venezuela">Venezuela</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Virgin Islands  British">Virgin Islands, British</option>
+          <option value="Yemen">Yemen</option>
+          <option value="Zambia">Zambia</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+          <option value="Aland Islands">Aland Islands</option>
+          <option value="Anguilla">Anguilla</option>
+          <option value="Bouvet Island">Bouvet Island</option>
+          <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+          <option value="Burkina Faso">Burkina Faso</option>
+          <option value="Burundi">Burundi</option>
+          <option value="Cape Verde">Cape Verde</option>
+          <option value="Central African Republic">Central African Republic</option>
+          <option value="Chad">Chad</option>
+          <option value="Christmas Island">Christmas Island</option>
+          <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+          <option value="Cook Islands">Cook Islands</option>
+          <option value="Cuba">Cuba</option>
+          <option value="Djibouti">Djibouti</option>
+          <option value="Eritrea">Eritrea</option>
+          <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+          <option value="French Guiana">French Guiana</option>
+          <option value="French Southern Territories">French Southern Territories</option>
+          <option value="Guinea">Guinea</option>
+          <option value="Guinea Bissau">Guinea Bissau</option>
+          <option value="Heard Island And Mcdonald Islands">Heard Island And Mcdonald Islands</option>
+          <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+          <option value="Iran  Islamic Republic Of">Iran, Islamic Republic Of</option>
+          <option value="Iraq">Iraq</option>
+          <option value="Kiribati">Kiribati</option>
+          <option value="Korea  Democratic People's Republic Of">Korea, Democratic People's Republic Of</option>
+          <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+          <option value="Mali">Mali</option>
+          <option value="Mauritania">Mauritania</option>
+          <option value="Mayotte">Mayotte</option>
+          <option value="Montserrat">Montserrat</option>
+          <option value="Nauru">Nauru</option>
+          <option value="Niue">Niue</option>
+          <option value="Norfolk Island">Norfolk Island</option>
+          <option value="Pitcairn">Pitcairn</option>
+          <option value="Saint Barthélemy">Saint Barthélemy</option>
+          <option value="Saint Helena">Saint Helena</option>
+          <option value="Saint Pierre And Miquelon">Saint Pierre And Miquelon</option>
+          <option value="San Marino">San Marino</option>
+          <option value="Sierra Leone">Sierra Leone</option>
+          <option value="Somalia">Somalia</option>
+          <option value="South Georgia And The South Sandwich Islands">
+            South Georgia And The South Sandwich Islands
+          </option>
+          <option value="Svalbard And Jan Mayen">Svalbard And Jan Mayen</option>
+          <option value="Swaziland">Swaziland</option>
+          <option value="Tajikistan">Tajikistan</option>
+          <option value="Timor Leste">Timor Leste</option>
+          <option value="Togo">Togo</option>
+          <option value="Tokelau">Tokelau</option>
+          <option value="Tonga">Tonga</option>
+          <option value="Tuvalu">Tuvalu</option>
+          <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+          <option value="Wallis And Futuna">Wallis And Futuna</option>
+          <option value="Western Sahara">Western Sahara</option>
+        </select>
+      </div>
+      <div class="fb-text form-group field-text-1628257060750">
+        <label for="text-1628257060750" class="fb-text-label" style="color: rgb(74, 74, 74);"
+          >Website/ Social Media <span class="required">*</span>
+        </label>
+        <input
+          type="text"
+          required=""
+          class="form-control"
+          name="text-1628257060750"
+          id="text-1628257060750"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'text-1628257060750','text','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+      </div>
+      <div class="fb-select form-group field-select-1708080425349">
+        <label for="select-1708080425349" class="fb-select-label" style="color: rgb(74, 74, 74);"
+          >Which hair extension brands are you currently using? <span class="required">*</span> </label
+        ><select
+          type="select"
+          required=""
+          placeholder="Please choose an option"
+          class="form-control"
+          name="select-1708080425349"
+          id="select-1708080425349"
+          aria-required="true"
+          default-req-status="true"
+          onchange="checkConditionalLogicNew(event, this.value,'select-1708080425349','select','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+          <option disabled="" selected="">Please choose an option</option>
+          <option value="beauty">Beauty Works</option>
+          <option value="sway">SWAY</option>
+          <option value="viola">Viola</option>
+          <option value="donna">Donna Bella Hair</option>
+          <option value="great-lengths">Great Lengths</option>
+          <option value="euphoria">Euphoria One</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="fb-undefined form-group field-other-1708080585685" style="display: none;">
+        <label for="other-1708080585685" class="fb-textarea-label" style="color: rgb(74, 74, 74);"
+          >Specify here <span class="required">*</span> </label
+        >><textarea
+          type="textarea"
+          class="form-control"
+          name="other-1708080585685"
+          id="other-1708080585685"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'other-1708080585685','textarea','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        ></textarea>
+      </div>
+      <div class="fb-file form-group field-file-1628257017613">
+        <label for="file-1628257017613" class="fb-file-label" style="color: rgb(74, 74, 74);"
+          >Please attach Public Liability Insurance Certificate or proof of hair extension/hairdressing qualification:
+        </label>
+        <input type="file" class="form-control" name="file-1628257017613" id="file-1628257017613">
+      </div>
+      <div class="fb-select form-group field-select-1706179831082">
+        <label for="select-1706179831082" class="fb-select-label" style="color: rgb(74, 74, 74);"
+          >How did you hear about us ? <span class="required">*</span> </label
+        ><select
+          type="select"
+          required=""
+          placeholder="Please choose an option"
+          class="form-control"
+          name="select-1706179831082"
+          id="select-1706179831082"
+          aria-required="true"
+          default-req-status="true"
+          onchange="checkConditionalLogicNew(event, this.value,'select-1706179831082','select','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        >
+          <option disabled="" selected="">Please choose an option</option>
+          <option value="retail-website">Cliphair Retail Website</option>
+          <option value="reffered-by-friend">Reffered By A Friend</option>
+          <option value="magazine">Magazine</option>
+          <option value="social-media">Social Media</option>
+          <option value="email-sms-whatsapp">Email, SMS Or WhatsApp</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="fb-undefined form-group field-other-reason" style="display: none;">
+        <label for="other-reason" class="fb-textarea-label" style="color: rgb(74, 74, 74);"
+          >Specify here <span class="required">*</span> </label
+        >><textarea
+          type="textarea"
+          class="form-control"
+          name="other-reason"
+          id="other-reason"
+          aria-required="true"
+          default-req-status="true"
+          onkeyup="checkConditionalLogicNew(event, this.value,'other-reason','textarea','16375','[{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1706179831082&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-reason&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;equals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;show&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]},{&quot;condition&quot;:[{&quot;if&quot;:&quot;select-1708080425349&quot;,&quot;case&quot;:&quot;notEquals&quot;,&quot;val&quot;:&quot;other&quot;}],&quot;matched_case&quot;:&quot;any&quot;,&quot;do&quot;:[{&quot;docase&quot;:&quot;hide&quot;,&quot;fields&quot;:&quot;other-1708080585685&quot;}]}]')"
+        ></textarea>
+      </div>
+      <div class="fb-submit form-group field-button-1481029333721">
+        <button
+          type="submit"
+          class="button-input btn btn-default button"
+          name="button-1481029333721"
+          style="default"
+          id="button-1481029333721"
+        >
+          Submit
+        </button>
+      </div>
+      <div class="">
+        <p type="p" class="paragraph" name="" id="" style="color: rgb(74, 74, 74);">
+          *please allow 24 working hours for the account approval
+        </p>
+      </div>
+    </form>
+  </div>
+  <style type="text/css">
+    .aaaformbuilder_form .fb-submit button {
+      background-color: #00afec !important;
+    }
+    .aaaformbuilder_form .fb-submit button {
+      color: #ffffff !important;
+    }
+    .aaaformbuilder_form .fb-submit button {
+      font-size: 14px !important;
+    }
+    @media only screen and (max-width: 768px) {
+      .aaa_formbuilder_container {
+        width: 75% !important;
+      }
+    }
+    @media only screen and (max-width: 420px) {
+      .aaa_formbuilder_container {
+        width: 100% !important;
+      }
+    }
+  </style>
+  <script>
+    function isMyScriptLoaded() {
+      var url =
+        'https://shopifycdn.aaawebstore.com/formbuilder/appfiles/aaa_form_builder_script_minify_v1.js?shop=trade-cliphair.myshopify.com';
+      var jsFound = 0;
+      var scripts = document.getElementsByTagName('script');
+      for (var i = scripts.length; i--; ) {
+        if (scripts[i].src == url) {
+          jsFound = 1;
+        }
+      }
+      if (!jsFound) {
+        var headTag = document.getElementsByTagName('head')[0];
+        var jqTag = document.createElement('script');
+        jqTag.type = 'text/javascript';
+        jqTag.src = url;
+        jqTag.onload = '';
+        headTag.appendChild(jqTag);
+      }
+    }
+    isMyScriptLoaded();
+  </script>
 </div>
 
 {% schema %}

@@ -82,6 +82,18 @@
             "heading_3": ""
           }
         },
+        "klarna_on_site_messaging_app_block_3kiAmP": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "locale_option": "geolocation",
+            "locale_fallback": "",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -145,6 +157,7 @@
         "buy_buttons",
         "share",
         "icon_with_text_b6MJr9",
+        "klarna_on_site_messaging_app_block_3kiAmP",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",

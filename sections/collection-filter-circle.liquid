@@ -1,227 +1,228 @@
-{{ 'section-collection-filter-circle.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-{{ 'component-facets.css' | asset_url | stylesheet_tag }}
+{% if customer %}
+  {{ 'section-collection-filter-circle.css' | asset_url | stylesheet_tag }}
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+  {{ 'component-facets.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
+  {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  }
-{%- endstyle -%}
 
-<div class="filter-circle-wrapper color-{{ section.settings.color_scheme }} no-js-hidden gradient section-{{ section.id }}-padding">
-  <div class="page-width" style="padding:0!important;">
-    {%- unless section.settings.heading == blank -%}
-      <div class="title-wrapper title-wrapper--no-top-margin {{ section.settings.text_allignment }} page-width">
-        <h2
-          id="SectionHeading-{{ section.id }}"
-          class="videos-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-        >
-          {{ section.settings.heading }}
-        </h2>
-      </div>
-    {%- endunless -%}
-
-    <facet-filters-form class="facets facets-vertical-sort no-js-hidden">
-      <form
-        id="FacetFiltersFormDropdown"
-      >
-        {% for filter in collection.filters %}
-          {% assign filter_label = filter.label | handleize %}
-          {% if filter_label == section.settings.filter_type %}
-            {%- liquid
-              assign columns_mobile_int = section.settings.columns_mobile | plus: 0
-              assign show_mobile_slider = false
-              if columns_mobile_int == 3
-                if filter.values.size > columns_mobile_int
-                  assign show_tablet_slider = true
-                endif
-
-                assign columns_mobile_int = columns_mobile_int | minus: 1
-                if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
-                  assign show_mobile_slider = true
-                endif
-              else
-                if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
-                  assign show_mobile_slider = true
-                endif
-              endif
-
-              assign columns_desktop_int = section.settings.columns_desktop | plus: 0
-              assign show_desktop_slider = false
-              if section.settings.swipe_on_desktop and filter.values.size > columns_desktop_int
-                assign show_desktop_slider = true
-              endif
-
-              assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
-            -%}
-
-            <slider-component
-              class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              data-visual="{{ section.settings.slider_visual }}"
-            >
-              <ul
-                class="filter-circle contains-card contains-card--collection slide-mobile-{{ show_mobile_slider }} slide-tablet-{{ show_tablet_slider }} slide-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size }}-items"
-                id="Slider-{{ section.id }}"
-                role="list"
-              >
-                {%- liquid
-                  assign columns = filter.values.size
-                  if columns > 3
-                    assign columns = 3
-                  endif
-                -%}
-
-                {%- for value in filter.values -%}
-                  <li
-                    id="Slide-{{ section.id }}-{{ forloop.index }}"
-                    class="filter-circle__item facets__item grid__item custom__slide{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                      style="--animation-order: {{ forloop.index }};"
-                    {% endif %}
-                  >
-                    <label
-                      for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                      class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
-                    >
-                      <input
-                        type="checkbox"
-                        name="{{ value.param_name }}"
-                        value="{{ value.value }}"
-                        id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                        {% if value.active %}
-                          checked
-                        {% endif %}
-                        {% if value.count == 0 and value.active == false %}
-                          disabled
-                        {% endif %}
-                      >
-
-                      {% liquid
-                        assign card_title = value.label | escape
-                        assign image_handle = card_title | handle | append: '-snippet.webp'
-                        assign card_image = images[image_handle]
-                      %}
-                      <p style="display:none">{{ image_handle }}</p>
-                      {% render 'card-filter',
-                        card_title: card_title,
-                        card_image: card_image,
-                        media_aspect_ratio: section.settings.image_ratio,
-                        circle_image: section.settings.circle_image,
-                        show_title: section.settings.show_title
-                      %}
-                      {% comment %} <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span> {% endcomment %}
-                      <span class="visually-hidden">
-                        {{- value.label | escape }} (
-                        {%- if value.count == 1 -%}
-                          {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
-                        {%- else -%}
-                          {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
-                        {%- endif -%}
-                        )</span
-                      >
-                    </label>
-                  </li>
-                {% endfor %}
-              </ul>
-
-              {%- if show_mobile_slider or show_desktop_slider -%}
-                <div class="slider-buttons small-hide no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet slider--{{ section.settings.columns_mobile }}-col-tablet-down">
-                  <button
-                    type="button"
-                    class="slider-button slider-button--prev"
-                    name="previous"
-                    aria-label="{{ 'general.slider.previous_slide' | t }}"
-                  >
-                    {% render 'icon-caret' %}
-                  </button>
-
-                  <div class="slider-counter caption visually-hidden">
-                    <span class="slider-counter--current">1</span>
-                    <span aria-hidden="true"> / </span>
-                    <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                    <span class="slider-counter--total">{{ filter.values.size | plus: 1 }}</span>
-                  </div>
-
-                  {% comment %}
-                    <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
-                      {% for filter in collection.filters %}
-                        {% assign filter_label = filter.label | handleize %}
-                        {% if filter_label == section.settings.filter_type %}
-                          {%- if section.settings.slider_visual == 'counter' -%}
-                            <div>
-                              <span class="slider-counter--current">1</span>
-                              <span aria-hidden="true"> / </span>
-                              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                              <span class="slider-counter--total">{{ filter.values.size }}</span>
-                            </div>
-                          {%- else -%}
-                            <div class="slideshow__control-wrapper">
-                              {%- for value in filter.values -%}
-                                <button
-                                  class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
-                                  aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                                  aria-controls="Slider-{{ section.id }}"
-                                >
-                                  {%- if section.settings.slider_visual == 'numbers' -%}
-                                    {{ forloop.index -}}
-                                  {%- else -%}
-                                    <span class="dot"></span>
-                                  {%- endif -%}
-                                </button>
-                              {% endfor %}
-                            </div>
-                          {%- endif -%}
-                        {% endif %}
-                      {%- endfor -%}
-                    </div>
-                  {% endcomment %}
-
-                  <button
-                    type="button"
-                    class="slider-button slider-button--next"
-                    name="next"
-                    aria-label="{{ 'general.slider.next_slide' | t }}"
-                  >
-                    {% render 'icon-caret' %}
-                  </button>
-                </div>
-              {%- endif -%}
-            </slider-component>
-          {% endif %}
-        {% endfor %}
-      </form>
-    </facet-filters-form>
-  </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    let buttons = document.querySelectorAll('.facet-checkbox input');
-    for (let button of buttons) {
-      button.addEventListener('click', uncheck);
-    }
-  });
-
-  function uncheck() {
-    setTimeout(() => {
-      let button = document.querySelector('.facet-checkbox input:checked');
-      if (button.checked == true) {
-        button.checked = false;
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
       }
-    }, 1000);
-  }
-</script>
+    }
+  {%- endstyle -%}
 
+  <div class="filter-circle-wrapper color-{{ section.settings.color_scheme }} no-js-hidden gradient section-{{ section.id }}-padding">
+    <div class="page-width" style="padding:0!important;">
+      {%- unless section.settings.heading == blank -%}
+        <div class="title-wrapper title-wrapper--no-top-margin {{ section.settings.text_allignment }} page-width">
+          <h2
+            id="SectionHeading-{{ section.id }}"
+            class="videos-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          >
+            {{ section.settings.heading }}
+          </h2>
+        </div>
+      {%- endunless -%}
+
+      <facet-filters-form class="facets facets-vertical-sort no-js-hidden">
+        <form
+          id="FacetFiltersFormDropdown"
+        >
+          {% for filter in collection.filters %}
+            {% assign filter_label = filter.label | handleize %}
+            {% if filter_label == section.settings.filter_type %}
+              {%- liquid
+                assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+                assign show_mobile_slider = false
+                if columns_mobile_int == 3
+                  if filter.values.size > columns_mobile_int
+                    assign show_tablet_slider = true
+                  endif
+
+                  assign columns_mobile_int = columns_mobile_int | minus: 1
+                  if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
+                    assign show_mobile_slider = true
+                  endif
+                else
+                  if section.settings.swipe_on_mobile and filter.values.size > columns_mobile_int
+                    assign show_mobile_slider = true
+                  endif
+                endif
+
+                assign columns_desktop_int = section.settings.columns_desktop | plus: 0
+                assign show_desktop_slider = false
+                if section.settings.swipe_on_desktop and filter.values.size > columns_desktop_int
+                  assign show_desktop_slider = true
+                endif
+
+                assign columns_tablet = columns_desktop_int | plus: columns_mobile_int | divided_by: 2 | ceil
+              -%}
+
+              <slider-component
+                class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                data-visual="{{ section.settings.slider_visual }}"
+              >
+                <ul
+                  class="filter-circle contains-card contains-card--collection slide-mobile-{{ show_mobile_slider }} slide-tablet-{{ show_tablet_slider }} slide-desktop-{{ show_desktop_slider }}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider grid--peek{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}{% if section.settings.swipe_on_desktop %} slider--desktop{% endif %} filter-circle--{{ filter.values.size }}-items"
+                  id="Slider-{{ section.id }}"
+                  role="list"
+                >
+                  {%- liquid
+                    assign columns = filter.values.size
+                    if columns > 3
+                      assign columns = 3
+                    endif
+                  -%}
+
+                  {%- for value in filter.values -%}
+                    <li
+                      id="Slide-{{ section.id }}-{{ forloop.index }}"
+                      class="filter-circle__item facets__item grid__item custom__slide{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      <label
+                        for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                        class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
+                      >
+                        <input
+                          type="checkbox"
+                          name="{{ value.param_name }}"
+                          value="{{ value.value }}"
+                          id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                          {% if value.active %}
+                            checked
+                          {% endif %}
+                          {% if value.count == 0 and value.active == false %}
+                            disabled
+                          {% endif %}
+                        >
+
+                        {% liquid
+                          assign card_title = value.label | escape
+                          assign image_handle = card_title | handle | append: '-snippet.webp'
+                          assign card_image = images[image_handle]
+                        %}
+                        <p style="display:none">{{ image_handle }}</p>
+                        {% render 'card-filter',
+                          card_title: card_title,
+                          card_image: card_image,
+                          media_aspect_ratio: section.settings.image_ratio,
+                          circle_image: section.settings.circle_image,
+                          show_title: section.settings.show_title
+                        %}
+                        {% comment %} <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span> {% endcomment %}
+                        <span class="visually-hidden">
+                          {{- value.label | escape }} (
+                          {%- if value.count == 1 -%}
+                            {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
+                          {%- else -%}
+                            {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
+                          {%- endif -%}
+                          )</span
+                        >
+                      </label>
+                    </li>
+                  {% endfor %}
+                </ul>
+
+                {%- if show_mobile_slider or show_desktop_slider -%}
+                  <div class="slider-buttons small-hide no-js-hidden slider--{{ section.settings.columns_desktop }}-col-desktop grid--{{ columns_tablet }}-col-tablet slider--{{ section.settings.columns_mobile }}-col-tablet-down">
+                    <button
+                      type="button"
+                      class="slider-button slider-button--prev"
+                      name="previous"
+                      aria-label="{{ 'general.slider.previous_slide' | t }}"
+                    >
+                      {% render 'icon-caret' %}
+                    </button>
+
+                    <div class="slider-counter caption visually-hidden">
+                      <span class="slider-counter--current">1</span>
+                      <span aria-hidden="true"> / </span>
+                      <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                      <span class="slider-counter--total">{{ filter.values.size | plus: 1 }}</span>
+                    </div>
+
+                    {% comment %}
+                      <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+                        {% for filter in collection.filters %}
+                          {% assign filter_label = filter.label | handleize %}
+                          {% if filter_label == section.settings.filter_type %}
+                            {%- if section.settings.slider_visual == 'counter' -%}
+                              <div>
+                                <span class="slider-counter--current">1</span>
+                                <span aria-hidden="true"> / </span>
+                                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                                <span class="slider-counter--total">{{ filter.values.size }}</span>
+                              </div>
+                            {%- else -%}
+                              <div class="slideshow__control-wrapper">
+                                {%- for value in filter.values -%}
+                                  <button
+                                    class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
+                                    aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                                    aria-controls="Slider-{{ section.id }}"
+                                  >
+                                    {%- if section.settings.slider_visual == 'numbers' -%}
+                                      {{ forloop.index -}}
+                                    {%- else -%}
+                                      <span class="dot"></span>
+                                    {%- endif -%}
+                                  </button>
+                                {% endfor %}
+                              </div>
+                            {%- endif -%}
+                          {% endif %}
+                        {%- endfor -%}
+                      </div>
+                    {% endcomment %}
+
+                    <button
+                      type="button"
+                      class="slider-button slider-button--next"
+                      name="next"
+                      aria-label="{{ 'general.slider.next_slide' | t }}"
+                    >
+                      {% render 'icon-caret' %}
+                    </button>
+                  </div>
+                {%- endif -%}
+              </slider-component>
+            {% endif %}
+          {% endfor %}
+        </form>
+      </facet-filters-form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let buttons = document.querySelectorAll('.facet-checkbox input');
+      for (let button of buttons) {
+        button.addEventListener('click', uncheck);
+      }
+    });
+
+    function uncheck() {
+      setTimeout(() => {
+        let button = document.querySelector('.facet-checkbox input:checked');
+        if (button.checked == true) {
+          button.checked = false;
+        }
+      }, 1000);
+    }
+  </script>
+{% endif %}
 {% schema %}
 {
   "name": "Filter circle",

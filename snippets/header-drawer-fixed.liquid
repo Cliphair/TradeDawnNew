@@ -21,6 +21,18 @@
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               <li>
+                <a
+                  href="{{ routes.account_register_url }}"
+                  class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if request.path == routes.account_register_url %} menu-drawer__menu-item--active{% endif %}"
+                  {% if request.path == routes.account_register_url %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  {{ 'navbar.top_level.apply' | t }}
+                </a>
+              </li>
+
+              <li>
                 <details id="Details-menu-drawer-menu-item-1">
                   <summary
                     id="HeaderDrawer-clip-ins"
@@ -41,267 +53,6 @@
                         {{ 'navbar.helpers.back' | t }}
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                        {% comment %}
-                          <li>
-                            {% assign object = collections['clip-in-hair-extensions'] %}
-                            <a
-                              id="HeaderDrawer-clip-ins-all"
-                              href="{{ object.url }}"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == object.url %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              {{ "navbar.sub_level.clip_in.all" | t}}
-                            </a>
-                          </li>
-                          <li>
-                            <details id="Details-menu-drawer-clip-ins-multipiece">
-                              <summary
-                                id="HeaderDrawer-clip-ins-multipiece"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                {{ "navbar.sub_level.clip_in.multi_piece" | t}}
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-multipiece"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  {{ 'navbar.helpers.back' | t }}
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-multipiece-seamless"
-                                      href="/collections/seamless-clip-in-hair-extensions-double-drawn-hair"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/seamless-clip-in-hair-extensions-double-drawn-hair' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path
-                                          == '/collections/seamless-clip-in-hair-extensions-double-drawn-hair'
-                                      %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Seamless Full Head (150-190g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-multipiece-classic"
-                                      href="/collections/full-head-clip-in-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/full-head-clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/full-head-clip-in-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Classic Full Head (130g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-multipiece-double-weft"
-                                      href="/collections/double-wefted-clip-in-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/double-wefted-clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/double-wefted-clip-in-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Double Weft Full Head (180-220g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-multipiece-ultra"
-                                      href="/collections/ultra-clip-in-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/ultra-clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/ultra-clip-in-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Ultra-Volume Full Head (240-300g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-multipiece-curly"
-                                      href="/collections/curly-clip-in-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/curly-clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/curly-clip-in-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Curly Full Head (115-160g)
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <details id="Details-menu-drawer-clip-ins-one-piece">
-                              <summary
-                                id="HeaderDrawer-clip-ins-one-piece"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                One Piece Hair Extensions
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-one-piece"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  BACK
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-one-piece-top-up"
-                                      href="/collections/one-piece-top-up-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/one-piece-top-up-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/one-piece-top-up-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Top Up Piece (40g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-one-piece-quad-weft"
-                                      href="/collections/quad-weft-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/quad-weft-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/quad-weft-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Quad Weft Piece (80g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-one-piece-top-up"
-                                      href="/collections/supreme-quad-weft-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/supreme-quad-weft-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/supreme-quad-weft-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Supreme Quad Piece (120g)
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <details id="Details-menu-drawer-clip-ins-hairpieces-ponytail">
-                              <summary
-                                id="HeaderDrawer-clip-ins-hairpieces-ponytail"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                Hairpieces & Ponytails
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-hairpieces-ponytail"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  BACK
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-hairpieces-ponytail-ponytail"
-                                      href="/collections/clip-in-ponytail-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/clip-in-ponytail-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/clip-in-ponytail-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Clip In Ponytail (100-140g)
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-clip-ins-hairpieces-ponytail-fringe"
-                                      href="/collections/fringe-clip-in-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/fringe-clip-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/fringe-clip-in-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Clip In Fringe (30g)
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-clip-ins-bundle"
-                              href="/collections/hair-extensions-bundle/clip-in-bundle"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-bundle/clip-in-bundle' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/hair-extensions-bundle/clip-in-bundle' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Clip In Extensions Value Bundles
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-clip-ins-gift-card"
-                              href="/products/cliphair-e-gift-card"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/cliphair-e-gift-card' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/products/cliphair-e-gift-card' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              E-Gift Card
-                            </a>
-                          </li>
-                        {% endcomment %}
                         {% render 'header-drawer-clip-in' %}
                       </ul>
                     </div>
@@ -330,456 +81,6 @@
                         {{ 'navbar.helpers.back' | t }}
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                        {% comment %}
-                          <li>
-                            <a
-                              id="HeaderDrawer-professional-all"
-                              href="/collections/permanent-extensions"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/permanent-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/permanent-extensions' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              All Professional Extensions
-                            </a>
-                          </li>
-                          <li>
-                            <details id="Details-menu-drawer-professional-nano-ring">
-                              <summary
-                                id="HeaderDrawer-professional-nano-ring"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                Nano Ring Hair Extensions
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-nano-ring"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  BACK
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-nano-ring-nano-ring"
-                                      href="/collections/nano-rings-hair-extensions?filter.p.product_type=Nano+Ring+Hair+Extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/nano-rings-hair-extensions?filter.p.product_type=Nano+Ring+Hair+Extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/nano-rings-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale Nano Rings (50g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-nano-ring-nano-bond"
-                                      href="/collections/nano-rings-hair-extensions?filter.p.product_type=Remy+Royale+Nano+Bonds"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/nano-rings-hair-extensions?filter.p.product_type=Remy+Royale+Nano+Bonds' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/nano-rings-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale Nano Bonds (50g)
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <details id="Details-menu-drawer-professional-tape">
-                              <summary
-                                id="HeaderDrawer-professional-tape"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                Tape Hair Extensions
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-tape"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  BACK
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tape-classic-tape"
-                                      href="/collections/tape-in-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/tape-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/tape-in-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Tape In Hair Extensions (100g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tape-remy-tape"
-                                      href="/collections/remy-royale-tape-in-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/remy-royale-tape-in-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/remy-royale-tape-in-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale Tape Ins (50g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tape-invisible-tape"
-                                      href="/collections/remy-royale-invisible-tape-in-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/remy-royale-invisible-tape-in-hair-extensions'
-                                      %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale Invisible Tape Ins (50g)
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <details id="Details-menu-drawer-professional-weave">
-                              <summary
-                                id="HeaderDrawer-professional-weave"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                Weave Hair Extensions
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-weave"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  BACK
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-weave-classic-weft"
-                                      href="/collections/human-hair-weave-wefts-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/human-hair-weave-wefts-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale Classic Weft (120g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-weave-flat-track"
-                                      href="/collections/flat-weft-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/flat-weft-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/flat-weft-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale Flat Track Weft (120g)
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <details id="Details-menu-drawer-professional-pre-bonded">
-                              <summary
-                                id="HeaderDrawer-professional-pre-bonded"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                Pre Bonded Hair Extensions
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-pre-bonded"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  BACK
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-pre-bonded-i-tip"
-                                      href="/collections/i-tip-straight-pre-bonded-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/i-tip-straight-pre-bonded-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale I-Tips (50g)
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-pre-bonded-flat-tip"
-                                      href="/collections/flat-tip-hair-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/flat-tip-hair-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/collections/flat-tip-hair-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Remy Royale Flat Tips (50g)
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <details id="Details-menu-drawer-professional-tools-maintenance">
-                              <summary
-                                id="HeaderDrawer-professional-tools-maintenance"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                Professional Tools & Maintenance
-                                {% render 'icon-arrow' %}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <div
-                                id="childlink-tools-maintenance"
-                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                              >
-                                <button
-                                  class="menu-drawer__close-button link link--text focus-inset"
-                                  aria-expanded="true"
-                                >
-                                  {% render 'icon-arrow' %}
-                                  BACK
-                                </button>
-                                <ul
-                                  class="menu-drawer__menu list-menu"
-                                  role="list"
-                                  tabindex="-1"
-                                >
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-maintenance-colour-ring"
-                                      href="/products/hair-extensions-colour-ring"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/hair-extensions-colour-ring' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/hair-extensions-colour-rings' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Colour Rings
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-maintenance-nano-beads"
-                                      href="/products/silicone-lined-nano-rings-beads-200-pack"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/silicone-lined-nano-rings-beads-200-pack' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Nano Beads
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-maintenance-tape-remover"
-                                      href="/products/tape-in-hair-extensions-remover"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/tape-in-hair-extensions-remover' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/tape-in-hair-extensions-remover' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Tape Remover
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-maintenance-tape-tabs"
-                                      href="/products/spare-tape-pack-for-tape-in-extensions"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/spare-tape-pack-for-tape-in-extensions' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Tape Tabs
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-maintenance-wig-glue"
-                                      href="/products/cliphair-wig-glue"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/cliphair-wig-glue' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/cliphair-wig-glue' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Wig Glue
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-maintenance-wig-glue-remover"
-                                      href="/products/cliphair-glue-remover"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/cliphair-glue-remover' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/cliphair-glue-remover' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Wig Glue Remover
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-spare-tape-and-remover-set"
-                                      href="/products/spare-tape-tape-remover"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/spare-tape-tape-remover' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/spare-tape-tape-remover' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Tape Remover & Spare Tabs Set
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-wig-glue-and-remover-set"
-                                      href="/products/lace-glue-glue-remover"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/lace-glue-glue-remover' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path == '/products/lace-glue-glue-remover' %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Wig Glue & Remover Set
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      id="HeaderDrawer-professional-tools-maintenance-bundle"
-                                      href="/collections/hair-extensions-bundle/hair-care-accessories-bundle"
-                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-bundle/hair-care-accessories-bundle' %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if request.path
-                                          == '/collections/hair-extensions-bundle/hair-care-accessories-bundle'
-                                      %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      Maintenance Value Bundles
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </details>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-professional-bundle"
-                              href="/collections/hair-extensions-bundle/professional-bundle"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-bundle/professional-bundle' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/hair-extensions-bundle/professional-bundle' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Permanent Extensions Value Bundles
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-professional-gift-card"
-                              href="/products/cliphair-e-gift-card"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/cliphair-e-gift-card' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/products/cliphair-e-gift-card' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              E-Gift Card
-                            </a>
-                          </li>
-
-                          <li>
-                            <modal-opener
-                              id="HeaderDrawer-professional-trade-account"
-                              class="no-js-hidden"
-                              data-modal="#PopupModal-Trade-Account"
-                            >
-                              <button
-                                id="HeaderDrawer-Popup-Trade-Account-professional"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                                type="button"
-                                aria-haspopup="dialog"
-                              >
-                                Apply For Trade Account Here
-                              </button>
-                            </modal-opener>
-                            <a
-                              href="https://cliphairtrade.com/pages/trade-account"
-                              aria-label="Goes to trade website"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset no-js"
-                            >
-                              Apply For Trade Account Here
-                            </a>
-                          </li>
-                        {% endcomment %}
                         {% render 'header-drawer-professional' %}
                       </ul>
                     </div>
@@ -2011,21 +1312,6 @@
                         BACK
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                        {% comment %}
-                          <li>
-                            <a
-                              id="HeaderDrawer-help-me-choose-express-colour-matching"
-                              href="/pages/colour-matching-service"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/colour-matching-service' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/pages/colour-matching-service' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Express Colour Matching
-                            </a>
-                          </li>
-                        {% endcomment %}
-
                         <li>
                           <a
                             id="HeaderDrawer-help-me-choose-sample-product"
@@ -2604,292 +1890,17 @@
                 </details>
               </li>
 
-              {% comment %}
-                <li>
-                  <details id="Details-menu-drawer-menu-item-6">
-                    <summary
-                      id="HeaderDrawer-christmas-shop"
-                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
-                    >
-                      CHRISTMAS SHOP
-                      {% render 'icon-arrow' %}
-                      {% render 'icon-caret' %}
-                    </summary>
-                    <div
-                      id="link-blog"
-                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                      tabindex="-1"
-                    >
-                      <div class="menu-drawer__inner-submenu">
-                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                          {% render 'icon-arrow' %}
-                          BACK
-                        </button>
-                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-all"
-                              href="/pages/wish-for-cliphair-holiday-campaign"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/wish-for-cliphair-holiday-campaign' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/pages/wish-for-cliphair-holiday-campaign' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Shop All
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-gift-sets"
-                              href="/collections/hair-extensions-gift-sets"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-gift-sets' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/hair-extensions-gift-sets' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Christmas Gift Sets
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-under-15"
-                              href="/collections/under-15"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-15' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/under-15' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Under £15
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-under-30"
-                              href="/collections/under-30"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-30' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/under-30' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Under £30
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-under-50"
-                              href="/collections/under-50"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-50' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/under-50' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Under £50
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-under-100"
-                              href="/collections/under-100"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/under-100' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/under-100' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Under £100
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-stocking-fillers"
-                              href="/collections/stocking-stuffers"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/stocking-stuffers' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/stocking-stuffers' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Stocking Fillers
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-party-season"
-                              href="/collections/party-season-essentials"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/party-season-essentials' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/party-season-essentials' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Party Season Essentials
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-value-bundles"
-                              href="/collections/hair-extensions-bundle"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/collections/hair-extensions-bundle' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/collections/hair-extensions-bundle' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Value Bundles
-                            </a>
-                          </li>
-
-                          <li>
-                            <a
-                              id="HeaderDrawer-christmas-shop-shipping-time"
-                              href="/pages/christmas-postal-dates-2024"
-                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/christmas-postal-dates-2024' %} menu-drawer__menu-item--active{% endif %}"
-                              {% if request.path == '/pages/christmas-postal-dates-2024' %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              Christmas Shipping Times
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </details>
-                </li>
-              {% endcomment %}
-
               <li>
-                <details id="Details-menu-drawer-menu-item-6">
-                  <summary
-                    id="HeaderDrawer-blog"
-                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
-                  >
-                    BLOG
-                    {% render 'icon-arrow' %}
-                    {% render 'icon-caret' %}
-                  </summary>
-                  <div
-                    id="link-blog"
-                    class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                    tabindex="-1"
-                  >
-                    <div class="menu-drawer__inner-submenu">
-                      <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                        {% render 'icon-arrow' %}
-                        BACK
-                      </button>
-                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-blog-homepage"
-                            href="/blogs/news"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Blog Homepage
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-latest-blogs"
-                            href="/blogs/news#main-blog-section"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news#main-blog-section' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news#main-blog-section' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Latest Blogs
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-hair-extension-bible"
-                            href="/blogs/news/tagged/the-hair-extensions-bible"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/the-hair-extensions-bible' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news/tagged/the-hair-extensions-bible' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Hair Extension Bible
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-top-trends"
-                            href="/blogs/news/tagged/top-trends"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/top-trends' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news/tagged/top-trends' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Top Trends
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-styling-guides-tutorials"
-                            href="/blogs/news/tagged/styling-guides-tutorials"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/styling-guides-tutorials' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news/tagged/styling-guides-tutorials' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Styling Guides & Tutorials
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-haircare-tips"
-                            href="/blogs/news/tagged/hair-care-tips"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/hair-care-tips' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news/tagged/hair-care-tips' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Haircare & Tips
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-wedding-occasion-hair"
-                            href="/blogs/news/tagged/wedding-occasion-hair"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/wedding-occasion-hair' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news/tagged/wedding-occasion-hair' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Wedding & Occasion Hair
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            id="HeaderDrawer-blog-celebrity-lifestyle"
-                            href="/blogs/news/tagged/lifestyle-pop-culture"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/blogs/news/tagged/lifestyle-pop-culture' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/blogs/news/tagged/lifestyle-pop-culture' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Celebrity & Lifestyle
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </details>
+                {% assign object = blogs.news %}
+                <a
+                  href="{{ object.url }}"
+                  class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if request.path == object.url %} menu-drawer__menu-item--active{% endif %}"
+                  {% if request.path == object.url %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  {{ 'navbar.top_level.blog' | t }}
+                </a>
               </li>
 
               <li>
@@ -2926,18 +1937,20 @@
                           </a>
                         </li>
 
-                        {% comment %} <li>
-                          <a
-                            id="HeaderDrawer-info-hub-rewards"
-                            href="/pages/rewards"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/rewards' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/pages/rewards' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Rewards
-                          </a>
-                        </li> {% endcomment %}
+                        {% comment %}
+                          <li>
+                            <a
+                              id="HeaderDrawer-info-hub-rewards"
+                              href="/pages/rewards"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/rewards' %} menu-drawer__menu-item--active{% endif %}"
+                              {% if request.path == '/pages/rewards' %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              Rewards
+                            </a>
+                          </li>
+                        {% endcomment %}
 
                         <li>
                           <a
@@ -2968,9 +1981,9 @@
                         <li>
                           <a
                             id="HeaderDrawer-info-hub-shipping"
-                            href="/pages/hair-extensions-shipping-delivery"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/hair-extensions-shipping-delivery' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/pages/hair-extensions-shipping-delivery' %}
+                            href="/pages/shipping-information"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/shipping-information' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/pages/shipping-information' %}
                               aria-current="page"
                             {% endif %}
                           >
@@ -3017,38 +2030,42 @@
                           </a>
                         </li>
 
-                        {% comment %} <li>
-                          <span
-                            id="HeaderDrawer-info-hub-our-ambassador"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                          >
-                            <span onclick="klrRecruit.openRecruit()">Become An Ambassador</span>
-                          </span>
-                        </li> {% endcomment %}
-
-                        {% comment %} <li>
-                          <modal-opener
-                            id="HeaderDrawer-info-hub-our-trade"
-                            class="no-js-hidden"
-                            data-modal="#PopupModal-Trade-Account"
-                          >
-                            <button
-                              id="HeaderDrawer-Popup-Trade-Account-info-hub"
+                        {% comment %}
+                          <li>
+                            <span
+                              id="HeaderDrawer-info-hub-our-ambassador"
                               class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              type="button"
-                              aria-haspopup="dialog"
+                            >
+                              <span onclick="klrRecruit.openRecruit()">Become An Ambassador</span>
+                            </span>
+                          </li>
+                        {% endcomment %}
+
+                        {% comment %}
+                          <li>
+                            <modal-opener
+                              id="HeaderDrawer-info-hub-our-trade"
+                              class="no-js-hidden"
+                              data-modal="#PopupModal-Trade-Account"
+                            >
+                              <button
+                                id="HeaderDrawer-Popup-Trade-Account-info-hub"
+                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                type="button"
+                                aria-haspopup="dialog"
+                              >
+                                Trade Application
+                              </button>
+                            </modal-opener>
+                            <a
+                              href="https://cliphairtrade.com/pages/trade-account"
+                              aria-label="Goes to trade website"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset no-js"
                             >
                               Trade Application
-                            </button>
-                          </modal-opener>
-                          <a
-                            href="https://cliphairtrade.com/pages/trade-account"
-                            aria-label="Goes to trade website"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset no-js"
-                          >
-                            Trade Application
-                          </a>
-                        </li> {% endcomment %}
+                            </a>
+                          </li>
+                        {% endcomment %}
                       </ul>
                     </div>
                     <div class="menu-drawer__utility-links">
@@ -3160,55 +2177,63 @@
                         BACK
                       </button>
                       <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                        {% comment %} <li>
-                          <a
-                            id="HeaderDrawer-discounts-rewards"
-                            href="/pages/rewards"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/rewards' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/pages/rewards' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            My Rewards
-                          </a>
-                        </li> {% endcomment %}
+                        {% comment %}
+                          <li>
+                            <a
+                              id="HeaderDrawer-discounts-rewards"
+                              href="/pages/rewards"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/rewards' %} menu-drawer__menu-item--active{% endif %}"
+                              {% if request.path == '/pages/rewards' %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              My Rewards
+                            </a>
+                          </li>
+                        {% endcomment %}
 
-                        {% comment %} <li>
-                          <a
-                            id="HeaderDrawer-discounts-new-customer-discount"
-                            href="/pages/rewards"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/rewards' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/pages/rewards' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            New Customer Discount
-                          </a>
-                        </li> {% endcomment %}
+                        {% comment %}
+                          <li>
+                            <a
+                              id="HeaderDrawer-discounts-new-customer-discount"
+                              href="/pages/rewards"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/rewards' %} menu-drawer__menu-item--active{% endif %}"
+                              {% if request.path == '/pages/rewards' %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              New Customer Discount
+                            </a>
+                          </li>
+                        {% endcomment %}
 
-                        {% comment %} <li>
-                          <a
-                            id="HeaderDrawer-discounts-blue-light-card-discount"
-                            href="/pages/blue-light-card"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/blue-light-card' %} menu-drawer__menu-item--active{% endif %}"
-                            {% if request.path == '/pages/blue-light-card' %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            Blue Light Card Discount
-                          </a>
-                        </li> {% endcomment %}
+                        {% comment %}
+                          <li>
+                            <a
+                              id="HeaderDrawer-discounts-blue-light-card-discount"
+                              href="/pages/blue-light-card"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/blue-light-card' %} menu-drawer__menu-item--active{% endif %}"
+                              {% if request.path == '/pages/blue-light-card' %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              Blue Light Card Discount
+                            </a>
+                          </li>
+                        {% endcomment %}
 
-                        {% comment %} <li>
-                          <a
-                            id="HeaderDrawer-discounts-student-discount"
-                            href="https://www.studentbeans.com/student-discount/uk/cliphair"
-                            target="_blank"
-                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                          >
-                            Student Discount
-                          </a>
-                        </li> {% endcomment %}
+                        {% comment %}
+                          <li>
+                            <a
+                              id="HeaderDrawer-discounts-student-discount"
+                              href="https://www.studentbeans.com/student-discount/uk/cliphair"
+                              target="_blank"
+                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                            >
+                              Student Discount
+                            </a>
+                          </li>
+                        {% endcomment %}
 
                         <li>
                           <a
@@ -3222,7 +2247,7 @@
                             Value Bundles
                           </a>
                         </li>
-                        
+
                         <li>
                           <a
                             id="HeaderDrawer-discounts-outlet"
@@ -3239,6 +2264,18 @@
                     </div>
                   </div>
                 </details>
+              </li>
+
+              <li>
+                <a
+                  href="/apps/shop"
+                  class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if request.path == "/apps/shop" %} menu-drawer__menu-item--active{% endif %}"
+                  {% if request.path == '/apps/shop' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  BULK ORDER
+                </a>
               </li>
             </ul>
           </nav>

@@ -15,7 +15,19 @@
   }
 {%- endstyle -%}
 
-{% assign faqs = product.metafields.custom.product_faqs.value %}
+{% comment %}
+  Needs to be a include tag as we need the variable created there
+  It creates a collection_mapped variable containing a CollectionDrop object
+{% endcomment %}
+{% include 'collection-mapping', map_by: 'type' %}
+
+{% liquid
+  if product.metafields.custom.product_faqs.value
+    assign faqs = product.metafields.custom.product_faqs.value
+  else
+    assign faqs = collection_mapped.metafields.custom.collection_faqs.value
+  endif
+%}
 
 {% if faqs %}
   <div id="FAQs" class="color-{{ section.settings.color_scheme }} gradient">
