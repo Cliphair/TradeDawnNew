@@ -78,6 +78,116 @@
         "padding_bottom": 40
       }
     },
+    "main_collection_blocked_iXJir9": {
+      "type": "main-collection-blocked",
+      "blocks": {
+        "information_videos_mFk4T3": {
+          "type": "information-videos",
+          "settings": {
+            "color_scheme": "inverse"
+          }
+        },
+        "title_qRJ787": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "short_description_pYLQi9": {
+          "type": "short-description",
+          "settings": {
+            "title": ""
+          }
+        },
+        "information_videos_F8wTww": {
+          "type": "information-videos",
+          "settings": {
+            "color_scheme": "inverse"
+          }
+        },
+        "text_JhxgPn": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"https://cliphairtrade.com/policies/shipping-policy\">Shipping</a> calculated at checkout.",
+            "text_style": "body"
+          }
+        },
+        "variant_options_aYd6e9": {
+          "type": "variant_options",
+          "settings": {
+            "type": "colour",
+            "label": "Available Colours",
+            "picker_type": "button"
+          }
+        },
+        "variant_options_UemYX3": {
+          "type": "variant_options",
+          "settings": {
+            "type": "length",
+            "label": "Available Lengths",
+            "picker_type": "button"
+          }
+        },
+        "price_W8Pd3r": {
+          "type": "price",
+          "settings": {}
+        },
+        "button_3UEmPY": {
+          "type": "button",
+          "settings": {
+            "color_scheme": "inverse"
+          }
+        },
+        "collapsible_tab_3Khxj8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "type": "specification",
+            "heading": "Specification",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_EnfCMz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "type": "custom",
+            "heading": "Description",
+            "icon": "none",
+            "content": "{{ collection.metafields.blocked.description | metafield_tag }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "information_videos_mFk4T3",
+        "title_qRJ787",
+        "short_description_pYLQi9",
+        "information_videos_F8wTww",
+        "text_JhxgPn",
+        "variant_options_aYd6e9",
+        "variant_options_UemYX3",
+        "price_W8Pd3r",
+        "button_3UEmPY",
+        "collapsible_tab_3Khxj8",
+        "collapsible_tab_EnfCMz"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "image_ratio": "square",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "b400924f-2211-460e-841c-e909605faf8f": {
       "type": "collection-faq",
       "settings": {
@@ -171,6 +281,7 @@
     "collection_filter_circle_YUDjy3",
     "product-grid",
     "db22f337-3a12-4ced-9dd2-bf58688d855a",
+    "main_collection_blocked_iXJir9",
     "b400924f-2211-460e-841c-e909605faf8f",
     "c6a82ce6-f9b5-448b-af80-7e17ba7abc7b"
   ]
