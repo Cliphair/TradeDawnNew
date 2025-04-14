@@ -1315,6 +1315,18 @@
                         <li>
                           <a
                             id="HeaderDrawer-help-me-choose-sample-product"
+                            href="/pages/colour-matching-service"
+                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/pages/colour-matching-service' %} menu-drawer__menu-item--active{% endif %}"
+                            {% if request.path == '/pages/colour-matching-service' %}
+                              aria-current="page"
+                            {% endif %}
+                          >
+                            Express Colour Match
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            id="HeaderDrawer-help-me-choose-sample-product"
                             href="/products/hair-extensions-sample-pieces"
                             class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if request.path == '/products/hair-extensions-sample-pieces' %} menu-drawer__menu-item--active{% endif %}"
                             {% if request.path == '/products/hair-extensions-sample-pieces' %}
