@@ -217,41 +217,6 @@
       document.querySelector('#cart').submit();
     });
   });
-
-  var GA4_BEGIN_CHECKOUT = false;
-  function beginCheckoutEvent(){
-    // prevent it for trigger twice
-    if(!GA4_BEGIN_CHECKOUT){
-      GA4_BEGIN_CHECKOUT = true;
-      console.log("Google Analytics begin_checkout event");
-
-      dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-      dataLayer.push({
-        event: "begin_checkout",
-        ecommerce: {
-          currency: "{{ cart.currency.iso_code }}",
-          value: {{ cart.total_price | times: 0.01 }},
-          items: [
-          {% if cart.items.size > 0 %}
-            {% for item in cart.items %}
-              {
-                item_id: `{{ item.sku | remove: "(D)" | remove: "(D1)" }}`,
-                item_name: `{{ item.product.title | strip }}`,
-                item_brand: `{{ item.vendor | strip }}`,
-                item_category: `{{ item.product.type | strip }}`,
-                item_category2: `{{ item.product.metafields.custom.colour_group | strip }}`,
-                item_category3: `{{ item.product.metafields.custom.colour_name | strip }}`,
-                item_variant: `{{ item.variant.title | strip }}`,
-                price: {{ item.final_price | times: 0.01 }},
-                quantity: {{ item.quantity }},
-              },
-            {% endfor %}
-          {% endif %}
-          ]
-        }
-      });
-    }
-  }
 </script>
 
 {% schema %}
