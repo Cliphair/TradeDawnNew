@@ -158,7 +158,7 @@
                   grid--{{ section.settings.columns_desktop }}-col-desktop
                 "
               >
-                {%- for product in collection.products -%}
+                {%- for product in collection.products -%}{% include 'easylockdown_filter_collection' with product %}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
@@ -227,7 +227,7 @@
       "url": "{{ shop.url | append: collection.url }}"
       {% if collection.image %},"image": "{{ collection.image | img_url: "master" }}"{% endif %}
     }{% if collection.products != empty %},{% endif %}
-    {% for product in collection.products %}
+    {% for product in collection.products %}{% include 'easylockdown_filter_collection' with product %}
       {
         "@context" : "http://schema.org",
         "@type" : "Product",
