@@ -169,6 +169,9 @@
         "image_PgTnnV",
         "image_6nX9EJ"
       ],
+      "custom_css": [
+        ".images-list-wrappe{max-width:850px!important;}"
+      ],
       "settings": {
         "title": "OUR DO’S & DON'TS",
         "heading_size": "h2",
