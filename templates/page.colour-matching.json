@@ -32,6 +32,109 @@
         "padding_bottom": 20
       }
     },
+    "image_list_YikQQ3": {
+      "type": "image-list",
+      "blocks": {
+        "image_piKyG6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-mobile-take-three-photos.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_8gRDzQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-mobile-fill-the-form.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_byVc68": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-mobile-submit-images.webp",
+            "text_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_piKyG6",
+        "image_8gRDzQ",
+        "image_byVc68"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.images-list-wrapper {display: none; }}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_list_NaQxAV": {
+      "type": "image-list",
+      "blocks": {
+        "image_c9DYRC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-desktop-take-three-photos.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_XTWWTm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-desktop-fill-the-form.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_CxdcTB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-desktop-submit-images.webp",
+            "text_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_c9DYRC",
+        "image_XTWWTm",
+        "image_CxdcTB"
+      ],
+      "custom_css": [
+        ".images-list-wrapper {display: none;}",
+        "@media screen and (min-width: 768px) {.images-list-wrapper {display: block; }}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "introduction": "",
+        "text_allignment": "left",
+        "columns_desktop": 3,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "form_builder_KN33jz": {
       "type": "form-builder",
       "settings": {
@@ -39,6 +142,45 @@
         "max-width": "768",
         "color_scheme": "",
         "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_list_JeMcT6": {
+      "type": "image-list",
+      "blocks": {
+        "image_PgTnnV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-dos.webp",
+            "text_label": "",
+            "link": ""
+          }
+        },
+        "image_6nX9EJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/color-matching-donts.webp",
+            "text_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_PgTnnV",
+        "image_6nX9EJ"
+      ],
+      "settings": {
+        "title": "OUR DO’S & DON'TS",
+        "heading_size": "h2",
+        "introduction": "",
+        "text_allignment": "center",
+        "columns_desktop": 2,
+        "swipe_on_desktop": false,
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "slider_visual": "counter",
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
@@ -46,6 +188,9 @@
   "order": [
     "main",
     "custom_banner_9zVbaW",
-    "form_builder_KN33jz"
+    "image_list_YikQQ3",
+    "image_list_NaQxAV",
+    "form_builder_KN33jz",
+    "image_list_JeMcT6"
   ]
 }
