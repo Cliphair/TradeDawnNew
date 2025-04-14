@@ -137,6 +137,9 @@
     },
     "form_builder_KN33jz": {
       "type": "form-builder",
+      "custom_css": [
+        "iframe:focus-visible {outline:none; box-shadow:none;}"
+      ],
       "settings": {
         "id": "YJ1l9-E6kVQaXwZ18bfNNw",
         "max-width": "768",
