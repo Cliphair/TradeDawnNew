@@ -105,13 +105,6 @@
             "color_scheme": "inverse"
           }
         },
-        "text_JhxgPn": {
-          "type": "text",
-          "settings": {
-            "text": "<a href=\"https://cliphairtrade.com/policies/shipping-policy\">Shipping</a> calculated at checkout.",
-            "text_style": "body"
-          }
-        },
         "variant_options_aYd6e9": {
           "type": "variant_options",
           "settings": {
@@ -131,6 +124,13 @@
         "price_W8Pd3r": {
           "type": "price",
           "settings": {}
+        },
+        "text_JhxgPn": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"https://cliphairtrade.com/policies/shipping-policy\">Shipping</a> calculated at checkout.",
+            "text_style": "body"
+          }
         },
         "button_3UEmPY": {
           "type": "button",
@@ -164,10 +164,10 @@
         "title_qRJ787",
         "short_description_pYLQi9",
         "information_videos_F8wTww",
-        "text_JhxgPn",
         "variant_options_aYd6e9",
         "variant_options_UemYX3",
         "price_W8Pd3r",
+        "text_JhxgPn",
         "button_3UEmPY",
         "collapsible_tab_3Khxj8",
         "collapsible_tab_EnfCMz"
