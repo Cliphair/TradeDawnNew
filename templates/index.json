@@ -9,7 +9,6 @@
  */
 {
   "sections": {
-
     "visual_menu_66DUPM": {
       "type": "visual-menu",
       "custom_css": [
@@ -408,6 +407,7 @@
         "image_QJdHcj",
         "image_piJ8Qx"
       ],
+      "disabled": true,
       "custom_css": [
         ".button {margin-top: 5rem;}"
       ],
