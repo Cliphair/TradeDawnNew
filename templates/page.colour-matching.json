@@ -170,7 +170,7 @@
         "image_6nX9EJ"
       ],
       "custom_css": [
-        ".images-list-wrappe{max-width:850px!important;}"
+        ".images-list-wrapper {max-width: 850px !important;}"
       ],
       "settings": {
         "title": "OUR DO’S & DON'TS",
