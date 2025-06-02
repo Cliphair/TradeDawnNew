@@ -531,7 +531,7 @@
         "bg-color": "#ffffff",
         "desktop-image": "shopify://shop_images/competition-banner-desktop.webp",
         "mobile-image": "shopify://shop_images/competition-banner-mobile.webp",
-        "url": "shopify://pages/2024-hairstylist-award",
+        "url": "shopify://pages/hairstylist-award",
         "padding_top": 0,
         "padding_bottom": 0
       }
