@@ -7,41 +7,35 @@
 {% assign tag = t | downcase %}
 {% if tag == 'approved' %}{% assign elcTag1 = true %}{% endif %}
 {% endfor %}
-{% unless easylockdownON or easylockdownSuperPage or template == 'customers/register' or template contains 'page' and page.id == 63034622119 %}
-{% assign easylockdownException = false %}
-{% if template contains "collection" or template contains "product" %}
-{% if product.collections %}{% for c in product.collections %}{% if c.id == 688873505155 or c.id == 688873111939 or c.id == 688857973123 or c.id == 688696328579 or c.id == 297979740327 %}{% assign easylockdownException = true %}{% break %}{% endif %}{% endfor %}{% endif %}
-{% if collection %}{% if collection.id == 688873505155 or collection.id == 688873111939 or collection.id == 688857973123 or collection.id == 688696328579 or collection.id == 297979740327 %}{% assign easylockdownException = true %}{% endif %}{% endif %}
-{% if template contains "list-collections" %}{% assign easylockdownException = true %}{% endif %}
-{% endif %}
-{% if template contains "collection" %}
-{% if collection %}{% if collection.id == 227653550247 or collection.id == 297932095655 or collection.id == 297938813095 or collection.id == 280115544231 or collection.id == 205995278503 or collection.id == 205995704487 or collection.id == 205995016359 or collection.id == 297929048231 or collection.id == 228929011879 or collection.id == 205996032167 or collection.id == 205993443495 or collection.id == 205993869479 or collection.id == 205994000551 or collection.id == 297931309223 or collection.id == 205998391463 or collection.id == 291387080871 or collection.id == 292145168551 or collection.id == 228770447527 or collection.id == 205993410727 or collection.id == 205993115815 %}{% assign easylockdownException = true %}{% endif %}{% endif %}
-{% if template contains "list-collections" %}{% assign easylockdownException = true %}{% endif %}
-{% endif %}
-{% if template contains "product" and product %}{% if product.id == 7709596418215 or product.id == 7709600481447 or product.id == 5472649511079 or product.id == 7709603070119 or product.id == 7709597728935 or product.id == 7709594452135 or product.id == 7709599727783 %}{% assign easylockdownException = true %}{% endif %}{% endif %}
-{% if template contains "page" and page %}{% if page.id == 97625079975 or page.id == 97625112743 or page.id == 63033966759 or page.id == 98620375207 or page.id == 687870083459 or page.id == 97313095847 or page.id == 690128716163 or page.id == 690737316227 or page.id == 63032754343 or page.id == 692679573891 or page.id == 97312964775 or page.id == 692679704963 or page.id == 99658891431 or page.id == 97312997543 or page.id == 63034851495 or page.id == 63036031143 or page.id == 692679639427 or page.id == 692679672195 or page.id == 96954286247 or page.id == 688630792579 or page.id == 63034622119 or page.id == 94983159975 or page.id == 697205195139 or page.id == 698256851331 %}{% assign easylockdownException = true %}{% endif %}{% endif %}
-{% if canonical_url contains 'https://cliphairtrade.com/apps/return_prime' %}{% assign easylockdownException = true %}{% endif %}
-{% unless easylockdownException %}
+{% unless easylockdownON or easylockdownSuperPage or template == 'customers/register' %}
 {% assign easylockdownLockedContent = false %}
 {% assign easylockdownHiddenContent = false %}
-{% assign easylockdownLockedContent = true %}
+{% assign easylockdownHiddenContent = true %}
 {% if easylockdownLockedContent %}
 {% unless customer %}
 {% assign easylockdownON = true %}
-{% capture easylockdownPage404Title %}Account Approval Pending{% endcapture %}
-{% capture easylockdownPage404Message %}<p>Thank you for your application, right now we are evaluating your account, you will be able to order as soon as possible.</p>{% endcapture %}
-{% capture easylockdownRedirectURL %}{{ easylockdownLocaleRootUrl }}/pages/trade-account{% endcapture %}
+{% capture easylockdownPage404Title %}Page not found{% endcapture %}
+{% capture easylockdownPage404Message %}<p>Sorry, we couldn't find this page.</p>{% endcapture %}
+{% capture easylockdownRedirectURL %}login{% endcapture %}
 {% else %}
 {% unless elcTag1 %}{% assign easylockdownON = true %}{% endunless %}
 {% if easylockdownON %}
 {% assign easylockdownON = true %}
-{% capture easylockdownPage404Title %}Account Approval Pending{% endcapture %}
-{% capture easylockdownPage404Message %}<p>Thank you for your application, right now we are evaluating your account, you will be able to order as soon as possible.</p>{% endcapture %}
-{% capture easylockdownRedirectURL %}{{ easylockdownLocaleRootUrl }}/pages/trade-account{% endcapture %}
+{% capture easylockdownPage404Title %}Page not found{% endcapture %}
+{% capture easylockdownPage404Message %}<p>Sorry, we couldn't find this page.</p>{% endcapture %}
 {% endif %}
+{% endunless %}
+{% else %}
+{% unless easylockdownHiddenPurchase %}
+{% if easylockdownHiddenContent %}
+{% unless customer %}
+{% assign easylockdownHiddenPurchase = true %}
+{% else %}
+{% unless elcTag1 %}{% assign easylockdownHiddenPurchase = true %}{% endunless %}
 {% endunless %}
 {% endif %}
 {% endunless %}
+{% endif %}
 {% endunless %}
 
 {% if easylockdownON or easylockdownPasswordProtectedContent %}<meta name="robots" content="noindex,nofollow">{% endif %}
