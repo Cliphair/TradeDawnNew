@@ -7,6 +7,37 @@
 {% assign tag = t | downcase %}
 {% if tag == 'approved' %}{% assign elcTag1 = true %}{% endif %}
 {% endfor %}
+{% unless easylockdownON or easylockdownSuperPage or template == 'customers/register' %}
+{% assign easylockdownLockedContent = false %}
+{% assign easylockdownHiddenContent = false %}
+{% assign easylockdownHiddenContent = true %}
+{% if easylockdownLockedContent %}
+{% unless customer %}
+{% assign easylockdownON = true %}
+{% capture easylockdownPage404Title %}Page not found{% endcapture %}
+{% capture easylockdownPage404Message %}<p>Sorry, we couldn't find this page.</p>{% endcapture %}
+{% capture easylockdownRedirectURL %}login{% endcapture %}
+{% else %}
+{% unless elcTag1 %}{% assign easylockdownON = true %}{% endunless %}
+{% if easylockdownON %}
+{% assign easylockdownON = true %}
+{% capture easylockdownPage404Title %}Page not found{% endcapture %}
+{% capture easylockdownPage404Message %}<p>Sorry, we couldn't find this page.</p>{% endcapture %}
+{% endif %}
+{% endunless %}
+{% else %}
+{% unless easylockdownHiddenPurchase %}
+{% if easylockdownHiddenContent %}
+{% unless customer %}
+{% assign easylockdownHiddenPurchase = true %}
+{% else %}
+{% unless elcTag1 %}{% assign easylockdownHiddenPurchase = true %}{% endunless %}
+{% endunless %}
+{% endif %}
+{% endunless %}
+{% endif %}
+{% endunless %}
+
 {% unless easylockdownON or easylockdownSuperPage or template == 'customers/register' or template contains 'page' and page.id == 63034622119 %}
 {% assign easylockdownException = false %}
 {% if template contains "collection" or template contains "product" %}
