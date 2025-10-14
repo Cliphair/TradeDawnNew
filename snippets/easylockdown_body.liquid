@@ -4,7 +4,7 @@
 {% if easylockdownON %}
   <div id='easylockdown404'>{{ easylockdownPage404Content }}</div>
 {% else %}
-  <style type='text/css' id="easylockdown-hpbtn-style">form[action*='/cart/add'] input[type=submit], form[action*='/cart/add'] button[type=submit], .easylockdown-hidden-purchase { display: none; }</style>  <div class='easylockdown-content' style='display:none;'>{{ content_for_layout }}</div>
+  <div class='easylockdown-content' style='display:none;'>{{ content_for_layout }}</div>
   <div id='easylockdown404' style='display:none;'>{{ easylockdownPage404Content }}</div>
   {% render 'easylockdown_password_form', easylockdownPasswordNote: easylockdownPasswordNote, easylockdownPasswordPlaceholder: easylockdownPasswordPlaceholder %}
 
